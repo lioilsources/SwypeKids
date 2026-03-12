@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import '../data/keyboard_data.dart';
 
 class KeyWidget extends StatelessWidget {
@@ -24,7 +23,7 @@ class KeyWidget extends StatelessWidget {
 
     return AnimatedContainer(
       duration: const Duration(milliseconds: 130),
-      curve: Curves.elasticOut,
+      curve: Curves.easeOutCubic,
       transform: Matrix4.identity()
         ..scale(inPath ? 1.12 : (isNew ? 1.05 : 1.0)),
       transformAlignment: Alignment.center,
@@ -78,7 +77,8 @@ class KeyWidget extends StatelessWidget {
                 const SizedBox(height: 1),
                 Text(
                   letter,
-                  style: GoogleFonts.nunito(
+                  style: TextStyle(
+                    fontFamily: 'Nunito',
                     fontSize: 13 * scale,
                     fontWeight: FontWeight.w900,
                     color: inPath
@@ -92,7 +92,8 @@ class KeyWidget extends StatelessWidget {
           : Center(
               child: Text(
                 letter,
-                style: GoogleFonts.nunito(
+                style: TextStyle(
+                  fontFamily: 'Nunito',
                   fontSize: 14 * scale,
                   fontWeight: FontWeight.w700,
                   color: Colors.white.withOpacity(0.12),

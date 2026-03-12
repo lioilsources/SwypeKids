@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import '../data/keyboard_data.dart';
 import '../data/lessons.dart';
 import '../widgets/challenge_card.dart';
@@ -20,6 +19,7 @@ class _GameScreenState extends State<GameScreen>
   int _idx = 0;
   int _stars = 0;
   List<String> _path = [];
+  List<String> _livePath = [];
   GameStatus _status = GameStatus.idle;
   bool _shake = false;
   List<String> _newLetters = [];
@@ -59,9 +59,17 @@ class _GameScreenState extends State<GameScreen>
 
   Lesson get _lesson => kLessons[_idx];
 
+  void _onSwypeUpdate(List<String> path) {
+    if (_status != GameStatus.idle) return;
+    setState(() => _livePath = path);
+  }
+
   void _onSwypeEnd(List<String> path) {
     if (_status != GameStatus.idle) return;
-    setState(() => _path = path);
+    setState(() {
+      _path = path;
+      _livePath = [];
+    });
 
     final result = path.join('');
     if (result == _lesson.target) {
@@ -84,6 +92,7 @@ class _GameScreenState extends State<GameScreen>
         if (mounted) setState(() {
           _status = GameStatus.idle;
           _path = [];
+          _livePath = [];
         });
       });
     }
@@ -99,6 +108,7 @@ class _GameScreenState extends State<GameScreen>
         _idx = nextIdx;
         _status = GameStatus.idle;
         _path = [];
+        _livePath = [];
         _newLetters = added;
         _prevUnlocked = curr;
       });
@@ -117,6 +127,7 @@ class _GameScreenState extends State<GameScreen>
       _idx = 0;
       _stars = 0;
       _path = [];
+      _livePath = [];
       _status = GameStatus.idle;
       _shake = false;
       _newLetters = [];
@@ -189,7 +200,9 @@ class _GameScreenState extends State<GameScreen>
               // ── Challenge card ────────────────────────────────────────
               ChallengeCard(
                 lesson: lesson,
-                path: _path,
+                path: _livePath.isNotEmpty && _status == GameStatus.idle
+                    ? _livePath
+                    : _path,
                 status: _status,
                 shake: _shake,
               ),
@@ -203,6 +216,7 @@ class _GameScreenState extends State<GameScreen>
                     lesson: lesson,
                     newLetters: _newLetters,
                     onSwypeEnd: _onSwypeEnd,
+                    onSwypeUpdate: _onSwypeUpdate,
                   ),
                 ),
               ),
@@ -232,7 +246,8 @@ class _GameScreenState extends State<GameScreen>
                               style: const TextStyle(fontSize: 11)),
                           const SizedBox(width: 3),
                           Text(l,
-                              style: GoogleFonts.nunito(
+                              style: TextStyle(
+                                fontFamily: 'Nunito',
                                 fontSize: 11,
                                 fontWeight: FontWeight.w800,
                                 color: col,
@@ -258,7 +273,8 @@ class _GameScreenState extends State<GameScreen>
         ),
         child: Text(
           text,
-          style: GoogleFonts.nunito(
+          style: TextStyle(
+            fontFamily: 'Nunito',
             fontSize: 11,
             fontWeight: FontWeight.w800,
             color: const Color(0xFFA0C4FF),

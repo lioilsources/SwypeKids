@@ -10,12 +10,14 @@ class KeyboardWidget extends StatefulWidget {
   final Lesson lesson;
   final List<String> newLetters;
   final void Function(List<String> path) onSwypeEnd;
+  final void Function(List<String> path)? onSwypeUpdate;
 
   const KeyboardWidget({
     super.key,
     required this.lesson,
     required this.newLetters,
     required this.onSwypeEnd,
+    this.onSwypeUpdate,
   });
 
   @override
@@ -87,6 +89,7 @@ class _KeyboardWidgetState extends State<KeyboardWidget>
       _path = [..._path, letter];
       _hitPts = [..._hitPts, center];
     });
+    widget.onSwypeUpdate?.call(List.from(_path));
   }
 
   void _addFingerPoint(Offset globalPosition) {
@@ -104,6 +107,7 @@ class _KeyboardWidgetState extends State<KeyboardWidget>
       _hitPts = [];
       _fingerPts = [globalPosition];
     });
+    widget.onSwypeUpdate?.call([]);
     final letter = _letterAt(globalPosition);
     if (letter != null) _addLetter(letter);
   }

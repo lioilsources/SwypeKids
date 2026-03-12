@@ -1,6 +1,5 @@
 import 'dart:io' show Platform;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import '../data/keyboard_data.dart';
 import '../data/lessons.dart';
 
@@ -52,7 +51,8 @@ class ChallengeCard extends StatelessWidget {
           // Název slova
           Text(
             lesson.label,
-            style: GoogleFonts.nunito(
+            style: TextStyle(
+              fontFamily: 'Nunito',
               fontSize: 22,
               fontWeight: FontWeight.w900,
               color: const Color(0xFFFFD200),
@@ -73,7 +73,9 @@ class ChallengeCard extends StatelessWidget {
             children: letters.asMap().entries.map((e) {
               final i = e.key;
               final ch = e.value;
-              final hit = path.length > i && path[i] == ch;
+              final reached = path.length > i;
+              final hit = reached && path[i] == ch;
+              final miss = reached && path[i] != ch;
               final col = keyColor(ch);
               return Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 5),
@@ -85,18 +87,26 @@ class ChallengeCard extends StatelessWidget {
                       style: TextStyle(
                         fontSize: hit ? 20 : 16,
                       ),
-                      child: Text(keyEmoji(ch)),
+                      child: Text(miss ? '❌' : keyEmoji(ch)),
                     ),
                     const SizedBox(height: 3),
                     // Políčko s písmenkem
                     AnimatedContainer(
                       duration: const Duration(milliseconds: 180),
-                      curve: Curves.elasticOut,
+                      curve: Curves.easeOutCubic,
                       width: hit ? 48 : 44,
                       height: hit ? 54 : 50,
                       decoration: BoxDecoration(
-                        color: hit ? col : Colors.white.withOpacity(0.08),
+                        color: hit
+                            ? col
+                            : miss
+                                ? const Color(0xFFE74C3C).withOpacity(0.25)
+                                : Colors.white.withOpacity(0.08),
                         borderRadius: BorderRadius.circular(12),
+                        border: miss
+                            ? Border.all(
+                                color: const Color(0xFFE74C3C), width: 2)
+                            : null,
                         boxShadow: hit
                             ? [
                                 BoxShadow(
@@ -110,12 +120,15 @@ class ChallengeCard extends StatelessWidget {
                       alignment: Alignment.center,
                       child: Text(
                         ch,
-                        style: GoogleFonts.nunito(
+                        style: TextStyle(
+                          fontFamily: 'Nunito',
                           fontSize: 26,
                           fontWeight: FontWeight.w900,
                           color: hit
                               ? Colors.white
-                              : Colors.white.withOpacity(0.2),
+                              : miss
+                                  ? const Color(0xFFE74C3C)
+                                  : Colors.white.withOpacity(0.2),
                         ),
                       ),
                     ),
@@ -140,13 +153,15 @@ class ChallengeCard extends StatelessWidget {
     switch (status) {
       case GameStatus.success:
         return Text('🎉 Výborně!',
-            style: GoogleFonts.nunito(
+            style: TextStyle(
+                fontFamily: 'Nunito',
                 fontSize: 18,
                 fontWeight: FontWeight.w800,
                 color: const Color(0xFF2ECC71)));
       case GameStatus.error:
         return Text('❌ Zkus to znovu!',
-            style: GoogleFonts.nunito(
+            style: TextStyle(
+                fontFamily: 'Nunito',
                 fontSize: 15,
                 fontWeight: FontWeight.w700,
                 color: const Color(0xFFE74C3C)));
@@ -158,7 +173,8 @@ class ChallengeCard extends StatelessWidget {
             isDesktop
                 ? '🖱️ Přejeď dvěma prsty přes obrázky'
                 : '☝️ Přejeď prstem přes obrázky',
-            style: GoogleFonts.nunito(
+            style: TextStyle(
+                fontFamily: 'Nunito',
                 fontSize: 13,
                 color: Colors.white.withOpacity(0.35)),
           );

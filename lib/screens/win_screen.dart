@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class WinScreen extends StatelessWidget {
   final int stars;
@@ -28,7 +27,8 @@ class WinScreen extends StatelessWidget {
               Text(
                 'Hotovo!\nJsi šampion!',
                 textAlign: TextAlign.center,
-                style: GoogleFonts.nunito(
+                style: TextStyle(
+                  fontFamily: 'Nunito',
                   fontSize: 36,
                   fontWeight: FontWeight.w900,
                   color: Colors.white,
@@ -43,7 +43,8 @@ class WinScreen extends StatelessWidget {
               const SizedBox(height: 8),
               Text(
                 'Získal jsi $stars hvězdiček!',
-                style: GoogleFonts.nunito(
+                style: TextStyle(
+                  fontFamily: 'Nunito',
                   fontSize: 20,
                   color: Colors.white.withOpacity(0.9),
                 ),
@@ -62,7 +63,8 @@ class WinScreen extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(
                       horizontal: 40, vertical: 16),
                   shape: const StadiumBorder(),
-                  textStyle: GoogleFonts.nunito(
+                  textStyle: TextStyle(
+                    fontFamily: 'Nunito',
                     fontSize: 20,
                     fontWeight: FontWeight.w800,
                   ),
