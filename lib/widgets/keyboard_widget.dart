@@ -1,3 +1,5 @@
+import 'dart:async';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import '../data/keyboard_data.dart';
 import '../data/lessons.dart';
@@ -28,8 +30,14 @@ class _KeyboardWidgetState extends State<KeyboardWidget>
   };
 
   List<String> _path = [];
-  List<Offset> _pathPts = []; // středy navštívených kláves (absolutní)
+  List<Offset> _hitPts = [];    // středy trefených kláves (globální)
+  List<Offset> _fingerPts = []; // všechny pozice prstu (globální)
   bool _swyping = false;
+
+  // Trackpad scroll → swipe: akumulátor delta + timeout
+  Offset? _scrollOrigin;
+  Offset _scrollAccum = Offset.zero;
+  Timer? _scrollEndTimer;
 
   // Fade-out animace čáry
   late AnimationController _fadeCtrl;
@@ -49,6 +57,7 @@ class _KeyboardWidgetState extends State<KeyboardWidget>
 
   @override
   void dispose() {
+    _scrollEndTimer?.cancel();
     _fadeCtrl.dispose();
     super.dispose();
   }
@@ -73,40 +82,89 @@ class _KeyboardWidgetState extends State<KeyboardWidget>
     final gk = _keyGlobalKeys[letter]!;
     final ctx = gk.currentContext!;
     final box = ctx.findRenderObject() as RenderBox;
-    // Střed klávesy v globálních souřadnicích
     final center = box.localToGlobal(box.size.center(Offset.zero));
     setState(() {
       _path = [..._path, letter];
-      _pathPts = [..._pathPts, center];
+      _hitPts = [..._hitPts, center];
     });
   }
 
-  void _onPanStart(DragStartDetails d) {
+  void _addFingerPoint(Offset globalPosition) {
+    setState(() {
+      _fingerPts = [..._fingerPts, globalPosition];
+    });
+  }
+
+  // ── Sdílená logika pro zahájení / průběh / ukončení tahu ────────────────
+  void _startSwype(Offset globalPosition) {
     _fadeCtrl.stop();
     setState(() {
       _swyping = true;
       _path = [];
-      _pathPts = [];
+      _hitPts = [];
+      _fingerPts = [globalPosition];
     });
-    final letter = _letterAt(d.globalPosition);
+    final letter = _letterAt(globalPosition);
     if (letter != null) _addLetter(letter);
   }
 
-  void _onPanUpdate(DragUpdateDetails d) {
+  void _updateSwype(Offset globalPosition) {
     if (!_swyping) return;
-    final letter = _letterAt(d.globalPosition);
+    _addFingerPoint(globalPosition);
+    final letter = _letterAt(globalPosition);
     if (letter != null) _addLetter(letter);
   }
 
-  void _onPanEnd(DragEndDetails d) {
+  void _endSwype() {
     if (!_swyping) return;
     setState(() => _swyping = false);
     widget.onSwypeEnd(List.from(_path));
-    // Spusť fade-out čáry po 1.2s
     Future.delayed(const Duration(milliseconds: 1200), () {
       if (mounted) _fadeCtrl.forward(from: 0);
     });
   }
+
+  // ── GestureDetector panely (klik + táhni / dotyk) ────────────────────────
+  void _onPanStart(DragStartDetails d) {
+    _scrollEndTimer?.cancel();
+    _startSwype(d.globalPosition);
+  }
+
+  void _onPanUpdate(DragUpdateDetails d) => _updateSwype(d.globalPosition);
+  void _onPanEnd(DragEndDetails d) => _endSwype();
+
+  // ── Scroll events – dva prsty na trackpadu macOS ─────────────────────────
+  void _onPointerSignal(PointerSignalEvent event) {
+    if (event is! PointerScrollEvent) return;
+    _scrollEndTimer?.cancel();
+
+    if (!_swyping) {
+      _scrollOrigin = event.position;
+      _scrollAccum = Offset.zero;
+      _startSwype(event.position);
+    }
+
+    // Scroll delta je opačný ke směru pohybu prstů → odečteme
+    _scrollAccum -= event.scrollDelta;
+    _updateSwype(_scrollOrigin! + _scrollAccum);
+
+    _scrollEndTimer = Timer(const Duration(milliseconds: 300), () {
+      _endSwype();
+      _scrollOrigin = null;
+    });
+  }
+
+  // ── Trackpad pan/zoom events (alternativní cesta na některých systémech) ─
+  void _onPointerPanZoomStart(PointerPanZoomStartEvent event) {
+    _scrollEndTimer?.cancel();
+    _startSwype(event.position);
+  }
+
+  void _onPointerPanZoomUpdate(PointerPanZoomUpdateEvent event) {
+    _updateSwype(event.position + event.pan);
+  }
+
+  void _onPointerPanZoomEnd(PointerPanZoomEndEvent event) => _endSwype();
 
   // Převede absolutní body čáry na lokální souřadnice vůči klávesnici
   List<Offset> _toLocal(List<Offset> globalPts) {
@@ -117,69 +175,94 @@ class _KeyboardWidgetState extends State<KeyboardWidget>
 
   @override
   Widget build(BuildContext context) {
-    final localPts = _toLocal(_pathPts);
+    final localFingerPts = _toLocal(_fingerPts);
+    final localHitPts = _toLocal(_hitPts);
     final lineOpacity = _swyping ? 1.0 : (1.0 - _fadeAnim.value);
-    // Pokud fade ještě nezačal (forward nebyl spuštěn), držíme 1.0
     final effectiveOpacity = _fadeCtrl.isAnimating ? lineOpacity : (_swyping ? 1.0 : lineOpacity);
 
-    return GestureDetector(
-      onPanStart: _onPanStart,
-      onPanUpdate: _onPanUpdate,
-      onPanEnd: _onPanEnd,
-      behavior: HitTestBehavior.opaque,
-      child: Stack(
-        clipBehavior: Clip.none,
-        children: [
-          // Klávesnice
-          Column(
-            children: kRows.asMap().entries.map((rowEntry) {
-              final ri = rowEntry.key;
-              final row = rowEntry.value;
-              return Padding(
-                padding: EdgeInsets.only(
-                  left: ri == 1 ? 16 : ri == 2 ? 32 : 0,
-                  right: ri == 1 ? 16 : ri == 2 ? 32 : 0,
-                  bottom: 6,
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: row.map((letter) {
-                    final active = widget.lesson.unlocked.contains(letter);
-                    final inPath = _path.contains(letter);
-                    final isNew  = widget.newLetters.contains(letter);
-                    return Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 2.5),
-                      child: SizedBox(
-                        width: ri == 0 ? 34 : ri == 1 ? 37 : 42,
-                        height: ri == 0 ? 52 : ri == 1 ? 55 : 58,
-                        child: KeyWidget(
-                          key: _keyGlobalKeys[letter],
-                          letter: letter,
-                          active: active,
-                          inPath: inPath,
-                          isNew: isNew,
-                        ),
-                      ),
-                    );
-                  }).toList(),
-                ),
-              );
-            }).toList(),
-          ),
+    // Reference sizes for the keyboard (full-size layout)
+    const double refWidth = 410;
+    const double refHeight = 177;
 
-          // SVG čára přes klávesnici
-          if (_pathPts.isNotEmpty)
-            Positioned.fill(
-              child: IgnorePointer(
-                child: CustomPaint(
-                  painter: SwypePainter(
-                    points: localPts,
-                    opacity: effectiveOpacity.clamp(0.0, 1.0),
+    return Listener(
+      onPointerSignal: _onPointerSignal,
+      onPointerPanZoomStart: _onPointerPanZoomStart,
+      onPointerPanZoomUpdate: _onPointerPanZoomUpdate,
+      onPointerPanZoomEnd: _onPointerPanZoomEnd,
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          final scaleX = constraints.maxWidth < refWidth
+              ? constraints.maxWidth / refWidth
+              : 1.0;
+          final scaleY = constraints.maxHeight < refHeight
+              ? constraints.maxHeight / refHeight
+              : 1.0;
+          final scale = scaleX < scaleY ? scaleX : scaleY;
+
+          return GestureDetector(
+          onPanStart: _onPanStart,
+          onPanUpdate: _onPanUpdate,
+          onPanEnd: _onPanEnd,
+          behavior: HitTestBehavior.opaque,
+          child: Stack(
+            clipBehavior: Clip.none,
+            children: [
+              // Klávesnice
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: kRows.asMap().entries.map((rowEntry) {
+                  final ri = rowEntry.key;
+                  final row = rowEntry.value;
+                  return Padding(
+                    padding: EdgeInsets.only(
+                      left: (ri == 1 ? 16 : ri == 2 ? 32 : 0) * scale,
+                      right: (ri == 1 ? 16 : ri == 2 ? 32 : 0) * scale,
+                      bottom: 6 * scale,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: row.map((letter) {
+                        final active = widget.lesson.unlocked.contains(letter);
+                        final inPath = _path.contains(letter);
+                        final isNew  = widget.newLetters.contains(letter);
+                        return Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 2.5 * scale),
+                          child: SizedBox(
+                            width: (ri == 0 ? 34 : ri == 1 ? 37 : 42) * scale,
+                            height: (ri == 0 ? 52 : ri == 1 ? 55 : 58) * scale,
+                            child: KeyWidget(
+                              key: _keyGlobalKeys[letter],
+                              letter: letter,
+                              active: active,
+                              inPath: inPath,
+                              isNew: isNew,
+                              scale: scale,
+                            ),
+                          ),
+                        );
+                      }).toList(),
+                    ),
+                  );
+                }).toList(),
+              ),
+
+              // Stopa prstu + zvýrazněné trefené klávesy
+              if (_fingerPts.isNotEmpty)
+                Positioned.fill(
+                  child: IgnorePointer(
+                    child: CustomPaint(
+                      painter: SwypePainter(
+                        trail: localFingerPts,
+                        hitPoints: localHitPts,
+                        opacity: effectiveOpacity.clamp(0.0, 1.0),
+                      ),
+                    ),
                   ),
                 ),
-              ),
-            ),
-        ],
+            ],
+          ),
+          );
+        },
       ),
     );
   }

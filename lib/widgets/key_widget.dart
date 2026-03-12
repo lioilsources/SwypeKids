@@ -7,6 +7,7 @@ class KeyWidget extends StatelessWidget {
   final bool active;
   final bool inPath;
   final bool isNew; // právě odemčené → bliká
+  final double scale;
 
   const KeyWidget({
     super.key,
@@ -14,6 +15,7 @@ class KeyWidget extends StatelessWidget {
     required this.active,
     required this.inPath,
     this.isNew = false,
+    this.scale = 1.0,
   });
 
   @override
@@ -32,7 +34,7 @@ class KeyWidget extends StatelessWidget {
             : inPath
                 ? col
                 : Colors.white.withOpacity(0.12),
-        borderRadius: BorderRadius.circular(14),
+        borderRadius: BorderRadius.circular(14 * scale),
         border: Border.all(
           color: !active
               ? Colors.white.withOpacity(0.06)
@@ -62,7 +64,7 @@ class KeyWidget extends StatelessWidget {
                 Text(
                   keyEmoji(letter),
                   style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 18 * scale,
                     shadows: inPath
                         ? [
                             Shadow(
@@ -77,7 +79,7 @@ class KeyWidget extends StatelessWidget {
                 Text(
                   letter,
                   style: GoogleFonts.nunito(
-                    fontSize: 13,
+                    fontSize: 13 * scale,
                     fontWeight: FontWeight.w900,
                     color: inPath
                         ? Colors.white
@@ -91,7 +93,7 @@ class KeyWidget extends StatelessWidget {
               child: Text(
                 letter,
                 style: GoogleFonts.nunito(
-                  fontSize: 14,
+                  fontSize: 14 * scale,
                   fontWeight: FontWeight.w700,
                   color: Colors.white.withOpacity(0.12),
                 ),

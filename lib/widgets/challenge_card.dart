@@ -1,3 +1,4 @@
+import 'dart:io' show Platform;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../data/keyboard_data.dart';
@@ -151,8 +152,12 @@ class ChallengeCard extends StatelessWidget {
                 color: const Color(0xFFE74C3C)));
       case GameStatus.idle:
         if (path.isEmpty) {
+          final isDesktop =
+              Platform.isMacOS || Platform.isWindows || Platform.isLinux;
           return Text(
-            '☝️ Přejeď prstem přes obrázky',
+            isDesktop
+                ? '🖱️ Přejeď dvěma prsty přes obrázky'
+                : '☝️ Přejeď prstem přes obrázky',
             style: GoogleFonts.nunito(
                 fontSize: 13,
                 color: Colors.white.withOpacity(0.35)),
