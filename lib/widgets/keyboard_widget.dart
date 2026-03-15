@@ -36,6 +36,11 @@ class _KeyboardWidgetState extends State<KeyboardWidget>
   List<Offset> _fingerPts = []; // všechny pozice prstu (globální)
   bool _swyping = false;
 
+  // Dwell time – písmeno se přidá až po krátkém setrvání prstu na klávese
+  String? _candidateLetter;
+  Timer? _dwellTimer;
+  static const int _dwellMs = 100;
+
   // Trackpad scroll → swipe: akumulátor delta + timeout
   Offset? _scrollOrigin;
   Offset _scrollAccum = Offset.zero;
@@ -59,6 +64,7 @@ class _KeyboardWidgetState extends State<KeyboardWidget>
 
   @override
   void dispose() {
+    _dwellTimer?.cancel();
     _scrollEndTimer?.cancel();
     _fadeCtrl.dispose();
     super.dispose();
@@ -101,6 +107,8 @@ class _KeyboardWidgetState extends State<KeyboardWidget>
   // ── Sdílená logika pro zahájení / průběh / ukončení tahu ────────────────
   void _startSwype(Offset globalPosition) {
     _fadeCtrl.stop();
+    _dwellTimer?.cancel();
+    _candidateLetter = null;
     setState(() {
       _swyping = true;
       _path = [];
@@ -108,19 +116,33 @@ class _KeyboardWidgetState extends State<KeyboardWidget>
       _fingerPts = [globalPosition];
     });
     widget.onSwypeUpdate?.call([]);
+    // První písmeno se přidá okamžitě – uživatel záměrně začal na této klávese
     final letter = _letterAt(globalPosition);
-    if (letter != null) _addLetter(letter);
+    if (letter != null) {
+      _addLetter(letter);
+      _candidateLetter = letter;
+    }
   }
 
   void _updateSwype(Offset globalPosition) {
     if (!_swyping) return;
     _addFingerPoint(globalPosition);
     final letter = _letterAt(globalPosition);
-    if (letter != null) _addLetter(letter);
+    if (letter != _candidateLetter) {
+      _dwellTimer?.cancel();
+      _candidateLetter = letter;
+      if (letter != null) {
+        _dwellTimer = Timer(const Duration(milliseconds: _dwellMs), () {
+          if (_swyping) _addLetter(letter);
+        });
+      }
+    }
   }
 
   void _endSwype() {
     if (!_swyping) return;
+    _dwellTimer?.cancel();
+    _candidateLetter = null;
     setState(() => _swyping = false);
     widget.onSwypeEnd(List.from(_path));
     Future.delayed(const Duration(milliseconds: 1200), () {
@@ -195,12 +217,8 @@ class _KeyboardWidgetState extends State<KeyboardWidget>
       onPointerPanZoomEnd: _onPointerPanZoomEnd,
       child: LayoutBuilder(
         builder: (context, constraints) {
-          final scaleX = constraints.maxWidth < refWidth
-              ? constraints.maxWidth / refWidth
-              : 1.0;
-          final scaleY = constraints.maxHeight < refHeight
-              ? constraints.maxHeight / refHeight
-              : 1.0;
+          final scaleX = constraints.maxWidth / refWidth;
+          final scaleY = constraints.maxHeight / refHeight;
           final scale = scaleX < scaleY ? scaleX : scaleY;
 
           return GestureDetector(
