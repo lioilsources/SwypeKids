@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'screens/game_screen.dart';
+import 'data/lessons.dart';
+import 'screens/home_shell.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  // Povolíme portrait i landscape – klávesnice se přizpůsobí
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.landscapeLeft,
@@ -15,6 +15,14 @@ void main() {
     statusBarIconBrightness: Brightness.light,
   ));
   runApp(const SwyperKidsApp());
+}
+
+Language _detectLanguage() {
+  final code = WidgetsBinding.instance.platformDispatcher.locale.languageCode;
+  return Language.values.firstWhere(
+    (l) => l.name == code,
+    orElse: () => Language.en,
+  );
 }
 
 class SwyperKidsApp extends StatelessWidget {
@@ -32,7 +40,7 @@ class SwyperKidsApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: const GameScreen(),
+      home: HomeShell(initialLanguage: _detectLanguage()),
     );
   }
 }
