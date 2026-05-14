@@ -171,36 +171,40 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
               ),
             ),
 
-            // ── Tři řady kategorií ───────────────────────────────────
+            // ── Tři sloupce kategorií ────────────────────────────────
             Expanded(
-              child: ListView(
-                padding: const EdgeInsets.symmetric(horizontal: 8),
-                children: [
-                  _CategoryRow(
-                    label: 'KDO',
-                    items: _data.subjects,
-                    selected: _subject,
-                    accent: const Color(0xFFFFD200),
-                    onPick: (p) => setState(() => _subject = p),
-                  ),
-                  _CategoryRow(
-                    label: 'CO DĚLÁ',
-                    items: _data.verbs,
-                    selected: _verb,
-                    accent: const Color(0xFF7BFFB2),
-                    contextKey: _subject?.person,
-                    onPick: (p) => setState(() => _verb = p),
-                  ),
-                  _CategoryRow(
-                    label: 'CO / KAM',
-                    items: _data.objects,
-                    selected: _object,
-                    accent: const Color(0xFFA0C4FF),
-                    contextKey: _verb?.frame,
-                    onPick: (p) => setState(() => _object = p),
-                  ),
-                  const SizedBox(height: 8),
-                ],
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(8, 0, 8, 8),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(child: _CategoryColumn(
+                      label: 'KDO',
+                      items: _data.subjects,
+                      selected: _subject,
+                      accent: const Color(0xFFFFD200),
+                      onPick: (p) => setState(() => _subject = p),
+                    )),
+                    const SizedBox(width: 8),
+                    Expanded(child: _CategoryColumn(
+                      label: 'CO DĚLÁ',
+                      items: _data.verbs,
+                      selected: _verb,
+                      accent: const Color(0xFF7BFFB2),
+                      contextKey: _subject?.person,
+                      onPick: (p) => setState(() => _verb = p),
+                    )),
+                    const SizedBox(width: 8),
+                    Expanded(child: _CategoryColumn(
+                      label: 'CO / KAM',
+                      items: _data.objects,
+                      selected: _object,
+                      accent: const Color(0xFFA0C4FF),
+                      contextKey: _verb?.frame,
+                      onPick: (p) => setState(() => _object = p),
+                    )),
+                  ],
+                ),
               ),
             ),
           ],
@@ -254,7 +258,7 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
       );
 }
 
-class _CategoryRow extends StatelessWidget {
+class _CategoryColumn extends StatelessWidget {
   final String label;
   final List<SentencePart> items;
   final SentencePart? selected;
@@ -262,7 +266,7 @@ class _CategoryRow extends StatelessWidget {
   final String? contextKey;
   final ValueChanged<SentencePart> onPick;
 
-  const _CategoryRow({
+  const _CategoryColumn({
     required this.label,
     required this.items,
     required this.selected,
@@ -273,46 +277,40 @@ class _CategoryRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 6),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 8, bottom: 4),
-            child: Text(
-              label,
-              style: TextStyle(
-                fontFamily: 'Nunito',
-                fontSize: 11,
-                fontWeight: FontWeight.w900,
-                color: accent,
-                letterSpacing: 1.2,
-              ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(bottom: 6),
+          child: Text(
+            label,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontFamily: 'Nunito',
+              fontSize: 11,
+              fontWeight: FontWeight.w900,
+              color: accent,
+              letterSpacing: 1.2,
             ),
           ),
-          SizedBox(
-            height: 84,
-            child: ListView.separated(
-              scrollDirection: Axis.horizontal,
-              padding: const EdgeInsets.symmetric(horizontal: 4),
-              itemCount: items.length,
-              separatorBuilder: (_, __) => const SizedBox(width: 8),
-              itemBuilder: (_, i) {
-                final p = items[i];
-                final isSelected = identical(p, selected);
-                return _PartTile(
-                  part: p,
-                  isSelected: isSelected,
-                  accent: accent,
-                  contextKey: contextKey,
-                  onTap: () => onPick(p),
-                );
-              },
-            ),
+        ),
+        Expanded(
+          child: ListView.separated(
+            itemCount: items.length,
+            separatorBuilder: (_, __) => const SizedBox(height: 8),
+            itemBuilder: (_, i) {
+              final p = items[i];
+              return _PartTile(
+                part: p,
+                isSelected: identical(p, selected),
+                accent: accent,
+                contextKey: contextKey,
+                onTap: () => onPick(p),
+              );
+            },
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
@@ -340,8 +338,7 @@ class _PartTile extends StatelessWidget {
       onTap: onTap,
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 150),
-        width: 86,
-        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 6),
+        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 8),
         decoration: BoxDecoration(
           color: isSelected
               ? accent.withOpacity(0.22)
