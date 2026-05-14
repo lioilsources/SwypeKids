@@ -12,6 +12,8 @@ class TtsService {
     Language.it: 'it-IT',
     Language.fr: 'fr-FR',
     Language.zh: 'zh-CN',
+    Language.ja: 'ja-JP',
+    Language.pt: 'pt-BR',
   };
 
   static Future<void> speak(String text, Language lang) async {

@@ -1,4 +1,4 @@
-enum Language { cs, en, de, es, it, fr, zh }
+enum Language { cs, en, de, es, it, fr, zh, ja, pt }
 
 class Lesson {
   final List<String> unlocked; // aktivní písmena
