@@ -1,4 +1,6 @@
-enum Language { cs, en, de, es, it, fr, zh }
+export 'lessons_index.dart' show kLessons, kLessonsByLang;
+
+enum Language { cs, en, de, es, it, fr, zh, ja, pt }
 
 class Lesson {
   final List<String> unlocked; // aktivní písmena
@@ -21,5 +23,3 @@ class Lesson {
     this.pinyin = '',
   });
 }
-
-export 'lessons_index.dart' show kLessons, kLessonsByLang;

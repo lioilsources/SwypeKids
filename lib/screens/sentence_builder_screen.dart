@@ -39,10 +39,26 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
   }
 
   String _composeSentence() {
+    final subj = _subject;
+    final verb = _verb;
+    final obj = _object;
+
+    // Verb agrees with subject person (defaults to 1sg = base text).
+    String? verbText = verb?.text;
+    if (verb != null && subj?.person != null) {
+      verbText = verb.formFor(subj!.person!);
+    }
+
+    // Object form is chosen by the verb's frame (acc / dir / loc / instr).
+    String? objText = obj?.text;
+    if (obj != null && verb?.frame != null) {
+      objText = obj.formFor(verb!.frame!);
+    }
+
     final parts = <String>[
-      if (_subject != null) _subject!.text,
-      if (_verb != null) _verb!.text,
-      if (_object != null) _object!.text,
+      if (subj != null) subj.text,
+      if (verbText != null) verbText,
+      if (objText != null) objText,
     ];
     return parts.join(_data.joiner);
   }
@@ -127,8 +143,14 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
                         crossAxisAlignment: WrapCrossAlignment.center,
                         children: [
                           _previewSlot(_subject, '👤'),
-                          _previewSlot(_verb, '🎯'),
-                          _previewSlot(_object, '🎁'),
+                          _previewSlot(_verb, '🎯',
+                              resolvedText: _subject?.person != null
+                                  ? _verb?.formFor(_subject!.person!)
+                                  : null),
+                          _previewSlot(_object, '🎁',
+                              resolvedText: _verb?.frame != null
+                                  ? _object?.formFor(_verb!.frame!)
+                                  : null),
                         ],
                       ),
                     ),
@@ -149,34 +171,40 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
               ),
             ),
 
-            // ── Tři řady kategorií ───────────────────────────────────
+            // ── Tři sloupce kategorií ────────────────────────────────
             Expanded(
-              child: ListView(
-                padding: const EdgeInsets.symmetric(horizontal: 8),
-                children: [
-                  _CategoryRow(
-                    label: 'KDO',
-                    items: _data.subjects,
-                    selected: _subject,
-                    accent: const Color(0xFFFFD200),
-                    onPick: (p) => setState(() => _subject = p),
-                  ),
-                  _CategoryRow(
-                    label: 'CO DĚLÁ',
-                    items: _data.verbs,
-                    selected: _verb,
-                    accent: const Color(0xFF7BFFB2),
-                    onPick: (p) => setState(() => _verb = p),
-                  ),
-                  _CategoryRow(
-                    label: 'CO / KAM',
-                    items: _data.objects,
-                    selected: _object,
-                    accent: const Color(0xFFA0C4FF),
-                    onPick: (p) => setState(() => _object = p),
-                  ),
-                  const SizedBox(height: 8),
-                ],
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(8, 0, 8, 8),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(child: _CategoryColumn(
+                      label: 'KDO',
+                      items: _data.subjects,
+                      selected: _subject,
+                      accent: const Color(0xFFFFD200),
+                      onPick: (p) => setState(() => _subject = p),
+                    )),
+                    const SizedBox(width: 8),
+                    Expanded(child: _CategoryColumn(
+                      label: 'CO DĚLÁ',
+                      items: _data.verbs,
+                      selected: _verb,
+                      accent: const Color(0xFF7BFFB2),
+                      contextKey: _subject?.person,
+                      onPick: (p) => setState(() => _verb = p),
+                    )),
+                    const SizedBox(width: 8),
+                    Expanded(child: _CategoryColumn(
+                      label: 'CO / KAM',
+                      items: _data.objects,
+                      selected: _object,
+                      accent: const Color(0xFFA0C4FF),
+                      contextKey: _verb?.frame,
+                      onPick: (p) => setState(() => _object = p),
+                    )),
+                  ],
+                ),
               ),
             ),
           ],
@@ -185,12 +213,12 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
     );
   }
 
-  Widget _previewSlot(SentencePart? part, String placeholder) {
+  Widget _previewSlot(SentencePart? part, String placeholder,
+      {String? resolvedText}) {
     if (part == null) {
       return Opacity(
         opacity: 0.35,
-        child: Text(placeholder,
-            style: const TextStyle(fontSize: 28)),
+        child: Text(placeholder, style: const TextStyle(fontSize: 28)),
       );
     }
     return Row(
@@ -199,7 +227,7 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
         Text(part.emoji, style: const TextStyle(fontSize: 26)),
         const SizedBox(width: 4),
         Text(
-          part.text,
+          resolvedText ?? part.text,
           style: const TextStyle(
             fontFamily: 'Nunito',
             fontSize: 20,
@@ -230,62 +258,59 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
       );
 }
 
-class _CategoryRow extends StatelessWidget {
+class _CategoryColumn extends StatelessWidget {
   final String label;
   final List<SentencePart> items;
   final SentencePart? selected;
   final Color accent;
+  final String? contextKey;
   final ValueChanged<SentencePart> onPick;
 
-  const _CategoryRow({
+  const _CategoryColumn({
     required this.label,
     required this.items,
     required this.selected,
     required this.accent,
     required this.onPick,
+    this.contextKey,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 6),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 8, bottom: 4),
-            child: Text(
-              label,
-              style: TextStyle(
-                fontFamily: 'Nunito',
-                fontSize: 11,
-                fontWeight: FontWeight.w900,
-                color: accent,
-                letterSpacing: 1.2,
-              ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(bottom: 6),
+          child: Text(
+            label,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontFamily: 'Nunito',
+              fontSize: 11,
+              fontWeight: FontWeight.w900,
+              color: accent,
+              letterSpacing: 1.2,
             ),
           ),
-          SizedBox(
-            height: 84,
-            child: ListView.separated(
-              scrollDirection: Axis.horizontal,
-              padding: const EdgeInsets.symmetric(horizontal: 4),
-              itemCount: items.length,
-              separatorBuilder: (_, __) => const SizedBox(width: 8),
-              itemBuilder: (_, i) {
-                final p = items[i];
-                final isSelected = identical(p, selected);
-                return _PartTile(
-                  part: p,
-                  isSelected: isSelected,
-                  accent: accent,
-                  onTap: () => onPick(p),
-                );
-              },
-            ),
+        ),
+        Expanded(
+          child: ListView.separated(
+            itemCount: items.length,
+            separatorBuilder: (_, __) => const SizedBox(height: 8),
+            itemBuilder: (_, i) {
+              final p = items[i];
+              return _PartTile(
+                part: p,
+                isSelected: identical(p, selected),
+                accent: accent,
+                contextKey: contextKey,
+                onTap: () => onPick(p),
+              );
+            },
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
@@ -294,6 +319,7 @@ class _PartTile extends StatelessWidget {
   final SentencePart part;
   final bool isSelected;
   final Color accent;
+  final String? contextKey;
   final VoidCallback onTap;
 
   const _PartTile({
@@ -301,16 +327,18 @@ class _PartTile extends StatelessWidget {
     required this.isSelected,
     required this.accent,
     required this.onTap,
+    this.contextKey,
   });
 
   @override
   Widget build(BuildContext context) {
+    final displayText =
+        contextKey != null ? part.formFor(contextKey!) : part.text;
     return GestureDetector(
       onTap: onTap,
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 150),
-        width: 86,
-        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 6),
+        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 8),
         decoration: BoxDecoration(
           color: isSelected
               ? accent.withOpacity(0.22)
@@ -336,7 +364,7 @@ class _PartTile extends StatelessWidget {
             Text(part.emoji, style: const TextStyle(fontSize: 28)),
             const SizedBox(height: 2),
             Text(
-              part.text,
+              displayText,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               textAlign: TextAlign.center,
