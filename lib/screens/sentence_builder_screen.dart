@@ -39,10 +39,26 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
   }
 
   String _composeSentence() {
+    final subj = _subject;
+    final verb = _verb;
+    final obj = _object;
+
+    // Verb agrees with subject person (defaults to 1sg = base text).
+    String? verbText = verb?.text;
+    if (verb != null && subj?.person != null) {
+      verbText = verb.formFor(subj!.person!);
+    }
+
+    // Object form is chosen by the verb's frame (acc / dir / loc / instr).
+    String? objText = obj?.text;
+    if (obj != null && verb?.frame != null) {
+      objText = obj.formFor(verb!.frame!);
+    }
+
     final parts = <String>[
-      if (_subject != null) _subject!.text,
-      if (_verb != null) _verb!.text,
-      if (_object != null) _object!.text,
+      if (subj != null) subj.text,
+      if (verbText != null) verbText,
+      if (objText != null) objText,
     ];
     return parts.join(_data.joiner);
   }

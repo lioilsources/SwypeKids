@@ -9,6 +9,8 @@ const Map<Language, String> kLanguageFlag = {
   Language.it: '🇮🇹',
   Language.fr: '🇫🇷',
   Language.zh: '🇨🇳',
+  Language.ja: '🇯🇵',
+  Language.pt: '🇧🇷',
 };
 
 class LanguagePicker extends StatelessWidget {

@@ -6,6 +6,8 @@ import 'lessons/es.dart';
 import 'lessons/it.dart';
 import 'lessons/fr.dart';
 import 'lessons/zh.dart';
+import 'lessons/ja.dart';
+import 'lessons/pt.dart';
 
 const Map<Language, List<Lesson>> kLessonsByLang = {
   Language.cs: kLessonsCs,
@@ -15,6 +17,8 @@ const Map<Language, List<Lesson>> kLessonsByLang = {
   Language.it: kLessonsIt,
   Language.fr: kLessonsFr,
   Language.zh: kLessonsZh,
+  Language.ja: kLessonsJa,
+  Language.pt: kLessonsPt,
 };
 
 // Výchozí jazyk pro game_screen, dokud se nepřidá UI přepínač.
