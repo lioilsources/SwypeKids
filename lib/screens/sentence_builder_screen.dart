@@ -143,8 +143,14 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
                         crossAxisAlignment: WrapCrossAlignment.center,
                         children: [
                           _previewSlot(_subject, '👤'),
-                          _previewSlot(_verb, '🎯'),
-                          _previewSlot(_object, '🎁'),
+                          _previewSlot(_verb, '🎯',
+                              resolvedText: _subject?.person != null
+                                  ? _verb?.formFor(_subject!.person!)
+                                  : null),
+                          _previewSlot(_object, '🎁',
+                              resolvedText: _verb?.frame != null
+                                  ? _object?.formFor(_verb!.frame!)
+                                  : null),
                         ],
                       ),
                     ),
@@ -182,6 +188,7 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
                     items: _data.verbs,
                     selected: _verb,
                     accent: const Color(0xFF7BFFB2),
+                    contextKey: _subject?.person,
                     onPick: (p) => setState(() => _verb = p),
                   ),
                   _CategoryRow(
@@ -189,6 +196,7 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
                     items: _data.objects,
                     selected: _object,
                     accent: const Color(0xFFA0C4FF),
+                    contextKey: _verb?.frame,
                     onPick: (p) => setState(() => _object = p),
                   ),
                   const SizedBox(height: 8),
@@ -201,12 +209,12 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
     );
   }
 
-  Widget _previewSlot(SentencePart? part, String placeholder) {
+  Widget _previewSlot(SentencePart? part, String placeholder,
+      {String? resolvedText}) {
     if (part == null) {
       return Opacity(
         opacity: 0.35,
-        child: Text(placeholder,
-            style: const TextStyle(fontSize: 28)),
+        child: Text(placeholder, style: const TextStyle(fontSize: 28)),
       );
     }
     return Row(
@@ -215,7 +223,7 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
         Text(part.emoji, style: const TextStyle(fontSize: 26)),
         const SizedBox(width: 4),
         Text(
-          part.text,
+          resolvedText ?? part.text,
           style: const TextStyle(
             fontFamily: 'Nunito',
             fontSize: 20,
@@ -251,6 +259,7 @@ class _CategoryRow extends StatelessWidget {
   final List<SentencePart> items;
   final SentencePart? selected;
   final Color accent;
+  final String? contextKey;
   final ValueChanged<SentencePart> onPick;
 
   const _CategoryRow({
@@ -259,6 +268,7 @@ class _CategoryRow extends StatelessWidget {
     required this.selected,
     required this.accent,
     required this.onPick,
+    this.contextKey,
   });
 
   @override
@@ -295,6 +305,7 @@ class _CategoryRow extends StatelessWidget {
                   part: p,
                   isSelected: isSelected,
                   accent: accent,
+                  contextKey: contextKey,
                   onTap: () => onPick(p),
                 );
               },
@@ -310,6 +321,7 @@ class _PartTile extends StatelessWidget {
   final SentencePart part;
   final bool isSelected;
   final Color accent;
+  final String? contextKey;
   final VoidCallback onTap;
 
   const _PartTile({
@@ -317,10 +329,13 @@ class _PartTile extends StatelessWidget {
     required this.isSelected,
     required this.accent,
     required this.onTap,
+    this.contextKey,
   });
 
   @override
   Widget build(BuildContext context) {
+    final displayText =
+        contextKey != null ? part.formFor(contextKey!) : part.text;
     return GestureDetector(
       onTap: onTap,
       child: AnimatedContainer(
@@ -352,7 +367,7 @@ class _PartTile extends StatelessWidget {
             Text(part.emoji, style: const TextStyle(fontSize: 28)),
             const SizedBox(height: 2),
             Text(
-              part.text,
+              displayText,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               textAlign: TextAlign.center,
