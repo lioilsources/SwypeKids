@@ -70,7 +70,6 @@ app.*.map.json
 **/web/main.dart.js.map
 
 # Platform directories (regenerated via `flutter create`)
-/ios/
 /linux/
 /web/
 /windows/

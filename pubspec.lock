@@ -22,6 +22,19 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_tts:
+    dependency: "direct main"
+    description:
+      name: flutter_tts
+      sha256: ce5eb209b40e95f2f4a1397116c87ab2fcdff32257d04ed7a764e75894c03775
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.2.5"
+  flutter_web_plugins:
+    dependency: transitive
+    description: flutter
+    source: sdk
+    version: "0.0.0"
   material_color_utilities:
     dependency: transitive
     description:
@@ -53,3 +66,4 @@ packages:
     version: "2.2.0"
 sdks:
   dart: ">=3.9.0-0 <4.0.0"
+  flutter: ">=1.22.0"
