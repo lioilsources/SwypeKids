@@ -69,10 +69,9 @@ app.*.map.json
 **/web/main.dart.js
 **/web/main.dart.js.map
 
-# Platform directories (regenerated via `flutter create`)
-/linux/
+# Platform directories
+# linux/ and windows/ desktop runners are committed (built by release CI).
 /web/
-/windows/
 
 # Flutter metadata
 .metadata
