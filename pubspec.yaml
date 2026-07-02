@@ -1,7 +1,7 @@
 name: swype_kids
 description: Výuková hra pro děti – učíme se písmenka swyp tahem po klávesnici.
 publish_to: none
-version: 2.0.0
+version: 2.0.1
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
@@ -23,6 +23,13 @@ flutter_launcher_icons:
   adaptive_icon_background: "#E8D7B3"
   adaptive_icon_foreground: "assets/icon/icon_foreground.png"
   min_sdk_android: 21
+  macos:
+    generate: true
+    image_path: "assets/icon/icon_master.png"
+  windows:
+    generate: true
+    image_path: "assets/icon/icon_master.png"
+    icon_size: 256
 
 flutter:
   uses-material-design: true
