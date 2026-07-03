@@ -27,13 +27,13 @@ jobs:
         working-directory: .
         run: flutter pub get
 
-      - name: Build macOS (debug)
+      - name: Build macOS (release)
         working-directory: .
-        run: flutter build macos --debug
+        run: flutter build macos --release
 
       - name: Package as ZIP
         run: |
-          cd "./build/macos/Build/Products/Debug"
+          cd "./build/macos/Build/Products/Release"
           zip -r "$OLDPWD/SwypeKids-${{ github.ref_name }}-macOS.zip" "swype_kids.app"
 
       - name: Upload to GitHub Release
