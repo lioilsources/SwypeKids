@@ -33,6 +33,8 @@ jobs:
       - name: Build Windows (release)
         working-directory: .
         run: flutter build windows --release
+        env:
+          CL: /D_SILENCE_EXPERIMENTAL_COROUTINE_DEPRECATION_WARNINGS
 
       - name: Package as ZIP
         shell: pwsh
