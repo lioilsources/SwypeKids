@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 1,
+  "id": "pt-BR",
+  "language": "pt",
+  "culture": "BR",
+  "title": "Silabário – Português (Brasil)",
+  "method": "silábico (vogais primeiro, depois consoantes em CV)",
+  "units": [
+    {
+      "id": "pt-u1",
+      "title": "M, A",
+      "icon": "👩",
+      "reward": {
+        "emoji": "🐭",
+        "name": "M"
+      },
+      "lessons": [
+        {
+          "id": "pt-u1-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A"
+          ],
+          "target": "MA",
+          "display": "MA",
+          "hint": "👩",
+          "label": "MA-MÃE",
+          "info": "Deslize: 🐭 → 🍎",
+          "ipa": "ma"
+        },
+        {
+          "id": "pt-u1-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A"
+          ],
+          "target": "MAMA",
+          "display": "MAMA",
+          "hint": "👩",
+          "label": "MA-MA",
+          "ipa": "ˈmama",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "pt-u2",
+      "title": "I",
+      "icon": "🐭",
+      "reward": {
+        "emoji": "🌈",
+        "name": "I"
+      },
+      "lessons": [
+        {
+          "id": "pt-u2-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I"
+          ],
+          "target": "MI",
+          "display": "MI",
+          "hint": "🐭",
+          "label": "MI-MI",
+          "info": "Novo: 🍦 I",
+          "ipa": "mi"
+        },
+        {
+          "id": "pt-u2-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I"
+          ],
+          "target": "AMA",
+          "display": "AMA",
+          "hint": "❤️",
+          "label": "A-MA",
+          "ipa": "ˈama",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "pt-u3",
+      "title": "P",
+      "icon": "👨",
+      "reward": {
+        "emoji": "🐷",
+        "name": "P"
+      },
+      "lessons": [
+        {
+          "id": "pt-u3-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P"
+          ],
+          "target": "PA",
+          "display": "PA",
+          "hint": "👨",
+          "label": "PA-PAI",
+          "info": "Novo: 🥧 P",
+          "ipa": "pa"
+        },
+        {
+          "id": "pt-u3-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P"
+          ],
+          "target": "PAPA",
+          "display": "PAPA",
+          "hint": "👨",
+          "label": "PA-PA",
+          "ipa": "ˈpapa"
+        },
+        {
+          "id": "pt-u3-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P"
+          ],
+          "target": "PIPA",
+          "display": "PIPA",
+          "hint": "🪁",
+          "label": "PI-PA",
+          "ipa": "ˈpipa",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "pt-u4",
+      "title": "V, O",
+      "icon": "👴",
+      "reward": {
+        "emoji": "🐺",
+        "name": "V"
+      },
+      "lessons": [
+        {
+          "id": "pt-u4-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "V",
+            "O"
+          ],
+          "target": "VO",
+          "display": "VÔ",
+          "hint": "👴",
+          "label": "VÔ",
+          "info": "Novo: 🐮 V, 🍊 O",
+          "ipa": "vo"
+        },
+        {
+          "id": "pt-u4-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "V",
+            "O"
+          ],
+          "target": "VOVO",
+          "display": "VOVÓ",
+          "hint": "👵",
+          "label": "VO-VÓ",
+          "ipa": "voˈvɔ"
+        },
+        {
+          "id": "pt-u4-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "V",
+            "O"
+          ],
+          "target": "POMA",
+          "display": "POMA",
+          "hint": "🍎",
+          "label": "PO-MA",
+          "ipa": "ˈpoma",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "pt-u5",
+      "title": "E",
+      "icon": "👩",
+      "reward": {
+        "emoji": "🐘",
+        "name": "E"
+      },
+      "lessons": [
+        {
+          "id": "pt-u5-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "V",
+            "O",
+            "E"
+          ],
+          "target": "MAMAE",
+          "display": "MAMÃE",
+          "hint": "👩",
+          "label": "MA-MÃE",
+          "info": "Novo: 🌳 E",
+          "ipa": "maˈmɐ̃j"
+        },
+        {
+          "id": "pt-u5-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "V",
+            "O",
+            "E"
+          ],
+          "target": "PAPAI",
+          "display": "PAPAI",
+          "hint": "👨",
+          "label": "PA-PAI",
+          "ipa": "paˈpaj",
+          "review": true
+        }
+      ]
+    }
+  ]
+}

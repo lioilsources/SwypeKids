@@ -1,0 +1,559 @@
+{
+  "schemaVersion": 1,
+  "id": "cs-CZ",
+  "language": "cs",
+  "culture": "CZ",
+  "title": "Slabikář – Čeština",
+  "method": "analyticko-syntetická (Hláskovice / Nová škola)",
+  "units": [
+    {
+      "id": "cs-u1",
+      "title": "M, A",
+      "icon": "👩",
+      "reward": {
+        "emoji": "🐭",
+        "name": "M"
+      },
+      "lessons": [
+        {
+          "id": "cs-u1-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A"
+          ],
+          "target": "MA",
+          "display": "MA",
+          "hint": "👩",
+          "label": "MÁ-MA",
+          "info": "Přejeď: 🐭 → 🍎",
+          "ipa": "maː"
+        },
+        {
+          "id": "cs-u1-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A"
+          ],
+          "target": "MA",
+          "display": "MA",
+          "hint": "👩",
+          "label": "MÁ-MA",
+          "ipa": "maː",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "cs-u2",
+      "title": "T",
+      "icon": "👨",
+      "reward": {
+        "emoji": "🐯",
+        "name": "T"
+      },
+      "lessons": [
+        {
+          "id": "cs-u2-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "T"
+          ],
+          "target": "TA",
+          "display": "TA",
+          "hint": "👨",
+          "label": "TÁ-TA",
+          "info": "Nové: 🐯 T",
+          "ipa": "taː"
+        },
+        {
+          "id": "cs-u2-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "T"
+          ],
+          "target": "MA",
+          "display": "MA",
+          "hint": "👩",
+          "label": "MÁ-MA",
+          "ipa": "maː"
+        },
+        {
+          "id": "cs-u2-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "T"
+          ],
+          "target": "TA",
+          "display": "TA",
+          "hint": "👨",
+          "label": "TÁ-TA",
+          "ipa": "taː",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "cs-u3",
+      "title": "B",
+      "icon": "👵",
+      "reward": {
+        "emoji": "🍌",
+        "name": "B"
+      },
+      "lessons": [
+        {
+          "id": "cs-u3-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "T",
+            "B"
+          ],
+          "target": "BA",
+          "display": "BA",
+          "hint": "👵",
+          "label": "BÁ-BA",
+          "info": "Nové: 🍌 B",
+          "ipa": "baː"
+        },
+        {
+          "id": "cs-u3-l2",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "T",
+            "B"
+          ],
+          "target": "MA",
+          "display": "MA",
+          "hint": "👩",
+          "label": "MÁ-MA",
+          "ipa": "maː"
+        },
+        {
+          "id": "cs-u3-l3",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "T",
+            "B"
+          ],
+          "target": "BA",
+          "display": "BA",
+          "hint": "👵",
+          "label": "BÁ-BA",
+          "ipa": "baː"
+        },
+        {
+          "id": "cs-u3-l4",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "T",
+            "B"
+          ],
+          "target": "TA",
+          "display": "TA",
+          "hint": "👨",
+          "label": "TÁ-TA",
+          "ipa": "taː",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "cs-u4",
+      "title": "E, L",
+      "icon": "🌀",
+      "reward": {
+        "emoji": "🐘",
+        "name": "E"
+      },
+      "lessons": [
+        {
+          "id": "cs-u4-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "T",
+            "B",
+            "E",
+            "L"
+          ],
+          "target": "ME",
+          "display": "ME",
+          "hint": "🌀",
+          "label": "ME-LE",
+          "info": "Nové: 🐘 E, 🦁 L",
+          "ipa": "mɛ"
+        },
+        {
+          "id": "cs-u4-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "T",
+            "B",
+            "E",
+            "L"
+          ],
+          "target": "LE",
+          "display": "LE",
+          "hint": "🌀",
+          "label": "ME-LE",
+          "ipa": "lɛ"
+        },
+        {
+          "id": "cs-u4-l3",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "T",
+            "B",
+            "E",
+            "L"
+          ],
+          "target": "MA",
+          "display": "MA",
+          "hint": "👩",
+          "label": "MÁ-MA",
+          "ipa": "maː"
+        },
+        {
+          "id": "cs-u4-l4",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "T",
+            "B",
+            "E",
+            "L"
+          ],
+          "target": "TA",
+          "display": "TA",
+          "hint": "👨",
+          "label": "TÁ-TA",
+          "ipa": "taː",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "cs-u5",
+      "title": "O, K",
+      "icon": "🚲",
+      "reward": {
+        "emoji": "🐙",
+        "name": "O"
+      },
+      "lessons": [
+        {
+          "id": "cs-u5-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "T",
+            "B",
+            "E",
+            "L",
+            "O",
+            "K"
+          ],
+          "target": "KO",
+          "display": "KO",
+          "hint": "🚲",
+          "label": "KO-LO",
+          "info": "Nové: 🐙 O, 🐱 K",
+          "ipa": "ko"
+        },
+        {
+          "id": "cs-u5-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "T",
+            "B",
+            "E",
+            "L",
+            "O",
+            "K"
+          ],
+          "target": "LO",
+          "display": "LO",
+          "hint": "🚲",
+          "label": "KO-LO",
+          "ipa": "lo"
+        },
+        {
+          "id": "cs-u5-l3",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "T",
+            "B",
+            "E",
+            "L",
+            "O",
+            "K"
+          ],
+          "target": "ME",
+          "display": "ME",
+          "hint": "🌀",
+          "label": "ME-LE",
+          "ipa": "mɛ",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "cs-u6",
+      "title": "Celá slova",
+      "icon": "👩",
+      "reward": {
+        "emoji": "🍎",
+        "name": "A"
+      },
+      "lessons": [
+        {
+          "id": "cs-u6-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "T",
+            "B",
+            "E",
+            "L",
+            "O",
+            "K"
+          ],
+          "target": "MAMA",
+          "display": "MÁMA",
+          "hint": "👩",
+          "label": "MÁMA",
+          "info": "Teď celé slovo!",
+          "ipa": "ˈmaːma"
+        },
+        {
+          "id": "cs-u6-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "T",
+            "B",
+            "E",
+            "L",
+            "O",
+            "K"
+          ],
+          "target": "TATA",
+          "display": "TÁTA",
+          "hint": "👨",
+          "label": "TÁTA",
+          "ipa": "ˈtaːta"
+        },
+        {
+          "id": "cs-u6-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "T",
+            "B",
+            "E",
+            "L",
+            "O",
+            "K"
+          ],
+          "target": "BABA",
+          "display": "BÁBA",
+          "hint": "👵",
+          "label": "BÁBA",
+          "ipa": "ˈbaːba"
+        },
+        {
+          "id": "cs-u6-l4",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "T",
+            "B",
+            "E",
+            "L",
+            "O",
+            "K"
+          ],
+          "target": "MELE",
+          "display": "MELE",
+          "hint": "🌀",
+          "label": "MELE MASO",
+          "ipa": "ˈmɛlɛ"
+        },
+        {
+          "id": "cs-u6-l5",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "T",
+            "B",
+            "E",
+            "L",
+            "O",
+            "K"
+          ],
+          "target": "KOLO",
+          "display": "KOLO",
+          "hint": "🚲",
+          "label": "KOLO",
+          "ipa": "ˈkolo",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "cs-u7",
+      "title": "S, N, P",
+      "icon": "🌲",
+      "reward": {
+        "emoji": "☀️",
+        "name": "S"
+      },
+      "lessons": [
+        {
+          "id": "cs-u7-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "T",
+            "B",
+            "E",
+            "L",
+            "O",
+            "K",
+            "S",
+            "N",
+            "P"
+          ],
+          "target": "LES",
+          "display": "LES",
+          "hint": "🌲",
+          "label": "LES",
+          "info": "Nové: ☀️ S, ✂️ N, 🐷 P",
+          "ipa": "lɛs"
+        },
+        {
+          "id": "cs-u7-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "T",
+            "B",
+            "E",
+            "L",
+            "O",
+            "K",
+            "S",
+            "N",
+            "P"
+          ],
+          "target": "PES",
+          "display": "PES",
+          "hint": "🐶",
+          "label": "PES",
+          "ipa": "pɛs"
+        },
+        {
+          "id": "cs-u7-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "T",
+            "B",
+            "E",
+            "L",
+            "O",
+            "K",
+            "S",
+            "N",
+            "P"
+          ],
+          "target": "NOS",
+          "display": "NOS",
+          "hint": "👃",
+          "label": "NOS",
+          "ipa": "nos"
+        },
+        {
+          "id": "cs-u7-l4",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "T",
+            "B",
+            "E",
+            "L",
+            "O",
+            "K",
+            "S",
+            "N",
+            "P"
+          ],
+          "target": "KOLO",
+          "display": "KOLO",
+          "hint": "🚲",
+          "label": "KOLO",
+          "ipa": "ˈkolo"
+        },
+        {
+          "id": "cs-u7-l5",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "T",
+            "B",
+            "E",
+            "L",
+            "O",
+            "K",
+            "S",
+            "N",
+            "P"
+          ],
+          "target": "LES",
+          "display": "LES",
+          "hint": "🌲",
+          "label": "LES",
+          "ipa": "lɛs",
+          "review": true
+        }
+      ]
+    }
+  ]
+}

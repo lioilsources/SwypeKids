@@ -2,22 +2,45 @@
 
 Výuková hra pro děti 5–9 let. Učí písmena a slabiky swyp tahem po klávesnici s emoji.
 
+Gameplay, progrese a obsahový model: viz [docs/GAMEPLAY.md](docs/GAMEPLAY.md).
+
 ## Struktura projektu
 
 ```
+assets/
+  packs/                     # JSON content packy (jednotky + lekce per jazyk)
 lib/
-  main.dart                  # Entry point
+  main.dart                  # Entry point (init persistence, volba jazyka)
   data/
-    keyboard_data.dart       # QWERTY layout, emoji, barvy
-    lessons.dart             # Všechny lekce + postupné odemykání
+    keyboard_data.dart       # Barvy kláves (+ re-export layoutu)
+    keyboard_layout.dart     # QWERTY layout + emoji (čistý Dart)
+    lessons.dart             # Model Lesson + enum Language/LessonType
+    lessons_index.dart       # Dart lekce (fallback, než se smažou ve fázi 2)
+    lessons/                 # Lekce per jazyk (cs, en, de, …) — fallback
+    models/
+      content_pack.dart      # ContentPack / Unit / CollectibleReward
   screens/
-    game_screen.dart         # Hlavní herní obrazovka
-    win_screen.dart          # Obrazovka vítěze
+    home_shell.dart          # Drawer + přepínání pohledů
+    lesson_map_screen.dart   # Mapa lekcí (jednotky, uzly, odemykání)
+    game_screen.dart         # Herní obrazovka (jedna jednotka)
+    unit_complete_screen.dart# Oslava jednotky (nová nálepka)
+    collection_screen.dart   # Zvěřinec – sbírka nálepek
+    win_screen.dart          # Dokončení celého jazyka
+    sentence_builder_screen.dart # Mód Skládej větu
+  services/
+    pack_service.dart        # Načítání JSON packů (+ fallback na Dart lekce)
+    progress_service.dart    # Persistence: hvězdy, nálepky, jazyk
+    tts_service.dart         # Text-to-speech (poslechová kola, věty)
   widgets/
-    challenge_card.dart      # Karta s cílem (hint + písmena)
+    challenge_card.dart      # Karta s cílem (hint + písmena, poslechový režim)
     keyboard_widget.dart     # Klávesnice + swype detekce
     key_widget.dart          # Jedna klávesa (aktivní / neaktivní)
     swype_painter.dart       # CustomPainter – svítící čára
+test/
+  pack_loading_test.dart     # Validace všech JSON packů
+  progress_service_test.dart # Persistence postupu
+tool/
+  export_lessons_to_json.dart# Generátor packů z Dart lekcí
 ```
 
 ## Instalace & spuštění
@@ -70,11 +93,25 @@ Standardní `pointerenter` na Flutteru nefunguje při tahu, protože pointer je
 | 6    | tatáž               | MÁMA, TÁTA, BÁBA... |
 | 7    | + S, N, P           | LES, PES, NOS       |
 
+## Testy
+
+```bash
+flutter test            # validace JSON packů + persistence postupu
+flutter analyze
+```
+
+Po úpravě Dart lekcí lze packy přegenerovat:
+`dart run tool/export_lessons_to_json.dart` (přepíše ruční úpravy JSONů!).
+
 ## Rozšíření (TODO)
 
-- [ ] Zvuky – `audioplayers` nebo `just_audio`, výslovnost písmene/slova
+Roadmapa fází je v [docs/GAMEPLAY.md](docs/GAMEPLAY.md). Krátkodobě:
+
+- [x] Konfigurovatelné sady slov (JSON content packy)
+- [x] Uložení postupu (hvězdy, nálepky, jazyk)
+- [x] Poslechové kolo (TTS)
+- [ ] Další typy kol (`missingLetter`, `pictureOnly`, `reviewMix`)
+- [ ] Zvuky/sfx – `audioplayers` nebo `just_audio`
 - [ ] Animace emoji při zásahu (scale bounce)
-- [ ] Přizpůsobení orientace – landscape layout s větší klávesnicí
-- [ ] Konfigurovatelné sady slov (JSON / Firestore)
 - [ ] Diakritika (Á, É, Ě, Š...) jako long-press nebo druhá vrstva
 - [ ] Statistiky pro rodiče (které lekce trvaly nejdéle)
