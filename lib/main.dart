@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'data/lessons.dart';
 import 'screens/home_shell.dart';
+import 'services/progress_service.dart';
 
-void main() {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await ProgressService.init();
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.landscapeLeft,
@@ -18,6 +20,9 @@ void main() {
 }
 
 Language _detectLanguage() {
+  // Uložená volba má přednost; autodetekce jen při prvním startu.
+  final saved = ProgressService.instance.selectedLanguage;
+  if (saved != null) return saved;
   final code = WidgetsBinding.instance.platformDispatcher.locale.languageCode;
   return Language.values.firstWhere(
     (l) => l.name == code,

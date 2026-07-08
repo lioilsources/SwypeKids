@@ -11,12 +11,21 @@ class ChallengeCard extends StatelessWidget {
   final GameStatus status;
   final bool shake;
 
+  /// Poslechové kolo: text (label i písmena) je skrytý, dokud dítě neudělá
+  /// chybu — pak se odkryje. Trefená písmena se odkrývají průběžně.
+  final bool hidden;
+
+  /// Přehrát zadání znovu (jen poslechové kolo).
+  final VoidCallback? onReplayAudio;
+
   const ChallengeCard({
     super.key,
     required this.lesson,
     required this.path,
     required this.status,
     required this.shake,
+    this.hidden = false,
+    this.onReplayAudio,
   });
 
   @override
@@ -45,17 +54,37 @@ class ChallengeCard extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          // Hint emoji
-          Text(lesson.hint, style: const TextStyle(fontSize: 40)),
+          // Hint emoji (+ 🔊 replay u poslechového kola)
+          Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(lesson.hint, style: const TextStyle(fontSize: 40)),
+              if (onReplayAudio != null) ...[
+                const SizedBox(width: 14),
+                GestureDetector(
+                  onTap: onReplayAudio,
+                  child: Container(
+                    padding: const EdgeInsets.all(6),
+                    decoration: BoxDecoration(
+                      color: Colors.white.withOpacity(0.1),
+                      shape: BoxShape.circle,
+                    ),
+                    child: const Text('🔊', style: TextStyle(fontSize: 28)),
+                  ),
+                ),
+              ],
+            ],
+          ),
           const SizedBox(height: 2),
-          // Název slova
+          // Název slova (u poslechového kola skrytý)
           Text(
-            lesson.label,
+            hidden ? '• • •' : lesson.label,
             style: TextStyle(
               fontFamily: 'Nunito',
               fontSize: 22,
               fontWeight: FontWeight.w900,
-              color: const Color(0xFFFFD200),
+              color: const Color(0xFFFFD200)
+                  .withOpacity(hidden ? 0.35 : 1.0),
               letterSpacing: 5,
               shadows: [
                 Shadow(
@@ -87,7 +116,9 @@ class ChallengeCard extends StatelessWidget {
                       style: TextStyle(
                         fontSize: hit ? 20 : 16,
                       ),
-                      child: Text(miss ? '❌' : keyEmoji(ch)),
+                      child: Text(miss
+                          ? '❌'
+                          : (hidden && !hit ? '❓' : keyEmoji(ch))),
                     ),
                     const SizedBox(height: 3),
                     // Políčko s písmenkem
@@ -119,7 +150,7 @@ class ChallengeCard extends StatelessWidget {
                       ),
                       alignment: Alignment.center,
                       child: Text(
-                        ch,
+                        hidden && !hit && !miss ? '?' : ch,
                         style: TextStyle(
                           fontFamily: 'Nunito',
                           fontSize: 26,
@@ -167,6 +198,15 @@ class ChallengeCard extends StatelessWidget {
                 color: const Color(0xFFE74C3C)));
       case GameStatus.idle:
         if (path.isEmpty) {
+          if (hidden) {
+            return Text(
+              '🔊 Poslouchej a přejeď, co slyšíš',
+              style: TextStyle(
+                  fontFamily: 'Nunito',
+                  fontSize: 13,
+                  color: Colors.white.withOpacity(0.35)),
+            );
+          }
           final isDesktop =
               Platform.isMacOS || Platform.isWindows || Platform.isLinux;
           return Text(

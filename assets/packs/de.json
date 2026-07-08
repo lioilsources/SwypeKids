@@ -1,0 +1,525 @@
+{
+  "schemaVersion": 1,
+  "id": "de-DE",
+  "language": "de",
+  "culture": "DE",
+  "title": "Silbenfibel – Deutsch",
+  "method": "Mimi-Fibel / klassische analytisch-synthetische Fibel",
+  "units": [
+    {
+      "id": "de-u1",
+      "title": "M, A",
+      "icon": "👩",
+      "reward": {
+        "emoji": "🐭",
+        "name": "M"
+      },
+      "lessons": [
+        {
+          "id": "de-u1-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A"
+          ],
+          "target": "MA",
+          "display": "MA",
+          "hint": "👩",
+          "label": "MA-MA",
+          "info": "Wisch: 🐭 → 🍎",
+          "ipa": "maː"
+        },
+        {
+          "id": "de-u1-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A"
+          ],
+          "target": "MA",
+          "display": "MA",
+          "hint": "👩",
+          "label": "MA-MA",
+          "ipa": "maː",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "de-u2",
+      "title": "I",
+      "icon": "🐭",
+      "reward": {
+        "emoji": "🌈",
+        "name": "I"
+      },
+      "lessons": [
+        {
+          "id": "de-u2-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I"
+          ],
+          "target": "MI",
+          "display": "MI",
+          "hint": "🐭",
+          "label": "MI-MI",
+          "info": "Neu: 🍦 I",
+          "ipa": "miː"
+        },
+        {
+          "id": "de-u2-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I"
+          ],
+          "target": "MIMI",
+          "display": "MIMI",
+          "hint": "🐭",
+          "label": "MIMI",
+          "ipa": "ˈmiːmi"
+        },
+        {
+          "id": "de-u2-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I"
+          ],
+          "target": "MA",
+          "display": "MA",
+          "hint": "👩",
+          "label": "MA-MA",
+          "ipa": "maː",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "de-u3",
+      "title": "L",
+      "icon": "🎵",
+      "reward": {
+        "emoji": "🦁",
+        "name": "L"
+      },
+      "lessons": [
+        {
+          "id": "de-u3-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L"
+          ],
+          "target": "LA",
+          "display": "LA",
+          "hint": "🎵",
+          "label": "LA-LA",
+          "info": "Neu: 🦁 L",
+          "ipa": "laː"
+        },
+        {
+          "id": "de-u3-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L"
+          ],
+          "target": "LI",
+          "display": "LI",
+          "hint": "🎵",
+          "label": "LI-LI",
+          "ipa": "liː"
+        },
+        {
+          "id": "de-u3-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L"
+          ],
+          "target": "LILA",
+          "display": "LILA",
+          "hint": "🟣",
+          "label": "LILA",
+          "ipa": "ˈliːla"
+        },
+        {
+          "id": "de-u3-l4",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L"
+          ],
+          "target": "MAL",
+          "display": "MAL",
+          "hint": "🖍️",
+          "label": "MAL",
+          "ipa": "maːl",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "de-u4",
+      "title": "O",
+      "icon": "🐮",
+      "reward": {
+        "emoji": "🐙",
+        "name": "O"
+      },
+      "lessons": [
+        {
+          "id": "de-u4-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O"
+          ],
+          "target": "MO",
+          "display": "MO",
+          "hint": "🐮",
+          "label": "MO",
+          "info": "Neu: 🍊 O",
+          "ipa": "moː"
+        },
+        {
+          "id": "de-u4-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O"
+          ],
+          "target": "LO",
+          "display": "LO",
+          "hint": "🔔",
+          "label": "LO",
+          "ipa": "loː"
+        },
+        {
+          "id": "de-u4-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O"
+          ],
+          "target": "OMI",
+          "display": "OMI",
+          "hint": "👵",
+          "label": "OMI",
+          "ipa": "ˈoːmi"
+        },
+        {
+          "id": "de-u4-l4",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O"
+          ],
+          "target": "LOLA",
+          "display": "LOLA",
+          "hint": "👧",
+          "label": "LOLA",
+          "ipa": "ˈloːla",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "de-u5",
+      "title": "P",
+      "icon": "👨",
+      "reward": {
+        "emoji": "🐷",
+        "name": "P"
+      },
+      "lessons": [
+        {
+          "id": "de-u5-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P"
+          ],
+          "target": "PA",
+          "display": "PA",
+          "hint": "👨",
+          "label": "PA-PA",
+          "info": "Neu: 🥧 P",
+          "ipa": "paː"
+        }
+      ]
+    },
+    {
+      "id": "de-u6",
+      "title": "Ganze Wörter",
+      "icon": "👨",
+      "reward": {
+        "emoji": "🍎",
+        "name": "A"
+      },
+      "lessons": [
+        {
+          "id": "de-u6-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P"
+          ],
+          "target": "PAPA",
+          "display": "PAPA",
+          "hint": "👨",
+          "label": "PAPA",
+          "ipa": "ˈpapa"
+        },
+        {
+          "id": "de-u6-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P"
+          ],
+          "target": "OPA",
+          "display": "OPA",
+          "hint": "👴",
+          "label": "OPA",
+          "ipa": "ˈoːpa"
+        },
+        {
+          "id": "de-u6-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P"
+          ],
+          "target": "PIPI",
+          "display": "PIPI",
+          "hint": "💧",
+          "label": "PIPI",
+          "ipa": "ˈpiːpi"
+        },
+        {
+          "id": "de-u6-l4",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P"
+          ],
+          "target": "MAMA",
+          "display": "MAMA",
+          "hint": "👩",
+          "label": "MAMA",
+          "info": "Jetzt ganze Wörter!",
+          "ipa": "ˈmama"
+        },
+        {
+          "id": "de-u6-l5",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P"
+          ],
+          "target": "OMA",
+          "display": "OMA",
+          "hint": "👵",
+          "label": "OMA",
+          "ipa": "ˈoːma"
+        },
+        {
+          "id": "de-u6-l6",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P"
+          ],
+          "target": "OPA",
+          "display": "OPA",
+          "hint": "👴",
+          "label": "OPA",
+          "ipa": "ˈoːpa"
+        },
+        {
+          "id": "de-u6-l7",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P"
+          ],
+          "target": "PAPA",
+          "display": "PAPA",
+          "hint": "👨",
+          "label": "PAPA",
+          "ipa": "ˈpapa"
+        },
+        {
+          "id": "de-u6-l8",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P"
+          ],
+          "target": "LILA",
+          "display": "LILA",
+          "hint": "🟣",
+          "label": "LILA",
+          "ipa": "ˈliːla",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "de-u7",
+      "title": "T, U, E",
+      "icon": "🍵",
+      "reward": {
+        "emoji": "🐯",
+        "name": "T"
+      },
+      "lessons": [
+        {
+          "id": "de-u7-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P",
+            "T",
+            "U",
+            "E"
+          ],
+          "target": "TEE",
+          "display": "TEE",
+          "hint": "🍵",
+          "label": "TEE",
+          "info": "Neu: 🌮 T, ☂️ U, 🌳 E",
+          "ipa": "teː"
+        },
+        {
+          "id": "de-u7-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P",
+            "T",
+            "U",
+            "E"
+          ],
+          "target": "AUTO",
+          "display": "AUTO",
+          "hint": "🚗",
+          "label": "AUTO",
+          "ipa": "ˈaʊto"
+        },
+        {
+          "id": "de-u7-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P",
+            "T",
+            "U",
+            "E"
+          ],
+          "target": "OPI",
+          "display": "OPI",
+          "hint": "👴",
+          "label": "OPI",
+          "ipa": "ˈoːpi"
+        },
+        {
+          "id": "de-u7-l4",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P",
+            "T",
+            "U",
+            "E"
+          ],
+          "target": "LATTE",
+          "display": "LATTE",
+          "hint": "🥛",
+          "label": "LATTE",
+          "ipa": "ˈlatə",
+          "review": true
+        }
+      ]
+    }
+  ]
+}

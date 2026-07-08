@@ -1,7 +1,7 @@
 name: swype_kids
 description: Výuková hra pro děti – učíme se písmenka swyp tahem po klávesnici.
 publish_to: none
-version: 2.0.2
+version: 2.1.0
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
@@ -10,8 +10,12 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_tts: ^4.0.0
+  shared_preferences: ^2.3.0
 
 dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
   flutter_launcher_icons: ^0.14.4
 
 flutter_launcher_icons:
@@ -33,6 +37,8 @@ flutter_launcher_icons:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/packs/
   fonts:
     - family: Nunito
       fonts:

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import '../data/lessons.dart';
+import '../services/progress_service.dart';
 import '../widgets/language_picker.dart';
-import 'game_screen.dart';
+import 'collection_screen.dart';
+import 'lesson_map_screen.dart';
 import 'sentence_builder_screen.dart';
 
-enum AppView { swype, sentence }
+enum AppView { swype, sentence, collection }
 
 class HomeShell extends StatefulWidget {
   final Language initialLanguage;
@@ -18,7 +20,11 @@ class _HomeShellState extends State<HomeShell> {
   late Language _lang = widget.initialLanguage;
   AppView _view = AppView.swype;
 
-  void _setLang(Language l) => setState(() => _lang = l);
+  void _setLang(Language l) {
+    ProgressService.instance.selectedLanguage = l;
+    setState(() => _lang = l);
+  }
+
   void _setView(AppView v) {
     setState(() => _view = v);
     Navigator.of(context).maybePop();
@@ -35,9 +41,10 @@ class _HomeShellState extends State<HomeShell> {
       body: IndexedStack(
         index: _view.index,
         children: [
-          GameScreen(language: _lang, onLanguageChanged: _setLang),
+          LessonMapScreen(language: _lang, onLanguageChanged: _setLang),
           SentenceBuilderScreen(
               language: _lang, onLanguageChanged: _setLang),
+          CollectionScreen(language: _lang),
         ],
       ),
     );
@@ -109,6 +116,12 @@ class _AppDrawer extends StatelessWidget {
               label: 'Skládej větu',
               selected: currentView == AppView.sentence,
               onTap: () => onPick(AppView.sentence),
+            ),
+            _MenuTile(
+              icon: '🏅',
+              label: 'Zvěřinec',
+              selected: currentView == AppView.collection,
+              onTap: () => onPick(AppView.collection),
             ),
             const Spacer(),
             Padding(

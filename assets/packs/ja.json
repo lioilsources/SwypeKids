@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "id": "ja-JP",
+  "language": "ja",
+  "culture": "JP",
+  "title": "にほんご – Japanese",
+  "method": "romaji → hiragana",
+  "units": [
+    {
+      "id": "ja-u1",
+      "title": "M, A",
+      "icon": "🐴",
+      "reward": {
+        "emoji": "🐭",
+        "name": "M"
+      },
+      "lessons": [
+        {
+          "id": "ja-u1-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A"
+          ],
+          "target": "MA",
+          "display": "ま",
+          "hint": "🐴",
+          "label": "MA ま",
+          "info": "スワイプ: 🐭 → 🍎",
+          "ipa": "ma"
+        },
+        {
+          "id": "ja-u1-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A"
+          ],
+          "target": "MAMA",
+          "display": "まま",
+          "hint": "👩",
+          "label": "MAMA まま",
+          "ipa": "mama",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "ja-u2",
+      "title": "P",
+      "icon": "👨",
+      "reward": {
+        "emoji": "🐷",
+        "name": "P"
+      },
+      "lessons": [
+        {
+          "id": "ja-u2-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P"
+          ],
+          "target": "PA",
+          "display": "ぱ",
+          "hint": "👨",
+          "label": "PA ぱ",
+          "info": "新しい: 🥧 P",
+          "ipa": "pa"
+        },
+        {
+          "id": "ja-u2-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P"
+          ],
+          "target": "PAPA",
+          "display": "ぱぱ",
+          "hint": "👨",
+          "label": "PAPA ぱぱ",
+          "ipa": "papa",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "ja-u3",
+      "title": "I",
+      "icon": "👀",
+      "reward": {
+        "emoji": "🌈",
+        "name": "I"
+      },
+      "lessons": [
+        {
+          "id": "ja-u3-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I"
+          ],
+          "target": "MI",
+          "display": "み",
+          "hint": "👀",
+          "label": "MI み",
+          "info": "新しい: 🍦 I",
+          "ipa": "mi"
+        },
+        {
+          "id": "ja-u3-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I"
+          ],
+          "target": "MIMI",
+          "display": "みみ",
+          "hint": "👂",
+          "label": "MIMI みみ",
+          "ipa": "mimi",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "ja-u4",
+      "title": "N, E",
+      "icon": "🐱",
+      "reward": {
+        "emoji": "✂️",
+        "name": "N"
+      },
+      "lessons": [
+        {
+          "id": "ja-u4-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "N",
+            "E"
+          ],
+          "target": "NE",
+          "display": "ね",
+          "hint": "🐱",
+          "label": "NE ね",
+          "info": "新しい: 🎵 N, 🌳 E",
+          "ipa": "ne"
+        },
+        {
+          "id": "ja-u4-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "N",
+            "E"
+          ],
+          "target": "NEMA",
+          "display": "ねま",
+          "hint": "🛏️",
+          "label": "NE-MA ねま",
+          "ipa": "nema"
+        },
+        {
+          "id": "ja-u4-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "N",
+            "E"
+          ],
+          "target": "MAME",
+          "display": "まめ",
+          "hint": "🫘",
+          "label": "MAME まめ",
+          "ipa": "mame",
+          "review": true
+        }
+      ]
+    }
+  ]
+}

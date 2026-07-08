@@ -1,22 +1,8 @@
 import 'package:flutter/material.dart';
 
-// ─── QWERTY řady ──────────────────────────────────────────────────────────────
-const List<List<String>> kRows = [
-  ['Q','W','E','R','T','Y','U','I','O','P'],
-  ['A','S','D','F','G','H','J','K','L'],
-  ['Z','X','C','V','B','N','M'],
-];
+import 'keyboard_layout.dart';
 
-// ─── Emoji pro každé písmeno ──────────────────────────────────────────────────
-const Map<String, String> kEmoji = {
-  'M': '🐭', 'A': '🍎', 'T': '🐯', 'B': '🍌',
-  'E': '🐘', 'L': '🦁', 'O': '🐙', 'K': '🐱',
-  'S': '☀️', 'N': '✂️', 'P': '🐷', 'R': '🐟',
-  'D': '🍩', 'I': '🌈', 'U': '🦆', 'V': '🐺',
-  'G': '🍇', 'H': '🏠', 'J': '🍓', 'F': '🍟',
-  'C': '🥕', 'Z': '🦓', 'X': '🎸', 'Y': '🪁',
-  'W': '🐸', 'Q': '👑',
-};
+export 'keyboard_layout.dart' show kRows, kEmoji;
 
 // ─── Barvy kláves ─────────────────────────────────────────────────────────────
 const Map<String, Color> kColors = {

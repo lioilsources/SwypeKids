@@ -1,21 +1,29 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import '../data/keyboard_data.dart';
 import '../data/lessons.dart';
+import '../data/models/content_pack.dart';
+import '../services/pack_service.dart';
+import '../services/progress_service.dart';
+import '../services/tts_service.dart';
 import '../widgets/challenge_card.dart';
 import '../widgets/keyboard_widget.dart';
-import '../widgets/language_picker.dart';
+import 'unit_complete_screen.dart';
 import 'win_screen.dart';
 
+/// Hraje jednu jednotku packu od [startLessonIndex] do konce.
+/// Po dokončení jednotky uloží nálepku a přejde na UnitCompleteScreen
+/// (resp. WinScreen, pokud je hotový celý pack).
 class GameScreen extends StatefulWidget {
-  final Language language;
-  final ValueChanged<Language> onLanguageChanged;
+  final ContentPack pack;
+  final int unitIndex;
+  final int startLessonIndex;
 
   const GameScreen({
     super.key,
-    required this.language,
-    required this.onLanguageChanged,
+    required this.pack,
+    required this.unitIndex,
+    this.startLessonIndex = 0,
   });
 
   @override
@@ -24,8 +32,10 @@ class GameScreen extends StatefulWidget {
 
 class _GameScreenState extends State<GameScreen>
     with SingleTickerProviderStateMixin {
-  int _idx = 0;
-  int _stars = 0;
+  late int _idx = widget.startLessonIndex;
+  int _sessionStars = 0;
+  int _attempts = 0; // pokusy o aktuální lekci (1. pokus = 3⭐, 2. = 2⭐, pak 1⭐)
+  bool _revealed = false; // poslechové kolo: text odkrytý po neúspěchu
   List<String> _path = [];
   List<String> _livePath = [];
   GameStatus _status = GameStatus.idle;
@@ -40,7 +50,10 @@ class _GameScreenState extends State<GameScreen>
 
   List<String> _prevUnlocked = [];
 
-  List<Lesson> get _lessons => kLessonsByLang[widget.language]!;
+  Unit get _unit => widget.pack.units[widget.unitIndex];
+  List<Lesson> get _lessons => _unit.lessons;
+  Lesson get _lesson => _lessons[_idx];
+  Language get _language => widget.pack.language;
 
   @override
   void initState() {
@@ -49,20 +62,13 @@ class _GameScreenState extends State<GameScreen>
       vsync: this,
       duration: const Duration(milliseconds: 600),
     )..repeat(reverse: true);
-    _prevUnlocked = _lessons[0].unlocked;
+    _prevUnlocked = _lesson.unlocked;
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.landscapeLeft,
       DeviceOrientation.landscapeRight,
       DeviceOrientation.portraitUp,
     ]);
-  }
-
-  @override
-  void didUpdateWidget(covariant GameScreen oldWidget) {
-    super.didUpdateWidget(oldWidget);
-    if (oldWidget.language != widget.language) {
-      _restart();
-    }
+    _startLesson();
   }
 
   @override
@@ -74,7 +80,15 @@ class _GameScreenState extends State<GameScreen>
     super.dispose();
   }
 
-  Lesson get _lesson => _lessons[_idx];
+  void _startLesson() {
+    _attempts = 0;
+    _revealed = false;
+    if (_lesson.type == LessonType.listen) {
+      TtsService.speak(_lesson.display, _language);
+    }
+  }
+
+  void _replayAudio() => TtsService.speak(_lesson.display, _language);
 
   void _onSwypeUpdate(List<String> path) {
     if (_status != GameStatus.idle) return;
@@ -88,12 +102,16 @@ class _GameScreenState extends State<GameScreen>
       _livePath = [];
     });
 
+    _attempts++;
     final result = path.join('');
     if (result == _lesson.target) {
+      final stars = _attempts == 1 ? 3 : (_attempts == 2 ? 2 : 1);
+      ProgressService.instance
+          .markCompleted(widget.pack.id, _lesson.id, stars);
       HapticFeedback.mediumImpact();
       setState(() {
         _status = GameStatus.success;
-        _stars++;
+        _sessionStars += stars;
       });
       _timerNext = Timer(const Duration(milliseconds: 1600), _nextLesson);
     } else {
@@ -101,12 +119,14 @@ class _GameScreenState extends State<GameScreen>
       setState(() {
         _status = GameStatus.error;
         _shake = true;
+        _revealed = true; // poslechové kolo: po chybě text odkrýt (scaffolding)
       });
       _timerShake = Timer(const Duration(milliseconds: 500), () {
         if (mounted) setState(() => _shake = false);
       });
       _timerNext = Timer(const Duration(milliseconds: 900), () {
-        if (mounted) setState(() {
+        if (!mounted) return;
+        setState(() {
           _status = GameStatus.idle;
           _path = [];
           _livePath = [];
@@ -129,166 +149,185 @@ class _GameScreenState extends State<GameScreen>
         _newLetters = added;
         _prevUnlocked = curr;
       });
+      _startLesson();
       if (added.isNotEmpty) {
         _timerNew = Timer(const Duration(milliseconds: 2500), () {
           if (mounted) setState(() => _newLetters = []);
         });
       }
     } else {
-      setState(() => _idx = nextIdx); // → WinScreen
+      _finishUnit();
     }
   }
 
-  void _restart() {
-    setState(() {
-      _idx = 0;
-      _stars = 0;
-      _path = [];
-      _livePath = [];
-      _status = GameStatus.idle;
-      _shake = false;
-      _newLetters = [];
-      _prevUnlocked = _lessons[0].unlocked;
-    });
+  void _finishUnit() {
+    final progress = ProgressService.instance;
+    progress.addCollectible(widget.pack.id, _unit.reward.emoji);
+
+    final isLastUnit = widget.unitIndex == widget.pack.units.length - 1;
+    final packDone = isLastUnit &&
+        List.generate(widget.pack.units.length, (u) => u)
+            .every((u) => progress.isUnitCompleted(widget.pack, u));
+
+    if (packDone) {
+      Navigator.of(context).pushReplacement(MaterialPageRoute(
+        builder: (ctx) => WinScreen(
+          stars: progress.totalStars(widget.pack.id),
+          onRestart: () => Navigator.of(ctx).pop(),
+        ),
+      ));
+    } else {
+      Navigator.of(context).pushReplacement(MaterialPageRoute(
+        builder: (_) => UnitCompleteScreen(
+          reward: _unit.reward,
+          stars: _sessionStars,
+        ),
+      ));
+    }
   }
 
   @override
   Widget build(BuildContext context) {
-    if (_idx >= _lessons.length) {
-      return WinScreen(stars: _stars, onRestart: _restart);
-    }
-
     final lesson = _lesson;
-    final progress = _idx / _lessons.length;
+    final progress = (_idx + 1) / _lessons.length;
     final isWord = lesson.target.length > 2;
+    final isListen = lesson.type == LessonType.listen && !_revealed;
 
-    return Container(
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [
-            Color(0xFF1A1A2E),
-            Color(0xFF16213E),
-            Color(0xFF0F3460),
-          ],
+    return Scaffold(
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              Color(0xFF1A1A2E),
+              Color(0xFF16213E),
+              Color(0xFF0F3460),
+            ],
+          ),
         ),
-      ),
-      child: SafeArea(
-        child: Column(
-          children: [
-            // ── Top bar ──────────────────────────────────────────────
-            Padding(
-              padding: const EdgeInsets.symmetric(
-                  horizontal: 8, vertical: 4),
-              child: Row(
-                children: [
-                  Builder(
-                    builder: (ctx) => IconButton(
-                      icon: const Icon(Icons.menu,
+        child: SafeArea(
+          child: Column(
+            children: [
+              // ── Top bar ──────────────────────────────────────────────
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 8, vertical: 4),
+                child: Row(
+                  children: [
+                    IconButton(
+                      icon: const Icon(Icons.arrow_back_rounded,
                           color: Color(0xFFA0C4FF), size: 22),
                       padding: EdgeInsets.zero,
                       constraints: const BoxConstraints(),
-                      onPressed: () => Scaffold.of(ctx).openDrawer(),
+                      onPressed: () => Navigator.of(context).pop(),
                     ),
-                  ),
-                  const SizedBox(width: 8),
-                  _badge(isWord ? '🔤 SLOVO' : '🔡 SLABIKA'),
-                  const Spacer(),
-                  Text(
-                    '⭐' * _stars.clamp(0, 10),
-                    style: const TextStyle(fontSize: 14),
-                  ),
-                  const Spacer(),
-                  _badge('${_idx + 1}/${_lessons.length}'),
-                  const SizedBox(width: 6),
-                  LanguagePicker(
-                    value: widget.language,
-                    onChanged: widget.onLanguageChanged,
-                  ),
-                ],
+                    const SizedBox(width: 8),
+                    _badge(lesson.type == LessonType.listen
+                        ? '🔊 POSLECH'
+                        : (isWord ? '🔤 SLOVO' : '🔡 SLABIKA')),
+                    const Spacer(),
+                    Text(
+                      '⭐ $_sessionStars',
+                      style: const TextStyle(
+                        fontFamily: 'Nunito',
+                        fontSize: 14,
+                        fontWeight: FontWeight.w800,
+                        color: Color(0xFFFFD200),
+                      ),
+                    ),
+                    const Spacer(),
+                    _badge('${_unit.icon} ${_idx + 1}/${_lessons.length}'),
+                  ],
+                ),
               ),
-            ),
 
-            // Progress bar
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 14),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(99),
-                child: LinearProgressIndicator(
-                  value: progress,
-                  minHeight: 6,
-                  backgroundColor: Colors.white.withOpacity(0.1),
-                  valueColor: const AlwaysStoppedAnimation<Color>(
-                    Color(0xFFFFD200),
+              // Progress bar
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 14),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(99),
+                  child: LinearProgressIndicator(
+                    value: progress,
+                    minHeight: 6,
+                    backgroundColor: Colors.white.withOpacity(0.1),
+                    valueColor: const AlwaysStoppedAnimation<Color>(
+                      Color(0xFFFFD200),
+                    ),
                   ),
                 ),
               ),
-            ),
-            const SizedBox(height: 8),
+              const SizedBox(height: 8),
 
-            // ── Challenge card ────────────────────────────────────────
-            ChallengeCard(
-              lesson: lesson,
-              path: _livePath.isNotEmpty && _status == GameStatus.idle
-                  ? _livePath
-                  : _path,
-              status: _status,
-              shake: _shake,
-            ),
-            const SizedBox(height: 8),
+              // ── Challenge card ────────────────────────────────────────
+              ChallengeCard(
+                lesson: lesson,
+                path: _livePath.isNotEmpty && _status == GameStatus.idle
+                    ? _livePath
+                    : _path,
+                status: _status,
+                shake: _shake,
+                hidden: isListen,
+                onReplayAudio:
+                    lesson.type == LessonType.listen ? _replayAudio : null,
+              ),
+              const SizedBox(height: 8),
 
-            // ── Klávesnice ────────────────────────────────────────────
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 6),
-                child: KeyboardWidget(
-                  lesson: lesson,
-                  newLetters: _newLetters,
-                  onSwypeEnd: _onSwypeEnd,
-                  onSwypeUpdate: _onSwypeUpdate,
+              // ── Klávesnice ────────────────────────────────────────────
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 6),
+                  child: KeyboardWidget(
+                    lesson: lesson,
+                    newLetters: _newLetters,
+                    onSwypeEnd: _onSwypeEnd,
+                    onSwypeUpdate: _onSwypeUpdate,
+                  ),
                 ),
               ),
-            ),
 
-            // ── Legenda ───────────────────────────────────────────────
-            Padding(
-              padding: const EdgeInsets.fromLTRB(8, 4, 8, 6),
-              child: Wrap(
-                alignment: WrapAlignment.center,
-                spacing: 5,
-                runSpacing: 4,
-                children: lesson.unlocked.map((l) {
-                  final col = keyColor(l);
-                  return Container(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 8, vertical: 2),
-                    decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.07),
-                      borderRadius: BorderRadius.circular(99),
-                      border: Border.all(
-                          color: col.withOpacity(0.4), width: 1),
-                    ),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Text(keyEmoji(l),
-                            style: const TextStyle(fontSize: 11)),
-                        const SizedBox(width: 3),
-                        Text(l,
-                            style: TextStyle(
-                              fontFamily: 'Nunito',
-                              fontSize: 11,
-                              fontWeight: FontWeight.w800,
-                              color: col,
-                            )),
-                      ],
-                    ),
-                  );
-                }).toList(),
+              // ── Legenda ───────────────────────────────────────────────
+              Padding(
+                padding: const EdgeInsets.fromLTRB(8, 4, 8, 6),
+                child: Wrap(
+                  alignment: WrapAlignment.center,
+                  spacing: 5,
+                  runSpacing: 4,
+                  children: lesson.unlocked.map((l) {
+                    final col =
+                        PackService.instance.keyColorFor(widget.pack, l);
+                    return Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 8, vertical: 2),
+                      decoration: BoxDecoration(
+                        color: Colors.white.withOpacity(0.07),
+                        borderRadius: BorderRadius.circular(99),
+                        border: Border.all(
+                            color: col.withOpacity(0.4), width: 1),
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(
+                              PackService.instance
+                                  .keyEmojiFor(widget.pack, l),
+                              style: const TextStyle(fontSize: 11)),
+                          const SizedBox(width: 3),
+                          Text(l,
+                              style: TextStyle(
+                                fontFamily: 'Nunito',
+                                fontSize: 11,
+                                fontWeight: FontWeight.w800,
+                                color: col,
+                              )),
+                        ],
+                      ),
+                    );
+                  }).toList(),
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
