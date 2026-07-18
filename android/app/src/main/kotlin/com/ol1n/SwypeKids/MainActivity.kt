@@ -1,4 +1,4 @@
-package com.example.swype_kids
+package com.ol1n.SwypeKids
 
 import io.flutter.embedding.android.FlutterActivity
 
