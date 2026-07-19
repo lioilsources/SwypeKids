@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../data/keyboard_layout.dart' show kEmoji;
 import '../data/lessons.dart';
 import '../data/models/content_pack.dart';
 
@@ -78,6 +79,15 @@ class ProgressService {
 
   List<String> collectibles(String packId) =>
       List.unmodifiable(_byPack[packId]?.collectibles ?? const []);
+
+  /// Má dítě nálepku dané jednotky? Stará uložení drží emoji z globální
+  /// kEmoji mapy (před lokalizací) — počítá se i legacy hodnota podle písmene.
+  bool hasCollectible(String packId, CollectibleReward reward) {
+    final owned = _byPack[packId]?.collectibles ?? const [];
+    if (owned.contains(reward.emoji)) return true;
+    final legacy = kEmoji[reward.name];
+    return legacy != null && owned.contains(legacy);
+  }
 
   void addCollectible(String packId, String emoji) {
     final p = _byPack.putIfAbsent(packId, () => _PackProgress());

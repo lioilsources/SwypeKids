@@ -5,13 +5,43 @@
   "culture": "FR",
   "title": "Syllabaire – Français",
   "method": "syllabique (inspirée de la Méthode Boscher)",
+  "keyboard": {
+    "emoji": {
+      "A": "✈️",
+      "B": "🍌",
+      "C": "🐱",
+      "D": "🐬",
+      "E": "🐘",
+      "F": "🌸",
+      "G": "🎂",
+      "H": "🦉",
+      "I": "🏝️",
+      "J": "🧃",
+      "K": "🦘",
+      "L": "🦁",
+      "M": "🏠",
+      "N": "🎵",
+      "O": "🍊",
+      "P": "🍎",
+      "Q": "🎳",
+      "R": "🦊",
+      "S": "☀️",
+      "T": "🐯",
+      "U": "🏭",
+      "V": "🐮",
+      "W": "🚃",
+      "X": "🎸",
+      "Y": "🪀",
+      "Z": "🦓"
+    }
+  },
   "units": [
     {
       "id": "fr-u1",
       "title": "M, A",
       "icon": "👩",
       "reward": {
-        "emoji": "🐭",
+        "emoji": "🏠",
         "name": "M"
       },
       "lessons": [
@@ -26,7 +56,7 @@
           "display": "MA",
           "hint": "👩",
           "label": "MA-MAN",
-          "info": "Glisse : 🐭 → 🍎",
+          "info": "Glisse : 🏠 → ✈️",
           "ipa": "ma"
         },
         {
@@ -50,7 +80,7 @@
       "title": "P, I",
       "icon": "👨",
       "reward": {
-        "emoji": "🐷",
+        "emoji": "🍎",
         "name": "P"
       },
       "lessons": [
@@ -67,7 +97,7 @@
           "display": "PA",
           "hint": "👨",
           "label": "PA-PA",
-          "info": "Nouveau : 🥧 P, 🍦 I",
+          "info": "Nouveau : 🍎 P, 🏝️ I",
           "ipa": "pa"
         },
         {
@@ -198,7 +228,7 @@
     {
       "id": "fr-u4",
       "title": "T",
-      "icon": "👨",
+      "icon": "👩‍🦱",
       "reward": {
         "emoji": "🐯",
         "name": "T"
@@ -217,9 +247,9 @@
           ],
           "target": "TA",
           "display": "TA",
-          "hint": "👨",
+          "hint": "👩‍🦱",
           "label": "TA-TA",
-          "info": "Nouveau : 🌮 T",
+          "info": "Nouveau : 🐯 T",
           "ipa": "ta"
         },
         {
@@ -264,7 +294,7 @@
       "title": "N",
       "icon": "🎵",
       "reward": {
-        "emoji": "✂️",
+        "emoji": "🎵",
         "name": "N"
       },
       "lessons": [
@@ -294,7 +324,7 @@
       "title": "Mots entiers",
       "icon": "👩",
       "reward": {
-        "emoji": "🍎",
+        "emoji": "✈️",
         "name": "A"
       },
       "lessons": [
@@ -328,11 +358,11 @@
             "T",
             "N"
           ],
-          "target": "NANA",
-          "display": "NANA",
-          "hint": "👵",
-          "label": "NA-NA",
-          "ipa": "naˈna"
+          "target": "ANIMAL",
+          "display": "ANIMAL",
+          "hint": "🐾",
+          "label": "A-NI-MAL",
+          "ipa": "aniˈmal"
         },
         {
           "id": "fr-u6-l3",
@@ -415,7 +445,7 @@
       "title": "O, U",
       "icon": "🚗",
       "reward": {
-        "emoji": "🐙",
+        "emoji": "🍊",
         "name": "O"
       },
       "lessons": [
@@ -437,7 +467,7 @@
           "display": "AUTO",
           "hint": "🚗",
           "label": "AU-TO",
-          "info": "Nouveau : 🍊 O, ☂️ U",
+          "info": "Nouveau : 🍊 O, 🏭 U",
           "ipa": "oˈto"
         },
         {

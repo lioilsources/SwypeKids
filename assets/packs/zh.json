@@ -5,13 +5,43 @@
   "culture": "CN",
   "title": "拼音入门 – 中文",
   "method": "pinyin progression (Latin transcription, tones in display)",
+  "keyboard": {
+    "emoji": {
+      "A": "❤️",
+      "B": "👨",
+      "C": "🍓",
+      "D": "🐘",
+      "E": "🦢",
+      "F": "✈️",
+      "G": "🐶",
+      "H": "🌸",
+      "I": "1️⃣",
+      "J": "🐔",
+      "K": "🦕",
+      "L": "🐯",
+      "M": "🐴",
+      "N": "🐮",
+      "O": "🕊️",
+      "P": "🍎",
+      "Q": "🎈",
+      "R": "☀️",
+      "S": "☂️",
+      "T": "🐰",
+      "U": "5️⃣",
+      "V": "🐟",
+      "W": "🐌",
+      "X": "🐼",
+      "Y": "🌙",
+      "Z": "⚽"
+    }
+  },
   "units": [
     {
       "id": "zh-u1",
       "title": "M, A",
       "icon": "👩",
       "reward": {
-        "emoji": "🐭",
+        "emoji": "🐴",
         "name": "M"
       },
       "lessons": [
@@ -26,7 +56,7 @@
           "display": "MĀ",
           "hint": "👩",
           "label": "MĀ 妈",
-          "info": "滑动: 🐭 → 🍎",
+          "info": "滑动: 🐴 → ❤️",
           "ipa": "ma˥",
           "pinyin": "ma1"
         },
@@ -52,7 +82,7 @@
       "title": "B",
       "icon": "👨",
       "reward": {
-        "emoji": "🍌",
+        "emoji": "👨",
         "name": "B"
       },
       "lessons": [
@@ -68,7 +98,7 @@
           "display": "BÀ",
           "hint": "👨",
           "label": "BÀ 爸",
-          "info": "新: 🐻 B",
+          "info": "新: 👨 B",
           "ipa": "pa˥˩",
           "pinyin": "ba4"
         },
@@ -110,7 +140,7 @@
       "title": "I",
       "icon": "🍚",
       "reward": {
-        "emoji": "🌈",
+        "emoji": "1️⃣",
         "name": "I"
       },
       "lessons": [
@@ -127,7 +157,7 @@
           "display": "MǏ",
           "hint": "🍚",
           "label": "MǏ 米",
-          "info": "新: 🍦 I",
+          "info": "新: 1️⃣ I",
           "ipa": "mi˨˩˦",
           "pinyin": "mi3"
         },
@@ -171,7 +201,7 @@
       "title": "P",
       "icon": "😨",
       "reward": {
-        "emoji": "🐷",
+        "emoji": "🍎",
         "name": "P"
       },
       "lessons": [
@@ -189,7 +219,7 @@
           "display": "PÀ",
           "hint": "😨",
           "label": "PÀ 怕",
-          "info": "新: 🥧 P",
+          "info": "新: 🍎 P",
           "ipa": "pʰa˥˩",
           "pinyin": "pa4"
         },
@@ -235,7 +265,7 @@
       "title": "N, E",
       "icon": "❓",
       "reward": {
-        "emoji": "✂️",
+        "emoji": "🐮",
         "name": "N"
       },
       "lessons": [
@@ -255,7 +285,7 @@
           "display": "NE",
           "hint": "❓",
           "label": "NE 呢",
-          "info": "新: 🎵 N, 🌳 E",
+          "info": "新: 🐮 N, 🦢 E",
           "ipa": "nə",
           "pinyin": "ne"
         },
@@ -286,7 +316,7 @@
       "title": "整个音节词",
       "icon": "🥤",
       "reward": {
-        "emoji": "🍎",
+        "emoji": "❤️",
         "name": "A"
       },
       "lessons": [
@@ -413,7 +443,7 @@
       "title": "H, O",
       "icon": "👍",
       "reward": {
-        "emoji": "🏠",
+        "emoji": "🌸",
         "name": "H"
       },
       "lessons": [
@@ -435,7 +465,7 @@
           "display": "HǍO",
           "hint": "👍",
           "label": "HǍO 好",
-          "info": "新: ☀️ H, 🍊 O",
+          "info": "新: 🌸 H, 🕊️ O",
           "ipa": "xau˨˩˦",
           "pinyin": "hao3"
         },

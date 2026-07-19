@@ -7,13 +7,13 @@ import '../lessons.dart';
 const List<Lesson> kLessonsFr = [
   // ── Phase 1 : M, A ────────────────────────────────────────────────────────
   Lesson(unlocked: ['M','A'], target: 'MA', display: 'MA',
-      hint: '👩', label: 'MA-MAN', info: 'Glisse : 🐭 → 🍎', ipa: 'ma'),
+      hint: '👩', label: 'MA-MAN', info: 'Glisse : 🏠 → ✈️', ipa: 'ma'),
   Lesson(unlocked: ['M','A'], target: 'MA', display: 'MA',
       hint: '👩', label: 'MA-MAN', ipa: 'ma'),
 
   // ── Phase 2 : +P, I ───────────────────────────────────────────────────────
   Lesson(unlocked: ['M','A','P','I'], target: 'PA', display: 'PA',
-      hint: '👨', label: 'PA-PA', info: 'Nouveau : 🥧 P, 🍦 I', ipa: 'pa'),
+      hint: '👨', label: 'PA-PA', info: 'Nouveau : 🍎 P, 🏝️ I', ipa: 'pa'),
   Lesson(unlocked: ['M','A','P','I'], target: 'PI', display: 'PI',
       hint: '🎵', label: 'PI-PI', ipa: 'pi'),
   Lesson(unlocked: ['M','A','P','I'], target: 'PAPA', display: 'PAPA',
@@ -33,7 +33,7 @@ const List<Lesson> kLessonsFr = [
 
   // ── Phase 4 : +T ──────────────────────────────────────────────────────────
   Lesson(unlocked: ['M','A','P','I','L','T'], target: 'TA', display: 'TA',
-      hint: '👨', label: 'TA-TA', info: 'Nouveau : 🌮 T', ipa: 'ta'),
+      hint: '👩‍🦱', label: 'TA-TA', info: 'Nouveau : 🐯 T', ipa: 'ta'),
   Lesson(unlocked: ['M','A','P','I','L','T'], target: 'TATA', display: 'TATA',
       hint: '👩‍🦱', label: 'TA-TA', ipa: 'taˈta'),
   Lesson(unlocked: ['M','A','P','I','L','T'], target: 'LIT', display: 'LIT',
@@ -44,8 +44,8 @@ const List<Lesson> kLessonsFr = [
       hint: '🎵', label: 'NA-NA', info: 'Nouveau : 🎵 N', ipa: 'na'),
   Lesson(unlocked: ['M','A','P','I','L','T','N'], target: 'MAMAN',
       display: 'MAMAN', hint: '👩', label: 'MA-MAN', ipa: 'maˈmɑ̃'),
-  Lesson(unlocked: ['M','A','P','I','L','T','N'], target: 'NANA',
-      display: 'NANA', hint: '👵', label: 'NA-NA', ipa: 'naˈna'),
+  Lesson(unlocked: ['M','A','P','I','L','T','N'], target: 'ANIMAL',
+      display: 'ANIMAL', hint: '🐾', label: 'A-NI-MAL', ipa: 'aniˈmal'),
 
   // ── Phase 6 : mots entiers ────────────────────────────────────────────────
   Lesson(unlocked: ['M','A','P','I','L','T','N'], target: 'MAMAN',
@@ -61,7 +61,7 @@ const List<Lesson> kLessonsFr = [
   // ── Phase 7 : +O, U ──────────────────────────────────────────────────────
   Lesson(unlocked: ['M','A','P','I','L','T','N','O','U'], target: 'AUTO',
       display: 'AUTO', hint: '🚗', label: 'AU-TO',
-      info: 'Nouveau : 🍊 O, ☂️ U', ipa: 'oˈto'),
+      info: 'Nouveau : 🍊 O, 🏭 U', ipa: 'oˈto'),
   Lesson(unlocked: ['M','A','P','I','L','T','N','O','U'], target: 'LOTO',
       display: 'LOTO', hint: '🎰', label: 'LO-TO', ipa: 'loˈto'),
   Lesson(unlocked: ['M','A','P','I','L','T','N','O','U'], target: 'NUL',

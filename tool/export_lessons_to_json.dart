@@ -159,7 +159,7 @@ Map<String, dynamic> _buildPack(Language lang, List<Lesson> lessons) {
           : (allWords ? _wholeWords[lang]! : unlocked.join(', ')),
       'icon': unitLessons.first.hint,
       'reward': {
-        'emoji': kEmoji[rewardLetter] ?? '⭐',
+        'emoji': kEmojiByLang[lang]![rewardLetter] ?? '⭐',
         'name': rewardLetter,
       },
       'lessons': lessonMaps,
@@ -174,6 +174,7 @@ Map<String, dynamic> _buildPack(Language lang, List<Lesson> lessons) {
     'culture': _culture[lang],
     'title': _title[lang],
     'method': _method[lang],
+    'keyboard': {'emoji': kEmojiByLang[lang]!},
     'units': units,
   };
 }

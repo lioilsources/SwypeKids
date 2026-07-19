@@ -107,11 +107,13 @@ Zásady:
   latinské klávesnici.
 - `type`: `swype` | `listen`; neznámý typ padá na `swype` (starší appka
   přežije novější pack).
-- Volitelný blok `keyboard.emoji` / `keyboard.colors` per pack — kulturní
-  varianty klávesnice (hint emoji je už dnes per lekce). Zatím žádný pack
-  override nedefinuje; UI je na to připravené přes
-  `PackService.keyEmojiFor/keyColorFor` (zapojeno v legendě GameScreen,
-  klávesnice samotná ve fázi 2).
+- Blok `keyboard.emoji` per pack — lokalizovaná emoji mnemotechnika kláves
+  (zdroj: `kEmojiByLang` v `lib/data/keyboard_layout.dart`, do JSON ji zapisuje
+  export tool). Každý pack definuje emoji pro všechna písmena; emoji odměn
+  (nálepek) i info texty lekcí ji následují. UI čte přes
+  `PackService.keyEmojiFor/keyColorFor` — zapojeno v klávesnici (KeyWidget),
+  challenge kartě i legendě GameScreen. `keyboard.colors` zůstává volitelný
+  override barev (zatím ho žádný pack nedefinuje).
 - Didaktická metoda je vlastnost packu (`method`) — každý jazyk má svou
   (cs analyticko-syntetická, en SATPIN fonetika, es/it/pt sylabická, …).
 - Fallback: když asset chybí/nejde parsovat, `PackService` syntetizuje pack

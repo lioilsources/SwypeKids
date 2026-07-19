@@ -5,6 +5,36 @@
   "culture": "DE",
   "title": "Silbenfibel – Deutsch",
   "method": "Mimi-Fibel / klassische analytisch-synthetische Fibel",
+  "keyboard": {
+    "emoji": {
+      "A": "🍎",
+      "B": "🍌",
+      "C": "🤡",
+      "D": "🐉",
+      "E": "🐘",
+      "F": "🐸",
+      "G": "🦒",
+      "H": "🏠",
+      "I": "🦔",
+      "J": "🪀",
+      "K": "🐱",
+      "L": "🦁",
+      "M": "🐭",
+      "N": "👃",
+      "O": "🍊",
+      "P": "🐧",
+      "Q": "👑",
+      "R": "🌈",
+      "S": "☀️",
+      "T": "🐯",
+      "U": "⌚",
+      "V": "🐦",
+      "W": "🐳",
+      "X": "🎸",
+      "Y": "⛵",
+      "Z": "🦓"
+    }
+  },
   "units": [
     {
       "id": "de-u1",
@@ -50,7 +80,7 @@
       "title": "I",
       "icon": "🐭",
       "reward": {
-        "emoji": "🌈",
+        "emoji": "🦔",
         "name": "I"
       },
       "lessons": [
@@ -66,7 +96,7 @@
           "display": "MI",
           "hint": "🐭",
           "label": "MI-MI",
-          "info": "Neu: 🍦 I",
+          "info": "Neu: 🦔 I",
           "ipa": "miː"
         },
         {
@@ -178,7 +208,7 @@
       "title": "O",
       "icon": "🐮",
       "reward": {
-        "emoji": "🐙",
+        "emoji": "🍊",
         "name": "O"
       },
       "lessons": [
@@ -255,7 +285,7 @@
       "title": "P",
       "icon": "👨",
       "reward": {
-        "emoji": "🐷",
+        "emoji": "🐧",
         "name": "P"
       },
       "lessons": [
@@ -274,7 +304,7 @@
           "display": "PA",
           "hint": "👨",
           "label": "PA-PA",
-          "info": "Neu: 🥧 P",
+          "info": "Neu: 🐧 P",
           "ipa": "paː"
         }
       ]
@@ -455,7 +485,7 @@
           "display": "TEE",
           "hint": "🍵",
           "label": "TEE",
-          "info": "Neu: 🌮 T, ☂️ U, 🌳 E",
+          "info": "Neu: 🐯 T, ⌚ U, 🐘 E",
           "ipa": "teː"
         },
         {

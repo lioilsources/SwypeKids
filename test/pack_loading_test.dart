@@ -21,11 +21,25 @@ void main() {
       expect(pack.id, isNotEmpty);
       expect(pack.units, isNotEmpty);
 
+      // Lokalizovaná emoji mnemotechnika: pack definuje emoji pro každou
+      // klávesu, hodnoty jsou neprázdné a unikátní (nálepky dedupují emoji).
+      expect(pack.keyboardEmoji.keys.toSet(), keyboardLetters,
+          reason: 'keyboard.emoji nepokrývá přesně všechny klávesy');
+      expect(pack.keyboardEmoji.values.every((e) => e.isNotEmpty), isTrue);
+      expect(pack.keyboardEmoji.values.toSet().length,
+          pack.keyboardEmoji.length,
+          reason: 'duplicitní emoji v keyboard.emoji');
+
       final ids = <String>{};
       for (final unit in pack.units) {
         expect(ids.add(unit.id), isTrue,
             reason: 'duplicitní id jednotky ${unit.id}');
         expect(unit.reward.emoji, isNotEmpty);
+        if (unit.reward.name.isNotEmpty) {
+          expect(unit.reward.emoji, pack.keyboardEmoji[unit.reward.name],
+              reason:
+                  'odměna ${unit.id} neodpovídá keyboard.emoji[${unit.reward.name}]');
+        }
         expect(unit.lessons, isNotEmpty);
         for (final lesson in unit.lessons) {
           expect(ids.add(lesson.id), isTrue,
@@ -45,4 +59,16 @@ void main() {
           reason: 'počet lekcí v JSON neodpovídá lib/data/lessons/');
     });
   }
+
+  test('kEmojiByLang pokrývá každý jazyk × všechna písmena klávesnice', () {
+    for (final lang in Language.values) {
+      final table = kEmojiByLang[lang];
+      expect(table, isNotNull, reason: 'chybí tabulka pro ${lang.name}');
+      expect(table!.keys.toSet(), keyboardLetters,
+          reason: '${lang.name}: tabulka nepokrývá přesně klávesnici');
+      expect(table.values.every((e) => e.isNotEmpty), isTrue);
+      expect(table.values.toSet().length, table.length,
+          reason: '${lang.name}: duplicitní emoji v tabulce');
+    }
+  });
 }

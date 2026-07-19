@@ -55,6 +55,9 @@ class _GameScreenState extends State<GameScreen>
   Lesson get _lesson => _lessons[_idx];
   Language get _language => widget.pack.language;
 
+  String _emojiFor(String letter) =>
+      PackService.instance.keyEmojiFor(widget.pack, letter);
+
   @override
   void initState() {
     super.initState();
@@ -268,6 +271,7 @@ class _GameScreenState extends State<GameScreen>
                 status: _status,
                 shake: _shake,
                 hidden: isListen,
+                emojiFor: _emojiFor,
                 onReplayAudio:
                     lesson.type == LessonType.listen ? _replayAudio : null,
               ),
@@ -280,6 +284,7 @@ class _GameScreenState extends State<GameScreen>
                   child: KeyboardWidget(
                     lesson: lesson,
                     newLetters: _newLetters,
+                    emojiFor: _emojiFor,
                     onSwypeEnd: _onSwypeEnd,
                     onSwypeUpdate: _onSwypeUpdate,
                   ),

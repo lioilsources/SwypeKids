@@ -12,7 +12,7 @@ const List<Lesson> kLessonsDe = [
 
   // ── Phase 2: +I ───────────────────────────────────────────────────────────
   Lesson(unlocked: ['M','A','I'], target: 'MI', display: 'MI',
-      hint: '🐭', label: 'MI-MI', info: 'Neu: 🍦 I', ipa: 'miː'),
+      hint: '🐭', label: 'MI-MI', info: 'Neu: 🦔 I', ipa: 'miː'),
   Lesson(unlocked: ['M','A','I'], target: 'MIMI', display: 'MIMI',
       hint: '🐭', label: 'MIMI', ipa: 'ˈmiːmi'),
   Lesson(unlocked: ['M','A','I'], target: 'MA', display: 'MA',
@@ -40,7 +40,7 @@ const List<Lesson> kLessonsDe = [
 
   // ── Phase 5: +P ───────────────────────────────────────────────────────────
   Lesson(unlocked: ['M','A','I','L','O','P'], target: 'PA', display: 'PA',
-      hint: '👨', label: 'PA-PA', info: 'Neu: 🥧 P', ipa: 'paː'),
+      hint: '👨', label: 'PA-PA', info: 'Neu: 🐧 P', ipa: 'paː'),
   Lesson(unlocked: ['M','A','I','L','O','P'], target: 'PAPA', display: 'PAPA',
       hint: '👨', label: 'PAPA', ipa: 'ˈpapa'),
   Lesson(unlocked: ['M','A','I','L','O','P'], target: 'OPA', display: 'OPA',
@@ -63,7 +63,7 @@ const List<Lesson> kLessonsDe = [
   // ── Phase 7: +T, U, E ─────────────────────────────────────────────────────
   Lesson(unlocked: ['M','A','I','L','O','P','T','U','E'], target: 'TEE',
       display: 'TEE', hint: '🍵', label: 'TEE',
-      info: 'Neu: 🌮 T, ☂️ U, 🌳 E', ipa: 'teː'),
+      info: 'Neu: 🐯 T, ⌚ U, 🐘 E', ipa: 'teː'),
   Lesson(unlocked: ['M','A','I','L','O','P','T','U','E'], target: 'AUTO',
       display: 'AUTO', hint: '🚗', label: 'AUTO', ipa: 'ˈaʊto'),
   Lesson(unlocked: ['M','A','I','L','O','P','T','U','E'], target: 'OPI',
