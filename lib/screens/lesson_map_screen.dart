@@ -212,20 +212,22 @@ class _UnitBlock extends StatelessWidget {
           ),
         ),
 
-        // Uzly lekcí — hadovitě odsazené
-        for (var l = 0; l < unit.lessons.length; l++)
-          Align(
-            alignment: l.isEven
-                ? const Alignment(-0.35, 0)
-                : const Alignment(0.35, 0),
-            child: _LessonNode(
-              pack: pack,
-              unitIndex: unitIndex,
-              lessonIndex: l,
-              unitUnlocked: unitUnlocked,
-              onTap: () => onLessonTap(l),
-            ),
-          ),
+        // Dlaždice lekcí — přehled toho, co se v jednotce píše
+        Wrap(
+          alignment: WrapAlignment.center,
+          spacing: 10,
+          runSpacing: 10,
+          children: [
+            for (var l = 0; l < unit.lessons.length; l++)
+              _LessonNode(
+                pack: pack,
+                unitIndex: unitIndex,
+                lessonIndex: l,
+                unitUnlocked: unitUnlocked,
+                onTap: () => onLessonTap(l),
+              ),
+          ],
+        ),
       ],
     );
   }
@@ -259,57 +261,55 @@ class _LessonNode extends StatelessWidget {
                 pack.id, unit.lessons[lessonIndex - 1].id));
     final isCurrent = unlocked && !completed;
 
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 6),
-      child: GestureDetector(
-        onTap: unlocked ? onTap : null,
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Container(
-              width: 64,
-              height: 64,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: completed
-                    ? const Color(0xFF1DD1A1).withOpacity(0.25)
-                    : unlocked
-                        ? const Color(0xFF54A0FF).withOpacity(0.25)
-                        : Colors.white.withOpacity(0.05),
-                border: Border.all(
-                  width: isCurrent ? 3 : 2,
-                  color: completed
-                      ? const Color(0xFF1DD1A1)
-                      : isCurrent
-                          ? const Color(0xFFFFD200)
-                          : Colors.white.withOpacity(0.15),
+    return GestureDetector(
+      onTap: unlocked ? onTap : null,
+      child: Opacity(
+        opacity: unlocked ? 1.0 : 0.35,
+        child: Container(
+          width: 72,
+          height: 72,
+          decoration: BoxDecoration(
+            color: completed
+                ? const Color(0xFF1DD1A1).withOpacity(0.25)
+                : unlocked
+                    ? const Color(0xFF54A0FF).withOpacity(0.25)
+                    : Colors.white.withOpacity(0.05),
+            borderRadius: BorderRadius.circular(18),
+            border: Border.all(
+              width: isCurrent ? 3 : 2,
+              color: completed
+                  ? const Color(0xFF1DD1A1)
+                  : isCurrent
+                      ? const Color(0xFFFFD200)
+                      : Colors.white.withOpacity(0.15),
+            ),
+            boxShadow: isCurrent
+                ? [
+                    BoxShadow(
+                      color: const Color(0xFFFFD200).withOpacity(0.4),
+                      blurRadius: 16,
+                      spreadRadius: 1,
+                    ),
+                  ]
+                : null,
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(lesson.hint, style: const TextStyle(fontSize: 18)),
+              Text(
+                lesson.type == LessonType.listen ? '🔊' : lesson.display,
+                style: TextStyle(
+                  fontFamily: 'Nunito',
+                  fontSize: 15,
+                  fontWeight: FontWeight.w900,
+                  color: Colors.white.withOpacity(0.9),
                 ),
-                boxShadow: isCurrent
-                    ? [
-                        BoxShadow(
-                          color: const Color(0xFFFFD200).withOpacity(0.4),
-                          blurRadius: 16,
-                          spreadRadius: 1,
-                        ),
-                      ]
-                    : null,
               ),
-              alignment: Alignment.center,
-              child: Text(
-                unlocked || completed
-                    ? (lesson.type == LessonType.listen ? '🔊' : lesson.hint)
-                    : '🔒',
-                style: TextStyle(fontSize: unlocked ? 28 : 22),
-              ),
-            ),
-            SizedBox(
-              height: 16,
-              child: Text(
-                completed ? '⭐' * stars : '',
-                style: const TextStyle(fontSize: 10),
-              ),
-            ),
-          ],
+              if (completed)
+                Text('⭐' * stars, style: const TextStyle(fontSize: 8)),
+            ],
+          ),
         ),
       ),
     );
