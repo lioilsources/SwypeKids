@@ -55,7 +55,7 @@
           "target": "MA",
           "display": "MA",
           "hint": "👩",
-          "label": "MA-MA",
+          "label": "MA",
           "info": "Swipe: 🐭 → 🍎",
           "ipa": "mɑː"
         },
@@ -66,22 +66,22 @@
             "M",
             "A"
           ],
-          "target": "MA",
-          "display": "MA",
-          "hint": "👩",
-          "label": "MA-MA",
-          "ipa": "mɑː",
+          "target": "AM",
+          "display": "AM",
+          "hint": "🙋",
+          "label": "I AM",
+          "ipa": "æm",
           "review": true
         }
       ]
     },
     {
       "id": "en-u2",
-      "title": "T",
+      "title": "U, D",
       "icon": "👨",
       "reward": {
-        "emoji": "🐯",
-        "name": "T"
+        "emoji": "☂️",
+        "name": "U"
       },
       "lessons": [
         {
@@ -90,14 +90,15 @@
           "unlocked": [
             "M",
             "A",
-            "T"
+            "U",
+            "D"
           ],
-          "target": "TA",
-          "display": "TA",
+          "target": "DAD",
+          "display": "DAD",
           "hint": "👨",
-          "label": "TA-TA",
-          "info": "New: 🐯 T",
-          "ipa": "tɑː"
+          "label": "DAD",
+          "info": "New: ☂️ U, 🥁 D",
+          "ipa": "dæd"
         },
         {
           "id": "en-u2-l2",
@@ -105,13 +106,14 @@
           "unlocked": [
             "M",
             "A",
-            "T"
+            "U",
+            "D"
           ],
-          "target": "AT",
-          "display": "AT",
-          "hint": "📍",
-          "label": "AT",
-          "ipa": "æt"
+          "target": "MUM",
+          "display": "MUM",
+          "hint": "👩",
+          "label": "MUM",
+          "ipa": "mʌm"
         },
         {
           "id": "en-u2-l3",
@@ -119,6 +121,83 @@
           "unlocked": [
             "M",
             "A",
+            "U",
+            "D"
+          ],
+          "target": "MUD",
+          "display": "MUD",
+          "hint": "🟤",
+          "label": "MUD",
+          "ipa": "mʌd"
+        },
+        {
+          "id": "en-u2-l4",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "U",
+            "D"
+          ],
+          "target": "MAD",
+          "display": "MAD",
+          "hint": "😠",
+          "label": "MAD",
+          "ipa": "mæd",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "en-u3",
+      "title": "T",
+      "icon": "📍",
+      "reward": {
+        "emoji": "🐯",
+        "name": "T"
+      },
+      "lessons": [
+        {
+          "id": "en-u3-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "U",
+            "D",
+            "T"
+          ],
+          "target": "AT",
+          "display": "AT",
+          "hint": "📍",
+          "label": "AT",
+          "info": "New: 🐯 T",
+          "ipa": "æt"
+        },
+        {
+          "id": "en-u3-l2",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "U",
+            "D",
+            "T"
+          ],
+          "target": "MUM",
+          "display": "MUM",
+          "hint": "👩",
+          "label": "MUM",
+          "ipa": "mʌm"
+        },
+        {
+          "id": "en-u3-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "U",
+            "D",
             "T"
           ],
           "target": "MAT",
@@ -131,70 +210,12 @@
       ]
     },
     {
-      "id": "en-u3",
-      "title": "P",
-      "icon": "👨",
+      "id": "en-u4",
+      "title": "P, I, N",
+      "icon": "📌",
       "reward": {
         "emoji": "🥧",
         "name": "P"
-      },
-      "lessons": [
-        {
-          "id": "en-u3-l1",
-          "type": "swype",
-          "unlocked": [
-            "M",
-            "A",
-            "T",
-            "P"
-          ],
-          "target": "PA",
-          "display": "PA",
-          "hint": "👨",
-          "label": "PA-PA",
-          "info": "New: 🥧 P",
-          "ipa": "pɑː"
-        },
-        {
-          "id": "en-u3-l2",
-          "type": "swype",
-          "unlocked": [
-            "M",
-            "A",
-            "T",
-            "P"
-          ],
-          "target": "TAP",
-          "display": "TAP",
-          "hint": "🚰",
-          "label": "TAP",
-          "ipa": "tæp"
-        },
-        {
-          "id": "en-u3-l3",
-          "type": "swype",
-          "unlocked": [
-            "M",
-            "A",
-            "T",
-            "P"
-          ],
-          "target": "PAT",
-          "display": "PAT",
-          "hint": "✋",
-          "label": "PAT",
-          "ipa": "pæt",
-          "review": true
-        }
-      ]
-    },
-    {
-      "id": "en-u4",
-      "title": "I, N",
-      "icon": "📌",
-      "reward": {
-        "emoji": "🍦",
-        "name": "I"
       },
       "lessons": [
         {
@@ -203,6 +224,8 @@
           "unlocked": [
             "M",
             "A",
+            "U",
+            "D",
             "T",
             "P",
             "I",
@@ -212,7 +235,7 @@
           "display": "PIN",
           "hint": "📌",
           "label": "PIN",
-          "info": "New: 🍦 I, 🎵 N",
+          "info": "New: 🥧 P, 🍦 I, 🎵 N",
           "ipa": "pɪn"
         },
         {
@@ -221,6 +244,8 @@
           "unlocked": [
             "M",
             "A",
+            "U",
+            "D",
             "T",
             "P",
             "I",
@@ -238,6 +263,8 @@
           "unlocked": [
             "M",
             "A",
+            "U",
+            "D",
             "T",
             "P",
             "I",
@@ -251,10 +278,31 @@
         },
         {
           "id": "en-u4-l4",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "U",
+            "D",
+            "T",
+            "P",
+            "I",
+            "N"
+          ],
+          "target": "DAD",
+          "display": "DAD",
+          "hint": "👨",
+          "label": "DAD",
+          "ipa": "dæd"
+        },
+        {
+          "id": "en-u4-l5",
           "type": "swype",
           "unlocked": [
             "M",
             "A",
+            "U",
+            "D",
             "T",
             "P",
             "I",
@@ -264,18 +312,37 @@
           "display": "NAP",
           "hint": "💤",
           "label": "NAP",
-          "ipa": "næp",
+          "ipa": "næp"
+        },
+        {
+          "id": "en-u4-l6",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "U",
+            "D",
+            "T",
+            "P",
+            "I",
+            "N"
+          ],
+          "target": "TAP",
+          "display": "TAP",
+          "hint": "🚰",
+          "label": "TAP",
+          "ipa": "tæp",
           "review": true
         }
       ]
     },
     {
       "id": "en-u5",
-      "title": "D, U",
-      "icon": "👩",
+      "title": "O, G",
+      "icon": "🐕",
       "reward": {
-        "emoji": "🥁",
-        "name": "D"
+        "emoji": "🍊",
+        "name": "O"
       },
       "lessons": [
         {
@@ -284,19 +351,21 @@
           "unlocked": [
             "M",
             "A",
+            "U",
+            "D",
             "T",
             "P",
             "I",
             "N",
-            "D",
-            "U"
+            "O",
+            "G"
           ],
-          "target": "MUM",
-          "display": "MUM",
-          "hint": "👩",
-          "label": "MUM",
-          "info": "New: 🥁 D, ☂️ U",
-          "ipa": "mʌm"
+          "target": "DOG",
+          "display": "DOG",
+          "hint": "🐕",
+          "label": "DOG",
+          "info": "New: 🍊 O, 🦒 G",
+          "ipa": "dɒɡ"
         },
         {
           "id": "en-u5-l2",
@@ -304,18 +373,20 @@
           "unlocked": [
             "M",
             "A",
+            "U",
+            "D",
             "T",
             "P",
             "I",
             "N",
-            "D",
-            "U"
+            "O",
+            "G"
           ],
-          "target": "DAD",
-          "display": "DAD",
-          "hint": "👨",
-          "label": "DAD",
-          "ipa": "dæd"
+          "target": "PIG",
+          "display": "PIG",
+          "hint": "🐷",
+          "label": "PIG",
+          "ipa": "pɪɡ"
         },
         {
           "id": "en-u5-l3",
@@ -323,12 +394,35 @@
           "unlocked": [
             "M",
             "A",
+            "U",
+            "D",
             "T",
             "P",
             "I",
             "N",
+            "O",
+            "G"
+          ],
+          "target": "POT",
+          "display": "POT",
+          "hint": "🍲",
+          "label": "POT",
+          "ipa": "pɒt"
+        },
+        {
+          "id": "en-u5-l4",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "U",
             "D",
-            "U"
+            "T",
+            "P",
+            "I",
+            "N",
+            "O",
+            "G"
           ],
           "target": "MUD",
           "display": "MUD",
@@ -337,92 +431,36 @@
           "ipa": "mʌd"
         },
         {
-          "id": "en-u5-l4",
-          "type": "swype",
-          "unlocked": [
-            "M",
-            "A",
-            "T",
-            "P",
-            "I",
-            "N",
-            "D",
-            "U"
-          ],
-          "target": "PUP",
-          "display": "PUP",
-          "hint": "🐶",
-          "label": "PUP",
-          "ipa": "pʌp"
-        },
-        {
           "id": "en-u5-l5",
           "type": "swype",
           "unlocked": [
             "M",
             "A",
+            "U",
+            "D",
             "T",
             "P",
             "I",
             "N",
-            "D",
-            "U"
+            "O",
+            "G"
           ],
-          "target": "MAP",
-          "display": "MAP",
-          "hint": "🗺️",
-          "label": "MAP",
-          "info": "Now whole words!",
-          "ipa": "mæp"
-        },
-        {
-          "id": "en-u5-l6",
-          "type": "swype",
-          "unlocked": [
-            "M",
-            "A",
-            "T",
-            "P",
-            "I",
-            "N",
-            "D",
-            "U"
-          ],
-          "target": "PAN",
-          "display": "PAN",
-          "hint": "🍳",
-          "label": "PAN",
-          "ipa": "pæn"
-        },
-        {
-          "id": "en-u5-l7",
-          "type": "swype",
-          "unlocked": [
-            "M",
-            "A",
-            "T",
-            "P",
-            "I",
-            "N",
-            "D",
-            "U"
-          ],
-          "target": "NUN",
-          "display": "NUN",
-          "hint": "🙏",
-          "label": "NUN",
-          "ipa": "nʌn",
+          "target": "TOP",
+          "display": "TOP",
+          "hint": "🔝",
+          "label": "TOP",
+          "ipa": "tɒp",
           "review": true
         }
       ]
     },
     {
       "id": "en-u6",
-      "title": "O, G, C",
-      "icon": "🐕",
+      "title": "C",
+      "icon": "🐱",
       "reward": {
-        "emoji": "🍊",
-        "name": "O"
+        "emoji": "🐱",
+        "name": "C"
       },
       "lessons": [
         {
@@ -431,35 +469,12 @@
           "unlocked": [
             "M",
             "A",
+            "U",
+            "D",
             "T",
             "P",
             "I",
             "N",
-            "D",
-            "U",
-            "O",
-            "G",
-            "C"
-          ],
-          "target": "DOG",
-          "display": "DOG",
-          "hint": "🐕",
-          "label": "DOG",
-          "info": "New: 🍊 O, 🦒 G, 🐱 C",
-          "ipa": "dɒɡ"
-        },
-        {
-          "id": "en-u6-l2",
-          "type": "swype",
-          "unlocked": [
-            "M",
-            "A",
-            "T",
-            "P",
-            "I",
-            "N",
-            "D",
-            "U",
             "O",
             "G",
             "C"
@@ -468,29 +483,52 @@
           "display": "CAT",
           "hint": "🐱",
           "label": "CAT",
+          "info": "New: 🐱 C",
           "ipa": "kæt"
         },
         {
-          "id": "en-u6-l3",
+          "id": "en-u6-l2",
           "type": "swype",
           "unlocked": [
             "M",
             "A",
+            "U",
+            "D",
             "T",
             "P",
             "I",
             "N",
-            "D",
-            "U",
             "O",
             "G",
             "C"
           ],
-          "target": "GOT",
-          "display": "GOT",
-          "hint": "✊",
-          "label": "GOT",
-          "ipa": "ɡɒt"
+          "target": "CUP",
+          "display": "CUP",
+          "hint": "☕",
+          "label": "CUP",
+          "ipa": "kʌp"
+        },
+        {
+          "id": "en-u6-l3",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "U",
+            "D",
+            "T",
+            "P",
+            "I",
+            "N",
+            "O",
+            "G",
+            "C"
+          ],
+          "target": "NAP",
+          "display": "NAP",
+          "hint": "💤",
+          "label": "NAP",
+          "ipa": "næp"
         },
         {
           "id": "en-u6-l4",
@@ -498,12 +536,12 @@
           "unlocked": [
             "M",
             "A",
+            "U",
+            "D",
             "T",
             "P",
             "I",
             "N",
-            "D",
-            "U",
             "O",
             "G",
             "C"
@@ -520,21 +558,21 @@
           "unlocked": [
             "M",
             "A",
+            "U",
+            "D",
             "T",
             "P",
             "I",
             "N",
-            "D",
-            "U",
             "O",
             "G",
             "C"
           ],
-          "target": "CUP",
-          "display": "CUP",
-          "hint": "☕",
-          "label": "CUP",
-          "ipa": "kʌp",
+          "target": "CAP",
+          "display": "CAP",
+          "hint": "🧢",
+          "label": "CAP",
+          "ipa": "kæp",
           "review": true
         }
       ]

@@ -228,7 +228,7 @@
     {
       "id": "fr-u4",
       "title": "T",
-      "icon": "👨",
+      "icon": "👩‍🦱",
       "reward": {
         "emoji": "🐯",
         "name": "T"
@@ -247,7 +247,7 @@
           ],
           "target": "TA",
           "display": "TA",
-          "hint": "👨",
+          "hint": "👩‍🦱",
           "label": "TA-TA",
           "info": "Nouveau : 🐯 T",
           "ipa": "ta"
@@ -358,11 +358,11 @@
             "T",
             "N"
           ],
-          "target": "NANA",
-          "display": "NANA",
-          "hint": "👵",
-          "label": "NA-NA",
-          "ipa": "naˈna"
+          "target": "ANIMAL",
+          "display": "ANIMAL",
+          "hint": "🐾",
+          "label": "A-NI-MAL",
+          "ipa": "aniˈmal"
         },
         {
           "id": "fr-u6-l3",

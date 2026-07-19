@@ -23,8 +23,8 @@ const List<Lesson> kLessonsIt = [
       hint: '👨', label: 'PA-PÀ', info: 'Nuovo: 🍕 P', ipa: 'pa'),
   Lesson(unlocked: ['M','A','I','P'], target: 'PI', display: 'PI',
       hint: '🎵', label: 'PI-PI', ipa: 'pi'),
-  Lesson(unlocked: ['M','A','I','P'], target: 'PIPA', display: 'PIPA',
-      hint: '🚬', label: 'PI-PA', ipa: 'ˈpipa'),
+  Lesson(unlocked: ['M','A','I','P'], target: 'MAPPA', display: 'MAPPA',
+      hint: '🗺️', label: 'MAP-PA', ipa: 'ˈmappa'),
 
   // ── Fase 4: +N ────────────────────────────────────────────────────────────
   Lesson(unlocked: ['M','A','I','P','N'], target: 'NA', display: 'NA',

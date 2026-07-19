@@ -8,7 +8,7 @@ const List<Lesson> kLessonsPt = [
   Lesson(unlocked: ['M','A'], target: 'MA', display: 'MA',
       hint: '👩', label: 'MA-MÃE', info: 'Deslize: 🐵 → 🍍', ipa: 'ma'),
   Lesson(unlocked: ['M','A'], target: 'MAMA', display: 'MAMA',
-      hint: '👩', label: 'MA-MA', ipa: 'ˈmama'),
+      hint: '🍼', label: 'MA-MA', ipa: 'ˈmama'),
 
   // ── Fase 2: +I ───────────────────────────────────────────────────────────
   Lesson(unlocked: ['M','A','I'], target: 'MI', display: 'MI',
@@ -20,7 +20,7 @@ const List<Lesson> kLessonsPt = [
   Lesson(unlocked: ['M','A','I','P'], target: 'PA', display: 'PA',
       hint: '👨', label: 'PA-PAI', info: 'Novo: 🦆 P', ipa: 'pa'),
   Lesson(unlocked: ['M','A','I','P'], target: 'PAPA', display: 'PAPA',
-      hint: '👨', label: 'PA-PA', ipa: 'ˈpapa'),
+      hint: '🥣', label: 'PA-PA', ipa: 'ˈpapa'),
   Lesson(unlocked: ['M','A','I','P'], target: 'PIPA', display: 'PIPA',
       hint: '🪁', label: 'PI-PA', ipa: 'ˈpipa'),
 
@@ -29,8 +29,8 @@ const List<Lesson> kLessonsPt = [
       hint: '👴', label: 'VÔ', info: 'Novo: 🐮 V, 🥚 O', ipa: 'vo'),
   Lesson(unlocked: ['M','A','I','P','V','O'], target: 'VOVO', display: 'VOVÓ',
       hint: '👵', label: 'VO-VÓ', ipa: 'voˈvɔ'),
-  Lesson(unlocked: ['M','A','I','P','V','O'], target: 'POMA', display: 'POMA',
-      hint: '🍎', label: 'PO-MA', ipa: 'ˈpoma'),
+  Lesson(unlocked: ['M','A','I','P','V','O'], target: 'OVO', display: 'OVO',
+      hint: '🥚', label: 'O-VO', ipa: 'ˈovu'),
 
   // ── Fase 5: +E ───────────────────────────────────────────────────────────
   Lesson(unlocked: ['M','A','I','P','V','O','E'], target: 'MAMAE', display: 'MAMÃE',

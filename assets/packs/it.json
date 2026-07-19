@@ -179,11 +179,11 @@
             "I",
             "P"
           ],
-          "target": "PIPA",
-          "display": "PIPA",
-          "hint": "🚬",
-          "label": "PI-PA",
-          "ipa": "ˈpipa",
+          "target": "MAPPA",
+          "display": "MAPPA",
+          "hint": "🗺️",
+          "label": "MAP-PA",
+          "ipa": "ˈmappa",
           "review": true
         }
       ]

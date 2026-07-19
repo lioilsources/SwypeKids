@@ -26,8 +26,8 @@ const List<Lesson> kLessonsJa = [
   // ── ステージ4: +N, E ─────────────────────────────────────────────────────
   Lesson(unlocked: ['M','A','P','I','N','E'], target: 'NE', display: 'ね',
       hint: '🐱', label: 'NE ね', info: '新しい: 🐱 N, ✏️ E', ipa: 'ne'),
-  Lesson(unlocked: ['M','A','P','I','N','E'], target: 'NEMA', display: 'ねま',
-      hint: '🛏️', label: 'NE-MA ねま', ipa: 'nema'),
+  Lesson(unlocked: ['M','A','P','I','N','E'], target: 'AME', display: 'あめ',
+      hint: '🍬', label: 'AME あめ', ipa: 'ame'),
   Lesson(unlocked: ['M','A','P','I','N','E'], target: 'MAME', display: 'まめ',
       hint: '🫘', label: 'MAME まめ', ipa: 'mame'),
 ];

@@ -68,7 +68,7 @@
           ],
           "target": "MAMA",
           "display": "MAMA",
-          "hint": "👩",
+          "hint": "🍼",
           "label": "MA-MA",
           "ipa": "ˈmama",
           "review": true
@@ -152,7 +152,7 @@
           ],
           "target": "PAPA",
           "display": "PAPA",
-          "hint": "👨",
+          "hint": "🥣",
           "label": "PA-PA",
           "ipa": "ˈpapa"
         },
@@ -229,11 +229,11 @@
             "V",
             "O"
           ],
-          "target": "POMA",
-          "display": "POMA",
-          "hint": "🍎",
-          "label": "PO-MA",
-          "ipa": "ˈpoma",
+          "target": "OVO",
+          "display": "OVO",
+          "hint": "🥚",
+          "label": "O-VO",
+          "ipa": "ˈovu",
           "review": true
         }
       ]

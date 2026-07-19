@@ -197,11 +197,11 @@
             "N",
             "E"
           ],
-          "target": "NEMA",
-          "display": "ねま",
-          "hint": "🛏️",
-          "label": "NE-MA ねま",
-          "ipa": "nema"
+          "target": "AME",
+          "display": "あめ",
+          "hint": "🍬",
+          "label": "AME あめ",
+          "ipa": "ame"
         },
         {
           "id": "ja-u4-l3",
