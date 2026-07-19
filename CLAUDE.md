@@ -26,7 +26,7 @@ lib/
 ├── main.dart                # Init (ProgressService), saved-language detection
 ├── data/
 │   ├── keyboard_data.dart   # Key colors (+ re-exports layout)
-│   ├── keyboard_layout.dart # QWERTY rows + per-key emoji (pure Dart, no Flutter)
+│   ├── keyboard_layout.dart # QWERTY rows + per-key emoji per language (pure Dart, no Flutter)
 │   ├── lessons.dart         # Lesson model, Language/LessonType enums
 │   ├── lessons_index.dart   # Dart lessons aggregate (fallback; delete in phase 2)
 │   ├── lessons/             # Per-language Dart lessons (fallback source)

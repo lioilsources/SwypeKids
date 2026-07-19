@@ -18,12 +18,16 @@ class ChallengeCard extends StatelessWidget {
   /// Přehrát zadání znovu (jen poslechové kolo).
   final VoidCallback? onReplayAudio;
 
+  /// Per-jazyková emoji mnemotechnika kláves (PackService.keyEmojiFor).
+  final String Function(String letter) emojiFor;
+
   const ChallengeCard({
     super.key,
     required this.lesson,
     required this.path,
     required this.status,
     required this.shake,
+    required this.emojiFor,
     this.hidden = false,
     this.onReplayAudio,
   });
@@ -118,7 +122,7 @@ class ChallengeCard extends StatelessWidget {
                       ),
                       child: Text(miss
                           ? '❌'
-                          : (hidden && !hit ? '❓' : keyEmoji(ch))),
+                          : (hidden && !hit ? '❓' : emojiFor(ch))),
                     ),
                     const SizedBox(height: 3),
                     // Políčko s písmenkem

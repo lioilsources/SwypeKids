@@ -6,13 +6,13 @@ import '../lessons.dart';
 const List<Lesson> kLessonsIt = [
   // ── Fase 1: M, A ──────────────────────────────────────────────────────────
   Lesson(unlocked: ['M','A'], target: 'MA', display: 'MA',
-      hint: '👩', label: 'MAM-MA', info: 'Scorri: 🐭 → 🍎', ipa: 'ma'),
+      hint: '👩', label: 'MAM-MA', info: 'Scorri: 🍎 → 🐝', ipa: 'ma'),
   Lesson(unlocked: ['M','A'], target: 'MA', display: 'MA',
       hint: '👩', label: 'MAM-MA', ipa: 'ma'),
 
   // ── Fase 2: +I ────────────────────────────────────────────────────────────
   Lesson(unlocked: ['M','A','I'], target: 'MI', display: 'MI',
-      hint: '🐭', label: 'MI-MI', info: 'Nuovo: 🍦 I', ipa: 'mi'),
+      hint: '🐭', label: 'MI-MI', info: 'Nuovo: 🏝️ I', ipa: 'mi'),
   Lesson(unlocked: ['M','A','I'], target: 'AMI', display: 'AMI',
       hint: '❤️', label: 'A-MI', ipa: 'ˈami'),
   Lesson(unlocked: ['M','A','I'], target: 'MAMI', display: 'MAMÌ',
@@ -20,7 +20,7 @@ const List<Lesson> kLessonsIt = [
 
   // ── Fase 3: +P ────────────────────────────────────────────────────────────
   Lesson(unlocked: ['M','A','I','P'], target: 'PA', display: 'PA',
-      hint: '👨', label: 'PA-PÀ', info: 'Nuovo: 🥧 P', ipa: 'pa'),
+      hint: '👨', label: 'PA-PÀ', info: 'Nuovo: 🍕 P', ipa: 'pa'),
   Lesson(unlocked: ['M','A','I','P'], target: 'PI', display: 'PI',
       hint: '🎵', label: 'PI-PI', ipa: 'pi'),
   Lesson(unlocked: ['M','A','I','P'], target: 'PIPA', display: 'PIPA',
@@ -28,7 +28,7 @@ const List<Lesson> kLessonsIt = [
 
   // ── Fase 4: +N ────────────────────────────────────────────────────────────
   Lesson(unlocked: ['M','A','I','P','N'], target: 'NA', display: 'NA',
-      hint: '🎵', label: 'NA-NA', info: 'Nuovo: 🎵 N', ipa: 'na'),
+      hint: '🎵', label: 'NA-NA', info: 'Nuovo: 👃 N', ipa: 'na'),
   Lesson(unlocked: ['M','A','I','P','N'], target: 'NANA', display: 'NANNA',
       hint: '💤', label: 'NAN-NA', ipa: 'ˈnanna'),
   Lesson(unlocked: ['M','A','I','P','N'], target: 'MANI', display: 'MANI',
@@ -36,7 +36,7 @@ const List<Lesson> kLessonsIt = [
 
   // ── Fase 5: +O, L ─────────────────────────────────────────────────────────
   Lesson(unlocked: ['M','A','I','P','N','O','L'], target: 'LA', display: 'LA',
-      hint: '🦁', label: 'LA-LA', info: 'Nuovo: 🍊 O, 🦁 L', ipa: 'la'),
+      hint: '🦁', label: 'LA-LA', info: 'Nuovo: 🐻 O, 🦁 L', ipa: 'la'),
   Lesson(unlocked: ['M','A','I','P','N','O','L'], target: 'LANA', display: 'LANA',
       hint: '🧶', label: 'LA-NA', ipa: 'ˈlana'),
   Lesson(unlocked: ['M','A','I','P','N','O','L'], target: 'MANO', display: 'MANO',
@@ -59,7 +59,7 @@ const List<Lesson> kLessonsIt = [
   // ── Fase 7: +T, E ─────────────────────────────────────────────────────────
   Lesson(unlocked: ['M','A','I','P','N','O','L','T','E'], target: 'TE',
       display: 'TÈ', hint: '🍵', label: 'TÈ',
-      info: 'Nuovo: 🌮 T, 🌳 E', ipa: 'tɛ'),
+      info: 'Nuovo: 🐯 T, 🐘 E', ipa: 'tɛ'),
   Lesson(unlocked: ['M','A','I','P','N','O','L','T','E'], target: 'PANE',
       display: 'PANE', hint: '🍞', label: 'PA-NE', ipa: 'ˈpane'),
   Lesson(unlocked: ['M','A','I','P','N','O','L','T','E'], target: 'LATTE',

@@ -5,6 +5,36 @@
   "culture": "CZ",
   "title": "Slabikář – Čeština",
   "method": "analyticko-syntetická (Hláskovice / Nová škola)",
+  "keyboard": {
+    "emoji": {
+      "A": "🚗",
+      "B": "🍌",
+      "C": "🍋",
+      "D": "🏠",
+      "E": "👧",
+      "F": "⚽",
+      "G": "🦍",
+      "H": "🐍",
+      "I": "🌈",
+      "J": "🍎",
+      "K": "🐱",
+      "L": "🦁",
+      "M": "🐭",
+      "N": "✂️",
+      "O": "👁️",
+      "P": "🐷",
+      "Q": "👑",
+      "R": "🐟",
+      "S": "☀️",
+      "T": "🐯",
+      "U": "👂",
+      "V": "🐺",
+      "W": "🐸",
+      "X": "🎸",
+      "Y": "🪁",
+      "Z": "🦓"
+    }
+  },
   "units": [
     {
       "id": "cs-u1",
@@ -26,7 +56,7 @@
           "display": "MA",
           "hint": "👩",
           "label": "MÁ-MA",
-          "info": "Přejeď: 🐭 → 🍎",
+          "info": "Přejeď: 🐭 → 🚗",
           "ipa": "maː"
         },
         {
@@ -178,7 +208,7 @@
       "title": "E, L",
       "icon": "🌀",
       "reward": {
-        "emoji": "🐘",
+        "emoji": "👧",
         "name": "E"
       },
       "lessons": [
@@ -197,7 +227,7 @@
           "display": "ME",
           "hint": "🌀",
           "label": "ME-LE",
-          "info": "Nové: 🐘 E, 🦁 L",
+          "info": "Nové: 👧 E, 🦁 L",
           "ipa": "mɛ"
         },
         {
@@ -259,7 +289,7 @@
       "title": "O, K",
       "icon": "🚲",
       "reward": {
-        "emoji": "🐙",
+        "emoji": "👁️",
         "name": "O"
       },
       "lessons": [
@@ -280,7 +310,7 @@
           "display": "KO",
           "hint": "🚲",
           "label": "KO-LO",
-          "info": "Nové: 🐙 O, 🐱 K",
+          "info": "Nové: 👁️ O, 🐱 K",
           "ipa": "ko"
         },
         {
@@ -329,7 +359,7 @@
       "title": "Celá slova",
       "icon": "👩",
       "reward": {
-        "emoji": "🍎",
+        "emoji": "🚗",
         "name": "A"
       },
       "lessons": [

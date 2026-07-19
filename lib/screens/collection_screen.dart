@@ -109,7 +109,8 @@ class _CollectionScreenState extends State<CollectionScreen> {
                       itemCount: pack.units.length,
                       itemBuilder: (context, i) {
                         final reward = pack.units[i].reward;
-                        final has = owned.contains(reward.emoji);
+                        final has = ProgressService.instance
+                            .hasCollectible(pack.id, reward);
                         return Container(
                           decoration: BoxDecoration(
                             color:

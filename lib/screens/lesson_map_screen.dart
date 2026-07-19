@@ -160,8 +160,7 @@ class _UnitBlock extends StatelessWidget {
     final unit = pack.units[unitIndex];
     final unitUnlocked = progress.isUnitUnlocked(pack, unitIndex);
     final unitCompleted = progress.isUnitCompleted(pack, unitIndex);
-    final hasReward =
-        progress.collectibles(pack.id).contains(unit.reward.emoji);
+    final hasReward = progress.hasCollectible(pack.id, unit.reward);
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,

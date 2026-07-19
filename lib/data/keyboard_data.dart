@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'keyboard_layout.dart';
 
-export 'keyboard_layout.dart' show kRows, kEmoji;
+export 'keyboard_layout.dart' show kRows, kEmoji, kEmojiByLang;
 
 // ─── Barvy kláves ─────────────────────────────────────────────────────────────
 const Map<String, Color> kColors = {

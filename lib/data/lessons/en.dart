@@ -13,7 +13,7 @@ const List<Lesson> kLessonsEn = [
 
   // ── Phase 2: +T ───────────────────────────────────────────────────────────
   Lesson(unlocked: ['M','A','T'], target: 'TA', display: 'TA',
-      hint: '👨', label: 'TA-TA', info: 'New: 🌮 T', ipa: 'tɑː'),
+      hint: '👨', label: 'TA-TA', info: 'New: 🐯 T', ipa: 'tɑː'),
   Lesson(unlocked: ['M','A','T'], target: 'AT', display: 'AT',
       hint: '📍', label: 'AT', ipa: 'æt'),
   Lesson(unlocked: ['M','A','T'], target: 'MAT', display: 'MAT',

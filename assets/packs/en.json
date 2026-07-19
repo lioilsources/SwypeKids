@@ -5,6 +5,36 @@
   "culture": "US",
   "title": "Syllabary – English",
   "method": "synthetic phonics (Jolly Phonics SATPIN-inspired)",
+  "keyboard": {
+    "emoji": {
+      "A": "🍎",
+      "B": "🍌",
+      "C": "🐱",
+      "D": "🥁",
+      "E": "🥚",
+      "F": "🐸",
+      "G": "🦒",
+      "H": "🏠",
+      "I": "🍦",
+      "J": "🧃",
+      "K": "🪁",
+      "L": "🦁",
+      "M": "🐭",
+      "N": "🎵",
+      "O": "🍊",
+      "P": "🥧",
+      "Q": "👑",
+      "R": "🌈",
+      "S": "☀️",
+      "T": "🐯",
+      "U": "☂️",
+      "V": "🎻",
+      "W": "🐳",
+      "X": "🎸",
+      "Y": "🪀",
+      "Z": "🦓"
+    }
+  },
   "units": [
     {
       "id": "en-u1",
@@ -66,7 +96,7 @@
           "display": "TA",
           "hint": "👨",
           "label": "TA-TA",
-          "info": "New: 🌮 T",
+          "info": "New: 🐯 T",
           "ipa": "tɑː"
         },
         {
@@ -105,7 +135,7 @@
       "title": "P",
       "icon": "👨",
       "reward": {
-        "emoji": "🐷",
+        "emoji": "🥧",
         "name": "P"
       },
       "lessons": [
@@ -163,7 +193,7 @@
       "title": "I, N",
       "icon": "📌",
       "reward": {
-        "emoji": "🌈",
+        "emoji": "🍦",
         "name": "I"
       },
       "lessons": [
@@ -244,7 +274,7 @@
       "title": "D, U",
       "icon": "👩",
       "reward": {
-        "emoji": "🍩",
+        "emoji": "🥁",
         "name": "D"
       },
       "lessons": [
@@ -391,7 +421,7 @@
       "title": "O, G, C",
       "icon": "🐕",
       "reward": {
-        "emoji": "🐙",
+        "emoji": "🍊",
         "name": "O"
       },
       "lessons": [

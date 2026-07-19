@@ -5,13 +5,43 @@
   "culture": "BR",
   "title": "Silabário – Português (Brasil)",
   "method": "silábico (vogais primeiro, depois consoantes em CV)",
+  "keyboard": {
+    "emoji": {
+      "A": "🍍",
+      "B": "🍌",
+      "C": "🐶",
+      "D": "🎲",
+      "E": "🐘",
+      "F": "🌸",
+      "G": "🐱",
+      "H": "🦛",
+      "I": "🏝️",
+      "J": "🐊",
+      "K": "🐨",
+      "L": "🦁",
+      "M": "🐵",
+      "N": "☁️",
+      "O": "🥚",
+      "P": "🦆",
+      "Q": "🧀",
+      "R": "🐭",
+      "S": "☀️",
+      "T": "🐯",
+      "U": "🍇",
+      "V": "🐮",
+      "W": "🐸",
+      "X": "☕",
+      "Y": "🪁",
+      "Z": "🦓"
+    }
+  },
   "units": [
     {
       "id": "pt-u1",
       "title": "M, A",
       "icon": "👩",
       "reward": {
-        "emoji": "🐭",
+        "emoji": "🐵",
         "name": "M"
       },
       "lessons": [
@@ -26,7 +56,7 @@
           "display": "MA",
           "hint": "👩",
           "label": "MA-MÃE",
-          "info": "Deslize: 🐭 → 🍎",
+          "info": "Deslize: 🐵 → 🍍",
           "ipa": "ma"
         },
         {
@@ -50,7 +80,7 @@
       "title": "I",
       "icon": "🐭",
       "reward": {
-        "emoji": "🌈",
+        "emoji": "🏝️",
         "name": "I"
       },
       "lessons": [
@@ -66,7 +96,7 @@
           "display": "MI",
           "hint": "🐭",
           "label": "MI-MI",
-          "info": "Novo: 🍦 I",
+          "info": "Novo: 🏝️ I",
           "ipa": "mi"
         },
         {
@@ -91,7 +121,7 @@
       "title": "P",
       "icon": "👨",
       "reward": {
-        "emoji": "🐷",
+        "emoji": "🦆",
         "name": "P"
       },
       "lessons": [
@@ -108,7 +138,7 @@
           "display": "PA",
           "hint": "👨",
           "label": "PA-PAI",
-          "info": "Novo: 🥧 P",
+          "info": "Novo: 🦆 P",
           "ipa": "pa"
         },
         {
@@ -149,7 +179,7 @@
       "title": "V, O",
       "icon": "👴",
       "reward": {
-        "emoji": "🐺",
+        "emoji": "🐮",
         "name": "V"
       },
       "lessons": [
@@ -168,7 +198,7 @@
           "display": "VÔ",
           "hint": "👴",
           "label": "VÔ",
-          "info": "Novo: 🐮 V, 🍊 O",
+          "info": "Novo: 🐮 V, 🥚 O",
           "ipa": "vo"
         },
         {
@@ -233,7 +263,7 @@
           "display": "MAMÃE",
           "hint": "👩",
           "label": "MA-MÃE",
-          "info": "Novo: 🌳 E",
+          "info": "Novo: 🐘 E",
           "ipa": "maˈmɐ̃j"
         },
         {

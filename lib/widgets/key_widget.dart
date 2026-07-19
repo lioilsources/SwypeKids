@@ -3,6 +3,7 @@ import '../data/keyboard_data.dart';
 
 class KeyWidget extends StatelessWidget {
   final String letter;
+  final String emoji; // per-jazyková mnemotechnika (PackService.keyEmojiFor)
   final bool active;
   final bool inPath;
   final bool isNew; // právě odemčené → bliká
@@ -11,6 +12,7 @@ class KeyWidget extends StatelessWidget {
   const KeyWidget({
     super.key,
     required this.letter,
+    required this.emoji,
     required this.active,
     required this.inPath,
     this.isNew = false,
@@ -61,7 +63,7 @@ class KeyWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  keyEmoji(letter),
+                  emoji,
                   style: TextStyle(
                     fontSize: 18 * scale,
                     shadows: inPath

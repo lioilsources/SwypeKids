@@ -9,6 +9,7 @@ import 'swype_painter.dart';
 class KeyboardWidget extends StatefulWidget {
   final Lesson lesson;
   final List<String> newLetters;
+  final String Function(String letter) emojiFor; // per-pack mnemotechnika
   final void Function(List<String> path) onSwypeEnd;
   final void Function(List<String> path)? onSwypeUpdate;
 
@@ -16,6 +17,7 @@ class KeyboardWidget extends StatefulWidget {
     super.key,
     required this.lesson,
     required this.newLetters,
+    required this.emojiFor,
     required this.onSwypeEnd,
     this.onSwypeUpdate,
   });
@@ -255,6 +257,7 @@ class _KeyboardWidgetState extends State<KeyboardWidget>
                             child: KeyWidget(
                               key: _keyGlobalKeys[letter],
                               letter: letter,
+                              emoji: widget.emojiFor(letter),
                               active: active,
                               inPath: inPath,
                               isNew: isNew,

@@ -75,7 +75,8 @@ class PackService {
         title: (added.isNotEmpty ? added : unlocked).join(', '),
         icon: ranges[u].first.hint,
         reward: CollectibleReward(
-            emoji: keyEmoji(rewardLetter), name: rewardLetter),
+            emoji: kEmojiByLang[lang]![rewardLetter] ?? keyEmoji(rewardLetter),
+            name: rewardLetter),
         lessons: [
           for (var i = 0; i < ranges[u].length; i++)
             Lesson(
@@ -100,6 +101,7 @@ class PackService {
       schemaVersion: 1,
       id: lang.name,
       language: lang,
+      keyboardEmoji: kEmojiByLang[lang]!,
       units: units,
     );
   }

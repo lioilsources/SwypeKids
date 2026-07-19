@@ -6,7 +6,7 @@ import '../lessons.dart';
 const List<Lesson> kLessonsCs = [
   // ── Fáze 1: jen M, A ──────────────────────────────────────────────────────
   Lesson(unlocked: ['M','A'], target: 'MA', display: 'MA',
-      hint: '👩', label: 'MÁ-MA', info: 'Přejeď: 🐭 → 🍎', ipa: 'maː'),
+      hint: '👩', label: 'MÁ-MA', info: 'Přejeď: 🐭 → 🚗', ipa: 'maː'),
   Lesson(unlocked: ['M','A'], target: 'MA', display: 'MA',
       hint: '👩', label: 'MÁ-MA', ipa: 'maː'),
 
@@ -30,7 +30,7 @@ const List<Lesson> kLessonsCs = [
 
   // ── Fáze 4: +E, L ─────────────────────────────────────────────────────────
   Lesson(unlocked: ['M','A','T','B','E','L'], target: 'ME', display: 'ME',
-      hint: '🌀', label: 'ME-LE', info: 'Nové: 🐘 E, 🦁 L', ipa: 'mɛ'),
+      hint: '🌀', label: 'ME-LE', info: 'Nové: 👧 E, 🦁 L', ipa: 'mɛ'),
   Lesson(unlocked: ['M','A','T','B','E','L'], target: 'LE', display: 'LE',
       hint: '🌀', label: 'ME-LE', ipa: 'lɛ'),
   Lesson(unlocked: ['M','A','T','B','E','L'], target: 'MA', display: 'MA',
@@ -40,7 +40,7 @@ const List<Lesson> kLessonsCs = [
 
   // ── Fáze 5: +O, K ─────────────────────────────────────────────────────────
   Lesson(unlocked: ['M','A','T','B','E','L','O','K'], target: 'KO', display: 'KO',
-      hint: '🚲', label: 'KO-LO', info: 'Nové: 🐙 O, 🐱 K', ipa: 'ko'),
+      hint: '🚲', label: 'KO-LO', info: 'Nové: 👁️ O, 🐱 K', ipa: 'ko'),
   Lesson(unlocked: ['M','A','T','B','E','L','O','K'], target: 'LO', display: 'LO',
       hint: '🚲', label: 'KO-LO', ipa: 'lo'),
   Lesson(unlocked: ['M','A','T','B','E','L','O','K'], target: 'ME', display: 'ME',

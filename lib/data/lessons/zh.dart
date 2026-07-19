@@ -8,14 +8,14 @@ import '../lessons.dart';
 const List<Lesson> kLessonsZh = [
   // ── 第一阶段: M, A ────────────────────────────────────────────────────────
   Lesson(unlocked: ['M','A'], target: 'MA', display: 'MĀ',
-      hint: '👩', label: 'MĀ 妈', info: '滑动: 🐭 → 🍎',
+      hint: '👩', label: 'MĀ 妈', info: '滑动: 🐴 → ❤️',
       ipa: 'ma˥', pinyin: 'ma1'),
   Lesson(unlocked: ['M','A'], target: 'MA', display: 'MĀ',
       hint: '👩', label: 'MĀ 妈', ipa: 'ma˥', pinyin: 'ma1'),
 
   // ── 第二阶段: +B ──────────────────────────────────────────────────────────
   Lesson(unlocked: ['M','A','B'], target: 'BA', display: 'BÀ',
-      hint: '👨', label: 'BÀ 爸', info: '新: 🐻 B',
+      hint: '👨', label: 'BÀ 爸', info: '新: 👨 B',
       ipa: 'pa˥˩', pinyin: 'ba4'),
   Lesson(unlocked: ['M','A','B'], target: 'BABA', display: 'BÀBA',
       hint: '👨', label: 'BÀBA 爸爸', ipa: 'ˈpa˥˩pa', pinyin: 'ba4.ba'),
@@ -24,7 +24,7 @@ const List<Lesson> kLessonsZh = [
 
   // ── 第三阶段: +I ──────────────────────────────────────────────────────────
   Lesson(unlocked: ['M','A','B','I'], target: 'MI', display: 'MǏ',
-      hint: '🍚', label: 'MǏ 米', info: '新: 🍦 I',
+      hint: '🍚', label: 'MǏ 米', info: '新: 1️⃣ I',
       ipa: 'mi˨˩˦', pinyin: 'mi3'),
   Lesson(unlocked: ['M','A','B','I'], target: 'BI', display: 'BǏ',
       hint: '✏️', label: 'BǏ 笔', ipa: 'pi˨˩˦', pinyin: 'bi3'),
@@ -33,7 +33,7 @@ const List<Lesson> kLessonsZh = [
 
   // ── 第四阶段: +P ──────────────────────────────────────────────────────────
   Lesson(unlocked: ['M','A','B','I','P'], target: 'PA', display: 'PÀ',
-      hint: '😨', label: 'PÀ 怕', info: '新: 🥧 P',
+      hint: '😨', label: 'PÀ 怕', info: '新: 🍎 P',
       ipa: 'pʰa˥˩', pinyin: 'pa4'),
   Lesson(unlocked: ['M','A','B','I','P'], target: 'PI', display: 'PÍ',
       hint: '🍌', label: 'PÍ 皮', ipa: 'pʰi˧˥', pinyin: 'pi2'),
@@ -42,7 +42,7 @@ const List<Lesson> kLessonsZh = [
 
   // ── 第五阶段: +N, E ──────────────────────────────────────────────────────
   Lesson(unlocked: ['M','A','B','I','P','N','E'], target: 'NE', display: 'NE',
-      hint: '❓', label: 'NE 呢', info: '新: 🎵 N, 🌳 E',
+      hint: '❓', label: 'NE 呢', info: '新: 🐮 N, 🦢 E',
       ipa: 'nə', pinyin: 'ne'),
   Lesson(unlocked: ['M','A','B','I','P','N','E'], target: 'ME', display: 'ME',
       hint: '❓', label: 'ME 么', ipa: 'mə', pinyin: 'me'),
@@ -65,7 +65,7 @@ const List<Lesson> kLessonsZh = [
   // ── 第七阶段: +H, O ──────────────────────────────────────────────────────
   Lesson(unlocked: ['M','A','B','I','P','N','E','H','O'], target: 'HAO',
       display: 'HǍO', hint: '👍', label: 'HǍO 好',
-      info: '新: ☀️ H, 🍊 O', ipa: 'xau˨˩˦', pinyin: 'hao3'),
+      info: '新: 🌸 H, 🕊️ O', ipa: 'xau˨˩˦', pinyin: 'hao3'),
   Lesson(unlocked: ['M','A','B','I','P','N','E','H','O'], target: 'BAO',
       display: 'BĀO', hint: '🥟', label: 'BĀO 包',
       ipa: 'pau˥', pinyin: 'bao1'),
