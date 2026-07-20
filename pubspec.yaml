@@ -1,7 +1,7 @@
 name: swype_kids
 description: Výuková hra pro děti – učíme se písmenka swyp tahem po klávesnici.
 publish_to: none
-version: 2.1.0
+version: 2.1.1
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
