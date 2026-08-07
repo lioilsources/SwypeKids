@@ -26,9 +26,11 @@ void main() {
     expect(find.textContaining('Slabikář'), findsOneWidget);
     expect(find.text('M, A'), findsOneWidget);
 
-    // Nic není dokončené → 0 hvězd, zamčené uzly existují
+    // Nic není dokončené → 0 hvězd; dlaždice ukazují obsah lekcí, žádné zámky
     expect(find.textContaining('⭐ 0'), findsOneWidget);
-    expect(find.text('🔒'), findsWidgets);
+    expect(find.text('MA'), findsWidgets);
+    expect(find.text('TA'), findsWidgets);
+    expect(find.text('🔒'), findsNothing);
 
     // Nezískané odměny jednotek jsou ❓
     expect(find.text('❓'), findsWidgets);
