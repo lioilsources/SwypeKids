@@ -3,6 +3,7 @@
 Výuková hra pro děti 5–9 let. Učí písmena a slabiky swyp tahem po klávesnici s emoji.
 
 Gameplay, progrese a obsahový model: viz [docs/GAMEPLAY.md](docs/GAMEPLAY.md).
+Roadmapa (postavičky, svět, zvuk, lekce, rodiče): viz [docs/ROADMAP.md](docs/ROADMAP.md).
 
 ## Struktura projektu
 
@@ -105,7 +106,7 @@ Po úpravě Dart lekcí lze packy přegenerovat:
 
 ## Rozšíření (TODO)
 
-Roadmapa fází je v [docs/GAMEPLAY.md](docs/GAMEPLAY.md). Krátkodobě:
+Roadmapa fází je v [docs/ROADMAP.md](docs/ROADMAP.md). Krátkodobě:
 
 - [x] Konfigurovatelné sady slov (JSON content packy)
 - [x] Uložení postupu (hvězdy, nálepky, jazyk)
