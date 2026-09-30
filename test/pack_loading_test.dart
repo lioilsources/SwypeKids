@@ -5,6 +5,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:swype_kids/data/keyboard_layout.dart';
 import 'package:swype_kids/data/lessons.dart';
 import 'package:swype_kids/data/models/content_pack.dart';
+import 'package:swype_kids/data/models/sentence.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -53,6 +54,39 @@ void main() {
               reason: '${lesson.id}: target obsahuje neodemčené písmeno');
         }
       }
+
+      // ── Schéma v2: builder vět + batoh slov ──────────────────────────
+      expect(pack.schemaVersion, 2);
+      final sentence = pack.sentence;
+      expect(sentence.subjects, isNotEmpty);
+      expect(sentence.verbs, isNotEmpty);
+      expect(sentence.objects, isNotEmpty);
+      final tileIds = <String>{};
+      for (final tile in sentence.all) {
+        expect(tileIds.add(tile.id), isTrue,
+            reason: 'duplicitní id dlaždice ${tile.id}');
+      }
+      // Věta musí jít složit od začátku, i s prázdným batohem.
+      for (final cat in [sentence.subjects, sentence.verbs, sentence.objects]) {
+        expect(cat.any((t) => t.unlockedBy == TileUnlock.always), isTrue,
+            reason: 'kategorie builderu bez základní dlaždice');
+      }
+      final vocabTiles = {
+        for (final t in sentence.all)
+          if (t.unlockedBy == TileUnlock.vocab) t.id,
+      };
+      final lessonVocab = <String>{};
+      for (final lesson in pack.allLessons) {
+        if (lesson.vocab.isEmpty) continue;
+        lessonVocab.add(lesson.vocab);
+        expect(vocabTiles, contains(lesson.vocab),
+            reason: '${lesson.id}: vocab ${lesson.vocab} nemá vocab dlaždici');
+        // Do batohu patří celá slova, ne izolované slabiky (pásmo A).
+        expect(lesson.target.length, greaterThan(2),
+            reason: '${lesson.id}: vocab u slabiky');
+      }
+      expect(lessonVocab, containsAll(vocabTiles),
+          reason: 'vocab dlaždice, kterou žádná lekce neodemkne');
     });
   }
 

@@ -11,7 +11,7 @@ enum LessonType {
 }
 
 class Lesson {
-  final String id;             // stabilní id z content packu ('' u Dart fallbacku)
+  final String id;             // stabilní id z content packu
   final LessonType type;
   final List<String> unlocked; // aktivní písmena
   final String target;         // co má dítě swypnout (velká, bez diakritiky)
@@ -22,6 +22,8 @@ class Lesson {
   final String ipa;            // hrubý IPA přepis pro TTS / trumpetku
   final String pinyin;         // pinyin s číslem tónu (jen ZH; jinak '')
   final bool review;           // opakovací lekce na konci jednotky
+  final String vocab;          // id slova do batohu / dlaždice builderu ('' = žádné)
+  final String parentNote;     // věta pro rodiče: co se procvičuje a proč
 
   const Lesson({
     this.id = '',
@@ -35,6 +37,8 @@ class Lesson {
     this.ipa = '',
     this.pinyin = '',
     this.review = false,
+    this.vocab = '',
+    this.parentNote = '',
   });
 
   factory Lesson.fromJson(Map<String, dynamic> json) => Lesson(
@@ -50,6 +54,8 @@ class Lesson {
         ipa: json['ipa'] as String? ?? '',
         pinyin: json['pinyin'] as String? ?? '',
         review: json['review'] as bool? ?? false,
+        vocab: json['vocab'] as String? ?? '',
+        parentNote: json['parentNote'] as String? ?? '',
       );
 
   Map<String, dynamic> toJson() => {
@@ -64,5 +70,7 @@ class Lesson {
         if (ipa.isNotEmpty) 'ipa': ipa,
         if (pinyin.isNotEmpty) 'pinyin': pinyin,
         if (review) 'review': review,
+        if (vocab.isNotEmpty) 'vocab': vocab,
+        if (parentNote.isNotEmpty) 'parentNote': parentNote,
       };
 }

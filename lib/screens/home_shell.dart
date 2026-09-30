@@ -43,7 +43,11 @@ class _HomeShellState extends State<HomeShell> {
       body: IndexedStack(
         index: _view.index,
         children: [
-          LessonMapScreen(language: _lang, onLanguageChanged: _setLang),
+          LessonMapScreen(
+            language: _lang,
+            onLanguageChanged: _setLang,
+            onOpenBag: () => _setView(AppView.sentence),
+          ),
           SentenceBuilderScreen(
               language: _lang, onLanguageChanged: _setLang),
           CollectionScreen(language: _lang),

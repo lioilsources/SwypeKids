@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "cs-CZ",
   "language": "cs",
   "culture": "CZ",
@@ -381,7 +381,8 @@
           "hint": "👩",
           "label": "MÁMA",
           "info": "Teď celé slovo!",
-          "ipa": "ˈmaːma"
+          "ipa": "ˈmaːma",
+          "vocab": "mama"
         },
         {
           "id": "cs-u6-l2",
@@ -400,7 +401,8 @@
           "display": "TÁTA",
           "hint": "👨",
           "label": "TÁTA",
-          "ipa": "ˈtaːta"
+          "ipa": "ˈtaːta",
+          "vocab": "tata"
         },
         {
           "id": "cs-u6-l3",
@@ -419,7 +421,8 @@
           "display": "BÁBA",
           "hint": "👵",
           "label": "BÁBA",
-          "ipa": "ˈbaːba"
+          "ipa": "ˈbaːba",
+          "vocab": "baba"
         },
         {
           "id": "cs-u6-l4",
@@ -458,7 +461,8 @@
           "hint": "🚲",
           "label": "KOLO",
           "ipa": "ˈkolo",
-          "review": true
+          "review": true,
+          "vocab": "kolo"
         }
       ]
     },
@@ -492,7 +496,8 @@
           "hint": "🌲",
           "label": "LES",
           "info": "Nové: ☀️ S, ✂️ N, 🐷 P",
-          "ipa": "lɛs"
+          "ipa": "lɛs",
+          "vocab": "les"
         },
         {
           "id": "cs-u7-l2",
@@ -514,7 +519,8 @@
           "display": "PES",
           "hint": "🐶",
           "label": "PES",
-          "ipa": "pɛs"
+          "ipa": "pɛs",
+          "vocab": "pes"
         },
         {
           "id": "cs-u7-l3",
@@ -536,7 +542,8 @@
           "display": "NOS",
           "hint": "👃",
           "label": "NOS",
-          "ipa": "nos"
+          "ipa": "nos",
+          "vocab": "nos"
         },
         {
           "id": "cs-u7-l4",
@@ -558,7 +565,8 @@
           "display": "KOLO",
           "hint": "🚲",
           "label": "KOLO",
-          "ipa": "ˈkolo"
+          "ipa": "ˈkolo",
+          "vocab": "kolo"
         },
         {
           "id": "cs-u7-l5",
@@ -581,9 +589,235 @@
           "hint": "🌲",
           "label": "LES",
           "ipa": "lɛs",
-          "review": true
+          "review": true,
+          "vocab": "les"
         }
       ]
     }
-  ]
+  ],
+  "sentence": {
+    "joiner": " ",
+    "subjects": [
+      {
+        "id": "s1",
+        "emoji": "👶",
+        "text": "Já",
+        "unlockedBy": "always",
+        "person": "1sg"
+      },
+      {
+        "id": "mama",
+        "emoji": "👩",
+        "text": "Máma",
+        "unlockedBy": "vocab",
+        "person": "3sg"
+      },
+      {
+        "id": "tata",
+        "emoji": "👨",
+        "text": "Táta",
+        "unlockedBy": "vocab",
+        "person": "3sg"
+      },
+      {
+        "id": "baba",
+        "emoji": "👵",
+        "text": "Bába",
+        "unlockedBy": "vocab",
+        "person": "3sg"
+      },
+      {
+        "id": "pes",
+        "emoji": "🐶",
+        "text": "Pes",
+        "unlockedBy": "vocab",
+        "person": "3sg"
+      }
+    ],
+    "verbs": [
+      {
+        "id": "v1",
+        "emoji": "✋",
+        "text": "chci",
+        "unlockedBy": "always",
+        "frame": "acc",
+        "forms": {
+          "3sg": "chce"
+        }
+      },
+      {
+        "id": "v2",
+        "emoji": "🍽️",
+        "text": "jím",
+        "unlockedBy": "always",
+        "frame": "acc",
+        "forms": {
+          "3sg": "jí"
+        }
+      },
+      {
+        "id": "v3",
+        "emoji": "🥛",
+        "text": "piju",
+        "unlockedBy": "always",
+        "frame": "acc",
+        "forms": {
+          "3sg": "pije"
+        }
+      },
+      {
+        "id": "v4",
+        "emoji": "💤",
+        "text": "spím",
+        "unlockedBy": "always",
+        "frame": "loc",
+        "forms": {
+          "3sg": "spí"
+        }
+      },
+      {
+        "id": "v5",
+        "emoji": "🚶",
+        "text": "jdu",
+        "unlockedBy": "always",
+        "frame": "dir",
+        "forms": {
+          "3sg": "jde"
+        }
+      },
+      {
+        "id": "v6",
+        "emoji": "🎲",
+        "text": "hraju",
+        "unlockedBy": "always",
+        "frame": "instr",
+        "forms": {
+          "3sg": "hraje"
+        }
+      }
+    ],
+    "objects": [
+      {
+        "id": "o1",
+        "emoji": "🥛",
+        "text": "mléko",
+        "unlockedBy": "always",
+        "forms": {
+          "instr": "s mlékem",
+          "loc": "u mléka"
+        }
+      },
+      {
+        "id": "o2",
+        "emoji": "🍎",
+        "text": "jablko",
+        "unlockedBy": "always",
+        "forms": {
+          "instr": "s jablkem",
+          "loc": "u jablka"
+        }
+      },
+      {
+        "id": "o3",
+        "emoji": "🧸",
+        "text": "hračka",
+        "unlockedBy": "always",
+        "forms": {
+          "acc": "hračku",
+          "instr": "s hračkou",
+          "loc": "u hračky",
+          "dir": "pro hračku"
+        }
+      },
+      {
+        "id": "o4",
+        "emoji": "🚗",
+        "text": "auto",
+        "unlockedBy": "always",
+        "forms": {
+          "instr": "s autem",
+          "loc": "v autě",
+          "dir": "do auta"
+        }
+      },
+      {
+        "id": "o5",
+        "emoji": "🚪",
+        "text": "ven",
+        "unlockedBy": "always",
+        "forms": {
+          "acc": "venek",
+          "loc": "venku",
+          "instr": "s venkem"
+        }
+      },
+      {
+        "id": "o6",
+        "emoji": "🏠",
+        "text": "domů",
+        "unlockedBy": "always",
+        "forms": {
+          "acc": "dům",
+          "loc": "doma",
+          "instr": "s domem"
+        }
+      },
+      {
+        "id": "o7",
+        "emoji": "🛏️",
+        "text": "postýlka",
+        "unlockedBy": "always",
+        "forms": {
+          "acc": "postýlku",
+          "dir": "do postýlky",
+          "loc": "v postýlce",
+          "instr": "s postýlkou"
+        }
+      },
+      {
+        "id": "o8",
+        "emoji": "🚽",
+        "text": "nočník",
+        "unlockedBy": "always",
+        "forms": {
+          "dir": "na nočník",
+          "loc": "na nočníku",
+          "instr": "s nočníkem"
+        }
+      },
+      {
+        "id": "kolo",
+        "emoji": "🚲",
+        "text": "kolo",
+        "unlockedBy": "vocab",
+        "forms": {
+          "instr": "s kolem",
+          "loc": "u kola",
+          "dir": "ke kolu"
+        }
+      },
+      {
+        "id": "les",
+        "emoji": "🌲",
+        "text": "les",
+        "unlockedBy": "vocab",
+        "forms": {
+          "dir": "do lesa",
+          "loc": "v lese",
+          "instr": "v lese"
+        }
+      },
+      {
+        "id": "nos",
+        "emoji": "👃",
+        "text": "nos",
+        "unlockedBy": "vocab",
+        "forms": {
+          "instr": "s nosem",
+          "loc": "u nosu",
+          "dir": "k nosu"
+        }
+      }
+    ]
+  }
 }

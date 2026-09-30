@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "ja-JP",
   "language": "ja",
   "culture": "JP",
@@ -223,5 +223,192 @@
         }
       ]
     }
-  ]
+  ],
+  "sentence": {
+    "joiner": "",
+    "subjects": [
+      {
+        "id": "s1",
+        "emoji": "👶",
+        "text": "わたしは",
+        "ipa": "watashi wa",
+        "unlockedBy": "always"
+      },
+      {
+        "id": "s2",
+        "emoji": "👩",
+        "text": "ママは",
+        "ipa": "mama wa",
+        "unlockedBy": "always"
+      },
+      {
+        "id": "s3",
+        "emoji": "👨",
+        "text": "パパは",
+        "ipa": "papa wa",
+        "unlockedBy": "always"
+      },
+      {
+        "id": "s4",
+        "emoji": "👵",
+        "text": "おばあちゃんは",
+        "ipa": "obaachan wa",
+        "unlockedBy": "always"
+      },
+      {
+        "id": "s5",
+        "emoji": "🐶",
+        "text": "わんわんは",
+        "ipa": "wanwan wa",
+        "unlockedBy": "always"
+      }
+    ],
+    "verbs": [
+      {
+        "id": "v1",
+        "emoji": "✋",
+        "text": "ほしいです",
+        "ipa": "hoshii desu",
+        "unlockedBy": "always",
+        "frame": "acc"
+      },
+      {
+        "id": "v2",
+        "emoji": "🍽️",
+        "text": "たべます",
+        "ipa": "tabemasu",
+        "unlockedBy": "always",
+        "frame": "acc"
+      },
+      {
+        "id": "v3",
+        "emoji": "🥛",
+        "text": "のみます",
+        "ipa": "nomimasu",
+        "unlockedBy": "always",
+        "frame": "acc"
+      },
+      {
+        "id": "v4",
+        "emoji": "💤",
+        "text": "ねます",
+        "ipa": "nemasu",
+        "unlockedBy": "always",
+        "frame": "loc"
+      },
+      {
+        "id": "v5",
+        "emoji": "🚶",
+        "text": "いきます",
+        "ipa": "ikimasu",
+        "unlockedBy": "always",
+        "frame": "dir"
+      },
+      {
+        "id": "v6",
+        "emoji": "🎲",
+        "text": "あそびます",
+        "ipa": "asobimasu",
+        "unlockedBy": "always",
+        "frame": "instr"
+      }
+    ],
+    "objects": [
+      {
+        "id": "o1",
+        "emoji": "🥛",
+        "text": "ぎゅうにゅう",
+        "ipa": "gyuunyuu",
+        "unlockedBy": "always",
+        "forms": {
+          "acc": "ぎゅうにゅうを",
+          "instr": "ぎゅうにゅうで"
+        }
+      },
+      {
+        "id": "o2",
+        "emoji": "🍎",
+        "text": "りんご",
+        "ipa": "ringo",
+        "unlockedBy": "always",
+        "forms": {
+          "acc": "りんごを",
+          "instr": "りんごで"
+        }
+      },
+      {
+        "id": "o3",
+        "emoji": "🧸",
+        "text": "おもちゃ",
+        "ipa": "omocha",
+        "unlockedBy": "always",
+        "forms": {
+          "acc": "おもちゃを",
+          "instr": "おもちゃで",
+          "loc": "おもちゃで"
+        }
+      },
+      {
+        "id": "o4",
+        "emoji": "🚗",
+        "text": "くるま",
+        "ipa": "kuruma",
+        "unlockedBy": "always",
+        "forms": {
+          "acc": "くるまを",
+          "dir": "くるまに",
+          "loc": "くるまで",
+          "instr": "くるまで"
+        }
+      },
+      {
+        "id": "o5",
+        "emoji": "🚪",
+        "text": "そと",
+        "ipa": "soto",
+        "unlockedBy": "always",
+        "forms": {
+          "dir": "そとへ",
+          "loc": "そとで",
+          "instr": "そとで"
+        }
+      },
+      {
+        "id": "o6",
+        "emoji": "🏠",
+        "text": "おうち",
+        "ipa": "ouchi",
+        "unlockedBy": "always",
+        "forms": {
+          "dir": "おうちへ",
+          "loc": "おうちで",
+          "instr": "おうちで"
+        }
+      },
+      {
+        "id": "o7",
+        "emoji": "🛏️",
+        "text": "ベッド",
+        "ipa": "beddo",
+        "unlockedBy": "always",
+        "forms": {
+          "dir": "ベッドへ",
+          "loc": "ベッドで",
+          "instr": "ベッドで"
+        }
+      },
+      {
+        "id": "o8",
+        "emoji": "🚽",
+        "text": "おまる",
+        "ipa": "omaru",
+        "unlockedBy": "always",
+        "forms": {
+          "dir": "おまるへ",
+          "loc": "おまるで",
+          "instr": "おまるで"
+        }
+      }
+    ]
+  }
 }

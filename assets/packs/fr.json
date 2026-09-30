@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "fr-FR",
   "language": "fr",
   "culture": "FR",
@@ -553,5 +553,192 @@
         }
       ]
     }
-  ]
+  ],
+  "sentence": {
+    "joiner": " ",
+    "subjects": [
+      {
+        "id": "s1",
+        "emoji": "👶",
+        "text": "Je",
+        "unlockedBy": "always",
+        "person": "1sg"
+      },
+      {
+        "id": "s2",
+        "emoji": "👩",
+        "text": "Maman",
+        "unlockedBy": "always",
+        "person": "3sg"
+      },
+      {
+        "id": "s3",
+        "emoji": "👨",
+        "text": "Papa",
+        "unlockedBy": "always",
+        "person": "3sg"
+      },
+      {
+        "id": "s4",
+        "emoji": "👵",
+        "text": "Mamie",
+        "unlockedBy": "always",
+        "person": "3sg"
+      },
+      {
+        "id": "s5",
+        "emoji": "🐶",
+        "text": "Toutou",
+        "unlockedBy": "always",
+        "person": "3sg"
+      }
+    ],
+    "verbs": [
+      {
+        "id": "v1",
+        "emoji": "✋",
+        "text": "veux",
+        "unlockedBy": "always",
+        "frame": "acc",
+        "forms": {
+          "3sg": "veut"
+        }
+      },
+      {
+        "id": "v2",
+        "emoji": "🍽️",
+        "text": "mange",
+        "unlockedBy": "always",
+        "frame": "acc",
+        "forms": {
+          "3sg": "mange"
+        }
+      },
+      {
+        "id": "v3",
+        "emoji": "🥛",
+        "text": "bois",
+        "unlockedBy": "always",
+        "frame": "acc",
+        "forms": {
+          "3sg": "boit"
+        }
+      },
+      {
+        "id": "v4",
+        "emoji": "💤",
+        "text": "dors",
+        "unlockedBy": "always",
+        "frame": "loc",
+        "forms": {
+          "3sg": "dort"
+        }
+      },
+      {
+        "id": "v5",
+        "emoji": "🚶",
+        "text": "vais",
+        "unlockedBy": "always",
+        "frame": "dir",
+        "forms": {
+          "3sg": "va"
+        }
+      },
+      {
+        "id": "v6",
+        "emoji": "🎲",
+        "text": "joue",
+        "unlockedBy": "always",
+        "frame": "instr",
+        "forms": {
+          "3sg": "joue"
+        }
+      }
+    ],
+    "objects": [
+      {
+        "id": "o1",
+        "emoji": "🥛",
+        "text": "du lait",
+        "unlockedBy": "always",
+        "forms": {
+          "instr": "avec du lait"
+        }
+      },
+      {
+        "id": "o2",
+        "emoji": "🍎",
+        "text": "une pomme",
+        "unlockedBy": "always",
+        "forms": {
+          "instr": "avec une pomme"
+        }
+      },
+      {
+        "id": "o3",
+        "emoji": "🧸",
+        "text": "un jouet",
+        "unlockedBy": "always",
+        "forms": {
+          "instr": "avec un jouet",
+          "loc": "avec un jouet"
+        }
+      },
+      {
+        "id": "o4",
+        "emoji": "🚗",
+        "text": "la voiture",
+        "unlockedBy": "always",
+        "forms": {
+          "dir": "en voiture",
+          "loc": "dans la voiture",
+          "instr": "avec la voiture"
+        }
+      },
+      {
+        "id": "o5",
+        "emoji": "🚪",
+        "text": "dehors",
+        "unlockedBy": "always",
+        "forms": {
+          "dir": "dehors",
+          "loc": "dehors",
+          "instr": "dehors"
+        }
+      },
+      {
+        "id": "o6",
+        "emoji": "🏠",
+        "text": "à la maison",
+        "unlockedBy": "always",
+        "forms": {
+          "dir": "à la maison",
+          "loc": "à la maison",
+          "instr": "à la maison"
+        }
+      },
+      {
+        "id": "o7",
+        "emoji": "🛏️",
+        "text": "le lit",
+        "unlockedBy": "always",
+        "forms": {
+          "dir": "au lit",
+          "loc": "au lit",
+          "instr": "au lit"
+        }
+      },
+      {
+        "id": "o8",
+        "emoji": "🚽",
+        "text": "le pot",
+        "unlockedBy": "always",
+        "forms": {
+          "dir": "au pot",
+          "loc": "au pot",
+          "instr": "au pot"
+        }
+      }
+    ]
+  }
 }

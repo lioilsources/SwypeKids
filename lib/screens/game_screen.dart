@@ -37,6 +37,7 @@ class _GameScreenState extends State<GameScreen>
   late int _idx = widget.startLessonIndex;
   int _sessionStars = 0;
   int _lessonStars = 0; // hvězdy za právě dohrané kolo (oslava)
+  String? _newWord; // slovo, které právě přibylo do batohu (oslava)
   int _attempts = 0; // pokusy o aktuální lekci (1. pokus = 3⭐, 2. = 2⭐, pak 1⭐)
   bool _revealed = false; // poslechové kolo: text odkrytý po neúspěchu
   List<String> _path = [];
@@ -112,14 +113,16 @@ class _GameScreenState extends State<GameScreen>
     final result = path.join('');
     if (result == _lesson.target) {
       final stars = _attempts == 1 ? 3 : (_attempts == 2 ? 2 : 1);
-      ProgressService.instance
-          .markCompleted(widget.pack.id, _lesson.id, stars);
+      final progress = ProgressService.instance;
+      progress.markCompleted(widget.pack.id, _lesson.id, stars);
+      final gotWord = progress.addWord(widget.pack.id, _lesson.vocab);
       HapticFeedback.mediumImpact();
       AudioService.instance.play(Sfx.success);
       setState(() {
         _status = GameStatus.success;
         _sessionStars += stars;
         _lessonStars = stars;
+        _newWord = gotWord ? _lesson.display : null;
       });
       _timerNext = Timer(const Duration(milliseconds: 1600), _nextLesson);
     } else {
@@ -360,6 +363,13 @@ class _GameScreenState extends State<GameScreen>
                 onStarLanded: AudioService.instance.playStar,
               ),
             ),
+          if (_status == GameStatus.success && _newWord != null)
+            Positioned(
+              top: 56,
+              right: 16,
+              child: _WordBagChip(
+                  key: ValueKey('bag-$_idx'), word: _newWord!),
+            ),
         ],
       );
 
@@ -380,4 +390,42 @@ class _GameScreenState extends State<GameScreen>
           ),
         ),
       );
+}
+
+/// „🎒 MÁMA" — slovo právě přibylo do batohu (a tím do builderu vět).
+class _WordBagChip extends StatelessWidget {
+  final String word;
+  const _WordBagChip({super.key, required this.word});
+
+  @override
+  Widget build(BuildContext context) {
+    return TweenAnimationBuilder<double>(
+      tween: Tween(begin: 0, end: 1),
+      duration: const Duration(milliseconds: 500),
+      curve: Curves.elasticOut,
+      builder: (context, t, child) => Transform.scale(scale: t, child: child),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+        decoration: BoxDecoration(
+          color: const Color(0xFF1DD1A1),
+          borderRadius: BorderRadius.circular(99),
+          boxShadow: [
+            BoxShadow(
+              color: const Color(0xFF1DD1A1).withValues(alpha: 0.5),
+              blurRadius: 14,
+            ),
+          ],
+        ),
+        child: Text(
+          '🎒 $word',
+          style: const TextStyle(
+            fontFamily: 'Nunito',
+            fontSize: 16,
+            fontWeight: FontWeight.w900,
+            color: Colors.white,
+          ),
+        ),
+      ),
+    );
+  }
 }

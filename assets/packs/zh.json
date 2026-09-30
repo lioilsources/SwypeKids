@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "zh-CN",
   "language": "zh",
   "culture": "CN",
@@ -577,5 +577,147 @@
         }
       ]
     }
-  ]
+  ],
+  "sentence": {
+    "joiner": "",
+    "subjects": [
+      {
+        "id": "s1",
+        "emoji": "👶",
+        "text": "我",
+        "ipa": "wǒ",
+        "unlockedBy": "always"
+      },
+      {
+        "id": "s2",
+        "emoji": "👩",
+        "text": "妈妈",
+        "ipa": "māma",
+        "unlockedBy": "always"
+      },
+      {
+        "id": "s3",
+        "emoji": "👨",
+        "text": "爸爸",
+        "ipa": "bàba",
+        "unlockedBy": "always"
+      },
+      {
+        "id": "s4",
+        "emoji": "👵",
+        "text": "奶奶",
+        "ipa": "nǎinai",
+        "unlockedBy": "always"
+      },
+      {
+        "id": "s5",
+        "emoji": "🐶",
+        "text": "狗狗",
+        "ipa": "gǒugou",
+        "unlockedBy": "always"
+      }
+    ],
+    "verbs": [
+      {
+        "id": "v1",
+        "emoji": "✋",
+        "text": "要",
+        "ipa": "yào",
+        "unlockedBy": "always"
+      },
+      {
+        "id": "v2",
+        "emoji": "🍽️",
+        "text": "吃",
+        "ipa": "chī",
+        "unlockedBy": "always"
+      },
+      {
+        "id": "v3",
+        "emoji": "🥛",
+        "text": "喝",
+        "ipa": "hē",
+        "unlockedBy": "always"
+      },
+      {
+        "id": "v4",
+        "emoji": "💤",
+        "text": "睡",
+        "ipa": "shuì",
+        "unlockedBy": "always"
+      },
+      {
+        "id": "v5",
+        "emoji": "🚶",
+        "text": "去",
+        "ipa": "qù",
+        "unlockedBy": "always"
+      },
+      {
+        "id": "v6",
+        "emoji": "🎲",
+        "text": "玩",
+        "ipa": "wán",
+        "unlockedBy": "always"
+      }
+    ],
+    "objects": [
+      {
+        "id": "o1",
+        "emoji": "🥛",
+        "text": "奶",
+        "ipa": "nǎi",
+        "unlockedBy": "always"
+      },
+      {
+        "id": "o2",
+        "emoji": "🍎",
+        "text": "苹果",
+        "ipa": "píngguǒ",
+        "unlockedBy": "always"
+      },
+      {
+        "id": "o3",
+        "emoji": "🧸",
+        "text": "玩具",
+        "ipa": "wánjù",
+        "unlockedBy": "always"
+      },
+      {
+        "id": "o4",
+        "emoji": "🚗",
+        "text": "车车",
+        "ipa": "chēche",
+        "unlockedBy": "always"
+      },
+      {
+        "id": "o5",
+        "emoji": "🚪",
+        "text": "外面",
+        "ipa": "wàimiàn",
+        "unlockedBy": "always"
+      },
+      {
+        "id": "o6",
+        "emoji": "🏠",
+        "text": "家",
+        "ipa": "jiā",
+        "unlockedBy": "always"
+      },
+      {
+        "id": "o7",
+        "emoji": "🛏️",
+        "text": "床",
+        "ipa": "chuáng",
+        "unlockedBy": "always"
+      },
+      {
+        "id": "o8",
+        "emoji": "🚽",
+        "text": "上厕所",
+        "ipa": "shàng cèsuǒ",
+        "unlockedBy": "always"
+      }
+    ]
+  }
 }

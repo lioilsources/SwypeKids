@@ -20,7 +20,7 @@ const _pack = ContentPack(
       reward: CollectibleReward(emoji: '🐭'),
       lessons: [
         Lesson(id: 'u1-l1', unlocked: ['M', 'A'], target: 'MA',
-            display: 'MA', hint: '👩', label: 'MA'),
+            display: 'MA', hint: '👩', label: 'MA', vocab: 'ma'),
         Lesson(id: 'u1-l2', unlocked: ['M', 'A'], target: 'AM',
             display: 'AM', hint: '👩', label: 'AM'),
       ],
@@ -80,9 +80,15 @@ void main() {
     expect(find.text('⭐ 3'), findsOneWidget);
     expect(find.byType(StarCelebration), findsOneWidget);
 
+    // Slovo s vocab přistane do batohu
+    expect(ProgressService.instance.wordBag(_pack.id), {'ma'});
+    await tester.pump(const Duration(milliseconds: 300));
+    expect(find.text('🎒 MA'), findsOneWidget);
+
     // Po oslavě se automaticky přejde na další lekci
-    await tester.pump(const Duration(milliseconds: 1700));
+    await tester.pump(const Duration(milliseconds: 1400));
     expect(find.text('👩 2/2'), findsOneWidget);
+    expect(find.text('🎒 MA'), findsNothing);
     expect(find.byType(StarCelebration), findsNothing);
 
     // Lekce 2: chyba nic neuloží a neblokuje, druhý pokus = 2 hvězdy

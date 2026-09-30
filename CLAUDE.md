@@ -31,7 +31,8 @@ lib/
 │   ├── keyboard_layout.dart # QWERTY rows + per-key emoji per language (pure Dart, no Flutter)
 │   ├── lessons.dart         # Lesson model, Language/LessonType enums
 │   └── models/
-│       └── content_pack.dart # ContentPack / Unit / CollectibleReward + fromJson
+│       ├── content_pack.dart # ContentPack / Unit / CollectibleReward + fromJson
+│       └── sentence.dart     # Sentence builder tiles (pack.sentence), TileUnlock
 ├── screens/
 │   ├── home_shell.dart      # Drawer shell, view switching (map/sentence/collection)
 │   ├── lesson_map_screen.dart   # Lesson map: units, nodes, linear unlocking
@@ -77,9 +78,10 @@ iOS, Android, macOS, Linux (check pubspec for active platforms).
 
 ## Content model
 
-- One pack per language: `assets/packs/{cs,en,de,es,it,fr,zh,ja,pt}.json` (schema v1, see `docs/GAMEPLAY.md`)
+- One pack per language: `assets/packs/{cs,en,de,es,it,fr,zh,ja,pt}.json` (schema v2, see `docs/GAMEPLAY.md` §5)
 - `target` is uppercase diacritic-free Latin (what is swyped); `display` carries accents/tones/hiragana
 - Lesson `type`: `swype` | `listen`; unknown types fall back to `swype`
+- Word bag: a correct swype of a lesson with `vocab` adds the word to the bag (`ProgressService.addWord`); builder tiles with `unlockedBy: "vocab"` stay locked (“?” silhouette) until then
 - JSON packs are the single source of truth (Dart lessons removed in v2.3); edit `assets/packs/*.json` directly, `flutter test` validates them
 
 ## Assets

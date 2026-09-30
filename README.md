@@ -21,6 +21,7 @@ lib/
     lessons.dart             # Model Lesson + enum Language/LessonType
     models/
       content_pack.dart      # ContentPack / Unit / CollectibleReward
+      sentence.dart          # Dlaždice builderu vět (pack.sentence)
   screens/
     home_shell.dart          # Drawer + přepínání pohledů
     lesson_map_screen.dart   # Mapa lekcí (jednotky, uzly, odemykání)
