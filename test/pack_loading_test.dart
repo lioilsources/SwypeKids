@@ -55,6 +55,17 @@ void main() {
               reason: '${lesson.id}: unlocked mimo klávesnici');
           expect(unlocked.containsAll(lesson.target.split('')), isTrue,
               reason: '${lesson.id}: target obsahuje neodemčené písmeno');
+          if (lesson.type == LessonType.missingLetter ||
+              lesson.type == LessonType.pictureOnly) {
+            expect(lesson.target.length, greaterThan(2),
+                reason: '${lesson.id}: ${lesson.type.name} jen pro celá slova');
+          }
+          if (lesson.gap != null) {
+            expect(lesson.type, LessonType.missingLetter,
+                reason: '${lesson.id}: gap bez missingLetter');
+            expect(lesson.gap, inInclusiveRange(0, lesson.target.length - 1),
+                reason: '${lesson.id}: gap mimo target');
+          }
         }
       }
 

@@ -334,7 +334,7 @@
         },
         {
           "id": "en-u4-l6",
-          "type": "swype",
+          "type": "missingLetter",
           "unlocked": [
             "M",
             "A",
@@ -351,7 +351,8 @@
           "label": "TAP",
           "ipa": "tæp",
           "review": true,
-          "parentNote": "TAP — review of the unit; notice how TAP and NAP rhyme."
+          "parentNote": "Fill the gap T?P: your child works out the missing vowel from the word’s sound.",
+          "gap": 1
         }
       ]
     },
@@ -413,7 +414,7 @@
         },
         {
           "id": "en-u5-l3",
-          "type": "swype",
+          "type": "pictureOnly",
           "unlocked": [
             "M",
             "A",
@@ -432,7 +433,7 @@
           "label": "POT",
           "ipa": "pɒt",
           "vocab": "pot",
-          "parentNote": "POT with short /o/. At home, spot things that start with /p/."
+          "parentNote": "Picture only, no text: your child recalls the word POT and spells it from memory."
         },
         {
           "id": "en-u5-l4",
@@ -564,7 +565,7 @@
         },
         {
           "id": "en-u6-l4",
-          "type": "swype",
+          "type": "missingLetter",
           "unlocked": [
             "M",
             "A",
@@ -584,11 +585,12 @@
           "label": "COT",
           "ipa": "kɒt",
           "vocab": "cot",
-          "parentNote": "COT: hard C with short /o/."
+          "parentNote": "Fill the gap C?T: the vowel is missing — COT, CAT and CUT sound different only there.",
+          "gap": 1
         },
         {
           "id": "en-u6-l5",
-          "type": "swype",
+          "type": "pictureOnly",
           "unlocked": [
             "M",
             "A",
@@ -609,7 +611,7 @@
           "ipa": "kæp",
           "review": true,
           "vocab": "cap",
-          "parentNote": "CAP — review; CAP, CUP and COT differ only in the vowel."
+          "parentNote": "Picture only: your child spells CAP from the picture — active recall, harder than copying."
         }
       ]
     }
