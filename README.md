@@ -98,6 +98,14 @@ Standardní `pointerenter` na Flutteru nefunguje při tahu, protože pointer je
 | 5    | + O, K              | KO, LO, ME          |
 | 6    | tatáž               | MÁMA, TÁTA, BÁBA... |
 | 7    | + S, N, P           | LES, PES, NOS       |
+| 8    | + I, U              | MI, TU, MISKA, LÍPA |
+| 9    | + D, V              | VO, DA, VODA, DŮM   |
+| 10   | + J, R              | JÁ, RAK, JE, JABLKO |
+| 11   | + Z                 | ZA, ZUB, ZIMA       |
+| 12   | tatáž               | SOVA, VLAK, RUKA, LOĎ |
+
+Tabulka platí pro češtinu (pásmo A, 54 lekcí); angličtina má vlastní pořadí
+podle SATPIN (51 lekcí). Zdroj pravdy je `assets/packs/*.json`.
 
 ## Testy
 
