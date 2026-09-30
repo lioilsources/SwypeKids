@@ -9,15 +9,16 @@ Roadmapa (postavičky, svět, zvuk, lekce, rodiče): viz [docs/ROADMAP.md](docs/
 
 ```
 assets/
-  packs/                     # JSON content packy (jednotky + lekce per jazyk)
+  packs/                     # JSON content packy (jednotky + lekce per jazyk) — jediný zdroj obsahu
+  audio/                     # Sfx + manifest.json (dočasné syntetizované zvuky)
 lib/
-  main.dart                  # Entry point (init persistence, volba jazyka)
+  main.dart                  # Entry point (init persistence, audio, volba jazyka)
+  audio/
+    audio_service.dart       # Zvukové efekty (flutter_soloud)
   data/
     keyboard_data.dart       # Barvy kláves (+ re-export layoutu)
     keyboard_layout.dart     # QWERTY layout + emoji (čistý Dart)
     lessons.dart             # Model Lesson + enum Language/LessonType
-    lessons_index.dart       # Dart lekce (fallback, než se smažou ve fázi 2)
-    lessons/                 # Lekce per jazyk (cs, en, de, …) — fallback
     models/
       content_pack.dart      # ContentPack / Unit / CollectibleReward
   screens/
@@ -29,19 +30,22 @@ lib/
     win_screen.dart          # Dokončení celého jazyka
     sentence_builder_screen.dart # Mód Skládej větu
   services/
-    pack_service.dart        # Načítání JSON packů (+ fallback na Dart lekce)
+    pack_service.dart        # Načítání JSON packů (rozbitý pack → fallback en)
     progress_service.dart    # Persistence: hvězdy, nálepky, jazyk
     tts_service.dart         # Text-to-speech (poslechová kola, věty)
+  world/
+    world_clock.dart         # Denní doba + roční období, téma mapy
   widgets/
     challenge_card.dart      # Karta s cílem (hint + písmena, poslechový režim)
     keyboard_widget.dart     # Klávesnice + swype detekce
     key_widget.dart          # Jedna klávesa (aktivní / neaktivní)
-    swype_painter.dart       # CustomPainter – svítící čára
+    star_celebration.dart    # Padající hvězdy + konfety
+    swype_painter.dart       # CustomPainter – svítící čára + světlušky
 test/
   pack_loading_test.dart     # Validace všech JSON packů
   progress_service_test.dart # Persistence postupu
 tool/
-  export_lessons_to_json.dart# Generátor packů z Dart lekcí
+  generate_sfx.dart          # Generátor dočasných zvuků
 ```
 
 ## Instalace & spuštění
@@ -101,8 +105,7 @@ flutter test            # validace JSON packů + persistence postupu
 flutter analyze
 ```
 
-Po úpravě Dart lekcí lze packy přegenerovat:
-`dart run tool/export_lessons_to_json.dart` (přepíše ruční úpravy JSONů!).
+Obsah se upravuje přímo v `assets/packs/*.json`; `flutter test` pack validuje.
 
 ## Rozšíření (TODO)
 

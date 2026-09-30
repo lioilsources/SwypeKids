@@ -1,4 +1,3 @@
-export 'lessons_index.dart' show kLessons, kLessonsByLang;
 
 enum Language { cs, en, de, es, it, fr, zh, ja, pt }
 

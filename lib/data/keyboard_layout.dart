@@ -1,5 +1,5 @@
 // Čistě dartová část klávesnice (bez Flutter importů),
-// aby ji mohl používat i CLI skript tool/export_lessons_to_json.dart.
+// aby ji mohly používat i čisté Dart skripty v tool/.
 
 import 'lessons.dart' show Language;
 

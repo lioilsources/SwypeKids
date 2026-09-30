@@ -15,7 +15,6 @@ flutter build apk
 flutter build ios
 flutter analyze
 flutter test                                # pack validation + progress tests
-dart run tool/export_lessons_to_json.dart   # regenerate JSON packs from Dart lessons (overwrites manual JSON edits)
 dart run tool/generate_sfx.dart             # regenerate placeholder sfx (assets/audio/) — synthesized, no licences
 ```
 
@@ -31,8 +30,6 @@ lib/
 │   ├── keyboard_data.dart   # Key colors (+ re-exports layout)
 │   ├── keyboard_layout.dart # QWERTY rows + per-key emoji per language (pure Dart, no Flutter)
 │   ├── lessons.dart         # Lesson model, Language/LessonType enums
-│   ├── lessons_index.dart   # Dart lessons aggregate (fallback; delete in phase 2)
-│   ├── lessons/             # Per-language Dart lessons (fallback source)
 │   └── models/
 │       └── content_pack.dart # ContentPack / Unit / CollectibleReward + fromJson
 ├── screens/
@@ -44,7 +41,7 @@ lib/
 │   ├── win_screen.dart      # Whole-pack completion
 │   └── sentence_builder_screen.dart # Second mode: build a sentence
 ├── services/
-│   ├── pack_service.dart    # Loads JSON packs (rootBundle), falls back to Dart lessons
+│   ├── pack_service.dart    # Loads JSON packs (rootBundle); broken pack → falls back to en
 │   ├── progress_service.dart # shared_preferences: stars, collectibles, language
 │   └── tts_service.dart     # flutter_tts wrapper (listen rounds, sentences)
 ├── world/
@@ -62,7 +59,6 @@ test/
 ├── world_clock_test.dart
 └── audio_service_test.dart
 tool/
-├── export_lessons_to_json.dart # One-off generator Dart lessons → JSON packs
 └── generate_sfx.dart        # Synthesized placeholder sfx → assets/audio/
 ```
 
@@ -84,7 +80,7 @@ iOS, Android, macOS, Linux (check pubspec for active platforms).
 - One pack per language: `assets/packs/{cs,en,de,es,it,fr,zh,ja,pt}.json` (schema v1, see `docs/GAMEPLAY.md`)
 - `target` is uppercase diacritic-free Latin (what is swyped); `display` carries accents/tones/hiragana
 - Lesson `type`: `swype` | `listen`; unknown types fall back to `swype`
-- `PackService` falls back to Dart lessons (`lib/data/lessons/`) if an asset is missing/broken; a test guards lesson-count drift between the two sources
+- JSON packs are the single source of truth (Dart lessons removed in v2.3); edit `assets/packs/*.json` directly, `flutter test` validates them
 
 ## Assets
 
