@@ -46,7 +46,7 @@ jobs:
 
       - name: Package as tar.gz
         run: |
-          tar -czf "SwypeKids-${{ github.ref_name }}-Linux.tar.gz" \
+          tar -czf "SwypeKids-${GITHUB_REF_NAME//\//-}-Linux.tar.gz" \
             -C ./build/linux/x64/release/bundle .
 
       - name: Package as AppImage (icon + .desktop)
@@ -87,7 +87,7 @@ jobs:
           wget -q "https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage" -O appimagetool
           chmod +x appimagetool
           ./appimagetool --appimage-extract >/dev/null   # avoid needing FUSE on CI
-          ARCH=x86_64 ./squashfs-root/AppRun AppDir "$APP_NAME-${{ github.ref_name }}-x86_64.AppImage"
+          ARCH=x86_64 ./squashfs-root/AppRun AppDir "$APP_NAME-${GITHUB_REF_NAME//\//-}-x86_64.AppImage"
 
       - name: Upload to GitHub Release
         if: startsWith(github.ref, 'refs/tags/')
