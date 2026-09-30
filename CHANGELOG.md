@@ -1,5 +1,11 @@
 # Changelog
 
+## [30/09/2026] — v2.3.0 „Batoh slov"
+- Slova swypnutá ve hře padají do batohu (🎒 na mapě) a odemykají dlaždice v builderu vět
+- Builder: nenaučená slova jako siluetka „?“, nová slova 24 h se štítkem „NOVÉ“
+- cs: MÁMA, TÁTA, BÁBA, PES, KOLO, LES, NOS; en: MUM, DAD, DOG, CAT, PIG, CUP, CAP, POT, COT
+- Content pack schéma v2 (`sentence`, `vocab`, `parentNote`)
+
 ## [30/09/2026] — v2.2.1
 - Linux release: ALSA závislost pro zvuky, ruční spuštění workflow
 - Obsah jen z JSON packů (smazané Dart lekce) — příprava na v2.3
