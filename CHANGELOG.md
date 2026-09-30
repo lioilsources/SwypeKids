@@ -1,6 +1,6 @@
 # Changelog
 
-## [30/09/2026] — v2.2 „Živá klávesnice" (rozpracováno)
+## [30/09/2026] — v2.2.0 „Živá klávesnice"
 - Zvuky: xylofonový tón pro každé písmeno při swype (pentatonika), fanfára, měkká chyba, cinknutí hvězd, nálepka, tap (flutter_soloud; dočasné syntetizované sfx)
 - Přepínač zvuků v menu
 - Klávesy nadskočí při přejetí, stopa prstu se světluškami
