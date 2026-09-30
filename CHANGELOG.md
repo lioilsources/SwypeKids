@@ -1,5 +1,10 @@
 # Changelog
 
+## [30/09/2026] — v2.3.1
+- Poznámky pro rodiče u každé cs/en lekce (dlouhý stisk lekce na mapě)
+- Nové typy kol: 🧩 doplňovačka (slovo s dírou) a 🖼️ jen obrázek
+- Síla slov, 🔁 opakovací kola s nejslabším slovem a Procvičování na mapě
+
 ## [30/09/2026] — v2.3.0 „Batoh slov"
 - Slova swypnutá ve hře padají do batohu (🎒 na mapě) a odemykají dlaždice v builderu vět
 - Builder: nenaučená slova jako siluetka „?“, nová slova 24 h se štítkem „NOVÉ“
