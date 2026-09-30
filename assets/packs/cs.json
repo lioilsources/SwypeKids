@@ -57,7 +57,8 @@
           "hint": "👩",
           "label": "MÁ-MA",
           "info": "Přejeď: 🐭 → 🚗",
-          "ipa": "maː"
+          "ipa": "maː",
+          "parentNote": "První slabika: dítě spojuje hlásky M a A do MA. Doma zkuste protahovat „mmmm–aaaa“ a pak rychle „ma“."
         },
         {
           "id": "cs-u1-l2",
@@ -71,7 +72,8 @@
           "hint": "👩",
           "label": "MÁ-MA",
           "ipa": "maː",
-          "review": true
+          "review": true,
+          "parentNote": "Opakování MA — upevňuje spojení písmene s hláskou. Pochvalte, když slabiku řekne nahlas."
         }
       ]
     },
@@ -97,7 +99,8 @@
           "hint": "👨",
           "label": "TÁ-TA",
           "info": "Nové: 🐯 T",
-          "ipa": "taː"
+          "ipa": "taː",
+          "parentNote": "Nové písmeno T a slabika TA. Zkuste doma hledat věci, které začínají na T (talíř, tužka)."
         },
         {
           "id": "cs-u2-l2",
@@ -111,7 +114,8 @@
           "display": "MA",
           "hint": "👩",
           "label": "MÁ-MA",
-          "ipa": "maː"
+          "ipa": "maː",
+          "parentNote": "Střídání MA a TA: dítě musí rozlišit první hlásku, ne jen opakovat pohyb."
         },
         {
           "id": "cs-u2-l3",
@@ -126,7 +130,8 @@
           "hint": "👨",
           "label": "TÁ-TA",
           "ipa": "taː",
-          "review": true
+          "review": true,
+          "parentNote": "Opakování TA na konci jednotky — krátké vybavení z paměti."
         }
       ]
     },
@@ -153,7 +158,8 @@
           "hint": "👵",
           "label": "BÁ-BA",
           "info": "Nové: 🍌 B",
-          "ipa": "baː"
+          "ipa": "baː",
+          "parentNote": "Nové písmeno B a slabika BA (jako BÁBA). Hláska B se snadno plete s P — vyslovujte zřetelně."
         },
         {
           "id": "cs-u3-l2",
@@ -168,7 +174,8 @@
           "display": "MA",
           "hint": "👩",
           "label": "MÁ-MA",
-          "ipa": "maː"
+          "ipa": "maː",
+          "parentNote": "Poslechové kolo: text je skrytý, dítě slyší MA a samo najde písmena. Trénuje sluchovou analýzu."
         },
         {
           "id": "cs-u3-l3",
@@ -183,7 +190,8 @@
           "display": "BA",
           "hint": "👵",
           "label": "BÁ-BA",
-          "ipa": "baː"
+          "ipa": "baː",
+          "parentNote": "Poslech BA: dítě převádí slyšenou slabiku na písmena bez obrázkové nápovědy."
         },
         {
           "id": "cs-u3-l4",
@@ -199,7 +207,8 @@
           "hint": "👨",
           "label": "TÁ-TA",
           "ipa": "taː",
-          "review": true
+          "review": true,
+          "parentNote": "Poslech TA — opakování všech tří slabik jen podle sluchu."
         }
       ]
     },
@@ -228,7 +237,8 @@
           "hint": "🌀",
           "label": "ME-LE",
           "info": "Nové: 👧 E, 🦁 L",
-          "ipa": "mɛ"
+          "ipa": "mɛ",
+          "parentNote": "Nová písmena E a L, slabika ME. Dítě poprvé mění samohlásku ve slabice (MA → ME)."
         },
         {
           "id": "cs-u4-l2",
@@ -245,7 +255,8 @@
           "display": "LE",
           "hint": "🌀",
           "label": "ME-LE",
-          "ipa": "lɛ"
+          "ipa": "lɛ",
+          "parentNote": "Slabika LE: nová souhláska L se stejnou samohláskou E."
         },
         {
           "id": "cs-u4-l3",
@@ -262,7 +273,8 @@
           "display": "MA",
           "hint": "👩",
           "label": "MÁ-MA",
-          "ipa": "maː"
+          "ipa": "maː",
+          "parentNote": "Poslech MA mezi novými slabikami — rozlišení A a E podle sluchu."
         },
         {
           "id": "cs-u4-l4",
@@ -280,7 +292,8 @@
           "hint": "👨",
           "label": "TÁ-TA",
           "ipa": "taː",
-          "review": true
+          "review": true,
+          "parentNote": "Poslech TA — opakování před další jednotkou."
         }
       ]
     },
@@ -311,7 +324,8 @@
           "hint": "🚲",
           "label": "KO-LO",
           "info": "Nové: 👁️ O, 🐱 K",
-          "ipa": "ko"
+          "ipa": "ko",
+          "parentNote": "Nová písmena O a K, slabika KO (jako KOLO). Doma: co začíná na K? (kočka, koláč)"
         },
         {
           "id": "cs-u5-l2",
@@ -330,7 +344,8 @@
           "display": "LO",
           "hint": "🚲",
           "label": "KO-LO",
-          "ipa": "lo"
+          "ipa": "lo",
+          "parentNote": "Slabika LO: dítě skládá slabiku ze známého L a nového O."
         },
         {
           "id": "cs-u5-l3",
@@ -350,7 +365,8 @@
           "hint": "🌀",
           "label": "ME-LE",
           "ipa": "mɛ",
-          "review": true
+          "review": true,
+          "parentNote": "Poslech ME — opakování starší slabiky jen podle sluchu."
         }
       ]
     },
@@ -382,7 +398,8 @@
           "label": "MÁMA",
           "info": "Teď celé slovo!",
           "ipa": "ˈmaːma",
-          "vocab": "mama"
+          "vocab": "mama",
+          "parentNote": "První celé slovo MÁMA: dítě spojuje dvě známé slabiky. Slovo přistane do batohu a jde použít ve větě."
         },
         {
           "id": "cs-u6-l2",
@@ -402,7 +419,8 @@
           "hint": "👨",
           "label": "TÁTA",
           "ipa": "ˈtaːta",
-          "vocab": "tata"
+          "vocab": "tata",
+          "parentNote": "Slovo TÁTA ze dvou slabik TA-TA. Zkuste ho spolu vytleskat."
         },
         {
           "id": "cs-u6-l3",
@@ -422,7 +440,8 @@
           "hint": "👵",
           "label": "BÁBA",
           "ipa": "ˈbaːba",
-          "vocab": "baba"
+          "vocab": "baba",
+          "parentNote": "Slovo BÁBA. Délku Á na klávesnici nevidí — na kartě ji ale čte, všimněte si toho spolu."
         },
         {
           "id": "cs-u6-l4",
@@ -441,7 +460,8 @@
           "display": "MELE",
           "hint": "🌀",
           "label": "MELE MASO",
-          "ipa": "ˈmɛlɛ"
+          "ipa": "ˈmɛlɛ",
+          "parentNote": "Slovo MELE: dvě různé slabiky ME-LE za sebou."
         },
         {
           "id": "cs-u6-l5",
@@ -462,7 +482,8 @@
           "label": "KOLO",
           "ipa": "ˈkolo",
           "review": true,
-          "vocab": "kolo"
+          "vocab": "kolo",
+          "parentNote": "Slovo KOLO z nedávno naučených slabik — opakování celé jednotky."
         }
       ]
     },
@@ -497,7 +518,8 @@
           "label": "LES",
           "info": "Nové: ☀️ S, ✂️ N, 🐷 P",
           "ipa": "lɛs",
-          "vocab": "les"
+          "vocab": "les",
+          "parentNote": "Nová písmena S, N, P a první zavřená slabika: LES končí souhláskou. Vyslovujte pomalu „l–e–s“."
         },
         {
           "id": "cs-u7-l2",
@@ -520,7 +542,8 @@
           "hint": "🐶",
           "label": "PES",
           "ipa": "pɛs",
-          "vocab": "pes"
+          "vocab": "pes",
+          "parentNote": "Slovo PES: zavřená slabika s novým P. Doma: co ještě končí na S? (nos, klas)"
         },
         {
           "id": "cs-u7-l3",
@@ -543,7 +566,8 @@
           "hint": "👃",
           "label": "NOS",
           "ipa": "nos",
-          "vocab": "nos"
+          "vocab": "nos",
+          "parentNote": "Slovo NOS s novým N — tři hlásky v jedné slabice."
         },
         {
           "id": "cs-u7-l4",
@@ -566,7 +590,8 @@
           "hint": "🚲",
           "label": "KOLO",
           "ipa": "ˈkolo",
-          "vocab": "kolo"
+          "vocab": "kolo",
+          "parentNote": "Poslech KOLO: celé slovo jen podle sluchu, bez obrázku."
         },
         {
           "id": "cs-u7-l5",
@@ -590,7 +615,8 @@
           "label": "LES",
           "ipa": "lɛs",
           "review": true,
-          "vocab": "les"
+          "vocab": "les",
+          "parentNote": "Poslech LES — dítě samo rozloží slyšené slovo na hlásky."
         }
       ]
     }

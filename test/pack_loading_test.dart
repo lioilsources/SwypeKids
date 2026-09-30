@@ -7,6 +7,9 @@ import 'package:swype_kids/data/lessons.dart';
 import 'package:swype_kids/data/models/content_pack.dart';
 import 'package:swype_kids/data/models/sentence.dart';
 
+/// Jazyky s kompletními poznámkami pro rodiče (roadmap v2.3: cs + en).
+const _withParentNotes = {Language.cs, Language.en};
+
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
   final keyboardLetters = kRows.expand((r) => r).toSet();
@@ -87,6 +90,14 @@ void main() {
       }
       expect(lessonVocab, containsAll(vocabTiles),
           reason: 'vocab dlaždice, kterou žádná lekce neodemkne');
+
+      // Poznámky pro rodiče: jazyky, které je mají, je mají u každé lekce.
+      if (_withParentNotes.contains(lang)) {
+        for (final lesson in pack.allLessons) {
+          expect(lesson.parentNote.trim(), isNotEmpty,
+              reason: '${lesson.id}: chybí parentNote');
+        }
+      }
     });
   }
 

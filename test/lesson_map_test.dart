@@ -33,4 +33,22 @@ void main() {
     // Nezískané odměny jednotek jsou ❓
     expect(find.text('❓'), findsWidgets);
   });
+
+  testWidgets('dlouhý stisk na lekci ukáže poznámku pro rodiče',
+      (tester) async {
+    await tester.pumpWidget(MaterialApp(
+      home: Scaffold(
+        body: LessonMapScreen(
+          language: Language.cs,
+          onLanguageChanged: (_) {},
+        ),
+      ),
+    ));
+    await tester.pumpAndSettle();
+
+    // První uzel první jednotky (hint 👩, odemčený)
+    await tester.longPress(find.text('👩').at(1)); // [0] = ikona jednotky
+    await tester.pumpAndSettle();
+    expect(find.textContaining('První slabika'), findsOneWidget);
+  });
 }
