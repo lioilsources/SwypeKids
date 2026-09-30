@@ -53,10 +53,6 @@ void main() {
               reason: '${lesson.id}: target obsahuje neodemčené písmeno');
         }
       }
-
-      // Hlídá drift mezi JSON packy a Dart lekcemi, dokud existují oba zdroje.
-      expect(pack.allLessons.length, kLessonsByLang[lang]!.length,
-          reason: 'počet lekcí v JSON neodpovídá lib/data/lessons/');
     });
   }
 

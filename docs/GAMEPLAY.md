@@ -116,11 +116,9 @@ Zásady:
   override barev (zatím ho žádný pack nedefinuje).
 - Didaktická metoda je vlastnost packu (`method`) — každý jazyk má svou
   (cs analyticko-syntetická, en SATPIN fonetika, es/it/pt sylabická, …).
-- Fallback: když asset chybí/nejde parsovat, `PackService` syntetizuje pack
-  z Dart lekcí (`lib/data/lessons/`). Dart soubory se smažou ve fázi 2;
-  do té doby test hlídá shodu počtu lekcí.
-- Regenerace packů: `dart run tool/export_lessons_to_json.dart`
-  (pozor, přepíše ruční úpravy JSONů).
+- JSON packy jsou jediný zdroj pravdy (Dart lekce smazány ve v2.3). Když
+  pack nejde načíst, `PackService` použije anglický; rozbitý pack ale
+  neprojde `flutter test`.
 
 ### Kulturní varianty (výhled)
 
