@@ -133,6 +133,11 @@ kulturní variantu). Přidání jazyka = přidání JSON souboru, žádný Dart.
   (`WordSentenceScreen`) se slovem předvyplněným. Dítě doplní zbylé dvě části
   (max. 4 možnosti, slova z batohu první), trumpeta větu přečte. Automaticky,
   bez zápisu v packu; vždy jde přeskočit ✕.
+- **Má knížka**: hotovou větu z builderu jde uložit 📖, věty z „slova do
+  věty" se ukládají samy. Knížka (menu 📖) je čte nahlas po ťuknutí; max. 100
+  stránek, stejná věta jen jednou.
+- **Vzít slovo do hry**: naučená slova mají v builderu 🎹 → jedno swype kolo
+  s tím slovem (procvičovací režim, nezapisuje dokončení lekcí).
 - `lesson.vocab` — id slova do batohu. Jen celá slova (target > 2 písmena),
   slabiky do batohu nepatří.
 - `lesson.parentNote` — jedna věta pro rodiče v jazyce packu; zatím se ukáže

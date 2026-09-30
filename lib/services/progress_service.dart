@@ -128,6 +128,29 @@ class ProgressService {
     return age < newWordWindow;
   }
 
+  // ── Má knížka ──────────────────────────────────────────────────────────────
+
+  static const maxBookPages = 100;
+
+  /// Uložené věty, nejnovější první.
+  List<BookPage> book(String packId) =>
+      List.unmodifiable((_byPack[packId]?.book ?? const []).reversed);
+
+  /// Uloží větu do knížky; stejná věta se neukládá dvakrát. Vrací true,
+  /// pokud přibyla nová stránka.
+  bool addToBook(String packId, String text, String emojis, {DateTime? now}) {
+    if (text.trim().isEmpty) return false;
+    final p = _byPack.putIfAbsent(packId, () => _PackProgress());
+    if (p.book.any((page) => page.text == text)) return false;
+    p.book.add(BookPage(
+        text: text,
+        emojis: emojis,
+        at: (now ?? DateTime.now()).millisecondsSinceEpoch));
+    if (p.book.length > maxBookPages) p.book.removeAt(0);
+    _save(packId);
+    return true;
+  }
+
   // ── Síla slov (spaced repetition lite) ─────────────────────────────────────
 
   static const maxStrength = 5;
@@ -202,16 +225,19 @@ class _PackProgress {
   final List<String> collectibles;  // emoji nálepek v pořadí získání
   final Map<String, int> words;     // batoh: vocab id → kdy poprvé (ms epoch)
   final Map<String, int> strength;  // target → síla 0–5
+  final List<BookPage> book;        // Má knížka, nejstarší první
 
   _PackProgress({
     Map<String, int>? completed,
     List<String>? collectibles,
     Map<String, int>? words,
     Map<String, int>? strength,
+    List<BookPage>? book,
   })  : completed = completed ?? {},
         collectibles = collectibles ?? [],
         words = words ?? {},
-        strength = strength ?? {};
+        strength = strength ?? {},
+        book = book ?? [];
 
   factory _PackProgress.fromJson(Map<String, dynamic> json) => _PackProgress(
         completed: ((json['completed'] as Map?) ?? const {})
@@ -222,6 +248,10 @@ class _PackProgress {
             .map((k, v) => MapEntry(k as String, v as int)),
         strength: ((json['strength'] as Map?) ?? const {})
             .map((k, v) => MapEntry(k as String, v as int)),
+        book: [
+          for (final page in (json['book'] as List?) ?? const [])
+            BookPage.fromJson((page as Map).cast<String, dynamic>()),
+        ],
       );
 
   Map<String, dynamic> toJson() => {
@@ -230,5 +260,23 @@ class _PackProgress {
         'collectibles': collectibles,
         'words': words,
         'strength': strength,
+        'book': [for (final page in book) page.toJson()],
       };
+}
+
+/// Jedna stránka Mé knížky: složená věta + obrázková řádka.
+class BookPage {
+  final String text;
+  final String emojis;
+  final int at; // ms epoch
+
+  const BookPage({required this.text, required this.emojis, required this.at});
+
+  factory BookPage.fromJson(Map<String, dynamic> json) => BookPage(
+        text: json['text'] as String,
+        emojis: json['emojis'] as String? ?? '',
+        at: json['at'] as int? ?? 0,
+      );
+
+  Map<String, dynamic> toJson() => {'text': text, 'emojis': emojis, 'at': at};
 }

@@ -151,4 +151,30 @@ void main() {
       expect(p.weakestLearned(pack, limit: 1).single.target, 'TA');
     });
   });
+
+  group('Má knížka', () {
+    test('nejnovější první, bez duplicit, přežije restart', () async {
+      final p = ProgressService.instance;
+      expect(p.addToBook('test-XX', 'Máma jí kolo', '👩 🍽️ 🚲'), isTrue);
+      expect(p.addToBook('test-XX', 'Táta jde do lesa', '👨 🚶 🌲'), isTrue);
+      expect(p.addToBook('test-XX', 'Máma jí kolo', '👩 🍽️ 🚲'), isFalse);
+      expect(p.addToBook('test-XX', '  ', ''), isFalse);
+
+      await ProgressService.init();
+      final pages = ProgressService.instance.book('test-XX');
+      expect(pages.map((b) => b.text), ['Táta jde do lesa', 'Máma jí kolo']);
+      expect(pages.last.emojis, '👩 🍽️ 🚲');
+    });
+
+    test('drží nejvýš maxBookPages stránek, nejstarší odpadne', () {
+      final p = ProgressService.instance;
+      for (var i = 0; i <= ProgressService.maxBookPages; i++) {
+        p.addToBook('test-XX', 'věta $i', '');
+      }
+      final pages = p.book('test-XX');
+      expect(pages.length, ProgressService.maxBookPages);
+      expect(pages.first.text, 'věta ${ProgressService.maxBookPages}');
+      expect(pages.any((b) => b.text == 'věta 0'), isFalse);
+    });
+  });
 }

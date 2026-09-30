@@ -53,4 +53,28 @@ void main() {
     await tester.pump();
     expect(find.text('jí'), findsWidgets);
   });
+
+  testWidgets('hotovou větu jde uložit do Mé knížky, 🎹 vezme slovo do hry',
+      (tester) async {
+    ProgressService.instance.addWord('cs-CZ', 'kolo');
+    await pumpBuilder(tester);
+
+    // Bez celé věty není co uložit
+    expect(find.byKey(const ValueKey('save-book')), findsNothing);
+    await tester.tap(find.text('Já'));
+    await tester.pump();
+    await tester.tap(find.text('chci'));
+    await tester.pump();
+    await tester.tap(find.text('kolo'));
+    await tester.pump();
+
+    await tester.tap(find.byKey(const ValueKey('save-book')));
+    await tester.pump();
+    expect(ProgressService.instance.book('cs-CZ').single.text, 'Já chci kolo');
+    expect(find.text('✅'), findsOneWidget);
+
+    // Naučené slovo má 🎹, nenaučené ne
+    expect(find.byKey(const ValueKey('play-kolo')), findsOneWidget);
+    expect(find.byKey(const ValueKey('play-mama')), findsNothing);
+  });
 }
