@@ -1,0 +1,12 @@
+{
+  "sfx": {
+    "key": "assets/audio/sfx/key.wav",
+    "success_0": "assets/audio/sfx/success_0.wav",
+    "success_1": "assets/audio/sfx/success_1.wav",
+    "success_2": "assets/audio/sfx/success_2.wav",
+    "error": "assets/audio/sfx/error.wav",
+    "star": "assets/audio/sfx/star.wav",
+    "sticker": "assets/audio/sfx/sticker.wav",
+    "tap": "assets/audio/sfx/tap.wav"
+  }
+}

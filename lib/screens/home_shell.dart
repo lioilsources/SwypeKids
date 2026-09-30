@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../audio/audio_service.dart';
 import '../data/lessons.dart';
 import '../services/progress_service.dart';
 import '../widgets/language_picker.dart';
@@ -26,6 +27,7 @@ class _HomeShellState extends State<HomeShell> {
   }
 
   void _setView(AppView v) {
+    AudioService.instance.play(Sfx.tap);
     setState(() => _view = v);
     Navigator.of(context).maybePop();
   }
@@ -124,6 +126,8 @@ class _AppDrawer extends StatelessWidget {
               onTap: () => onPick(AppView.collection),
             ),
             const Spacer(),
+            const Divider(color: Colors.white12, height: 1),
+            const _SoundToggle(),
             Padding(
               padding: const EdgeInsets.all(16),
               child: Text(
@@ -137,6 +141,46 @@ class _AppDrawer extends StatelessWidget {
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+/// Zapnutí / vypnutí zvukových efektů (dočasně v draweru; v3.1 se přesune
+/// do rodičovského koutku).
+class _SoundToggle extends StatefulWidget {
+  const _SoundToggle();
+
+  @override
+  State<_SoundToggle> createState() => _SoundToggleState();
+}
+
+class _SoundToggleState extends State<_SoundToggle> {
+  @override
+  Widget build(BuildContext context) {
+    final on = AudioService.instance.sfxEnabled;
+    return SwitchListTile(
+      value: on,
+      onChanged: (v) {
+        setState(() => AudioService.instance.sfxEnabled = v);
+        if (v) AudioService.instance.play(Sfx.tap);
+      },
+      activeThumbColor: const Color(0xFFFFD200),
+      contentPadding: const EdgeInsets.symmetric(horizontal: 20),
+      title: Row(
+        children: [
+          Text(on ? '🔊' : '🔇', style: const TextStyle(fontSize: 22)),
+          const SizedBox(width: 14),
+          Text(
+            'Zvuky',
+            style: TextStyle(
+              fontFamily: 'Nunito',
+              fontSize: 15,
+              fontWeight: FontWeight.w800,
+              color: Colors.white.withOpacity(0.85),
+            ),
+          ),
+        ],
       ),
     );
   }

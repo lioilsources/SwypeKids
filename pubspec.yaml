@@ -9,6 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_soloud: ^4.1.7
   flutter_tts: ^4.0.0
   shared_preferences: ^2.3.0
 
@@ -39,6 +40,8 @@ flutter:
   uses-material-design: true
   assets:
     - assets/packs/
+    - assets/audio/
+    - assets/audio/sfx/
   fonts:
     - family: Nunito
       fonts:

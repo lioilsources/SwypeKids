@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'audio/audio_service.dart';
 import 'data/lessons.dart';
 import 'screens/home_shell.dart';
 import 'services/progress_service.dart';
@@ -7,6 +8,9 @@ import 'services/progress_service.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await ProgressService.init();
+  await AudioService.instance.loadSettings();
+  // Audio engine startuje na pozadí; do té doby je hra tichá.
+  AudioService.instance.init();
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.landscapeLeft,

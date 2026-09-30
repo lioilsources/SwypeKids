@@ -1,16 +1,22 @@
 import 'package:flutter/material.dart';
 import '../data/models/content_pack.dart';
 
+/// Hero tag nálepky jednotky: po oslavě nálepka odletí na své místo na mapě.
+String stickerHeroTag(String packId, int unitIndex) =>
+    'sticker-$packId-$unitIndex';
+
 /// Oslava dokončené jednotky: nová nálepka do Zvěřince + hvězdy z běhu.
 /// Otevírá se přes pushReplacement z GameScreen — jeden pop vrací na mapu.
 class UnitCompleteScreen extends StatelessWidget {
   final CollectibleReward reward;
   final int stars;
+  final Object? heroTag;
 
   const UnitCompleteScreen({
     super.key,
     required this.reward,
     required this.stars,
+    this.heroTag,
   });
 
   @override
@@ -36,8 +42,14 @@ class UnitCompleteScreen extends StatelessWidget {
                 curve: Curves.elasticOut,
                 builder: (context, scale, child) =>
                     Transform.scale(scale: scale, child: child),
-                child: Text(reward.emoji,
-                    style: const TextStyle(fontSize: 96)),
+                child: _hero(SizedBox(
+                  width: 120,
+                  height: 120,
+                  child: FittedBox(
+                    child: Text(reward.emoji,
+                        style: const TextStyle(fontSize: 96)),
+                  ),
+                )),
               ),
               const SizedBox(height: 16),
               Text(
@@ -94,4 +106,7 @@ class UnitCompleteScreen extends StatelessWidget {
       ),
     );
   }
+
+  Widget _hero(Widget child) =>
+      heroTag == null ? child : Hero(tag: heroTag!, child: child);
 }
