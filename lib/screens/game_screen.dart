@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import '../audio/audio_service.dart';
 import '../data/lessons.dart';
 import '../data/models/content_pack.dart';
+import '../data/models/sentence.dart';
 import '../services/pack_service.dart';
 import '../services/progress_service.dart';
 import '../services/tts_service.dart';
@@ -11,6 +12,7 @@ import '../widgets/challenge_card.dart';
 import '../widgets/keyboard_widget.dart';
 import '../widgets/star_celebration.dart';
 import 'unit_complete_screen.dart';
+import 'word_sentence_screen.dart';
 import 'win_screen.dart';
 
 /// reviewMix → konkrétní lekce: nejslabší dříve naučené slovo, jehož písmena
@@ -82,6 +84,7 @@ class _GameScreenState extends State<GameScreen>
   int _sessionStars = 0;
   int _lessonStars = 0; // hvězdy za právě dohrané kolo (oslava)
   String? _newWord; // slovo, které právě přibylo do batohu (oslava)
+  SentencePart? _wordForSentence; // po oslavě: slovo hned do věty
   int _attempts = 0; // pokusy o aktuální lekci (1. pokus = 3⭐, 2. = 2⭐, pak 1⭐)
   bool _revealed = false; // skryté kolo (poslech/obrázek/díra): odkryto po chybě
   List<String> _path = [];
@@ -177,7 +180,10 @@ class _GameScreenState extends State<GameScreen>
         _lessonStars = stars;
         _newWord = gotWord ? _lesson.display : null;
       });
-      _timerNext = Timer(const Duration(milliseconds: 1600), _nextLesson);
+      _wordForSentence = gotWord
+          ? WordSentenceScreen.tileFor(widget.pack, _lesson.vocab)
+          : null;
+      _timerNext = Timer(const Duration(milliseconds: 1600), _afterSuccess);
     } else {
       HapticFeedback.vibrate();
       AudioService.instance.play(Sfx.error);
@@ -200,6 +206,18 @@ class _GameScreenState extends State<GameScreen>
         });
       });
     }
+  }
+
+  /// Po oslavě: nové slovo nejdřív do věty (dá se přeskočit), pak dál.
+  Future<void> _afterSuccess() async {
+    final word = _wordForSentence;
+    _wordForSentence = null;
+    if (word != null && mounted) {
+      await Navigator.of(context).push(MaterialPageRoute<String>(
+        builder: (_) => WordSentenceScreen(pack: widget.pack, word: word),
+      ));
+    }
+    _nextLesson();
   }
 
   void _nextLesson() {

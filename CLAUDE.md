@@ -39,6 +39,7 @@ lib/
 │   ├── game_screen.dart     # Plays one unit; stars, listen rounds, progress writes
 │   ├── unit_complete_screen.dart # Unit celebration (new sticker)
 │   ├── collection_screen.dart    # Sticker album (Zvěřinec)
+│   ├── word_sentence_screen.dart # Mini builder right after a new word (wordToSentence)
 │   ├── win_screen.dart      # Whole-pack completion
 │   └── sentence_builder_screen.dart # Second mode: build a sentence
 ├── services/

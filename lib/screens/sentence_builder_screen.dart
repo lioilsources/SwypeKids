@@ -78,35 +78,17 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
     setState(select);
   }
 
-  String _composeSentence() {
-    final subj = _subject;
-    final verb = _verb;
-    final obj = _object;
+  ComposedSentence get _sentence => ComposedSentence(
+        subject: _subject,
+        verb: _verb,
+        object: _object,
+        joiner: _data.joiner,
+      );
 
-    // Verb agrees with subject person (defaults to 1sg = base text).
-    String? verbText = verb?.text;
-    if (verb != null && subj?.person != null) {
-      verbText = verb.formFor(subj!.person!);
-    }
-
-    // Object form is chosen by the verb's frame (acc / dir / loc / instr).
-    String? objText = obj?.text;
-    if (obj != null && verb?.frame != null) {
-      objText = obj.formFor(verb!.frame!);
-    }
-
-    final parts = <String>[
-      if (subj != null) subj.text,
-      if (verbText != null) verbText,
-      if (objText != null) objText,
-    ];
-    return parts.join(_data.joiner);
-  }
-
-  bool get _hasAny => _subject != null || _verb != null || _object != null;
+  bool get _hasAny => !_sentence.isEmpty;
 
   Future<void> _speak() async {
-    final s = _composeSentence();
+    final s = _sentence.text;
     if (s.isEmpty) return;
     HapticFeedback.mediumImpact();
     await TtsService.speak(s, widget.language);
@@ -184,13 +166,9 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
                         children: [
                           _previewSlot(_subject, '👤'),
                           _previewSlot(_verb, '🎯',
-                              resolvedText: _subject?.person != null
-                                  ? _verb?.formFor(_subject!.person!)
-                                  : null),
+                              resolvedText: _sentence.verbText),
                           _previewSlot(_object, '🎁',
-                              resolvedText: _verb?.frame != null
-                                  ? _object?.formFor(_verb!.frame!)
-                                  : null),
+                              resolvedText: _sentence.objectText),
                         ],
                       ),
                     ),
