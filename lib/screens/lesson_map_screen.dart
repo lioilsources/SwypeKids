@@ -176,6 +176,47 @@ class _LessonMapScreenState extends State<LessonMapScreen> {
 }
 
 /// Batoh slov: kolik celých slov dítě swyplo (a může použít ve větách).
+void _showParentNote(BuildContext context, Lesson lesson) {
+  showModalBottomSheet<void>(
+    context: context,
+    backgroundColor: const Color(0xFF1A1A2E),
+    shape: const RoundedRectangleBorder(
+      borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+    ),
+    builder: (context) => SafeArea(
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(20, 18, 20, 24),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              '👪 ${lesson.display}',
+              style: const TextStyle(
+                fontFamily: 'Nunito',
+                fontSize: 18,
+                fontWeight: FontWeight.w900,
+                color: Color(0xFFFFD200),
+              ),
+            ),
+            const SizedBox(height: 10),
+            Text(
+              lesson.parentNote,
+              style: TextStyle(
+                fontFamily: 'Nunito',
+                fontSize: 15,
+                fontWeight: FontWeight.w700,
+                height: 1.4,
+                color: Colors.white.withOpacity(0.9),
+              ),
+            ),
+          ],
+        ),
+      ),
+    ),
+  );
+}
+
 class _BagChip extends StatelessWidget {
   final int count;
   final VoidCallback? onTap;
@@ -338,6 +379,10 @@ class _LessonNode extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 6),
       child: GestureDetector(
         onTap: unlocked ? onTap : null,
+        // Dlouhý stisk = poznámka pro rodiče (do v3.1 rodičovského koutku).
+        onLongPress: lesson.parentNote.isEmpty
+            ? null
+            : () => _showParentNote(context, lesson),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [

@@ -130,7 +130,9 @@ kulturní variantu). Přidání jazyka = přidání JSON souboru, žádný Dart.
   Do té doby je v builderu siluetka „?", 24 h po získání má štítek „NOVÉ".
 - `lesson.vocab` — id slova do batohu. Jen celá slova (target > 2 písmena),
   slabiky do batohu nepatří.
-- `lesson.parentNote` — jedna věta pro rodiče (zobrazí rodičovský koutek, v3.1).
+- `lesson.parentNote` — jedna věta pro rodiče v jazyce packu; zatím se ukáže
+  dlouhým stiskem uzlu na mapě, ve v3.1 v rodičovském koutku. Povinná pro
+  cs a en (hlídá test).
 - Validace (`test/pack_loading_test.dart`): každé `vocab` má vocab dlaždici,
   každou vocab dlaždici odemyká aspoň jedna lekce, id dlaždic jsou unikátní,
   každá kategorie má aspoň jednu `always` dlaždici.
