@@ -5,15 +5,30 @@ import '../data/lessons.dart';
 
 enum GameStatus { idle, success, error }
 
+/// Co karta prozradí. Po chybě GameScreen přepne na [full] (scaffolding).
+enum CardMode {
+  /// Text i všechna písmena.
+  full,
+
+  /// Poslech: text i písmena skryté, hraje TTS.
+  listen,
+
+  /// Jen obrázek: text i písmena skryté, bez zvuku.
+  picture,
+
+  /// Slovo s dírou: skryté jen písmeno na [ChallengeCard.gapIndex].
+  gap,
+}
+
 class ChallengeCard extends StatelessWidget {
   final Lesson lesson;
   final List<String> path;
   final GameStatus status;
   final bool shake;
 
-  /// Poslechové kolo: text (label i písmena) je skrytý, dokud dítě neudělá
-  /// chybu — pak se odkryje. Trefená písmena se odkrývají průběžně.
-  final bool hidden;
+  /// Co je skryté (poslech, obrázek, díra). Trefená písmena se odkrývají
+  /// průběžně.
+  final CardMode mode;
 
   /// Přehrát zadání znovu (jen poslechové kolo).
   final VoidCallback? onReplayAudio;
@@ -28,9 +43,32 @@ class ChallengeCard extends StatelessWidget {
     required this.status,
     required this.shake,
     required this.emojiFor,
-    this.hidden = false,
+    this.mode = CardMode.full,
     this.onReplayAudio,
   });
+
+  bool get _hideAll => mode == CardMode.listen || mode == CardMode.picture;
+
+  bool _isHidden(int i) =>
+      _hideAll || (mode == CardMode.gap && i == lesson.gapIndex);
+
+  String get _labelText => switch (mode) {
+        CardMode.listen || CardMode.picture => '• • •',
+        CardMode.gap => _gapped(),
+        CardMode.full => lesson.label,
+      };
+
+  /// Slovo s „?" místo chybějícího písmene. Když display odpovídá targetu
+  /// písmeno po písmenu (MÁMA ↔ MAMA), zachová diakritiku.
+  String _gapped() {
+    final display = lesson.display.characters.toList();
+    final source = display.length == lesson.target.length
+        ? display
+        : lesson.target.split('');
+    return [
+      for (final (i, ch) in source.indexed) i == lesson.gapIndex ? '?' : ch,
+    ].join();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -80,15 +118,15 @@ class ChallengeCard extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 2),
-          // Název slova (u poslechového kola skrytý)
+          // Název slova (skrytý u poslechu a obrázku, s dírou u doplňovačky)
           Text(
-            hidden ? '• • •' : lesson.label,
+            _labelText,
             style: TextStyle(
               fontFamily: 'Nunito',
               fontSize: 22,
               fontWeight: FontWeight.w900,
               color: const Color(0xFFFFD200)
-                  .withOpacity(hidden ? 0.35 : 1.0),
+                  .withOpacity(_hideAll ? 0.35 : 1.0),
               letterSpacing: 5,
               shadows: [
                 Shadow(
@@ -109,6 +147,7 @@ class ChallengeCard extends StatelessWidget {
               final reached = path.length > i;
               final hit = reached && path[i] == ch;
               final miss = reached && path[i] != ch;
+              final hidden = _isHidden(i);
               final col = keyColor(ch);
               return Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 5),
@@ -202,9 +241,15 @@ class ChallengeCard extends StatelessWidget {
                 color: const Color(0xFFE74C3C)));
       case GameStatus.idle:
         if (path.isEmpty) {
-          if (hidden) {
+          final prompt = switch (mode) {
+            CardMode.listen => '🔊 Poslouchej a přejeď, co slyšíš',
+            CardMode.picture => '🖼️ Co je na obrázku? Napiš to',
+            CardMode.gap => '🧩 Které písmenko chybí? Přejeď celé slovo',
+            CardMode.full => null,
+          };
+          if (prompt != null) {
             return Text(
-              '🔊 Poslouchej a přejeď, co slyšíš',
+              prompt,
               style: TextStyle(
                   fontFamily: 'Nunito',
                   fontSize: 13,

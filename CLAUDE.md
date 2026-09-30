@@ -80,7 +80,8 @@ iOS, Android, macOS, Linux (check pubspec for active platforms).
 
 - One pack per language: `assets/packs/{cs,en,de,es,it,fr,zh,ja,pt}.json` (schema v2, see `docs/GAMEPLAY.md` §5)
 - `target` is uppercase diacritic-free Latin (what is swyped); `display` carries accents/tones/hiragana
-- Lesson `type`: `swype` | `listen`; unknown types fall back to `swype`
+- Lesson `type`: `swype` | `listen` | `missingLetter` (`gap` index) | `pictureOnly`; unknown types fall back to `swype`
+- Never add lessons to an existing unit (it would re-lock later units for kids who finished it); add new units, or change an existing lesson's type (id + progress stay)
 - Word bag: a correct swype of a lesson with `vocab` adds the word to the bag (`ProgressService.addWord`); builder tiles with `unlockedBy: "vocab"` stay locked (“?” silhouette) until then
 - JSON packs are the single source of truth (Dart lessons removed in v2.3); edit `assets/packs/*.json` directly, `flutter test` validates them
 

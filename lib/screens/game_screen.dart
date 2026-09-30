@@ -39,7 +39,7 @@ class _GameScreenState extends State<GameScreen>
   int _lessonStars = 0; // hvězdy za právě dohrané kolo (oslava)
   String? _newWord; // slovo, které právě přibylo do batohu (oslava)
   int _attempts = 0; // pokusy o aktuální lekci (1. pokus = 3⭐, 2. = 2⭐, pak 1⭐)
-  bool _revealed = false; // poslechové kolo: text odkrytý po neúspěchu
+  bool _revealed = false; // skryté kolo (poslech/obrázek/díra): odkryto po chybě
   List<String> _path = [];
   List<String> _livePath = [];
   GameStatus _status = GameStatus.idle;
@@ -131,7 +131,7 @@ class _GameScreenState extends State<GameScreen>
       setState(() {
         _status = GameStatus.error;
         _shake = true;
-        _revealed = true; // poslechové kolo: po chybě text odkrýt (scaffolding)
+        _revealed = true; // skryté kolo: po chybě text odkrýt (scaffolding)
       });
       _timerShake = Timer(const Duration(milliseconds: 500), () {
         if (mounted) setState(() => _shake = false);
@@ -205,7 +205,14 @@ class _GameScreenState extends State<GameScreen>
     final lesson = _lesson;
     final progress = (_idx + 1) / _lessons.length;
     final isWord = lesson.target.length > 2;
-    final isListen = lesson.type == LessonType.listen && !_revealed;
+    final mode = _revealed
+        ? CardMode.full
+        : switch (lesson.type) {
+            LessonType.listen => CardMode.listen,
+            LessonType.pictureOnly => CardMode.picture,
+            LessonType.missingLetter => CardMode.gap,
+            LessonType.swype => CardMode.full,
+          };
 
     return Scaffold(
       body: Container(
@@ -237,9 +244,12 @@ class _GameScreenState extends State<GameScreen>
                       onPressed: () => Navigator.of(context).pop(),
                     ),
                     const SizedBox(width: 8),
-                    _badge(lesson.type == LessonType.listen
-                        ? '🔊 POSLECH'
-                        : (isWord ? '🔤 SLOVO' : '🔡 SLABIKA')),
+                    _badge(switch (lesson.type) {
+                      LessonType.listen => '🔊 POSLECH',
+                      LessonType.pictureOnly => '🖼️ OBRÁZEK',
+                      LessonType.missingLetter => '🧩 DOPLŇ',
+                      LessonType.swype => isWord ? '🔤 SLOVO' : '🔡 SLABIKA',
+                    }),
                     const Spacer(),
                     Text(
                       '⭐ $_sessionStars',
@@ -281,7 +291,7 @@ class _GameScreenState extends State<GameScreen>
                     : _path,
                 status: _status,
                 shake: _shake,
-                hidden: isListen,
+                mode: mode,
                 emojiFor: _emojiFor,
                 onReplayAudio:
                     lesson.type == LessonType.listen ? _replayAudio : null,

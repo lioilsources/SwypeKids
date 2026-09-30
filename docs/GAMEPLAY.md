@@ -142,8 +142,11 @@ Zásady:
 - `target` = co se swypuje (velká latinka bez diakritiky), `display` = co se
   zobrazuje (diakritika, tóny, hiragana). Díky tomu fungují i zh/ja na
   latinské klávesnici.
-- `type`: `swype` | `listen`; neznámý typ padá na `swype` (starší appka
-  přežije novější pack).
+- `type`: `swype` | `listen` | `missingLetter` | `pictureOnly`; neznámý typ
+  padá na `swype` (starší appka přežije novější pack).
+- **Nové lekce jen do nových jednotek.** Jednotka je hotová, když má hotové
+  všechny lekce — přidaná lekce by dětem, které ji dokončily, znovu zamkla
+  další jednotky. Existující lekci lze změnit typ (id a postup zůstanou).
 - Blok `keyboard.emoji` per pack — lokalizovaná emoji mnemotechnika kláves
   (zdroj: `kEmojiByLang` v `lib/data/keyboard_layout.dart`, do JSON ji zapisuje
   export tool). Každý pack definuje emoji pro všechna písmena; emoji odměn
@@ -169,8 +172,8 @@ Schéma to už umí, chybí jen UI výběru varianty.
 |---|---|---|---|
 | `swype` | ✅ v1 | Karta ukazuje hint + label + písmena; swype v pořadí | dnešní chování |
 | `listen` | ✅ v1 | Text skrytý (`• • •`, dlaždice `?`), hraje TTS; 🔊 = přehrát znovu; trefená písmena se odkrývají | po prvním neúspěchu se text odkryje (scaffolding) — bez TTS (desktop) je hra pořád dohratelná |
-| `missingLetter` | 🔜 fáze 2 | Label ukazuje slovo s dírou (M_MA); swypuje se celé slovo | doplňovačka, trénink pravopisu |
-| `pictureOnly` | 🔜 fáze 2 | Jen hint emoji, žádný label ani dlaždice | aktivní vybavení slova, těžší než listen |
+| `missingLetter` | ✅ v2.3 | Label ukazuje slovo s dírou (MÁ?A); swypuje se celé slovo. `gap` = index díry (default prostřední písmeno); po chybě se odkryje | doplňovačka, trénink pravopisu |
+| `pictureOnly` | ✅ v2.3 | Jen hint emoji, žádný label ani písmena; po chybě se odkryje | aktivní vybavení slova, těžší než listen |
 | `reviewMix` | 🔜 fáze 2 | Náhodná směs dřívějších targetů jednotky/packu | základ pro spaced repetition |
 
 Zásada pro všechny typy: **žádný dead-end** — každé kolo musí být dohratelné

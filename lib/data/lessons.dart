@@ -8,6 +8,12 @@ enum LessonType {
 
   /// Poslechové kolo: text je skrytý, hraje TTS; po prvním neúspěchu se odkryje.
   listen,
+
+  /// Slovo s dírou (M?MA): jedno písmeno chybí, swypuje se celé slovo.
+  missingLetter,
+
+  /// Jen obrázek, žádný text — aktivní vybavení slova.
+  pictureOnly,
 }
 
 class Lesson {
@@ -24,6 +30,7 @@ class Lesson {
   final bool review;           // opakovací lekce na konci jednotky
   final String vocab;          // id slova do batohu / dlaždice builderu ('' = žádné)
   final String parentNote;     // věta pro rodiče: co se procvičuje a proč
+  final int? gap;              // missingLetter: index chybějícího písmene v target
 
   const Lesson({
     this.id = '',
@@ -39,7 +46,11 @@ class Lesson {
     this.review = false,
     this.vocab = '',
     this.parentNote = '',
+    this.gap,
   });
+
+  /// Index díry pro missingLetter: z packu, jinak prostřední písmeno.
+  int get gapIndex => gap ?? target.length ~/ 2;
 
   factory Lesson.fromJson(Map<String, dynamic> json) => Lesson(
         id: json['id'] as String? ?? '',
@@ -56,6 +67,7 @@ class Lesson {
         review: json['review'] as bool? ?? false,
         vocab: json['vocab'] as String? ?? '',
         parentNote: json['parentNote'] as String? ?? '',
+        gap: json['gap'] as int?,
       );
 
   Map<String, dynamic> toJson() => {
@@ -72,5 +84,6 @@ class Lesson {
         if (review) 'review': review,
         if (vocab.isNotEmpty) 'vocab': vocab,
         if (parentNote.isNotEmpty) 'parentNote': parentNote,
+        if (gap != null) 'gap': gap,
       };
 }
