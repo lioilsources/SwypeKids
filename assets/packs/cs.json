@@ -424,7 +424,7 @@
         },
         {
           "id": "cs-u6-l3",
-          "type": "swype",
+          "type": "missingLetter",
           "unlocked": [
             "M",
             "A",
@@ -441,7 +441,8 @@
           "label": "BÁBA",
           "ipa": "ˈbaːba",
           "vocab": "baba",
-          "parentNote": "Slovo BÁBA. Délku Á na klávesnici nevidí — na kartě ji ale čte, všimněte si toho spolu."
+          "parentNote": "Doplňovačka BÁ?A: dítě si vybaví chybějící B podle zbytku slova — spojuje čtení s pravopisem.",
+          "gap": 2
         },
         {
           "id": "cs-u6-l4",
@@ -465,7 +466,7 @@
         },
         {
           "id": "cs-u6-l5",
-          "type": "swype",
+          "type": "pictureOnly",
           "unlocked": [
             "M",
             "A",
@@ -483,7 +484,7 @@
           "ipa": "ˈkolo",
           "review": true,
           "vocab": "kolo",
-          "parentNote": "Slovo KOLO z nedávno naučených slabik — opakování celé jednotky."
+          "parentNote": "Jen obrázek kola, žádný text: dítě si samo vybaví slovo a jeho hlásky. Těžší než opisování."
         }
       ]
     },
@@ -547,7 +548,7 @@
         },
         {
           "id": "cs-u7-l3",
-          "type": "swype",
+          "type": "missingLetter",
           "unlocked": [
             "M",
             "A",
@@ -567,7 +568,8 @@
           "label": "NOS",
           "ipa": "nos",
           "vocab": "nos",
-          "parentNote": "Slovo NOS s novým N — tři hlásky v jedné slabice."
+          "parentNote": "Doplňovačka N?S: chybí samohláska uprostřed — dítě ji musí slyšet ve slově.",
+          "gap": 1
         },
         {
           "id": "cs-u7-l4",
