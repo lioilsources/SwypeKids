@@ -108,4 +108,77 @@ void main() {
     // Doběhnout zbývající časovače (fade stopy klávesnice)
     await tester.pump(const Duration(seconds: 3));
   });
+
+  test('reviewMix vybere nejslabší naučené slovo z odemčených písmen', () {
+    const mix = Lesson(
+        id: 'mix',
+        type: LessonType.reviewMix,
+        unlocked: ['M', 'A'],
+        target: 'MA',
+        display: 'MA',
+        hint: '🔁',
+        label: 'MA',
+        parentNote: 'opakování');
+    final p = ProgressService.instance;
+
+    // Nic naučeného → hraje se vlastní target jako obyčejný swype
+    final fallback = resolveReviewMix(_pack, mix);
+    expect(fallback.type, LessonType.swype);
+    expect(fallback.target, 'MA');
+
+    p.markCompleted(_pack.id, 'u1-l1', 3); // MA
+    p.markCompleted(_pack.id, 'u1-l2', 3); // AM
+    p.markCompleted(_pack.id, 'u2-l1', 3); // TA — T není odemčené
+    p.recordAttempt(_pack.id, 'MA', success: true);
+    p.recordAttempt(_pack.id, 'TA', success: false);
+
+    final picked = resolveReviewMix(_pack, mix);
+    expect(picked.target, 'AM'); // slabší než MA, TA nejde swypnout
+    expect(picked.id, 'mix'); // postup se píše k reviewMix uzlu
+    expect(picked.unlocked, ['M', 'A']);
+    expect(picked.parentNote, 'opakování');
+  });
+
+  testWidgets('procvičování: hvězdy a síla ano, dokončení lekce ne, pak zpět',
+      (tester) async {
+    tester.view.physicalSize = const Size(1200, 900);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.reset);
+
+    await tester.pumpWidget(MaterialApp(
+      home: Builder(
+        builder: (context) => TextButton(
+          onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+            builder: (_) => GameScreen(
+              pack: _pack,
+              unitIndex: 0,
+              practice: Unit(
+                id: 'practice',
+                title: 'Procvičování',
+                icon: '🔁',
+                reward: const CollectibleReward(emoji: '🔁'),
+                lessons: [_pack.units[0].lessons[0]],
+              ),
+            ),
+          )),
+          child: const Text('mapa'),
+        ),
+      ),
+    ));
+    await tester.tap(find.text('mapa'));
+    // GameScreen má nekonečnou animaci (blikání nových písmen) → bez settle.
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 400));
+    expect(find.text('🔁 1/1'), findsOneWidget);
+
+    await _swype(tester, ['M', 'A']);
+    expect(ProgressService.instance.strengthOf(_pack.id, 'MA'), 1);
+    expect(ProgressService.instance.isCompleted(_pack.id, 'u1-l1'), isFalse);
+
+    await tester.pump(const Duration(milliseconds: 1700));
+    await tester.pump(const Duration(milliseconds: 500));
+    expect(find.text('mapa'), findsOneWidget); // zpět na mapě
+    expect(ProgressService.instance.collectibles(_pack.id), isEmpty);
+    await tester.pump(const Duration(seconds: 3));
+  });
 }

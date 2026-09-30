@@ -82,6 +82,28 @@ class _LessonMapScreenState extends State<LessonMapScreen> {
     if (mounted) setState(() {}); // po návratu překreslit postup
   }
 
+  /// Kolik slov má procvičování a od kolika naučených se nabízí.
+  static const _practiceSize = 5;
+  static const _practiceMinLearned = 3;
+
+  Future<void> _openPractice(List<Lesson> lessons) async {
+    AudioService.instance.play(Sfx.tap);
+    await Navigator.of(context).push(MaterialPageRoute(
+      builder: (_) => GameScreen(
+        pack: _pack!,
+        unitIndex: 0,
+        practice: Unit(
+          id: 'practice',
+          title: 'Procvičování',
+          icon: '🔁',
+          reward: const CollectibleReward(emoji: '🔁'),
+          lessons: lessons,
+        ),
+      ),
+    ));
+    if (mounted) setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     final pack = _pack;
@@ -158,15 +180,31 @@ class _LessonMapScreenState extends State<LessonMapScreen> {
 
                   // ── Cesta jednotek ─────────────────────────────────────
                   Expanded(
-                    child: ListView.builder(
-                      padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
-                      itemCount: pack.units.length,
-                      itemBuilder: (context, u) => _UnitBlock(
-                        pack: pack,
-                        unitIndex: u,
-                        onLessonTap: (l) => _openLesson(u, l),
-                      ),
-                    ),
+                    child: Builder(builder: (context) {
+                      final weakest = ProgressService.instance
+                          .weakestLearned(pack, limit: _practiceSize);
+                      final showPractice =
+                          weakest.length >= _practiceMinLearned;
+                      final offset = showPractice ? 1 : 0;
+                      return ListView.builder(
+                        padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
+                        itemCount: pack.units.length + offset,
+                        itemBuilder: (context, i) {
+                          if (showPractice && i == 0) {
+                            return _PracticeCard(
+                              lessons: weakest,
+                              onTap: () => _openPractice(weakest),
+                            );
+                          }
+                          final u = i - offset;
+                          return _UnitBlock(
+                            pack: pack,
+                            unitIndex: u,
+                            onLessonTap: (l) => _openLesson(u, l),
+                          );
+                        },
+                      );
+                    }),
                   ),
                 ],
               ),
@@ -215,6 +253,51 @@ void _showParentNote(BuildContext context, Lesson lesson) {
       ),
     ),
   );
+}
+
+/// „Dnešní procvičování": nejslabší naučená slova (2–3 minuty hry).
+class _PracticeCard extends StatelessWidget {
+  final List<Lesson> lessons;
+  final VoidCallback onTap;
+
+  const _PracticeCard({required this.lessons, required this.onTap});
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        margin: const EdgeInsets.only(top: 6),
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+        decoration: BoxDecoration(
+          color: const Color(0xFF1DD1A1).withOpacity(0.16),
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(color: const Color(0xFF1DD1A1).withOpacity(0.7)),
+        ),
+        child: Row(
+          children: [
+            const Text('🔁', style: TextStyle(fontSize: 26)),
+            const SizedBox(width: 10),
+            const Text(
+              'Procvičování',
+              style: TextStyle(
+                fontFamily: 'Nunito',
+                fontSize: 15,
+                fontWeight: FontWeight.w900,
+                color: Color(0xFF7BFFB2),
+              ),
+            ),
+            const Spacer(),
+            // Obrázky slov, ať dítě bez čtení ví, co ho čeká.
+            Text(
+              lessons.map((l) => l.hint).join(' '),
+              style: const TextStyle(fontSize: 20),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 }
 
 class _BagChip extends StatelessWidget {

@@ -144,6 +144,10 @@ Zásady:
   latinské klávesnici.
 - `type`: `swype` | `listen` | `missingLetter` | `pictureOnly`; neznámý typ
   padá na `swype` (starší appka přežije novější pack).
+- **Síla slova** (0–5, podle `target`): úspěch +1, chyba −1
+  (`ProgressService.recordAttempt`). Z ní vybírá `reviewMix` a „Procvičování"
+  na mapě (5 nejslabších naučených slov, nabízí se od 3 naučených; nezapisuje
+  dokončení lekcí ani nálepky).
 - **Nové lekce jen do nových jednotek.** Jednotka je hotová, když má hotové
   všechny lekce — přidaná lekce by dětem, které ji dokončily, znovu zamkla
   další jednotky. Existující lekci lze změnit typ (id a postup zůstanou).
@@ -174,7 +178,7 @@ Schéma to už umí, chybí jen UI výběru varianty.
 | `listen` | ✅ v1 | Text skrytý (`• • •`, dlaždice `?`), hraje TTS; 🔊 = přehrát znovu; trefená písmena se odkrývají | po prvním neúspěchu se text odkryje (scaffolding) — bez TTS (desktop) je hra pořád dohratelná |
 | `missingLetter` | ✅ v2.3 | Label ukazuje slovo s dírou (MÁ?A); swypuje se celé slovo. `gap` = index díry (default prostřední písmeno); po chybě se odkryje | doplňovačka, trénink pravopisu |
 | `pictureOnly` | ✅ v2.3 | Jen hint emoji, žádný label ani písmena; po chybě se odkryje | aktivní vybavení slova, těžší než listen |
-| `reviewMix` | 🔜 fáze 2 | Náhodná směs dřívějších targetů jednotky/packu | základ pro spaced repetition |
+| `reviewMix` | ✅ v2.3 | Za běhu se nahradí nejslabším dříve naučeným slovem z odemčených písmen (síla slova); id a postup zůstávají u reviewMix uzlu | spaced repetition lite |
 
 Zásada pro všechny typy: **žádný dead-end** — každé kolo musí být dohratelné
 i bez zvuku a po libovolném počtu chyb.

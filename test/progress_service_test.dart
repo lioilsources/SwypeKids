@@ -126,4 +126,29 @@ void main() {
       expect(p.isNewWord('test-XX', 'les', now: t0), isFalse);
     });
   });
+
+  group('síla slov', () {
+    test('úspěch +1, chyba −1, v mezích 0–5', () {
+      final p = ProgressService.instance;
+      p.recordAttempt('test-XX', 'MA', success: false);
+      expect(p.strengthOf('test-XX', 'MA'), 0);
+      for (var i = 0; i < 7; i++) {
+        p.recordAttempt('test-XX', 'MA', success: true);
+      }
+      expect(p.strengthOf('test-XX', 'MA'), 5);
+      p.recordAttempt('test-XX', 'MA', success: false);
+      expect(p.strengthOf('test-XX', 'MA'), 4);
+    });
+
+    test('weakestLearned: jen dokončené, unikátní target, od nejslabší', () {
+      final p = ProgressService.instance;
+      final pack = _testPack();
+      p.markCompleted(pack.id, 'u1-l1', 3); // MA
+      p.markCompleted(pack.id, 'u1-l2', 3); // MA znovu → jen jednou
+      p.markCompleted(pack.id, 'u2-l1', 3); // TA
+      p.recordAttempt(pack.id, 'MA', success: true);
+      expect(p.weakestLearned(pack).map((l) => l.target), ['TA', 'MA']);
+      expect(p.weakestLearned(pack, limit: 1).single.target, 'TA');
+    });
+  });
 }

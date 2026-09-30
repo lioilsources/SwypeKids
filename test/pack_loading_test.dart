@@ -60,6 +60,15 @@ void main() {
             expect(lesson.target.length, greaterThan(2),
                 reason: '${lesson.id}: ${lesson.type.name} jen pro celá slova');
           }
+          if (lesson.type == LessonType.reviewMix) {
+            // Musí mít z čeho vybírat: dřívější lekce z odemčených písmen.
+            final earlier = pack.allLessons
+                .takeWhile((l) => l.id != lesson.id)
+                .where((l) => l.type != LessonType.reviewMix)
+                .where((l) => unlocked.containsAll(l.target.split('')));
+            expect(earlier, isNotEmpty,
+                reason: '${lesson.id}: reviewMix bez dřívějších slov');
+          }
           if (lesson.gap != null) {
             expect(lesson.type, LessonType.missingLetter,
                 reason: '${lesson.id}: gap bez missingLetter');
