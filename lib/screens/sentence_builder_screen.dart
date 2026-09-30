@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import '../audio/audio_service.dart';
 import '../data/lessons.dart';
-import '../data/sentence_builder.dart';
+import '../data/models/content_pack.dart';
+import '../data/models/sentence.dart';
+import '../services/pack_service.dart';
+import '../services/progress_service.dart';
 import '../services/tts_service.dart';
 import '../widgets/language_picker.dart';
 
@@ -23,8 +27,15 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
   SentencePart? _subject;
   SentencePart? _verb;
   SentencePart? _object;
+  ContentPack? _pack;
 
-  SentenceCategories get _data => kSentenceData[widget.language]!;
+  SentenceCategories get _data => _pack?.sentence ?? SentenceCategories.empty;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadPack();
+  }
 
   @override
   void didUpdateWidget(covariant SentenceBuilderScreen oldWidget) {
@@ -34,8 +45,37 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
         _subject = null;
         _verb = null;
         _object = null;
+        _pack = null;
       });
+      _loadPack();
     }
+  }
+
+  Future<void> _loadPack() async {
+    final pack = await PackService.instance.load(widget.language);
+    if (mounted && pack.language == widget.language) {
+      setState(() => _pack = pack);
+    }
+  }
+
+  /// Dlaždice je k dispozici: základní, nebo už je slovo v batohu.
+  bool _isUnlocked(SentencePart p) =>
+      p.unlockedBy == TileUnlock.always ||
+      (_pack != null && ProgressService.instance.hasWord(_pack!.id, p.id));
+
+  bool _isNew(SentencePart p) =>
+      p.unlockedBy == TileUnlock.vocab &&
+      _pack != null &&
+      ProgressService.instance.isNewWord(_pack!.id, p.id);
+
+  void _pick(SentencePart p, void Function() select) {
+    if (!_isUnlocked(p)) {
+      // Siluetka: slovo se teprve naučí ve hře.
+      HapticFeedback.selectionClick();
+      return;
+    }
+    AudioService.instance.play(Sfx.tap);
+    setState(select);
   }
 
   String _composeSentence() {
@@ -183,7 +223,9 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
                       items: _data.subjects,
                       selected: _subject,
                       accent: const Color(0xFFFFD200),
-                      onPick: (p) => setState(() => _subject = p),
+                      isUnlocked: _isUnlocked,
+                      isNew: _isNew,
+                      onPick: (p) => _pick(p, () => _subject = p),
                     )),
                     const SizedBox(width: 8),
                     Expanded(child: _CategoryColumn(
@@ -192,7 +234,9 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
                       selected: _verb,
                       accent: const Color(0xFF7BFFB2),
                       contextKey: _subject?.person,
-                      onPick: (p) => setState(() => _verb = p),
+                      isUnlocked: _isUnlocked,
+                      isNew: _isNew,
+                      onPick: (p) => _pick(p, () => _verb = p),
                     )),
                     const SizedBox(width: 8),
                     Expanded(child: _CategoryColumn(
@@ -201,7 +245,9 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
                       selected: _object,
                       accent: const Color(0xFFA0C4FF),
                       contextKey: _verb?.frame,
-                      onPick: (p) => setState(() => _object = p),
+                      isUnlocked: _isUnlocked,
+                      isNew: _isNew,
+                      onPick: (p) => _pick(p, () => _object = p),
                     )),
                   ],
                 ),
@@ -264,6 +310,8 @@ class _CategoryColumn extends StatelessWidget {
   final SentencePart? selected;
   final Color accent;
   final String? contextKey;
+  final bool Function(SentencePart) isUnlocked;
+  final bool Function(SentencePart) isNew;
   final ValueChanged<SentencePart> onPick;
 
   const _CategoryColumn({
@@ -271,6 +319,8 @@ class _CategoryColumn extends StatelessWidget {
     required this.items,
     required this.selected,
     required this.accent,
+    required this.isUnlocked,
+    required this.isNew,
     required this.onPick,
     this.contextKey,
   });
@@ -303,6 +353,8 @@ class _CategoryColumn extends StatelessWidget {
               return _PartTile(
                 part: p,
                 isSelected: identical(p, selected),
+                locked: !isUnlocked(p),
+                isNew: isNew(p),
                 accent: accent,
                 contextKey: contextKey,
                 onTap: () => onPick(p),
@@ -318,6 +370,8 @@ class _CategoryColumn extends StatelessWidget {
 class _PartTile extends StatelessWidget {
   final SentencePart part;
   final bool isSelected;
+  final bool locked; // slovo ještě není v batohu → siluetka „?"
+  final bool isNew; // slovo přibylo do batohu za posledních 24 h
   final Color accent;
   final String? contextKey;
   final VoidCallback onTap;
@@ -327,11 +381,61 @@ class _PartTile extends StatelessWidget {
     required this.isSelected,
     required this.accent,
     required this.onTap,
+    this.locked = false,
+    this.isNew = false,
     this.contextKey,
   });
 
   @override
   Widget build(BuildContext context) {
+    if (locked) return _buildLocked();
+    final tile = _buildTile();
+    if (!isNew) return tile;
+    return Stack(
+      clipBehavior: Clip.none,
+      children: [
+        tile,
+        const Positioned(top: -6, right: -4, child: _NewBadge()),
+      ],
+    );
+  }
+
+  Widget _buildLocked() {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 8),
+        decoration: BoxDecoration(
+          color: Colors.white.withOpacity(0.03),
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(color: Colors.white.withOpacity(0.08)),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // Tmavá siluetka emoji — dítě tuší, co ho ve hře čeká.
+            ColorFiltered(
+              colorFilter: ColorFilter.mode(
+                  Colors.black.withOpacity(0.55), BlendMode.srcIn),
+              child: Text(part.emoji, style: const TextStyle(fontSize: 28)),
+            ),
+            const SizedBox(height: 2),
+            Text(
+              '?',
+              style: TextStyle(
+                fontFamily: 'Nunito',
+                fontSize: 12,
+                fontWeight: FontWeight.w900,
+                color: Colors.white.withOpacity(0.35),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildTile() {
     final displayText =
         contextKey != null ? part.formFor(contextKey!) : part.text;
     return GestureDetector(
@@ -376,6 +480,66 @@ class _PartTile extends StatelessWidget {
               ),
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+/// Štítek „NOVÉ" s jemným poskakováním (slovo čerstvě z batohu).
+class _NewBadge extends StatefulWidget {
+  const _NewBadge();
+
+  @override
+  State<_NewBadge> createState() => _NewBadgeState();
+}
+
+class _NewBadgeState extends State<_NewBadge>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _ctrl = AnimationController(
+    vsync: this,
+    duration: const Duration(milliseconds: 900),
+  );
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (MediaQuery.of(context).disableAnimations) {
+      _ctrl.stop();
+    } else if (!_ctrl.isAnimating) {
+      _ctrl.repeat(reverse: true);
+    }
+  }
+
+  @override
+  void dispose() {
+    _ctrl.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedBuilder(
+      animation: _ctrl,
+      builder: (context, child) => Transform.translate(
+        offset: Offset(0, -3 * Curves.easeInOut.transform(_ctrl.value)),
+        child: child,
+      ),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+        decoration: BoxDecoration(
+          color: const Color(0xFF1DD1A1),
+          borderRadius: BorderRadius.circular(99),
+        ),
+        child: const Text(
+          'NOVÉ',
+          style: TextStyle(
+            fontFamily: 'Nunito',
+            fontSize: 9,
+            fontWeight: FontWeight.w900,
+            color: Colors.white,
+            letterSpacing: 0.5,
+          ),
         ),
       ),
     );

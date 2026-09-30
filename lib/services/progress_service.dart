@@ -97,6 +97,37 @@ class ProgressService {
     }
   }
 
+  // ── Batoh slov ─────────────────────────────────────────────────────────────
+
+  /// Jak dlouho má slovo v builderu štítek „nové".
+  static const newWordWindow = Duration(hours: 24);
+
+  /// Slova (lesson.vocab), která dítě správně swyplo.
+  Set<String> wordBag(String packId) =>
+      Set.unmodifiable(_byPack[packId]?.words.keys ?? const <String>{});
+
+  bool hasWord(String packId, String vocabId) =>
+      _byPack[packId]?.words.containsKey(vocabId) ?? false;
+
+  /// Přidá slovo do batohu; vrací true, pokud tam ještě nebylo.
+  bool addWord(String packId, String vocabId, {DateTime? now}) {
+    if (vocabId.isEmpty) return false;
+    final p = _byPack.putIfAbsent(packId, () => _PackProgress());
+    if (p.words.containsKey(vocabId)) return false;
+    p.words[vocabId] = (now ?? DateTime.now()).millisecondsSinceEpoch;
+    _save(packId);
+    return true;
+  }
+
+  /// Slovo přibylo do batohu během posledních 24 h.
+  bool isNewWord(String packId, String vocabId, {DateTime? now}) {
+    final at = _byPack[packId]?.words[vocabId];
+    if (at == null) return false;
+    final age = (now ?? DateTime.now())
+        .difference(DateTime.fromMillisecondsSinceEpoch(at));
+    return age < newWordWindow;
+  }
+
   // ── Navigace v packu ───────────────────────────────────────────────────────
 
   /// Index (unit, lesson) první nedokončené lekce; null = celý pack hotový.
@@ -129,21 +160,29 @@ class ProgressService {
 class _PackProgress {
   final Map<String, int> completed; // lessonId → max hvězdy (1–3)
   final List<String> collectibles;  // emoji nálepek v pořadí získání
+  final Map<String, int> words;     // batoh: vocab id → kdy poprvé (ms epoch)
 
-  _PackProgress({Map<String, int>? completed, List<String>? collectibles})
-      : completed = completed ?? {},
-        collectibles = collectibles ?? [];
+  _PackProgress({
+    Map<String, int>? completed,
+    List<String>? collectibles,
+    Map<String, int>? words,
+  })  : completed = completed ?? {},
+        collectibles = collectibles ?? [],
+        words = words ?? {};
 
   factory _PackProgress.fromJson(Map<String, dynamic> json) => _PackProgress(
         completed: ((json['completed'] as Map?) ?? const {})
             .map((k, v) => MapEntry(k as String, v as int)),
         collectibles:
             ((json['collectibles'] as List?) ?? const []).cast<String>(),
+        words: ((json['words'] as Map?) ?? const {})
+            .map((k, v) => MapEntry(k as String, v as int)),
       );
 
   Map<String, dynamic> toJson() => {
         'v': 1,
         'completed': completed,
         'collectibles': collectibles,
+        'words': words,
       };
 }

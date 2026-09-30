@@ -17,10 +17,14 @@ class LessonMapScreen extends StatefulWidget {
   final Language language;
   final ValueChanged<Language> onLanguageChanged;
 
+  /// Tap na batoh slov → builder vět.
+  final VoidCallback? onOpenBag;
+
   const LessonMapScreen({
     super.key,
     required this.language,
     required this.onLanguageChanged,
+    this.onOpenBag,
   });
 
   @override
@@ -122,6 +126,15 @@ class _LessonMapScreenState extends State<LessonMapScreen> {
                             ),
                           ),
                         ),
+                        if (pack.allLessons.any((l) => l.vocab.isNotEmpty)) ...[
+                          _BagChip(
+                            count: ProgressService.instance
+                                .wordBag(pack.id)
+                                .length,
+                            onTap: widget.onOpenBag,
+                          ),
+                          const SizedBox(width: 8),
+                        ],
                         Text(_world.celestial,
                             style: const TextStyle(fontSize: 18)),
                         const SizedBox(width: 8),
@@ -157,6 +170,39 @@ class _LessonMapScreenState extends State<LessonMapScreen> {
                   ),
                 ],
               ),
+      ),
+    );
+  }
+}
+
+/// Batoh slov: kolik celých slov dítě swyplo (a může použít ve větách).
+class _BagChip extends StatelessWidget {
+  final int count;
+  final VoidCallback? onTap;
+
+  const _BagChip({required this.count, this.onTap});
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+        decoration: BoxDecoration(
+          color: Colors.white.withOpacity(0.08),
+          borderRadius: BorderRadius.circular(99),
+          border: Border.all(
+              color: const Color(0xFF1DD1A1).withOpacity(count > 0 ? 0.6 : 0.2)),
+        ),
+        child: Text(
+          '🎒 $count',
+          style: const TextStyle(
+            fontFamily: 'Nunito',
+            fontSize: 13,
+            fontWeight: FontWeight.w800,
+            color: Color(0xFF7BFFB2),
+          ),
+        ),
       ),
     );
   }

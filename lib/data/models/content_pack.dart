@@ -1,6 +1,7 @@
 import 'dart:ui' show Color;
 
 import '../lessons.dart';
+import 'sentence.dart';
 
 /// Sběratelská odměna za dokončení jednotky (nálepka do Zvěřince).
 class CollectibleReward {
@@ -70,6 +71,7 @@ class ContentPack {
   final Map<String, String> keyboardEmoji; // overrides nad kEmoji
   final Map<String, Color> keyboardColors; // overrides nad kColors
   final List<Unit> units;
+  final SentenceCategories sentence; // data builderu vět (schéma v2)
 
   const ContentPack({
     required this.schemaVersion,
@@ -81,6 +83,7 @@ class ContentPack {
     this.keyboardEmoji = const {},
     this.keyboardColors = const {},
     required this.units,
+    this.sentence = SentenceCategories.empty,
   });
 
   List<Lesson> get allLessons => [for (final u in units) ...u.lessons];
@@ -106,6 +109,10 @@ class ContentPack {
         for (final u in json['units'] as List)
           Unit.fromJson((u as Map).cast<String, dynamic>()),
       ],
+      sentence: json['sentence'] == null
+          ? SentenceCategories.empty
+          : SentenceCategories.fromJson(
+              (json['sentence'] as Map).cast<String, dynamic>()),
     );
   }
 }

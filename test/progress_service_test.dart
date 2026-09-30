@@ -101,4 +101,29 @@ void main() {
     await ProgressService.init();
     expect(ProgressService.instance.selectedLanguage, Language.cs);
   });
+
+  group('batoh slov', () {
+    test('addWord přidá jen jednou a přežije restart', () async {
+      final p = ProgressService.instance;
+      expect(p.addWord('test-XX', 'mama'), isTrue);
+      expect(p.addWord('test-XX', 'mama'), isFalse);
+      expect(p.addWord('test-XX', ''), isFalse);
+      expect(p.wordBag('test-XX'), {'mama'});
+
+      await ProgressService.init(); // znovu načíst z SharedPreferences
+      expect(ProgressService.instance.hasWord('test-XX', 'mama'), isTrue);
+      expect(ProgressService.instance.hasWord('test-YY', 'mama'), isFalse);
+    });
+
+    test('„nové" slovo platí 24 h', () {
+      final p = ProgressService.instance;
+      final t0 = DateTime(2026, 9, 30, 8);
+      p.addWord('test-XX', 'kolo', now: t0);
+      expect(p.isNewWord('test-XX', 'kolo', now: t0.add(const Duration(hours: 23))),
+          isTrue);
+      expect(p.isNewWord('test-XX', 'kolo', now: t0.add(const Duration(hours: 24))),
+          isFalse);
+      expect(p.isNewWord('test-XX', 'les', now: t0), isFalse);
+    });
+  });
 }

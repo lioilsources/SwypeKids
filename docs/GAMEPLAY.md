@@ -70,7 +70,7 @@ kulturní variantu). Přidání jazyka = přidání JSON souboru, žádný Dart.
 
 ```json
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "cs-CZ",
   "language": "cs",
   "culture": "CZ",
@@ -93,12 +93,47 @@ kulturní variantu). Přidání jazyka = přidání JSON souboru, žádný Dart.
           "label": "MÁ-MA",
           "info": "Přejeď: 🐭 → 🍎",
           "ipa": "maː"
+        },
+        {
+          "id": "cs-u6-l1",
+          "target": "MAMA",
+          "display": "MÁMA",
+          "vocab": "mama",
+          "parentNote": "Celé slovo; dítě už zná obě slabiky."
         }
       ]
     }
-  ]
+  ],
+  "sentence": {
+    "joiner": " ",
+    "subjects": [
+      { "id": "s1", "emoji": "👶", "text": "Já", "person": "1sg", "unlockedBy": "always" },
+      { "id": "mama", "emoji": "👩", "text": "Máma", "person": "3sg", "unlockedBy": "vocab" }
+    ],
+    "verbs": [
+      { "id": "v2", "emoji": "🍽️", "text": "jím", "forms": { "3sg": "jí" }, "frame": "acc", "unlockedBy": "always" }
+    ],
+    "objects": [
+      { "id": "kolo", "emoji": "🚲", "text": "kolo", "forms": { "instr": "s kolem", "loc": "u kola", "dir": "ke kolu" }, "unlockedBy": "vocab" }
+    ]
+  }
 }
 ```
+
+### Schéma v2: batoh slov a builder vět (v2.3)
+
+- `sentence` — data módu „Skládej větu" (dřív `lib/data/sentence_builder.dart`).
+  Slovesa se časují podle `person` podmětu, předměty skloňují podle `frame`
+  slovesa (`acc` / `dir` / `loc` / `instr`) přes `forms`.
+- `unlockedBy: "always"` = dlaždice je k dispozici hned (věta jde složit od
+  začátku); `"vocab"` = objeví se, až dítě swypne lekci s `vocab == id`.
+  Do té doby je v builderu siluetka „?", 24 h po získání má štítek „NOVÉ".
+- `lesson.vocab` — id slova do batohu. Jen celá slova (target > 2 písmena),
+  slabiky do batohu nepatří.
+- `lesson.parentNote` — jedna věta pro rodiče (zobrazí rodičovský koutek, v3.1).
+- Validace (`test/pack_loading_test.dart`): každé `vocab` má vocab dlaždici,
+  každou vocab dlaždici odemyká aspoň jedna lekce, id dlaždic jsou unikátní,
+  každá kategorie má aspoň jednu `always` dlaždici.
 
 Zásady:
 

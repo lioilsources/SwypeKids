@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "pt-BR",
   "language": "pt",
   "culture": "BR",
@@ -287,5 +287,192 @@
         }
       ]
     }
-  ]
+  ],
+  "sentence": {
+    "joiner": " ",
+    "subjects": [
+      {
+        "id": "s1",
+        "emoji": "👶",
+        "text": "Eu",
+        "unlockedBy": "always",
+        "person": "1sg"
+      },
+      {
+        "id": "s2",
+        "emoji": "👩",
+        "text": "Mamãe",
+        "unlockedBy": "always",
+        "person": "3sg"
+      },
+      {
+        "id": "s3",
+        "emoji": "👨",
+        "text": "Papai",
+        "unlockedBy": "always",
+        "person": "3sg"
+      },
+      {
+        "id": "s4",
+        "emoji": "👵",
+        "text": "Vovó",
+        "unlockedBy": "always",
+        "person": "3sg"
+      },
+      {
+        "id": "s5",
+        "emoji": "🐶",
+        "text": "Cachorrinho",
+        "unlockedBy": "always",
+        "person": "3sg"
+      }
+    ],
+    "verbs": [
+      {
+        "id": "v1",
+        "emoji": "✋",
+        "text": "quero",
+        "unlockedBy": "always",
+        "frame": "acc",
+        "forms": {
+          "3sg": "quer"
+        }
+      },
+      {
+        "id": "v2",
+        "emoji": "🍽️",
+        "text": "como",
+        "unlockedBy": "always",
+        "frame": "acc",
+        "forms": {
+          "3sg": "come"
+        }
+      },
+      {
+        "id": "v3",
+        "emoji": "🥛",
+        "text": "bebo",
+        "unlockedBy": "always",
+        "frame": "acc",
+        "forms": {
+          "3sg": "bebe"
+        }
+      },
+      {
+        "id": "v4",
+        "emoji": "💤",
+        "text": "durmo",
+        "unlockedBy": "always",
+        "frame": "loc",
+        "forms": {
+          "3sg": "dorme"
+        }
+      },
+      {
+        "id": "v5",
+        "emoji": "🚶",
+        "text": "vou",
+        "unlockedBy": "always",
+        "frame": "dir",
+        "forms": {
+          "3sg": "vai"
+        }
+      },
+      {
+        "id": "v6",
+        "emoji": "🎲",
+        "text": "brinco",
+        "unlockedBy": "always",
+        "frame": "instr",
+        "forms": {
+          "3sg": "brinca"
+        }
+      }
+    ],
+    "objects": [
+      {
+        "id": "o1",
+        "emoji": "🥛",
+        "text": "leite",
+        "unlockedBy": "always",
+        "forms": {
+          "instr": "com leite"
+        }
+      },
+      {
+        "id": "o2",
+        "emoji": "🍎",
+        "text": "uma maçã",
+        "unlockedBy": "always",
+        "forms": {
+          "instr": "com uma maçã"
+        }
+      },
+      {
+        "id": "o3",
+        "emoji": "🧸",
+        "text": "um brinquedo",
+        "unlockedBy": "always",
+        "forms": {
+          "instr": "com um brinquedo",
+          "loc": "com um brinquedo"
+        }
+      },
+      {
+        "id": "o4",
+        "emoji": "🚗",
+        "text": "o carro",
+        "unlockedBy": "always",
+        "forms": {
+          "dir": "de carro",
+          "loc": "no carro",
+          "instr": "com o carro"
+        }
+      },
+      {
+        "id": "o5",
+        "emoji": "🚪",
+        "text": "fora",
+        "unlockedBy": "always",
+        "forms": {
+          "dir": "para fora",
+          "loc": "lá fora",
+          "instr": "lá fora"
+        }
+      },
+      {
+        "id": "o6",
+        "emoji": "🏠",
+        "text": "casa",
+        "unlockedBy": "always",
+        "forms": {
+          "dir": "para casa",
+          "loc": "em casa",
+          "instr": "em casa"
+        }
+      },
+      {
+        "id": "o7",
+        "emoji": "🛏️",
+        "text": "a cama",
+        "unlockedBy": "always",
+        "forms": {
+          "dir": "para a cama",
+          "loc": "na cama",
+          "instr": "na cama"
+        }
+      },
+      {
+        "id": "o8",
+        "emoji": "🚽",
+        "text": "o peniquinho",
+        "unlockedBy": "always",
+        "forms": {
+          "dir": "no peniquinho",
+          "loc": "no peniquinho",
+          "instr": "no peniquinho"
+        }
+      }
+    ]
+  }
 }

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "en-US",
   "language": "en",
   "culture": "US",
@@ -98,7 +98,8 @@
           "hint": "👨",
           "label": "DAD",
           "info": "New: ☂️ U, 🥁 D",
-          "ipa": "dæd"
+          "ipa": "dæd",
+          "vocab": "dad"
         },
         {
           "id": "en-u2-l2",
@@ -113,7 +114,8 @@
           "display": "MUM",
           "hint": "👩",
           "label": "MUM",
-          "ipa": "mʌm"
+          "ipa": "mʌm",
+          "vocab": "mum"
         },
         {
           "id": "en-u2-l3",
@@ -188,7 +190,8 @@
           "display": "MUM",
           "hint": "👩",
           "label": "MUM",
-          "ipa": "mʌm"
+          "ipa": "mʌm",
+          "vocab": "mum"
         },
         {
           "id": "en-u3-l3",
@@ -293,7 +296,8 @@
           "display": "DAD",
           "hint": "👨",
           "label": "DAD",
-          "ipa": "dæd"
+          "ipa": "dæd",
+          "vocab": "dad"
         },
         {
           "id": "en-u4-l5",
@@ -365,7 +369,8 @@
           "hint": "🐕",
           "label": "DOG",
           "info": "New: 🍊 O, 🦒 G",
-          "ipa": "dɒɡ"
+          "ipa": "dɒɡ",
+          "vocab": "dog"
         },
         {
           "id": "en-u5-l2",
@@ -386,7 +391,8 @@
           "display": "PIG",
           "hint": "🐷",
           "label": "PIG",
-          "ipa": "pɪɡ"
+          "ipa": "pɪɡ",
+          "vocab": "pig"
         },
         {
           "id": "en-u5-l3",
@@ -407,7 +413,8 @@
           "display": "POT",
           "hint": "🍲",
           "label": "POT",
-          "ipa": "pɒt"
+          "ipa": "pɒt",
+          "vocab": "pot"
         },
         {
           "id": "en-u5-l4",
@@ -484,7 +491,8 @@
           "hint": "🐱",
           "label": "CAT",
           "info": "New: 🐱 C",
-          "ipa": "kæt"
+          "ipa": "kæt",
+          "vocab": "cat"
         },
         {
           "id": "en-u6-l2",
@@ -506,7 +514,8 @@
           "display": "CUP",
           "hint": "☕",
           "label": "CUP",
-          "ipa": "kʌp"
+          "ipa": "kʌp",
+          "vocab": "cup"
         },
         {
           "id": "en-u6-l3",
@@ -550,7 +559,8 @@
           "display": "COT",
           "hint": "🛏️",
           "label": "COT",
-          "ipa": "kɒt"
+          "ipa": "kɒt",
+          "vocab": "cot"
         },
         {
           "id": "en-u6-l5",
@@ -573,9 +583,255 @@
           "hint": "🧢",
           "label": "CAP",
           "ipa": "kæp",
-          "review": true
+          "review": true,
+          "vocab": "cap"
         }
       ]
     }
-  ]
+  ],
+  "sentence": {
+    "joiner": " ",
+    "subjects": [
+      {
+        "id": "s1",
+        "emoji": "👶",
+        "text": "I",
+        "unlockedBy": "always",
+        "person": "1sg"
+      },
+      {
+        "id": "mum",
+        "emoji": "👩",
+        "text": "Mum",
+        "unlockedBy": "vocab",
+        "person": "3sg"
+      },
+      {
+        "id": "dad",
+        "emoji": "👨",
+        "text": "Dad",
+        "unlockedBy": "vocab",
+        "person": "3sg"
+      },
+      {
+        "id": "s4",
+        "emoji": "👵",
+        "text": "Granny",
+        "unlockedBy": "always",
+        "person": "3sg"
+      },
+      {
+        "id": "dog",
+        "emoji": "🐶",
+        "text": "Dog",
+        "unlockedBy": "vocab",
+        "person": "3sg"
+      },
+      {
+        "id": "cat",
+        "emoji": "🐱",
+        "text": "Cat",
+        "unlockedBy": "vocab",
+        "person": "3sg"
+      },
+      {
+        "id": "pig",
+        "emoji": "🐷",
+        "text": "Pig",
+        "unlockedBy": "vocab",
+        "person": "3sg"
+      }
+    ],
+    "verbs": [
+      {
+        "id": "v1",
+        "emoji": "✋",
+        "text": "want",
+        "unlockedBy": "always",
+        "frame": "acc",
+        "forms": {
+          "3sg": "wants"
+        }
+      },
+      {
+        "id": "v2",
+        "emoji": "🍽️",
+        "text": "eat",
+        "unlockedBy": "always",
+        "frame": "acc",
+        "forms": {
+          "3sg": "eats"
+        }
+      },
+      {
+        "id": "v3",
+        "emoji": "🥛",
+        "text": "drink",
+        "unlockedBy": "always",
+        "frame": "acc",
+        "forms": {
+          "3sg": "drinks"
+        }
+      },
+      {
+        "id": "v4",
+        "emoji": "💤",
+        "text": "sleep",
+        "unlockedBy": "always",
+        "frame": "loc",
+        "forms": {
+          "3sg": "sleeps"
+        }
+      },
+      {
+        "id": "v5",
+        "emoji": "🚶",
+        "text": "go",
+        "unlockedBy": "always",
+        "frame": "dir",
+        "forms": {
+          "3sg": "goes"
+        }
+      },
+      {
+        "id": "v6",
+        "emoji": "🎲",
+        "text": "play",
+        "unlockedBy": "always",
+        "frame": "instr",
+        "forms": {
+          "3sg": "plays"
+        }
+      }
+    ],
+    "objects": [
+      {
+        "id": "o1",
+        "emoji": "🥛",
+        "text": "milk",
+        "unlockedBy": "always",
+        "forms": {
+          "instr": "with milk"
+        }
+      },
+      {
+        "id": "o2",
+        "emoji": "🍎",
+        "text": "an apple",
+        "unlockedBy": "always",
+        "forms": {
+          "instr": "with an apple"
+        }
+      },
+      {
+        "id": "o3",
+        "emoji": "🧸",
+        "text": "a toy",
+        "unlockedBy": "always",
+        "forms": {
+          "instr": "with a toy",
+          "loc": "with a toy"
+        }
+      },
+      {
+        "id": "o4",
+        "emoji": "🚗",
+        "text": "the car",
+        "unlockedBy": "always",
+        "forms": {
+          "dir": "in the car",
+          "loc": "in the car",
+          "instr": "with the car"
+        }
+      },
+      {
+        "id": "o5",
+        "emoji": "🚪",
+        "text": "outside",
+        "unlockedBy": "always",
+        "forms": {
+          "dir": "outside",
+          "loc": "outside",
+          "instr": "outside"
+        }
+      },
+      {
+        "id": "o6",
+        "emoji": "🏠",
+        "text": "home",
+        "unlockedBy": "always",
+        "forms": {
+          "dir": "home",
+          "loc": "at home",
+          "instr": "at home"
+        }
+      },
+      {
+        "id": "o7",
+        "emoji": "🛏️",
+        "text": "the bed",
+        "unlockedBy": "always",
+        "forms": {
+          "dir": "to bed",
+          "loc": "in bed",
+          "instr": "in bed"
+        }
+      },
+      {
+        "id": "o8",
+        "emoji": "🚽",
+        "text": "the potty",
+        "unlockedBy": "always",
+        "forms": {
+          "dir": "to the potty",
+          "loc": "on the potty",
+          "instr": "on the potty"
+        }
+      },
+      {
+        "id": "cup",
+        "emoji": "☕",
+        "text": "a cup",
+        "unlockedBy": "vocab",
+        "forms": {
+          "instr": "with my cup",
+          "loc": "by my cup",
+          "dir": "to my cup"
+        }
+      },
+      {
+        "id": "cap",
+        "emoji": "🧢",
+        "text": "a cap",
+        "unlockedBy": "vocab",
+        "forms": {
+          "instr": "with my cap",
+          "loc": "in my cap",
+          "dir": "for my cap"
+        }
+      },
+      {
+        "id": "pot",
+        "emoji": "🍲",
+        "text": "a pot",
+        "unlockedBy": "vocab",
+        "forms": {
+          "instr": "with a pot",
+          "loc": "by the pot",
+          "dir": "to the pot"
+        }
+      },
+      {
+        "id": "cot",
+        "emoji": "🛏️",
+        "text": "the cot",
+        "unlockedBy": "vocab",
+        "forms": {
+          "instr": "in my cot",
+          "loc": "in my cot",
+          "dir": "to my cot"
+        }
+      }
+    ]
+  }
 }

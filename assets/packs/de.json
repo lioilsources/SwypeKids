@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "de-DE",
   "language": "de",
   "culture": "DE",
@@ -551,5 +551,192 @@
         }
       ]
     }
-  ]
+  ],
+  "sentence": {
+    "joiner": " ",
+    "subjects": [
+      {
+        "id": "s1",
+        "emoji": "👶",
+        "text": "Ich",
+        "unlockedBy": "always",
+        "person": "1sg"
+      },
+      {
+        "id": "s2",
+        "emoji": "👩",
+        "text": "Mama",
+        "unlockedBy": "always",
+        "person": "3sg"
+      },
+      {
+        "id": "s3",
+        "emoji": "👨",
+        "text": "Papa",
+        "unlockedBy": "always",
+        "person": "3sg"
+      },
+      {
+        "id": "s4",
+        "emoji": "👵",
+        "text": "Oma",
+        "unlockedBy": "always",
+        "person": "3sg"
+      },
+      {
+        "id": "s5",
+        "emoji": "🐶",
+        "text": "Wauwau",
+        "unlockedBy": "always",
+        "person": "3sg"
+      }
+    ],
+    "verbs": [
+      {
+        "id": "v1",
+        "emoji": "✋",
+        "text": "will",
+        "unlockedBy": "always",
+        "frame": "acc",
+        "forms": {
+          "3sg": "will"
+        }
+      },
+      {
+        "id": "v2",
+        "emoji": "🍽️",
+        "text": "esse",
+        "unlockedBy": "always",
+        "frame": "acc",
+        "forms": {
+          "3sg": "isst"
+        }
+      },
+      {
+        "id": "v3",
+        "emoji": "🥛",
+        "text": "trinke",
+        "unlockedBy": "always",
+        "frame": "acc",
+        "forms": {
+          "3sg": "trinkt"
+        }
+      },
+      {
+        "id": "v4",
+        "emoji": "💤",
+        "text": "schlafe",
+        "unlockedBy": "always",
+        "frame": "loc",
+        "forms": {
+          "3sg": "schläft"
+        }
+      },
+      {
+        "id": "v5",
+        "emoji": "🚶",
+        "text": "gehe",
+        "unlockedBy": "always",
+        "frame": "dir",
+        "forms": {
+          "3sg": "geht"
+        }
+      },
+      {
+        "id": "v6",
+        "emoji": "🎲",
+        "text": "spiele",
+        "unlockedBy": "always",
+        "frame": "instr",
+        "forms": {
+          "3sg": "spielt"
+        }
+      }
+    ],
+    "objects": [
+      {
+        "id": "o1",
+        "emoji": "🥛",
+        "text": "Milch",
+        "unlockedBy": "always",
+        "forms": {
+          "instr": "mit Milch"
+        }
+      },
+      {
+        "id": "o2",
+        "emoji": "🍎",
+        "text": "einen Apfel",
+        "unlockedBy": "always",
+        "forms": {
+          "instr": "mit einem Apfel"
+        }
+      },
+      {
+        "id": "o3",
+        "emoji": "🧸",
+        "text": "ein Spielzeug",
+        "unlockedBy": "always",
+        "forms": {
+          "instr": "mit einem Spielzeug",
+          "loc": "beim Spielzeug"
+        }
+      },
+      {
+        "id": "o4",
+        "emoji": "🚗",
+        "text": "das Auto",
+        "unlockedBy": "always",
+        "forms": {
+          "dir": "ins Auto",
+          "loc": "im Auto",
+          "instr": "mit dem Auto"
+        }
+      },
+      {
+        "id": "o5",
+        "emoji": "🚪",
+        "text": "raus",
+        "unlockedBy": "always",
+        "forms": {
+          "dir": "raus",
+          "loc": "draußen",
+          "instr": "draußen"
+        }
+      },
+      {
+        "id": "o6",
+        "emoji": "🏠",
+        "text": "heim",
+        "unlockedBy": "always",
+        "forms": {
+          "dir": "heim",
+          "loc": "zu Hause",
+          "instr": "zu Hause"
+        }
+      },
+      {
+        "id": "o7",
+        "emoji": "🛏️",
+        "text": "das Bett",
+        "unlockedBy": "always",
+        "forms": {
+          "dir": "ins Bett",
+          "loc": "im Bett",
+          "instr": "im Bett"
+        }
+      },
+      {
+        "id": "o8",
+        "emoji": "🚽",
+        "text": "das Töpfchen",
+        "unlockedBy": "always",
+        "forms": {
+          "dir": "aufs Töpfchen",
+          "loc": "auf dem Töpfchen",
+          "instr": "auf dem Töpfchen"
+        }
+      }
+    ]
+  }
 }

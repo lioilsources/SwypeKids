@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "es-ES",
   "language": "es",
   "culture": "ES",
@@ -556,5 +556,192 @@
         }
       ]
     }
-  ]
+  ],
+  "sentence": {
+    "joiner": " ",
+    "subjects": [
+      {
+        "id": "s1",
+        "emoji": "👶",
+        "text": "Yo",
+        "unlockedBy": "always",
+        "person": "1sg"
+      },
+      {
+        "id": "s2",
+        "emoji": "👩",
+        "text": "Mamá",
+        "unlockedBy": "always",
+        "person": "3sg"
+      },
+      {
+        "id": "s3",
+        "emoji": "👨",
+        "text": "Papá",
+        "unlockedBy": "always",
+        "person": "3sg"
+      },
+      {
+        "id": "s4",
+        "emoji": "👵",
+        "text": "Abuela",
+        "unlockedBy": "always",
+        "person": "3sg"
+      },
+      {
+        "id": "s5",
+        "emoji": "🐶",
+        "text": "Perrito",
+        "unlockedBy": "always",
+        "person": "3sg"
+      }
+    ],
+    "verbs": [
+      {
+        "id": "v1",
+        "emoji": "✋",
+        "text": "quiero",
+        "unlockedBy": "always",
+        "frame": "acc",
+        "forms": {
+          "3sg": "quiere"
+        }
+      },
+      {
+        "id": "v2",
+        "emoji": "🍽️",
+        "text": "como",
+        "unlockedBy": "always",
+        "frame": "acc",
+        "forms": {
+          "3sg": "come"
+        }
+      },
+      {
+        "id": "v3",
+        "emoji": "🥛",
+        "text": "bebo",
+        "unlockedBy": "always",
+        "frame": "acc",
+        "forms": {
+          "3sg": "bebe"
+        }
+      },
+      {
+        "id": "v4",
+        "emoji": "💤",
+        "text": "duermo",
+        "unlockedBy": "always",
+        "frame": "loc",
+        "forms": {
+          "3sg": "duerme"
+        }
+      },
+      {
+        "id": "v5",
+        "emoji": "🚶",
+        "text": "voy",
+        "unlockedBy": "always",
+        "frame": "dir",
+        "forms": {
+          "3sg": "va"
+        }
+      },
+      {
+        "id": "v6",
+        "emoji": "🎲",
+        "text": "juego",
+        "unlockedBy": "always",
+        "frame": "instr",
+        "forms": {
+          "3sg": "juega"
+        }
+      }
+    ],
+    "objects": [
+      {
+        "id": "o1",
+        "emoji": "🥛",
+        "text": "leche",
+        "unlockedBy": "always",
+        "forms": {
+          "instr": "con leche"
+        }
+      },
+      {
+        "id": "o2",
+        "emoji": "🍎",
+        "text": "una manzana",
+        "unlockedBy": "always",
+        "forms": {
+          "instr": "con una manzana"
+        }
+      },
+      {
+        "id": "o3",
+        "emoji": "🧸",
+        "text": "un juguete",
+        "unlockedBy": "always",
+        "forms": {
+          "instr": "con un juguete",
+          "loc": "con un juguete"
+        }
+      },
+      {
+        "id": "o4",
+        "emoji": "🚗",
+        "text": "el coche",
+        "unlockedBy": "always",
+        "forms": {
+          "dir": "en coche",
+          "loc": "en el coche",
+          "instr": "con el coche"
+        }
+      },
+      {
+        "id": "o5",
+        "emoji": "🚪",
+        "text": "fuera",
+        "unlockedBy": "always",
+        "forms": {
+          "dir": "fuera",
+          "loc": "fuera",
+          "instr": "fuera"
+        }
+      },
+      {
+        "id": "o6",
+        "emoji": "🏠",
+        "text": "casa",
+        "unlockedBy": "always",
+        "forms": {
+          "dir": "a casa",
+          "loc": "en casa",
+          "instr": "en casa"
+        }
+      },
+      {
+        "id": "o7",
+        "emoji": "🛏️",
+        "text": "la cama",
+        "unlockedBy": "always",
+        "forms": {
+          "dir": "a la cama",
+          "loc": "en la cama",
+          "instr": "en la cama"
+        }
+      },
+      {
+        "id": "o8",
+        "emoji": "🚽",
+        "text": "el baño",
+        "unlockedBy": "always",
+        "forms": {
+          "dir": "al baño",
+          "loc": "en el baño",
+          "instr": "en el baño"
+        }
+      }
+    ]
+  }
 }
