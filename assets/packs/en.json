@@ -459,7 +459,7 @@
         },
         {
           "id": "en-u5-l5",
-          "type": "swype",
+          "type": "reviewMix",
           "unlocked": [
             "M",
             "A",
@@ -478,7 +478,7 @@
           "label": "TOP",
           "ipa": "tɒp",
           "review": true,
-          "parentNote": "TOP — review; TOP and POT use the same letters in a different order."
+          "parentNote": "Review: the game picks the word your child finds hardest so far, based on earlier mistakes."
         }
       ]
     },

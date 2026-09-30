@@ -13,6 +13,45 @@ import '../widgets/star_celebration.dart';
 import 'unit_complete_screen.dart';
 import 'win_screen.dart';
 
+/// reviewMix → konkrétní lekce: nejslabší dříve naučené slovo, jehož písmena
+/// jsou mezi `unlocked`. Id a `unlocked` zůstávají z reviewMix lekce (postup
+/// na mapě se píše k ní). Když nic nepasuje, hraje se vlastní target.
+Lesson resolveReviewMix(ContentPack pack, Lesson lesson) {
+  if (lesson.type != LessonType.reviewMix) return lesson;
+  final allowed = lesson.unlocked.toSet();
+  final source = ProgressService.instance
+      .weakestLearned(pack)
+      .where((l) => allowed.containsAll(l.target.split('')))
+      .firstOrNull;
+  if (source == null) {
+    return Lesson(
+      id: lesson.id,
+      unlocked: lesson.unlocked,
+      target: lesson.target,
+      display: lesson.display,
+      hint: lesson.hint,
+      label: lesson.label,
+      vocab: lesson.vocab,
+      parentNote: lesson.parentNote,
+    );
+  }
+  return Lesson(
+    id: lesson.id,
+    type: source.type,
+    unlocked: lesson.unlocked,
+    target: source.target,
+    display: source.display,
+    hint: source.hint,
+    label: source.label,
+    info: source.info,
+    ipa: source.ipa,
+    pinyin: source.pinyin,
+    vocab: source.vocab,
+    gap: source.gap,
+    parentNote: lesson.parentNote,
+  );
+}
+
 /// Hraje jednu jednotku packu od [startLessonIndex] do konce.
 /// Po dokončení jednotky uloží nálepku a přejde na UnitCompleteScreen
 /// (resp. WinScreen, pokud je hotový celý pack).
@@ -21,11 +60,16 @@ class GameScreen extends StatefulWidget {
   final int unitIndex;
   final int startLessonIndex;
 
+  /// Procvičování: hraje tyto lekce místo jednotky packu. Nezapisuje
+  /// dokončení ani nálepku — jen sílu slov a batoh.
+  final Unit? practice;
+
   const GameScreen({
     super.key,
     required this.pack,
     required this.unitIndex,
     this.startLessonIndex = 0,
+    this.practice,
   });
 
   @override
@@ -54,9 +98,15 @@ class _GameScreenState extends State<GameScreen>
 
   List<String> _prevUnlocked = [];
 
-  Unit get _unit => widget.pack.units[widget.unitIndex];
+  Unit get _unit => widget.practice ?? widget.pack.units[widget.unitIndex];
+  bool get _isPractice => widget.practice != null;
   List<Lesson> get _lessons => _unit.lessons;
-  Lesson get _lesson => _lessons[_idx];
+  Lesson get _lesson => _lessonAt(_idx);
+
+  // reviewMix se rozhodne jednou, při prvním použití lekce.
+  final Map<int, Lesson> _resolved = {};
+  Lesson _lessonAt(int i) =>
+      _resolved[i] ??= resolveReviewMix(widget.pack, _lessons[i]);
   Language get _language => widget.pack.language;
 
   String _emojiFor(String letter) =>
@@ -114,7 +164,10 @@ class _GameScreenState extends State<GameScreen>
     if (result == _lesson.target) {
       final stars = _attempts == 1 ? 3 : (_attempts == 2 ? 2 : 1);
       final progress = ProgressService.instance;
-      progress.markCompleted(widget.pack.id, _lesson.id, stars);
+      if (!_isPractice) {
+        progress.markCompleted(widget.pack.id, _lesson.id, stars);
+      }
+      progress.recordAttempt(widget.pack.id, _lesson.target, success: true);
       final gotWord = progress.addWord(widget.pack.id, _lesson.vocab);
       HapticFeedback.mediumImpact();
       AudioService.instance.play(Sfx.success);
@@ -128,6 +181,8 @@ class _GameScreenState extends State<GameScreen>
     } else {
       HapticFeedback.vibrate();
       AudioService.instance.play(Sfx.error);
+      ProgressService.instance
+          .recordAttempt(widget.pack.id, _lesson.target, success: false);
       setState(() {
         _status = GameStatus.error;
         _shake = true;
@@ -151,7 +206,7 @@ class _GameScreenState extends State<GameScreen>
     if (!mounted) return;
     final nextIdx = _idx + 1;
     if (nextIdx < _lessons.length) {
-      final curr = _lessons[nextIdx].unlocked;
+      final curr = _lessonAt(nextIdx).unlocked;
       final added = curr.where((l) => !_prevUnlocked.contains(l)).toList();
       setState(() {
         _idx = nextIdx;
@@ -173,6 +228,11 @@ class _GameScreenState extends State<GameScreen>
   }
 
   void _finishUnit() {
+    if (_isPractice) {
+      // Procvičování nemá nálepku; oslava proběhla po každém kole.
+      Navigator.of(context).pop(_sessionStars);
+      return;
+    }
     final progress = ProgressService.instance;
     progress.addCollectible(widget.pack.id, _unit.reward.emoji);
     AudioService.instance.play(Sfx.sticker);
@@ -211,7 +271,7 @@ class _GameScreenState extends State<GameScreen>
             LessonType.listen => CardMode.listen,
             LessonType.pictureOnly => CardMode.picture,
             LessonType.missingLetter => CardMode.gap,
-            LessonType.swype => CardMode.full,
+            LessonType.swype || LessonType.reviewMix => CardMode.full,
           };
 
     return Scaffold(
@@ -248,6 +308,7 @@ class _GameScreenState extends State<GameScreen>
                       LessonType.listen => '🔊 POSLECH',
                       LessonType.pictureOnly => '🖼️ OBRÁZEK',
                       LessonType.missingLetter => '🧩 DOPLŇ',
+                      LessonType.reviewMix => '🔁 OPAKOVÁNÍ',
                       LessonType.swype => isWord ? '🔤 SLOVO' : '🔡 SLABIKA',
                     }),
                     const Spacer(),

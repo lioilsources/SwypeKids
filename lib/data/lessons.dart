@@ -14,6 +14,10 @@ enum LessonType {
 
   /// Jen obrázek, žádný text — aktivní vybavení slova.
   pictureOnly,
+
+  /// Opakování: za běhu se nahradí nejslabším dříve naučeným slovem, jehož
+  /// písmena jsou v `unlocked`. Vlastní `target` je záloha.
+  reviewMix,
 }
 
 class Lesson {

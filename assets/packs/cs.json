@@ -597,7 +597,7 @@
         },
         {
           "id": "cs-u7-l5",
-          "type": "listen",
+          "type": "reviewMix",
           "unlocked": [
             "M",
             "A",
@@ -618,7 +618,7 @@
           "ipa": "lɛs",
           "review": true,
           "vocab": "les",
-          "parentNote": "Poslech LES — dítě samo rozloží slyšené slovo na hlásky."
+          "parentNote": "Opakování: hra vybere slovo, které dítěti zatím jde nejméně — podle toho, kde chybovalo."
         }
       ]
     }

@@ -128,6 +128,46 @@ class ProgressService {
     return age < newWordWindow;
   }
 
+  // ── Síla slov (spaced repetition lite) ─────────────────────────────────────
+
+  static const maxStrength = 5;
+
+  /// Síla slova/slabiky (podle target) 0–5; nepotkané = 0.
+  int strengthOf(String packId, String target) =>
+      _byPack[packId]?.strength[target] ?? 0;
+
+  /// Úspěch +1, chyba −1 (v mezích 0–5).
+  void recordAttempt(String packId, String target, {required bool success}) {
+    if (target.isEmpty) return;
+    final p = _byPack.putIfAbsent(packId, () => _PackProgress());
+    final next = (strengthOf(packId, target) + (success ? 1 : -1))
+        .clamp(0, maxStrength);
+    p.strength[target] = next;
+    _save(packId);
+  }
+
+  /// Dokončené lekce (bez reviewMix), jedna na target, od nejslabší.
+  /// Při shodě síly dřívější lekce první (déle neviděná).
+  List<Lesson> weakestLearned(ContentPack pack, {int? limit}) {
+    final seen = <String>{};
+    final learned = [
+      for (final l in pack.allLessons)
+        if (l.type != LessonType.reviewMix &&
+            isCompleted(pack.id, l.id) &&
+            seen.add(l.target))
+          l,
+    ];
+    final order = {for (final (i, l) in learned.indexed) l.target: i};
+    learned.sort((a, b) {
+      final byStrength =
+          strengthOf(pack.id, a.target).compareTo(strengthOf(pack.id, b.target));
+      return byStrength != 0
+          ? byStrength
+          : order[a.target]!.compareTo(order[b.target]!);
+    });
+    return limit == null ? learned : learned.take(limit).toList();
+  }
+
   // ── Navigace v packu ───────────────────────────────────────────────────────
 
   /// Index (unit, lesson) první nedokončené lekce; null = celý pack hotový.
@@ -161,14 +201,17 @@ class _PackProgress {
   final Map<String, int> completed; // lessonId → max hvězdy (1–3)
   final List<String> collectibles;  // emoji nálepek v pořadí získání
   final Map<String, int> words;     // batoh: vocab id → kdy poprvé (ms epoch)
+  final Map<String, int> strength;  // target → síla 0–5
 
   _PackProgress({
     Map<String, int>? completed,
     List<String>? collectibles,
     Map<String, int>? words,
+    Map<String, int>? strength,
   })  : completed = completed ?? {},
         collectibles = collectibles ?? [],
-        words = words ?? {};
+        words = words ?? {},
+        strength = strength ?? {};
 
   factory _PackProgress.fromJson(Map<String, dynamic> json) => _PackProgress(
         completed: ((json['completed'] as Map?) ?? const {})
@@ -177,6 +220,8 @@ class _PackProgress {
             ((json['collectibles'] as List?) ?? const []).cast<String>(),
         words: ((json['words'] as Map?) ?? const {})
             .map((k, v) => MapEntry(k as String, v as int)),
+        strength: ((json['strength'] as Map?) ?? const {})
+            .map((k, v) => MapEntry(k as String, v as int)),
       );
 
   Map<String, dynamic> toJson() => {
@@ -184,5 +229,6 @@ class _PackProgress {
         'completed': completed,
         'collectibles': collectibles,
         'words': words,
+        'strength': strength,
       };
 }
