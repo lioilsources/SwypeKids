@@ -1,5 +1,9 @@
 # Changelog
 
+## [30/09/2026] — v2.2.1
+- Linux release: ALSA závislost pro zvuky, ruční spuštění workflow
+- Obsah jen z JSON packů (smazané Dart lekce) — příprava na v2.3
+
 ## [30/09/2026] — v2.2.0 „Živá klávesnice"
 - Zvuky: xylofonový tón pro každé písmeno při swype (pentatonika), fanfára, měkká chyba, cinknutí hvězd, nálepka, tap (flutter_soloud; dočasné syntetizované sfx)
 - Přepínač zvuků v menu
