@@ -128,6 +128,11 @@ kulturní variantu). Přidání jazyka = přidání JSON souboru, žádný Dart.
 - `unlockedBy: "always"` = dlaždice je k dispozici hned (věta jde složit od
   začátku); `"vocab"` = objeví se, až dítě swypne lekci s `vocab == id`.
   Do té doby je v builderu siluetka „?", 24 h po získání má štítek „NOVÉ".
+- **Slovo do věty** (wordToSentence): když správný swype přidá nové slovo do
+  batohu a slovo má vocab dlaždici, po oslavě se otevře malý builder
+  (`WordSentenceScreen`) se slovem předvyplněným. Dítě doplní zbylé dvě části
+  (max. 4 možnosti, slova z batohu první), trumpeta větu přečte. Automaticky,
+  bez zápisu v packu; vždy jde přeskočit ✕.
 - `lesson.vocab` — id slova do batohu. Jen celá slova (target > 2 písmena),
   slabiky do batohu nepatří.
 - `lesson.parentNote` — jedna věta pro rodiče v jazyce packu; zatím se ukáže

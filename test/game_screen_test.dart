@@ -3,7 +3,9 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:swype_kids/data/lessons.dart';
 import 'package:swype_kids/data/models/content_pack.dart';
+import 'package:swype_kids/data/models/sentence.dart';
 import 'package:swype_kids/screens/game_screen.dart';
+import 'package:swype_kids/screens/word_sentence_screen.dart';
 import 'package:swype_kids/services/progress_service.dart';
 import 'package:swype_kids/widgets/key_widget.dart';
 import 'package:swype_kids/widgets/star_celebration.dart';
@@ -179,6 +181,45 @@ void main() {
     await tester.pump(const Duration(milliseconds: 500));
     expect(find.text('mapa'), findsOneWidget); // zpět na mapě
     expect(ProgressService.instance.collectibles(_pack.id), isEmpty);
+    await tester.pump(const Duration(seconds: 3));
+  });
+
+  testWidgets('nové slovo s dlaždicí → po oslavě slovo do věty, přeskočit → další lekce',
+      (tester) async {
+    tester.view.physicalSize = const Size(1200, 900);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.reset);
+    final pack = ContentPack(
+      schemaVersion: 2,
+      id: 'test-sentence',
+      language: Language.cs,
+      units: _pack.units,
+      sentence: const SentenceCategories(
+        subjects: [
+          SentencePart(id: 's1', emoji: '👶', text: 'Já', person: '1sg'),
+        ],
+        verbs: [SentencePart(id: 'v1', emoji: '🍽️', text: 'jím', frame: 'acc')],
+        objects: [
+          SentencePart(
+              id: 'ma', emoji: '🐭', text: 'ma', unlockedBy: TileUnlock.vocab),
+        ],
+      ),
+    );
+
+    await tester.pumpWidget(MaterialApp(
+      home: GameScreen(pack: pack, unitIndex: 0),
+    ));
+    await _swype(tester, ['M', 'A']);
+    await tester.pump(const Duration(milliseconds: 1700));
+    await tester.pump(const Duration(milliseconds: 400));
+    expect(find.byType(WordSentenceScreen), findsOneWidget);
+
+    expect(find.byKey(const ValueKey('skip')), findsOneWidget);
+    await tester.tap(find.byKey(const ValueKey('skip')));
+    await tester.pump();
+    await tester.pump(const Duration(seconds: 1)); // animace zavření routy
+    expect(find.byType(WordSentenceScreen), findsNothing);
+    expect(find.text('👩 2/2'), findsOneWidget);
     await tester.pump(const Duration(seconds: 3));
   });
 }

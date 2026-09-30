@@ -104,3 +104,42 @@ class SentenceCategories {
     );
   }
 }
+
+/// Věta z vybraných dlaždic: sloveso se časuje podle osoby podmětu, předmět
+/// skloňuje podle rámce slovesa. Chybějící části se vynechají.
+class ComposedSentence {
+  final SentencePart? subject;
+  final SentencePart? verb;
+  final SentencePart? object;
+  final String joiner;
+
+  const ComposedSentence({
+    this.subject,
+    this.verb,
+    this.object,
+    this.joiner = ' ',
+  });
+
+  String? get subjectText => subject?.text;
+
+  String? get verbText {
+    final v = verb;
+    if (v == null) return null;
+    final person = subject?.person;
+    return person != null ? v.formFor(person) : v.text;
+  }
+
+  String? get objectText {
+    final o = object;
+    if (o == null) return null;
+    final frame = verb?.frame;
+    return frame != null ? o.formFor(frame) : o.text;
+  }
+
+  bool get isEmpty => subject == null && verb == null && object == null;
+  bool get isComplete => subject != null && verb != null && object != null;
+
+  String get text => [subjectText, verbText, objectText]
+      .whereType<String>()
+      .join(joiner);
+}
