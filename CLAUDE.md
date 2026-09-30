@@ -2,7 +2,7 @@
 
 ## Overview
 
-Flutter educational game for children aged 5–9. Teaches letters and syllables by swiping across a QWERTY keyboard with emoji. Duolingo-inspired progression: a lesson map with units, 1–3 stars per lesson, collectible emoji stickers per unit ("Zvěřinec"), persisted progress. Content is data-driven: one JSON content pack per language in `assets/packs/`. Gameplay & content-model design doc: `docs/GAMEPLAY.md`.
+Flutter educational game for children aged 5–9. Teaches letters and syllables by swiping across a QWERTY keyboard with emoji. Duolingo-inspired progression: a lesson map with units, 1–3 stars per lesson, collectible emoji stickers per unit ("Zvěřinec"), persisted progress. Content is data-driven: one JSON content pack per language in `assets/packs/`. Gameplay & content-model design doc: `docs/GAMEPLAY.md`. Product roadmap (v2.2 → v4.0): `docs/ROADMAP.md`.
 
 ## Commands
 
@@ -16,6 +16,7 @@ flutter build ios
 flutter analyze
 flutter test                                # pack validation + progress tests
 dart run tool/export_lessons_to_json.dart   # regenerate JSON packs from Dart lessons (overwrites manual JSON edits)
+dart run tool/generate_sfx.dart             # regenerate placeholder sfx (assets/audio/) — synthesized, no licences
 ```
 
 ## Architecture
@@ -24,6 +25,8 @@ dart run tool/export_lessons_to_json.dart   # regenerate JSON packs from Dart le
 assets/packs/                # JSON content packs (units + lessons per language)
 lib/
 ├── main.dart                # Init (ProgressService), saved-language detection
+├── audio/
+│   └── audio_service.dart   # flutter_soloud sfx (key tones, fanfare, stars…); silent no-op if engine fails
 ├── data/
 │   ├── keyboard_data.dart   # Key colors (+ re-exports layout)
 │   ├── keyboard_layout.dart # QWERTY rows + per-key emoji per language (pure Dart, no Flutter)
@@ -44,16 +47,23 @@ lib/
 │   ├── pack_service.dart    # Loads JSON packs (rootBundle), falls back to Dart lessons
 │   ├── progress_service.dart # shared_preferences: stars, collectibles, language
 │   └── tts_service.dart     # flutter_tts wrapper (listen rounds, sentences)
+├── world/
+│   └── world_clock.dart     # WorldClockService (day phase, season; injectable clock) + WorldTheme
 └── widgets/
     ├── challenge_card.dart  # Target card (hint + letters; hidden mode for listen)
     ├── keyboard_widget.dart # Full keyboard + swype gesture detection
     ├── key_widget.dart      # Single key (active/inactive state)
-    └── swype_painter.dart   # CustomPainter — glowing swype trail line
+    ├── star_celebration.dart # Falling stars + confetti after a correct swype
+    └── swype_painter.dart   # CustomPainter — glowing swype trail + fireflies
 test/
 ├── pack_loading_test.dart   # Validates all 9 packs (targets ⊆ unlocked ⊆ keys, unique ids, drift vs Dart)
-└── progress_service_test.dart
+├── progress_service_test.dart
+├── game_screen_test.dart   # Widget test: swype → stars → next lesson → sticker
+├── world_clock_test.dart
+└── audio_service_test.dart
 tool/
-└── export_lessons_to_json.dart # One-off generator Dart lessons → JSON packs
+├── export_lessons_to_json.dart # One-off generator Dart lessons → JSON packs
+└── generate_sfx.dart        # Synthesized placeholder sfx → assets/audio/
 ```
 
 ## Platforms
@@ -80,4 +90,5 @@ iOS, Android, macOS, Linux (check pubspec for active platforms).
 
 - Custom fonts in `fonts/`
 - Content packs in `assets/packs/`
+- Sfx in `assets/audio/sfx/` + catalog `assets/audio/manifest.json`
 - Screenshots in `GALLERY.md`

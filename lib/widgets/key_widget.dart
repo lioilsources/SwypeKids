@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../data/keyboard_data.dart';
 
-class KeyWidget extends StatelessWidget {
+class KeyWidget extends StatefulWidget {
   final String letter;
   final String emoji; // per-jazyková mnemotechnika (PackService.keyEmojiFor)
   final bool active;
@@ -20,7 +20,59 @@ class KeyWidget extends StatelessWidget {
   });
 
   @override
+  State<KeyWidget> createState() => _KeyWidgetState();
+}
+
+class _KeyWidgetState extends State<KeyWidget>
+    with SingleTickerProviderStateMixin {
+  // Nadskočení klávesy, když ji prst přidá do tahu.
+  late final AnimationController _bounce = AnimationController(
+    vsync: this,
+    duration: const Duration(milliseconds: 320),
+  );
+  late final Animation<double> _bounceScale = TweenSequence<double>([
+    TweenSequenceItem(
+        tween: Tween(begin: 1.0, end: 1.22)
+            .chain(CurveTween(curve: Curves.easeOut)),
+        weight: 35),
+    TweenSequenceItem(
+        tween: Tween(begin: 1.22, end: 0.96)
+            .chain(CurveTween(curve: Curves.easeInOut)),
+        weight: 35),
+    TweenSequenceItem(
+        tween: Tween(begin: 0.96, end: 1.0)
+            .chain(CurveTween(curve: Curves.easeOut)),
+        weight: 30),
+  ]).animate(_bounce);
+
+  @override
+  void didUpdateWidget(covariant KeyWidget oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (widget.inPath &&
+        !oldWidget.inPath &&
+        !MediaQuery.of(context).disableAnimations) {
+      _bounce.forward(from: 0);
+    }
+  }
+
+  @override
+  void dispose() {
+    _bounce.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
+    return ScaleTransition(scale: _bounceScale, child: _buildKey());
+  }
+
+  Widget _buildKey() {
+    final letter = widget.letter;
+    final emoji = widget.emoji;
+    final active = widget.active;
+    final inPath = widget.inPath;
+    final isNew = widget.isNew;
+    final scale = widget.scale;
     final col = keyColor(letter);
 
     return AnimatedContainer(

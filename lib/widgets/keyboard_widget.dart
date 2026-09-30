@@ -13,6 +13,9 @@ class KeyboardWidget extends StatefulWidget {
   final void Function(List<String> path) onSwypeEnd;
   final void Function(List<String> path)? onSwypeUpdate;
 
+  /// Prst právě přidal písmeno do tahu (zvuk, haptika).
+  final void Function(String letter)? onLetter;
+
   const KeyboardWidget({
     super.key,
     required this.lesson,
@@ -20,6 +23,7 @@ class KeyboardWidget extends StatefulWidget {
     required this.emojiFor,
     required this.onSwypeEnd,
     this.onSwypeUpdate,
+    this.onLetter,
   });
 
   @override
@@ -27,7 +31,7 @@ class KeyboardWidget extends StatefulWidget {
 }
 
 class _KeyboardWidgetState extends State<KeyboardWidget>
-    with SingleTickerProviderStateMixin {
+    with TickerProviderStateMixin {
   // GlobalKey pro každou klávesu → pro zjištění pozice/velikosti
   final Map<String, GlobalKey> _keyGlobalKeys = {
     for (final l in kRows.expand((r) => r)) l: GlobalKey(),
@@ -52,6 +56,12 @@ class _KeyboardWidgetState extends State<KeyboardWidget>
   late AnimationController _fadeCtrl;
   late Animation<double> _fadeAnim;
 
+  // Třpyt světlušek ve stopě — běží jen, dokud je stopa vidět.
+  late final AnimationController _twinkleCtrl = AnimationController(
+    vsync: this,
+    duration: const Duration(seconds: 2),
+  );
+
   @override
   void initState() {
     super.initState();
@@ -61,7 +71,11 @@ class _KeyboardWidgetState extends State<KeyboardWidget>
     );
     _fadeAnim = Tween<double>(begin: 1.0, end: 0.0).animate(
       CurvedAnimation(parent: _fadeCtrl, curve: Curves.easeIn),
-    )..addListener(() => setState(() {}));
+    )
+      ..addListener(() => setState(() {}))
+      ..addStatusListener((status) {
+        if (status == AnimationStatus.completed) _twinkleCtrl.stop();
+      });
   }
 
   @override
@@ -69,6 +83,7 @@ class _KeyboardWidgetState extends State<KeyboardWidget>
     _dwellTimer?.cancel();
     _scrollEndTimer?.cancel();
     _fadeCtrl.dispose();
+    _twinkleCtrl.dispose();
     super.dispose();
   }
 
@@ -98,6 +113,7 @@ class _KeyboardWidgetState extends State<KeyboardWidget>
       _hitPts = [..._hitPts, center];
     });
     widget.onSwypeUpdate?.call(List.from(_path));
+    widget.onLetter?.call(letter);
   }
 
   void _addFingerPoint(Offset globalPosition) {
@@ -109,6 +125,10 @@ class _KeyboardWidgetState extends State<KeyboardWidget>
   // ── Sdílená logika pro zahájení / průběh / ukončení tahu ────────────────
   void _startSwype(Offset globalPosition) {
     _fadeCtrl.stop();
+    if (!_twinkleCtrl.isAnimating &&
+        !MediaQuery.of(context).disableAnimations) {
+      _twinkleCtrl.repeat();
+    }
     _dwellTimer?.cancel();
     _candidateLetter = null;
     setState(() {
@@ -211,6 +231,7 @@ class _KeyboardWidgetState extends State<KeyboardWidget>
     // Reference sizes for the keyboard (full-size layout)
     const double refWidth = 410;
     const double refHeight = 177;
+    final reduceMotion = MediaQuery.of(context).disableAnimations;
 
     return Listener(
       onPointerSignal: _onPointerSignal,
@@ -280,6 +301,7 @@ class _KeyboardWidgetState extends State<KeyboardWidget>
                         trail: localFingerPts,
                         hitPoints: localHitPts,
                         opacity: effectiveOpacity.clamp(0.0, 1.0),
+                        twinkle: reduceMotion ? null : _twinkleCtrl,
                       ),
                     ),
                   ),

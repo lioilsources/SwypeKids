@@ -143,20 +143,10 @@ i bez zvuku a po libovolném počtu chyb.
 
 ## 7. Roadmapa
 
-**Iterace 1 (hotovo, v2.1.0)**
-JSON content packy + fallback, jednotky + mapa lekcí, persistence
-(hvězdy, nálepky, jazyk), Zvěřinec, oslava jednotky, kolo `listen`, testy
-(pack loading, progress).
+Roadmapa se přesunula do [docs/ROADMAP.md](ROADMAP.md) (pilíře: postavičky,
+svět s ročními obdobími a dnem/nocí, zvuk, lekce, sběratelství, propojení
+slovíček do Sentence Builderu, rodičovský koutek; verze v2.2 → v4.0).
 
-**Fáze 2**
-Další typy kol (`missingLetter`, `pictureOnly`, `reviewMix`), spaced
-repetition u review uzlů, zapojení keyboard overrides do klávesnice,
-smazání Dart lesson souborů (JSON = jediný zdroj pravdy), zvuky/sfx.
-
-**Fáze 3**
-Kulturní varianty packů (en-GB…), i18n UI chrome (dnes česky natvrdo),
-jemný streak bez tlaku, rodičovské statistiky, diakritika long-pressem.
-
-**Fáze 4**
-Stahovatelné packy (Firestore/CDN), komunitní tvorba obsahu (JSON schéma
-je už teď oddělené od kódu).
+Iterace 1 (v2.1.0) je hotová: JSON content packy + fallback, jednotky +
+mapa lekcí, persistence (hvězdy, nálepky, jazyk), Zvěřinec, oslava jednotky,
+kolo `listen`, testy (pack loading, progress).

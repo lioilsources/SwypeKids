@@ -1,10 +1,15 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import '../audio/audio_service.dart';
 import '../data/lessons.dart';
 import '../data/models/content_pack.dart';
 import '../services/pack_service.dart';
 import '../services/progress_service.dart';
 import '../widgets/language_picker.dart';
+import '../world/world_clock.dart';
 import 'game_screen.dart';
+import 'unit_complete_screen.dart' show stickerHeroTag;
 
 /// Mapa lekcí: svislá cesta jednotek a jejich uzlů (lekcí).
 /// Vstupní obrazovka hry — tap na odemčený uzel spouští GameScreen.
@@ -24,11 +29,24 @@ class LessonMapScreen extends StatefulWidget {
 
 class _LessonMapScreenState extends State<LessonMapScreen> {
   ContentPack? _pack;
+  late WorldTheme _world = WorldClockService.instance.theme;
+  Timer? _worldTimer;
 
   @override
   void initState() {
     super.initState();
     _loadPack();
+    // Denní doba se mění pomalu — stačí kontrola jednou za minutu.
+    _worldTimer = Timer.periodic(const Duration(minutes: 1), (_) {
+      final next = WorldClockService.instance.theme;
+      if (next.phase != _world.phase) setState(() => _world = next);
+    });
+  }
+
+  @override
+  void dispose() {
+    _worldTimer?.cancel();
+    super.dispose();
   }
 
   @override
@@ -49,6 +67,7 @@ class _LessonMapScreenState extends State<LessonMapScreen> {
 
   Future<void> _openLesson(int unitIndex, int lessonIndex) async {
     final pack = _pack!;
+    AudioService.instance.play(Sfx.tap);
     await Navigator.of(context).push(MaterialPageRoute(
       builder: (_) => GameScreen(
         pack: pack,
@@ -62,14 +81,11 @@ class _LessonMapScreenState extends State<LessonMapScreen> {
   @override
   Widget build(BuildContext context) {
     final pack = _pack;
-    return Container(
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [Color(0xFF1A1A2E), Color(0xFF16213E), Color(0xFF0F3460)],
-        ),
-      ),
+    // Pozadí mapy podle denní doby, s pomalým přechodem (roadmap P1).
+    return AnimatedContainer(
+      duration: const Duration(seconds: 3),
+      curve: Curves.easeInOut,
+      decoration: BoxDecoration(gradient: _world.gradient),
       child: SafeArea(
         child: pack == null
             ? const Center(
@@ -106,6 +122,9 @@ class _LessonMapScreenState extends State<LessonMapScreen> {
                             ),
                           ),
                         ),
+                        Text(_world.celestial,
+                            style: const TextStyle(fontSize: 18)),
+                        const SizedBox(width: 8),
                         Text(
                           '⭐ ${ProgressService.instance.totalStars(pack.id)}',
                           style: const TextStyle(
@@ -201,11 +220,21 @@ class _UnitBlock extends StatelessWidget {
                 ),
               ),
               // Odměna jednotky
-              Opacity(
-                opacity: hasReward ? 1.0 : 0.45,
-                child: Text(
-                  hasReward ? unit.reward.emoji : '❓',
-                  style: const TextStyle(fontSize: 22),
+              // Místo přistání nálepky z UnitCompleteScreen (Hero).
+              Hero(
+                tag: stickerHeroTag(pack.id, unitIndex),
+                child: Opacity(
+                  opacity: hasReward ? 1.0 : 0.45,
+                  child: SizedBox(
+                    width: 28,
+                    height: 28,
+                    child: FittedBox(
+                      child: Text(
+                        hasReward ? unit.reward.emoji : '❓',
+                        style: const TextStyle(fontSize: 22),
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ],

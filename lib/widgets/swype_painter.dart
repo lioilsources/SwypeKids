@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class SwypePainter extends CustomPainter {
@@ -9,11 +11,20 @@ class SwypePainter extends CustomPainter {
 
   final double opacity;
 
+  /// Běžící čas (0–1, opakuje se) pro třpyt světlušek; null = bez světlušek
+  /// (redukce pohybu).
+  final Animation<double>? twinkle;
+
   SwypePainter({
     required this.trail,
     required this.hitPoints,
     required this.opacity,
-  });
+    this.twinkle,
+  }) : super(repaint: twinkle);
+
+  // Světlušky: rozestup podél stopy a maximální odskok od ní.
+  static const double _fireflySpacing = 16;
+  static const double _fireflyDrift = 11;
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -53,7 +64,10 @@ class SwypePainter extends CustomPainter {
       canvas.drawPath(path, linePaint);
     }
 
-    // ── 2. Zvýrazněné trefené klávesy ──────────────────────────────────────
+    // ── 2. Světlušky podél stopy ──────────────────────────────────────────
+    if (twinkle != null && trail.length > 1) _paintFireflies(canvas);
+
+    // ── 3. Zvýrazněné trefené klávesy ──────────────────────────────────────
     for (int i = 0; i < hitPoints.length; i++) {
       final pt = hitPoints[i];
       final isFirst = i == 0;
@@ -83,9 +97,52 @@ class SwypePainter extends CustomPainter {
     }
   }
 
+  void _paintFireflies(Canvas canvas) {
+    final t = twinkle!.value;
+    final glow = Paint()
+      ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 4);
+    final core = Paint();
+    var travelled = 0.0;
+    var next = 0.0;
+    var n = 0;
+    for (int i = 1; i < trail.length; i++) {
+      final a = trail[i - 1];
+      final b = trail[i];
+      final seg = (b - a).distance;
+      while (next <= travelled + seg && seg > 0) {
+        final p = Offset.lerp(a, b, (next - travelled) / seg)!;
+        // Deterministický „náhodný" odskok a fáze pro každou světlušku,
+        // ať se mezi snímky neteleportují.
+        final h1 = _hash(n, 1), h2 = _hash(n, 2), h3 = _hash(n, 3);
+        final wobble = 2 * pi * (t + h3);
+        final pos = p +
+            Offset(
+              (h1 - 0.5) * 2 * _fireflyDrift + sin(wobble) * 3,
+              (h2 - 0.5) * 2 * _fireflyDrift + cos(wobble * 1.3) * 3,
+            );
+        final blink = 0.35 + 0.65 * (0.5 + 0.5 * sin(wobble * 2));
+        final alpha = (blink * opacity).clamp(0.0, 1.0);
+        final r = 1.6 + h1 * 1.8;
+        glow.color = const Color(0xFFFFF59D).withValues(alpha: 0.6 * alpha);
+        canvas.drawCircle(pos, r * 2.6, glow);
+        core.color = const Color(0xFFFFFDE7).withValues(alpha: alpha);
+        canvas.drawCircle(pos, r, core);
+        n++;
+        next += _fireflySpacing;
+      }
+      travelled += seg;
+    }
+  }
+
+  static double _hash(int i, int salt) {
+    final x = sin(i * 12.9898 + salt * 78.233) * 43758.5453;
+    return x - x.floorToDouble();
+  }
+
   @override
   bool shouldRepaint(SwypePainter oldDelegate) =>
       oldDelegate.trail != trail ||
       oldDelegate.hitPoints != hitPoints ||
-      oldDelegate.opacity != opacity;
+      oldDelegate.opacity != opacity ||
+      oldDelegate.twinkle != twinkle;
 }

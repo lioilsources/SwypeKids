@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import '../audio/audio_service.dart';
 import '../data/lessons.dart';
 import '../data/models/content_pack.dart';
 import '../services/pack_service.dart';
@@ -8,6 +9,7 @@ import '../services/progress_service.dart';
 import '../services/tts_service.dart';
 import '../widgets/challenge_card.dart';
 import '../widgets/keyboard_widget.dart';
+import '../widgets/star_celebration.dart';
 import 'unit_complete_screen.dart';
 import 'win_screen.dart';
 
@@ -34,6 +36,7 @@ class _GameScreenState extends State<GameScreen>
     with SingleTickerProviderStateMixin {
   late int _idx = widget.startLessonIndex;
   int _sessionStars = 0;
+  int _lessonStars = 0; // hvězdy za právě dohrané kolo (oslava)
   int _attempts = 0; // pokusy o aktuální lekci (1. pokus = 3⭐, 2. = 2⭐, pak 1⭐)
   bool _revealed = false; // poslechové kolo: text odkrytý po neúspěchu
   List<String> _path = [];
@@ -112,13 +115,16 @@ class _GameScreenState extends State<GameScreen>
       ProgressService.instance
           .markCompleted(widget.pack.id, _lesson.id, stars);
       HapticFeedback.mediumImpact();
+      AudioService.instance.play(Sfx.success);
       setState(() {
         _status = GameStatus.success;
         _sessionStars += stars;
+        _lessonStars = stars;
       });
       _timerNext = Timer(const Duration(milliseconds: 1600), _nextLesson);
     } else {
       HapticFeedback.vibrate();
+      AudioService.instance.play(Sfx.error);
       setState(() {
         _status = GameStatus.error;
         _shake = true;
@@ -166,6 +172,7 @@ class _GameScreenState extends State<GameScreen>
   void _finishUnit() {
     final progress = ProgressService.instance;
     progress.addCollectible(widget.pack.id, _unit.reward.emoji);
+    AudioService.instance.play(Sfx.sticker);
 
     final isLastUnit = widget.unitIndex == widget.pack.units.length - 1;
     final packDone = isLastUnit &&
@@ -184,6 +191,7 @@ class _GameScreenState extends State<GameScreen>
         builder: (_) => UnitCompleteScreen(
           reward: _unit.reward,
           stars: _sessionStars,
+          heroTag: stickerHeroTag(widget.pack.id, widget.unitIndex),
         ),
       ));
     }
@@ -209,7 +217,7 @@ class _GameScreenState extends State<GameScreen>
             ],
           ),
         ),
-        child: SafeArea(
+        child: _withCelebration(SafeArea(
           child: Column(
             children: [
               // ── Top bar ──────────────────────────────────────────────
@@ -287,6 +295,7 @@ class _GameScreenState extends State<GameScreen>
                     emojiFor: _emojiFor,
                     onSwypeEnd: _onSwypeEnd,
                     onSwypeUpdate: _onSwypeUpdate,
+                    onLetter: AudioService.instance.playKeyTone,
                   ),
                 ),
               ),
@@ -333,10 +342,26 @@ class _GameScreenState extends State<GameScreen>
               ),
             ],
           ),
-        ),
+        )),
       ),
     );
   }
+
+  /// Přes hru položí oslavu správného swype (padající hvězdy + konfety).
+  Widget _withCelebration(Widget game) => Stack(
+        children: [
+          game,
+          if (_status == GameStatus.success)
+            Positioned.fill(
+              child: StarCelebration(
+                key: ValueKey('celebration-$_idx'),
+                stars: _lessonStars,
+                landingY: 0.28,
+                onStarLanded: AudioService.instance.playStar,
+              ),
+            ),
+        ],
+      );
 
   Widget _badge(String text) => Container(
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 3),
