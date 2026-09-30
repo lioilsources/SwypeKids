@@ -7,6 +7,7 @@ import '../data/models/sentence.dart';
 import '../services/pack_service.dart';
 import '../services/progress_service.dart';
 import '../services/tts_service.dart';
+import 'game_screen.dart';
 import '../widgets/language_picker.dart';
 
 class SentenceBuilderScreen extends StatefulWidget {
@@ -28,6 +29,7 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
   SentencePart? _verb;
   SentencePart? _object;
   ContentPack? _pack;
+  bool _saved = false; // aktuální věta už je v Mé knížce
 
   SentenceCategories get _data => _pack?.sentence ?? SentenceCategories.empty;
 
@@ -75,7 +77,47 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
       return;
     }
     AudioService.instance.play(Sfx.tap);
-    setState(select);
+    setState(() {
+      select();
+      _saved = false;
+    });
+  }
+
+  void _saveToBook() {
+    final pack = _pack;
+    if (pack == null || !_sentence.isComplete) return;
+    ProgressService.instance
+        .addToBook(pack.id, _sentence.text, _sentence.emojis);
+    AudioService.instance.play(Sfx.sticker);
+    setState(() => _saved = true);
+  }
+
+  /// Lekce, která slovo učí — pro „vzít slovo do hry".
+  Lesson? _lessonFor(SentencePart p) {
+    if (p.unlockedBy != TileUnlock.vocab || !_isUnlocked(p)) return null;
+    for (final l in _pack?.allLessons ?? const <Lesson>[]) {
+      if (l.vocab == p.id) return l;
+    }
+    return null;
+  }
+
+  /// Slovo z builderu zpátky do hry: jedno swype kolo (procvičování).
+  Future<void> _playWord(Lesson lesson) async {
+    AudioService.instance.play(Sfx.tap);
+    await Navigator.of(context).push(MaterialPageRoute(
+      builder: (_) => GameScreen(
+        pack: _pack!,
+        unitIndex: 0,
+        practice: Unit(
+          id: 'word-${lesson.vocab}',
+          title: lesson.display,
+          icon: '🎹',
+          reward: const CollectibleReward(emoji: '🎹'),
+          lessons: [lesson],
+        ),
+      ),
+    ));
+    if (mounted) setState(() {});
   }
 
   ComposedSentence get _sentence => ComposedSentence(
@@ -96,6 +138,7 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
 
   void _clear() {
     setState(() {
+      _saved = false;
       _subject = null;
       _verb = null;
       _object = null;
@@ -180,6 +223,16 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
                         onPressed: _clear,
                         tooltip: 'Smazat',
                       ),
+                    if (_sentence.isComplete)
+                      Padding(
+                        padding: const EdgeInsets.only(right: 8),
+                        child: GestureDetector(
+                          key: const ValueKey('save-book'),
+                          onTap: _saved ? null : _saveToBook,
+                          child: Text(_saved ? '✅' : '📖',
+                              style: const TextStyle(fontSize: 30)),
+                        ),
+                      ),
                     _TrumpetButton(
                       enabled: _hasAny,
                       onTap: _speak,
@@ -204,6 +257,10 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
                       isUnlocked: _isUnlocked,
                       isNew: _isNew,
                       onPick: (p) => _pick(p, () => _subject = p),
+                      onPlay: (p) {
+                        final lesson = _lessonFor(p);
+                        return lesson == null ? null : () => _playWord(lesson);
+                      },
                     )),
                     const SizedBox(width: 8),
                     Expanded(child: _CategoryColumn(
@@ -215,6 +272,10 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
                       isUnlocked: _isUnlocked,
                       isNew: _isNew,
                       onPick: (p) => _pick(p, () => _verb = p),
+                      onPlay: (p) {
+                        final lesson = _lessonFor(p);
+                        return lesson == null ? null : () => _playWord(lesson);
+                      },
                     )),
                     const SizedBox(width: 8),
                     Expanded(child: _CategoryColumn(
@@ -226,6 +287,10 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
                       isUnlocked: _isUnlocked,
                       isNew: _isNew,
                       onPick: (p) => _pick(p, () => _object = p),
+                      onPlay: (p) {
+                        final lesson = _lessonFor(p);
+                        return lesson == null ? null : () => _playWord(lesson);
+                      },
                     )),
                   ],
                 ),
@@ -291,6 +356,7 @@ class _CategoryColumn extends StatelessWidget {
   final bool Function(SentencePart) isUnlocked;
   final bool Function(SentencePart) isNew;
   final ValueChanged<SentencePart> onPick;
+  final VoidCallback? Function(SentencePart) onPlay;
 
   const _CategoryColumn({
     required this.label,
@@ -300,6 +366,7 @@ class _CategoryColumn extends StatelessWidget {
     required this.isUnlocked,
     required this.isNew,
     required this.onPick,
+    required this.onPlay,
     this.contextKey,
   });
 
@@ -333,6 +400,7 @@ class _CategoryColumn extends StatelessWidget {
                 isSelected: identical(p, selected),
                 locked: !isUnlocked(p),
                 isNew: isNew(p),
+                onPlay: onPlay(p),
                 accent: accent,
                 contextKey: contextKey,
                 onTap: () => onPick(p),
@@ -354,6 +422,9 @@ class _PartTile extends StatelessWidget {
   final String? contextKey;
   final VoidCallback onTap;
 
+  /// Slovo ze hry: 🎹 v rohu spustí swype kolo s tímto slovem.
+  final VoidCallback? onPlay;
+
   const _PartTile({
     required this.part,
     required this.isSelected,
@@ -361,6 +432,7 @@ class _PartTile extends StatelessWidget {
     required this.onTap,
     this.locked = false,
     this.isNew = false,
+    this.onPlay,
     this.contextKey,
   });
 
@@ -368,12 +440,22 @@ class _PartTile extends StatelessWidget {
   Widget build(BuildContext context) {
     if (locked) return _buildLocked();
     final tile = _buildTile();
-    if (!isNew) return tile;
+    if (!isNew && onPlay == null) return tile;
     return Stack(
       clipBehavior: Clip.none,
       children: [
         tile,
-        const Positioned(top: -6, right: -4, child: _NewBadge()),
+        if (isNew) const Positioned(top: -6, right: -4, child: _NewBadge()),
+        if (onPlay != null)
+          Positioned(
+            top: 2,
+            left: 4,
+            child: GestureDetector(
+              key: ValueKey('play-${part.id}'),
+              onTap: onPlay,
+              child: const Text('🎹', style: TextStyle(fontSize: 16)),
+            ),
+          ),
       ],
     );
   }

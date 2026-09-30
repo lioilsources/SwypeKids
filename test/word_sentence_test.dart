@@ -60,6 +60,8 @@ void main() {
       await tester.tap(find.byKey(const ValueKey('done')));
     });
     expect(result, 'Máma jí kolo');
+    // Hotová věta se uložila do Mé knížky
+    expect(ProgressService.instance.book(cs.id).single.text, 'Máma jí kolo');
   });
 
   testWidgets('trumpeta čeká na celou větu, přeskočit jde vždy',
@@ -75,6 +77,7 @@ void main() {
       await tester.tap(find.byKey(const ValueKey('skip')));
     });
     expect(result, isNull);
+    expect(ProgressService.instance.book(cs.id), isEmpty);
   });
 
   test('tileFor najde jen vocab dlaždice', () async {

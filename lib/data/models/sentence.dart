@@ -139,6 +139,10 @@ class ComposedSentence {
   bool get isEmpty => subject == null && verb == null && object == null;
   bool get isComplete => subject != null && verb != null && object != null;
 
+  /// Obrázková řádka věty (pro Mou knížku).
+  String get emojis =>
+      [subject?.emoji, verb?.emoji, object?.emoji].whereType<String>().join(' ');
+
   String get text => [subjectText, verbText, objectText]
       .whereType<String>()
       .join(joiner);

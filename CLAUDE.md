@@ -34,12 +34,13 @@ lib/
 │       ├── content_pack.dart # ContentPack / Unit / CollectibleReward + fromJson
 │       └── sentence.dart     # Sentence builder tiles (pack.sentence), TileUnlock
 ├── screens/
-│   ├── home_shell.dart      # Drawer shell, view switching (map/sentence/collection)
+│   ├── home_shell.dart      # Drawer shell, view switching (map/sentence/collection/book)
 │   ├── lesson_map_screen.dart   # Lesson map: units, nodes, linear unlocking
 │   ├── game_screen.dart     # Plays one unit; stars, listen rounds, progress writes
 │   ├── unit_complete_screen.dart # Unit celebration (new sticker)
 │   ├── collection_screen.dart    # Sticker album (Zvěřinec)
 │   ├── word_sentence_screen.dart # Mini builder right after a new word (wordToSentence)
+│   ├── book_screen.dart     # Má knížka: saved sentences, tap = read aloud
 │   ├── win_screen.dart      # Whole-pack completion
 │   └── sentence_builder_screen.dart # Second mode: build a sentence
 ├── services/

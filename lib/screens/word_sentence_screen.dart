@@ -178,7 +178,12 @@ class _WordSentenceScreenState extends State<WordSentenceScreen> {
                     key: const ValueKey('done'),
                     emoji: '➡️',
                     enabled: _spoken,
-                    onTap: () => Navigator.of(context).pop(_sentence.text),
+                    onTap: () {
+                      // Složená věta se uloží do Mé knížky.
+                      ProgressService.instance.addToBook(
+                          widget.pack.id, _sentence.text, _sentence.emojis);
+                      Navigator.of(context).pop(_sentence.text);
+                    },
                   ),
                 ),
               ),

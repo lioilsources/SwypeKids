@@ -3,11 +3,12 @@ import '../audio/audio_service.dart';
 import '../data/lessons.dart';
 import '../services/progress_service.dart';
 import '../widgets/language_picker.dart';
+import 'book_screen.dart';
 import 'collection_screen.dart';
 import 'lesson_map_screen.dart';
 import 'sentence_builder_screen.dart';
 
-enum AppView { swype, sentence, collection }
+enum AppView { swype, sentence, collection, book }
 
 class HomeShell extends StatefulWidget {
   final Language initialLanguage;
@@ -51,6 +52,7 @@ class _HomeShellState extends State<HomeShell> {
           SentenceBuilderScreen(
               language: _lang, onLanguageChanged: _setLang),
           CollectionScreen(language: _lang),
+          BookScreen(language: _lang),
         ],
       ),
     );
@@ -128,6 +130,12 @@ class _AppDrawer extends StatelessWidget {
               label: 'Zvěřinec',
               selected: currentView == AppView.collection,
               onTap: () => onPick(AppView.collection),
+            ),
+            _MenuTile(
+              icon: '📖',
+              label: 'Má knížka',
+              selected: currentView == AppView.book,
+              onTap: () => onPick(AppView.book),
             ),
             const Spacer(),
             const Divider(color: Colors.white12, height: 1),
