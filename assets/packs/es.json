@@ -57,7 +57,8 @@
           "hint": "👩",
           "label": "MA-MÁ",
           "info": "Desliza: 🐵 → 🌳",
-          "ipa": "ma"
+          "ipa": "ma",
+          "parentNote": "Primera sílaba: M y A se unen en MA. En casa, alargar «mmm–aaa» y luego decir «ma» rápido."
         },
         {
           "id": "es-u1-l2",
@@ -71,7 +72,8 @@
           "hint": "👩",
           "label": "MA-MÁ",
           "ipa": "ma",
-          "review": true
+          "review": true,
+          "parentNote": "Repaso de MA — afianza la relación letra ↔ sonido."
         }
       ]
     },
@@ -97,7 +99,8 @@
           "hint": "🐭",
           "label": "MI-MI",
           "info": "Nuevo: 🏝️ I",
-          "ipa": "mi"
+          "ipa": "mi",
+          "parentNote": "Nueva letra I, sílaba MI. En casa: ¿qué empieza por I? (isla, iglú)"
         },
         {
           "id": "es-u2-l2",
@@ -111,7 +114,8 @@
           "display": "AMA",
           "hint": "❤️",
           "label": "A-MA",
-          "ipa": "ˈama"
+          "ipa": "ˈama",
+          "parentNote": "AMA: vocal al principio, el niño oye la A como sonido propio."
         },
         {
           "id": "es-u2-l3",
@@ -126,7 +130,8 @@
           "hint": "👩",
           "label": "MA-MI",
           "ipa": "ˈmami",
-          "review": true
+          "review": true,
+          "parentNote": "MAMI: dos sílabas conocidas, primera palabra entera."
         }
       ]
     },
@@ -153,7 +158,8 @@
           "hint": "👨",
           "label": "PA-PÁ",
           "info": "Nuevo: 🐶 P",
-          "ipa": "pa"
+          "ipa": "pa",
+          "parentNote": "Nueva letra P, sílaba PA (como papá). P y B se parecen: mano ante la boca, la P sopla."
         },
         {
           "id": "es-u3-l2",
@@ -168,7 +174,8 @@
           "display": "PI",
           "hint": "🎵",
           "label": "PI-PI",
-          "ipa": "pi"
+          "ipa": "pi",
+          "parentNote": "Sílaba PI: P con la I conocida."
         },
         {
           "id": "es-u3-l3",
@@ -184,7 +191,8 @@
           "hint": "👨",
           "label": "PA-PÁ",
           "ipa": "paˈpa",
-          "review": true
+          "review": true,
+          "parentNote": "PAPÁ: dos sílabas iguales. La tilde no está en el teclado, pero sí en la tarjeta."
         }
       ]
     },
@@ -213,7 +221,8 @@
           "hint": "🐍",
           "label": "SA-SA",
           "info": "Nuevo: 🐍 S, 🐻 O",
-          "ipa": "sa"
+          "ipa": "sa",
+          "parentNote": "Nuevas letras S y O, sílaba SA. La S silba como una serpiente."
         },
         {
           "id": "es-u4-l2",
@@ -230,7 +239,8 @@
           "display": "SO",
           "hint": "☀️",
           "label": "SO",
-          "ipa": "so"
+          "ipa": "so",
+          "parentNote": "Sílaba SO con la nueva O."
         },
         {
           "id": "es-u4-l3",
@@ -247,7 +257,8 @@
           "display": "OSO",
           "hint": "🐻",
           "label": "O-SO",
-          "ipa": "ˈoso"
+          "ipa": "ˈoso",
+          "parentNote": "OSO: vocal al principio y al final."
         },
         {
           "id": "es-u4-l4",
@@ -265,7 +276,8 @@
           "hint": "🥣",
           "label": "SO-PA",
           "ipa": "ˈsopa",
-          "review": true
+          "review": true,
+          "parentNote": "SOPA: dos sílabas distintas seguidas."
         }
       ]
     },
@@ -295,7 +307,8 @@
           "hint": "🦁",
           "label": "LA-LA",
           "info": "Nuevo: 🦁 L",
-          "ipa": "la"
+          "ipa": "la",
+          "parentNote": "Nueva letra L, sílaba LA. Cantar «la-la-la» ayuda."
         }
       ]
     },
@@ -322,9 +335,10 @@
           ],
           "target": "ALA",
           "display": "ALA",
-          "hint": "🪽",
+          "hint": "🦅",
           "label": "A-LA",
-          "ipa": "ˈala"
+          "ipa": "ˈala",
+          "parentNote": "ALA: vocal al principio, sílaba LA detrás."
         },
         {
           "id": "es-u6-l2",
@@ -342,7 +356,8 @@
           "display": "LOLA",
           "hint": "👧",
           "label": "LO-LA",
-          "ipa": "ˈlola"
+          "ipa": "ˈlola",
+          "parentNote": "LOLA: dos sílabas con la nueva L."
         },
         {
           "id": "es-u6-l3",
@@ -360,7 +375,8 @@
           "display": "LISA",
           "hint": "👧",
           "label": "LI-SA",
-          "ipa": "ˈlisa"
+          "ipa": "ˈlisa",
+          "parentNote": "LISA: S entre vocales."
         },
         {
           "id": "es-u6-l4",
@@ -379,7 +395,8 @@
           "hint": "👩",
           "label": "MAMÁ",
           "info": "¡Palabras enteras!",
-          "ipa": "maˈma"
+          "ipa": "maˈma",
+          "parentNote": "MAMÁ: la palabra más importante, MA-MÁ. Va a la mochila de palabras."
         },
         {
           "id": "es-u6-l5",
@@ -397,7 +414,8 @@
           "display": "PAPÁ",
           "hint": "👨",
           "label": "PAPÁ",
-          "ipa": "paˈpa"
+          "ipa": "paˈpa",
+          "parentNote": "Ronda de escucha PAPÁ: el texto está oculto, el niño oye y busca las letras."
         },
         {
           "id": "es-u6-l6",
@@ -415,7 +433,8 @@
           "display": "OSO",
           "hint": "🐻",
           "label": "OSO",
-          "ipa": "ˈoso"
+          "ipa": "ˈoso",
+          "parentNote": "Ronda de escucha OSO — sonidos a letras sin la imagen."
         },
         {
           "id": "es-u6-l7",
@@ -434,7 +453,8 @@
           "hint": "🥣",
           "label": "SOPA",
           "ipa": "ˈsopa",
-          "review": true
+          "review": true,
+          "parentNote": "Ronda de escucha SOPA — repaso solo de oído."
         }
       ]
     },
@@ -467,7 +487,8 @@
           "hint": "👶",
           "label": "NE-NE",
           "info": "Nuevo: 🐘 E, 🐢 T, 🍊 N",
-          "ipa": "ˈnene"
+          "ipa": "ˈnene",
+          "parentNote": "Nuevas letras E, T, N. NENE: dos sílabas iguales con la nueva E."
         },
         {
           "id": "es-u7-l2",
@@ -488,7 +509,8 @@
           "display": "TÍA",
           "hint": "👩‍🦱",
           "label": "TÍ-A",
-          "ipa": "ˈtia"
+          "ipa": "ˈtia",
+          "parentNote": "TÍA: T con I y A; la tilde solo en la tarjeta."
         },
         {
           "id": "es-u7-l3",
@@ -509,7 +531,8 @@
           "display": "PATA",
           "hint": "🦆",
           "label": "PA-TA",
-          "ipa": "ˈpata"
+          "ipa": "ˈpata",
+          "parentNote": "PATA: T entre vocales. En casa: ¿qué animales tienen patas?"
         },
         {
           "id": "es-u7-l4",
@@ -530,7 +553,8 @@
           "display": "TOMATE",
           "hint": "🍅",
           "label": "TO-MA-TE",
-          "ipa": "toˈmate"
+          "ipa": "toˈmate",
+          "parentNote": "TOMATE: tres sílabas, todas conocidas."
         },
         {
           "id": "es-u7-l5",
@@ -552,6 +576,939 @@
           "hint": "⚽",
           "label": "PE-LO-TA",
           "ipa": "peˈlota",
+          "review": true,
+          "parentNote": "PELOTA: tres sílabas. Repaso de la unidad."
+        }
+      ]
+    },
+    {
+      "id": "es-u8",
+      "title": "U, D",
+      "icon": "🌙",
+      "reward": {
+        "emoji": "🍇",
+        "name": "U"
+      },
+      "lessons": [
+        {
+          "id": "es-u8-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "S",
+            "O",
+            "L",
+            "E",
+            "T",
+            "N",
+            "U",
+            "D"
+          ],
+          "target": "LU",
+          "display": "LU",
+          "hint": "🌙",
+          "label": "LU-NA",
+          "info": "Nuevo: 🍇 U, 🦕 D",
+          "parentNote": "Nuevas letras U y D, sílaba LU (como luna). En casa: ¿qué empieza por U? (uva, uno)"
+        },
+        {
+          "id": "es-u8-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "S",
+            "O",
+            "L",
+            "E",
+            "T",
+            "N",
+            "U",
+            "D"
+          ],
+          "target": "LUNA",
+          "display": "LUNA",
+          "hint": "🌙",
+          "label": "LU-NA",
+          "vocab": "luna",
+          "parentNote": "LUNA: dos sílabas. Va a la mochila («voy a la luna»)."
+        },
+        {
+          "id": "es-u8-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "S",
+            "O",
+            "L",
+            "E",
+            "T",
+            "N",
+            "U",
+            "D"
+          ],
+          "target": "DEDO",
+          "display": "DEDO",
+          "hint": "☝️",
+          "label": "DE-DO",
+          "parentNote": "DEDO con la nueva D. D y T se parecen: la D vibra en la garganta."
+        },
+        {
+          "id": "es-u8-l4",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "S",
+            "O",
+            "L",
+            "E",
+            "T",
+            "N",
+            "U",
+            "D"
+          ],
+          "target": "DADO",
+          "display": "DADO",
+          "hint": "🎲",
+          "label": "DA-DO",
+          "parentNote": "DADO: dos sílabas con D."
+        },
+        {
+          "id": "es-u8-l5",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "S",
+            "O",
+            "L",
+            "E",
+            "T",
+            "N",
+            "U",
+            "D"
+          ],
+          "target": "DINO",
+          "display": "DINO",
+          "hint": "🦕",
+          "label": "DI-NO",
+          "parentNote": "Ronda de escucha DINO."
+        },
+        {
+          "id": "es-u8-l6",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "S",
+            "O",
+            "L",
+            "E",
+            "T",
+            "N",
+            "U",
+            "D"
+          ],
+          "target": "PATO",
+          "display": "PATO",
+          "hint": "🦆",
+          "label": "PA-TO",
+          "vocab": "pato",
+          "parentNote": "PATO con letras conocidas. El pato va a la mochila."
+        },
+        {
+          "id": "es-u8-l7",
+          "type": "missingLetter",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "S",
+            "O",
+            "L",
+            "E",
+            "T",
+            "N",
+            "U",
+            "D"
+          ],
+          "target": "LUPA",
+          "display": "LUPA",
+          "hint": "🔍",
+          "label": "LU-PA",
+          "gap": 2,
+          "parentNote": "Palabra con hueco LU?A: falta la P."
+        },
+        {
+          "id": "es-u8-l8",
+          "type": "reviewMix",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "S",
+            "O",
+            "L",
+            "E",
+            "T",
+            "N",
+            "U",
+            "D"
+          ],
+          "target": "LUNA",
+          "display": "LUNA",
+          "hint": "🌙",
+          "label": "LU-NA",
+          "parentNote": "Repaso: el juego elige la palabra que peor le sale al niño.",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "es-u9",
+      "title": "R, C",
+      "icon": "🏠",
+      "reward": {
+        "emoji": "🏠",
+        "name": "C"
+      },
+      "lessons": [
+        {
+          "id": "es-u9-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "S",
+            "O",
+            "L",
+            "E",
+            "T",
+            "N",
+            "U",
+            "D",
+            "R",
+            "C"
+          ],
+          "target": "CA",
+          "display": "CA",
+          "hint": "🏠",
+          "label": "CA-SA",
+          "info": "Nuevo: 🐭 R, 🏠 C",
+          "parentNote": "Nuevas letras R y C, sílaba CA. La C ante A, O, U suena /k/."
+        },
+        {
+          "id": "es-u9-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "S",
+            "O",
+            "L",
+            "E",
+            "T",
+            "N",
+            "U",
+            "D",
+            "R",
+            "C"
+          ],
+          "target": "CASA",
+          "display": "CASA",
+          "hint": "🏠",
+          "label": "CA-SA",
+          "vocab": "casa",
+          "parentNote": "CASA: ahora «casa» se desbloquea en las frases."
+        },
+        {
+          "id": "es-u9-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "S",
+            "O",
+            "L",
+            "E",
+            "T",
+            "N",
+            "U",
+            "D",
+            "R",
+            "C"
+          ],
+          "target": "CAMA",
+          "display": "CAMA",
+          "hint": "🛏️",
+          "label": "CA-MA",
+          "vocab": "cama",
+          "parentNote": "CAMA: solo cambia una letra respecto a CASA."
+        },
+        {
+          "id": "es-u9-l4",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "S",
+            "O",
+            "L",
+            "E",
+            "T",
+            "N",
+            "U",
+            "D",
+            "R",
+            "C"
+          ],
+          "target": "RATON",
+          "display": "RATÓN",
+          "hint": "🐭",
+          "label": "RA-TÓN",
+          "vocab": "raton",
+          "parentNote": "RATÓN con la nueva R. Si la R cuesta pronunciar, basta reconocerla."
+        },
+        {
+          "id": "es-u9-l5",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "S",
+            "O",
+            "L",
+            "E",
+            "T",
+            "N",
+            "U",
+            "D",
+            "R",
+            "C"
+          ],
+          "target": "PERA",
+          "display": "PERA",
+          "hint": "🍐",
+          "label": "PE-RA",
+          "parentNote": "PERA: R suave entre vocales."
+        },
+        {
+          "id": "es-u9-l6",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "S",
+            "O",
+            "L",
+            "E",
+            "T",
+            "N",
+            "U",
+            "D",
+            "R",
+            "C"
+          ],
+          "target": "TORO",
+          "display": "TORO",
+          "hint": "🐂",
+          "label": "TO-RO",
+          "parentNote": "Ronda de escucha TORO."
+        },
+        {
+          "id": "es-u9-l7",
+          "type": "pictureOnly",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "S",
+            "O",
+            "L",
+            "E",
+            "T",
+            "N",
+            "U",
+            "D",
+            "R",
+            "C"
+          ],
+          "target": "COCO",
+          "display": "COCO",
+          "hint": "🥥",
+          "label": "CO-CO",
+          "parentNote": "Solo la imagen: el niño escribe COCO de memoria."
+        },
+        {
+          "id": "es-u9-l8",
+          "type": "missingLetter",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "S",
+            "O",
+            "L",
+            "E",
+            "T",
+            "N",
+            "U",
+            "D",
+            "R",
+            "C"
+          ],
+          "target": "ROSA",
+          "display": "ROSA",
+          "hint": "🌹",
+          "label": "RO-SA",
+          "gap": 2,
+          "parentNote": "Palabra con hueco RO?A: falta la S."
+        },
+        {
+          "id": "es-u9-l9",
+          "type": "reviewMix",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "S",
+            "O",
+            "L",
+            "E",
+            "T",
+            "N",
+            "U",
+            "D",
+            "R",
+            "C"
+          ],
+          "target": "CASA",
+          "display": "CASA",
+          "hint": "🏠",
+          "label": "CA-SA",
+          "parentNote": "Repaso: la palabra más floja hasta ahora.",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "es-u10",
+      "title": "B, G",
+      "icon": "🐱",
+      "reward": {
+        "emoji": "🐳",
+        "name": "B"
+      },
+      "lessons": [
+        {
+          "id": "es-u10-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "S",
+            "O",
+            "L",
+            "E",
+            "T",
+            "N",
+            "U",
+            "D",
+            "R",
+            "C",
+            "B",
+            "G"
+          ],
+          "target": "BO",
+          "display": "BO",
+          "hint": "👢",
+          "label": "BO-TA",
+          "info": "Nuevo: 🐳 B, 🐱 G",
+          "parentNote": "Nuevas letras B y G, sílaba BO. B y P: la B no sopla."
+        },
+        {
+          "id": "es-u10-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "S",
+            "O",
+            "L",
+            "E",
+            "T",
+            "N",
+            "U",
+            "D",
+            "R",
+            "C",
+            "B",
+            "G"
+          ],
+          "target": "GATO",
+          "display": "GATO",
+          "hint": "🐱",
+          "label": "GA-TO",
+          "vocab": "gato",
+          "parentNote": "GATO con la nueva G (/g/ suave). El gato va a la mochila."
+        },
+        {
+          "id": "es-u10-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "S",
+            "O",
+            "L",
+            "E",
+            "T",
+            "N",
+            "U",
+            "D",
+            "R",
+            "C",
+            "B",
+            "G"
+          ],
+          "target": "BOTA",
+          "display": "BOTA",
+          "hint": "👢",
+          "label": "BO-TA",
+          "parentNote": "BOTA: B al principio."
+        },
+        {
+          "id": "es-u10-l4",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "S",
+            "O",
+            "L",
+            "E",
+            "T",
+            "N",
+            "U",
+            "D",
+            "R",
+            "C",
+            "B",
+            "G"
+          ],
+          "target": "LOBO",
+          "display": "LOBO",
+          "hint": "🐺",
+          "label": "LO-BO",
+          "parentNote": "LOBO: B entre vocales."
+        },
+        {
+          "id": "es-u10-l5",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "S",
+            "O",
+            "L",
+            "E",
+            "T",
+            "N",
+            "U",
+            "D",
+            "R",
+            "C",
+            "B",
+            "G"
+          ],
+          "target": "GLOBO",
+          "display": "GLOBO",
+          "hint": "🎈",
+          "label": "GLO-BO",
+          "parentNote": "Ronda de escucha GLOBO — dos consonantes seguidas GL."
+        },
+        {
+          "id": "es-u10-l6",
+          "type": "pictureOnly",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "S",
+            "O",
+            "L",
+            "E",
+            "T",
+            "N",
+            "U",
+            "D",
+            "R",
+            "C",
+            "B",
+            "G"
+          ],
+          "target": "BOCA",
+          "display": "BOCA",
+          "hint": "👄",
+          "label": "BO-CA",
+          "parentNote": "Solo la imagen: BOCA de memoria."
+        },
+        {
+          "id": "es-u10-l7",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "S",
+            "O",
+            "L",
+            "E",
+            "T",
+            "N",
+            "U",
+            "D",
+            "R",
+            "C",
+            "B",
+            "G"
+          ],
+          "target": "GALLETA",
+          "display": "GALLETA",
+          "hint": "🍪",
+          "label": "GA-LLE-TA",
+          "vocab": "galleta",
+          "parentNote": "GALLETA: la LL es un sonido propio. Va a la mochila."
+        },
+        {
+          "id": "es-u10-l8",
+          "type": "missingLetter",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "S",
+            "O",
+            "L",
+            "E",
+            "T",
+            "N",
+            "U",
+            "D",
+            "R",
+            "C",
+            "B",
+            "G"
+          ],
+          "target": "BEBE",
+          "display": "BEBÉ",
+          "hint": "👶",
+          "label": "BE-BÉ",
+          "gap": 2,
+          "parentNote": "Palabra con hueco BE?É: falta la segunda B."
+        },
+        {
+          "id": "es-u10-l9",
+          "type": "reviewMix",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "S",
+            "O",
+            "L",
+            "E",
+            "T",
+            "N",
+            "U",
+            "D",
+            "R",
+            "C",
+            "B",
+            "G"
+          ],
+          "target": "GATO",
+          "display": "GATO",
+          "hint": "🐱",
+          "label": "GA-TO",
+          "parentNote": "Repaso: la palabra más floja hasta ahora.",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "es-u11",
+      "title": "Palabras enteras II",
+      "icon": "🦁",
+      "reward": {
+        "emoji": "🐻",
+        "name": "O"
+      },
+      "lessons": [
+        {
+          "id": "es-u11-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "S",
+            "O",
+            "L",
+            "E",
+            "T",
+            "N",
+            "U",
+            "D",
+            "R",
+            "C",
+            "B",
+            "G"
+          ],
+          "target": "MANO",
+          "display": "MANO",
+          "hint": "✋",
+          "label": "MA-NO",
+          "parentNote": "MANO: letras conocidas, palabra nueva."
+        },
+        {
+          "id": "es-u11-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "S",
+            "O",
+            "L",
+            "E",
+            "T",
+            "N",
+            "U",
+            "D",
+            "R",
+            "C",
+            "B",
+            "G"
+          ],
+          "target": "LEON",
+          "display": "LEÓN",
+          "hint": "🦁",
+          "label": "LE-ÓN",
+          "parentNote": "LEÓN: dos vocales seguidas E-O, cada una se oye."
+        },
+        {
+          "id": "es-u11-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "S",
+            "O",
+            "L",
+            "E",
+            "T",
+            "N",
+            "U",
+            "D",
+            "R",
+            "C",
+            "B",
+            "G"
+          ],
+          "target": "PLATANO",
+          "display": "PLÁTANO",
+          "hint": "🍌",
+          "label": "PLÁ-TA-NO",
+          "vocab": "platano",
+          "parentNote": "PLÁTANO: tres sílabas, empieza por PL. Va a la mochila."
+        },
+        {
+          "id": "es-u11-l4",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "S",
+            "O",
+            "L",
+            "E",
+            "T",
+            "N",
+            "U",
+            "D",
+            "R",
+            "C",
+            "B",
+            "G"
+          ],
+          "target": "TORTUGA",
+          "display": "TORTUGA",
+          "hint": "🐢",
+          "label": "TOR-TU-GA",
+          "vocab": "tortuga",
+          "parentNote": "TORTUGA: sílaba cerrada TOR al principio. Va a la mochila."
+        },
+        {
+          "id": "es-u11-l5",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "S",
+            "O",
+            "L",
+            "E",
+            "T",
+            "N",
+            "U",
+            "D",
+            "R",
+            "C",
+            "B",
+            "G"
+          ],
+          "target": "CABALLO",
+          "display": "CABALLO",
+          "hint": "🐴",
+          "label": "CA-BA-LLO",
+          "parentNote": "Ronda de escucha CABALLO — LL solo de oído."
+        },
+        {
+          "id": "es-u11-l6",
+          "type": "missingLetter",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "S",
+            "O",
+            "L",
+            "E",
+            "T",
+            "N",
+            "U",
+            "D",
+            "R",
+            "C",
+            "B",
+            "G"
+          ],
+          "target": "NUBE",
+          "display": "NUBE",
+          "hint": "☁️",
+          "label": "NU-BE",
+          "gap": 2,
+          "parentNote": "Palabra con hueco NU?E: falta la B."
+        },
+        {
+          "id": "es-u11-l7",
+          "type": "pictureOnly",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "S",
+            "O",
+            "L",
+            "E",
+            "T",
+            "N",
+            "U",
+            "D",
+            "R",
+            "C",
+            "B",
+            "G"
+          ],
+          "target": "PASTEL",
+          "display": "PASTEL",
+          "hint": "🎂",
+          "label": "PAS-TEL",
+          "parentNote": "Solo la imagen: PASTEL de memoria, dos sílabas cerradas."
+        },
+        {
+          "id": "es-u11-l8",
+          "type": "reviewMix",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "S",
+            "O",
+            "L",
+            "E",
+            "T",
+            "N",
+            "U",
+            "D",
+            "R",
+            "C",
+            "B",
+            "G"
+          ],
+          "target": "PLATANO",
+          "display": "PLÁTANO",
+          "hint": "🍌",
+          "label": "PLÁ-TA-NO",
+          "parentNote": "Repaso final de la banda: la palabra más floja de todas.",
           "review": true
         }
       ]
@@ -593,6 +1550,34 @@
         "emoji": "🐶",
         "text": "Perrito",
         "unlockedBy": "always",
+        "person": "3sg"
+      },
+      {
+        "id": "pato",
+        "emoji": "🦆",
+        "text": "Pato",
+        "unlockedBy": "vocab",
+        "person": "3sg"
+      },
+      {
+        "id": "raton",
+        "emoji": "🐭",
+        "text": "Ratón",
+        "unlockedBy": "vocab",
+        "person": "3sg"
+      },
+      {
+        "id": "gato",
+        "emoji": "🐱",
+        "text": "Gato",
+        "unlockedBy": "vocab",
+        "person": "3sg"
+      },
+      {
+        "id": "tortuga",
+        "emoji": "🐢",
+        "text": "Tortuga",
+        "unlockedBy": "vocab",
         "person": "3sg"
       }
     ],
@@ -710,10 +1695,10 @@
         }
       },
       {
-        "id": "o6",
+        "id": "casa",
         "emoji": "🏠",
         "text": "casa",
-        "unlockedBy": "always",
+        "unlockedBy": "vocab",
         "forms": {
           "dir": "a casa",
           "loc": "en casa",
@@ -721,10 +1706,10 @@
         }
       },
       {
-        "id": "o7",
+        "id": "cama",
         "emoji": "🛏️",
         "text": "la cama",
-        "unlockedBy": "always",
+        "unlockedBy": "vocab",
         "forms": {
           "dir": "a la cama",
           "loc": "en la cama",
@@ -740,6 +1725,39 @@
           "dir": "al baño",
           "loc": "en el baño",
           "instr": "en el baño"
+        }
+      },
+      {
+        "id": "luna",
+        "emoji": "🌙",
+        "text": "la luna",
+        "unlockedBy": "vocab",
+        "forms": {
+          "dir": "a la luna",
+          "loc": "en la luna",
+          "instr": "con la luna"
+        }
+      },
+      {
+        "id": "galleta",
+        "emoji": "🍪",
+        "text": "una galleta",
+        "unlockedBy": "vocab",
+        "forms": {
+          "dir": "a la galleta",
+          "loc": "con una galleta",
+          "instr": "con una galleta"
+        }
+      },
+      {
+        "id": "platano",
+        "emoji": "🍌",
+        "text": "un plátano",
+        "unlockedBy": "vocab",
+        "forms": {
+          "dir": "al plátano",
+          "loc": "con un plátano",
+          "instr": "con un plátano"
         }
       }
     ]

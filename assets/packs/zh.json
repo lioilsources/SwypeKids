@@ -58,7 +58,8 @@
           "label": "MĀ 妈",
           "info": "滑动: 🐴 → ❤️",
           "ipa": "ma˥",
-          "pinyin": "ma1"
+          "pinyin": "ma1",
+          "parentNote": "第一个音节：M 和 A 拼成 MĀ（妈）。在家慢慢拉长“mmm–aaa”，再快速说“mā”。"
         },
         {
           "id": "zh-u1-l2",
@@ -73,7 +74,8 @@
           "label": "MĀ 妈",
           "ipa": "ma˥",
           "pinyin": "ma1",
-          "review": true
+          "review": true,
+          "parentNote": "复习 MĀ——巩固字母和声音的联系。"
         }
       ]
     },
@@ -100,7 +102,8 @@
           "label": "BÀ 爸",
           "info": "新: 👨 B",
           "ipa": "pa˥˩",
-          "pinyin": "ba4"
+          "pinyin": "ba4",
+          "parentNote": "新字母 B，音节 BÀ（爸）。B 和 P 相似：P 送气，B 不送气。"
         },
         {
           "id": "zh-u2-l2",
@@ -115,7 +118,8 @@
           "hint": "👨",
           "label": "BÀBA 爸爸",
           "ipa": "ˈpa˥˩pa",
-          "pinyin": "ba4.ba"
+          "pinyin": "ba4.ba",
+          "parentNote": "BÀBA 爸爸：两个音节，第二个是轻声。进入词语背包。"
         },
         {
           "id": "zh-u2-l3",
@@ -131,7 +135,8 @@
           "label": "MĀMA 妈妈",
           "ipa": "ˈma˥ma",
           "pinyin": "ma1.ma",
-          "review": true
+          "review": true,
+          "parentNote": "MĀMA 妈妈：第一声加轻声。"
         }
       ]
     },
@@ -159,7 +164,8 @@
           "label": "MǏ 米",
           "info": "新: 1️⃣ I",
           "ipa": "mi˨˩˦",
-          "pinyin": "mi3"
+          "pinyin": "mi3",
+          "parentNote": "新字母 I，音节 MǏ（米）。第三声先降后升。"
         },
         {
           "id": "zh-u3-l2",
@@ -175,7 +181,8 @@
           "hint": "✏️",
           "label": "BǏ 笔",
           "ipa": "pi˨˩˦",
-          "pinyin": "bi3"
+          "pinyin": "bi3",
+          "parentNote": "BǏ 笔：新字母 I 和熟悉的 B。"
         },
         {
           "id": "zh-u3-l3",
@@ -192,7 +199,8 @@
           "label": "MĪMĪ 咪咪",
           "ipa": "mi˥mi˥",
           "pinyin": "mi1.mi1",
-          "review": true
+          "review": true,
+          "parentNote": "MĪMĪ 咪咪：两个一样的音节。"
         }
       ]
     },
@@ -221,7 +229,8 @@
           "label": "PÀ 怕",
           "info": "新: 🍎 P",
           "ipa": "pʰa˥˩",
-          "pinyin": "pa4"
+          "pinyin": "pa4",
+          "parentNote": "新字母 P，音节 PÀ（怕）。手放嘴前，P 有气流。"
         },
         {
           "id": "zh-u4-l2",
@@ -238,7 +247,8 @@
           "hint": "🍌",
           "label": "PÍ 皮",
           "ipa": "pʰi˧˥",
-          "pinyin": "pi2"
+          "pinyin": "pi2",
+          "parentNote": "PÍ 皮：第二声上扬。"
         },
         {
           "id": "zh-u4-l3",
@@ -256,7 +266,8 @@
           "label": "PÍPA 琵琶",
           "ipa": "pʰi˧˥pa",
           "pinyin": "pi2.pa",
-          "review": true
+          "review": true,
+          "parentNote": "PÍPA 琵琶：两个不同的音节。"
         }
       ]
     },
@@ -287,7 +298,8 @@
           "label": "NE 呢",
           "info": "新: 🐮 N, 🦢 E",
           "ipa": "nə",
-          "pinyin": "ne"
+          "pinyin": "ne",
+          "parentNote": "新字母 N 和 E，音节 NE（呢）。轻声，短促。"
         },
         {
           "id": "zh-u5-l2",
@@ -307,7 +319,8 @@
           "label": "ME 么",
           "ipa": "mə",
           "pinyin": "me",
-          "review": true
+          "review": true,
+          "parentNote": "ME（么）：轻声音节。"
         }
       ]
     },
@@ -337,7 +350,8 @@
           "hint": "🥤",
           "label": "BĒI 杯",
           "ipa": "pei˥",
-          "pinyin": "bei1"
+          "pinyin": "bei1",
+          "parentNote": "BĒI 杯：三个字母拼一个音节。"
         },
         {
           "id": "zh-u6-l2",
@@ -357,7 +371,8 @@
           "label": "妈妈",
           "info": "词语!",
           "ipa": "ˈma˥ma",
-          "pinyin": "ma1.ma"
+          "pinyin": "ma1.ma",
+          "parentNote": "MĀMA 妈妈：再拼一次。"
         },
         {
           "id": "zh-u6-l3",
@@ -376,7 +391,8 @@
           "hint": "👨",
           "label": "爸爸",
           "ipa": "ˈpa˥˩pa",
-          "pinyin": "ba4.ba"
+          "pinyin": "ba4.ba",
+          "parentNote": "听力：文字隐藏，孩子听到 BÀBA 后自己找字母。"
         },
         {
           "id": "zh-u6-l4",
@@ -395,7 +411,8 @@
           "hint": "🐱",
           "label": "咪咪",
           "ipa": "mi˥mi˥",
-          "pinyin": "mi1.mi1"
+          "pinyin": "mi1.mi1",
+          "parentNote": "听力 MĪMĪ——只凭耳朵。"
         },
         {
           "id": "zh-u6-l5",
@@ -414,7 +431,8 @@
           "hint": "🪕",
           "label": "琵琶",
           "ipa": "pʰi˧˥pa",
-          "pinyin": "pi2.pa"
+          "pinyin": "pi2.pa",
+          "parentNote": "听力 PÍPA——只凭耳朵。"
         },
         {
           "id": "zh-u6-l6",
@@ -434,7 +452,8 @@
           "label": "贝贝",
           "ipa": "pei˥˩pei",
           "pinyin": "bei4.bei",
-          "review": true
+          "review": true,
+          "parentNote": "BÈIBEI 贝贝：第四声加轻声，复习本单元。"
         }
       ]
     },
@@ -467,7 +486,8 @@
           "label": "HǍO 好",
           "info": "新: 🌸 H, 🕊️ O",
           "ipa": "xau˨˩˦",
-          "pinyin": "hao3"
+          "pinyin": "hao3",
+          "parentNote": "新字母 H 和 O，音节 HǍO（好）。三个字母一个音节。"
         },
         {
           "id": "zh-u7-l2",
@@ -488,7 +508,8 @@
           "hint": "🥟",
           "label": "BĀO 包",
           "ipa": "pau˥",
-          "pinyin": "bao1"
+          "pinyin": "bao1",
+          "parentNote": "BĀO 包：第一声，平。"
         },
         {
           "id": "zh-u7-l3",
@@ -509,7 +530,8 @@
           "hint": "🐱",
           "label": "MĀO 猫",
           "ipa": "mau˥",
-          "pinyin": "mao1"
+          "pinyin": "mao1",
+          "parentNote": "MĀO 猫：和 BĀO 只差第一个字母。"
         },
         {
           "id": "zh-u7-l4",
@@ -530,7 +552,8 @@
           "hint": "👋",
           "label": "NǏHǍO 你好",
           "ipa": "ni˨˩˦xau˨˩˦",
-          "pinyin": "ni3.hao3"
+          "pinyin": "ni3.hao3",
+          "parentNote": "NǏHǍO 你好：两个第三声连读。"
         },
         {
           "id": "zh-u7-l5",
@@ -551,7 +574,8 @@
           "hint": "😂",
           "label": "HĀHA 哈哈",
           "ipa": "xa˥xa",
-          "pinyin": "ha1.ha"
+          "pinyin": "ha1.ha",
+          "parentNote": "HĀHA 哈哈：笑一笑！"
         },
         {
           "id": "zh-u7-l6",
@@ -573,6 +597,839 @@
           "label": "BÓBO 伯伯",
           "ipa": "po˧˥po",
           "pinyin": "bo2.bo",
+          "review": true,
+          "parentNote": "BÓBO 伯伯：复习本单元。"
+        }
+      ]
+    },
+    {
+      "id": "zh-u8",
+      "title": "D, U",
+      "icon": "🐘",
+      "reward": {
+        "emoji": "🐘",
+        "name": "D"
+      },
+      "lessons": [
+        {
+          "id": "zh-u8-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "B",
+            "I",
+            "P",
+            "N",
+            "E",
+            "H",
+            "O",
+            "D",
+            "U"
+          ],
+          "target": "DA",
+          "display": "DÀ",
+          "hint": "🐘",
+          "label": "DÀ 大",
+          "info": "新: 🐘 D, 5️⃣ U",
+          "pinyin": "da4",
+          "parentNote": "新字母 D 和 U。DÀ 大：第四声，像大象一样大。"
+        },
+        {
+          "id": "zh-u8-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "B",
+            "I",
+            "P",
+            "N",
+            "E",
+            "H",
+            "O",
+            "D",
+            "U"
+          ],
+          "target": "DIDI",
+          "display": "DÌDI",
+          "hint": "👦",
+          "label": "DÌDI 弟弟",
+          "pinyin": "di4.di",
+          "vocab": "didi",
+          "parentNote": "DÌDI 弟弟：第四声加轻声。弟弟进入词语背包。"
+        },
+        {
+          "id": "zh-u8-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "B",
+            "I",
+            "P",
+            "N",
+            "E",
+            "H",
+            "O",
+            "D",
+            "U"
+          ],
+          "target": "HUA",
+          "display": "HUĀ",
+          "hint": "🌸",
+          "label": "HUĀ 花",
+          "pinyin": "hua1",
+          "parentNote": "HUĀ 花：U 和 A 拼在一起，第一声。"
+        },
+        {
+          "id": "zh-u8-l4",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "B",
+            "I",
+            "P",
+            "N",
+            "E",
+            "H",
+            "O",
+            "D",
+            "U"
+          ],
+          "target": "NIU",
+          "display": "NIÚ",
+          "hint": "🐮",
+          "label": "NIÚ 牛",
+          "pinyin": "niu2",
+          "vocab": "niu",
+          "parentNote": "NIÚ 牛：I 和 U 连读，第二声。牛进入词语背包。"
+        },
+        {
+          "id": "zh-u8-l5",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "B",
+            "I",
+            "P",
+            "N",
+            "E",
+            "H",
+            "O",
+            "D",
+            "U"
+          ],
+          "target": "DAN",
+          "display": "DÀN",
+          "hint": "🥚",
+          "label": "DÀN 蛋",
+          "pinyin": "dan4",
+          "parentNote": "听力 DÀN 蛋——只凭耳朵找字母。"
+        },
+        {
+          "id": "zh-u8-l6",
+          "type": "missingLetter",
+          "unlocked": [
+            "M",
+            "A",
+            "B",
+            "I",
+            "P",
+            "N",
+            "E",
+            "H",
+            "O",
+            "D",
+            "U"
+          ],
+          "target": "HUDIE",
+          "display": "HÚDIÉ",
+          "hint": "🦋",
+          "label": "HÚDIÉ 蝴蝶",
+          "pinyin": "hu2.die2",
+          "gap": 2,
+          "parentNote": "填空 HÚ?IÉ：中间少了 D。"
+        },
+        {
+          "id": "zh-u8-l7",
+          "type": "reviewMix",
+          "unlocked": [
+            "M",
+            "A",
+            "B",
+            "I",
+            "P",
+            "N",
+            "E",
+            "H",
+            "O",
+            "D",
+            "U"
+          ],
+          "target": "DA",
+          "display": "DÀ",
+          "hint": "🐘",
+          "label": "DÀ 大",
+          "pinyin": "da4",
+          "parentNote": "复习：游戏会挑孩子掌握最弱的词。",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "zh-u9",
+      "title": "G, T",
+      "icon": "🐶",
+      "reward": {
+        "emoji": "🐶",
+        "name": "G"
+      },
+      "lessons": [
+        {
+          "id": "zh-u9-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "B",
+            "I",
+            "P",
+            "N",
+            "E",
+            "H",
+            "O",
+            "D",
+            "U",
+            "G",
+            "T"
+          ],
+          "target": "GOU",
+          "display": "GǑU",
+          "hint": "🐶",
+          "label": "GǑU 狗",
+          "info": "新: 🐶 G, 🐰 T",
+          "pinyin": "gou3",
+          "vocab": "gou",
+          "parentNote": "新字母 G 和 T。GǑU 狗：第三声。狗狗在句子里解锁了。"
+        },
+        {
+          "id": "zh-u9-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "B",
+            "I",
+            "P",
+            "N",
+            "E",
+            "H",
+            "O",
+            "D",
+            "U",
+            "G",
+            "T"
+          ],
+          "target": "TU",
+          "display": "TÙ",
+          "hint": "🐰",
+          "label": "TÙ 兔",
+          "pinyin": "tu4",
+          "parentNote": "TÙ 兔：第四声，T 送气。"
+        },
+        {
+          "id": "zh-u9-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "B",
+            "I",
+            "P",
+            "N",
+            "E",
+            "H",
+            "O",
+            "D",
+            "U",
+            "G",
+            "T"
+          ],
+          "target": "GEGE",
+          "display": "GĒGE",
+          "hint": "👦",
+          "label": "GĒGE 哥哥",
+          "pinyin": "ge1.ge",
+          "vocab": "gege",
+          "parentNote": "GĒGE 哥哥：第一声加轻声。哥哥进入词语背包。"
+        },
+        {
+          "id": "zh-u9-l4",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "B",
+            "I",
+            "P",
+            "N",
+            "E",
+            "H",
+            "O",
+            "D",
+            "U",
+            "G",
+            "T"
+          ],
+          "target": "TANG",
+          "display": "TÁNG",
+          "hint": "🍬",
+          "label": "TÁNG 糖",
+          "pinyin": "tang2",
+          "vocab": "tang",
+          "parentNote": "TÁNG 糖：ANG 是后鼻音。糖进入词语背包。"
+        },
+        {
+          "id": "zh-u9-l5",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "B",
+            "I",
+            "P",
+            "N",
+            "E",
+            "H",
+            "O",
+            "D",
+            "U",
+            "G",
+            "T"
+          ],
+          "target": "DANGAO",
+          "display": "DÀNGĀO",
+          "hint": "🎂",
+          "label": "DÀNGĀO 蛋糕",
+          "pinyin": "dan4.gao1",
+          "vocab": "dangao",
+          "parentNote": "DÀNGĀO 蛋糕：两个音节，六个字母。进入词语背包。"
+        },
+        {
+          "id": "zh-u9-l6",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "B",
+            "I",
+            "P",
+            "N",
+            "E",
+            "H",
+            "O",
+            "D",
+            "U",
+            "G",
+            "T"
+          ],
+          "target": "TUDOU",
+          "display": "TǓDÒU",
+          "hint": "🥔",
+          "label": "TǓDÒU 土豆",
+          "pinyin": "tu3.dou4",
+          "parentNote": "听力 TǓDÒU 土豆。"
+        },
+        {
+          "id": "zh-u9-l7",
+          "type": "missingLetter",
+          "unlocked": [
+            "M",
+            "A",
+            "B",
+            "I",
+            "P",
+            "N",
+            "E",
+            "H",
+            "O",
+            "D",
+            "U",
+            "G",
+            "T"
+          ],
+          "target": "TIAN",
+          "display": "TIĀN",
+          "hint": "☀️",
+          "label": "TIĀN 天",
+          "pinyin": "tian1",
+          "gap": 2,
+          "parentNote": "填空 TI?N：少了 A。"
+        },
+        {
+          "id": "zh-u9-l8",
+          "type": "reviewMix",
+          "unlocked": [
+            "M",
+            "A",
+            "B",
+            "I",
+            "P",
+            "N",
+            "E",
+            "H",
+            "O",
+            "D",
+            "U",
+            "G",
+            "T"
+          ],
+          "target": "GOU",
+          "display": "GǑU",
+          "hint": "🐶",
+          "label": "GǑU 狗",
+          "pinyin": "gou3",
+          "parentNote": "复习：目前掌握最弱的词。",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "zh-u10",
+      "title": "L, Y",
+      "icon": "🐯",
+      "reward": {
+        "emoji": "🐯",
+        "name": "L"
+      },
+      "lessons": [
+        {
+          "id": "zh-u10-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "B",
+            "I",
+            "P",
+            "N",
+            "E",
+            "H",
+            "O",
+            "D",
+            "U",
+            "G",
+            "T",
+            "L",
+            "Y"
+          ],
+          "target": "YA",
+          "display": "YĀ",
+          "hint": "🦆",
+          "label": "YĀ 鸭",
+          "info": "新: 🐯 L, 🌙 Y",
+          "pinyin": "ya1",
+          "parentNote": "新字母 L 和 Y。YĀ 鸭：Y 开头，第一声。"
+        },
+        {
+          "id": "zh-u10-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "B",
+            "I",
+            "P",
+            "N",
+            "E",
+            "H",
+            "O",
+            "D",
+            "U",
+            "G",
+            "T",
+            "L",
+            "Y"
+          ],
+          "target": "YU",
+          "display": "YÚ",
+          "hint": "🐟",
+          "label": "YÚ 鱼",
+          "pinyin": "yu2",
+          "parentNote": "YÚ 鱼：第二声。"
+        },
+        {
+          "id": "zh-u10-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "B",
+            "I",
+            "P",
+            "N",
+            "E",
+            "H",
+            "O",
+            "D",
+            "U",
+            "G",
+            "T",
+            "L",
+            "Y"
+          ],
+          "target": "LAOHU",
+          "display": "LǍOHǓ",
+          "hint": "🐯",
+          "label": "LǍOHǓ 老虎",
+          "pinyin": "lao3.hu3",
+          "vocab": "laohu",
+          "parentNote": "LǍOHǓ 老虎：两个第三声。老虎进入词语背包。"
+        },
+        {
+          "id": "zh-u10-l4",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "B",
+            "I",
+            "P",
+            "N",
+            "E",
+            "H",
+            "O",
+            "D",
+            "U",
+            "G",
+            "T",
+            "L",
+            "Y"
+          ],
+          "target": "YUE",
+          "display": "YUÈ",
+          "hint": "🌙",
+          "label": "YUÈ 月",
+          "pinyin": "yue4",
+          "parentNote": "听力 YUÈ 月。"
+        },
+        {
+          "id": "zh-u10-l5",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "B",
+            "I",
+            "P",
+            "N",
+            "E",
+            "H",
+            "O",
+            "D",
+            "U",
+            "G",
+            "T",
+            "L",
+            "Y"
+          ],
+          "target": "NIUNAI",
+          "display": "NIÚNǍI",
+          "hint": "🥛",
+          "label": "NIÚNǍI 牛奶",
+          "pinyin": "niu2.nai3",
+          "vocab": "niunai",
+          "parentNote": "NIÚNǍI 牛奶：牛奶在句子里解锁了。"
+        },
+        {
+          "id": "zh-u10-l6",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "B",
+            "I",
+            "P",
+            "N",
+            "E",
+            "H",
+            "O",
+            "D",
+            "U",
+            "G",
+            "T",
+            "L",
+            "Y"
+          ],
+          "target": "YEYE",
+          "display": "YÉYE",
+          "hint": "👴",
+          "label": "YÉYE 爷爷",
+          "pinyin": "ye2.ye",
+          "vocab": "yeye",
+          "parentNote": "YÉYE 爷爷：第二声加轻声。爷爷进入词语背包。"
+        },
+        {
+          "id": "zh-u10-l7",
+          "type": "pictureOnly",
+          "unlocked": [
+            "M",
+            "A",
+            "B",
+            "I",
+            "P",
+            "N",
+            "E",
+            "H",
+            "O",
+            "D",
+            "U",
+            "G",
+            "T",
+            "L",
+            "Y"
+          ],
+          "target": "YANG",
+          "display": "YÁNG",
+          "hint": "🐑",
+          "label": "YÁNG 羊",
+          "pinyin": "yang2",
+          "parentNote": "只看图片：孩子自己拼出 YÁNG 羊。"
+        },
+        {
+          "id": "zh-u10-l8",
+          "type": "reviewMix",
+          "unlocked": [
+            "M",
+            "A",
+            "B",
+            "I",
+            "P",
+            "N",
+            "E",
+            "H",
+            "O",
+            "D",
+            "U",
+            "G",
+            "T",
+            "L",
+            "Y"
+          ],
+          "target": "LAOHU",
+          "display": "LǍOHǓ",
+          "hint": "🐯",
+          "label": "LǍOHǓ 老虎",
+          "pinyin": "lao3.hu3",
+          "parentNote": "复习：目前掌握最弱的词。",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "zh-u11",
+      "title": "整个音节词 II",
+      "icon": "🍎",
+      "reward": {
+        "emoji": "🌙",
+        "name": "Y"
+      },
+      "lessons": [
+        {
+          "id": "zh-u11-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "B",
+            "I",
+            "P",
+            "N",
+            "E",
+            "H",
+            "O",
+            "D",
+            "U",
+            "G",
+            "T",
+            "L",
+            "Y"
+          ],
+          "target": "PINGGUO",
+          "display": "PÍNGGUǑ",
+          "hint": "🍎",
+          "label": "PÍNGGUǑ 苹果",
+          "pinyin": "ping2.guo3",
+          "vocab": "pingguo",
+          "parentNote": "PÍNGGUǑ 苹果：七个字母。苹果在句子里解锁了。"
+        },
+        {
+          "id": "zh-u11-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "B",
+            "I",
+            "P",
+            "N",
+            "E",
+            "H",
+            "O",
+            "D",
+            "U",
+            "G",
+            "T",
+            "L",
+            "Y"
+          ],
+          "target": "MIANBAO",
+          "display": "MIÀNBĀO",
+          "hint": "🍞",
+          "label": "MIÀNBĀO 面包",
+          "pinyin": "mian4.bao1",
+          "vocab": "mianbao",
+          "parentNote": "MIÀNBĀO 面包：进入词语背包。"
+        },
+        {
+          "id": "zh-u11-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "B",
+            "I",
+            "P",
+            "N",
+            "E",
+            "H",
+            "O",
+            "D",
+            "U",
+            "G",
+            "T",
+            "L",
+            "Y"
+          ],
+          "target": "BAOBAO",
+          "display": "BǍOBAO",
+          "hint": "👶",
+          "label": "BǍOBAO 宝宝",
+          "pinyin": "bao3.bao",
+          "parentNote": "BǍOBAO 宝宝：第三声加轻声。"
+        },
+        {
+          "id": "zh-u11-l4",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "B",
+            "I",
+            "P",
+            "N",
+            "E",
+            "H",
+            "O",
+            "D",
+            "U",
+            "G",
+            "T",
+            "L",
+            "Y"
+          ],
+          "target": "PUTAO",
+          "display": "PÚTAO",
+          "hint": "🍇",
+          "label": "PÚTAO 葡萄",
+          "pinyin": "pu2.tao",
+          "vocab": "putao",
+          "parentNote": "PÚTAO 葡萄：进入词语背包。"
+        },
+        {
+          "id": "zh-u11-l5",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "B",
+            "I",
+            "P",
+            "N",
+            "E",
+            "H",
+            "O",
+            "D",
+            "U",
+            "G",
+            "T",
+            "L",
+            "Y"
+          ],
+          "target": "TAIYANG",
+          "display": "TÀIYÁNG",
+          "hint": "☀️",
+          "label": "TÀIYÁNG 太阳",
+          "pinyin": "tai4.yang2",
+          "parentNote": "听力 TÀIYÁNG 太阳。"
+        },
+        {
+          "id": "zh-u11-l6",
+          "type": "missingLetter",
+          "unlocked": [
+            "M",
+            "A",
+            "B",
+            "I",
+            "P",
+            "N",
+            "E",
+            "H",
+            "O",
+            "D",
+            "U",
+            "G",
+            "T",
+            "L",
+            "Y"
+          ],
+          "target": "BINGGAN",
+          "display": "BǏNGGĀN",
+          "hint": "🍪",
+          "label": "BǏNGGĀN 饼干",
+          "pinyin": "bing3.gan1",
+          "gap": 4,
+          "parentNote": "填空 BǏNG?ĀN：少了第二个 G。"
+        },
+        {
+          "id": "zh-u11-l7",
+          "type": "reviewMix",
+          "unlocked": [
+            "M",
+            "A",
+            "B",
+            "I",
+            "P",
+            "N",
+            "E",
+            "H",
+            "O",
+            "D",
+            "U",
+            "G",
+            "T",
+            "L",
+            "Y"
+          ],
+          "target": "PINGGUO",
+          "display": "PÍNGGUǑ",
+          "hint": "🍎",
+          "label": "PÍNGGUǑ 苹果",
+          "pinyin": "ping2.guo3",
+          "parentNote": "本阶段最后复习：所有学过的词里最弱的一个。",
           "review": true
         }
       ]
@@ -610,11 +1467,46 @@
         "unlockedBy": "always"
       },
       {
-        "id": "s5",
+        "id": "gou",
         "emoji": "🐶",
         "text": "狗狗",
         "ipa": "gǒugou",
-        "unlockedBy": "always"
+        "unlockedBy": "vocab"
+      },
+      {
+        "id": "didi",
+        "emoji": "👦",
+        "text": "弟弟",
+        "unlockedBy": "vocab",
+        "person": "3sg"
+      },
+      {
+        "id": "niu",
+        "emoji": "🐮",
+        "text": "牛",
+        "unlockedBy": "vocab",
+        "person": "3sg"
+      },
+      {
+        "id": "gege",
+        "emoji": "👦",
+        "text": "哥哥",
+        "unlockedBy": "vocab",
+        "person": "3sg"
+      },
+      {
+        "id": "laohu",
+        "emoji": "🐯",
+        "text": "老虎",
+        "unlockedBy": "vocab",
+        "person": "3sg"
+      },
+      {
+        "id": "yeye",
+        "emoji": "👴",
+        "text": "爷爷",
+        "unlockedBy": "vocab",
+        "person": "3sg"
       }
     ],
     "verbs": [
@@ -663,18 +1555,18 @@
     ],
     "objects": [
       {
-        "id": "o1",
+        "id": "niunai",
         "emoji": "🥛",
-        "text": "奶",
+        "text": "牛奶",
         "ipa": "nǎi",
-        "unlockedBy": "always"
+        "unlockedBy": "vocab"
       },
       {
-        "id": "o2",
+        "id": "pingguo",
         "emoji": "🍎",
         "text": "苹果",
         "ipa": "píngguǒ",
-        "unlockedBy": "always"
+        "unlockedBy": "vocab"
       },
       {
         "id": "o3",
@@ -717,6 +1609,30 @@
         "text": "上厕所",
         "ipa": "shàng cèsuǒ",
         "unlockedBy": "always"
+      },
+      {
+        "id": "tang",
+        "emoji": "🍬",
+        "text": "糖",
+        "unlockedBy": "vocab"
+      },
+      {
+        "id": "dangao",
+        "emoji": "🎂",
+        "text": "蛋糕",
+        "unlockedBy": "vocab"
+      },
+      {
+        "id": "mianbao",
+        "emoji": "🍞",
+        "text": "面包",
+        "unlockedBy": "vocab"
+      },
+      {
+        "id": "putao",
+        "emoji": "🍇",
+        "text": "葡萄",
+        "unlockedBy": "vocab"
       }
     ]
   }
