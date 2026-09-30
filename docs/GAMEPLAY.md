@@ -158,6 +158,9 @@ Zásady:
   (`ProgressService.recordAttempt`). Z ní vybírá `reviewMix` a „Procvičování"
   na mapě (5 nejslabších naučených slov, nabízí se od 3 naučených; nezapisuje
   dokončení lekcí ani nálepky).
+- **Emoji v `hint` jen do Unicode 12** (Android 7–10 novější nevykreslí,
+  z obrázkového kola by byl prázdný čtvereček). Obrázek u `pictureOnly` musí
+  jednoznačně ukazovat to slovo.
 - **Nové lekce jen do nových jednotek.** Jednotka je hotová, když má hotové
   všechny lekce — přidaná lekce by dětem, které ji dokončily, znovu zamkla
   další jednotky. Existující lekci lze změnit typ (id a postup zůstanou).
