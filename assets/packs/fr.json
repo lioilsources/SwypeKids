@@ -57,7 +57,8 @@
           "hint": "👩",
           "label": "MA-MAN",
           "info": "Glisse : 🏠 → ✈️",
-          "ipa": "ma"
+          "ipa": "ma",
+          "parentNote": "Première syllabe : M et A deviennent MA. À la maison, étirez « mmm–aaa », puis dites « ma » vite."
         },
         {
           "id": "fr-u1-l2",
@@ -71,7 +72,8 @@
           "hint": "👩",
           "label": "MA-MAN",
           "ipa": "ma",
-          "review": true
+          "review": true,
+          "parentNote": "Révision de MA — fixe le lien lettre ↔ son."
         }
       ]
     },
@@ -98,7 +100,8 @@
           "hint": "👨",
           "label": "PA-PA",
           "info": "Nouveau : 🍎 P, 🏝️ I",
-          "ipa": "pa"
+          "ipa": "pa",
+          "parentNote": "Nouvelles lettres P et I, syllabe PA (comme papa). P et B se ressemblent : le P souffle."
         },
         {
           "id": "fr-u2-l2",
@@ -113,7 +116,8 @@
           "display": "PI",
           "hint": "🎵",
           "label": "PI-PI",
-          "ipa": "pi"
+          "ipa": "pi",
+          "parentNote": "Syllabe PI : P avec le I connu."
         },
         {
           "id": "fr-u2-l3",
@@ -128,7 +132,8 @@
           "display": "PAPA",
           "hint": "👨",
           "label": "PA-PA",
-          "ipa": "paˈpa"
+          "ipa": "paˈpa",
+          "parentNote": "PAPA : deux syllabes identiques, premier mot entier."
         },
         {
           "id": "fr-u2-l4",
@@ -144,7 +149,8 @@
           "hint": "🤝",
           "label": "A-MI",
           "ipa": "aˈmi",
-          "review": true
+          "review": true,
+          "parentNote": "AMI : voyelle au début, l'enfant entend le A comme un son à part."
         }
       ]
     },
@@ -172,7 +178,8 @@
           "hint": "🦁",
           "label": "LA-LA",
           "info": "Nouveau : 🦁 L",
-          "ipa": "la"
+          "ipa": "la",
+          "parentNote": "Nouvelle lettre L, syllabe LA. Chanter « la-la-la » aide."
         },
         {
           "id": "fr-u3-l2",
@@ -188,7 +195,8 @@
           "display": "LI",
           "hint": "🛏️",
           "label": "LI-LI",
-          "ipa": "li"
+          "ipa": "li",
+          "parentNote": "Syllabe LI : L avec le I."
         },
         {
           "id": "fr-u3-l3",
@@ -204,7 +212,8 @@
           "display": "LILA",
           "hint": "🟣",
           "label": "LI-LA",
-          "ipa": "liˈla"
+          "ipa": "liˈla",
+          "parentNote": "LILA : deux syllabes avec le nouveau L."
         },
         {
           "id": "fr-u3-l4",
@@ -221,7 +230,8 @@
           "hint": "🤕",
           "label": "MAL",
           "ipa": "mal",
-          "review": true
+          "review": true,
+          "parentNote": "MAL finit par une consonne — première syllabe fermée."
         }
       ]
     },
@@ -250,7 +260,8 @@
           "hint": "👩‍🦱",
           "label": "TA-TA",
           "info": "Nouveau : 🐯 T",
-          "ipa": "ta"
+          "ipa": "ta",
+          "parentNote": "Nouvelle lettre T, syllabe TA. T et D se ressemblent : le T souffle."
         },
         {
           "id": "fr-u4-l2",
@@ -267,7 +278,8 @@
           "display": "TATA",
           "hint": "👩‍🦱",
           "label": "TA-TA",
-          "ipa": "taˈta"
+          "ipa": "taˈta",
+          "parentNote": "TATA : deux syllabes identiques."
         },
         {
           "id": "fr-u4-l3",
@@ -285,7 +297,8 @@
           "hint": "🛏️",
           "label": "LIT",
           "ipa": "li",
-          "review": true
+          "review": true,
+          "parentNote": "LIT : le T final ne se prononce pas — première lettre muette, montrez-la sur la carte."
         }
       ]
     },
@@ -315,7 +328,8 @@
           "hint": "🎵",
           "label": "NA-NA",
           "info": "Nouveau : 🎵 N",
-          "ipa": "na"
+          "ipa": "na",
+          "parentNote": "Nouvelle lettre N, syllabe NA. Le N vibre dans le nez."
         }
       ]
     },
@@ -344,7 +358,8 @@
           "display": "MAMAN",
           "hint": "👩",
           "label": "MA-MAN",
-          "ipa": "maˈmɑ̃"
+          "ipa": "maˈmɑ̃",
+          "parentNote": "MAMAN : le mot le plus important. Le N final nasalise le A. Va dans le sac à mots."
         },
         {
           "id": "fr-u6-l2",
@@ -362,7 +377,8 @@
           "display": "ANIMAL",
           "hint": "🐾",
           "label": "A-NI-MAL",
-          "ipa": "aniˈmal"
+          "ipa": "aniˈmal",
+          "parentNote": "ANIMAL : trois syllabes, toutes connues."
         },
         {
           "id": "fr-u6-l3",
@@ -381,7 +397,8 @@
           "hint": "👩",
           "label": "MAMAN",
           "info": "Maintenant des mots entiers !",
-          "ipa": "maˈmɑ̃"
+          "ipa": "maˈmɑ̃",
+          "parentNote": "MAMAN encore — à taper des mains."
         },
         {
           "id": "fr-u6-l4",
@@ -399,7 +416,8 @@
           "display": "PAPA",
           "hint": "👨",
           "label": "PAPA",
-          "ipa": "paˈpa"
+          "ipa": "paˈpa",
+          "parentNote": "Écoute PAPA : le texte est caché, l'enfant entend et trouve les lettres."
         },
         {
           "id": "fr-u6-l5",
@@ -417,7 +435,8 @@
           "display": "TATA",
           "hint": "👩‍🦱",
           "label": "TATA",
-          "ipa": "taˈta"
+          "ipa": "taˈta",
+          "parentNote": "Écoute TATA — des sons aux lettres sans image."
         },
         {
           "id": "fr-u6-l6",
@@ -436,7 +455,8 @@
           "hint": "🟣",
           "label": "LILA",
           "ipa": "liˈla",
-          "review": true
+          "review": true,
+          "parentNote": "Écoute LILA — révision à l'oreille."
         }
       ]
     },
@@ -468,7 +488,8 @@
           "hint": "🚗",
           "label": "AU-TO",
           "info": "Nouveau : 🍊 O, 🏭 U",
-          "ipa": "oˈto"
+          "ipa": "oˈto",
+          "parentNote": "Nouvelles lettres O et U. AUTO : A et U ensemble font « o »."
         },
         {
           "id": "fr-u7-l2",
@@ -488,7 +509,8 @@
           "display": "LOTO",
           "hint": "🎰",
           "label": "LO-TO",
-          "ipa": "loˈto"
+          "ipa": "loˈto",
+          "parentNote": "LOTO : deux syllabes avec O."
         },
         {
           "id": "fr-u7-l3",
@@ -508,7 +530,8 @@
           "display": "NUL",
           "hint": "0️⃣",
           "label": "NUL",
-          "ipa": "nyl"
+          "ipa": "nyl",
+          "parentNote": "NUL : le U français, lèvres arrondies."
         },
         {
           "id": "fr-u7-l4",
@@ -528,7 +551,8 @@
           "display": "TOI",
           "hint": "👈",
           "label": "TOI",
-          "ipa": "twa"
+          "ipa": "twa",
+          "parentNote": "TOI : O et I ensemble font « oi »."
         },
         {
           "id": "fr-u7-l5",
@@ -549,6 +573,857 @@
           "hint": "🏍️",
           "label": "MO-TO",
           "ipa": "moˈto",
+          "review": true,
+          "parentNote": "MOTO : révision de l'unité."
+        }
+      ]
+    },
+    {
+      "id": "fr-u8",
+      "title": "E, S",
+      "icon": "🍈",
+      "reward": {
+        "emoji": "🐘",
+        "name": "E"
+      },
+      "lessons": [
+        {
+          "id": "fr-u8-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "L",
+            "T",
+            "N",
+            "O",
+            "U",
+            "E",
+            "S"
+          ],
+          "target": "MELON",
+          "display": "MELON",
+          "hint": "🍈",
+          "label": "ME-LON",
+          "info": "Nouveau : 🐘 E, ☀️ S",
+          "parentNote": "Nouvelles lettres E et S. MELON : le E se dit « e » léger, le ON est nasal."
+        },
+        {
+          "id": "fr-u8-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "L",
+            "T",
+            "N",
+            "O",
+            "U",
+            "E",
+            "S"
+          ],
+          "target": "LUNE",
+          "display": "LUNE",
+          "hint": "🌙",
+          "label": "LU-NE",
+          "vocab": "lune",
+          "parentNote": "LUNE : le E final est muet — montrez-le sur la carte. Va dans le sac à mots."
+        },
+        {
+          "id": "fr-u8-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "L",
+            "T",
+            "N",
+            "O",
+            "U",
+            "E",
+            "S"
+          ],
+          "target": "SOUPE",
+          "display": "SOUPE",
+          "hint": "🍲",
+          "label": "SOU-PE",
+          "vocab": "soupe",
+          "parentNote": "SOUPE : O et U font « ou ». Va dans le sac à mots."
+        },
+        {
+          "id": "fr-u8-l4",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "L",
+            "T",
+            "N",
+            "O",
+            "U",
+            "E",
+            "S"
+          ],
+          "target": "POULE",
+          "display": "POULE",
+          "hint": "🐔",
+          "label": "POU-LE",
+          "vocab": "poule",
+          "parentNote": "POULE : encore « ou ». La poule va dans le sac."
+        },
+        {
+          "id": "fr-u8-l5",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "L",
+            "T",
+            "N",
+            "O",
+            "U",
+            "E",
+            "S"
+          ],
+          "target": "TULIPE",
+          "display": "TULIPE",
+          "hint": "🌷",
+          "label": "TU-LI-PE",
+          "parentNote": "Écoute TULIPE — trois syllabes à l'oreille."
+        },
+        {
+          "id": "fr-u8-l6",
+          "type": "pictureOnly",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "L",
+            "T",
+            "N",
+            "O",
+            "U",
+            "E",
+            "S"
+          ],
+          "target": "TASSE",
+          "display": "TASSE",
+          "hint": "☕",
+          "label": "TAS-SE",
+          "parentNote": "Image seule : l'enfant écrit TASSE de mémoire (double S)."
+        },
+        {
+          "id": "fr-u8-l7",
+          "type": "missingLetter",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "L",
+            "T",
+            "N",
+            "O",
+            "U",
+            "E",
+            "S"
+          ],
+          "target": "ETOILE",
+          "display": "ÉTOILE",
+          "hint": "⭐",
+          "label": "É-TOI-LE",
+          "gap": 3,
+          "parentNote": "Mot à trou ÉTO?LE : il manque le I de « oi »."
+        },
+        {
+          "id": "fr-u8-l8",
+          "type": "reviewMix",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "L",
+            "T",
+            "N",
+            "O",
+            "U",
+            "E",
+            "S"
+          ],
+          "target": "LUNE",
+          "display": "LUNE",
+          "hint": "🌙",
+          "label": "LU-NE",
+          "parentNote": "Révision : le jeu choisit le mot le plus difficile pour l'enfant.",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "fr-u9",
+      "title": "R, C",
+      "icon": "🐀",
+      "reward": {
+        "emoji": "🦊",
+        "name": "R"
+      },
+      "lessons": [
+        {
+          "id": "fr-u9-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "L",
+            "T",
+            "N",
+            "O",
+            "U",
+            "E",
+            "S",
+            "R",
+            "C"
+          ],
+          "target": "RAT",
+          "display": "RAT",
+          "hint": "🐀",
+          "label": "RAT",
+          "info": "Nouveau : 🦊 R, 🐱 C",
+          "parentNote": "Nouvelles lettres R et C. RAT : T final muet."
+        },
+        {
+          "id": "fr-u9-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "L",
+            "T",
+            "N",
+            "O",
+            "U",
+            "E",
+            "S",
+            "R",
+            "C"
+          ],
+          "target": "CAROTTE",
+          "display": "CAROTTE",
+          "hint": "🥕",
+          "label": "CA-ROTTE",
+          "vocab": "carotte",
+          "parentNote": "CAROTTE : C devant A se dit /k/. Va dans le sac à mots."
+        },
+        {
+          "id": "fr-u9-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "L",
+            "T",
+            "N",
+            "O",
+            "U",
+            "E",
+            "S",
+            "R",
+            "C"
+          ],
+          "target": "TORTUE",
+          "display": "TORTUE",
+          "hint": "🐢",
+          "label": "TOR-TUE",
+          "vocab": "tortue",
+          "parentNote": "TORTUE : syllabe fermée TOR. La tortue va dans le sac."
+        },
+        {
+          "id": "fr-u9-l4",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "L",
+            "T",
+            "N",
+            "O",
+            "U",
+            "E",
+            "S",
+            "R",
+            "C"
+          ],
+          "target": "PORTE",
+          "display": "PORTE",
+          "hint": "🚪",
+          "label": "POR-TE",
+          "parentNote": "PORTE : R avant T."
+        },
+        {
+          "id": "fr-u9-l5",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "L",
+            "T",
+            "N",
+            "O",
+            "U",
+            "E",
+            "S",
+            "R",
+            "C"
+          ],
+          "target": "CAMION",
+          "display": "CAMION",
+          "hint": "🚚",
+          "label": "CA-MION",
+          "parentNote": "Écoute CAMION — ION à la fin."
+        },
+        {
+          "id": "fr-u9-l6",
+          "type": "pictureOnly",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "L",
+            "T",
+            "N",
+            "O",
+            "U",
+            "E",
+            "S",
+            "R",
+            "C"
+          ],
+          "target": "TARTE",
+          "display": "TARTE",
+          "hint": "🥧",
+          "label": "TAR-TE",
+          "parentNote": "Image seule : TARTE de mémoire."
+        },
+        {
+          "id": "fr-u9-l7",
+          "type": "missingLetter",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "L",
+            "T",
+            "N",
+            "O",
+            "U",
+            "E",
+            "S",
+            "R",
+            "C"
+          ],
+          "target": "SOURIS",
+          "display": "SOURIS",
+          "hint": "🐭",
+          "label": "SOU-RIS",
+          "gap": 3,
+          "parentNote": "Mot à trou SOU?IS : il manque le R. Le S final est muet."
+        },
+        {
+          "id": "fr-u9-l8",
+          "type": "reviewMix",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "L",
+            "T",
+            "N",
+            "O",
+            "U",
+            "E",
+            "S",
+            "R",
+            "C"
+          ],
+          "target": "CAROTTE",
+          "display": "CAROTTE",
+          "hint": "🥕",
+          "label": "CA-ROTTE",
+          "parentNote": "Révision : le mot le plus faible jusqu'ici.",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "fr-u10",
+      "title": "B, D",
+      "icon": "🍌",
+      "reward": {
+        "emoji": "🍌",
+        "name": "B"
+      },
+      "lessons": [
+        {
+          "id": "fr-u10-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "L",
+            "T",
+            "N",
+            "O",
+            "U",
+            "E",
+            "S",
+            "R",
+            "C",
+            "B",
+            "D"
+          ],
+          "target": "BANANE",
+          "display": "BANANE",
+          "hint": "🍌",
+          "label": "BA-NA-NE",
+          "info": "Nouveau : 🍌 B, 🐬 D",
+          "vocab": "banane",
+          "parentNote": "Nouvelles lettres B et D. BANANE : trois syllabes. Va dans le sac."
+        },
+        {
+          "id": "fr-u10-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "L",
+            "T",
+            "N",
+            "O",
+            "U",
+            "E",
+            "S",
+            "R",
+            "C",
+            "B",
+            "D"
+          ],
+          "target": "BALLON",
+          "display": "BALLON",
+          "hint": "🎈",
+          "label": "BAL-LON",
+          "vocab": "ballon",
+          "parentNote": "BALLON : double L, ON nasal. Va dans le sac."
+        },
+        {
+          "id": "fr-u10-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "L",
+            "T",
+            "N",
+            "O",
+            "U",
+            "E",
+            "S",
+            "R",
+            "C",
+            "B",
+            "D"
+          ],
+          "target": "DENT",
+          "display": "DENT",
+          "hint": "🦷",
+          "label": "DENT",
+          "parentNote": "DENT : EN nasal, T final muet."
+        },
+        {
+          "id": "fr-u10-l4",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "L",
+            "T",
+            "N",
+            "O",
+            "U",
+            "E",
+            "S",
+            "R",
+            "C",
+            "B",
+            "D"
+          ],
+          "target": "CANARD",
+          "display": "CANARD",
+          "hint": "🦆",
+          "label": "CA-NARD",
+          "vocab": "canard",
+          "parentNote": "CANARD : D final muet. Le canard va dans le sac."
+        },
+        {
+          "id": "fr-u10-l5",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "L",
+            "T",
+            "N",
+            "O",
+            "U",
+            "E",
+            "S",
+            "R",
+            "C",
+            "B",
+            "D"
+          ],
+          "target": "BATEAU",
+          "display": "BATEAU",
+          "hint": "⛵",
+          "label": "BA-TEAU",
+          "parentNote": "Écoute BATEAU — EAU se dit « o »."
+        },
+        {
+          "id": "fr-u10-l6",
+          "type": "pictureOnly",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "L",
+            "T",
+            "N",
+            "O",
+            "U",
+            "E",
+            "S",
+            "R",
+            "C",
+            "B",
+            "D"
+          ],
+          "target": "ROBOT",
+          "display": "ROBOT",
+          "hint": "🤖",
+          "label": "RO-BOT",
+          "parentNote": "Image seule : ROBOT de mémoire."
+        },
+        {
+          "id": "fr-u10-l7",
+          "type": "missingLetter",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "L",
+            "T",
+            "N",
+            "O",
+            "U",
+            "E",
+            "S",
+            "R",
+            "C",
+            "B",
+            "D"
+          ],
+          "target": "SALADE",
+          "display": "SALADE",
+          "hint": "🥗",
+          "label": "SA-LA-DE",
+          "gap": 3,
+          "parentNote": "Mot à trou SAL?DE : il manque le A."
+        },
+        {
+          "id": "fr-u10-l8",
+          "type": "reviewMix",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "L",
+            "T",
+            "N",
+            "O",
+            "U",
+            "E",
+            "S",
+            "R",
+            "C",
+            "B",
+            "D"
+          ],
+          "target": "BALLON",
+          "display": "BALLON",
+          "hint": "🎈",
+          "label": "BAL-LON",
+          "parentNote": "Révision : le mot le plus faible jusqu'ici.",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "fr-u11",
+      "title": "Mots entiers II",
+      "icon": "🐰",
+      "reward": {
+        "emoji": "🐱",
+        "name": "C"
+      },
+      "lessons": [
+        {
+          "id": "fr-u11-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "L",
+            "T",
+            "N",
+            "O",
+            "U",
+            "E",
+            "S",
+            "R",
+            "C",
+            "B",
+            "D"
+          ],
+          "target": "POMME",
+          "display": "POMME",
+          "hint": "🍎",
+          "label": "POM-ME",
+          "vocab": "pomme",
+          "parentNote": "POMME : double M. « Une pomme » se débloque dans les phrases."
+        },
+        {
+          "id": "fr-u11-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "L",
+            "T",
+            "N",
+            "O",
+            "U",
+            "E",
+            "S",
+            "R",
+            "C",
+            "B",
+            "D"
+          ],
+          "target": "LAPIN",
+          "display": "LAPIN",
+          "hint": "🐰",
+          "label": "LA-PIN",
+          "vocab": "lapin",
+          "parentNote": "LAPIN : IN nasal. Le lapin va dans le sac."
+        },
+        {
+          "id": "fr-u11-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "L",
+            "T",
+            "N",
+            "O",
+            "U",
+            "E",
+            "S",
+            "R",
+            "C",
+            "B",
+            "D"
+          ],
+          "target": "MAISON",
+          "display": "MAISON",
+          "hint": "🏠",
+          "label": "MAI-SON",
+          "vocab": "maison",
+          "parentNote": "MAISON : AI se dit « è ». « À la maison » se débloque dans les phrases."
+        },
+        {
+          "id": "fr-u11-l4",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "L",
+            "T",
+            "N",
+            "O",
+            "U",
+            "E",
+            "S",
+            "R",
+            "C",
+            "B",
+            "D"
+          ],
+          "target": "TOMATE",
+          "display": "TOMATE",
+          "hint": "🍅",
+          "label": "TO-MA-TE",
+          "parentNote": "TOMATE : trois syllabes connues."
+        },
+        {
+          "id": "fr-u11-l5",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "L",
+            "T",
+            "N",
+            "O",
+            "U",
+            "E",
+            "S",
+            "R",
+            "C",
+            "B",
+            "D"
+          ],
+          "target": "MOUTON",
+          "display": "MOUTON",
+          "hint": "🐑",
+          "label": "MOU-TON",
+          "parentNote": "Écoute MOUTON."
+        },
+        {
+          "id": "fr-u11-l6",
+          "type": "pictureOnly",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "L",
+            "T",
+            "N",
+            "O",
+            "U",
+            "E",
+            "S",
+            "R",
+            "C",
+            "B",
+            "D"
+          ],
+          "target": "OURS",
+          "display": "OURS",
+          "hint": "🐻",
+          "label": "OURS",
+          "parentNote": "Image seule : OURS — le S final se prononce ici."
+        },
+        {
+          "id": "fr-u11-l7",
+          "type": "missingLetter",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "L",
+            "T",
+            "N",
+            "O",
+            "U",
+            "E",
+            "S",
+            "R",
+            "C",
+            "B",
+            "D"
+          ],
+          "target": "PAPILLON",
+          "display": "PAPILLON",
+          "hint": "🦋",
+          "label": "PA-PIL-LON",
+          "gap": 4,
+          "parentNote": "Mot à trou PAPI?LON : le mot le plus long jusqu'ici."
+        },
+        {
+          "id": "fr-u11-l8",
+          "type": "reviewMix",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "L",
+            "T",
+            "N",
+            "O",
+            "U",
+            "E",
+            "S",
+            "R",
+            "C",
+            "B",
+            "D"
+          ],
+          "target": "LAPIN",
+          "display": "LAPIN",
+          "hint": "🐰",
+          "label": "LA-PIN",
+          "parentNote": "Révision finale de la bande : le mot le plus faible de tous.",
           "review": true
         }
       ]
@@ -590,6 +1465,34 @@
         "emoji": "🐶",
         "text": "Toutou",
         "unlockedBy": "always",
+        "person": "3sg"
+      },
+      {
+        "id": "poule",
+        "emoji": "🐔",
+        "text": "La poule",
+        "unlockedBy": "vocab",
+        "person": "3sg"
+      },
+      {
+        "id": "tortue",
+        "emoji": "🐢",
+        "text": "La tortue",
+        "unlockedBy": "vocab",
+        "person": "3sg"
+      },
+      {
+        "id": "canard",
+        "emoji": "🦆",
+        "text": "Le canard",
+        "unlockedBy": "vocab",
+        "person": "3sg"
+      },
+      {
+        "id": "lapin",
+        "emoji": "🐰",
+        "text": "Le lapin",
+        "unlockedBy": "vocab",
         "person": "3sg"
       }
     ],
@@ -666,10 +1569,10 @@
         }
       },
       {
-        "id": "o2",
+        "id": "pomme",
         "emoji": "🍎",
         "text": "une pomme",
-        "unlockedBy": "always",
+        "unlockedBy": "vocab",
         "forms": {
           "instr": "avec une pomme"
         }
@@ -707,10 +1610,10 @@
         }
       },
       {
-        "id": "o6",
+        "id": "maison",
         "emoji": "🏠",
         "text": "à la maison",
-        "unlockedBy": "always",
+        "unlockedBy": "vocab",
         "forms": {
           "dir": "à la maison",
           "loc": "à la maison",
@@ -737,6 +1640,61 @@
           "dir": "au pot",
           "loc": "au pot",
           "instr": "au pot"
+        }
+      },
+      {
+        "id": "lune",
+        "emoji": "🌙",
+        "text": "la lune",
+        "unlockedBy": "vocab",
+        "forms": {
+          "dir": "sur la lune",
+          "loc": "sur la lune",
+          "instr": "avec la lune"
+        }
+      },
+      {
+        "id": "soupe",
+        "emoji": "🍲",
+        "text": "de la soupe",
+        "unlockedBy": "vocab",
+        "forms": {
+          "dir": "à la soupe",
+          "loc": "près de la soupe",
+          "instr": "avec de la soupe"
+        }
+      },
+      {
+        "id": "carotte",
+        "emoji": "🥕",
+        "text": "une carotte",
+        "unlockedBy": "vocab",
+        "forms": {
+          "dir": "à la carotte",
+          "loc": "près de la carotte",
+          "instr": "avec une carotte"
+        }
+      },
+      {
+        "id": "banane",
+        "emoji": "🍌",
+        "text": "une banane",
+        "unlockedBy": "vocab",
+        "forms": {
+          "dir": "à la banane",
+          "loc": "près de la banane",
+          "instr": "avec une banane"
+        }
+      },
+      {
+        "id": "ballon",
+        "emoji": "🎈",
+        "text": "un ballon",
+        "unlockedBy": "vocab",
+        "forms": {
+          "dir": "au ballon",
+          "loc": "près du ballon",
+          "instr": "avec un ballon"
         }
       }
     ]

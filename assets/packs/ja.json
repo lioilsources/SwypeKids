@@ -57,7 +57,8 @@
           "hint": "🐴",
           "label": "MA ま",
           "info": "スワイプ: 🍊 → 🍬",
-          "ipa": "ma"
+          "ipa": "ma",
+          "parentNote": "さいしょの音：M と A で「ま」。おうちで「まーーー」とのばしてから、はやく「ま」と言ってみましょう。"
         },
         {
           "id": "ja-u1-l2",
@@ -71,7 +72,8 @@
           "hint": "👩",
           "label": "MAMA まま",
           "ipa": "mama",
-          "review": true
+          "review": true,
+          "parentNote": "MAMA まま：おなじ音がふたつ。さいしょのことば。ことばのかばんに入ります。"
         }
       ]
     },
@@ -97,7 +99,8 @@
           "hint": "👨",
           "label": "PA ぱ",
           "info": "新しい: 🐼 P",
-          "ipa": "pa"
+          "ipa": "pa",
+          "parentNote": "あたらしい文字 P、「ぱ」。ローマ字は P でも、ひらがなは「ぱ」です。"
         },
         {
           "id": "ja-u2-l2",
@@ -112,7 +115,8 @@
           "hint": "👨",
           "label": "PAPA ぱぱ",
           "ipa": "papa",
-          "review": true
+          "review": true,
+          "parentNote": "PAPA ぱぱ：おなじ音がふたつ。"
         }
       ]
     },
@@ -139,7 +143,8 @@
           "hint": "👀",
           "label": "MI み",
           "info": "新しい: 🐶 I",
-          "ipa": "mi"
+          "ipa": "mi",
+          "parentNote": "あたらしい文字 I、「み」。おうちで：「い」で始まることばは？（いぬ、いす）"
         },
         {
           "id": "ja-u3-l2",
@@ -155,7 +160,8 @@
           "hint": "👂",
           "label": "MIMI みみ",
           "ipa": "mimi",
-          "review": true
+          "review": true,
+          "parentNote": "MIMI みみ：じぶんのみみをさわってみましょう。"
         }
       ]
     },
@@ -184,7 +190,8 @@
           "hint": "🐱",
           "label": "NE ね",
           "info": "新しい: 🐱 N, ✏️ E",
-          "ipa": "ne"
+          "ipa": "ne",
+          "parentNote": "あたらしい文字 N と E、「ね」。"
         },
         {
           "id": "ja-u4-l2",
@@ -201,7 +208,8 @@
           "display": "あめ",
           "hint": "🍬",
           "label": "AME あめ",
-          "ipa": "ame"
+          "ipa": "ame",
+          "parentNote": "AME あめ：ぼいんではじまることば。"
         },
         {
           "id": "ja-u4-l3",
@@ -216,9 +224,761 @@
           ],
           "target": "MAME",
           "display": "まめ",
-          "hint": "🫘",
+          "hint": "🥜",
           "label": "MAME まめ",
           "ipa": "mame",
+          "review": true,
+          "parentNote": "MAME まめ：このユニットのふくしゅう。"
+        }
+      ]
+    },
+    {
+      "id": "ja-u5",
+      "title": "O, K",
+      "icon": "🍚",
+      "reward": {
+        "emoji": "☂️",
+        "name": "K"
+      },
+      "lessons": [
+        {
+          "id": "ja-u5-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "N",
+            "E",
+            "O",
+            "K"
+          ],
+          "target": "KO",
+          "display": "こ",
+          "hint": "🍚",
+          "label": "KO こ",
+          "info": "新しい: 🍙 O, ☂️ K",
+          "parentNote": "あたらしい文字 O と K、「こ」。おうちで：「こ」で始まることばは？（こめ、こま）"
+        },
+        {
+          "id": "ja-u5-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "N",
+            "E",
+            "O",
+            "K"
+          ],
+          "target": "NEKO",
+          "display": "ねこ",
+          "hint": "🐱",
+          "label": "NEKO ねこ",
+          "vocab": "neko",
+          "parentNote": "NEKO ねこ：ねこが文づくりに登場します。"
+        },
+        {
+          "id": "ja-u5-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "N",
+            "E",
+            "O",
+            "K"
+          ],
+          "target": "KAME",
+          "display": "かめ",
+          "hint": "🐢",
+          "label": "KAME かめ",
+          "vocab": "kame",
+          "parentNote": "KAME かめ：かめもことばのかばんへ。"
+        },
+        {
+          "id": "ja-u5-l4",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "N",
+            "E",
+            "O",
+            "K"
+          ],
+          "target": "KANI",
+          "display": "かに",
+          "hint": "🦀",
+          "label": "KANI かに",
+          "parentNote": "KANI かに：K で始まるみっつめのことば。"
+        },
+        {
+          "id": "ja-u5-l5",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "N",
+            "E",
+            "O",
+            "K"
+          ],
+          "target": "KOME",
+          "display": "こめ",
+          "hint": "🍚",
+          "label": "KOME こめ",
+          "vocab": "kome",
+          "parentNote": "KOME こめ：ことばのかばんに入ります。"
+        },
+        {
+          "id": "ja-u5-l6",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "N",
+            "E",
+            "O",
+            "K"
+          ],
+          "target": "IKA",
+          "display": "いか",
+          "hint": "🦑",
+          "label": "IKA いか",
+          "parentNote": "きくラウンド IKA いか：文字はかくれています。耳だけで文字をさがします。"
+        },
+        {
+          "id": "ja-u5-l7",
+          "type": "pictureOnly",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "N",
+            "E",
+            "O",
+            "K"
+          ],
+          "target": "KAO",
+          "display": "かお",
+          "hint": "😊",
+          "label": "KAO かお",
+          "parentNote": "絵だけ：KAO かお をおぼえて書きます。"
+        },
+        {
+          "id": "ja-u5-l8",
+          "type": "reviewMix",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "N",
+            "E",
+            "O",
+            "K"
+          ],
+          "target": "NEKO",
+          "display": "ねこ",
+          "hint": "🐱",
+          "label": "NEKO ねこ",
+          "parentNote": "ふくしゅう：いちばんにがてなことばをゲームがえらびます。",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "ja-u6",
+      "title": "U, S",
+      "icon": "🐟",
+      "reward": {
+        "emoji": "🐟",
+        "name": "S"
+      },
+      "lessons": [
+        {
+          "id": "ja-u6-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "N",
+            "E",
+            "O",
+            "K",
+            "U",
+            "S"
+          ],
+          "target": "UMA",
+          "display": "うま",
+          "hint": "🐴",
+          "label": "UMA うま",
+          "info": "新しい: 🐰 U, 🐟 S",
+          "vocab": "uma",
+          "parentNote": "あたらしい文字 U と S。UMA うま：うまが文づくりに登場します。"
+        },
+        {
+          "id": "ja-u6-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "N",
+            "E",
+            "O",
+            "K",
+            "U",
+            "S"
+          ],
+          "target": "INU",
+          "display": "いぬ",
+          "hint": "🐶",
+          "label": "INU いぬ",
+          "vocab": "inu",
+          "parentNote": "INU いぬ：いぬもことばのかばんへ。"
+        },
+        {
+          "id": "ja-u6-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "N",
+            "E",
+            "O",
+            "K",
+            "U",
+            "S"
+          ],
+          "target": "SAKANA",
+          "display": "さかな",
+          "hint": "🐟",
+          "label": "SAKANA さかな",
+          "vocab": "sakana",
+          "parentNote": "SAKANA さかな：みっつの音。ことばのかばんに入ります。"
+        },
+        {
+          "id": "ja-u6-l4",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "N",
+            "E",
+            "O",
+            "K",
+            "U",
+            "S"
+          ],
+          "target": "KASA",
+          "display": "かさ",
+          "hint": "☂️",
+          "label": "KASA かさ",
+          "parentNote": "KASA かさ：S は「さ」の音。"
+        },
+        {
+          "id": "ja-u6-l5",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "N",
+            "E",
+            "O",
+            "K",
+            "U",
+            "S"
+          ],
+          "target": "KUMA",
+          "display": "くま",
+          "hint": "🐻",
+          "label": "KUMA くま",
+          "parentNote": "KUMA くま：U と M で「く」「ま」。"
+        },
+        {
+          "id": "ja-u6-l6",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "N",
+            "E",
+            "O",
+            "K",
+            "U",
+            "S"
+          ],
+          "target": "UMI",
+          "display": "うみ",
+          "hint": "🌊",
+          "label": "UMI うみ",
+          "parentNote": "きくラウンド UMI うみ。"
+        },
+        {
+          "id": "ja-u6-l7",
+          "type": "pictureOnly",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "N",
+            "E",
+            "O",
+            "K",
+            "U",
+            "S"
+          ],
+          "target": "SUIKA",
+          "display": "すいか",
+          "hint": "🍉",
+          "label": "SUIKA すいか",
+          "parentNote": "絵だけ：SUIKA すいか をおぼえて書きます。"
+        },
+        {
+          "id": "ja-u6-l8",
+          "type": "reviewMix",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "N",
+            "E",
+            "O",
+            "K",
+            "U",
+            "S"
+          ],
+          "target": "UMA",
+          "display": "うま",
+          "hint": "🐴",
+          "label": "UMA うま",
+          "parentNote": "ふくしゅう：いまいちばんにがてなことば。",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "ja-u7",
+      "title": "T, R",
+      "icon": "🐙",
+      "reward": {
+        "emoji": "🐙",
+        "name": "T"
+      },
+      "lessons": [
+        {
+          "id": "ja-u7-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "N",
+            "E",
+            "O",
+            "K",
+            "U",
+            "S",
+            "T",
+            "R"
+          ],
+          "target": "TAKO",
+          "display": "たこ",
+          "hint": "🐙",
+          "label": "TAKO たこ",
+          "info": "新しい: 🐙 T, 🍎 R",
+          "vocab": "tako",
+          "parentNote": "あたらしい文字 T と R。TAKO たこ：たこが文づくりに登場します。"
+        },
+        {
+          "id": "ja-u7-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "N",
+            "E",
+            "O",
+            "K",
+            "U",
+            "S",
+            "T",
+            "R"
+          ],
+          "target": "TORI",
+          "display": "とり",
+          "hint": "🐦",
+          "label": "TORI とり",
+          "vocab": "tori",
+          "parentNote": "TORI とり：R は「り」の音。とりもことばのかばんへ。"
+        },
+        {
+          "id": "ja-u7-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "N",
+            "E",
+            "O",
+            "K",
+            "U",
+            "S",
+            "T",
+            "R"
+          ],
+          "target": "KURUMA",
+          "display": "くるま",
+          "hint": "🚗",
+          "label": "KURUMA くるま",
+          "vocab": "kuruma",
+          "parentNote": "KURUMA くるま：文づくりで「くるま」が使えるようになります。"
+        },
+        {
+          "id": "ja-u7-l4",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "N",
+            "E",
+            "O",
+            "K",
+            "U",
+            "S",
+            "T",
+            "R"
+          ],
+          "target": "MIKAN",
+          "display": "みかん",
+          "hint": "🍊",
+          "label": "MIKAN みかん",
+          "vocab": "mikan",
+          "parentNote": "MIKAN みかん：さいごの N は「ん」。ことばのかばんに入ります。"
+        },
+        {
+          "id": "ja-u7-l5",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "N",
+            "E",
+            "O",
+            "K",
+            "U",
+            "S",
+            "T",
+            "R"
+          ],
+          "target": "SAKURA",
+          "display": "さくら",
+          "hint": "🌸",
+          "label": "SAKURA さくら",
+          "parentNote": "SAKURA さくら：みっつの音。"
+        },
+        {
+          "id": "ja-u7-l6",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "N",
+            "E",
+            "O",
+            "K",
+            "U",
+            "S",
+            "T",
+            "R"
+          ],
+          "target": "RISU",
+          "display": "りす",
+          "hint": "🐿️",
+          "label": "RISU りす",
+          "parentNote": "きくラウンド RISU りす。"
+        },
+        {
+          "id": "ja-u7-l7",
+          "type": "pictureOnly",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "N",
+            "E",
+            "O",
+            "K",
+            "U",
+            "S",
+            "T",
+            "R"
+          ],
+          "target": "TOMATO",
+          "display": "とまと",
+          "hint": "🍅",
+          "label": "TOMATO とまと",
+          "parentNote": "絵だけ：TOMATO とまと をおぼえて書きます。"
+        },
+        {
+          "id": "ja-u7-l8",
+          "type": "reviewMix",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "N",
+            "E",
+            "O",
+            "K",
+            "U",
+            "S",
+            "T",
+            "R"
+          ],
+          "target": "TAKO",
+          "display": "たこ",
+          "hint": "🐙",
+          "label": "TAKO たこ",
+          "parentNote": "ふくしゅう：いまいちばんにがてなことば。",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "ja-u8",
+      "title": "ことば II",
+      "icon": "🍑",
+      "reward": {
+        "emoji": "🍙",
+        "name": "O"
+      },
+      "lessons": [
+        {
+          "id": "ja-u8-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "N",
+            "E",
+            "O",
+            "K",
+            "U",
+            "S",
+            "T",
+            "R"
+          ],
+          "target": "MOMO",
+          "display": "もも",
+          "hint": "🍑",
+          "label": "MOMO もも",
+          "vocab": "momo",
+          "parentNote": "MOMO もも：おなじ音がふたつ。ことばのかばんに入ります。"
+        },
+        {
+          "id": "ja-u8-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "N",
+            "E",
+            "O",
+            "K",
+            "U",
+            "S",
+            "T",
+            "R"
+          ],
+          "target": "KAERU",
+          "display": "かえる",
+          "hint": "🐸",
+          "label": "KAERU かえる",
+          "vocab": "kaeru",
+          "parentNote": "KAERU かえる：ぼいんがつづくところ（あ・え）に注意。かえるが文づくりに登場します。"
+        },
+        {
+          "id": "ja-u8-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "N",
+            "E",
+            "O",
+            "K",
+            "U",
+            "S",
+            "T",
+            "R"
+          ],
+          "target": "KUMO",
+          "display": "くも",
+          "hint": "☁️",
+          "label": "KUMO くも",
+          "parentNote": "KUMO くも：KUMA くま と一文字ちがい。"
+        },
+        {
+          "id": "ja-u8-l4",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "N",
+            "E",
+            "O",
+            "K",
+            "U",
+            "S",
+            "T",
+            "R"
+          ],
+          "target": "NIKU",
+          "display": "にく",
+          "hint": "🍖",
+          "label": "NIKU にく",
+          "parentNote": "NIKU にく：N は「に」の音。"
+        },
+        {
+          "id": "ja-u8-l5",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "N",
+            "E",
+            "O",
+            "K",
+            "U",
+            "S",
+            "T",
+            "R"
+          ],
+          "target": "IMO",
+          "display": "いも",
+          "hint": "🍠",
+          "label": "IMO いも",
+          "parentNote": "きくラウンド IMO いも。"
+        },
+        {
+          "id": "ja-u8-l6",
+          "type": "pictureOnly",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "N",
+            "E",
+            "O",
+            "K",
+            "U",
+            "S",
+            "T",
+            "R"
+          ],
+          "target": "MARU",
+          "display": "まる",
+          "hint": "⭕",
+          "label": "MARU まる",
+          "parentNote": "絵だけ：MARU まる をおぼえて書きます。"
+        },
+        {
+          "id": "ja-u8-l7",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "N",
+            "E",
+            "O",
+            "K",
+            "U",
+            "S",
+            "T",
+            "R"
+          ],
+          "target": "KAMINARI",
+          "display": "かみなり",
+          "hint": "⚡",
+          "label": "KAMINARI かみなり",
+          "parentNote": "KAMINARI かみなり：いちばん長いことば。ひとつずつ音をつなげます。"
+        },
+        {
+          "id": "ja-u8-l8",
+          "type": "reviewMix",
+          "unlocked": [
+            "M",
+            "A",
+            "P",
+            "I",
+            "N",
+            "E",
+            "O",
+            "K",
+            "U",
+            "S",
+            "T",
+            "R"
+          ],
+          "target": "MOMO",
+          "display": "もも",
+          "hint": "🍑",
+          "label": "MOMO もも",
+          "parentNote": "この段階のさいごのふくしゅう：ぜんぶの中でいちばんにがてなことば。",
           "review": true
         }
       ]
@@ -261,6 +1021,55 @@
         "text": "わんわんは",
         "ipa": "wanwan wa",
         "unlockedBy": "always"
+      },
+      {
+        "id": "neko",
+        "emoji": "🐱",
+        "text": "ねこは",
+        "unlockedBy": "vocab",
+        "person": "3sg"
+      },
+      {
+        "id": "kame",
+        "emoji": "🐢",
+        "text": "かめは",
+        "unlockedBy": "vocab",
+        "person": "3sg"
+      },
+      {
+        "id": "uma",
+        "emoji": "🐴",
+        "text": "うまは",
+        "unlockedBy": "vocab",
+        "person": "3sg"
+      },
+      {
+        "id": "inu",
+        "emoji": "🐶",
+        "text": "いぬは",
+        "unlockedBy": "vocab",
+        "person": "3sg"
+      },
+      {
+        "id": "tako",
+        "emoji": "🐙",
+        "text": "たこは",
+        "unlockedBy": "vocab",
+        "person": "3sg"
+      },
+      {
+        "id": "tori",
+        "emoji": "🐦",
+        "text": "とりは",
+        "unlockedBy": "vocab",
+        "person": "3sg"
+      },
+      {
+        "id": "kaeru",
+        "emoji": "🐸",
+        "text": "かえるは",
+        "unlockedBy": "vocab",
+        "person": "3sg"
       }
     ],
     "verbs": [
@@ -349,11 +1158,11 @@
         }
       },
       {
-        "id": "o4",
+        "id": "kuruma",
         "emoji": "🚗",
         "text": "くるま",
         "ipa": "kuruma",
-        "unlockedBy": "always",
+        "unlockedBy": "vocab",
         "forms": {
           "acc": "くるまを",
           "dir": "くるまに",
@@ -407,6 +1216,54 @@
           "dir": "おまるへ",
           "loc": "おまるで",
           "instr": "おまるで"
+        }
+      },
+      {
+        "id": "kome",
+        "emoji": "🍚",
+        "text": "こめ",
+        "unlockedBy": "vocab",
+        "forms": {
+          "acc": "こめを",
+          "instr": "こめで",
+          "loc": "こめで",
+          "dir": "こめへ"
+        }
+      },
+      {
+        "id": "sakana",
+        "emoji": "🐟",
+        "text": "さかな",
+        "unlockedBy": "vocab",
+        "forms": {
+          "acc": "さかなを",
+          "instr": "さかなで",
+          "loc": "さかなで",
+          "dir": "さかなへ"
+        }
+      },
+      {
+        "id": "mikan",
+        "emoji": "🍊",
+        "text": "みかん",
+        "unlockedBy": "vocab",
+        "forms": {
+          "acc": "みかんを",
+          "instr": "みかんで",
+          "loc": "みかんで",
+          "dir": "みかんへ"
+        }
+      },
+      {
+        "id": "momo",
+        "emoji": "🍑",
+        "text": "もも",
+        "unlockedBy": "vocab",
+        "forms": {
+          "acc": "ももを",
+          "instr": "ももで",
+          "loc": "ももで",
+          "dir": "ももへ"
         }
       }
     ]

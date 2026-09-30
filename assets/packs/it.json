@@ -57,7 +57,8 @@
           "hint": "👩",
           "label": "MAM-MA",
           "info": "Scorri: 🍎 → 🐝",
-          "ipa": "ma"
+          "ipa": "ma",
+          "parentNote": "Prima sillaba: M e A diventano MA. A casa allungate «mmm–aaa», poi dite «ma» veloce."
         },
         {
           "id": "it-u1-l2",
@@ -71,7 +72,8 @@
           "hint": "👩",
           "label": "MAM-MA",
           "ipa": "ma",
-          "review": true
+          "review": true,
+          "parentNote": "Ripasso di MA — fissa il legame lettera ↔ suono."
         }
       ]
     },
@@ -97,7 +99,8 @@
           "hint": "🐭",
           "label": "MI-MI",
           "info": "Nuovo: 🏝️ I",
-          "ipa": "mi"
+          "ipa": "mi",
+          "parentNote": "Nuova lettera I, sillaba MI. A casa: cosa inizia con I? (isola, imbuto)"
         },
         {
           "id": "it-u2-l2",
@@ -111,7 +114,8 @@
           "display": "AMI",
           "hint": "❤️",
           "label": "A-MI",
-          "ipa": "ˈami"
+          "ipa": "ˈami",
+          "parentNote": "AMI: vocale all'inizio, il bambino sente la A come suono a sé."
         },
         {
           "id": "it-u2-l3",
@@ -126,7 +130,8 @@
           "hint": "👩",
           "label": "MA-MÌ",
           "ipa": "maˈmi",
-          "review": true
+          "review": true,
+          "parentNote": "MAMÌ: due sillabe note, prima parola intera."
         }
       ]
     },
@@ -153,7 +158,8 @@
           "hint": "👨",
           "label": "PA-PÀ",
           "info": "Nuovo: 🍕 P",
-          "ipa": "pa"
+          "ipa": "pa",
+          "parentNote": "Nuova lettera P, sillaba PA (come papà). P e B si somigliano: la P soffia."
         },
         {
           "id": "it-u3-l2",
@@ -168,7 +174,8 @@
           "display": "PI",
           "hint": "🎵",
           "label": "PI-PI",
-          "ipa": "pi"
+          "ipa": "pi",
+          "parentNote": "Sillaba PI: P con la I nota."
         },
         {
           "id": "it-u3-l3",
@@ -184,7 +191,8 @@
           "hint": "🗺️",
           "label": "MAP-PA",
           "ipa": "ˈmappa",
-          "review": true
+          "review": true,
+          "parentNote": "MAPPA: doppia P, si passa su tutte e due."
         }
       ]
     },
@@ -212,7 +220,8 @@
           "hint": "🎵",
           "label": "NA-NA",
           "info": "Nuovo: 👃 N",
-          "ipa": "na"
+          "ipa": "na",
+          "parentNote": "Nuova lettera N, sillaba NA. La N vibra nel naso."
         },
         {
           "id": "it-u4-l2",
@@ -228,7 +237,8 @@
           "display": "NANNA",
           "hint": "💤",
           "label": "NAN-NA",
-          "ipa": "ˈnanna"
+          "ipa": "ˈnanna",
+          "parentNote": "NANNA: doppia N."
         },
         {
           "id": "it-u4-l3",
@@ -245,7 +255,8 @@
           "hint": "🖐️",
           "label": "MA-NI",
           "ipa": "ˈmani",
-          "review": true
+          "review": true,
+          "parentNote": "MANI: due sillabe diverse di seguito."
         }
       ]
     },
@@ -275,7 +286,8 @@
           "hint": "🦁",
           "label": "LA-LA",
           "info": "Nuovo: 🐻 O, 🦁 L",
-          "ipa": "la"
+          "ipa": "la",
+          "parentNote": "Nuove lettere O e L, sillaba LA. Cantare «la-la-la» aiuta."
         }
       ]
     },
@@ -304,7 +316,8 @@
           "display": "LANA",
           "hint": "🧶",
           "label": "LA-NA",
-          "ipa": "ˈlana"
+          "ipa": "ˈlana",
+          "parentNote": "LANA: due sillabe con la nuova L."
         },
         {
           "id": "it-u6-l2",
@@ -322,7 +335,8 @@
           "display": "MANO",
           "hint": "✋",
           "label": "MA-NO",
-          "ipa": "ˈmano"
+          "ipa": "ˈmano",
+          "parentNote": "MANO: O in fondo, si sente bene."
         },
         {
           "id": "it-u6-l3",
@@ -340,7 +354,8 @@
           "display": "PALLA",
           "hint": "⚽",
           "label": "PAL-LA",
-          "ipa": "ˈpalla"
+          "ipa": "ˈpalla",
+          "parentNote": "PALLA: doppia L."
         },
         {
           "id": "it-u6-l4",
@@ -359,7 +374,8 @@
           "hint": "👩",
           "label": "MAMMA",
           "info": "Parole intere!",
-          "ipa": "ˈmamma"
+          "ipa": "ˈmamma",
+          "parentNote": "MAMMA: la parola più importante, con doppia M. Va nello zaino delle parole."
         },
         {
           "id": "it-u6-l5",
@@ -377,7 +393,8 @@
           "display": "PAPÀ",
           "hint": "👨",
           "label": "PAPÀ",
-          "ipa": "paˈpa"
+          "ipa": "paˈpa",
+          "parentNote": "PAPÀ: l'accento non è sulla tastiera ma sulla carta."
         },
         {
           "id": "it-u6-l6",
@@ -395,7 +412,8 @@
           "display": "NONNA",
           "hint": "👵",
           "label": "NONNA",
-          "ipa": "ˈnɔnna"
+          "ipa": "ˈnɔnna",
+          "parentNote": "NONNA: doppia N."
         },
         {
           "id": "it-u6-l7",
@@ -413,7 +431,8 @@
           "display": "LANA",
           "hint": "🧶",
           "label": "LANA",
-          "ipa": "ˈlana"
+          "ipa": "ˈlana",
+          "parentNote": "Ascolto LANA: il testo è nascosto, il bambino sente e trova le lettere."
         },
         {
           "id": "it-u6-l8",
@@ -432,7 +451,8 @@
           "hint": "🖐️",
           "label": "MANO",
           "ipa": "ˈmano",
-          "review": true
+          "review": true,
+          "parentNote": "Ascolto MANO — suoni in lettere senza immagine."
         }
       ]
     },
@@ -464,7 +484,8 @@
           "hint": "🍵",
           "label": "TÈ",
           "info": "Nuovo: 🐯 T, 🐘 E",
-          "ipa": "tɛ"
+          "ipa": "tɛ",
+          "parentNote": "Nuove lettere T ed E. TÈ: parola cortissima."
         },
         {
           "id": "it-u7-l2",
@@ -484,7 +505,8 @@
           "display": "PANE",
           "hint": "🍞",
           "label": "PA-NE",
-          "ipa": "ˈpane"
+          "ipa": "ˈpane",
+          "parentNote": "PANE: N ed E in fondo."
         },
         {
           "id": "it-u7-l3",
@@ -504,7 +526,8 @@
           "display": "LATTE",
           "hint": "🥛",
           "label": "LAT-TE",
-          "ipa": "ˈlatte"
+          "ipa": "ˈlatte",
+          "parentNote": "LATTE: doppia T."
         },
         {
           "id": "it-u7-l4",
@@ -524,7 +547,8 @@
           "display": "MATITA",
           "hint": "✏️",
           "label": "MA-TI-TA",
-          "ipa": "maˈtita"
+          "ipa": "maˈtita",
+          "parentNote": "MATITA: tre sillabe, tutte note."
         },
         {
           "id": "it-u7-l5",
@@ -545,6 +569,911 @@
           "hint": "🍦",
           "label": "PAN-NA",
           "ipa": "ˈpanna",
+          "review": true,
+          "parentNote": "PANNA: doppia N. Ripasso dell'unità."
+        }
+      ]
+    },
+    {
+      "id": "it-u8",
+      "title": "S, U",
+      "icon": "☀️",
+      "reward": {
+        "emoji": "☀️",
+        "name": "S"
+      },
+      "lessons": [
+        {
+          "id": "it-u8-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U"
+          ],
+          "target": "SO",
+          "display": "SO",
+          "hint": "☀️",
+          "label": "SO-LE",
+          "info": "Nuovo: ☀️ S, 🍇 U",
+          "parentNote": "Nuove lettere S e U, sillaba SO (come sole). La S sibila come un serpente."
+        },
+        {
+          "id": "it-u8-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U"
+          ],
+          "target": "SOLE",
+          "display": "SOLE",
+          "hint": "☀️",
+          "label": "SO-LE",
+          "vocab": "sole",
+          "parentNote": "SOLE: due sillabe. Va nello zaino («gioco con il sole»)."
+        },
+        {
+          "id": "it-u8-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U"
+          ],
+          "target": "LUNA",
+          "display": "LUNA",
+          "hint": "🌙",
+          "label": "LU-NA",
+          "vocab": "luna",
+          "parentNote": "LUNA con la nuova U. A casa: cosa inizia con U? (uva, uovo)"
+        },
+        {
+          "id": "it-u8-l4",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U"
+          ],
+          "target": "NASO",
+          "display": "NASO",
+          "hint": "👃",
+          "label": "NA-SO",
+          "parentNote": "NASO: toccatevi il naso insieme!"
+        },
+        {
+          "id": "it-u8-l5",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U"
+          ],
+          "target": "TOPO",
+          "display": "TOPO",
+          "hint": "🐭",
+          "label": "TO-PO",
+          "vocab": "topo",
+          "parentNote": "TOPO: lettere note, parola nuova. Il topo va nello zaino."
+        },
+        {
+          "id": "it-u8-l6",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U"
+          ],
+          "target": "PASTA",
+          "display": "PASTA",
+          "hint": "🍝",
+          "label": "PA-STA",
+          "parentNote": "Ascolto PASTA — S e T di seguito."
+        },
+        {
+          "id": "it-u8-l7",
+          "type": "missingLetter",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U"
+          ],
+          "target": "SALE",
+          "display": "SALE",
+          "hint": "🧂",
+          "label": "SA-LE",
+          "gap": 2,
+          "parentNote": "Parola con buco SA?E: manca la L."
+        },
+        {
+          "id": "it-u8-l8",
+          "type": "pictureOnly",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U"
+          ],
+          "target": "UNO",
+          "display": "UNO",
+          "hint": "1️⃣",
+          "label": "U-NO",
+          "parentNote": "Solo l'immagine: il bambino scrive UNO a memoria."
+        },
+        {
+          "id": "it-u8-l9",
+          "type": "reviewMix",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U"
+          ],
+          "target": "SOLE",
+          "display": "SOLE",
+          "hint": "☀️",
+          "label": "SO-LE",
+          "parentNote": "Ripasso: il gioco sceglie la parola che riesce meno al bambino.",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "it-u9",
+      "title": "C, R",
+      "icon": "🏠",
+      "reward": {
+        "emoji": "🏠",
+        "name": "C"
+      },
+      "lessons": [
+        {
+          "id": "it-u9-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R"
+          ],
+          "target": "RA",
+          "display": "RA",
+          "hint": "🐸",
+          "label": "RA-NA",
+          "info": "Nuovo: 🏠 C, 🐸 R",
+          "parentNote": "Nuove lettere C ed R, sillaba RA. Se la R è difficile da dire, basta riconoscerla."
+        },
+        {
+          "id": "it-u9-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R"
+          ],
+          "target": "CASA",
+          "display": "CASA",
+          "hint": "🏠",
+          "label": "CA-SA",
+          "vocab": "casa",
+          "parentNote": "CASA: la C davanti ad A suona /k/. «Casa» si sblocca nelle frasi."
+        },
+        {
+          "id": "it-u9-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R"
+          ],
+          "target": "RANA",
+          "display": "RANA",
+          "hint": "🐸",
+          "label": "RA-NA",
+          "parentNote": "RANA: due sillabe con la nuova R."
+        },
+        {
+          "id": "it-u9-l4",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R"
+          ],
+          "target": "CANE",
+          "display": "CANE",
+          "hint": "🐕",
+          "label": "CA-NE",
+          "vocab": "cane",
+          "parentNote": "CANE: il cane va nello zaino."
+        },
+        {
+          "id": "it-u9-l5",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R"
+          ],
+          "target": "TORTA",
+          "display": "TORTA",
+          "hint": "🎂",
+          "label": "TOR-TA",
+          "vocab": "torta",
+          "parentNote": "TORTA: sillaba chiusa TOR. Va nello zaino."
+        },
+        {
+          "id": "it-u9-l6",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R"
+          ],
+          "target": "ORSO",
+          "display": "ORSO",
+          "hint": "🐻",
+          "label": "OR-SO",
+          "parentNote": "Ascolto ORSO — vocale all'inizio."
+        },
+        {
+          "id": "it-u9-l7",
+          "type": "pictureOnly",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R"
+          ],
+          "target": "MARE",
+          "display": "MARE",
+          "hint": "🌊",
+          "label": "MA-RE",
+          "parentNote": "Solo l'immagine: MARE a memoria."
+        },
+        {
+          "id": "it-u9-l8",
+          "type": "missingLetter",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R"
+          ],
+          "target": "CUORE",
+          "display": "CUORE",
+          "hint": "❤️",
+          "label": "CUO-RE",
+          "gap": 2,
+          "parentNote": "Parola con buco CU?RE: manca la O nel gruppo UO."
+        },
+        {
+          "id": "it-u9-l9",
+          "type": "reviewMix",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R"
+          ],
+          "target": "CANE",
+          "display": "CANE",
+          "hint": "🐕",
+          "label": "CA-NE",
+          "parentNote": "Ripasso: la parola più debole finora.",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "it-u10",
+      "title": "B, D",
+      "icon": "🎲",
+      "reward": {
+        "emoji": "🍌",
+        "name": "B"
+      },
+      "lessons": [
+        {
+          "id": "it-u10-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R",
+            "B",
+            "D"
+          ],
+          "target": "DADO",
+          "display": "DADO",
+          "hint": "🎲",
+          "label": "DA-DO",
+          "info": "Nuovo: 🍌 B, 🎲 D",
+          "parentNote": "Nuove lettere B e D. DADO: D e T si somigliano, la D vibra in gola."
+        },
+        {
+          "id": "it-u10-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R",
+            "B",
+            "D"
+          ],
+          "target": "BANANA",
+          "display": "BANANA",
+          "hint": "🍌",
+          "label": "BA-NA-NA",
+          "vocab": "banana",
+          "parentNote": "BANANA: tre sillabe. Va nello zaino."
+        },
+        {
+          "id": "it-u10-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R",
+            "B",
+            "D"
+          ],
+          "target": "DITO",
+          "display": "DITO",
+          "hint": "☝️",
+          "label": "DI-TO",
+          "parentNote": "DITO: D all'inizio, T in mezzo."
+        },
+        {
+          "id": "it-u10-l4",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R",
+            "B",
+            "D"
+          ],
+          "target": "BOCCA",
+          "display": "BOCCA",
+          "hint": "👄",
+          "label": "BOC-CA",
+          "parentNote": "Ascolto BOCCA — doppia C."
+        },
+        {
+          "id": "it-u10-l5",
+          "type": "missingLetter",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R",
+            "B",
+            "D"
+          ],
+          "target": "DENTE",
+          "display": "DENTE",
+          "hint": "🦷",
+          "label": "DEN-TE",
+          "gap": 3,
+          "parentNote": "Parola con buco DEN?E: manca la T."
+        },
+        {
+          "id": "it-u10-l6",
+          "type": "pictureOnly",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R",
+            "B",
+            "D"
+          ],
+          "target": "BIMBO",
+          "display": "BIMBO",
+          "hint": "👶",
+          "label": "BIM-BO",
+          "parentNote": "Solo l'immagine: BIMBO a memoria."
+        },
+        {
+          "id": "it-u10-l7",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R",
+            "B",
+            "D"
+          ],
+          "target": "SEDIA",
+          "display": "SEDIA",
+          "hint": "🪑",
+          "label": "SE-DIA",
+          "parentNote": "SEDIA: I e A vicine, due suoni."
+        },
+        {
+          "id": "it-u10-l8",
+          "type": "reviewMix",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R",
+            "B",
+            "D"
+          ],
+          "target": "BANANA",
+          "display": "BANANA",
+          "hint": "🍌",
+          "label": "BA-NA-NA",
+          "parentNote": "Ripasso: la parola più debole finora.",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "it-u11",
+      "title": "G",
+      "icon": "🐱",
+      "reward": {
+        "emoji": "🐱",
+        "name": "G"
+      },
+      "lessons": [
+        {
+          "id": "it-u11-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R",
+            "B",
+            "D",
+            "G"
+          ],
+          "target": "MELA",
+          "display": "MELA",
+          "hint": "🍎",
+          "label": "ME-LA",
+          "info": "Nuovo: 🐱 G",
+          "vocab": "mela",
+          "parentNote": "MELA: ora «una mela» si sblocca nelle frasi."
+        },
+        {
+          "id": "it-u11-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R",
+            "B",
+            "D",
+            "G"
+          ],
+          "target": "GATTO",
+          "display": "GATTO",
+          "hint": "🐱",
+          "label": "GAT-TO",
+          "vocab": "gatto",
+          "parentNote": "Nuova lettera G: GATTO con doppia T. Il gatto va nello zaino."
+        },
+        {
+          "id": "it-u11-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R",
+            "B",
+            "D",
+            "G"
+          ],
+          "target": "LEONE",
+          "display": "LEONE",
+          "hint": "🦁",
+          "label": "LE-O-NE",
+          "parentNote": "LEONE: tre sillabe, la O da sola in mezzo."
+        },
+        {
+          "id": "it-u11-l4",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R",
+            "B",
+            "D",
+            "G"
+          ],
+          "target": "GELATO",
+          "display": "GELATO",
+          "hint": "🍦",
+          "label": "GE-LA-TO",
+          "vocab": "gelato",
+          "parentNote": "GELATO: la G davanti a E suona dolce /dʒ/. Va nello zaino."
+        },
+        {
+          "id": "it-u11-l5",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R",
+            "B",
+            "D",
+            "G"
+          ],
+          "target": "ALBERO",
+          "display": "ALBERO",
+          "hint": "🌳",
+          "label": "AL-BE-RO",
+          "parentNote": "Ascolto ALBERO."
+        },
+        {
+          "id": "it-u11-l6",
+          "type": "pictureOnly",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R",
+            "B",
+            "D",
+            "G"
+          ],
+          "target": "CIAO",
+          "display": "CIAO",
+          "hint": "👋",
+          "label": "CIAO",
+          "parentNote": "Solo l'immagine: CIAO — la C davanti a I suona /tʃ/."
+        },
+        {
+          "id": "it-u11-l7",
+          "type": "missingLetter",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R",
+            "B",
+            "D",
+            "G"
+          ],
+          "target": "TARTARUGA",
+          "display": "TARTARUGA",
+          "hint": "🐢",
+          "label": "TAR-TA-RU-GA",
+          "gap": 4,
+          "parentNote": "Parola con buco TART?RUGA: la parola più lunga finora."
+        },
+        {
+          "id": "it-u11-l8",
+          "type": "reviewMix",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R",
+            "B",
+            "D",
+            "G"
+          ],
+          "target": "GATTO",
+          "display": "GATTO",
+          "hint": "🐱",
+          "label": "GAT-TO",
+          "parentNote": "Ripasso finale della fascia: la parola più debole di tutte.",
           "review": true
         }
       ]
@@ -586,6 +1515,27 @@
         "emoji": "🐶",
         "text": "Cucciolo",
         "unlockedBy": "always",
+        "person": "3sg"
+      },
+      {
+        "id": "topo",
+        "emoji": "🐭",
+        "text": "Topo",
+        "unlockedBy": "vocab",
+        "person": "3sg"
+      },
+      {
+        "id": "cane",
+        "emoji": "🐕",
+        "text": "Cane",
+        "unlockedBy": "vocab",
+        "person": "3sg"
+      },
+      {
+        "id": "gatto",
+        "emoji": "🐱",
+        "text": "Gatto",
+        "unlockedBy": "vocab",
         "person": "3sg"
       }
     ],
@@ -662,10 +1612,10 @@
         }
       },
       {
-        "id": "o2",
+        "id": "mela",
         "emoji": "🍎",
         "text": "una mela",
-        "unlockedBy": "always",
+        "unlockedBy": "vocab",
         "forms": {
           "instr": "con una mela"
         }
@@ -703,10 +1653,10 @@
         }
       },
       {
-        "id": "o6",
+        "id": "casa",
         "emoji": "🏠",
         "text": "casa",
-        "unlockedBy": "always",
+        "unlockedBy": "vocab",
         "forms": {
           "dir": "a casa",
           "loc": "a casa",
@@ -733,6 +1683,61 @@
           "dir": "sul vasino",
           "loc": "sul vasino",
           "instr": "sul vasino"
+        }
+      },
+      {
+        "id": "sole",
+        "emoji": "☀️",
+        "text": "il sole",
+        "unlockedBy": "vocab",
+        "forms": {
+          "dir": "al sole",
+          "loc": "al sole",
+          "instr": "con il sole"
+        }
+      },
+      {
+        "id": "luna",
+        "emoji": "🌙",
+        "text": "la luna",
+        "unlockedBy": "vocab",
+        "forms": {
+          "dir": "sulla luna",
+          "loc": "sulla luna",
+          "instr": "con la luna"
+        }
+      },
+      {
+        "id": "torta",
+        "emoji": "🎂",
+        "text": "la torta",
+        "unlockedBy": "vocab",
+        "forms": {
+          "dir": "alla torta",
+          "loc": "con la torta",
+          "instr": "con la torta"
+        }
+      },
+      {
+        "id": "banana",
+        "emoji": "🍌",
+        "text": "una banana",
+        "unlockedBy": "vocab",
+        "forms": {
+          "dir": "alla banana",
+          "loc": "con una banana",
+          "instr": "con una banana"
+        }
+      },
+      {
+        "id": "gelato",
+        "emoji": "🍦",
+        "text": "un gelato",
+        "unlockedBy": "vocab",
+        "forms": {
+          "dir": "al gelato",
+          "loc": "con un gelato",
+          "instr": "con un gelato"
         }
       }
     ]

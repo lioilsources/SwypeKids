@@ -57,7 +57,8 @@
           "hint": "👩",
           "label": "MA-MA",
           "info": "Wisch: 🐭 → 🍎",
-          "ipa": "maː"
+          "ipa": "maː",
+          "parentNote": "Erste Silbe: M und A werden zu MA. Zu Hause „mmm–aaa“ dehnen, dann schnell „ma“ sagen."
         },
         {
           "id": "de-u1-l2",
@@ -71,7 +72,8 @@
           "hint": "👩",
           "label": "MA-MA",
           "ipa": "maː",
-          "review": true
+          "review": true,
+          "parentNote": "Wiederholung MA — festigt die Verbindung Buchstabe ↔ Laut."
         }
       ]
     },
@@ -97,7 +99,8 @@
           "hint": "🐭",
           "label": "MI-MI",
           "info": "Neu: 🦔 I",
-          "ipa": "miː"
+          "ipa": "miː",
+          "parentNote": "Neuer Buchstabe I, Silbe MI. Zu Hause: Was fängt mit I an? (Igel, Insel)"
         },
         {
           "id": "de-u2-l2",
@@ -111,7 +114,8 @@
           "display": "MIMI",
           "hint": "🐭",
           "label": "MIMI",
-          "ipa": "ˈmiːmi"
+          "ipa": "ˈmiːmi",
+          "parentNote": "MIMI: zwei gleiche Silben hintereinander — das erste ganze Wort."
         },
         {
           "id": "de-u2-l3",
@@ -126,7 +130,8 @@
           "hint": "👩",
           "label": "MA-MA",
           "ipa": "maː",
-          "review": true
+          "review": true,
+          "parentNote": "MA zwischen den neuen Silben — A und I unterscheiden."
         }
       ]
     },
@@ -153,7 +158,8 @@
           "hint": "🎵",
           "label": "LA-LA",
           "info": "Neu: 🦁 L",
-          "ipa": "laː"
+          "ipa": "laː",
+          "parentNote": "Neuer Buchstabe L, Silbe LA. „Lllll“ summen wie ein Lied."
         },
         {
           "id": "de-u3-l2",
@@ -168,7 +174,8 @@
           "display": "LI",
           "hint": "🎵",
           "label": "LI-LI",
-          "ipa": "liː"
+          "ipa": "liː",
+          "parentNote": "Silbe LI: L mit dem bekannten I."
         },
         {
           "id": "de-u3-l3",
@@ -183,7 +190,8 @@
           "display": "LILA",
           "hint": "🟣",
           "label": "LILA",
-          "ipa": "ˈliːla"
+          "ipa": "ˈliːla",
+          "parentNote": "LILA: zwei Silben aus dem neuen L."
         },
         {
           "id": "de-u3-l4",
@@ -199,7 +207,8 @@
           "hint": "🖍️",
           "label": "MAL",
           "ipa": "maːl",
-          "review": true
+          "review": true,
+          "parentNote": "MAL endet auf einen Konsonanten — die erste geschlossene Silbe."
         }
       ]
     },
@@ -227,7 +236,8 @@
           "hint": "🐮",
           "label": "MO",
           "info": "Neu: 🍊 O",
-          "ipa": "moː"
+          "ipa": "moː",
+          "parentNote": "Neuer Buchstabe O, Silbe MO (wie die Kuh). Zu Hause: Was fängt mit O an? (Oma, Ohr)"
         },
         {
           "id": "de-u4-l2",
@@ -243,7 +253,8 @@
           "display": "LO",
           "hint": "🔔",
           "label": "LO",
-          "ipa": "loː"
+          "ipa": "loː",
+          "parentNote": "Silbe LO: L mit dem neuen O."
         },
         {
           "id": "de-u4-l3",
@@ -259,7 +270,8 @@
           "display": "OMI",
           "hint": "👵",
           "label": "OMI",
-          "ipa": "ˈoːmi"
+          "ipa": "ˈoːmi",
+          "parentNote": "OMI: Vokal am Anfang, das Kind hört O als eigenen Laut."
         },
         {
           "id": "de-u4-l4",
@@ -276,7 +288,8 @@
           "hint": "👧",
           "label": "LOLA",
           "ipa": "ˈloːla",
-          "review": true
+          "review": true,
+          "parentNote": "LOLA: zwei Silben mit O und A — zum Klatschen."
         }
       ]
     },
@@ -305,7 +318,8 @@
           "hint": "👨",
           "label": "PA-PA",
           "info": "Neu: 🐧 P",
-          "ipa": "paː"
+          "ipa": "paː",
+          "parentNote": "Neuer Buchstabe P, Silbe PA (wie Papa). P und B klingen ähnlich — deutlich sprechen."
         }
       ]
     },
@@ -333,7 +347,8 @@
           "display": "PAPA",
           "hint": "👨",
           "label": "PAPA",
-          "ipa": "ˈpapa"
+          "ipa": "ˈpapa",
+          "parentNote": "PAPA aus zwei bekannten Silben. Das Wort landet im Wörterbeutel."
         },
         {
           "id": "de-u6-l2",
@@ -350,7 +365,8 @@
           "display": "OPA",
           "hint": "👴",
           "label": "OPA",
-          "ipa": "ˈoːpa"
+          "ipa": "ˈoːpa",
+          "parentNote": "OPA: Vokal am Anfang, dann bekannte Silbe PA."
         },
         {
           "id": "de-u6-l3",
@@ -367,7 +383,8 @@
           "display": "PIPI",
           "hint": "💧",
           "label": "PIPI",
-          "ipa": "ˈpiːpi"
+          "ipa": "ˈpiːpi",
+          "parentNote": "PIPI: gleiche Silbe zweimal — nur Spaß beim Klatschen."
         },
         {
           "id": "de-u6-l4",
@@ -385,7 +402,8 @@
           "hint": "👩",
           "label": "MAMA",
           "info": "Jetzt ganze Wörter!",
-          "ipa": "ˈmama"
+          "ipa": "ˈmama",
+          "parentNote": "MAMA: das wichtigste Wort, aus MA-MA."
         },
         {
           "id": "de-u6-l5",
@@ -402,7 +420,8 @@
           "display": "OMA",
           "hint": "👵",
           "label": "OMA",
-          "ipa": "ˈoːma"
+          "ipa": "ˈoːma",
+          "parentNote": "OMA aus O und MA."
         },
         {
           "id": "de-u6-l6",
@@ -419,7 +438,8 @@
           "display": "OPA",
           "hint": "👴",
           "label": "OPA",
-          "ipa": "ˈoːpa"
+          "ipa": "ˈoːpa",
+          "parentNote": "Hörrunde OPA: der Text ist versteckt, das Kind hört und findet die Buchstaben."
         },
         {
           "id": "de-u6-l7",
@@ -436,7 +456,8 @@
           "display": "PAPA",
           "hint": "👨",
           "label": "PAPA",
-          "ipa": "ˈpapa"
+          "ipa": "ˈpapa",
+          "parentNote": "Hörrunde PAPA — Laute in Buchstaben umsetzen, ohne Bild."
         },
         {
           "id": "de-u6-l8",
@@ -454,7 +475,8 @@
           "hint": "🟣",
           "label": "LILA",
           "ipa": "ˈliːla",
-          "review": true
+          "review": true,
+          "parentNote": "Hörrunde LILA — Wiederholung nur nach Gehör."
         }
       ]
     },
@@ -486,7 +508,8 @@
           "hint": "🍵",
           "label": "TEE",
           "info": "Neu: 🐯 T, ⌚ U, 🐘 E",
-          "ipa": "teː"
+          "ipa": "teː",
+          "parentNote": "Neue Buchstaben T, U, E. TEE: zwei E für ein langes „eee“."
         },
         {
           "id": "de-u7-l2",
@@ -506,7 +529,8 @@
           "display": "AUTO",
           "hint": "🚗",
           "label": "AUTO",
-          "ipa": "ˈaʊto"
+          "ipa": "ˈaʊto",
+          "parentNote": "AUTO: A und U zusammen klingen wie „au“."
         },
         {
           "id": "de-u7-l3",
@@ -526,7 +550,8 @@
           "display": "OPI",
           "hint": "👴",
           "label": "OPI",
-          "ipa": "ˈoːpi"
+          "ipa": "ˈoːpi",
+          "parentNote": "OPI: bekannte Laute, neues Wort."
         },
         {
           "id": "de-u7-l4",
@@ -547,6 +572,852 @@
           "hint": "🥛",
           "label": "LATTE",
           "ipa": "ˈlatə",
+          "review": true,
+          "parentNote": "LATTE: Doppel-T macht das A kurz. Wiederholung der Einheit."
+        }
+      ]
+    },
+    {
+      "id": "de-u8",
+      "title": "N, S",
+      "icon": "👃",
+      "reward": {
+        "emoji": "👃",
+        "name": "N"
+      },
+      "lessons": [
+        {
+          "id": "de-u8-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P",
+            "T",
+            "U",
+            "E",
+            "N",
+            "S"
+          ],
+          "target": "NA",
+          "display": "NA",
+          "hint": "👃",
+          "label": "NA-SE",
+          "info": "Neu: 👃 N, ☀️ S",
+          "parentNote": "Neue Buchstaben N und S, Silbe NA (wie Nase). Zu Hause: Was fängt mit N an?"
+        },
+        {
+          "id": "de-u8-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P",
+            "T",
+            "U",
+            "E",
+            "N",
+            "S"
+          ],
+          "target": "SO",
+          "display": "SO",
+          "hint": "☀️",
+          "label": "SON-NE",
+          "parentNote": "Silbe SO wie Sonne. S summt wie eine Schlange: „sss“."
+        },
+        {
+          "id": "de-u8-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P",
+            "T",
+            "U",
+            "E",
+            "N",
+            "S"
+          ],
+          "target": "NASE",
+          "display": "NASE",
+          "hint": "👃",
+          "label": "NA-SE",
+          "parentNote": "NASE aus zwei bekannten Silben. Auf die eigene Nase tippen!"
+        },
+        {
+          "id": "de-u8-l4",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P",
+            "T",
+            "U",
+            "E",
+            "N",
+            "S"
+          ],
+          "target": "SONNE",
+          "display": "SONNE",
+          "hint": "☀️",
+          "label": "SON-NE",
+          "parentNote": "SONNE: Doppel-N, das Kind swypt beide."
+        },
+        {
+          "id": "de-u8-l5",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P",
+            "T",
+            "U",
+            "E",
+            "N",
+            "S"
+          ],
+          "target": "MAUS",
+          "display": "MAUS",
+          "hint": "🐭",
+          "label": "MAUS",
+          "vocab": "maus",
+          "parentNote": "MAUS: „au“ wie in Auto. Die Maus kommt in den Wörterbeutel."
+        },
+        {
+          "id": "de-u8-l6",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P",
+            "T",
+            "U",
+            "E",
+            "N",
+            "S"
+          ],
+          "target": "TASSE",
+          "display": "TASSE",
+          "hint": "☕",
+          "label": "TAS-SE",
+          "parentNote": "Hörrunde TASSE — Doppel-S nur nach Gehör."
+        },
+        {
+          "id": "de-u8-l7",
+          "type": "pictureOnly",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P",
+            "T",
+            "U",
+            "E",
+            "N",
+            "S"
+          ],
+          "target": "NUSS",
+          "display": "NUSS",
+          "hint": "🥜",
+          "label": "NUSS",
+          "parentNote": "Nur das Bild: das Kind schreibt NUSS aus dem Gedächtnis."
+        },
+        {
+          "id": "de-u8-l8",
+          "type": "reviewMix",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P",
+            "T",
+            "U",
+            "E",
+            "N",
+            "S"
+          ],
+          "target": "SONNE",
+          "display": "SONNE",
+          "hint": "☀️",
+          "label": "SON-NE",
+          "parentNote": "Wiederholung: das Spiel wählt das Wort, das dem Kind am schwersten fällt.",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "de-u9",
+      "title": "R, B",
+      "icon": "⚽",
+      "reward": {
+        "emoji": "🍌",
+        "name": "B"
+      },
+      "lessons": [
+        {
+          "id": "de-u9-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P",
+            "T",
+            "U",
+            "E",
+            "N",
+            "S",
+            "R",
+            "B"
+          ],
+          "target": "BA",
+          "display": "BA",
+          "hint": "⚽",
+          "label": "BALL",
+          "info": "Neu: 🌈 R, 🍌 B",
+          "parentNote": "Neue Buchstaben R und B, Silbe BA. B und P: Hand vor den Mund — bei P pustet es."
+        },
+        {
+          "id": "de-u9-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P",
+            "T",
+            "U",
+            "E",
+            "N",
+            "S",
+            "R",
+            "B"
+          ],
+          "target": "ROT",
+          "display": "ROT",
+          "hint": "🔴",
+          "label": "ROT",
+          "parentNote": "ROT mit dem neuen R. Zu Hause: Was ist alles rot?"
+        },
+        {
+          "id": "de-u9-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P",
+            "T",
+            "U",
+            "E",
+            "N",
+            "S",
+            "R",
+            "B"
+          ],
+          "target": "BALL",
+          "display": "BALL",
+          "hint": "⚽",
+          "label": "BALL",
+          "vocab": "ball",
+          "parentNote": "BALL: Doppel-L. Der Ball kommt in den Wörterbeutel („Ich spiele mit dem Ball“)."
+        },
+        {
+          "id": "de-u9-l4",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P",
+            "T",
+            "U",
+            "E",
+            "N",
+            "S",
+            "R",
+            "B"
+          ],
+          "target": "BROT",
+          "display": "BROT",
+          "hint": "🍞",
+          "label": "BROT",
+          "vocab": "brot",
+          "parentNote": "BROT beginnt mit zwei Konsonanten BR — langsam zusammenziehen."
+        },
+        {
+          "id": "de-u9-l5",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P",
+            "T",
+            "U",
+            "E",
+            "N",
+            "S",
+            "R",
+            "B"
+          ],
+          "target": "BAUM",
+          "display": "BAUM",
+          "hint": "🌳",
+          "label": "BAUM",
+          "parentNote": "Hörrunde BAUM — „au“ heraushören."
+        },
+        {
+          "id": "de-u9-l6",
+          "type": "pictureOnly",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P",
+            "T",
+            "U",
+            "E",
+            "N",
+            "S",
+            "R",
+            "B"
+          ],
+          "target": "BUS",
+          "display": "BUS",
+          "hint": "🚌",
+          "label": "BUS",
+          "parentNote": "Nur das Bild: BUS aus dem Gedächtnis schreiben."
+        },
+        {
+          "id": "de-u9-l7",
+          "type": "missingLetter",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P",
+            "T",
+            "U",
+            "E",
+            "N",
+            "S",
+            "R",
+            "B"
+          ],
+          "target": "BIRNE",
+          "display": "BIRNE",
+          "hint": "🍐",
+          "label": "BIR-NE",
+          "gap": 3,
+          "parentNote": "Lückenwort BIR?E: das N in der Mitte fehlt."
+        },
+        {
+          "id": "de-u9-l8",
+          "type": "reviewMix",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P",
+            "T",
+            "U",
+            "E",
+            "N",
+            "S",
+            "R",
+            "B"
+          ],
+          "target": "BALL",
+          "display": "BALL",
+          "hint": "⚽",
+          "label": "BALL",
+          "parentNote": "Wiederholung: das schwächste gelernte Wort.",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "de-u10",
+      "title": "H, K",
+      "icon": "🐰",
+      "reward": {
+        "emoji": "🏠",
+        "name": "H"
+      },
+      "lessons": [
+        {
+          "id": "de-u10-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P",
+            "T",
+            "U",
+            "E",
+            "N",
+            "S",
+            "R",
+            "B",
+            "H",
+            "K"
+          ],
+          "target": "HA",
+          "display": "HA",
+          "hint": "🐰",
+          "label": "HA-SE",
+          "info": "Neu: 🏠 H, 🐱 K",
+          "parentNote": "Neue Buchstaben H und K, Silbe HA (wie Hase). H ist nur ein Hauch."
+        },
+        {
+          "id": "de-u10-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P",
+            "T",
+            "U",
+            "E",
+            "N",
+            "S",
+            "R",
+            "B",
+            "H",
+            "K"
+          ],
+          "target": "HUT",
+          "display": "HUT",
+          "hint": "🎩",
+          "label": "HUT",
+          "parentNote": "HUT: kurzes Wort mit dem neuen H."
+        },
+        {
+          "id": "de-u10-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P",
+            "T",
+            "U",
+            "E",
+            "N",
+            "S",
+            "R",
+            "B",
+            "H",
+            "K"
+          ],
+          "target": "HASE",
+          "display": "HASE",
+          "hint": "🐰",
+          "label": "HA-SE",
+          "vocab": "hase",
+          "parentNote": "HASE aus HA und SE. Der Hase kommt in den Wörterbeutel."
+        },
+        {
+          "id": "de-u10-l4",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P",
+            "T",
+            "U",
+            "E",
+            "N",
+            "S",
+            "R",
+            "B",
+            "H",
+            "K"
+          ],
+          "target": "KUH",
+          "display": "KUH",
+          "hint": "🐮",
+          "label": "KUH",
+          "vocab": "kuh",
+          "parentNote": "KUH: das H am Ende hört man nicht — es macht das U lang."
+        },
+        {
+          "id": "de-u10-l5",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P",
+            "T",
+            "U",
+            "E",
+            "N",
+            "S",
+            "R",
+            "B",
+            "H",
+            "K"
+          ],
+          "target": "KEKS",
+          "display": "KEKS",
+          "hint": "🍪",
+          "label": "KEKS",
+          "vocab": "keks",
+          "parentNote": "KEKS: K vorne und hinten. Kommt in den Wörterbeutel."
+        },
+        {
+          "id": "de-u10-l6",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P",
+            "T",
+            "U",
+            "E",
+            "N",
+            "S",
+            "R",
+            "B",
+            "H",
+            "K"
+          ],
+          "target": "HAUS",
+          "display": "HAUS",
+          "hint": "🏠",
+          "label": "HAUS",
+          "parentNote": "Hörrunde HAUS — „au“ und S am Ende."
+        },
+        {
+          "id": "de-u10-l7",
+          "type": "missingLetter",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P",
+            "T",
+            "U",
+            "E",
+            "N",
+            "S",
+            "R",
+            "B",
+            "H",
+            "K"
+          ],
+          "target": "HOSE",
+          "display": "HOSE",
+          "hint": "👖",
+          "label": "HO-SE",
+          "gap": 2,
+          "parentNote": "Lückenwort HO?E: das S fehlt."
+        },
+        {
+          "id": "de-u10-l8",
+          "type": "reviewMix",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P",
+            "T",
+            "U",
+            "E",
+            "N",
+            "S",
+            "R",
+            "B",
+            "H",
+            "K"
+          ],
+          "target": "KUH",
+          "display": "KUH",
+          "hint": "🐮",
+          "label": "KUH",
+          "parentNote": "Wiederholung: das schwächste gelernte Wort.",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "de-u11",
+      "title": "Ganze Wörter II",
+      "icon": "🍅",
+      "reward": {
+        "emoji": "🐱",
+        "name": "K"
+      },
+      "lessons": [
+        {
+          "id": "de-u11-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P",
+            "T",
+            "U",
+            "E",
+            "N",
+            "S",
+            "R",
+            "B",
+            "H",
+            "K"
+          ],
+          "target": "TOMATE",
+          "display": "TOMATE",
+          "hint": "🍅",
+          "label": "TO-MA-TE",
+          "parentNote": "TOMATE: drei Silben, alle bekannt."
+        },
+        {
+          "id": "de-u11-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P",
+            "T",
+            "U",
+            "E",
+            "N",
+            "S",
+            "R",
+            "B",
+            "H",
+            "K"
+          ],
+          "target": "BANANE",
+          "display": "BANANE",
+          "hint": "🍌",
+          "label": "BA-NA-NE",
+          "vocab": "banane",
+          "parentNote": "BANANE: drei Silben. Kommt in den Wörterbeutel."
+        },
+        {
+          "id": "de-u11-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P",
+            "T",
+            "U",
+            "E",
+            "N",
+            "S",
+            "R",
+            "B",
+            "H",
+            "K"
+          ],
+          "target": "LAMPE",
+          "display": "LAMPE",
+          "hint": "💡",
+          "label": "LAM-PE",
+          "parentNote": "LAMPE: M und P direkt hintereinander."
+        },
+        {
+          "id": "de-u11-l4",
+          "type": "missingLetter",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P",
+            "T",
+            "U",
+            "E",
+            "N",
+            "S",
+            "R",
+            "B",
+            "H",
+            "K"
+          ],
+          "target": "SUPPE",
+          "display": "SUPPE",
+          "hint": "🍲",
+          "label": "SUP-PE",
+          "gap": 2,
+          "parentNote": "Lückenwort SU?PE: eines der beiden P fehlt."
+        },
+        {
+          "id": "de-u11-l5",
+          "type": "pictureOnly",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P",
+            "T",
+            "U",
+            "E",
+            "N",
+            "S",
+            "R",
+            "B",
+            "H",
+            "K"
+          ],
+          "target": "HUHN",
+          "display": "HUHN",
+          "hint": "🐔",
+          "label": "HUHN",
+          "parentNote": "Nur das Bild: HUHN — das stumme H in der Mitte ist die Falle."
+        },
+        {
+          "id": "de-u11-l6",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P",
+            "T",
+            "U",
+            "E",
+            "N",
+            "S",
+            "R",
+            "B",
+            "H",
+            "K"
+          ],
+          "target": "TULPE",
+          "display": "TULPE",
+          "hint": "🌷",
+          "label": "TUL-PE",
+          "parentNote": "Hörrunde TULPE."
+        },
+        {
+          "id": "de-u11-l7",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P",
+            "T",
+            "U",
+            "E",
+            "N",
+            "S",
+            "R",
+            "B",
+            "H",
+            "K"
+          ],
+          "target": "ROBOTER",
+          "display": "ROBOTER",
+          "hint": "🤖",
+          "label": "RO-BO-TER",
+          "parentNote": "ROBOTER: das längste Wort bisher — Silbe für Silbe."
+        },
+        {
+          "id": "de-u11-l8",
+          "type": "reviewMix",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "L",
+            "O",
+            "P",
+            "T",
+            "U",
+            "E",
+            "N",
+            "S",
+            "R",
+            "B",
+            "H",
+            "K"
+          ],
+          "target": "BANANE",
+          "display": "BANANE",
+          "hint": "🍌",
+          "label": "BA-NA-NE",
+          "parentNote": "Wiederholung zum Abschluss: das schwächste Wort von allen.",
           "review": true
         }
       ]
@@ -588,6 +1459,27 @@
         "emoji": "🐶",
         "text": "Wauwau",
         "unlockedBy": "always",
+        "person": "3sg"
+      },
+      {
+        "id": "maus",
+        "emoji": "🐭",
+        "text": "Die Maus",
+        "unlockedBy": "vocab",
+        "person": "3sg"
+      },
+      {
+        "id": "hase",
+        "emoji": "🐰",
+        "text": "Der Hase",
+        "unlockedBy": "vocab",
+        "person": "3sg"
+      },
+      {
+        "id": "kuh",
+        "emoji": "🐮",
+        "text": "Die Kuh",
+        "unlockedBy": "vocab",
         "person": "3sg"
       }
     ],
@@ -735,6 +1627,50 @@
           "dir": "aufs Töpfchen",
           "loc": "auf dem Töpfchen",
           "instr": "auf dem Töpfchen"
+        }
+      },
+      {
+        "id": "ball",
+        "emoji": "⚽",
+        "text": "den Ball",
+        "unlockedBy": "vocab",
+        "forms": {
+          "dir": "zum Ball",
+          "loc": "beim Ball",
+          "instr": "mit dem Ball"
+        }
+      },
+      {
+        "id": "brot",
+        "emoji": "🍞",
+        "text": "Brot",
+        "unlockedBy": "vocab",
+        "forms": {
+          "dir": "zum Brot",
+          "loc": "beim Brot",
+          "instr": "mit Brot"
+        }
+      },
+      {
+        "id": "keks",
+        "emoji": "🍪",
+        "text": "einen Keks",
+        "unlockedBy": "vocab",
+        "forms": {
+          "dir": "zum Keks",
+          "loc": "beim Keks",
+          "instr": "mit einem Keks"
+        }
+      },
+      {
+        "id": "banane",
+        "emoji": "🍌",
+        "text": "eine Banane",
+        "unlockedBy": "vocab",
+        "forms": {
+          "dir": "zur Banane",
+          "loc": "bei der Banane",
+          "instr": "mit einer Banane"
         }
       }
     ]

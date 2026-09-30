@@ -104,8 +104,9 @@ Standardní `pointerenter` na Flutteru nefunguje při tahu, protože pointer je
 | 11   | + Z                 | ZA, ZUB, ZIMA       |
 | 12   | tatáž               | SOVA, VLAK, RUKA, LOĎ |
 
-Tabulka platí pro češtinu (pásmo A, 54 lekcí); angličtina má vlastní pořadí
-podle SATPIN (51 lekcí). Zdroj pravdy je `assets/packs/*.json`.
+Tabulka platí pro češtinu (pásmo A, 54 lekcí). Ostatní jazyky mají vlastní
+pořadí podle své metody: en 51 (SATPIN), de 58, es 59, it 59, fr 57, pt 50,
+zh 55 (pinyin), ja 41 (rómadži → hiragana). Zdroj pravdy je `assets/packs/*.json`.
 
 ## Testy
 
