@@ -3,21 +3,21 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:swype_kids/data/lessons.dart';
 import 'package:swype_kids/screens/book_screen.dart';
-import 'package:swype_kids/services/pack_service.dart';
 import 'package:swype_kids/services/progress_service.dart';
 import 'helpers.dart';
 
 void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
   setUp(() async {
     SharedPreferences.setMockInitialValues({});
     await ProgressService.init();
+    await seedPack(Language.cs);
   });
 
   Future<void> pumpBook(WidgetTester tester) async {
     await tester.pumpWidget(localizedApp(
       home: Scaffold(body: BookScreen(language: Language.cs)),
     ));
-    await tester.runAsync(() => PackService.instance.load(Language.cs));
     await tester.pump();
     await tester.pump();
   }

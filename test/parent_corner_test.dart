@@ -12,10 +12,12 @@ import 'package:swype_kids/services/progress_service.dart';
 import 'helpers.dart';
 
 void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
   setUp(() async {
     SharedPreferences.setMockInitialValues({});
     await ProfileService.init();
     await ProgressService.init();
+    await seedPack(Language.cs);
   });
 
   test('brána: příklad má správnou odpověď mezi třemi různými možnostmi', () {
@@ -84,12 +86,11 @@ void main() {
     await tester.pumpWidget(localizedApp(
       home: ParentScreen(language: Language.cs),
     ));
-    await tester.runAsync(() => PackService.instance.load(Language.cs));
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 300));
 
     expect(find.text('Přehled'), findsOneWidget);
-    expect(find.text('1 / 62'), findsOneWidget);
+    expect(find.text('1 / 91'), findsOneWidget);
     expect(find.textContaining('Metoda: analyticko'), findsOneWidget);
     expect(find.byKey(const ValueKey('music-toggle')), findsOneWidget);
     expect(find.byKey(const ValueKey('season-winter')), findsOneWidget);

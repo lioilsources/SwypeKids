@@ -8,9 +8,11 @@ import 'package:swype_kids/services/progress_service.dart';
 import 'helpers.dart';
 
 void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
   setUp(() async {
     SharedPreferences.setMockInitialValues({});
     await ProgressService.init();
+    await seedPack(Language.cs);
   });
 
   Future<void> pumpBuilder(WidgetTester tester) async {
@@ -25,7 +27,6 @@ void main() {
         ),
       ),
     ));
-    await tester.runAsync(() => PackService.instance.load(Language.cs));
     await tester.pump();
     await tester.pump();
   }

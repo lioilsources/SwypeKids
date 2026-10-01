@@ -3,14 +3,15 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:swype_kids/data/lessons.dart';
 import 'package:swype_kids/screens/collection_screen.dart';
-import 'package:swype_kids/services/pack_service.dart';
 import 'package:swype_kids/services/progress_service.dart';
 import 'helpers.dart';
 
 void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
   setUp(() async {
     SharedPreferences.setMockInitialValues({});
     await ProgressService.init();
+    await seedPack(Language.cs);
   });
 
   testWidgets('ostrov: získané zvířátko má jméno, tajná nálepka se ukáže až po nalezení',
@@ -24,14 +25,13 @@ void main() {
     await tester.pumpWidget(localizedApp(
       home: Scaffold(body: CollectionScreen(language: Language.cs)),
     ));
-    await tester.runAsync(() => PackService.instance.load(Language.cs));
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 300));
 
     expect(find.text('myš'), findsOneWidget);
     expect(find.byKey(const ValueKey('secret-cs-u1')), findsNothing);
     expect(find.text('❓'), findsWidgets); // ostatní jednotky
-    expect(find.text('1/13'), findsOneWidget);
+    expect(find.text('1/17'), findsOneWidget);
 
     await tester.tap(find.byKey(const ValueKey('sticker-cs-u1')));
     await tester.pump(const Duration(milliseconds: 400));

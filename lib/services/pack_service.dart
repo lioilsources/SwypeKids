@@ -15,12 +15,25 @@ class PackService {
   static final PackService instance = PackService._();
 
   final Map<Language, ContentPack> _cache = {};
+  final Map<Language, Future<ContentPack>> _inFlight = {};
 
   ContentPack? cached(Language lang) => _cache[lang];
 
-  Future<ContentPack> load(Language lang) async {
+  /// Testy: vloží pack načtený z disku, ať widget testy nečekají na asset
+  /// kanál (velký JSON se tam dekóduje v izolátu a zasekne se).
+  @visibleForTesting
+  void seedCache(ContentPack pack) => _cache[pack.language] = pack;
+
+  /// Souběžná volání (mapa + builder + Zvěřinec při startu) sdílejí jedno
+  /// načtení.
+  Future<ContentPack> load(Language lang) {
     final hit = _cache[lang];
-    if (hit != null) return hit;
+    if (hit != null) return Future.value(hit);
+    return _inFlight[lang] ??=
+        _load(lang).whenComplete(() => _inFlight.remove(lang));
+  }
+
+  Future<ContentPack> _load(Language lang) async {
     ContentPack pack;
     try {
       final raw = await rootBundle.loadString('assets/packs/${lang.name}.json');
