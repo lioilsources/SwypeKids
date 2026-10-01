@@ -1,5 +1,9 @@
 # Changelog
 
+## [01/10/2026] — v2.6.1
+- Oprava: na iOS zůstávala mapa na 🎹 (pack nad 50 KB se nenačetl) — packy se teď dekódují bez izolátu
+- Sezónní tajné nálepky (jaro 🐣, léto 🍉, podzim 🎃, zima ⛸️) schované na mapě jen v daném období; polička ve Zvěřinci
+
 ## [01/10/2026] — v2.6.0 „Obsah"
 - Nové typy kol: lov hlásky (ťuknutí na klávesu), spojování slabik („MÁ + MA“), rým (výběr ze tří obrázků)
 - Čeština: pásmo B — jednotky 13–17 (hlásky a rýmy, H+C, Y+G, F a delší slova, slova do vět), celkem 91 lekcí
