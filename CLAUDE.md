@@ -48,7 +48,10 @@ lib/
 │   ├── progress_service.dart # shared_preferences: stars, collectibles, language
 │   └── tts_service.dart     # flutter_tts wrapper (listen rounds, sentences)
 ├── world/
-│   └── world_clock.dart     # WorldClockService (day phase, season; injectable clock) + WorldTheme
+│   ├── world_clock.dart     # WorldClockService (ChangeNotifier: day phase, season + parent override), WorldTheme, Biome
+│   ├── world_backdrop.dart  # Map sky: sun/moon, stars at night, drifting clouds with parallax
+│   ├── particle_layer.dart  # Petals / fireflies / leaves / snow over the map
+│   └── biome_band.dart      # One unit's piece of world: biome ground + decor, fog on locked units, reveal
 └── widgets/
     ├── challenge_card.dart  # Target card (hint + letters; hidden mode for listen)
     ├── keyboard_widget.dart # Full keyboard + swype gesture detection
@@ -85,6 +88,7 @@ iOS, Android, macOS, Linux (check pubspec for active platforms).
 - Lesson `type`: `swype` | `listen` | `missingLetter` (`gap` index) | `pictureOnly` | `reviewMix` (resolved at runtime to the weakest learned word, `resolveReviewMix`); unknown types fall back to `swype`
 - Word strength 0–5 per target (`ProgressService.recordAttempt`); map offers “Procvičování” (5 weakest learned) via `GameScreen(practice: …)`, which never writes lesson completion or stickers
 - Never add lessons to an existing unit (it would re-lock later units for kids who finished it); add new units, or change an existing lesson's type (id + progress stay)
+- `unit.scene.biome` names the unit's biome (`Biome` enum in `world/world_clock.dart`; unknown → meadow). Map sky = day phase × season; season is calendar-based unless the parent overrides it in the drawer
 - Word bag: a correct swype of a lesson with `vocab` adds the word to the bag (`ProgressService.addWord`); builder tiles with `unlockedBy: "vocab"` stay locked (“?” silhouette) until then
 - JSON packs are the single source of truth (Dart lessons removed in v2.3); edit `assets/packs/*.json` directly, `flutter test` validates them (every lesson needs a `parentNote` in the pack's language; hint emoji ≤ Unicode 12)
 

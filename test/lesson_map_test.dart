@@ -20,7 +20,8 @@ void main() {
         ),
       ),
     ));
-    await tester.pumpAndSettle();
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 400));
 
     // Hlavička packu a první jednotka
     expect(find.textContaining('Slabikář'), findsOneWidget);
@@ -44,11 +45,13 @@ void main() {
         ),
       ),
     ));
-    await tester.pumpAndSettle();
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 400));
 
     // První uzel první jednotky (hint 👩, odemčený)
     await tester.longPress(find.text('👩').at(1)); // [0] = ikona jednotky
-    await tester.pumpAndSettle();
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 400));
     expect(find.textContaining('První slabika'), findsOneWidget);
   });
 
@@ -63,7 +66,8 @@ void main() {
           ),
         ),
       ));
-      await tester.pumpAndSettle();
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 400));
     }
 
     await pumpMap();
@@ -76,5 +80,27 @@ void main() {
     }
     await pumpMap();
     expect(find.text('Procvičování'), findsOneWidget);
+  });
+
+  testWidgets('zamčené jednotky jsou v mlze, odemčená se jednou rozplyne',
+      (tester) async {
+    await tester.pumpWidget(MaterialApp(
+      home: Scaffold(
+        body: LessonMapScreen(
+          language: Language.cs,
+          onLanguageChanged: (_) {},
+        ),
+      ),
+    ));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 100));
+
+    // Mlha nad zamčenými jednotkami (viditelné jsou jen první dvě tři)
+    expect(find.text('🌫️'), findsWidgets);
+    expect(ProgressService.instance.isUnitRevealed('cs-CZ', 'cs-u1'), isFalse);
+
+    // Po rozplynutí se první jednotka zapíše jako odhalená
+    await tester.pump(const Duration(seconds: 2));
+    expect(ProgressService.instance.isUnitRevealed('cs-CZ', 'cs-u1'), isTrue);
   });
 }

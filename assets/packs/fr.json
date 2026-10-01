@@ -44,6 +44,9 @@
         "emoji": "🏠",
         "name": "M"
       },
+      "scene": {
+        "biome": "meadow"
+      },
       "lessons": [
         {
           "id": "fr-u1-l1",
@@ -84,6 +87,9 @@
       "reward": {
         "emoji": "🍎",
         "name": "P"
+      },
+      "scene": {
+        "biome": "forest"
       },
       "lessons": [
         {
@@ -161,6 +167,9 @@
       "reward": {
         "emoji": "🦁",
         "name": "L"
+      },
+      "scene": {
+        "biome": "pond"
       },
       "lessons": [
         {
@@ -243,6 +252,9 @@
         "emoji": "🐯",
         "name": "T"
       },
+      "scene": {
+        "biome": "garden"
+      },
       "lessons": [
         {
           "id": "fr-u4-l1",
@@ -310,6 +322,9 @@
         "emoji": "🎵",
         "name": "N"
       },
+      "scene": {
+        "biome": "farm"
+      },
       "lessons": [
         {
           "id": "fr-u5-l1",
@@ -340,6 +355,9 @@
       "reward": {
         "emoji": "✈️",
         "name": "A"
+      },
+      "scene": {
+        "biome": "city"
       },
       "lessons": [
         {
@@ -468,6 +486,9 @@
         "emoji": "🍊",
         "name": "O"
       },
+      "scene": {
+        "biome": "mountains"
+      },
       "lessons": [
         {
           "id": "fr-u7-l1",
@@ -585,6 +606,9 @@
       "reward": {
         "emoji": "🐘",
         "name": "E"
+      },
+      "scene": {
+        "biome": "beach"
       },
       "lessons": [
         {
@@ -778,6 +802,9 @@
       "reward": {
         "emoji": "🦊",
         "name": "R"
+      },
+      "scene": {
+        "biome": "orchard"
       },
       "lessons": [
         {
@@ -986,6 +1013,9 @@
       "reward": {
         "emoji": "🍌",
         "name": "B"
+      },
+      "scene": {
+        "biome": "snow"
       },
       "lessons": [
         {
@@ -1211,6 +1241,9 @@
       "reward": {
         "emoji": "🐱",
         "name": "C"
+      },
+      "scene": {
+        "biome": "jungle"
       },
       "lessons": [
         {

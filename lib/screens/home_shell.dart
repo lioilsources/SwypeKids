@@ -3,6 +3,7 @@ import '../audio/audio_service.dart';
 import '../data/lessons.dart';
 import '../services/progress_service.dart';
 import '../widgets/language_picker.dart';
+import '../world/world_clock.dart';
 import 'book_screen.dart';
 import 'collection_screen.dart';
 import 'lesson_map_screen.dart';
@@ -140,6 +141,7 @@ class _AppDrawer extends StatelessWidget {
             const Spacer(),
             const Divider(color: Colors.white12, height: 1),
             const _SoundToggle(),
+            const _SeasonPicker(),
             Padding(
               padding: const EdgeInsets.all(16),
               child: Text(
@@ -194,6 +196,66 @@ class _SoundToggleState extends State<_SoundToggle> {
           ),
         ],
       ),
+    );
+  }
+}
+
+/// Roční období: podle kalendáře (🔄), nebo ručně — rodič tak může dítěti
+/// ukázat sníh v létě. V3.1 se přesune do rodičovského koutku.
+class _SeasonPicker extends StatelessWidget {
+  const _SeasonPicker();
+
+  @override
+  Widget build(BuildContext context) {
+    return ListenableBuilder(
+      listenable: WorldClockService.instance,
+      builder: (context, _) {
+        final clock = WorldClockService.instance;
+        Widget chip(String emoji, Season? value) {
+          final selected = clock.seasonOverride == value;
+          return GestureDetector(
+            key: ValueKey('season-${value?.name ?? 'auto'}'),
+            onTap: () {
+              clock.seasonOverride = value;
+              AudioService.instance.play(Sfx.tap);
+            },
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+              decoration: BoxDecoration(
+                color: selected
+                    ? const Color(0xFFFFD200).withValues(alpha: 0.22)
+                    : Colors.white.withValues(alpha: 0.06),
+                borderRadius: BorderRadius.circular(99),
+                border: Border.all(
+                  color: selected
+                      ? const Color(0xFFFFD200)
+                      : Colors.white.withValues(alpha: 0.1),
+                ),
+              ),
+              child: Text(emoji, style: const TextStyle(fontSize: 18)),
+            ),
+          );
+        }
+
+        return Padding(
+          padding: const EdgeInsets.fromLTRB(20, 6, 20, 10),
+          child: Row(
+            children: [
+              Text(clock.season.emoji, style: const TextStyle(fontSize: 22)),
+              const SizedBox(width: 14),
+              Expanded(
+                child: Wrap(
+                  spacing: 6,
+                  children: [
+                    chip('🔄', null),
+                    for (final s in Season.values) chip(s.emoji, s),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        );
+      },
     );
   }
 }

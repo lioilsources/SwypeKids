@@ -138,6 +138,16 @@ kulturní variantu). Přidání jazyka = přidání JSON souboru, žádný Dart.
   stránek, stejná věta jen jednou.
 - **Vzít slovo do hry**: naučená slova mají v builderu 🎹 → jedno swype kolo
   s tím slovem (procvičovací režim, nezapisuje dokončení lekcí).
+- `unit.scene` — `{ "biome": "forest" }`; biotop kousku světa na mapě
+  (meadow, forest, pond, garden, farm, city, mountains, beach, orchard,
+  snow, jungle, sky). Neznámé jméno → louka. Vzhled (barva země, dekorace)
+  drží `Biome` v `lib/world/world_clock.dart`, pack jen jmenuje.
+- **Svět na mapě** (v2.4): obloha podle denní doby × ročního období
+  (kalendář, nebo ruční volba rodiče v menu), slunce/měsíc, hvězdy v noci,
+  mraky s parallaxem, částice (jaro květy, letní večer světlušky, podzim
+  listí, zima sníh). Zamčená jednotka je v mlze; po odemčení se mlha
+  jednou rozplyne (`ProgressService.isUnitRevealed`). V noci mají získané
+  nálepky 💤. Redukce pohybu: bez částic, mraků a třpytu.
 - `lesson.vocab` — id slova do batohu. Jen celá slova (target > 2 písmena),
   slabiky do batohu nepatří.
 - `lesson.parentNote` — jedna věta pro rodiče v jazyce packu; zatím se ukáže

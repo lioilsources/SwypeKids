@@ -29,6 +29,7 @@ class Unit {
   final String icon;
   final CollectibleReward reward;
   final List<Lesson> lessons;
+  final String biome; // unit.scene.biome — jméno biotopu (viz world/Biome)
 
   const Unit({
     required this.id,
@@ -36,6 +37,7 @@ class Unit {
     required this.icon,
     required this.reward,
     required this.lessons,
+    this.biome = '',
   });
 
   factory Unit.fromJson(Map<String, dynamic> json) => Unit(
@@ -48,6 +50,7 @@ class Unit {
           for (final l in json['lessons'] as List)
             Lesson.fromJson((l as Map).cast<String, dynamic>()),
         ],
+        biome: ((json['scene'] as Map?)?['biome'] as String?) ?? '',
       );
 
   Map<String, dynamic> toJson() => {
@@ -56,6 +59,7 @@ class Unit {
         'icon': icon,
         'reward': reward.toJson(),
         'lessons': [for (final l in lessons) l.toJson()],
+        if (biome.isNotEmpty) 'scene': {'biome': biome},
       };
 }
 

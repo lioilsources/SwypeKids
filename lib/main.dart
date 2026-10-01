@@ -4,11 +4,14 @@ import 'audio/audio_service.dart';
 import 'data/lessons.dart';
 import 'screens/home_shell.dart';
 import 'services/progress_service.dart';
+import 'world/world_clock.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await ProgressService.init();
   await AudioService.instance.loadSettings();
+  await WorldClockService.instance.loadSettings();
+  WorldClockService.instance.start();
   // Audio engine startuje na pozadí; do té doby je hra tichá.
   AudioService.instance.init();
   SystemChrome.setPreferredOrientations([
