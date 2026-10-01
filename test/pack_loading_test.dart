@@ -6,6 +6,7 @@ import 'package:swype_kids/data/keyboard_layout.dart';
 import 'package:swype_kids/data/lessons.dart';
 import 'package:swype_kids/data/models/content_pack.dart';
 import 'package:swype_kids/data/models/sentence.dart';
+import 'package:swype_kids/world/world_clock.dart';
 
 /// Jazyky s kompletními poznámkami pro rodiče (roadmap v2.3: cs + en).
 const _withParentNotes = {Language.cs, Language.en};
@@ -39,6 +40,8 @@ void main() {
         expect(ids.add(unit.id), isTrue,
             reason: 'duplicitní id jednotky ${unit.id}');
         expect(unit.reward.emoji, isNotEmpty);
+        expect(Biome.isKnown(unit.biome), isTrue,
+            reason: '${unit.id}: neznámý biotop „${unit.biome}“');
         if (unit.reward.name.isNotEmpty) {
           expect(unit.reward.emoji, pack.keyboardEmoji[unit.reward.name],
               reason:

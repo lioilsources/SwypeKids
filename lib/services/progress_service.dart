@@ -128,6 +128,18 @@ class ProgressService {
     return age < newWordWindow;
   }
 
+  // ── Odhalené kousky světa ──────────────────────────────────────────────────
+
+  /// Jednotka už byla na mapě odhalená (mlha se rozplynula) — animace
+  /// rozplynutí hraje jen jednou.
+  bool isUnitRevealed(String packId, String unitId) =>
+      _byPack[packId]?.revealed.contains(unitId) ?? false;
+
+  void markUnitRevealed(String packId, String unitId) {
+    final p = _byPack.putIfAbsent(packId, () => _PackProgress());
+    if (p.revealed.add(unitId)) _save(packId);
+  }
+
   // ── Má knížka ──────────────────────────────────────────────────────────────
 
   static const maxBookPages = 100;
@@ -226,6 +238,7 @@ class _PackProgress {
   final Map<String, int> words;     // batoh: vocab id → kdy poprvé (ms epoch)
   final Map<String, int> strength;  // target → síla 0–5
   final List<BookPage> book;        // Má knížka, nejstarší první
+  final Set<String> revealed;       // jednotky, u kterých už hrálo rozplynutí mlhy
 
   _PackProgress({
     Map<String, int>? completed,
@@ -233,11 +246,13 @@ class _PackProgress {
     Map<String, int>? words,
     Map<String, int>? strength,
     List<BookPage>? book,
+    Set<String>? revealed,
   })  : completed = completed ?? {},
         collectibles = collectibles ?? [],
         words = words ?? {},
         strength = strength ?? {},
-        book = book ?? [];
+        book = book ?? [],
+        revealed = revealed ?? {};
 
   factory _PackProgress.fromJson(Map<String, dynamic> json) => _PackProgress(
         completed: ((json['completed'] as Map?) ?? const {})
@@ -252,6 +267,7 @@ class _PackProgress {
           for (final page in (json['book'] as List?) ?? const [])
             BookPage.fromJson((page as Map).cast<String, dynamic>()),
         ],
+        revealed: ((json['revealed'] as List?) ?? const []).cast<String>().toSet(),
       );
 
   Map<String, dynamic> toJson() => {
@@ -261,6 +277,7 @@ class _PackProgress {
         'words': words,
         'strength': strength,
         'book': [for (final page in book) page.toJson()],
+        'revealed': revealed.toList(),
       };
 }
 

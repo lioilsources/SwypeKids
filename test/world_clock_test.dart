@@ -30,12 +30,73 @@ void main() {
     final clock = WorldClockService(now: () => now);
     expect(clock.phase, DayPhase.morning);
     expect(clock.season, Season.summer);
-    expect(clock.theme, same(WorldTheme.morning));
+    expect(clock.theme.phase, DayPhase.morning);
+    expect(clock.theme.season, Season.summer);
 
     now = at(1, 22);
     expect(clock.phase, DayPhase.night);
     expect(clock.season, Season.winter);
     expect(clock.theme.celestial, '🌙');
+  });
+
+  test('ruční období přebije kalendář a ohlásí posluchače', () {
+    final clock = WorldClockService(now: () => at(1, 12)); // zima
+    var notified = 0;
+    clock.addListener(() => notified++);
+    expect(clock.season, Season.winter);
+    clock.seasonOverride = Season.summer;
+    expect(clock.season, Season.summer);
+    expect(clock.calendarSeason, Season.winter);
+    expect(notified, 1);
+    clock.seasonOverride = Season.summer; // beze změny → bez notifikace
+    expect(notified, 1);
+    clock.seasonOverride = null;
+    expect(clock.season, Season.winter);
+    expect(notified, 2);
+  });
+
+  test('tick ohlásí jen změnu fáze dne', () {
+    var now = at(1, 9);
+    final clock = WorldClockService(now: () => now);
+    var notified = 0;
+    clock.addListener(() => notified++);
+    clock.start();
+    clock.tick();
+    expect(notified, 0);
+    now = at(1, 11);
+    clock.tick();
+    expect(notified, 1);
+    clock.dispose();
+  });
+
+  test('částice podle období a denní doby', () {
+    expect(WorldTheme.of(DayPhase.day, Season.winter).particles, ParticleKind.snow);
+    expect(WorldTheme.of(DayPhase.day, Season.autumn).particles, ParticleKind.leaves);
+    expect(WorldTheme.of(DayPhase.day, Season.spring).particles, ParticleKind.petals);
+    expect(WorldTheme.of(DayPhase.day, Season.summer).particles, ParticleKind.none);
+    expect(WorldTheme.of(DayPhase.night, Season.summer).particles,
+        ParticleKind.fireflies);
+  });
+
+  test('obloha i země se liší podle období a jsou dost tmavé pro text', () {
+    final winter = WorldTheme.of(DayPhase.day, Season.winter);
+    final summer = WorldTheme.of(DayPhase.day, Season.summer);
+    expect(winter.sky, isNot(equals(summer.sky)));
+    for (final t in [winter, summer, WorldTheme.of(DayPhase.night, Season.autumn)]) {
+      for (final c in t.sky) {
+        expect(c.computeLuminance(), lessThan(0.2), reason: '${t.phase} ${t.season}');
+      }
+    }
+    final night = WorldTheme.of(DayPhase.night, Season.summer);
+    expect(night.groundOf(Biome.meadow).computeLuminance(),
+        lessThan(summer.groundOf(Biome.meadow).computeLuminance()));
+  });
+
+  test('neznámý biotop padá na louku', () {
+    expect(Biome.parse('forest'), Biome.forest);
+    expect(Biome.parse('lava'), Biome.meadow);
+    expect(Biome.parse(''), Biome.meadow);
+    expect(Biome.isKnown('lava'), isFalse);
   });
 
   test('každá fáze má vlastní téma', () {

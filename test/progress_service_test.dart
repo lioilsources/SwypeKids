@@ -152,6 +152,15 @@ void main() {
     });
   });
 
+  test('odhalení jednotky se pamatuje', () async {
+    final p = ProgressService.instance;
+    expect(p.isUnitRevealed('test-XX', 'u1'), isFalse);
+    p.markUnitRevealed('test-XX', 'u1');
+    await ProgressService.init();
+    expect(ProgressService.instance.isUnitRevealed('test-XX', 'u1'), isTrue);
+    expect(ProgressService.instance.isUnitRevealed('test-XX', 'u2'), isFalse);
+  });
+
   group('Má knížka', () {
     test('nejnovější první, bez duplicit, přežije restart', () async {
       final p = ProgressService.instance;
