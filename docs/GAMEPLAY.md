@@ -133,6 +133,14 @@ kulturní variantu). Přidání jazyka = přidání JSON souboru, žádný Dart.
   (`WordSentenceScreen`) se slovem předvyplněným. Dítě doplní zbylé dvě části
   (max. 4 možnosti, slova z batohu první), trumpeta větu přečte. Automaticky,
   bez zápisu v packu; vždy jde přeskočit ✕.
+- **Odznaky** (`GameBadge`, roadmap P4): jednorázové, bez streaku. První tah,
+  Bez chyby (jednotka od začátku na samé 3⭐), Objevitel / Sběratel / Velký
+  sběratel (nálepky), Noční sova / Ranní ptáče (světové hodiny), Čtyři roční
+  období, Slovíčkář 10/25/50 (batoh), Básník (10 vět), Posluchač (10 poslechů
+  na 3⭐), Vytrvalec (7 hracích dnů, ne v řadě). Vyhodnocuje
+  `AchievementService.check` po kole, po jednotce a při otevření mapy; nové
+  odznaky naskočí jako čip v oslavě / na mapě, polička je ve Zvěřinci (zamčené
+  ukazují podmínku pro rodiče). Uloženo globálně (`sk.global`).
 - **Má knížka**: hotovou větu z builderu jde uložit 📖, věty z „slova do
   věty" se ukládají samy. Knížka (menu 📖) je čte nahlas po ťuknutí; max. 100
   stránek, stejná věta jen jednou.

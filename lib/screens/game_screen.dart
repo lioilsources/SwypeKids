@@ -5,11 +5,13 @@ import '../audio/audio_service.dart';
 import '../data/lessons.dart';
 import '../data/models/content_pack.dart';
 import '../data/models/sentence.dart';
+import '../services/achievement_service.dart';
 import '../services/pack_service.dart';
 import '../services/progress_service.dart';
 import '../services/tts_service.dart';
 import '../widgets/challenge_card.dart';
 import '../widgets/keyboard_widget.dart';
+import '../widgets/badge_chip.dart';
 import '../widgets/star_celebration.dart';
 import 'unit_complete_screen.dart';
 import 'word_sentence_screen.dart';
@@ -86,6 +88,8 @@ class _GameScreenState extends State<GameScreen>
   String? _newWord; // slovo, které právě přibylo do batohu (oslava)
   SentencePart? _wordForSentence; // po oslavě: slovo hned do věty
   int _attempts = 0; // pokusy o aktuální lekci (1. pokus = 3⭐, 2. = 2⭐, pak 1⭐)
+  bool _allThreeStars = true; // celý běh jednotky bez chyby (odznak 💎)
+  List<GameBadge> _newBadges = const []; // odznaky z právě dohraného kola
   bool _revealed =
       false; // skryté kolo (poslech/obrázek/díra): odkryto po chybě
   List<String> _path = [];
@@ -173,12 +177,18 @@ class _GameScreenState extends State<GameScreen>
       }
       progress.recordAttempt(widget.pack.id, _lesson.target, success: true);
       final gotWord = progress.addWord(widget.pack.id, _lesson.vocab);
+      if (stars < 3) _allThreeStars = false;
+      final badges = AchievementService.instance.check(
+        LessonDone(type: _lesson.type, stars: stars),
+        widget.pack,
+      );
       HapticFeedback.mediumImpact();
       AudioService.instance.play(Sfx.success);
       setState(() {
         _status = GameStatus.success;
         _sessionStars += stars;
         _lessonStars = stars;
+        _newBadges = badges;
         _newWord = gotWord ? _lesson.display : null;
       });
       _wordForSentence = gotWord
@@ -255,6 +265,10 @@ class _GameScreenState extends State<GameScreen>
     final progress = ProgressService.instance;
     progress.addCollectible(widget.pack.id, _unit.reward.emoji);
     AudioService.instance.play(Sfx.sticker);
+    final unitBadges = AchievementService.instance.check(
+      UnitDone(allThreeStars: _allThreeStars && widget.startLessonIndex == 0),
+      widget.pack,
+    );
 
     final isLastUnit = widget.unitIndex == widget.pack.units.length - 1;
     final packDone = isLastUnit &&
@@ -274,6 +288,7 @@ class _GameScreenState extends State<GameScreen>
           reward: _unit.reward,
           stars: _sessionStars,
           heroTag: stickerHeroTag(widget.pack.id, widget.unitIndex),
+          newBadges: unitBadges,
         ),
       ));
     }
@@ -475,6 +490,20 @@ class _GameScreenState extends State<GameScreen>
                 landingY: landscape ? 0.4 : 0.28,
                 landingX: landscape ? 0.21 : 0.5,
                 onStarLanded: AudioService.instance.playStar,
+              ),
+            ),
+          if (_status == GameStatus.success && _newBadges.isNotEmpty)
+            Positioned(
+              bottom: 24,
+              left: 0,
+              right: 0,
+              child: Wrap(
+                alignment: WrapAlignment.center,
+                spacing: 8,
+                children: [
+                  for (final b in _newBadges)
+                    BadgeChip(key: ValueKey('badge-${b.name}-$_idx'), badge: b),
+                ],
               ),
             ),
           if (_status == GameStatus.success && _newWord != null)

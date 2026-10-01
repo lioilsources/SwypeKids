@@ -1,9 +1,13 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import '../audio/audio_service.dart';
 import '../data/lessons.dart';
 import '../data/models/content_pack.dart';
+import '../services/achievement_service.dart';
 import '../services/pack_service.dart';
 import '../services/progress_service.dart';
+import '../widgets/badge_chip.dart';
 import '../widgets/language_picker.dart';
 import '../world/biome_band.dart';
 import '../world/particle_layer.dart';
@@ -35,6 +39,10 @@ class LessonMapScreen extends StatefulWidget {
 class LessonMapScreenState extends State<LessonMapScreen> {
   ContentPack? _pack;
 
+  // Odznaky za otevření mapy (noční sova, ranní ptáče, období, vytrvalec).
+  List<GameBadge> _newBadges = const [];
+  Timer? _badgeTimer;
+
   // Posun mapy pro parallax pozadí (mraky, hvězdy).
   final _scroll = ScrollController();
   final _scrollOffset = ValueNotifier<double>(0);
@@ -55,9 +63,19 @@ class LessonMapScreenState extends State<LessonMapScreen> {
     WorldClockService.instance.removeListener(_syncAmbient);
     AudioService.instance.setAmbient(null);
     AudioService.instance.setMusic(false);
+    _badgeTimer?.cancel();
     _scroll.dispose();
     _scrollOffset.dispose();
     super.dispose();
+  }
+
+  void _showBadges(List<GameBadge> badges) {
+    if (badges.isEmpty) return;
+    _badgeTimer?.cancel();
+    setState(() => _newBadges = badges);
+    _badgeTimer = Timer(const Duration(seconds: 4), () {
+      if (mounted) setState(() => _newBadges = const []);
+    });
   }
 
   /// Ambient podle biotopu, kde dítě právě hraje (první nedokončená
@@ -99,6 +117,8 @@ class LessonMapScreenState extends State<LessonMapScreen> {
     if (mounted && pack.language == widget.language) {
       setState(() => _pack = pack);
       _syncAmbient();
+      _showBadges(AchievementService.instance
+          .check(const SessionStart(), pack));
     }
   }
 
@@ -161,6 +181,19 @@ class LessonMapScreenState extends State<LessonMapScreen> {
                 child: WorldBackdrop(theme: world, scroll: _scrollOffset)),
             _content(context, world),
             Positioned.fill(child: ParticleLayer(kind: world.particles)),
+            if (_newBadges.isNotEmpty)
+              Positioned(
+                bottom: 24,
+                left: 0,
+                right: 0,
+                child: Wrap(
+                  alignment: WrapAlignment.center,
+                  spacing: 8,
+                  children: [
+                    for (final b in _newBadges) BadgeChip(badge: b),
+                  ],
+                ),
+              ),
           ],
         );
       },

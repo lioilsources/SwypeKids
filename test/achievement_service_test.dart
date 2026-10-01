@@ -41,9 +41,9 @@ void main() {
 
   test('první tah jen jednou, bez chyby jen za samé tři hvězdy', () {
     final pack = _pack();
-    expect(a.check(const LessonDone(listen: false, stars: 2), pack),
+    expect(a.check(const LessonDone(type: LessonType.swype, stars: 2), pack),
         [GameBadge.firstSwype]);
-    expect(a.check(const LessonDone(listen: false, stars: 3), pack), isEmpty);
+    expect(a.check(const LessonDone(type: LessonType.swype, stars: 3), pack), isEmpty);
     expect(a.check(const UnitDone(allThreeStars: false), pack), isEmpty);
     expect(a.check(const UnitDone(allThreeStars: true), pack), [GameBadge.noMistake]);
     expect(p.hasBadge('noMistake'), isTrue);
@@ -70,7 +70,7 @@ void main() {
         containsAll([GameBadge.wordsmith10, GameBadge.poet]));
     expect(a.check(const ProgressChanged(), pack), isEmpty);
     for (var i = 0; i < 10; i++) {
-      a.check(const LessonDone(listen: true, stars: 3), pack);
+      a.check(const LessonDone(type: LessonType.listen, stars: 3), pack);
     }
     expect(p.listenPerfectCount, 10);
     expect(p.hasBadge('listener'), isTrue);

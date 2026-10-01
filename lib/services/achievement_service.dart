@@ -1,3 +1,4 @@
+import '../data/lessons.dart';
 import '../data/models/content_pack.dart';
 import '../world/world_clock.dart';
 import 'progress_service.dart';
@@ -34,9 +35,9 @@ sealed class Trigger {
 
 /// Správně dohrané kolo.
 class LessonDone extends Trigger {
-  final bool listen;
+  final LessonType type;
   final int stars;
-  const LessonDone({required this.listen, required this.stars});
+  const LessonDone({required this.type, required this.stars});
 }
 
 /// Dokončená jednotka; [allThreeStars] = každá lekce na 3⭐ v tomto běhu.
@@ -80,9 +81,9 @@ class AchievementService {
     }
 
     switch (trigger) {
-      case LessonDone(:final listen, :final stars):
+      case LessonDone(:final type, :final stars):
         award(GameBadge.firstSwype, true);
-        if (listen && stars == 3) {
+        if (type == LessonType.listen && stars == 3) {
           p.bumpListenPerfect();
         }
         award(GameBadge.listener, p.listenPerfectCount >= listenerRounds);

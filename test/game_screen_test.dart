@@ -84,8 +84,11 @@ void main() {
     expect(find.text('⭐ 3'), findsOneWidget);
     expect(find.byType(StarCelebration), findsOneWidget);
 
-    // Slovo s vocab přistane do batohu
+    // Slovo s vocab přistane do batohu; první tah dá odznak
     expect(ProgressService.instance.wordBag(_pack.id), {'ma'});
+    expect(ProgressService.instance.hasBadge('firstSwype'), isTrue);
+    await tester.pump(const Duration(milliseconds: 700));
+    expect(find.text('🎯 První tah'), findsOneWidget);
     await tester.pump(const Duration(milliseconds: 300));
     expect(find.text('🎒 MA'), findsOneWidget);
 
@@ -108,6 +111,9 @@ void main() {
     await tester.pump(const Duration(milliseconds: 500));
     expect(ProgressService.instance.collectibles(_pack.id), ['🐭']);
     expect(find.text('Máš novou nálepku!'), findsOneWidget);
+    // Druhá lekce byla na 2⭐ → bez „Bez chyby“; první nálepka → Objevitel
+    expect(ProgressService.instance.hasBadge('noMistake'), isFalse);
+    expect(find.text('🧭 Objevitel'), findsOneWidget);
 
     // Doběhnout zbývající časovače (fade stopy klávesnice)
     await tester.pump(const Duration(seconds: 3));
