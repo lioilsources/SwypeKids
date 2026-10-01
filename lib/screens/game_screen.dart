@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../audio/audio_service.dart';
+import '../characters/mascot.dart';
 import '../data/lessons.dart';
 import '../data/models/content_pack.dart';
 import '../data/models/sentence.dart';
@@ -95,6 +96,7 @@ class _GameScreenState extends State<GameScreen>
   List<String> _path = [];
   List<String> _livePath = [];
   GameStatus _status = GameStatus.idle;
+  MascotMood _mood = MascotMood.wave; // průvodce: zamává při příchodu
   bool _shake = false;
   List<String> _newLetters = [];
 
@@ -186,6 +188,7 @@ class _GameScreenState extends State<GameScreen>
       AudioService.instance.play(Sfx.success);
       setState(() {
         _status = GameStatus.success;
+        _mood = MascotMood.cheer;
         _sessionStars += stars;
         _lessonStars = stars;
         _newBadges = badges;
@@ -202,6 +205,7 @@ class _GameScreenState extends State<GameScreen>
           .recordAttempt(widget.pack.id, _lesson.target, success: false);
       setState(() {
         _status = GameStatus.error;
+        _mood = MascotMood.oops;
         _shake = true;
         _revealed = true; // skryté kolo: po chybě text odkrýt (scaffolding)
       });
@@ -343,7 +347,17 @@ class _GameScreenState extends State<GameScreen>
                             constraints: const BoxConstraints(),
                             onPressed: () => Navigator.of(context).pop(),
                           ),
-                          const SizedBox(width: 8),
+                          // Průvodce reaguje na každý výsledek kola.
+                          Mascot(
+                            mood: _mood,
+                            size: 26,
+                            onSettled: () {
+                              if (mounted) {
+                                setState(() => _mood = MascotMood.idle);
+                              }
+                            },
+                          ),
+                          const SizedBox(width: 6),
                           _badge(switch (lesson.type) {
                             LessonType.listen => '🔊 POSLECH',
                             LessonType.pictureOnly => '🖼️ OBRÁZEK',

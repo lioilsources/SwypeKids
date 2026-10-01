@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:swype_kids/characters/mascot.dart';
 import 'package:swype_kids/data/lessons.dart';
 import 'package:swype_kids/data/models/content_pack.dart';
 import 'package:swype_kids/data/models/sentence.dart';
@@ -78,8 +79,15 @@ void main() {
     ));
     expect(find.text('👩 1/2'), findsOneWidget);
 
+    // Průvodce zamává při příchodu, pak jásá po správném swype
+    expect(find.byType(Mascot), findsOneWidget);
+    expect(find.text('👋'), findsOneWidget);
+    await tester.pump(const Duration(milliseconds: 1000));
+    expect(find.text('👋'), findsNothing);
+
     // Lekce 1: první pokus = 3 hvězdy + oslava s padajícími hvězdami
     await _swype(tester, ['M', 'A']);
+    expect(find.text('🎉'), findsOneWidget);
     expect(ProgressService.instance.starsFor(_pack.id, 'u1-l1'), 3);
     expect(find.text('⭐ 3'), findsOneWidget);
     expect(find.byType(StarCelebration), findsOneWidget);
@@ -100,6 +108,7 @@ void main() {
 
     // Lekce 2: chyba nic neuloží a neblokuje, druhý pokus = 2 hvězdy
     await _swype(tester, ['M', 'A']);
+    expect(find.text('💭'), findsOneWidget); // průvodce: „ups, zkus to znovu“
     expect(ProgressService.instance.starsFor(_pack.id, 'u1-l2'), 0);
     expect(find.byType(StarCelebration), findsNothing);
     await tester.pump(const Duration(milliseconds: 1000));
