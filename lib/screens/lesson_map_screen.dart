@@ -54,6 +54,7 @@ class LessonMapScreenState extends State<LessonMapScreen> {
   void dispose() {
     WorldClockService.instance.removeListener(_syncAmbient);
     AudioService.instance.setAmbient(null);
+    AudioService.instance.setMusic(false);
     _scroll.dispose();
     _scrollOffset.dispose();
     super.dispose();
@@ -65,14 +66,17 @@ class LessonMapScreenState extends State<LessonMapScreen> {
 
   void _syncAmbient() {
     final pack = _pack;
+    final audio = AudioService.instance;
     if (!_ambientActive || pack == null) {
-      AudioService.instance.setAmbient(null);
+      audio.setAmbient(null);
+      audio.setMusic(false);
       return;
     }
+    final theme = WorldClockService.instance.theme;
     final at = ProgressService.instance.firstUncompletedIn(pack);
     final unit = pack.units[at?.unit ?? pack.units.length - 1];
-    AudioService.instance.setAmbient(
-        WorldClockService.instance.theme.ambientFor(Biome.parse(unit.biome)));
+    audio.setAmbient(theme.ambientFor(Biome.parse(unit.biome)));
+    audio.setMusic(true, quiet: theme.isNight);
   }
 
   /// HomeShell: mapa je / není v popředí (jiný pohled, appka na pozadí).
@@ -102,6 +106,7 @@ class LessonMapScreenState extends State<LessonMapScreen> {
     final pack = _pack!;
     AudioService.instance.play(Sfx.tap);
     AudioService.instance.setAmbient(null); // během kola je ticho (jen hra)
+    AudioService.instance.setMusic(false);
     await Navigator.of(context).push(MaterialPageRoute(
       builder: (_) => GameScreen(
         pack: pack,
@@ -122,6 +127,7 @@ class LessonMapScreenState extends State<LessonMapScreen> {
   Future<void> _openPractice(List<Lesson> lessons) async {
     AudioService.instance.play(Sfx.tap);
     AudioService.instance.setAmbient(null);
+    AudioService.instance.setMusic(false);
     await Navigator.of(context).push(MaterialPageRoute(
       builder: (_) => GameScreen(
         pack: _pack!,

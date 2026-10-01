@@ -33,6 +33,22 @@ void main() {
     }
   });
 
+  test('manifest má titulní hudbu', () {
+    final manifest = (jsonDecode(
+            File('assets/audio/manifest.json').readAsStringSync())
+        as Map<String, dynamic>)['music'] as Map<String, dynamic>;
+    expect(File(manifest['title'] as String).existsSync(), isTrue);
+  });
+
+  test('hudba bez enginu je tichý no-op', () {
+    final a = AudioService.instance;
+    expect(() => a.setMusic(true, quiet: true), returnsNormally);
+    expect(a.musicPlaying, isFalse);
+    a.musicEnabled = false;
+    a.musicEnabled = true;
+    a.setMusic(false);
+  });
+
   test('ambient bez enginu nic nehraje, ale pamatuje si přání', () {
     final a = AudioService.instance;
     expect(() => a.setAmbient('day'), returnsNormally);

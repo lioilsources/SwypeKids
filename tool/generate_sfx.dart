@@ -236,6 +236,48 @@ List<double> ambientWater() {
   return seamless(out);
 }
 
+// ── Hudba: titulní smyčka (roadmap P2, „první hudební smyčka") ──────────────
+
+/// Měkký basový tón (sinus + oktáva), doznívá přes dobu.
+List<double> bass(double freq, double seconds) {
+  final n = (seconds * sampleRate).round();
+  return List.generate(n, (i) {
+    final t = i / sampleRate;
+    final env = min(1.0, t / 0.01) * exp(-t * 2.2);
+    return 0.35 * env * (sin(2 * pi * freq * t) + 0.3 * sin(2 * pi * freq * 2 * t));
+  });
+}
+
+/// Hravá melodie v C dur pentatonice nad akordy C–Am–F–G, 100 bpm, 8 taktů.
+/// Xylofon hraje melodii, bas drží kořen; konec se prolne do začátku.
+List<double> musicTitle() {
+  const beat = 0.6; // 100 bpm
+  const bars = 8;
+  // Kořeny akordů (půltóny nad C3 = 130.81 Hz)
+  const roots = [0, 9, 5, 7, 0, 9, 5, 7];
+  // Melodie: (půltón nad C5, doba v osminách), 0 = pauza
+  const melody = [
+    [0, 2, 4, 2, 7, 2, 4, 2], [9, 2, 7, 2, 4, 4], [5, 2, 4, 2, 2, 2, 4, 2], [7, 4, 4, 2, 2, 2],
+    [0, 2, 4, 2, 7, 2, 12, 2], [9, 2, 12, 2, 7, 4], [5, 2, 7, 2, 9, 2, 7, 2], [4, 2, 2, 2, 0, 4],
+  ];
+  var out = silence(bars * 4 * beat + 1.0);
+  for (var bar = 0; bar < bars; bar++) {
+    final barStart = bar * 4 * beat;
+    final rootHz = 130.81 * semis(roots[bar]);
+    for (var b = 0; b < 4; b++) {
+      out = mix(out, bass(b.isEven ? rootHz : rootHz * 1.5, beat * 0.9), barStart + b * beat);
+    }
+    var t = barStart;
+    final notes = melody[bar];
+    for (var i = 0; i < notes.length; i += 2) {
+      final len = notes[i + 1] * beat / 2;
+      out = mix(out, xylo(baseFreq * semis(notes[i]), seconds: min(0.5, len + 0.15), gain: 0.5), t);
+      t += len;
+    }
+  }
+  return seamless(out.sublist(0, (bars * 4 * beat * sampleRate).round() + (0.6 * sampleRate).round()));
+}
+
 Uint8List wav(List<double> samples) {
   // Normalizace na -1 dBFS, ať se vrstvy nepřebudí.
   final peak = samples.fold<double>(0, (m, s) => max(m, s.abs()));
@@ -307,7 +349,17 @@ void main() {
     stdout.writeln('✓ $path (${(samples.length / sampleRate).toStringAsFixed(2)} s loop)');
   }
 
+  const musicDir = 'assets/audio/music';
+  Directory(musicDir).createSync(recursive: true);
+  final music = musicTitle();
+  File('$musicDir/title.wav').writeAsBytesSync(wav(music));
+  stdout.writeln('✓ $musicDir/title.wav (${(music.length / sampleRate).toStringAsFixed(2)} s loop)');
+
   File('assets/audio/manifest.json').writeAsStringSync(
-      '${const JsonEncoder.withIndent('  ').convert({'sfx': manifest, 'ambient': ambient})}\n');
+      '${const JsonEncoder.withIndent('  ').convert({
+        'sfx': manifest,
+        'ambient': ambient,
+        'music': {'title': '$musicDir/title.wav'},
+      })}\n');
   stdout.writeln('✓ assets/audio/manifest.json');
 }

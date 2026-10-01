@@ -43,6 +43,7 @@ flutter:
     - assets/audio/
     - assets/audio/sfx/
     - assets/audio/ambient/
+    - assets/audio/music/
   fonts:
     - family: Nunito
       fonts:

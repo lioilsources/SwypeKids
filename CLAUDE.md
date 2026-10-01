@@ -96,5 +96,5 @@ iOS, Android, macOS, Linux (check pubspec for active platforms).
 
 - Custom fonts in `fonts/`
 - Content packs in `assets/packs/`
-- Sfx in `assets/audio/sfx/`, ambient loops in `assets/audio/ambient/` + catalog `assets/audio/manifest.json` (`sfx`, `ambient`)
+- Sfx in `assets/audio/sfx/`, ambient loops in `assets/audio/ambient/`, title music in `assets/audio/music/` + catalog `assets/audio/manifest.json` (`sfx`, `ambient`, `music`)
 - Screenshots in `GALLERY.md`

@@ -164,6 +164,7 @@ class _AppDrawer extends StatelessWidget {
             const Divider(color: Colors.white12, height: 1),
             const _SoundToggle(),
             const _AmbientToggle(),
+            const _MusicToggle(),
             const _SeasonPicker(),
             Padding(
               padding: const EdgeInsets.all(16),
@@ -247,6 +248,43 @@ class _AmbientToggleState extends State<_AmbientToggle> {
           const SizedBox(width: 14),
           Text(
             'Zvuky světa',
+            style: TextStyle(
+              fontFamily: 'Nunito',
+              fontSize: 15,
+              fontWeight: FontWeight.w800,
+              color: Colors.white.withOpacity(0.85),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// Hudba (titulní smyčka) — zvlášť ztlumitelná.
+class _MusicToggle extends StatefulWidget {
+  const _MusicToggle();
+
+  @override
+  State<_MusicToggle> createState() => _MusicToggleState();
+}
+
+class _MusicToggleState extends State<_MusicToggle> {
+  @override
+  Widget build(BuildContext context) {
+    final on = AudioService.instance.musicEnabled;
+    return SwitchListTile(
+      key: const ValueKey('music-toggle'),
+      value: on,
+      onChanged: (v) => setState(() => AudioService.instance.musicEnabled = v),
+      activeThumbColor: const Color(0xFFFFD200),
+      contentPadding: const EdgeInsets.symmetric(horizontal: 20),
+      title: Row(
+        children: [
+          Text(on ? '🎵' : '🔇', style: const TextStyle(fontSize: 22)),
+          const SizedBox(width: 14),
+          Text(
+            'Hudba',
             style: TextStyle(
               fontFamily: 'Nunito',
               fontSize: 15,

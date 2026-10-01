@@ -13,5 +13,8 @@
     "day": "assets/audio/ambient/day.wav",
     "night": "assets/audio/ambient/night.wav",
     "water": "assets/audio/ambient/water.wav"
+  },
+  "music": {
+    "title": "assets/audio/music/title.wav"
   }
 }

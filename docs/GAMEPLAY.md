@@ -153,6 +153,10 @@ kulturní variantu). Přidání jazyka = přidání JSON souboru, žádný Dart.
   vítr, `night` cvrčci, `water` u rybníka a pláže). Hraje jen na mapě v
   popředí, během kola je ticho; vypínač „Zvuky světa" v menu. Dočasně
   syntetizované (`tool/generate_sfx.dart`).
+- **Hudba** (`assets/audio/music/title.wav`, klíč `music.title`): hravá
+  smyčka v pentatonice (xylofon + bas, 100 bpm), hraje na mapě spolu s
+  ambientem, v noci ztišená; vypínač „Hudba" v menu. Adaptivní vrstvy
+  během hry přijdou ve v3.2.
 - `lesson.vocab` — id slova do batohu. Jen celá slova (target > 2 písmena),
   slabiky do batohu nepatří.
 - `lesson.parentNote` — jedna věta pro rodiče v jazyce packu; zatím se ukáže
