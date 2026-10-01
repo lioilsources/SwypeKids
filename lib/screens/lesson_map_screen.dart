@@ -212,6 +212,40 @@ class LessonMapScreenState extends State<LessonMapScreen> {
   static const _practiceSize = 5;
   static const _practiceMinLearned = 3;
 
+  /// Týdenní výprava: 8 nejslabších slov, od 10 naučených, jednou za 7 dní.
+  static const _expeditionSize = 8;
+  static const _expeditionMinLearned = 10;
+
+  Future<void> _openExpedition(List<Lesson> lessons) async {
+    if (_bedtime) return;
+    AudioService.instance.play(Sfx.tap);
+    AudioService.instance.setAmbient(null);
+    AudioService.instance.setMusic(false);
+    final stars = await Navigator.of(context).push<int>(MaterialPageRoute(
+      builder: (_) => GameScreen(
+        pack: _pack!,
+        unitIndex: 0,
+        practice: Unit(
+          id: 'expedition',
+          title: context.l.expeditionTitle,
+          icon: '🧭',
+          reward: const CollectibleReward(emoji: '🧭'),
+          lessons: lessons,
+        ),
+      ),
+    ));
+    if (!mounted) return;
+    if (stars != null) {
+      // Dohráno celé → výprava se počítá, odznak při první.
+      ProgressService.instance.markExpedition(WorldClockService.instance.now());
+      AudioService.instance.play(Sfx.sticker);
+      _showBadges(
+          AchievementService.instance.check(const ProgressChanged(), _pack!));
+    }
+    setState(() {});
+    _syncAmbient();
+  }
+
   Future<void> _openPractice(List<Lesson> lessons) async {
     if (_bedtime) return;
     AudioService.instance.play(Sfx.tap);
@@ -356,11 +390,16 @@ class LessonMapScreenState extends State<LessonMapScreen> {
                   child: Stack(
                     children: [
                       Positioned.fill(child: Builder(builder: (context) {
-                        final weakest = ProgressService.instance
-                            .weakestLearned(pack, limit: _practiceSize);
-                        final showPractice =
+                        final progress = ProgressService.instance;
+                        final learned = progress.weakestLearned(pack);
+                        final expedition =
+                            learned.length >= _expeditionMinLearned &&
+                                progress.isExpeditionDue(
+                                    WorldClockService.instance.now());
+                        final weakest = learned.take(_practiceSize).toList();
+                        final showPractice = !expedition &&
                             weakest.length >= _practiceMinLearned;
-                        final offset = showPractice ? 1 : 0;
+                        final offset = (showPractice || expedition) ? 1 : 0;
                         return Center(
                           child: ConstrainedBox(
                             constraints: const BoxConstraints(
@@ -370,6 +409,16 @@ class LessonMapScreenState extends State<LessonMapScreen> {
                               padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
                               itemCount: pack.units.length + offset,
                               itemBuilder: (context, i) {
+                                if (expedition && i == 0) {
+                                  final trip =
+                                      learned.take(_expeditionSize).toList();
+                                  return _PracticeCard(
+                                    key: const ValueKey('expedition'),
+                                    lessons: trip,
+                                    expedition: true,
+                                    onTap: () => _openExpedition(trip),
+                                  );
+                                }
                                 if (showPractice && i == 0) {
                                   return _PracticeCard(
                                     lessons: weakest,
@@ -535,7 +584,18 @@ class _PracticeCard extends StatelessWidget {
   final List<Lesson> lessons;
   final VoidCallback onTap;
 
-  const _PracticeCard({required this.lessons, required this.onTap});
+  /// Týdenní výprava: zlatá, s kompasem — speciální uzel na mapě.
+  final bool expedition;
+
+  const _PracticeCard({
+    super.key,
+    required this.lessons,
+    required this.onTap,
+    this.expedition = false,
+  });
+
+  Color get _accent =>
+      expedition ? const Color(0xFFFFD200) : const Color(0xFF1DD1A1);
 
   @override
   Widget build(BuildContext context) {
@@ -545,28 +605,42 @@ class _PracticeCard extends StatelessWidget {
         margin: const EdgeInsets.only(top: 6),
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
         decoration: BoxDecoration(
-          color: const Color(0xFF1DD1A1).withOpacity(0.16),
+          color: _accent.withOpacity(0.16),
           borderRadius: BorderRadius.circular(16),
-          border: Border.all(color: const Color(0xFF1DD1A1).withOpacity(0.7)),
+          border: Border.all(color: _accent.withOpacity(0.7)),
         ),
         child: Row(
           children: [
-            const Text('🔁', style: TextStyle(fontSize: 26)),
+            Text(expedition ? '🧭' : '🔁',
+                style: const TextStyle(fontSize: 26)),
             const SizedBox(width: 10),
-            Text(
-              context.l.practiceTitle,
-              style: TextStyle(
-                fontFamily: kFont,
-                fontSize: 15,
-                fontWeight: FontWeight.w900,
-                color: Color(0xFF7BFFB2),
+            Flexible(
+              child: Text(
+                expedition
+                    ? context.l.expeditionTitle
+                    : context.l.practiceTitle,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                  fontFamily: kFont,
+                  fontSize: 15,
+                  fontWeight: FontWeight.w900,
+                  color: expedition
+                      ? const Color(0xFFFFD200)
+                      : const Color(0xFF7BFFB2),
+                ),
               ),
             ),
-            const Spacer(),
-            // Obrázky slov, ať dítě bez čtení ví, co ho čeká.
-            Text(
-              lessons.map((l) => l.hint).join(' '),
-              style: const TextStyle(fontSize: 20),
+            const SizedBox(width: 8),
+            // Obrázky slov, ať dítě bez čtení ví, co ho čeká; na úzkém
+            // displeji se řádek zkrátí, místo aby přetekl.
+            Expanded(
+              child: Text(
+                lessons.map((l) => l.hint).join(' '),
+                textAlign: TextAlign.end,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: const TextStyle(fontSize: 20),
+              ),
             ),
           ],
         ),

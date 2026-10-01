@@ -121,5 +121,8 @@
   "typeRhyme": "RHYME",
   "promptHunt": "Which letter did you hear? Tap it",
   "promptJoin": "Join the syllables — swipe the whole word",
-  "promptRhyme": "What rhymes? Tap the picture"
+  "promptRhyme": "What rhymes? Tap the picture",
+  "expeditionTitle": "Review expedition",
+  "badgeExpedition": "Expeditioner",
+  "badgeExpeditionHow": "First weekly review expedition"
 }

@@ -178,4 +178,38 @@ void main() {
     await tester.pump(const Duration(seconds: 3));
     SettingsService.instance.sessionLimitMin = 0;
   });
+
+  testWidgets('od 10 naučených slov se jednou týdně nabídne výprava místo procvičování',
+      (tester) async {
+    final p = ProgressService.instance;
+    const ids = ['cs-u1-l1', 'cs-u2-l1', 'cs-u3-l1', 'cs-u4-l1', 'cs-u4-l2',
+      'cs-u5-l1', 'cs-u5-l2', 'cs-u6-l1', 'cs-u6-l2', 'cs-u6-l3'];
+    for (final id in ids) {
+      p.markCompleted('cs-CZ', id, 3);
+    }
+    await tester.pumpWidget(localizedApp(
+      home: Scaffold(
+        body: LessonMapScreen(language: Language.cs, onLanguageChanged: (_) {}),
+      ),
+    ));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 400));
+    expect(find.byKey(const ValueKey('expedition')), findsOneWidget);
+    expect(find.text('Výprava za opakováním'), findsOneWidget);
+    expect(find.text('Procvičování'), findsNothing);
+
+    // Po dnešní výpravě se zase ukáže obyčejné procvičování
+    p.markExpedition(DateTime.now());
+    await tester.pumpWidget(localizedApp(
+      home: Scaffold(
+        body: LessonMapScreen(
+            key: UniqueKey(), language: Language.cs, onLanguageChanged: (_) {}),
+      ),
+    ));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 400));
+    expect(find.byKey(const ValueKey('expedition')), findsNothing);
+    expect(find.text('Procvičování'), findsOneWidget);
+    await tester.pump(const Duration(seconds: 3));
+  });
 }

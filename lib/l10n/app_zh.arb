@@ -224,5 +224,8 @@
   "typeRhyme": "押韵",
   "promptHunt": "听到了哪个字母？点一点",
   "promptJoin": "把音节连起来——滑出整个词",
-  "promptRhyme": "哪个押韵？点图片"
+  "promptRhyme": "哪个押韵？点图片",
+  "expeditionTitle": "复习探险",
+  "badgeExpedition": "探险家",
+  "badgeExpeditionHow": "第一次每周复习探险"
 }

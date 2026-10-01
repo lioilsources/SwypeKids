@@ -19,7 +19,8 @@ enum GameBadge {
   wordsmith50('📚'),
   poet('✍️'),
   listener('👂'),
-  persistent('🌱');
+  persistent('🌱'),
+  expedition('🧭');
 
   const GameBadge(this.emoji);
 
@@ -110,6 +111,7 @@ class AchievementService {
       award(e.key, words >= e.value);
     }
     award(GameBadge.poet, p.book(pack.id).length >= poetSentences);
+    award(GameBadge.expedition, p.expeditionsDone >= 1);
     return earned;
   }
 }

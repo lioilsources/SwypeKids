@@ -400,4 +400,13 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get promptRhyme => '哪个押韵？点图片';
+
+  @override
+  String get expeditionTitle => '复习探险';
+
+  @override
+  String get badgeExpedition => '探险家';
+
+  @override
+  String get badgeExpeditionHow => '第一次每周复习探险';
 }

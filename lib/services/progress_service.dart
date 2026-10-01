@@ -192,6 +192,24 @@ class ProgressService {
   Set<String> get seasonsPlayed => Set.unmodifiable(_global.seasons);
   int get listenPerfectCount => _global.listenPerfect;
 
+  /// Týdenní výprava za opakováním (roadmap v4.0): kdy byla poslední a kolik
+  /// jich dítě dokončilo.
+  static const expeditionInterval = Duration(days: 7);
+  int get expeditionsDone => _global.expeditions;
+
+  bool isExpeditionDue(DateTime now) {
+    final last = _global.lastExpedition;
+    if (last == null) return true;
+    return now.difference(DateTime.fromMillisecondsSinceEpoch(last)) >=
+        expeditionInterval;
+  }
+
+  void markExpedition(DateTime at) {
+    _global.lastExpedition = at.millisecondsSinceEpoch;
+    _global.expeditions++;
+    _saveGlobal();
+  }
+
   void recordPlayDay(DateTime at, Season season) {
     final day =
         '${at.year}-${at.month.toString().padLeft(2, '0')}-${at.day.toString().padLeft(2, '0')}';
@@ -367,12 +385,16 @@ class _GlobalProgress {
   final Set<String> playDays;
   final Set<String> seasons;
   int listenPerfect;
+  int? lastExpedition; // ms epoch
+  int expeditions;
 
   _GlobalProgress({
     Map<String, int>? badges,
     Set<String>? playDays,
     Set<String>? seasons,
     this.listenPerfect = 0,
+    this.lastExpedition,
+    this.expeditions = 0,
   })  : badges = badges ?? {},
         playDays = playDays ?? {},
         seasons = seasons ?? {};
@@ -384,6 +406,8 @@ class _GlobalProgress {
         playDays: ((json['playDays'] as List?) ?? const []).cast<String>().toSet(),
         seasons: ((json['seasons'] as List?) ?? const []).cast<String>().toSet(),
         listenPerfect: json['listenPerfect'] as int? ?? 0,
+        lastExpedition: json['lastExpedition'] as int?,
+        expeditions: json['expeditions'] as int? ?? 0,
       );
 
   Map<String, dynamic> toJson() => {
@@ -392,6 +416,8 @@ class _GlobalProgress {
         'playDays': playDays.toList(),
         'seasons': seasons.toList(),
         'listenPerfect': listenPerfect,
+        if (lastExpedition != null) 'lastExpedition': lastExpedition,
+        'expeditions': expeditions,
       };
 }
 

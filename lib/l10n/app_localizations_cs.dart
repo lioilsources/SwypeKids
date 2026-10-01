@@ -404,4 +404,13 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get promptRhyme => 'Co se rýmuje? Ťukni na obrázek';
+
+  @override
+  String get expeditionTitle => 'Výprava za opakováním';
+
+  @override
+  String get badgeExpedition => 'Výpravník';
+
+  @override
+  String get badgeExpeditionHow => 'První týdenní výprava za opakováním';
 }

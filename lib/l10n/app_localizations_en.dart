@@ -404,4 +404,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get promptRhyme => 'What rhymes? Tap the picture';
+
+  @override
+  String get expeditionTitle => 'Review expedition';
+
+  @override
+  String get badgeExpedition => 'Expeditioner';
+
+  @override
+  String get badgeExpeditionHow => 'First weekly review expedition';
 }
