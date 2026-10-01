@@ -92,6 +92,15 @@ void main() {
         lessThan(summer.groundOf(Biome.meadow).computeLuminance()));
   });
 
+  test('ambientní scéna: noc cvrčci, voda u rybníka a pláže, jinak den', () {
+    final day = WorldTheme.of(DayPhase.day, Season.summer);
+    final night = WorldTheme.of(DayPhase.night, Season.summer);
+    expect(day.ambientFor(Biome.meadow), 'day');
+    expect(day.ambientFor(Biome.pond), 'water');
+    expect(day.ambientFor(Biome.beach), 'water');
+    expect(night.ambientFor(Biome.pond), 'night');
+  });
+
   test('neznámý biotop padá na louku', () {
     expect(Biome.parse('forest'), Biome.forest);
     expect(Biome.parse('lava'), Biome.meadow);

@@ -19,9 +19,29 @@ class HomeShell extends StatefulWidget {
   State<HomeShell> createState() => _HomeShellState();
 }
 
-class _HomeShellState extends State<HomeShell> {
+class _HomeShellState extends State<HomeShell> with WidgetsBindingObserver {
   late Language _lang = widget.initialLanguage;
   AppView _view = AppView.swype;
+  final _mapKey = GlobalKey<LessonMapScreenState>();
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addObserver(this);
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
+  }
+
+  /// Ambient hraje jen na mapě a jen když je appka v popředí.
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    _mapKey.currentState?.setAmbientActive(
+        state == AppLifecycleState.resumed && _view == AppView.swype);
+  }
 
   void _setLang(Language l) {
     ProgressService.instance.selectedLanguage = l;
@@ -31,6 +51,7 @@ class _HomeShellState extends State<HomeShell> {
   void _setView(AppView v) {
     AudioService.instance.play(Sfx.tap);
     setState(() => _view = v);
+    _mapKey.currentState?.setAmbientActive(v == AppView.swype);
     Navigator.of(context).maybePop();
   }
 
@@ -46,6 +67,7 @@ class _HomeShellState extends State<HomeShell> {
         index: _view.index,
         children: [
           LessonMapScreen(
+            key: _mapKey,
             language: _lang,
             onLanguageChanged: _setLang,
             onOpenBag: () => _setView(AppView.sentence),
@@ -141,6 +163,8 @@ class _AppDrawer extends StatelessWidget {
             const Spacer(),
             const Divider(color: Colors.white12, height: 1),
             const _SoundToggle(),
+            const _AmbientToggle(),
+            const _MusicToggle(),
             const _SeasonPicker(),
             Padding(
               padding: const EdgeInsets.all(16),
@@ -187,6 +211,80 @@ class _SoundToggleState extends State<_SoundToggle> {
           const SizedBox(width: 14),
           Text(
             'Zvuky',
+            style: TextStyle(
+              fontFamily: 'Nunito',
+              fontSize: 15,
+              fontWeight: FontWeight.w800,
+              color: Colors.white.withOpacity(0.85),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// Zvuky světa (ptáci, cvrčci, voda) — zvlášť ztlumitelné.
+class _AmbientToggle extends StatefulWidget {
+  const _AmbientToggle();
+
+  @override
+  State<_AmbientToggle> createState() => _AmbientToggleState();
+}
+
+class _AmbientToggleState extends State<_AmbientToggle> {
+  @override
+  Widget build(BuildContext context) {
+    final on = AudioService.instance.ambientEnabled;
+    return SwitchListTile(
+      key: const ValueKey('ambient-toggle'),
+      value: on,
+      onChanged: (v) => setState(() => AudioService.instance.ambientEnabled = v),
+      activeThumbColor: const Color(0xFFFFD200),
+      contentPadding: const EdgeInsets.symmetric(horizontal: 20),
+      title: Row(
+        children: [
+          Text(on ? '🌿' : '🍂', style: const TextStyle(fontSize: 22)),
+          const SizedBox(width: 14),
+          Text(
+            'Zvuky světa',
+            style: TextStyle(
+              fontFamily: 'Nunito',
+              fontSize: 15,
+              fontWeight: FontWeight.w800,
+              color: Colors.white.withOpacity(0.85),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// Hudba (titulní smyčka) — zvlášť ztlumitelná.
+class _MusicToggle extends StatefulWidget {
+  const _MusicToggle();
+
+  @override
+  State<_MusicToggle> createState() => _MusicToggleState();
+}
+
+class _MusicToggleState extends State<_MusicToggle> {
+  @override
+  Widget build(BuildContext context) {
+    final on = AudioService.instance.musicEnabled;
+    return SwitchListTile(
+      key: const ValueKey('music-toggle'),
+      value: on,
+      onChanged: (v) => setState(() => AudioService.instance.musicEnabled = v),
+      activeThumbColor: const Color(0xFFFFD200),
+      contentPadding: const EdgeInsets.symmetric(horizontal: 20),
+      title: Row(
+        children: [
+          Text(on ? '🎵' : '🔇', style: const TextStyle(fontSize: 22)),
+          const SizedBox(width: 14),
+          Text(
+            'Hudba',
             style: TextStyle(
               fontFamily: 'Nunito',
               fontSize: 15,

@@ -118,6 +118,166 @@ List<double> sticker() {
   return out;
 }
 
+// ── Ambient smyčky (roadmap P2): dočasná syntéza, později nahrávky ─────────
+
+/// Bílý šum přes jednoduchý dolní propust (one-pole), [cutoff] 0–1.
+List<double> noise(double seconds, {double cutoff = 0.05, int seed = 1}) {
+  final rnd = Random(seed);
+  final n = (seconds * sampleRate).round();
+  var y = 0.0;
+  return List.generate(n, (_) {
+    y += cutoff * ((rnd.nextDouble() * 2 - 1) - y);
+    return y;
+  });
+}
+
+/// Ptačí cvrlikání: krátký sinus s klouzavou výškou, 2–4 tóny ve skupince.
+List<double> chirp(Random rnd) {
+  final notes = 2 + rnd.nextInt(3);
+  var out = <double>[];
+  for (var k = 0; k < notes; k++) {
+    final f0 = 2400 + rnd.nextDouble() * 1200;
+    final f1 = f0 + (rnd.nextDouble() - 0.3) * 900;
+    final len = 0.05 + rnd.nextDouble() * 0.06;
+    final n = (len * sampleRate).round();
+    var phase = 0.0;
+    final tone = List.generate(n, (i) {
+      final t = i / n;
+      phase += 2 * pi * (f0 + (f1 - f0) * t) / sampleRate;
+      final env = sin(pi * t); // měkký nástup i konec
+      return 0.35 * env * sin(phase);
+    });
+    out = mix(out, tone, out.length / sampleRate + 0.02 + rnd.nextDouble() * 0.05);
+  }
+  return out;
+}
+
+/// Cvrček: vysoký tón modulovaný ~40 Hz v krátkých dávkách.
+List<double> cricketBurst(double seconds, double freq) {
+  final n = (seconds * sampleRate).round();
+  return List.generate(n, (i) {
+    final t = i / sampleRate;
+    final env = sin(pi * i / n);
+    final am = 0.5 + 0.5 * sin(2 * pi * 42 * t);
+    return 0.22 * env * am * sin(2 * pi * freq * t);
+  });
+}
+
+/// „Plip" kapky: krátký klesající sinus.
+List<double> plip(Random rnd) {
+  final n = (0.09 * sampleRate).round();
+  final f0 = 700 + rnd.nextDouble() * 500;
+  var phase = 0.0;
+  return List.generate(n, (i) {
+    final t = i / sampleRate;
+    phase += 2 * pi * (f0 - 350 * (i / n)) / sampleRate;
+    return 0.3 * exp(-t * 40) * sin(phase);
+  });
+}
+
+/// Pomalé vlnění hlasitosti (vítr, voda).
+List<double> lfo(List<double> src, double hz, double depth, {double phase = 0}) =>
+    [for (var i = 0; i < src.length; i++)
+      src[i] * (1 - depth + depth * (0.5 + 0.5 * sin(2 * pi * hz * i / sampleRate + phase)))];
+
+/// Bezešvá smyčka: posledních [fade] s se prolne do začátku.
+List<double> seamless(List<double> src, {double fade = 0.6}) {
+  final f = (fade * sampleRate).round();
+  final n = src.length - f;
+  final out = List<double>.generate(n, (i) => src[i]);
+  for (var i = 0; i < f; i++) {
+    final w = i / f;
+    out[i] = out[i] * w + src[n + i] * (1 - w);
+  }
+  return out;
+}
+
+const double ambientSeconds = 10;
+
+/// Den v přírodě: vítr + ptáci.
+List<double> ambientDay() {
+  final rnd = Random(11);
+  var out = lfo(noise(ambientSeconds + 0.6, cutoff: 0.03, seed: 3), 0.17, 0.6);
+  out = [for (final s in out) s * 0.5];
+  for (var i = 0; i < 9; i++) {
+    out = mix(out, chirp(rnd), rnd.nextDouble() * ambientSeconds);
+  }
+  return seamless(out);
+}
+
+/// Noc: cvrčci + slabý vítr.
+List<double> ambientNight() {
+  final rnd = Random(23);
+  var out = lfo(noise(ambientSeconds + 0.6, cutoff: 0.02, seed: 5), 0.11, 0.5);
+  out = [for (final s in out) s * 0.25];
+  var t = 0.0;
+  while (t < ambientSeconds) {
+    out = mix(out, cricketBurst(0.25 + rnd.nextDouble() * 0.1, 4100 + rnd.nextDouble() * 300), t);
+    t += 0.45 + rnd.nextDouble() * 0.2;
+  }
+  // druhý cvrček dál, jiná výška
+  t = 0.2;
+  while (t < ambientSeconds) {
+    out = mix(out, [for (final s in cricketBurst(0.3, 3600)) s * 0.5], t);
+    t += 0.7 + rnd.nextDouble() * 0.3;
+  }
+  return seamless(out);
+}
+
+/// Voda: šplouchání (vlněný šum) + kapky.
+List<double> ambientWater() {
+  final rnd = Random(37);
+  var out = lfo(noise(ambientSeconds + 0.6, cutoff: 0.12, seed: 7), 0.35, 0.8);
+  out = lfo(out, 0.9, 0.4, phase: 1.3);
+  out = [for (final s in out) s * 0.55];
+  for (var i = 0; i < 7; i++) {
+    out = mix(out, plip(rnd), rnd.nextDouble() * ambientSeconds);
+  }
+  return seamless(out);
+}
+
+// ── Hudba: titulní smyčka (roadmap P2, „první hudební smyčka") ──────────────
+
+/// Měkký basový tón (sinus + oktáva), doznívá přes dobu.
+List<double> bass(double freq, double seconds) {
+  final n = (seconds * sampleRate).round();
+  return List.generate(n, (i) {
+    final t = i / sampleRate;
+    final env = min(1.0, t / 0.01) * exp(-t * 2.2);
+    return 0.35 * env * (sin(2 * pi * freq * t) + 0.3 * sin(2 * pi * freq * 2 * t));
+  });
+}
+
+/// Hravá melodie v C dur pentatonice nad akordy C–Am–F–G, 100 bpm, 8 taktů.
+/// Xylofon hraje melodii, bas drží kořen; konec se prolne do začátku.
+List<double> musicTitle() {
+  const beat = 0.6; // 100 bpm
+  const bars = 8;
+  // Kořeny akordů (půltóny nad C3 = 130.81 Hz)
+  const roots = [0, 9, 5, 7, 0, 9, 5, 7];
+  // Melodie: (půltón nad C5, doba v osminách), 0 = pauza
+  const melody = [
+    [0, 2, 4, 2, 7, 2, 4, 2], [9, 2, 7, 2, 4, 4], [5, 2, 4, 2, 2, 2, 4, 2], [7, 4, 4, 2, 2, 2],
+    [0, 2, 4, 2, 7, 2, 12, 2], [9, 2, 12, 2, 7, 4], [5, 2, 7, 2, 9, 2, 7, 2], [4, 2, 2, 2, 0, 4],
+  ];
+  var out = silence(bars * 4 * beat + 1.0);
+  for (var bar = 0; bar < bars; bar++) {
+    final barStart = bar * 4 * beat;
+    final rootHz = 130.81 * semis(roots[bar]);
+    for (var b = 0; b < 4; b++) {
+      out = mix(out, bass(b.isEven ? rootHz : rootHz * 1.5, beat * 0.9), barStart + b * beat);
+    }
+    var t = barStart;
+    final notes = melody[bar];
+    for (var i = 0; i < notes.length; i += 2) {
+      final len = notes[i + 1] * beat / 2;
+      out = mix(out, xylo(baseFreq * semis(notes[i]), seconds: min(0.5, len + 0.15), gain: 0.5), t);
+      t += len;
+    }
+  }
+  return seamless(out.sublist(0, (bars * 4 * beat * sampleRate).round() + (0.6 * sampleRate).round()));
+}
+
 Uint8List wav(List<double> samples) {
   // Normalizace na -1 dBFS, ať se vrstvy nepřebudí.
   final peak = samples.fold<double>(0, (m, s) => max(m, s.abs()));
@@ -174,7 +334,32 @@ void main() {
     stdout.writeln('✓ $path (${(samples.length / sampleRate).toStringAsFixed(2)} s)');
   });
 
+  // Ambient smyčky (hlasitost drží AudioService, soubory jsou normalizované)
+  const ambientDir = 'assets/audio/ambient';
+  Directory(ambientDir).createSync(recursive: true);
+  final ambient = <String, String>{};
+  for (final (id, samples) in [
+    ('day', ambientDay()),
+    ('night', ambientNight()),
+    ('water', ambientWater()),
+  ]) {
+    final path = '$ambientDir/$id.wav';
+    File(path).writeAsBytesSync(wav(samples));
+    ambient[id] = path;
+    stdout.writeln('✓ $path (${(samples.length / sampleRate).toStringAsFixed(2)} s loop)');
+  }
+
+  const musicDir = 'assets/audio/music';
+  Directory(musicDir).createSync(recursive: true);
+  final music = musicTitle();
+  File('$musicDir/title.wav').writeAsBytesSync(wav(music));
+  stdout.writeln('✓ $musicDir/title.wav (${(music.length / sampleRate).toStringAsFixed(2)} s loop)');
+
   File('assets/audio/manifest.json').writeAsStringSync(
-      '${const JsonEncoder.withIndent('  ').convert({'sfx': manifest})}\n');
+      '${const JsonEncoder.withIndent('  ').convert({
+        'sfx': manifest,
+        'ambient': ambient,
+        'music': {'title': '$musicDir/title.wav'},
+      })}\n');
   stdout.writeln('✓ assets/audio/manifest.json');
 }

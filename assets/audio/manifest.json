@@ -8,5 +8,13 @@
     "star": "assets/audio/sfx/star.wav",
     "sticker": "assets/audio/sfx/sticker.wav",
     "tap": "assets/audio/sfx/tap.wav"
+  },
+  "ambient": {
+    "day": "assets/audio/ambient/day.wav",
+    "night": "assets/audio/ambient/night.wav",
+    "water": "assets/audio/ambient/water.wav"
+  },
+  "music": {
+    "title": "assets/audio/music/title.wav"
   }
 }

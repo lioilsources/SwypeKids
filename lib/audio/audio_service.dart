@@ -18,14 +18,34 @@ class AudioService {
   static final AudioService instance = AudioService._();
 
   static const _kSfxEnabledKey = 'sk.settings.sfx';
+  static const _kAmbientEnabledKey = 'sk.settings.ambient';
+  static const ambientVolume = 0.22;
+  static const _kMusicEnabledKey = 'sk.settings.music';
+  static const musicVolume = 0.16;
+  static const musicVolumeNight = 0.07; // v noci hudba ztichne
+  static const _ambientFade = Duration(milliseconds: 900);
   static const _manifestPath = 'assets/audio/manifest.json';
   static const _successVariants = 3;
 
   SharedPreferences? _prefs;
   bool _sfxEnabled = true;
+  bool _ambientEnabled = true;
+  bool _musicEnabled = true;
   bool _ready = false;
   final Map<String, AudioSource> _sources = {};
+  final Map<String, AudioSource> _ambientSources = {};
+  final Map<String, AudioSource> _musicSources = {};
+
+  // Hudba: jedna titulní smyčka, hraje spolu s ambientem na mapě.
+  bool _musicWanted = false;
+  bool _musicQuiet = false;
+  SoundHandle? _musicHandle;
   int _successIdx = 0;
+
+  // Ambient: jedna smyčka naráz (scéna podle biotopu × denní doby).
+  String? _ambientWanted; // co má hrát (i když je zrovna vypnuto / engine nejede)
+  String? _ambientPlaying;
+  SoundHandle? _ambientHandle;
 
   bool get sfxEnabled => _sfxEnabled;
 
@@ -34,10 +54,33 @@ class AudioService {
     _prefs?.setBool(_kSfxEnabledKey, value);
   }
 
+  bool get ambientEnabled => _ambientEnabled;
+
+  set ambientEnabled(bool value) {
+    _ambientEnabled = value;
+    _prefs?.setBool(_kAmbientEnabledKey, value);
+    _syncAmbient();
+  }
+
+  /// Scéna, která právě hraje (null = ticho). Pro testy a ladění.
+  String? get ambientPlaying => _ambientPlaying;
+
+  bool get musicEnabled => _musicEnabled;
+
+  set musicEnabled(bool value) {
+    _musicEnabled = value;
+    _prefs?.setBool(_kMusicEnabledKey, value);
+    _syncMusic();
+  }
+
+  bool get musicPlaying => _musicHandle != null;
+
   /// Načte nastavení (rychlé) — volat před runApp.
   Future<void> loadSettings() async {
     _prefs = await SharedPreferences.getInstance();
     _sfxEnabled = _prefs!.getBool(_kSfxEnabledKey) ?? true;
+    _ambientEnabled = _prefs!.getBool(_kAmbientEnabledKey) ?? true;
+    _musicEnabled = _prefs!.getBool(_kMusicEnabledKey) ?? true;
   }
 
   /// Spustí audio engine a načte sfx do paměti. Neblokuje start appky —
@@ -45,12 +88,25 @@ class AudioService {
   Future<void> init() async {
     try {
       await SoLoud.instance.init();
-      final manifest = (jsonDecode(await rootBundle.loadString(_manifestPath))
-          as Map<String, dynamic>)['sfx'] as Map<String, dynamic>;
-      for (final entry in manifest.entries) {
+      final manifest = jsonDecode(await rootBundle.loadString(_manifestPath))
+          as Map<String, dynamic>;
+      final sfx = manifest['sfx'] as Map<String, dynamic>;
+      for (final entry in sfx.entries) {
         _sources[entry.key] = await SoLoud.instance.loadAsset(entry.value);
       }
+      final ambient =
+          (manifest['ambient'] as Map<String, dynamic>?) ?? const {};
+      for (final entry in ambient.entries) {
+        _ambientSources[entry.key] =
+            await SoLoud.instance.loadAsset(entry.value);
+      }
+      final music = (manifest['music'] as Map<String, dynamic>?) ?? const {};
+      for (final entry in music.entries) {
+        _musicSources[entry.key] = await SoLoud.instance.loadAsset(entry.value);
+      }
       _ready = true;
+      _syncAmbient(); // scéna vyžádaná před startem enginu
+      _syncMusic();
     } catch (_) {
       _ready = false; // bez zvuku, hra běží dál
     }
@@ -63,6 +119,75 @@ class AudioService {
       _ => sfx.name,
     };
     _playId(id, pitch: pitch, volume: volume);
+  }
+
+  // ── Ambient ───────────────────────────────────────────────────────────────
+
+  /// Přepne ambientní scénu (id z manifestu, např. 'day'); null = ticho.
+  /// Stejná scéna se nerestartuje, přechod je s krátkým prolnutím.
+  void setAmbient(String? id) {
+    _ambientWanted = id;
+    _syncAmbient();
+  }
+
+  void _syncAmbient() {
+    final target = (_ready && _ambientEnabled) ? _ambientWanted : null;
+    if (target == _ambientPlaying) return;
+    try {
+      final old = _ambientHandle;
+      if (old != null) {
+        SoLoud.instance.fadeVolume(old, 0, _ambientFade);
+        SoLoud.instance.scheduleStop(old, _ambientFade);
+      }
+      _ambientHandle = null;
+      _ambientPlaying = null;
+      final source = target == null ? null : _ambientSources[target];
+      if (source != null) {
+        final h = SoLoud.instance.play(source, volume: 0, looping: true);
+        SoLoud.instance.fadeVolume(h, ambientVolume, _ambientFade);
+        _ambientHandle = h;
+        _ambientPlaying = target;
+      }
+    } catch (_) {
+      _ambientHandle = null;
+      _ambientPlaying = null;
+    }
+  }
+
+  // ── Hudba ─────────────────────────────────────────────────────────────────
+
+  /// Zapne/vypne titulní smyčku; [quiet] = noční ztišení.
+  void setMusic(bool play, {bool quiet = false}) {
+    _musicWanted = play;
+    _musicQuiet = quiet;
+    _syncMusic();
+  }
+
+  void _syncMusic() {
+    final want = _ready && _musicEnabled && _musicWanted;
+    final volume = _musicQuiet ? musicVolumeNight : musicVolume;
+    try {
+      final h = _musicHandle;
+      if (!want) {
+        if (h != null) {
+          SoLoud.instance.fadeVolume(h, 0, _ambientFade);
+          SoLoud.instance.scheduleStop(h, _ambientFade);
+          _musicHandle = null;
+        }
+        return;
+      }
+      if (h != null) {
+        SoLoud.instance.fadeVolume(h, volume, _ambientFade);
+        return;
+      }
+      final source = _musicSources['title'];
+      if (source == null) return;
+      final handle = SoLoud.instance.play(source, volume: 0, looping: true);
+      SoLoud.instance.fadeVolume(handle, volume, _ambientFade);
+      _musicHandle = handle;
+    } catch (_) {
+      _musicHandle = null;
+    }
   }
 
   /// Tón xylofonu pro písmeno při swype — celý swype tak „zahraje melodii".
