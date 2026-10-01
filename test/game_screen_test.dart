@@ -7,7 +7,9 @@ import 'package:swype_kids/data/models/sentence.dart';
 import 'package:swype_kids/screens/game_screen.dart';
 import 'package:swype_kids/screens/word_sentence_screen.dart';
 import 'package:swype_kids/services/progress_service.dart';
+import 'package:swype_kids/widgets/challenge_card.dart';
 import 'package:swype_kids/widgets/key_widget.dart';
+import 'package:swype_kids/widgets/keyboard_widget.dart';
 import 'package:swype_kids/widgets/star_celebration.dart';
 
 const _pack = ContentPack(
@@ -221,5 +223,38 @@ void main() {
     expect(find.byType(WordSentenceScreen), findsNothing);
     expect(find.text('👩 2/2'), findsOneWidget);
     await tester.pump(const Duration(seconds: 3));
+  });
+
+  testWidgets('na šířku je karta vlevo a klávesnice vpravo', (tester) async {
+    tester.view.physicalSize = const Size(1200, 600);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.reset);
+    await tester.pumpWidget(const MaterialApp(
+      home: GameScreen(pack: _pack, unitIndex: 0),
+    ));
+    await tester.pump();
+    final card = tester.getCenter(find.byType(ChallengeCard));
+    final keyboard = tester.getCenter(find.byType(KeyboardWidget));
+    expect(card.dx, lessThan(600));
+    expect(keyboard.dx, greaterThan(600));
+    expect((card.dy - keyboard.dy).abs(), lessThan(120)); // vedle sebe
+
+    // Swype funguje i v tomhle rozložení
+    await _swype(tester, ['M', 'A']);
+    expect(ProgressService.instance.starsFor(_pack.id, 'u1-l1'), 3);
+    await tester.pump(const Duration(seconds: 4));
+  });
+
+  testWidgets('na výšku zůstává karta nad klávesnicí', (tester) async {
+    tester.view.physicalSize = const Size(600, 1000);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.reset);
+    await tester.pumpWidget(const MaterialApp(
+      home: GameScreen(pack: _pack, unitIndex: 0),
+    ));
+    await tester.pump();
+    expect(tester.getCenter(find.byType(ChallengeCard)).dy,
+        lessThan(tester.getTopLeft(find.byType(KeyboardWidget)).dy));
+    await tester.pump(const Duration(seconds: 4));
   });
 }
