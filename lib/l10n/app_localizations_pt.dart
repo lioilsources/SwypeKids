@@ -370,4 +370,19 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get delete => 'Apagar';
+
+  @override
+  String get statMinutesToday => 'minutos hoje';
+
+  @override
+  String get statMinutesWeek => 'minutos nesta semana';
+
+  @override
+  String get letterMastered => 'dominada';
+
+  @override
+  String get letterPracticing => 'praticando';
+
+  @override
+  String get letterUnseen => 'ainda não viu';
 }

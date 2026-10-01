@@ -371,4 +371,19 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get delete => 'Elimina';
+
+  @override
+  String get statMinutesToday => 'minuti oggi';
+
+  @override
+  String get statMinutesWeek => 'minuti questa settimana';
+
+  @override
+  String get letterMastered => 'acquisita';
+
+  @override
+  String get letterPracticing => 'in esercizio';
+
+  @override
+  String get letterUnseen => 'non ancora vista';
 }

@@ -100,13 +100,19 @@ class _ParentScreenState extends State<ParentScreen> {
                 child: ListView(
                   padding: const EdgeInsets.fromLTRB(16, 4, 16, 32),
                   children: [
-                    _Section(title: context.l.sectionOverview, child: _overview(pack)),
-                    _Section(title: context.l.sectionLetters, child: _letters(pack)),
+                    _Section(
+                        title: context.l.sectionOverview,
+                        child: _overview(pack)),
+                    _Section(
+                        title: context.l.sectionLetters, child: _letters(pack)),
                     _Section(
                         title: context.l.sectionTips,
                         child: _recommendations(pack)),
-                    _Section(title: context.l.sectionMethod, child: _method(pack)),
-                    _Section(title: context.l.sectionSettings, child: const ParentSettings()),
+                    _Section(
+                        title: context.l.sectionMethod, child: _method(pack)),
+                    _Section(
+                        title: context.l.sectionSettings,
+                        child: const ParentSettings()),
                   ],
                 ),
               ),
@@ -116,10 +122,19 @@ class _ParentScreenState extends State<ParentScreen> {
 
   Widget _overview(ContentPack pack) {
     final p = ProgressService.instance;
-    final done = pack.allLessons.where((l) => p.isCompleted(pack.id, l.id)).length;
+    final done =
+        pack.allLessons.where((l) => p.isCompleted(pack.id, l.id)).length;
     final profile = ProfileService.instance.active;
     final rows = [
-      ('${profile?.avatar ?? '🦊'} ${profile?.name ?? ''}'.trim(), context.l.statProfile),
+      (
+        '${profile?.avatar ?? '🦊'} ${profile?.name ?? ''}'.trim(),
+        context.l.statProfile
+      ),
+      ('${SessionService.instance.playedMinToday}', context.l.statMinutesToday),
+      (
+        '${SessionService.instance.playedMinLastDays(7)}',
+        context.l.statMinutesWeek
+      ),
       ('${p.playDays.length}', context.l.statPlayDays),
       ('$done / ${pack.allLessons.length}', context.l.statLessons),
       ('${p.totalStars(pack.id)}', context.l.statStars),
@@ -132,18 +147,20 @@ class _ParentScreenState extends State<ParentScreen> {
       runSpacing: 10,
       children: [
         for (final (value, label) in rows)
-          Container(
-            width: 140,
-            padding: const EdgeInsets.all(10),
-            decoration: _box(),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(value, style: _valueStyle),
-                Text(label, style: _labelStyle),
-              ],
-            ),
-          ),
+          Semantics(
+              label: '$value $label',
+              child: Container(
+                width: 140,
+                padding: const EdgeInsets.all(10),
+                decoration: _box(),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(value, style: _valueStyle),
+                    Text(label, style: _labelStyle),
+                  ],
+                ),
+              )),
       ],
     );
   }
@@ -154,8 +171,7 @@ class _ParentScreenState extends State<ParentScreen> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(context.l.lettersLegend,
-            style: _labelStyle),
+        Text(context.l.lettersLegend, style: _labelStyle),
         const SizedBox(height: 8),
         for (final row in kRows)
           Padding(
@@ -164,51 +180,65 @@ class _ParentScreenState extends State<ParentScreen> {
               spacing: 6,
               children: [
                 for (final ch in row)
-                  GestureDetector(
-                    key: ValueKey('letter-$ch'),
-                    onTap: status[ch] == LetterStatus.unseen
-                        ? null
-                        : () => setState(
-                            () => _pickedLetter = picked == ch ? null : ch),
-                    child: Container(
-                      width: 34,
-                      height: 38,
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        color: switch (status[ch]!) {
-                          LetterStatus.mastered =>
-                            const Color(0xFF1DD1A1).withValues(alpha: 0.35),
-                          LetterStatus.practicing =>
-                            const Color(0xFFFFD200).withValues(alpha: 0.3),
-                          LetterStatus.unseen =>
-                            Colors.white.withValues(alpha: 0.05),
-                        },
-                        borderRadius: BorderRadius.circular(9),
-                        border: Border.all(
-                          color: picked == ch
-                              ? Colors.white
-                              : Colors.white.withValues(alpha: 0.1),
+                  // Čtečka obrazovky: písmeno + stav (rodičovský koutek je
+                  // jediná část, kde se čtečka očekává).
+                  Semantics(
+                      button: status[ch] != LetterStatus.unseen,
+                      label: '$ch: ${switch (status[ch]!) {
+                        LetterStatus.mastered => context.l.letterMastered,
+                        LetterStatus.practicing => context.l.letterPracticing,
+                        LetterStatus.unseen => context.l.letterUnseen,
+                      }}',
+                      child: GestureDetector(
+                        key: ValueKey('letter-$ch'),
+                        onTap: status[ch] == LetterStatus.unseen
+                            ? null
+                            : () => setState(
+                                () => _pickedLetter = picked == ch ? null : ch),
+                        child: Container(
+                          width: 34,
+                          height: 38,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            color: switch (status[ch]!) {
+                              LetterStatus.mastered =>
+                                const Color(0xFF1DD1A1).withValues(alpha: 0.35),
+                              LetterStatus.practicing =>
+                                const Color(0xFFFFD200).withValues(alpha: 0.3),
+                              LetterStatus.unseen =>
+                                Colors.white.withValues(alpha: 0.05),
+                            },
+                            borderRadius: BorderRadius.circular(9),
+                            border: Border.all(
+                              color: picked == ch
+                                  ? Colors.white
+                                  : Colors.white.withValues(alpha: 0.1),
+                            ),
+                          ),
+                          child: Text(
+                            ch,
+                            style: TextStyle(
+                              fontFamily: kFont,
+                              fontWeight: FontWeight.w900,
+                              color: Colors.white.withValues(
+                                  alpha: status[ch] == LetterStatus.unseen
+                                      ? 0.3
+                                      : 0.95),
+                            ),
+                          ),
                         ),
-                      ),
-                      child: Text(
-                        ch,
-                        style: TextStyle(
-                          fontFamily: kFont,
-                          fontWeight: FontWeight.w900,
-                          color: Colors.white.withValues(
-                              alpha: status[ch] == LetterStatus.unseen ? 0.3 : 0.95),
-                        ),
-                      ),
-                    ),
-                  ),
+                      )),
               ],
             ),
           ),
         if (picked != null) ...[
           const SizedBox(height: 6),
           Text(
-            context.l.troubleWords(picked,
-                ParentScreen.troubleWords(pack, picked).map((l) => l.display).join(', ')),
+            context.l.troubleWords(
+                picked,
+                ParentScreen.troubleWords(pack, picked)
+                    .map((l) => l.display)
+                    .join(', ')),
             key: const ValueKey('trouble-words'),
             style: _bodyStyle,
           ),
@@ -343,14 +373,20 @@ class _ParentSettingsState extends State<ParentSettings> {
       children: [
         toggle('sfx-toggle', '🔊', context.l.settingSounds, audio.sfxEnabled,
             (v) => audio.sfxEnabled = v),
-        toggle('ambient-toggle', '🌿', context.l.settingAmbient, audio.ambientEnabled,
-            (v) => audio.ambientEnabled = v),
+        toggle('ambient-toggle', '🌿', context.l.settingAmbient,
+            audio.ambientEnabled, (v) => audio.ambientEnabled = v),
         toggle('music-toggle', '🎵', context.l.settingMusic, audio.musicEnabled,
             (v) => audio.musicEnabled = v),
-        toggle('left-handed-toggle', '🫲', context.l.settingLeftHanded,
+        toggle(
+            'left-handed-toggle',
+            '🫲',
+            context.l.settingLeftHanded,
             SettingsService.instance.leftHanded,
             (v) => SettingsService.instance.leftHanded = v),
-        toggle('dyslexia-font-toggle', '🔤', context.l.settingDyslexiaFont,
+        toggle(
+            'dyslexia-font-toggle',
+            '🔤',
+            context.l.settingDyslexiaFont,
             SettingsService.instance.dyslexiaFont,
             (v) => SettingsService.instance.dyslexiaFont = v),
         const SizedBox(height: 8),
@@ -375,7 +411,8 @@ class _ParentSettingsState extends State<ParentSettings> {
                     for (final m in SettingsService.sessionLimits)
                       ChoiceChip(
                         key: ValueKey('limit-$m'),
-                        label: Text(m == 0 ? context.l.noLimit : context.l.minutes(m)),
+                        label: Text(
+                            m == 0 ? context.l.noLimit : context.l.minutes(m)),
                         selected: settings.sessionLimitMin == m,
                         onSelected: (_) => settings.sessionLimitMin = m,
                       ),
@@ -419,7 +456,8 @@ class _ParentSettingsState extends State<ParentSettings> {
             children: [
               for (final (label, value) in [
                 ('🔄 ${context.l.seasonAuto}', null),
-                for (final s in Season.values) ('${s.emoji} ${s.label(context.l)}', s),
+                for (final s in Season.values)
+                  ('${s.emoji} ${s.label(context.l)}', s),
               ])
                 ChoiceChip(
                   key: ValueKey('season-${value?.name ?? 'auto'}'),

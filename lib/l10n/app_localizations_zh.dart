@@ -367,4 +367,19 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get delete => '删除';
+
+  @override
+  String get statMinutesToday => '今天的分钟数';
+
+  @override
+  String get statMinutesWeek => '本周的分钟数';
+
+  @override
+  String get letterMastered => '掌握';
+
+  @override
+  String get letterPracticing => '练习中';
+
+  @override
+  String get letterUnseen => '还没遇到';
 }

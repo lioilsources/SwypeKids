@@ -371,4 +371,19 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get delete => 'Löschen';
+
+  @override
+  String get statMinutesToday => 'Minuten heute';
+
+  @override
+  String get statMinutesWeek => 'Minuten diese Woche';
+
+  @override
+  String get letterMastered => 'gekonnt';
+
+  @override
+  String get letterPracticing => 'übt noch';
+
+  @override
+  String get letterUnseen => 'noch nicht getroffen';
 }
