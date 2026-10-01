@@ -66,6 +66,7 @@ class WorldClockService extends ChangeNotifier {
 
   static const _kSeasonKey = 'sk.settings.season';
 
+  DateTime now() => _now();
   DayPhase get phase => phaseAt(_now());
   Season get calendarSeason => seasonAt(_now());
   Season get season => _seasonOverride ?? calendarSeason;

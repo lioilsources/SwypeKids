@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import '../data/models/content_pack.dart';
+import '../services/achievement_service.dart';
+import '../widgets/badge_chip.dart';
 
 /// Hero tag nálepky jednotky: po oslavě nálepka odletí na své místo na mapě.
 String stickerHeroTag(String packId, int unitIndex) =>
@@ -12,11 +14,15 @@ class UnitCompleteScreen extends StatelessWidget {
   final int stars;
   final Object? heroTag;
 
+  /// Odznaky získané touto jednotkou (oslava je ukáže pod hvězdami).
+  final List<GameBadge> newBadges;
+
   const UnitCompleteScreen({
     super.key,
     required this.reward,
     required this.stars,
     this.heroTag,
+    this.newBadges = const [],
   });
 
   @override
@@ -82,6 +88,15 @@ class UnitCompleteScreen extends StatelessWidget {
                   color: Colors.white.withOpacity(0.85),
                 ),
               ),
+              if (newBadges.isNotEmpty) ...[
+                const SizedBox(height: 16),
+                Wrap(
+                  spacing: 8,
+                  runSpacing: 8,
+                  alignment: WrapAlignment.center,
+                  children: [for (final b in newBadges) BadgeChip(badge: b)],
+                ),
+              ],
               const SizedBox(height: 32),
               ElevatedButton(
                 onPressed: () => Navigator.of(context).pop(),
