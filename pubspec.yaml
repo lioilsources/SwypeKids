@@ -53,3 +53,8 @@ flutter:
           weight: 800
         - asset: fonts/Nunito-Black.ttf
           weight: 900
+    - family: OpenDyslexic
+      fonts:
+        - asset: fonts/OpenDyslexic-Regular.otf
+        - asset: fonts/OpenDyslexic-Bold.otf
+          weight: 700

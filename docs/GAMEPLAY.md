@@ -157,6 +157,8 @@ kulturní variantu). Přidání jazyka = přidání JSON souboru, žádný Dart.
   profily. Po limitu se rozehrané kolo dohraje, pak hra vrátí na mapu, kde
   průvodce spí 💤 a lekce nejdou spustit (karta „Pipi už spí"). Prodloužit
   o 10 min jde jen z rodičovského koutku. Nový den začíná od nuly.
+- **Písmo pro dyslektiky** (v3.1, `SettingsService.dyslexiaFont`): OpenDyslexic
+  místo Nunito v celé appce (`kFont`), přepínač v koutku.
 - **Levák** (v3.1, `SettingsService.leftHanded`): klávesnice zrcadlově
   (Q vpravo), detekce podle skutečných pozic kláves.
 - **Profily sourozenců** (v3.0): každé dítě má avatara, jméno a vlastní

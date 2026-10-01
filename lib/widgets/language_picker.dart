@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../data/lessons.dart';
+import '../ui/app_font.dart';
 
 const Map<Language, String> kLanguageFlag = {
   Language.cs: '🇨🇿',
@@ -50,8 +51,8 @@ class LanguagePicker extends StatelessWidget {
                         const SizedBox(width: 6),
                         Text(
                           l.name.toUpperCase(),
-                          style: const TextStyle(
-                            fontFamily: 'Nunito',
+                          style: TextStyle(
+                            fontFamily: kFont,
                             fontSize: 12,
                             fontWeight: FontWeight.w800,
                             color: Color(0xFFA0C4FF),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../ui/app_font.dart';
 
 class WinScreen extends StatelessWidget {
   final int stars;
@@ -28,7 +29,7 @@ class WinScreen extends StatelessWidget {
                 'Hotovo!\nJsi šampion!',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontFamily: 'Nunito',
+                  fontFamily: kFont,
                   fontSize: 36,
                   fontWeight: FontWeight.w900,
                   color: Colors.white,
@@ -44,7 +45,7 @@ class WinScreen extends StatelessWidget {
               Text(
                 'Získal jsi $stars hvězdiček!',
                 style: TextStyle(
-                  fontFamily: 'Nunito',
+                  fontFamily: kFont,
                   fontSize: 20,
                   color: Colors.white.withOpacity(0.9),
                 ),
@@ -64,7 +65,7 @@ class WinScreen extends StatelessWidget {
                       horizontal: 40, vertical: 16),
                   shape: const StadiumBorder(),
                   textStyle: TextStyle(
-                    fontFamily: 'Nunito',
+                    fontFamily: kFont,
                     fontSize: 20,
                     fontWeight: FontWeight.w800,
                   ),

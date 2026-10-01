@@ -8,6 +8,7 @@ import '../services/profile_service.dart';
 import '../services/progress_service.dart';
 import '../services/tts_service.dart';
 import '../widgets/language_picker.dart' show kLanguageFlag;
+import '../ui/app_font.dart';
 
 /// První minuta (roadmap v3.0): průvodce pozdraví hlasem, dítě vybere jazyk
 /// podle vlajky a zvířátko, rodič může zadat jméno. Vše jde bez čtení —
@@ -143,8 +144,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               _ => _say.$3,
                             },
                             textAlign: TextAlign.center,
-                            style: const TextStyle(
-                              fontFamily: 'Nunito',
+                            style: TextStyle(
+                              fontFamily: kFont,
                               fontSize: 17,
                               fontWeight: FontWeight.w800,
                               color: Colors.white,
@@ -229,8 +230,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               textAlign: TextAlign.center,
               textCapitalization: TextCapitalization.words,
               maxLength: 20,
-              style: const TextStyle(
-                fontFamily: 'Nunito',
+              style: TextStyle(
+                fontFamily: kFont,
                 fontSize: 24,
                 fontWeight: FontWeight.w900,
                 color: Colors.white,

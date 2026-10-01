@@ -108,7 +108,7 @@ iOS, Android, macOS, Linux (check pubspec for active platforms).
 
 ## Assets
 
-- Custom fonts in `fonts/`
+- Custom fonts in `fonts/` (Nunito; OpenDyslexic under SIL OFL). Never hardcode `fontFamily: 'Nunito'` — use `kFont` from `lib/ui/app_font.dart` (switches to OpenDyslexic when the parent enables it)
 - Content packs in `assets/packs/`
 - Sfx in `assets/audio/sfx/`, ambient loops in `assets/audio/ambient/`, title music in `assets/audio/music/` + catalog `assets/audio/manifest.json` (`sfx`, `ambient`, `music`)
 - Screenshots in `GALLERY.md`

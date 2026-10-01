@@ -19,6 +19,7 @@ import '../widgets/star_celebration.dart';
 import 'unit_complete_screen.dart';
 import 'word_sentence_screen.dart';
 import 'win_screen.dart';
+import '../ui/app_font.dart';
 
 /// reviewMix → konkrétní lekce: nejslabší dříve naučené slovo, jehož písmena
 /// jsou mezi `unlocked`. Id a `unlocked` zůstávají z reviewMix lekce (postup
@@ -377,8 +378,8 @@ class _GameScreenState extends State<GameScreen>
                           const Spacer(),
                           Text(
                             '⭐ $_sessionStars',
-                            style: const TextStyle(
-                              fontFamily: 'Nunito',
+                            style: TextStyle(
+                              fontFamily: kFont,
                               fontSize: 14,
                               fontWeight: FontWeight.w800,
                               color: Color(0xFFFFD200),
@@ -489,7 +490,7 @@ class _GameScreenState extends State<GameScreen>
                   const SizedBox(width: 3),
                   Text(l,
                       style: TextStyle(
-                        fontFamily: 'Nunito',
+                        fontFamily: kFont,
                         fontSize: 11,
                         fontWeight: FontWeight.w800,
                         color: col,
@@ -546,8 +547,8 @@ class _GameScreenState extends State<GameScreen>
         ),
         child: Text(
           text,
-          style: const TextStyle(
-            fontFamily: 'Nunito',
+          style: TextStyle(
+            fontFamily: kFont,
             fontSize: 11,
             fontWeight: FontWeight.w800,
             color: Color(0xFFA0C4FF),
@@ -583,8 +584,8 @@ class _WordBagChip extends StatelessWidget {
         ),
         child: Text(
           '🎒 $word',
-          style: const TextStyle(
-            fontFamily: 'Nunito',
+          style: TextStyle(
+            fontFamily: kFont,
             fontSize: 16,
             fontWeight: FontWeight.w900,
             color: Colors.white,

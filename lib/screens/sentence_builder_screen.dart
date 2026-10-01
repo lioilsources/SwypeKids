@@ -9,6 +9,7 @@ import '../services/progress_service.dart';
 import '../services/tts_service.dart';
 import 'game_screen.dart';
 import '../widgets/language_picker.dart';
+import '../ui/app_font.dart';
 
 class SentenceBuilderScreen extends StatefulWidget {
   final Language language;
@@ -317,8 +318,8 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
         const SizedBox(width: 4),
         Text(
           resolvedText ?? part.text,
-          style: const TextStyle(
-            fontFamily: 'Nunito',
+          style: TextStyle(
+            fontFamily: kFont,
             fontSize: 20,
             fontWeight: FontWeight.w900,
             color: Color(0xFFFFD200),
@@ -336,8 +337,8 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
         ),
         child: Text(
           text,
-          style: const TextStyle(
-            fontFamily: 'Nunito',
+          style: TextStyle(
+            fontFamily: kFont,
             fontSize: 11,
             fontWeight: FontWeight.w800,
             color: Color(0xFFA0C4FF),
@@ -381,7 +382,7 @@ class _CategoryColumn extends StatelessWidget {
             label,
             textAlign: TextAlign.center,
             style: TextStyle(
-              fontFamily: 'Nunito',
+              fontFamily: kFont,
               fontSize: 11,
               fontWeight: FontWeight.w900,
               color: accent,
@@ -483,7 +484,7 @@ class _PartTile extends StatelessWidget {
             Text(
               '?',
               style: TextStyle(
-                fontFamily: 'Nunito',
+                fontFamily: kFont,
                 fontSize: 12,
                 fontWeight: FontWeight.w900,
                 color: Colors.white.withOpacity(0.35),
@@ -533,7 +534,7 @@ class _PartTile extends StatelessWidget {
               overflow: TextOverflow.ellipsis,
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontFamily: 'Nunito',
+                fontFamily: kFont,
                 fontSize: 12,
                 fontWeight: FontWeight.w800,
                 color: isSelected ? accent : Colors.white.withOpacity(0.85),
@@ -591,10 +592,10 @@ class _NewBadgeState extends State<_NewBadge>
           color: const Color(0xFF1DD1A1),
           borderRadius: BorderRadius.circular(99),
         ),
-        child: const Text(
+        child: Text(
           'NOVÉ',
           style: TextStyle(
-            fontFamily: 'Nunito',
+            fontFamily: kFont,
             fontSize: 9,
             fontWeight: FontWeight.w900,
             color: Colors.white,

@@ -50,7 +50,10 @@ class SwyperKidsApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    // Změna písma (rodičovský koutek) překreslí celou appku.
+    return ListenableBuilder(
+      listenable: SettingsService.instance,
+      builder: (context, _) => MaterialApp(
       title: 'Swype Kids',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -63,6 +66,7 @@ class SwyperKidsApp extends StatelessWidget {
       home: ProfileService.instance.onboarded
           ? HomeShell(initialLanguage: _detectLanguage())
           : const _FirstStart(),
+      ),
     );
   }
 }

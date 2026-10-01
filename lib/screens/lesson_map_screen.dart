@@ -19,6 +19,7 @@ import '../world/world_backdrop.dart';
 import '../world/world_clock.dart';
 import 'game_screen.dart';
 import 'unit_complete_screen.dart' show stickerHeroTag;
+import '../ui/app_font.dart';
 
 /// Mapa lekcí: svislá cesta jednotek a jejich uzlů (lekcí).
 /// Vstupní obrazovka hry — tap na odemčený uzel spouští GameScreen.
@@ -315,8 +316,8 @@ class LessonMapScreenState extends State<LessonMapScreen> {
                         child: Text(
                           pack.title.isNotEmpty ? pack.title : '🎹 Swype Kids',
                           overflow: TextOverflow.ellipsis,
-                          style: const TextStyle(
-                            fontFamily: 'Nunito',
+                          style: TextStyle(
+                            fontFamily: kFont,
                             fontSize: 15,
                             fontWeight: FontWeight.w900,
                             color: Color(0xFFFFD200),
@@ -333,8 +334,8 @@ class LessonMapScreenState extends State<LessonMapScreen> {
                       ],
                       Text(
                         '⭐ ${ProgressService.instance.totalStars(pack.id)}',
-                        style: const TextStyle(
-                          fontFamily: 'Nunito',
+                        style: TextStyle(
+                          fontFamily: kFont,
                           fontSize: 14,
                           fontWeight: FontWeight.w800,
                           color: Color(0xFFFFD200),
@@ -426,7 +427,7 @@ class _BedtimeCard extends StatelessWidget {
             Text(
               'Pipi už spí. Zítra zase!',
               style: TextStyle(
-                fontFamily: 'Nunito',
+                fontFamily: kFont,
                 fontSize: 16,
                 fontWeight: FontWeight.w800,
                 color: Colors.white.withValues(alpha: 0.85),
@@ -486,8 +487,8 @@ void _showParentNote(BuildContext context, Lesson lesson) {
           children: [
             Text(
               '👪 ${lesson.display}',
-              style: const TextStyle(
-                fontFamily: 'Nunito',
+              style: TextStyle(
+                fontFamily: kFont,
                 fontSize: 18,
                 fontWeight: FontWeight.w900,
                 color: Color(0xFFFFD200),
@@ -497,7 +498,7 @@ void _showParentNote(BuildContext context, Lesson lesson) {
             Text(
               lesson.parentNote,
               style: TextStyle(
-                fontFamily: 'Nunito',
+                fontFamily: kFont,
                 fontSize: 15,
                 fontWeight: FontWeight.w700,
                 height: 1.4,
@@ -534,10 +535,10 @@ class _PracticeCard extends StatelessWidget {
           children: [
             const Text('🔁', style: TextStyle(fontSize: 26)),
             const SizedBox(width: 10),
-            const Text(
+            Text(
               'Procvičování',
               style: TextStyle(
-                fontFamily: 'Nunito',
+                fontFamily: kFont,
                 fontSize: 15,
                 fontWeight: FontWeight.w900,
                 color: Color(0xFF7BFFB2),
@@ -577,8 +578,8 @@ class _BagChip extends StatelessWidget {
         ),
         child: Text(
           '🎒 $count',
-          style: const TextStyle(
-            fontFamily: 'Nunito',
+          style: TextStyle(
+            fontFamily: kFont,
             fontSize: 13,
             fontWeight: FontWeight.w800,
             color: Color(0xFF7BFFB2),
@@ -664,7 +665,7 @@ class _UnitBlock extends StatelessWidget {
                       unit.title,
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(
-                        fontFamily: 'Nunito',
+                        fontFamily: kFont,
                         fontSize: 15,
                         fontWeight: FontWeight.w900,
                         color: unitUnlocked

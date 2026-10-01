@@ -10,6 +10,7 @@ class SettingsService extends ChangeNotifier {
 
   static const _kLeftHanded = 'sk.settings.leftHanded';
   static const _kSessionLimit = 'sk.settings.sessionLimitMin';
+  static const _kDyslexiaFont = 'sk.settings.dyslexiaFont';
 
   /// Povolené limity session v minutách; 0 = bez limitu.
   static const sessionLimits = [0, 10, 15, 20];
@@ -17,6 +18,17 @@ class SettingsService extends ChangeNotifier {
   SharedPreferences? _prefs;
   bool _leftHanded = false;
   int _sessionLimitMin = 0;
+  bool _dyslexiaFont = false;
+
+  /// Písmo OpenDyslexic místo Nunito v celé appce.
+  bool get dyslexiaFont => _dyslexiaFont;
+
+  set dyslexiaFont(bool v) {
+    if (v == _dyslexiaFont) return;
+    _dyslexiaFont = v;
+    _prefs?.setBool(_kDyslexiaFont, v);
+    notifyListeners();
+  }
 
   /// Zrcadlená klávesnice (řady zprava doleva) — kratší cesta pro levou ruku.
   bool get leftHanded => _leftHanded;
@@ -41,5 +53,6 @@ class SettingsService extends ChangeNotifier {
     _prefs = await SharedPreferences.getInstance();
     _leftHanded = _prefs!.getBool(_kLeftHanded) ?? false;
     _sessionLimitMin = _prefs!.getInt(_kSessionLimit) ?? 0;
+    _dyslexiaFont = _prefs!.getBool(_kDyslexiaFont) ?? false;
   }
 }

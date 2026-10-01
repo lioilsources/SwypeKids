@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../services/achievement_service.dart';
+import '../ui/app_font.dart';
 
 /// „🧭 Objevitel" — nově získaný odznak, naskočí s pružným zvětšením.
 /// Používá se v oslavě kola i jednotky.
@@ -32,7 +33,7 @@ class BadgeChip extends StatelessWidget {
         child: Text(
           '${badge.emoji} ${badge.title}',
           style: TextStyle(
-            fontFamily: 'Nunito',
+            fontFamily: kFont,
             fontSize: 16 * scale,
             fontWeight: FontWeight.w900,
             color: const Color(0xFF3A2E1F),

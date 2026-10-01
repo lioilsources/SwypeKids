@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import '../ui/app_font.dart';
 
 /// Rodičovská brána (roadmap P6): ne PIN, ale jednoduchý příklad
 /// („7 × 3 = ?"), který dítě 5–9 let nespočítá a rodič nemusí pamatovat.
@@ -65,7 +66,7 @@ class _ParentGateState extends State<ParentGate> {
                 Text(
                   'Pro rodiče',
                   style: TextStyle(
-                    fontFamily: 'Nunito',
+                    fontFamily: kFont,
                     fontSize: 18,
                     fontWeight: FontWeight.w900,
                     color: Colors.white.withValues(alpha: 0.85),
@@ -78,8 +79,8 @@ class _ParentGateState extends State<ParentGate> {
                   child: Text(
                     'Kolik je $a × $b?',
                     key: const ValueKey('gate-question'),
-                    style: const TextStyle(
-                      fontFamily: 'Nunito',
+                    style: TextStyle(
+                      fontFamily: kFont,
                       fontSize: 26,
                       fontWeight: FontWeight.w900,
                       color: Color(0xFFFFD200),
@@ -100,8 +101,8 @@ class _ParentGateState extends State<ParentGate> {
                           padding: const EdgeInsets.symmetric(
                               horizontal: 22, vertical: 14),
                           shape: const StadiumBorder(),
-                          textStyle: const TextStyle(
-                            fontFamily: 'Nunito',
+                          textStyle: TextStyle(
+                            fontFamily: kFont,
                             fontSize: 22,
                             fontWeight: FontWeight.w800,
                           ),
@@ -116,7 +117,7 @@ class _ParentGateState extends State<ParentGate> {
                   child: Text(
                     'Zpět ke hře',
                     style: TextStyle(
-                      fontFamily: 'Nunito',
+                      fontFamily: kFont,
                       color: Colors.white.withValues(alpha: 0.5),
                     ),
                   ),
