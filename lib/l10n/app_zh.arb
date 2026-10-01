@@ -1,0 +1,217 @@
+{
+  "@@locale": "zh",
+  "appTitle": "Swype Kids",
+  "menuSyllabary": "拼音课本（滑动）",
+  "menuSentence": "造句",
+  "menuZoo": "动物园",
+  "menuBook": "我的小书",
+  "menuParents": "家长专区",
+  "practiceTitle": "练习",
+  "bedtimeText": "皮皮睡着了，明天见！",
+  "typeListen": "听力",
+  "typePicture": "看图",
+  "typeGap": "填空",
+  "typeReview": "复习",
+  "typeWord": "词语",
+  "typeSyllable": "音节",
+  "promptListen": "听一听，滑出你听到的",
+  "promptPicture": "图上是什么？写出来",
+  "promptGap": "少了哪个字母？滑出整个词",
+  "promptSwipeTouch": "用手指划过图片",
+  "promptSwipeTrackpad": "用两根手指划过图片",
+  "successText": "太棒了！",
+  "errorText": "再试一次！",
+  "newSticker": "你得到了一张新贴纸！",
+  "starsGained": "+{count} 颗星",
+  "backToMap": "回到地图",
+  "winTitle": "完成了！\n你是冠军！",
+  "winStars": "你得到了 {count} 颗星！",
+  "playAgain": "再玩一次",
+  "builderBadge": "句子",
+  "who": "谁",
+  "whatDoes": "做什么",
+  "whatWhere": "什么 / 哪里",
+  "newLabel": "新",
+  "clear": "清除",
+  "bookTitle": "我的小书",
+  "bookEmptyHint": "造一个句子，存进小书里",
+  "zooTitle": "动物园",
+  "badgesTitle": "徽章 {earned}/{total}",
+  "badgeFirstSwype": "第一划",
+  "badgeFirstSwypeHow": "第一次滑对",
+  "badgeNoMistake": "零失误",
+  "badgeNoMistakeHow": "整个单元都是三颗星",
+  "badgeExplorer": "探险家",
+  "badgeExplorerHow": "第一张贴纸",
+  "badgeCollectorHalf": "收藏家",
+  "badgeCollectorHalfHow": "动物园的一半",
+  "badgeCollectorAll": "大收藏家",
+  "badgeCollectorAllHow": "整个动物园",
+  "badgeNightOwl": "夜猫子",
+  "badgeNightOwlHow": "晚上玩过",
+  "badgeEarlyBird": "早起鸟",
+  "badgeEarlyBirdHow": "早上玩过",
+  "badgeFourSeasons": "四季",
+  "badgeFourSeasonsHow": "每个季节都玩过",
+  "badgeWordsmith10": "词语小能手",
+  "badgeWordsmith10How": "背包里有 10 个词",
+  "badgeWordsmith25": "词语大能手",
+  "badgeWordsmith25How": "背包里有 25 个词",
+  "badgeWordsmith50": "词语大师",
+  "badgeWordsmith50How": "背包里有 50 个词",
+  "badgePoet": "小诗人",
+  "badgePoetHow": "小书里有 10 个句子",
+  "badgeListener": "好耳朵",
+  "badgeListenerHow": "10 次听力三颗星",
+  "badgePersistent": "坚持者",
+  "badgePersistentHow": "玩了 7 天",
+  "parentTitle": "家长专区",
+  "gateQuestion": "{a} × {b} 等于多少？",
+  "backToGame": "回到游戏",
+  "sectionOverview": "概览",
+  "sectionLetters": "字母",
+  "sectionTips": "在家练习建议",
+  "sectionMethod": "应用怎么教",
+  "sectionSettings": "设置",
+  "statProfile": "档案",
+  "statPlayDays": "游戏天数",
+  "statLessons": "课",
+  "statStars": "颗星",
+  "statWords": "背包里的词",
+  "statSentences": "小书里的句子",
+  "statBadges": "徽章",
+  "lettersLegend": "🟢 掌握 · 🟡 练习中 · ⚪ 还没遇到",
+  "troubleWords": "带 {letter} 的容易混淆的词：{words}",
+  "tipNoData": "还没有需要练习的内容——学几课后这里会出现建议。",
+  "tipWeakest": "最弱的词：{words}。在家按音节拍手读一读，找找以它们开头的东西。",
+  "tipLetter": "字母 {letter} 还不牢：在家一起找以 {letter} 开头的东西。",
+  "tipLongPress": "长按地图上的一课，可以看到它练什么、为什么。",
+  "methodLabel": "方法：{method}",
+  "methodText": "孩子按听到的顺序用手指划过字母，拼出音节或词语。先是开音节（MA、TA），再是整词、没有文字的听力、填空和最弱词语的复习。出错从不阻碍进度——卡片只会抖一下并提示。学会的词马上用到句子里（造句器），还可以存进我的小书。",
+  "settingSounds": "音效",
+  "settingAmbient": "环境声",
+  "settingMusic": "音乐",
+  "settingLeftHanded": "左撇子（镜像键盘）",
+  "settingDyslexiaFont": "阅读障碍友好字体（OpenDyslexic）",
+  "settingSeason": "地图上的季节",
+  "seasonAuto": "按日历",
+  "seasonSpring": "春",
+  "seasonSummer": "夏",
+  "seasonAutumn": "秋",
+  "seasonWinter": "冬",
+  "settingTimeLimit": "每天游戏时间限制",
+  "noLimit": "不限制",
+  "minutes": "{n} 分钟",
+  "playedToday": "今天玩了 {played} 分钟",
+  "playedTodayOf": "今天玩了 {played} 分钟，限制 {limit} 分钟",
+  "guideAsleep": "——向导已经睡了",
+  "extendToday": "今天延长 {n} 分钟",
+  "profilesTitle": "档案",
+  "deleteProfileTitle": "删除档案 {name}？",
+  "deleteProfileBody": "所有进度、贴纸和小书也会一起删除，无法恢复。",
+  "cancel": "取消",
+  "delete": "删除",
+  "@starsGained": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@winStars": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@badgesTitle": {
+    "placeholders": {
+      "earned": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "@gateQuestion": {
+    "placeholders": {
+      "a": {
+        "type": "int"
+      },
+      "b": {
+        "type": "int"
+      }
+    }
+  },
+  "@troubleWords": {
+    "placeholders": {
+      "letter": {
+        "type": "String"
+      },
+      "words": {
+        "type": "String"
+      }
+    }
+  },
+  "@tipWeakest": {
+    "placeholders": {
+      "words": {
+        "type": "String"
+      }
+    }
+  },
+  "@tipLetter": {
+    "placeholders": {
+      "letter": {
+        "type": "String"
+      }
+    }
+  },
+  "@methodLabel": {
+    "placeholders": {
+      "method": {
+        "type": "String"
+      }
+    }
+  },
+  "@minutes": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "@playedToday": {
+    "placeholders": {
+      "played": {
+        "type": "int"
+      }
+    }
+  },
+  "@playedTodayOf": {
+    "placeholders": {
+      "played": {
+        "type": "int"
+      },
+      "limit": {
+        "type": "int"
+      }
+    }
+  },
+  "@extendToday": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "@deleteProfileTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  }
+}

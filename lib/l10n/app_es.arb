@@ -1,0 +1,217 @@
+{
+  "@@locale": "es",
+  "appTitle": "Swype Kids",
+  "menuSyllabary": "Silabario (Swype)",
+  "menuSentence": "Forma una frase",
+  "menuZoo": "Zoo",
+  "menuBook": "Mi libro",
+  "menuParents": "Para padres",
+  "practiceTitle": "Práctica",
+  "bedtimeText": "Pipi ya duerme. ¡Hasta mañana!",
+  "typeListen": "ESCUCHA",
+  "typePicture": "IMAGEN",
+  "typeGap": "COMPLETA",
+  "typeReview": "REPASO",
+  "typeWord": "PALABRA",
+  "typeSyllable": "SÍLABA",
+  "promptListen": "Escucha y desliza lo que oyes",
+  "promptPicture": "¿Qué hay en la imagen? Escríbelo",
+  "promptGap": "¿Qué letra falta? Desliza la palabra entera",
+  "promptSwipeTouch": "Desliza el dedo por los dibujos",
+  "promptSwipeTrackpad": "Desliza dos dedos por los dibujos",
+  "successText": "¡Muy bien!",
+  "errorText": "¡Inténtalo otra vez!",
+  "newSticker": "¡Tienes una pegatina nueva!",
+  "starsGained": "+{count} estrellas",
+  "backToMap": "Volver al mapa",
+  "winTitle": "¡Listo!\n¡Eres un campeón!",
+  "winStars": "¡Has ganado {count} estrellas!",
+  "playAgain": "Jugar otra vez",
+  "builderBadge": "FRASE",
+  "who": "QUIÉN",
+  "whatDoes": "QUÉ HACE",
+  "whatWhere": "QUÉ / DÓNDE",
+  "newLabel": "NUEVO",
+  "clear": "Borrar",
+  "bookTitle": "Mi libro",
+  "bookEmptyHint": "Forma una frase y guárdala en el libro",
+  "zooTitle": "Zoo",
+  "badgesTitle": "Insignias {earned}/{total}",
+  "badgeFirstSwype": "Primer trazo",
+  "badgeFirstSwypeHow": "Primer trazo correcto",
+  "badgeNoMistake": "Sin errores",
+  "badgeNoMistakeHow": "Una unidad entera con tres estrellas",
+  "badgeExplorer": "Explorador",
+  "badgeExplorerHow": "Primera pegatina",
+  "badgeCollectorHalf": "Coleccionista",
+  "badgeCollectorHalfHow": "Medio zoo",
+  "badgeCollectorAll": "Gran coleccionista",
+  "badgeCollectorAllHow": "Todo el zoo",
+  "badgeNightOwl": "Búho nocturno",
+  "badgeNightOwlHow": "Jugó de noche",
+  "badgeEarlyBird": "Madrugador",
+  "badgeEarlyBirdHow": "Jugó por la mañana",
+  "badgeFourSeasons": "Cuatro estaciones",
+  "badgeFourSeasonsHow": "Jugó en cada estación",
+  "badgeWordsmith10": "Palabrero",
+  "badgeWordsmith10How": "10 palabras en la mochila",
+  "badgeWordsmith25": "Gran palabrero",
+  "badgeWordsmith25How": "25 palabras en la mochila",
+  "badgeWordsmith50": "Maestro de palabras",
+  "badgeWordsmith50How": "50 palabras en la mochila",
+  "badgePoet": "Poeta",
+  "badgePoetHow": "10 frases en Mi libro",
+  "badgeListener": "Oyente",
+  "badgeListenerHow": "10 rondas de escucha con tres estrellas",
+  "badgePersistent": "Constante",
+  "badgePersistentHow": "7 días de juego",
+  "parentTitle": "Para padres",
+  "gateQuestion": "¿Cuánto es {a} × {b}?",
+  "backToGame": "Volver al juego",
+  "sectionOverview": "Resumen",
+  "sectionLetters": "Letras",
+  "sectionTips": "Consejos para casa",
+  "sectionMethod": "Cómo enseña la app",
+  "sectionSettings": "Ajustes",
+  "statProfile": "perfil",
+  "statPlayDays": "días de juego",
+  "statLessons": "lecciones",
+  "statStars": "estrellas",
+  "statWords": "palabras en la mochila",
+  "statSentences": "frases en Mi libro",
+  "statBadges": "insignias",
+  "lettersLegend": "🟢 dominada · 🟡 practicando · ⚪ aún no vista",
+  "troubleWords": "Palabras con {letter} que se confunden: {words}",
+  "tipNoData": "Aún no hay nada que practicar: tras unas lecciones aparecerán consejos.",
+  "tipWeakest": "Palabras más flojas: {words}. Pruebe a palmearlas por sílabas en casa y a buscar cosas que empiecen así.",
+  "tipLetter": "La letra {letter} aún no asienta: busquen en casa cosas que empiecen por {letter}.",
+  "tipLongPress": "Una pulsación larga en una lección del mapa muestra qué practica y por qué.",
+  "methodLabel": "Método: {method}",
+  "methodText": "El niño desliza el dedo por las letras en el orden en que oye la sílaba o la palabra. Primero sílabas abiertas (MA, TA), luego palabras enteras, rondas de escucha sin texto, palabras con hueco y repaso de las más flojas. Un error nunca bloquea el avance: la tarjeta solo tiembla y da una pista. Las palabras aprendidas se usan enseguida en una frase (el constructor de frases) y se pueden guardar en Mi libro.",
+  "settingSounds": "Sonidos",
+  "settingAmbient": "Sonidos del mundo",
+  "settingMusic": "Música",
+  "settingLeftHanded": "Zurdo (teclado en espejo)",
+  "settingDyslexiaFont": "Letra para dislexia (OpenDyslexic)",
+  "settingSeason": "Estación en el mapa",
+  "seasonAuto": "según el calendario",
+  "seasonSpring": "primavera",
+  "seasonSummer": "verano",
+  "seasonAutumn": "otoño",
+  "seasonWinter": "invierno",
+  "settingTimeLimit": "Límite de juego diario",
+  "noLimit": "sin límite",
+  "minutes": "{n} min",
+  "playedToday": "Hoy ha jugado {played} min",
+  "playedTodayOf": "Hoy ha jugado {played} de {limit} min",
+  "guideAsleep": " — el guía ya duerme",
+  "extendToday": "Ampliar hoy {n} min",
+  "profilesTitle": "Perfiles",
+  "deleteProfileTitle": "¿Borrar el perfil {name}?",
+  "deleteProfileBody": "Se borrará también todo el progreso, las pegatinas y el libro. No se puede deshacer.",
+  "cancel": "Cancelar",
+  "delete": "Borrar",
+  "@starsGained": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@winStars": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@badgesTitle": {
+    "placeholders": {
+      "earned": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "@gateQuestion": {
+    "placeholders": {
+      "a": {
+        "type": "int"
+      },
+      "b": {
+        "type": "int"
+      }
+    }
+  },
+  "@troubleWords": {
+    "placeholders": {
+      "letter": {
+        "type": "String"
+      },
+      "words": {
+        "type": "String"
+      }
+    }
+  },
+  "@tipWeakest": {
+    "placeholders": {
+      "words": {
+        "type": "String"
+      }
+    }
+  },
+  "@tipLetter": {
+    "placeholders": {
+      "letter": {
+        "type": "String"
+      }
+    }
+  },
+  "@methodLabel": {
+    "placeholders": {
+      "method": {
+        "type": "String"
+      }
+    }
+  },
+  "@minutes": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "@playedToday": {
+    "placeholders": {
+      "played": {
+        "type": "int"
+      }
+    }
+  },
+  "@playedTodayOf": {
+    "placeholders": {
+      "played": {
+        "type": "int"
+      },
+      "limit": {
+        "type": "int"
+      }
+    }
+  },
+  "@extendToday": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "@deleteProfileTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  }
+}
