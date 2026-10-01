@@ -86,7 +86,8 @@ class _GameScreenState extends State<GameScreen>
   String? _newWord; // slovo, které právě přibylo do batohu (oslava)
   SentencePart? _wordForSentence; // po oslavě: slovo hned do věty
   int _attempts = 0; // pokusy o aktuální lekci (1. pokus = 3⭐, 2. = 2⭐, pak 1⭐)
-  bool _revealed = false; // skryté kolo (poslech/obrázek/díra): odkryto po chybě
+  bool _revealed =
+      false; // skryté kolo (poslech/obrázek/díra): odkryto po chybě
   List<String> _path = [];
   List<String> _livePath = [];
   GameStatus _status = GameStatus.idle;
@@ -305,142 +306,165 @@ class _GameScreenState extends State<GameScreen>
             ],
           ),
         ),
-        child: _withCelebration(SafeArea(
-          child: Column(
-            children: [
-              // ── Top bar ──────────────────────────────────────────────
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                    horizontal: 8, vertical: 4),
-                child: Row(
+        child: LayoutBuilder(builder: (context, box) {
+          // Na šířku (tablet, telefon otočený) karta vlevo, klávesnice vpravo;
+          // na výšku pod sebou.
+          final landscape = box.maxWidth > box.maxHeight * 1.25;
+          return _withCelebration(
+              landscape: landscape,
+              SafeArea(
+                child: Column(
                   children: [
-                    IconButton(
-                      icon: const Icon(Icons.arrow_back_rounded,
-                          color: Color(0xFFA0C4FF), size: 22),
-                      padding: EdgeInsets.zero,
-                      constraints: const BoxConstraints(),
-                      onPressed: () => Navigator.of(context).pop(),
-                    ),
-                    const SizedBox(width: 8),
-                    _badge(switch (lesson.type) {
-                      LessonType.listen => '🔊 POSLECH',
-                      LessonType.pictureOnly => '🖼️ OBRÁZEK',
-                      LessonType.missingLetter => '🧩 DOPLŇ',
-                      LessonType.reviewMix => '🔁 OPAKOVÁNÍ',
-                      LessonType.swype => isWord ? '🔤 SLOVO' : '🔡 SLABIKA',
-                    }),
-                    const Spacer(),
-                    Text(
-                      '⭐ $_sessionStars',
-                      style: const TextStyle(
-                        fontFamily: 'Nunito',
-                        fontSize: 14,
-                        fontWeight: FontWeight.w800,
-                        color: Color(0xFFFFD200),
-                      ),
-                    ),
-                    const Spacer(),
-                    _badge('${_unit.icon} ${_idx + 1}/${_lessons.length}'),
-                  ],
-                ),
-              ),
-
-              // Progress bar
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 14),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(99),
-                  child: LinearProgressIndicator(
-                    value: progress,
-                    minHeight: 6,
-                    backgroundColor: Colors.white.withOpacity(0.1),
-                    valueColor: const AlwaysStoppedAnimation<Color>(
-                      Color(0xFFFFD200),
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(height: 8),
-
-              // ── Challenge card ────────────────────────────────────────
-              ChallengeCard(
-                lesson: lesson,
-                path: _livePath.isNotEmpty && _status == GameStatus.idle
-                    ? _livePath
-                    : _path,
-                status: _status,
-                shake: _shake,
-                mode: mode,
-                emojiFor: _emojiFor,
-                onReplayAudio:
-                    lesson.type == LessonType.listen ? _replayAudio : null,
-              ),
-              const SizedBox(height: 8),
-
-              // ── Klávesnice ────────────────────────────────────────────
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 6),
-                  child: KeyboardWidget(
-                    lesson: lesson,
-                    newLetters: _newLetters,
-                    emojiFor: _emojiFor,
-                    onSwypeEnd: _onSwypeEnd,
-                    onSwypeUpdate: _onSwypeUpdate,
-                    onLetter: AudioService.instance.playKeyTone,
-                  ),
-                ),
-              ),
-
-              // ── Legenda ───────────────────────────────────────────────
-              Padding(
-                padding: const EdgeInsets.fromLTRB(8, 4, 8, 6),
-                child: Wrap(
-                  alignment: WrapAlignment.center,
-                  spacing: 5,
-                  runSpacing: 4,
-                  children: lesson.unlocked.map((l) {
-                    final col =
-                        PackService.instance.keyColorFor(widget.pack, l);
-                    return Container(
+                    // ── Top bar ──────────────────────────────────────────────
+                    Padding(
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 8, vertical: 2),
-                      decoration: BoxDecoration(
-                        color: Colors.white.withOpacity(0.07),
-                        borderRadius: BorderRadius.circular(99),
-                        border: Border.all(
-                            color: col.withOpacity(0.4), width: 1),
-                      ),
+                          horizontal: 8, vertical: 4),
                       child: Row(
-                        mainAxisSize: MainAxisSize.min,
                         children: [
+                          IconButton(
+                            icon: const Icon(Icons.arrow_back_rounded,
+                                color: Color(0xFFA0C4FF), size: 22),
+                            padding: EdgeInsets.zero,
+                            constraints: const BoxConstraints(),
+                            onPressed: () => Navigator.of(context).pop(),
+                          ),
+                          const SizedBox(width: 8),
+                          _badge(switch (lesson.type) {
+                            LessonType.listen => '🔊 POSLECH',
+                            LessonType.pictureOnly => '🖼️ OBRÁZEK',
+                            LessonType.missingLetter => '🧩 DOPLŇ',
+                            LessonType.reviewMix => '🔁 OPAKOVÁNÍ',
+                            LessonType.swype =>
+                              isWord ? '🔤 SLOVO' : '🔡 SLABIKA',
+                          }),
+                          const Spacer(),
                           Text(
-                              PackService.instance
-                                  .keyEmojiFor(widget.pack, l),
-                              style: const TextStyle(fontSize: 11)),
-                          const SizedBox(width: 3),
-                          Text(l,
-                              style: TextStyle(
-                                fontFamily: 'Nunito',
-                                fontSize: 11,
-                                fontWeight: FontWeight.w800,
-                                color: col,
-                              )),
+                            '⭐ $_sessionStars',
+                            style: const TextStyle(
+                              fontFamily: 'Nunito',
+                              fontSize: 14,
+                              fontWeight: FontWeight.w800,
+                              color: Color(0xFFFFD200),
+                            ),
+                          ),
+                          const Spacer(),
+                          _badge(
+                              '${_unit.icon} ${_idx + 1}/${_lessons.length}'),
                         ],
                       ),
-                    );
-                  }).toList(),
+                    ),
+
+                    // Progress bar
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 14),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(99),
+                        child: LinearProgressIndicator(
+                          value: progress,
+                          minHeight: 6,
+                          backgroundColor: Colors.white.withOpacity(0.1),
+                          valueColor: const AlwaysStoppedAnimation<Color>(
+                            Color(0xFFFFD200),
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+
+                    if (landscape)
+                      Expanded(
+                        child: Row(
+                          children: [
+                            Expanded(
+                              flex: 5,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  _card(lesson, mode),
+                                  const SizedBox(height: 8),
+                                  _legend(lesson),
+                                ],
+                              ),
+                            ),
+                            Expanded(flex: 7, child: _keyboard(lesson)),
+                          ],
+                        ),
+                      )
+                    else ...[
+                      _card(lesson, mode),
+                      const SizedBox(height: 8),
+                      Expanded(child: _keyboard(lesson)),
+                      _legend(lesson),
+                    ],
+                  ],
                 ),
-              ),
-            ],
-          ),
-        )),
+              ));
+        }),
       ),
     );
   }
 
+  Widget _card(Lesson lesson, CardMode mode) => ChallengeCard(
+        lesson: lesson,
+        path: _livePath.isNotEmpty && _status == GameStatus.idle
+            ? _livePath
+            : _path,
+        status: _status,
+        shake: _shake,
+        mode: mode,
+        emojiFor: _emojiFor,
+        onReplayAudio: lesson.type == LessonType.listen ? _replayAudio : null,
+      );
+
+  Widget _keyboard(Lesson lesson) => Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 6),
+        child: KeyboardWidget(
+          lesson: lesson,
+          newLetters: _newLetters,
+          emojiFor: _emojiFor,
+          onSwypeEnd: _onSwypeEnd,
+          onSwypeUpdate: _onSwypeUpdate,
+          onLetter: AudioService.instance.playKeyTone,
+        ),
+      );
+
+  Widget _legend(Lesson lesson) => Padding(
+        padding: const EdgeInsets.fromLTRB(8, 4, 8, 6),
+        child: Wrap(
+          alignment: WrapAlignment.center,
+          spacing: 5,
+          runSpacing: 4,
+          children: lesson.unlocked.map((l) {
+            final col = PackService.instance.keyColorFor(widget.pack, l);
+            return Container(
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+              decoration: BoxDecoration(
+                color: Colors.white.withOpacity(0.07),
+                borderRadius: BorderRadius.circular(99),
+                border: Border.all(color: col.withOpacity(0.4), width: 1),
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(PackService.instance.keyEmojiFor(widget.pack, l),
+                      style: const TextStyle(fontSize: 11)),
+                  const SizedBox(width: 3),
+                  Text(l,
+                      style: TextStyle(
+                        fontFamily: 'Nunito',
+                        fontSize: 11,
+                        fontWeight: FontWeight.w800,
+                        color: col,
+                      )),
+                ],
+              ),
+            );
+          }).toList(),
+        ),
+      );
+
   /// Přes hru položí oslavu správného swype (padající hvězdy + konfety).
-  Widget _withCelebration(Widget game) => Stack(
+  Widget _withCelebration(Widget game, {required bool landscape}) => Stack(
         children: [
           game,
           if (_status == GameStatus.success)
@@ -448,7 +472,8 @@ class _GameScreenState extends State<GameScreen>
               child: StarCelebration(
                 key: ValueKey('celebration-$_idx'),
                 stars: _lessonStars,
-                landingY: 0.28,
+                landingY: landscape ? 0.4 : 0.28,
+                landingX: landscape ? 0.21 : 0.5,
                 onStarLanded: AudioService.instance.playStar,
               ),
             ),
@@ -456,8 +481,7 @@ class _GameScreenState extends State<GameScreen>
             Positioned(
               top: 56,
               right: 16,
-              child: _WordBagChip(
-                  key: ValueKey('bag-$_idx'), word: _newWord!),
+              child: _WordBagChip(key: ValueKey('bag-$_idx'), word: _newWord!),
             ),
         ],
       );

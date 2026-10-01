@@ -11,6 +11,9 @@ class StarCelebration extends StatefulWidget {
   /// Svislá pozice dopadu hvězd (0 = nahoře, 1 = dole).
   final double landingY;
 
+  /// Vodorovná pozice dopadu (0 = vlevo, 1 = vpravo); na šířku je karta vlevo.
+  final double landingX;
+
   /// Hvězda [index] právě dopadla (zvuk).
   final ValueChanged<int>? onStarLanded;
 
@@ -18,6 +21,7 @@ class StarCelebration extends StatefulWidget {
     super.key,
     required this.stars,
     this.landingY = 0.3,
+    this.landingX = 0.5,
     this.onStarLanded,
   });
 
@@ -53,8 +57,7 @@ class _StarCelebrationState extends State<StarCelebration>
   }
 
   void _checkLandings() {
-    while (_landed < widget.stars &&
-        _ctrl.value >= _landAt(_landed)) {
+    while (_landed < widget.stars && _ctrl.value >= _landAt(_landed)) {
       widget.onStarLanded?.call(_landed);
       _landed++;
     }
@@ -76,7 +79,8 @@ class _StarCelebrationState extends State<StarCelebration>
       child: LayoutBuilder(builder: (context, box) {
         final size = box.biggest;
         final starSize = min(size.width, size.height) * 0.13;
-        final landing = Offset(size.width / 2, size.height * widget.landingY);
+        final landing =
+            Offset(size.width * widget.landingX, size.height * widget.landingY);
 
         return AnimatedBuilder(
           animation: _ctrl,
