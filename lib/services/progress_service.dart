@@ -8,7 +8,8 @@ import '../data/models/content_pack.dart';
 import '../world/world_clock.dart' show Season;
 
 /// Ukládá postup dítěte (hvězdy za lekce, nálepky) per content pack a zvolený
-/// jazyk. Čtení jde ze synchronní in-memory kopie (žádné async v build),
+/// jazyk. Každý profil (sourozenec) má vlastní prostor klíčů: profil 1
+/// původní `sk.…`, další `sk.p{id}.…`. Čtení jde ze synchronní in-memory kopie (žádné async v build),
 /// zápis je fire-and-forget do shared_preferences.
 class ProgressService {
   ProgressService._();
@@ -19,17 +20,20 @@ class ProgressService {
   static const _kGlobalKey = 'sk.global'; // odznaky a statistiky napříč jazyky
 
   SharedPreferences? _prefs;
+  int _profile = 1;
   final Map<String, _PackProgress> _byPack = {};
   _GlobalProgress _global = _GlobalProgress();
   Language? _selectedLanguage;
 
-  static Future<void> init() async {
+  /// Načte postup profilu [profile]; volá se při startu a při přepnutí dítěte.
+  static Future<void> init({int profile = 1}) async {
     final prefs = await SharedPreferences.getInstance();
     instance._prefs = prefs;
+    instance._profile = profile;
     instance._byPack.clear();
     instance._selectedLanguage = null;
     instance._global = _GlobalProgress();
-    final rawGlobal = prefs.getString(_kGlobalKey);
+    final rawGlobal = prefs.getString(instance._k(_kGlobalKey));
     if (rawGlobal != null) {
       try {
         instance._global = _GlobalProgress.fromJson(
@@ -38,20 +42,47 @@ class ProgressService {
         // Poškozený záznam → odznaky od začátku, postup v packech zůstává.
       }
     }
-    final langName = prefs.getString(_kLanguageKey);
+    final langName = prefs.getString(instance._k(_kLanguageKey));
     instance._selectedLanguage =
         Language.values.asNameMap()[langName ?? ''];
+    final progressPrefix = instance._k(_kProgressPrefix);
     for (final key in prefs.getKeys()) {
-      if (!key.startsWith(_kProgressPrefix)) continue;
+      if (!key.startsWith(progressPrefix)) continue;
       final raw = prefs.getString(key);
       if (raw == null) continue;
       try {
-        instance._byPack[key.substring(_kProgressPrefix.length)] =
+        instance._byPack[key.substring(progressPrefix.length)] =
             _PackProgress.fromJson(
                 (jsonDecode(raw) as Map).cast<String, dynamic>());
       } catch (_) {
         // Poškozený záznam ignorujeme — dítě začne daný pack odznova.
       }
+    }
+  }
+
+  int get profile => _profile;
+
+  /// Klíč v prostoru aktivního profilu: profil 1 beze změny (starší
+  /// instalace nepotřebují migraci), ostatní `sk.p{id}.…`.
+  String _k(String key) =>
+      _profile == 1 ? key : 'sk.p$_profile.${key.substring(3)}';
+
+  /// Smaže uložený postup profilu [profile] (rodičovský koutek: odstranění
+  /// sourozence). Aktivní profil se nemění.
+  static Future<void> wipeProfile(int profile) async {
+    final prefs = await SharedPreferences.getInstance();
+    final prefix = profile == 1 ? 'sk.' : 'sk.p$profile.';
+    for (final key in prefs.getKeys().toList()) {
+      if (!key.startsWith(prefix)) continue;
+      // Globální nastavení (zvuk, období, profily) nejsou postup.
+      if (profile == 1 &&
+          (key.startsWith('sk.settings.') ||
+              key.startsWith('sk.profile') ||
+              key.startsWith('sk.p') ||
+              key == 'sk.activeProfile')) {
+        continue;
+      }
+      await prefs.remove(key);
     }
   }
 
@@ -62,7 +93,7 @@ class ProgressService {
 
   set selectedLanguage(Language? lang) {
     _selectedLanguage = lang;
-    if (lang != null) _prefs?.setString(_kLanguageKey, lang.name);
+    if (lang != null) _prefs?.setString(_k(_kLanguageKey), lang.name);
   }
 
   // ── Lekce a hvězdy ─────────────────────────────────────────────────────────
@@ -175,7 +206,7 @@ class ProgressService {
   }
 
   void _saveGlobal() =>
-      _prefs?.setString(_kGlobalKey, jsonEncode(_global.toJson()));
+      _prefs?.setString(_k(_kGlobalKey), jsonEncode(_global.toJson()));
 
   // ── Odhalené kousky světa ──────────────────────────────────────────────────
 
@@ -277,7 +308,7 @@ class ProgressService {
   void _save(String packId) {
     final p = _byPack[packId];
     if (p == null) return;
-    _prefs?.setString('$_kProgressPrefix$packId', jsonEncode(p.toJson()));
+    _prefs?.setString(_k('$_kProgressPrefix$packId'), jsonEncode(p.toJson()));
   }
 }
 

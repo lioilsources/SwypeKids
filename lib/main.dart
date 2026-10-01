@@ -10,8 +10,8 @@ import 'world/world_clock.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await ProgressService.init();
   await ProfileService.init();
+  await ProgressService.init(profile: ProfileService.instance.activeId);
   await AudioService.instance.loadSettings();
   await WorldClockService.instance.loadSettings();
   WorldClockService.instance.start();

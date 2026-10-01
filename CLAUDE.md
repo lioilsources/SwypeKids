@@ -47,7 +47,7 @@ lib/
 ├── services/
 │   ├── pack_service.dart    # Loads JSON packs (rootBundle); broken pack → falls back to en
 │   ├── achievement_service.dart # GameBadge enum + check(trigger, pack) → newly earned badges
-│   ├── profile_service.dart # Child profile: avatar, name, onboarded (single profile for now)
+│   ├── profile_service.dart # Child profiles (siblings): avatar, name, active id; profile 1 = legacy keys, others sk.p{id}.…
 │   ├── progress_service.dart # shared_preferences: stars, collectibles, language, word bag, book, badges (sk.global)
 │   └── tts_service.dart     # flutter_tts wrapper (listen rounds, sentences)
 ├── world/
@@ -90,6 +90,7 @@ iOS, Android, macOS, Linux (check pubspec for active platforms).
 - One pack per language: `assets/packs/{cs,en,de,es,it,fr,zh,ja,pt}.json` (schema v2, see `docs/GAMEPLAY.md` §5)
 - `target` is uppercase diacritic-free Latin (what is swyped); `display` carries accents/tones/hiragana
 - Lesson `type`: `swype` | `listen` | `missingLetter` (`gap` index) | `pictureOnly` | `reviewMix` (resolved at runtime to the weakest learned word, `resolveReviewMix`); unknown types fall back to `swype`
+- Profiles: `ProgressService.init(profile: id)` loads one child's progress (keys namespaced per profile, profile 1 unprefixed so old installs need no migration); switching rebuilds HomeShell screens via a keyed IndexedStack. Settings (sound, season) stay global
 - Badges (`GameBadge`, 14 from roadmap P4) are global across languages; `AchievementService.check` is called on LessonDone / UnitDone (game), SessionStart (map open) — never add streak-style pressure
 - Word strength 0–5 per target (`ProgressService.recordAttempt`); map offers “Procvičování” (5 weakest learned) via `GameScreen(practice: …)`, which never writes lesson completion or stickers
 - Never add lessons to an existing unit (it would re-lock later units for kids who finished it); add new units, or change an existing lesson's type (id + progress stay)
