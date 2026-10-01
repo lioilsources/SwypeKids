@@ -14,6 +14,7 @@ void main() {
   setUp(() async {
     SharedPreferences.setMockInitialValues({});
     await ProgressService.init();
+    await seedPack(Language.cs);
   });
 
   Future<String?> runScreen(WidgetTester tester, String vocab,
@@ -21,7 +22,7 @@ void main() {
     tester.view.physicalSize = const Size(1000, 1400);
     tester.view.devicePixelRatio = 1.0;
     addTearDown(tester.view.reset);
-    cs = (await tester.runAsync(() => PackService.instance.load(Language.cs)))!;
+    cs = PackService.instance.cached(Language.cs)!;
     String? result = 'nevráceno';
     await tester.pumpWidget(localizedApp(
       home: Builder(

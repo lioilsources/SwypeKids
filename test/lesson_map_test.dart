@@ -13,6 +13,7 @@ void main() {
   setUp(() async {
     SharedPreferences.setMockInitialValues({});
     await ProgressService.init();
+    await seedPack(Language.cs);
   });
 
   testWidgets('mapa načte český pack a zobrazí jednotky', (tester) async {
