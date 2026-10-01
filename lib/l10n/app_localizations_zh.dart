@@ -409,4 +409,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get badgeExpeditionHow => '第一次每周复习探险';
+
+  @override
+  String get seasonStickersTitle => '季节贴纸';
 }

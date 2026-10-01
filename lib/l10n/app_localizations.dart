@@ -861,6 +861,12 @@ abstract class AppLocalizations {
   /// In cs, this message translates to:
   /// **'První týdenní výprava za opakováním'**
   String get badgeExpeditionHow;
+
+  /// No description provided for @seasonStickersTitle.
+  ///
+  /// In cs, this message translates to:
+  /// **'Nálepky ročních období'**
+  String get seasonStickersTitle;
 }
 
 class _AppLocalizationsDelegate

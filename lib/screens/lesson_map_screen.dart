@@ -121,13 +121,19 @@ class LessonMapScreenState extends State<LessonMapScreen> {
     if (!_bedtime) _saidGoodNight = false;
   }
 
-  void _findSecret(Biome biome) {
+  /// Sezónní nálepka: schovaná na právě rozehrané jednotce, jen v tomhle
+  /// období (zimní překvapení jde najít jen v zimě).
+  void _findSeasonal(Season season) => _findSecret(null, seasonal: season);
+
+  /// Dítě našlo ✨ v kousku světa: nálepka biotopu (nebo sezónní) do Zvěřince.
+  void _findSecret(Biome? biome, {Season? seasonal}) {
     final pack = _pack;
     if (pack == null || _bedtime) return;
-    ProgressService.instance.addCollectible(pack.id, biome.secret);
+    final emoji = seasonal?.secret ?? biome!.secret;
+    ProgressService.instance.addCollectible(pack.id, emoji);
     AudioService.instance.play(Sfx.sticker);
     _secretTimer?.cancel();
-    setState(() => _foundSecret = biome.secret);
+    setState(() => _foundSecret = emoji);
     _secretTimer = Timer(const Duration(seconds: 3), () {
       if (mounted) setState(() => _foundSecret = null);
     });
@@ -431,7 +437,11 @@ class LessonMapScreenState extends State<LessonMapScreen> {
                                   unitIndex: u,
                                   world: world,
                                   onLessonTap: (l) => _openLesson(u, l),
-                                  onSecret: _findSecret,
+                                  onSecret: (b) => _findSecret(b),
+                                  onSeasonal: _findSeasonal,
+                                  isCurrent:
+                                      progress.firstUncompletedIn(pack)?.unit ==
+                                          u,
                                 );
                               },
                             ),
@@ -688,6 +698,10 @@ class _UnitBlock extends StatelessWidget {
   final WorldTheme world;
   final ValueChanged<int> onLessonTap;
   final ValueChanged<Biome> onSecret;
+  final ValueChanged<Season> onSeasonal;
+
+  /// Jednotka, kde dítě právě hraje — jen tam je sezónní překvapení.
+  final bool isCurrent;
 
   const _UnitBlock({
     required this.pack,
@@ -695,6 +709,8 @@ class _UnitBlock extends StatelessWidget {
     required this.world,
     required this.onLessonTap,
     required this.onSecret,
+    required this.onSeasonal,
+    this.isCurrent = false,
   });
 
   @override
@@ -707,12 +723,25 @@ class _UnitBlock extends StatelessWidget {
     final revealed = progress.isUnitRevealed(pack.id, unit.id);
     final biome = Biome.parse(unit.biome);
     final secretFound = progress.collectibles(pack.id).contains(biome.secret);
+    final seasonFound =
+        progress.collectibles(pack.id).contains(world.season.secret);
 
     // Každá jednotka je kousek světa: biotop z packu, mlha dokud je zamčená.
     return BiomeBand(
       biome: biome,
       theme: world,
       // Tajná nálepka: nenápadné ✨, po nalezení zmizí (žádný text — průzkum).
+      seasonal: isCurrent && !seasonFound
+          ? GestureDetector(
+              key: ValueKey('seasonal-${unit.id}'),
+              onTap: () => onSeasonal(world.season),
+              child: Opacity(
+                opacity: 0.6,
+                child: Text(world.season.emoji,
+                    style: const TextStyle(fontSize: 16)),
+              ),
+            )
+          : null,
       hidden: secretFound
           ? null
           : GestureDetector(

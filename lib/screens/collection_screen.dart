@@ -57,8 +57,9 @@ class _CollectionScreenState extends State<CollectionScreen> {
   @override
   Widget build(BuildContext context) {
     final pack = _pack;
-    final owned =
-        pack == null ? const <String>[] : ProgressService.instance.collectibles(pack.id);
+    final owned = pack == null
+        ? const <String>[]
+        : ProgressService.instance.collectibles(pack.id);
 
     return Container(
       decoration: const BoxDecoration(
@@ -70,13 +71,12 @@ class _CollectionScreenState extends State<CollectionScreen> {
       ),
       child: SafeArea(
         child: pack == null
-            ? const Center(
-                child: Text('🏅', style: TextStyle(fontSize: 64)))
+            ? const Center(child: Text('🏅', style: TextStyle(fontSize: 64)))
             : Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 8, vertical: 4),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                     child: Row(
                       children: [
                         Builder(
@@ -118,8 +118,7 @@ class _CollectionScreenState extends State<CollectionScreen> {
                         final world = WorldClockService.instance.theme;
                         return Center(
                           child: ConstrainedBox(
-                            constraints:
-                                const BoxConstraints(maxWidth: 640),
+                            constraints: const BoxConstraints(maxWidth: 640),
                             child: ListView(
                               padding: const EdgeInsets.all(16),
                               children: [
@@ -133,6 +132,8 @@ class _CollectionScreenState extends State<CollectionScreen> {
                                     world: world,
                                     onSay: _say,
                                   ),
+                                const SizedBox(height: 20),
+                                _SeasonShelf(pack: pack),
                                 const SizedBox(height: 20),
                                 const _BadgeShelf(),
                               ],
@@ -303,6 +304,63 @@ class _StickerState extends State<_Sticker>
           ),
         ),
       ),
+    );
+  }
+}
+
+/// Sezónní nálepky: jedna za každé období, schovaná na mapě jen v něm.
+class _SeasonShelf extends StatelessWidget {
+  final ContentPack pack;
+  const _SeasonShelf({required this.pack});
+
+  @override
+  Widget build(BuildContext context) {
+    final owned = ProgressService.instance.collectibles(pack.id);
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          '🗓️ ${context.l.seasonStickersTitle}',
+          style: TextStyle(
+            fontFamily: kFont,
+            fontSize: 14,
+            fontWeight: FontWeight.w900,
+            color: const Color(0xFFFFD200),
+          ),
+        ),
+        const SizedBox(height: 10),
+        Wrap(
+          spacing: 10,
+          children: [
+            for (final s in Season.values)
+              Container(
+                key: ValueKey('season-sticker-${s.name}'),
+                width: 72,
+                padding: const EdgeInsets.symmetric(vertical: 8),
+                decoration: BoxDecoration(
+                  color: Colors.white.withValues(
+                      alpha: owned.contains(s.secret) ? 0.12 : 0.05),
+                  borderRadius: BorderRadius.circular(16),
+                  border: Border.all(
+                    color: owned.contains(s.secret)
+                        ? const Color(0xFFFFD200).withValues(alpha: 0.5)
+                        : Colors.white.withValues(alpha: 0.1),
+                  ),
+                ),
+                child: Column(
+                  children: [
+                    Opacity(
+                      opacity: owned.contains(s.secret) ? 1 : 0.35,
+                      child: Text(owned.contains(s.secret) ? s.secret : '❓',
+                          style: const TextStyle(fontSize: 30)),
+                    ),
+                    Text(s.emoji, style: const TextStyle(fontSize: 14)),
+                  ],
+                ),
+              ),
+          ],
+        ),
+      ],
     );
   }
 }

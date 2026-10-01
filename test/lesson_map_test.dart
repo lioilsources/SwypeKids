@@ -7,6 +7,7 @@ import 'package:swype_kids/screens/lesson_map_screen.dart';
 import 'package:swype_kids/services/progress_service.dart';
 import 'package:swype_kids/services/session_service.dart';
 import 'package:swype_kids/services/settings_service.dart';
+import 'package:swype_kids/world/world_clock.dart';
 import 'helpers.dart';
 
 void main() {
@@ -211,5 +212,24 @@ void main() {
     expect(find.byKey(const ValueKey('expedition')), findsNothing);
     expect(find.text('Procvičování'), findsOneWidget);
     await tester.pump(const Duration(seconds: 3));
+  });
+
+  testWidgets('sezónní překvapení je jen na rozehrané jednotce a dá nálepku období',
+      (tester) async {
+    await tester.pumpWidget(localizedApp(
+      home: Scaffold(
+        body: LessonMapScreen(language: Language.cs, onLanguageChanged: (_) {}),
+      ),
+    ));
+    await tester.pump();
+    await tester.pump(const Duration(seconds: 2));
+    final season = WorldClockService.instance.season;
+    expect(find.byKey(const ValueKey('seasonal-cs-u1')), findsOneWidget);
+    expect(find.byKey(const ValueKey('seasonal-cs-u2')), findsNothing);
+    await tester.tap(find.byKey(const ValueKey('seasonal-cs-u1')));
+    await tester.pump();
+    expect(ProgressService.instance.collectibles('cs-CZ'), contains(season.secret));
+    expect(find.byKey(const ValueKey('seasonal-cs-u1')), findsNothing);
+    await tester.pump(const Duration(seconds: 4));
   });
 }

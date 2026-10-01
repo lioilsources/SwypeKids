@@ -413,4 +413,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get badgeExpeditionHow => 'First weekly review expedition';
+
+  @override
+  String get seasonStickersTitle => 'Season stickers';
 }

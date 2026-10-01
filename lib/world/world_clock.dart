@@ -8,13 +8,16 @@ enum DayPhase { morning, day, evening, night }
 
 /// Roční období (severní polokoule; reálný kalendář je default — roadmap P1).
 enum Season {
-  spring('🌸'),
-  summer('☀️'),
-  autumn('🍂'),
-  winter('❄️');
+  spring('🌸', '🐣'),
+  summer('☀️', '🍉'),
+  autumn('🍂', '🎃'),
+  winter('❄️', '⛸️');
 
-  const Season(this.emoji);
+  const Season(this.emoji, this.secret);
   final String emoji;
+
+  /// Sezónní tajná nálepka (roadmap v4.0): na mapě jen v daném období.
+  final String secret;
 }
 
 /// Částice ve světě podle období a denní doby.

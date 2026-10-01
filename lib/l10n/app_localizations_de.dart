@@ -414,4 +414,7 @@ class AppLocalizationsDe extends AppLocalizations {
   @override
   String get badgeExpeditionHow =>
       'Erste wöchentliche Wiederholungs-Expedition';
+
+  @override
+  String get seasonStickersTitle => 'Jahreszeiten-Sticker';
 }

@@ -413,4 +413,7 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get badgeExpeditionHow => 'První týdenní výprava za opakováním';
+
+  @override
+  String get seasonStickersTitle => 'Nálepky ročních období';
 }

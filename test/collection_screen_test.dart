@@ -43,6 +43,13 @@ void main() {
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 300));
     expect(find.byKey(const ValueKey('secret-cs-u1')), findsOneWidget);
+    // Polička období je pod 17 kousky ostrova → doscrollovat
+    await tester.dragUntilVisible(
+      find.byKey(const ValueKey('season-sticker-winter')),
+      find.byType(ListView),
+      const Offset(0, -400),
+    );
+    expect(find.byKey(const ValueKey('season-sticker-winter')), findsOneWidget);
     await tester.pump(const Duration(seconds: 3));
   });
 }

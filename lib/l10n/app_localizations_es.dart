@@ -412,4 +412,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get badgeExpeditionHow => 'Primera expedición semanal de repaso';
+
+  @override
+  String get seasonStickersTitle => 'Pegatinas de las estaciones';
 }
