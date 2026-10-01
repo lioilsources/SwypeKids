@@ -404,4 +404,14 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get promptRhyme => 'Was reimt sich? Tipp auf das Bild';
+
+  @override
+  String get expeditionTitle => 'Wiederholungs-Expedition';
+
+  @override
+  String get badgeExpedition => 'Expeditionsheld';
+
+  @override
+  String get badgeExpeditionHow =>
+      'Erste wöchentliche Wiederholungs-Expedition';
 }

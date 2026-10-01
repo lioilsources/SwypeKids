@@ -170,6 +170,9 @@ kulturní variantu). Přidání jazyka = přidání JSON souboru, žádný Dart.
   na avatara v menu, ➕ založí dalšího přes stejný onboarding (max. 6).
   Klíče: profil 1 původní `sk.…`, další `sk.p{id}.…` — starší instalace
   bez migrace. Nastavení (zvuk, období) jsou společná (rodič).
+- **Výprava za opakováním** (v4.0): od 10 naučených slov se jednou za 7 dní
+  místo Procvičování nabídne zlatý uzel 🧭 s 8 nejslabšími slovy; dohrání se
+  počítá (`ProgressService.markExpedition`), první dá odznak Výpravník.
 - **Odznaky** (`GameBadge`, roadmap P4): jednorázové, bez streaku. První tah,
   Bez chyby (jednotka od začátku na samé 3⭐), Objevitel / Sběratel / Velký
   sběratel (nálepky), Noční sova / Ranní ptáče (světové hodiny), Čtyři roční

@@ -404,4 +404,13 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get promptRhyme => 'Cosa fa rima? Tocca la figura';
+
+  @override
+  String get expeditionTitle => 'Spedizione di ripasso';
+
+  @override
+  String get badgeExpedition => 'Esploratore del ripasso';
+
+  @override
+  String get badgeExpeditionHow => 'Prima spedizione settimanale di ripasso';
 }

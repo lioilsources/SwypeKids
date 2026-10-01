@@ -224,5 +224,8 @@
   "typeRhyme": "REIM",
   "promptHunt": "Welchen Buchstaben hörst du? Tipp ihn an",
   "promptJoin": "Verbinde die Silben — wische das ganze Wort",
-  "promptRhyme": "Was reimt sich? Tipp auf das Bild"
+  "promptRhyme": "Was reimt sich? Tipp auf das Bild",
+  "expeditionTitle": "Wiederholungs-Expedition",
+  "badgeExpedition": "Expeditionsheld",
+  "badgeExpeditionHow": "Erste wöchentliche Wiederholungs-Expedition"
 }

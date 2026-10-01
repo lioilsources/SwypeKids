@@ -403,4 +403,14 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get promptRhyme => 'Qu\'est-ce qui rime ? Touche l\'image';
+
+  @override
+  String get expeditionTitle => 'Expédition de révision';
+
+  @override
+  String get badgeExpedition => 'Expéditionnaire';
+
+  @override
+  String get badgeExpeditionHow =>
+      'Première expédition de révision de la semaine';
 }

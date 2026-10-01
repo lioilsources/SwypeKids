@@ -843,6 +843,24 @@ abstract class AppLocalizations {
   /// In cs, this message translates to:
   /// **'Co se rýmuje? Ťukni na obrázek'**
   String get promptRhyme;
+
+  /// No description provided for @expeditionTitle.
+  ///
+  /// In cs, this message translates to:
+  /// **'Výprava za opakováním'**
+  String get expeditionTitle;
+
+  /// No description provided for @badgeExpedition.
+  ///
+  /// In cs, this message translates to:
+  /// **'Výpravník'**
+  String get badgeExpedition;
+
+  /// No description provided for @badgeExpeditionHow.
+  ///
+  /// In cs, this message translates to:
+  /// **'První týdenní výprava za opakováním'**
+  String get badgeExpeditionHow;
 }
 
 class _AppLocalizationsDelegate

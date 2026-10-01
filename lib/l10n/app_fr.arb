@@ -224,5 +224,8 @@
   "typeRhyme": "RIME",
   "promptHunt": "Quelle lettre entends-tu ? Touche-la",
   "promptJoin": "Relie les syllabes : glisse tout le mot",
-  "promptRhyme": "Qu'est-ce qui rime ? Touche l'image"
+  "promptRhyme": "Qu'est-ce qui rime ? Touche l'image",
+  "expeditionTitle": "Expédition de révision",
+  "badgeExpedition": "Expéditionnaire",
+  "badgeExpeditionHow": "Première expédition de révision de la semaine"
 }

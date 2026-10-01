@@ -37,6 +37,7 @@ extension GameBadgeL10n on GameBadge {
         GameBadge.poet => l.badgePoet,
         GameBadge.listener => l.badgeListener,
         GameBadge.persistent => l.badgePersistent,
+        GameBadge.expedition => l.badgeExpedition,
       };
 
   String condition(AppLocalizations l) => switch (this) {
@@ -54,6 +55,7 @@ extension GameBadgeL10n on GameBadge {
         GameBadge.poet => l.badgePoetHow,
         GameBadge.listener => l.badgeListenerHow,
         GameBadge.persistent => l.badgePersistentHow,
+        GameBadge.expedition => l.badgeExpeditionHow,
       };
 }
 

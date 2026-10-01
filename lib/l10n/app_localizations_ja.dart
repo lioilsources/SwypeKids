@@ -400,4 +400,13 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get promptRhyme => 'おなじひびきはどれ？えをタップしてね';
+
+  @override
+  String get expeditionTitle => 'ふくしゅうたんけん';
+
+  @override
+  String get badgeExpedition => 'たんけんたい';
+
+  @override
+  String get badgeExpeditionHow => 'はじめてのしゅうかんふくしゅうたんけん';
 }

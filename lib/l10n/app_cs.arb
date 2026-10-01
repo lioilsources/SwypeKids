@@ -224,5 +224,8 @@
   "typeRhyme": "RÝM",
   "promptHunt": "Které písmenko slyšíš? Ťukni na něj",
   "promptJoin": "Spoj slabiky — přejeď celé slovo",
-  "promptRhyme": "Co se rýmuje? Ťukni na obrázek"
+  "promptRhyme": "Co se rýmuje? Ťukni na obrázek",
+  "expeditionTitle": "Výprava za opakováním",
+  "badgeExpedition": "Výpravník",
+  "badgeExpeditionHow": "První týdenní výprava za opakováním"
 }

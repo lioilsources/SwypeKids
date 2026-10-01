@@ -403,4 +403,13 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get promptRhyme => '¿Qué rima? Toca el dibujo';
+
+  @override
+  String get expeditionTitle => 'Expedición de repaso';
+
+  @override
+  String get badgeExpedition => 'Expedicionario';
+
+  @override
+  String get badgeExpeditionHow => 'Primera expedición semanal de repaso';
 }

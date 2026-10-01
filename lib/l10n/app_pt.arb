@@ -224,5 +224,8 @@
   "typeRhyme": "RIMA",
   "promptHunt": "Que letra você ouviu? Toque nela",
   "promptJoin": "Junte as sílabas: deslize a palavra inteira",
-  "promptRhyme": "O que rima? Toque na figura"
+  "promptRhyme": "O que rima? Toque na figura",
+  "expeditionTitle": "Expedição de revisão",
+  "badgeExpedition": "Expedicionário",
+  "badgeExpeditionHow": "Primeira expedição semanal de revisão"
 }

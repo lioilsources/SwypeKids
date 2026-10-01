@@ -186,4 +186,17 @@ void main() {
       expect(pages.any((b) => b.text == 'věta 0'), isFalse);
     });
   });
+
+  test('výprava: jednou za 7 dní, počítá se a přežije restart', () async {
+    final p = ProgressService.instance;
+    final t0 = DateTime(2026, 10, 1, 10);
+    expect(p.isExpeditionDue(t0), isTrue);
+    p.markExpedition(t0);
+    expect(p.isExpeditionDue(t0.add(const Duration(days: 6))), isFalse);
+    expect(p.isExpeditionDue(t0.add(const Duration(days: 7))), isTrue);
+    await ProgressService.init();
+    expect(ProgressService.instance.expeditionsDone, 1);
+    expect(ProgressService.instance.isExpeditionDue(t0.add(const Duration(days: 3))),
+        isFalse);
+  });
 }
