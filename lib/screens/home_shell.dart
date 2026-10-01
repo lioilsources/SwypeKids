@@ -147,8 +147,9 @@ class _AppDrawer extends StatelessWidget {
     return Drawer(
       backgroundColor: const Color(0xFF1A1A2E),
       child: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
+        // Menu scrolluje: na malém telefonu se přepínače a období nevejdou.
+        child: ListView(
+          padding: EdgeInsets.zero,
           children: [
             const Padding(
               padding: EdgeInsets.fromLTRB(20, 24, 20, 12),
@@ -232,7 +233,7 @@ class _AppDrawer extends StatelessWidget {
               selected: currentView == AppView.book,
               onTap: () => onPick(AppView.book),
             ),
-            const Spacer(),
+            const SizedBox(height: 8),
             const Divider(color: Colors.white12, height: 1),
             const _SoundToggle(),
             const _AmbientToggle(),
@@ -281,13 +282,16 @@ class _SoundToggleState extends State<_SoundToggle> {
         children: [
           Text(on ? '🔊' : '🔇', style: const TextStyle(fontSize: 22)),
           const SizedBox(width: 14),
-          Text(
-            'Zvuky',
-            style: TextStyle(
-              fontFamily: 'Nunito',
-              fontSize: 15,
-              fontWeight: FontWeight.w800,
-              color: Colors.white.withOpacity(0.85),
+          Expanded(
+            child: Text(
+              'Zvuky',
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(
+                fontFamily: 'Nunito',
+                fontSize: 15,
+                fontWeight: FontWeight.w800,
+                color: Colors.white.withOpacity(0.85),
+              ),
             ),
           ),
         ],
@@ -417,13 +421,16 @@ class _AmbientToggleState extends State<_AmbientToggle> {
         children: [
           Text(on ? '🌿' : '🍂', style: const TextStyle(fontSize: 22)),
           const SizedBox(width: 14),
-          Text(
-            'Zvuky světa',
-            style: TextStyle(
-              fontFamily: 'Nunito',
-              fontSize: 15,
-              fontWeight: FontWeight.w800,
-              color: Colors.white.withOpacity(0.85),
+          Expanded(
+            child: Text(
+              'Zvuky světa',
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(
+                fontFamily: 'Nunito',
+                fontSize: 15,
+                fontWeight: FontWeight.w800,
+                color: Colors.white.withOpacity(0.85),
+              ),
             ),
           ),
         ],
@@ -454,13 +461,16 @@ class _MusicToggleState extends State<_MusicToggle> {
         children: [
           Text(on ? '🎵' : '🔇', style: const TextStyle(fontSize: 22)),
           const SizedBox(width: 14),
-          Text(
-            'Hudba',
-            style: TextStyle(
-              fontFamily: 'Nunito',
-              fontSize: 15,
-              fontWeight: FontWeight.w800,
-              color: Colors.white.withOpacity(0.85),
+          Expanded(
+            child: Text(
+              'Hudba',
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(
+                fontFamily: 'Nunito',
+                fontSize: 15,
+                fontWeight: FontWeight.w800,
+                color: Colors.white.withOpacity(0.85),
+              ),
             ),
           ),
         ],
@@ -552,15 +562,18 @@ class _MenuTile extends StatelessWidget {
           children: [
             Text(icon, style: const TextStyle(fontSize: 22)),
             const SizedBox(width: 14),
-            Text(
-              label,
-              style: TextStyle(
-                fontFamily: 'Nunito',
-                fontSize: 15,
-                fontWeight: FontWeight.w800,
-                color: selected
-                    ? const Color(0xFFFFD200)
-                    : Colors.white.withOpacity(0.85),
+            Expanded(
+              child: Text(
+                label,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                  fontFamily: 'Nunito',
+                  fontSize: 15,
+                  fontWeight: FontWeight.w800,
+                  color: selected
+                      ? const Color(0xFFFFD200)
+                      : Colors.white.withOpacity(0.85),
+                ),
               ),
             ),
           ],
