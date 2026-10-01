@@ -297,7 +297,7 @@ aby to rodič nemusel pamatovat. Obsah:
 | **Soukromí a compliance** | Kategorie Kids v obchodech (COPPA, GDPR-K, Google Families): žádné reklamy, žádný tracking, žádné externí odkazy bez brány | v3.1 |
 | **Monetizace bez tlaku na dítě** | Jednorázová koupě / rodinný balíček; žádné IAP ve hře, žádné „gemy" | v3.1 (rozhodnutí), v4.0 (implementace) |
 | **Analytika privacy-first** | Lokální events log (základ pro statistiky rodičů); volitelný anonymní opt-in agregát | v3.1 |
-| **Testování s dětmi** | 5 dětí × 15 min po každé větší verzi; protokol v `docs/PLAYTEST.md` | průběžně od v2.2 |
+| **Testování s dětmi** | 5 dětí × 15 min po každé větší verzi; protokol v `docs/PLAYTEST.md` (hotovo) | průběžně od v2.2 |
 | **Kvalita**: widget testy, golden testy obrazovek, CI na `flutter test`, crash reporting bez PII | v2.2+ |
 | **Asset pipeline** | Rive soubory, audio v `.ogg`/`.m4a`, rozpočet velikosti (< 60 MB), lazy loading per jazyk | v2.2 |
 | **Autorské nástroje obsahu** | Validátor packu (rozšířit test), schéma JSON (`docs/pack.schema.json`), skript pro kontrolu, že každé `vocab` existuje v `sentence` | v2.3 |
