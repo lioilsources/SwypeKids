@@ -3,6 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:swype_kids/data/lessons.dart';
 import 'package:swype_kids/services/settings_service.dart';
+import 'package:swype_kids/ui/app_font.dart';
 import 'package:swype_kids/widgets/key_widget.dart';
 import 'package:swype_kids/widgets/keyboard_widget.dart';
 
@@ -19,10 +20,15 @@ void main() {
     s.leftHanded = true;
     s.leftHanded = true; // beze změny → bez notifikace
     s.sessionLimitMin = 15;
-    expect(n, 2);
+    s.dyslexiaFont = true;
+    expect(n, 3);
     await SettingsService.instance.load();
     expect(SettingsService.instance.leftHanded, isTrue);
     expect(SettingsService.instance.sessionLimitMin, 15);
+    expect(SettingsService.instance.dyslexiaFont, isTrue);
+    expect(kFont, 'OpenDyslexic');
+    SettingsService.instance.dyslexiaFont = false;
+    expect(kFont, 'Nunito');
     s.removeListener(() => n++);
   });
 

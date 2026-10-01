@@ -5,6 +5,7 @@ import '../data/models/content_pack.dart';
 import '../data/models/sentence.dart';
 import '../services/progress_service.dart';
 import '../services/tts_service.dart';
+import '../ui/app_font.dart';
 
 /// Kolo „slovo do věty" (roadmap P5, wordToSentence): hned po naučení slova
 /// ve hře se otevře malý builder s tím slovem předvyplněným. Dítě doplní
@@ -210,7 +211,7 @@ class _WordSentenceScreenState extends State<WordSentenceScreen> {
         Text(
           text,
           style: TextStyle(
-            fontFamily: 'Nunito',
+            fontFamily: kFont,
             fontSize: 20,
             fontWeight: FontWeight.w900,
             color: slot == _fixed
@@ -294,7 +295,7 @@ class _ChoiceTile extends StatelessWidget {
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               style: TextStyle(
-                fontFamily: 'Nunito',
+                fontFamily: kFont,
                 fontSize: 13,
                 fontWeight: FontWeight.w800,
                 color: selected ? accent : Colors.white.withValues(alpha: 0.85),

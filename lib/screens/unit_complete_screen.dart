@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../data/models/content_pack.dart';
 import '../services/achievement_service.dart';
 import '../widgets/badge_chip.dart';
+import '../ui/app_font.dart';
 
 /// Hero tag nálepky jednotky: po oslavě nálepka odletí na své místo na mapě.
 String stickerHeroTag(String packId, int unitIndex) =>
@@ -62,7 +63,7 @@ class UnitCompleteScreen extends StatelessWidget {
                 'Máš novou nálepku!',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontFamily: 'Nunito',
+                  fontFamily: kFont,
                   fontSize: 30,
                   fontWeight: FontWeight.w900,
                   color: Colors.white,
@@ -82,7 +83,7 @@ class UnitCompleteScreen extends StatelessWidget {
               Text(
                 '+$stars hvězdiček',
                 style: TextStyle(
-                  fontFamily: 'Nunito',
+                  fontFamily: kFont,
                   fontSize: 17,
                   fontWeight: FontWeight.w800,
                   color: Colors.white.withOpacity(0.85),
@@ -106,8 +107,8 @@ class UnitCompleteScreen extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(
                       horizontal: 40, vertical: 16),
                   shape: const StadiumBorder(),
-                  textStyle: const TextStyle(
-                    fontFamily: 'Nunito',
+                  textStyle: TextStyle(
+                    fontFamily: kFont,
                     fontSize: 20,
                     fontWeight: FontWeight.w800,
                   ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../data/keyboard_data.dart';
+import '../ui/app_font.dart';
 
 class KeyWidget extends StatefulWidget {
   final String letter;
@@ -132,7 +133,7 @@ class _KeyWidgetState extends State<KeyWidget>
                 Text(
                   letter,
                   style: TextStyle(
-                    fontFamily: 'Nunito',
+                    fontFamily: kFont,
                     fontSize: 13 * scale,
                     fontWeight: FontWeight.w900,
                     color: inPath
@@ -147,7 +148,7 @@ class _KeyWidgetState extends State<KeyWidget>
               child: Text(
                 letter,
                 style: TextStyle(
-                  fontFamily: 'Nunito',
+                  fontFamily: kFont,
                   fontSize: 14 * scale,
                   fontWeight: FontWeight.w700,
                   color: Colors.white.withOpacity(0.12),

@@ -8,6 +8,7 @@ import '../services/progress_service.dart';
 import '../services/tts_service.dart';
 import '../world/biome_band.dart';
 import '../world/world_clock.dart';
+import '../ui/app_font.dart';
 
 /// Zvěřinec — nálepkové album sběratelských odměn aktuálního jazyka.
 /// Nezískané nálepky jsou šedé ❓.
@@ -87,10 +88,10 @@ class _CollectionScreenState extends State<CollectionScreen> {
                           ),
                         ),
                         const SizedBox(width: 10),
-                        const Text(
+                        Text(
                           '🏅 Zvěřinec',
                           style: TextStyle(
-                            fontFamily: 'Nunito',
+                            fontFamily: kFont,
                             fontSize: 16,
                             fontWeight: FontWeight.w900,
                             color: Color(0xFFFFD200),
@@ -99,8 +100,8 @@ class _CollectionScreenState extends State<CollectionScreen> {
                         const Spacer(),
                         Text(
                           '${owned.length}/${pack.units.length}',
-                          style: const TextStyle(
-                            fontFamily: 'Nunito',
+                          style: TextStyle(
+                            fontFamily: kFont,
                             fontSize: 13,
                             fontWeight: FontWeight.w800,
                             color: Color(0xFFA0C4FF),
@@ -185,7 +186,7 @@ class _IslandPiece extends StatelessWidget {
                 unit.title,
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(
-                  fontFamily: 'Nunito',
+                  fontFamily: kFont,
                   fontSize: 13,
                   fontWeight: FontWeight.w800,
                   color: Colors.white.withValues(alpha: 0.7),
@@ -290,7 +291,7 @@ class _StickerState extends State<_Sticker>
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
-                    fontFamily: 'Nunito',
+                    fontFamily: kFont,
                     fontSize: 11,
                     fontWeight: FontWeight.w800,
                     color: Colors.white.withValues(alpha: 0.85),
@@ -318,8 +319,8 @@ class _BadgeShelf extends StatelessWidget {
       children: [
         Text(
           '🏅 Odznaky ${earned.length}/${GameBadge.values.length}',
-          style: const TextStyle(
-            fontFamily: 'Nunito',
+          style: TextStyle(
+            fontFamily: kFont,
             fontSize: 14,
             fontWeight: FontWeight.w900,
             color: Color(0xFFFFD200),
@@ -371,7 +372,7 @@ class _BadgeTile extends StatelessWidget {
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
             style: TextStyle(
-              fontFamily: 'Nunito',
+              fontFamily: kFont,
               fontSize: 10,
               fontWeight: FontWeight.w800,
               color: Colors.white.withValues(alpha: earned ? 0.85 : 0.4),

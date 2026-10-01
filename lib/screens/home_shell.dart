@@ -12,6 +12,7 @@ import 'collection_screen.dart';
 import 'lesson_map_screen.dart';
 import 'onboarding_screen.dart';
 import 'sentence_builder_screen.dart';
+import '../ui/app_font.dart';
 
 enum AppView { swype, sentence, collection, book }
 
@@ -179,12 +180,12 @@ class _AppDrawer extends StatelessWidget {
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
-            const Padding(
-              padding: EdgeInsets.fromLTRB(20, 24, 20, 12),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20, 24, 20, 12),
               child: Text(
                 '🎹 Swype Kids',
                 style: TextStyle(
-                  fontFamily: 'Nunito',
+                  fontFamily: kFont,
                   fontSize: 22,
                   fontWeight: FontWeight.w900,
                   color: Color(0xFFFFD200),
@@ -207,8 +208,8 @@ class _AppDrawer extends StatelessWidget {
                       child: Text(
                         ProfileService.instance.name,
                         overflow: TextOverflow.ellipsis,
-                        style: const TextStyle(
-                          fontFamily: 'Nunito',
+                        style: TextStyle(
+                          fontFamily: kFont,
                           fontSize: 16,
                           fontWeight: FontWeight.w900,
                           color: Colors.white,
@@ -224,8 +225,8 @@ class _AppDrawer extends StatelessWidget {
                   const SizedBox(width: 6),
                   Text(
                     language.name.toUpperCase(),
-                    style: const TextStyle(
-                      fontFamily: 'Nunito',
+                    style: TextStyle(
+                      fontFamily: kFont,
                       fontSize: 13,
                       fontWeight: FontWeight.w800,
                       color: Color(0xFFA0C4FF),
@@ -274,7 +275,7 @@ class _AppDrawer extends StatelessWidget {
               child: Text(
                 'SwypeKids • mama@home',
                 style: TextStyle(
-                  fontFamily: 'Nunito',
+                  fontFamily: kFont,
                   fontSize: 11,
                   color: Colors.white.withOpacity(0.3),
                 ),
@@ -372,7 +373,7 @@ class _ProfileTile extends StatelessWidget {
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(
-                  fontFamily: 'Nunito',
+                  fontFamily: kFont,
                   fontSize: 12,
                   fontWeight: FontWeight.w800,
                   color: Colors.white.withValues(alpha: 0.85),
@@ -414,7 +415,7 @@ class _MenuTile extends StatelessWidget {
                 label,
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(
-                  fontFamily: 'Nunito',
+                  fontFamily: kFont,
                   fontSize: 15,
                   fontWeight: FontWeight.w800,
                   color: selected

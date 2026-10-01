@@ -2,6 +2,7 @@ import 'dart:io' show Platform;
 import 'package:flutter/material.dart';
 import '../data/keyboard_data.dart';
 import '../data/lessons.dart';
+import '../ui/app_font.dart';
 
 enum GameStatus { idle, success, error }
 
@@ -122,7 +123,7 @@ class ChallengeCard extends StatelessWidget {
           Text(
             _labelText,
             style: TextStyle(
-              fontFamily: 'Nunito',
+              fontFamily: kFont,
               fontSize: 22,
               fontWeight: FontWeight.w900,
               color: const Color(0xFFFFD200)
@@ -195,7 +196,7 @@ class ChallengeCard extends StatelessWidget {
                       child: Text(
                         hidden && !hit && !miss ? '?' : ch,
                         style: TextStyle(
-                          fontFamily: 'Nunito',
+                          fontFamily: kFont,
                           fontSize: 26,
                           fontWeight: FontWeight.w900,
                           color: hit
@@ -228,14 +229,14 @@ class ChallengeCard extends StatelessWidget {
       case GameStatus.success:
         return Text('🎉 Výborně!',
             style: TextStyle(
-                fontFamily: 'Nunito',
+                fontFamily: kFont,
                 fontSize: 18,
                 fontWeight: FontWeight.w800,
                 color: const Color(0xFF2ECC71)));
       case GameStatus.error:
         return Text('❌ Zkus to znovu!',
             style: TextStyle(
-                fontFamily: 'Nunito',
+                fontFamily: kFont,
                 fontSize: 15,
                 fontWeight: FontWeight.w700,
                 color: const Color(0xFFE74C3C)));
@@ -251,7 +252,7 @@ class ChallengeCard extends StatelessWidget {
             return Text(
               prompt,
               style: TextStyle(
-                  fontFamily: 'Nunito',
+                  fontFamily: kFont,
                   fontSize: 13,
                   color: Colors.white.withOpacity(0.35)),
             );
@@ -263,7 +264,7 @@ class ChallengeCard extends StatelessWidget {
                 ? '🖱️ Přejeď dvěma prsty přes obrázky'
                 : '☝️ Přejeď prstem přes obrázky',
             style: TextStyle(
-                fontFamily: 'Nunito',
+                fontFamily: kFont,
                 fontSize: 13,
                 color: Colors.white.withOpacity(0.35)),
           );

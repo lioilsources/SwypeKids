@@ -11,6 +11,7 @@ import '../services/progress_service.dart';
 import '../services/session_service.dart';
 import '../services/settings_service.dart';
 import '../world/world_clock.dart';
+import '../ui/app_font.dart';
 
 /// Stav písmene pro mřížku abecedy (roadmap P6).
 enum LetterStatus { unseen, practicing, mastered }
@@ -81,10 +82,10 @@ class _ParentScreenState extends State<ParentScreen> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         foregroundColor: const Color(0xFFA0C4FF),
-        title: const Text(
+        title: Text(
           '👪 Pro rodiče',
           style: TextStyle(
-            fontFamily: 'Nunito',
+            fontFamily: kFont,
             fontWeight: FontWeight.w900,
             color: Color(0xFFFFD200),
           ),
@@ -191,7 +192,7 @@ class _ParentScreenState extends State<ParentScreen> {
                       child: Text(
                         ch,
                         style: TextStyle(
-                          fontFamily: 'Nunito',
+                          fontFamily: kFont,
                           fontWeight: FontWeight.w900,
                           color: Colors.white.withValues(
                               alpha: status[ch] == LetterStatus.unseen ? 0.3 : 0.95),
@@ -268,20 +269,20 @@ class _ParentScreenState extends State<ParentScreen> {
         border: Border.all(color: Colors.white.withValues(alpha: 0.1)),
       );
 
-  static const _valueStyle = TextStyle(
-    fontFamily: 'Nunito',
+  static final _valueStyle = TextStyle(
+    fontFamily: kFont,
     fontSize: 18,
     fontWeight: FontWeight.w900,
     color: Color(0xFFFFD200),
   );
   static final _labelStyle = TextStyle(
-    fontFamily: 'Nunito',
+    fontFamily: kFont,
     fontSize: 12,
     fontWeight: FontWeight.w700,
     color: Colors.white.withValues(alpha: 0.55),
   );
   static final _bodyStyle = TextStyle(
-    fontFamily: 'Nunito',
+    fontFamily: kFont,
     fontSize: 14,
     fontWeight: FontWeight.w700,
     height: 1.4,
@@ -303,8 +304,8 @@ class _Section extends StatelessWidget {
         children: [
           Text(
             title,
-            style: const TextStyle(
-              fontFamily: 'Nunito',
+            style: TextStyle(
+              fontFamily: kFont,
               fontSize: 16,
               fontWeight: FontWeight.w900,
               color: Color(0xFFA0C4FF),
@@ -341,8 +342,8 @@ class _ParentSettingsState extends State<ParentSettings> {
           activeThumbColor: const Color(0xFFFFD200),
           contentPadding: EdgeInsets.zero,
           title: Text('$emoji  $label',
-              style: const TextStyle(
-                  fontFamily: 'Nunito',
+              style: TextStyle(
+                  fontFamily: kFont,
                   fontWeight: FontWeight.w800,
                   color: Colors.white)),
         );
@@ -358,10 +359,13 @@ class _ParentSettingsState extends State<ParentSettings> {
         toggle('left-handed-toggle', '🫲', 'Levák (zrcadlená klávesnice)',
             SettingsService.instance.leftHanded,
             (v) => SettingsService.instance.leftHanded = v),
+        toggle('dyslexia-font-toggle', '🔤', 'Písmo pro dyslektiky (OpenDyslexic)',
+            SettingsService.instance.dyslexiaFont,
+            (v) => SettingsService.instance.dyslexiaFont = v),
         const SizedBox(height: 8),
         Text('Časový limit hraní za den',
             style: TextStyle(
-                fontFamily: 'Nunito',
+                fontFamily: kFont,
                 fontWeight: FontWeight.w800,
                 color: Colors.white.withValues(alpha: 0.85))),
         const SizedBox(height: 6),
@@ -393,7 +397,7 @@ class _ParentSettingsState extends State<ParentSettings> {
                   '${session.limitReached ? ' — průvodce už spí' : ''}',
                   key: const ValueKey('session-today'),
                   style: TextStyle(
-                      fontFamily: 'Nunito',
+                      fontFamily: kFont,
                       fontWeight: FontWeight.w700,
                       color: Colors.white.withValues(alpha: 0.7)),
                 ),
@@ -411,7 +415,7 @@ class _ParentSettingsState extends State<ParentSettings> {
         const SizedBox(height: 8),
         Text('Roční období na mapě',
             style: TextStyle(
-                fontFamily: 'Nunito',
+                fontFamily: kFont,
                 fontWeight: FontWeight.w800,
                 color: Colors.white.withValues(alpha: 0.85))),
         const SizedBox(height: 6),
@@ -436,7 +440,7 @@ class _ParentSettingsState extends State<ParentSettings> {
         const SizedBox(height: 14),
         Text('Profily',
             style: TextStyle(
-                fontFamily: 'Nunito',
+                fontFamily: kFont,
                 fontWeight: FontWeight.w800,
                 color: Colors.white.withValues(alpha: 0.85))),
         const SizedBox(height: 6),
@@ -445,8 +449,8 @@ class _ParentSettingsState extends State<ParentSettings> {
             contentPadding: EdgeInsets.zero,
             leading: Text(p.avatar, style: const TextStyle(fontSize: 26)),
             title: Text(p.label,
-                style: const TextStyle(
-                    fontFamily: 'Nunito',
+                style: TextStyle(
+                    fontFamily: kFont,
                     fontWeight: FontWeight.w800,
                     color: Colors.white)),
             trailing: ProfileService.instance.profiles.length > 1

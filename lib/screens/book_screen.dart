@@ -5,6 +5,7 @@ import '../data/models/content_pack.dart';
 import '../services/pack_service.dart';
 import '../services/progress_service.dart';
 import '../services/tts_service.dart';
+import '../ui/app_font.dart';
 
 /// Má knížka — věty, které dítě složilo a uložilo (builder vět, slovo do
 /// věty). Ťuknutí na stránku ji přečte nahlas; rodič si ji může nechat číst.
@@ -79,10 +80,10 @@ class _BookScreenState extends State<BookScreen> {
                     ),
                   ),
                   const SizedBox(width: 10),
-                  const Text(
+                  Text(
                     '📖 Má knížka',
                     style: TextStyle(
-                      fontFamily: 'Nunito',
+                      fontFamily: kFont,
                       fontSize: 15,
                       fontWeight: FontWeight.w900,
                       color: Color(0xFFFFD200),
@@ -91,8 +92,8 @@ class _BookScreenState extends State<BookScreen> {
                   const Spacer(),
                   Text(
                     '${pages.length}',
-                    style: const TextStyle(
-                      fontFamily: 'Nunito',
+                    style: TextStyle(
+                      fontFamily: kFont,
                       fontSize: 14,
                       fontWeight: FontWeight.w800,
                       color: Color(0xFFA0C4FF),
@@ -155,8 +156,8 @@ class _PageCard extends StatelessWidget {
                   const SizedBox(height: 4),
                   Text(
                     page.text,
-                    style: const TextStyle(
-                      fontFamily: 'Nunito',
+                    style: TextStyle(
+                      fontFamily: kFont,
                       fontSize: 20,
                       fontWeight: FontWeight.w900,
                       color: Color(0xFF3A2E1F),
@@ -190,7 +191,7 @@ class _EmptyBook extends StatelessWidget {
           Text(
             'Slož větu a ulož ji do knížky',
             style: TextStyle(
-              fontFamily: 'Nunito',
+              fontFamily: kFont,
               fontSize: 14,
               fontWeight: FontWeight.w700,
               color: Colors.white.withValues(alpha: 0.5),
