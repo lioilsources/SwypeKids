@@ -138,6 +138,11 @@ kulturní variantu). Přidání jazyka = přidání JSON souboru, žádný Dart.
   dítě vybere zvířátko-avatara, rodič může zadat jméno; vše jde jedním
   velkým ▶. Ťuknutí na průvodce zopakuje hlas. Uloženo v `ProfileService`
   (avatar, jméno, `onboarded`); jméno a avatar vidí dítě v menu.
+- **Profily sourozenců** (v3.0): každé dítě má avatara, jméno a vlastní
+  postup (hvězdy, nálepky, batoh, knížka, odznaky, jazyk). Přepínání ťuknutím
+  na avatara v menu, ➕ založí dalšího přes stejný onboarding (max. 6).
+  Klíče: profil 1 původní `sk.…`, další `sk.p{id}.…` — starší instalace
+  bez migrace. Nastavení (zvuk, období) jsou společná (rodič).
 - **Odznaky** (`GameBadge`, roadmap P4): jednorázové, bez streaku. První tah,
   Bez chyby (jednotka od začátku na samé 3⭐), Objevitel / Sběratel / Velký
   sběratel (nálepky), Noční sova / Ranní ptáče (světové hodiny), Čtyři roční

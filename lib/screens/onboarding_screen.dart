@@ -73,7 +73,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     _speakStep();
   }
 
-  void _next() {
+  Future<void> _next() async {
     AudioService.instance.play(Sfx.success);
     HapticFeedback.mediumImpact();
     if (_step < 2) {
@@ -81,9 +81,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       _speakStep();
       return;
     }
-    ProfileService.instance.complete(avatar: _avatar, name: _name.text);
+    // Nový profil (první dítě nebo další sourozenec) → vlastní postup.
+    final profile =
+        ProfileService.instance.complete(avatar: _avatar, name: _name.text);
+    await ProgressService.init(profile: profile.id);
     ProgressService.instance.selectedLanguage = _lang;
-    widget.onDone(_lang);
+    if (mounted) widget.onDone(_lang);
   }
 
   @override

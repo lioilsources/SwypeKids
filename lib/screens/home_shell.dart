@@ -8,6 +8,7 @@ import '../world/world_clock.dart';
 import 'book_screen.dart';
 import 'collection_screen.dart';
 import 'lesson_map_screen.dart';
+import 'onboarding_screen.dart';
 import 'sentence_builder_screen.dart';
 
 enum AppView { swype, sentence, collection, book }
@@ -49,6 +50,48 @@ class _HomeShellState extends State<HomeShell> with WidgetsBindingObserver {
     setState(() => _lang = l);
   }
 
+  /// Přepnutí sourozence: načte jeho postup a znovu postaví obrazovky.
+  Future<void> _switchProfile(int id) async {
+    ProfileService.instance.switchTo(id);
+    await ProgressService.init(profile: id);
+    if (!mounted) return;
+    setState(() {
+      _lang = ProgressService.instance.selectedLanguage ?? _lang;
+      _view = AppView.swype;
+    });
+    Navigator.of(context).maybePop();
+  }
+
+  /// Nový sourozenec: stejný onboarding jako při prvním startu.
+  Future<void> _addProfile() async {
+    Navigator.of(context).maybePop();
+    await Navigator.of(context).push(MaterialPageRoute(
+      builder: (ctx) => OnboardingScreen(
+        initialLanguage: _lang,
+        onDone: (lang) => Navigator.of(ctx).pop(lang),
+      ),
+    ));
+    if (!mounted) return;
+    setState(() {
+      _lang = ProgressService.instance.selectedLanguage ?? _lang;
+      _view = AppView.swype;
+    });
+  }
+
+  void _openProfiles() {
+    showModalBottomSheet<void>(
+      context: context,
+      backgroundColor: const Color(0xFF1A1A2E),
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      ),
+      builder: (_) => _ProfileSheet(
+        onPick: _switchProfile,
+        onAdd: _addProfile,
+      ),
+    );
+  }
+
   void _setView(AppView v) {
     AudioService.instance.play(Sfx.tap);
     setState(() => _view = v);
@@ -63,8 +106,11 @@ class _HomeShellState extends State<HomeShell> with WidgetsBindingObserver {
         currentView: _view,
         onPick: _setView,
         language: _lang,
+        onProfileTap: _openProfiles,
       ),
       body: IndexedStack(
+        // Jiný profil = jiný postup → obrazovky znovu od začátku.
+        key: ValueKey('profile-${ProfileService.instance.activeId}'),
         index: _view.index,
         children: [
           LessonMapScreen(
@@ -87,11 +133,13 @@ class _AppDrawer extends StatelessWidget {
   final AppView currentView;
   final ValueChanged<AppView> onPick;
   final Language language;
+  final VoidCallback onProfileTap;
 
   const _AppDrawer({
     required this.currentView,
     required this.onPick,
     required this.language,
+    required this.onProfileTap,
   });
 
   @override
@@ -114,11 +162,14 @@ class _AppDrawer extends StatelessWidget {
                 ),
               ),
             ),
-            Padding(
+            InkWell(
+              key: const ValueKey('profile-header'),
+              onTap: onProfileTap,
+              child: Padding(
               padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
               child: Row(
                 children: [
-                  // Avatar a jméno z onboardingu
+                  // Avatar a jméno — ťuknutí otevře přepínání sourozenců
                   Text(ProfileService.instance.avatar,
                       style: const TextStyle(fontSize: 26)),
                   const SizedBox(width: 8),
@@ -153,6 +204,7 @@ class _AppDrawer extends StatelessWidget {
                     ),
                   ),
                 ],
+              ),
               ),
             ),
             const Divider(color: Colors.white12, height: 1),
@@ -239,6 +291,105 @@ class _SoundToggleState extends State<_SoundToggle> {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+/// Výběr sourozence: každý má avatara, jméno a vlastní postup; ➕ založí
+/// nového přes onboarding.
+class _ProfileSheet extends StatelessWidget {
+  final ValueChanged<int> onPick;
+  final VoidCallback onAdd;
+
+  const _ProfileSheet({required this.onPick, required this.onAdd});
+
+  @override
+  Widget build(BuildContext context) {
+    final service = ProfileService.instance;
+    return SafeArea(
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(16, 16, 16, 20),
+        child: Wrap(
+          spacing: 12,
+          runSpacing: 12,
+          alignment: WrapAlignment.center,
+          children: [
+            for (final p in service.profiles)
+              _ProfileTile(
+                key: ValueKey('profile-${p.id}'),
+                emoji: p.avatar,
+                label: p.label,
+                selected: p.id == service.activeId,
+                onTap: () => onPick(p.id),
+              ),
+            if (service.canAdd)
+              _ProfileTile(
+                key: const ValueKey('profile-add'),
+                emoji: '➕',
+                label: '',
+                selected: false,
+                onTap: onAdd,
+              ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _ProfileTile extends StatelessWidget {
+  final String emoji;
+  final String label;
+  final bool selected;
+  final VoidCallback onTap;
+
+  const _ProfileTile({
+    super.key,
+    required this.emoji,
+    required this.label,
+    required this.selected,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: 92,
+        padding: const EdgeInsets.symmetric(vertical: 10),
+        decoration: BoxDecoration(
+          color: selected
+              ? const Color(0xFFFFD200).withValues(alpha: 0.22)
+              : Colors.white.withValues(alpha: 0.06),
+          borderRadius: BorderRadius.circular(18),
+          border: Border.all(
+            color: selected
+                ? const Color(0xFFFFD200)
+                : Colors.white.withValues(alpha: 0.12),
+            width: selected ? 2 : 1,
+          ),
+        ),
+        child: Column(
+          children: [
+            Text(emoji, style: const TextStyle(fontSize: 36)),
+            if (label.isNotEmpty) ...[
+              const SizedBox(height: 4),
+              Text(
+                label,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                  fontFamily: 'Nunito',
+                  fontSize: 12,
+                  fontWeight: FontWeight.w800,
+                  color: Colors.white.withValues(alpha: 0.85),
+                ),
+              ),
+            ],
+          ],
+        ),
       ),
     );
   }
