@@ -144,6 +144,14 @@ kulturní variantu). Přidání jazyka = přidání JSON souboru, žádný Dart.
   dítě vybere zvířátko-avatara, rodič může zadat jméno; vše jde jedním
   velkým ▶. Ťuknutí na průvodce zopakuje hlas. Uloženo v `ProfileService`
   (avatar, jméno, `onboarded`); jméno a avatar vidí dítě v menu.
+- **Rodičovský koutek** (v3.1): v menu „👪 Pro rodiče" za **bránou**
+  (příklad 2–9 × 2–9 se třemi odpověďmi, ne PIN). Obsah: přehled (hrací dny,
+  lekce, hvězdy, batoh, knížka, odznaky), **mřížka písmen** (🟢 průměrná síla
+  slov s písmenem ≥ 4, 🟡 potkalo, ⚪ nepotkalo; ťuknutí ukáže slova, která se
+  pletou), doporučení pro doma z nejslabších slov, „Jak appka učí"
+  (`pack.method` + popis), nastavení (zvuky, hudba, zvuky světa, roční
+  období, profily — smazání profilu s potvrzením). Nastavení se přesunulo
+  z dětského menu sem.
 - **Profily sourozenců** (v3.0): každé dítě má avatara, jméno a vlastní
   postup (hvězdy, nálepky, batoh, knížka, odznaky, jazyk). Přepínání ťuknutím
   na avatara v menu, ➕ založí dalšího přes stejný onboarding (max. 6).
