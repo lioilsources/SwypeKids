@@ -1,5 +1,13 @@
 # Changelog
 
+## [01/10/2026] — v2.4.0 „Svět"
+- Mapa je svět: každá jednotka má biotop (louka, les, rybník, město, hory, pláž…), zamčené jsou v mlze, odemčení mlhu rozplyne
+- Obloha podle denní doby a ročního období (kalendář, nebo ruční volba rodiče v menu), měsíc a hvězdy v noci, mraky s parallaxem
+- Částice: květy na jaře, světlušky v letní večer, listí na podzim, sníh v zimě; v noci zvířátka spí 💤
+- Ambientní zvuky podle biotopu a denní doby (ptáci, cvrčci, voda) a první hudební smyčka, v noci tišší; vypínače v menu
+- Hra na šířku: karta vlevo, klávesnice vpravo (tablet, otočený telefon)
+- Respektuje redukci pohybu
+
 ## [01/10/2026] — v2.3.2
 - Slovo hned do věty: po novém slově v batohu se otevře mini builder s tím slovem
 - 📖 Má knížka: ukládání složených vět, čtení nahlas; 🎹 vzít slovo z builderu do hry
