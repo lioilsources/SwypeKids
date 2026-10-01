@@ -1,5 +1,9 @@
 # Changelog
 
+## [01/10/2026] — v2.6.2
+- Oprava: mapa zůstávala na 🎹 (načítání packu čekalo samo na sebe) — skutečná příčina chyby z 2.6.0/2.6.1
+- Když se mapa nenačte, ukáže se „Zkusit znovu“ s popisem chyby místo prázdné obrazovky
+
 ## [01/10/2026] — v2.6.1
 - Oprava: na iOS zůstávala mapa na 🎹 (pack nad 50 KB se nenačetl) — packy se teď dekódují bez izolátu
 - Sezónní tajné nálepky (jaro 🐣, léto 🍉, podzim 🎃, zima ⛸️) schované na mapě jen v daném období; polička ve Zvěřinci
