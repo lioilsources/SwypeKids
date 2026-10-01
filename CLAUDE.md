@@ -44,6 +44,9 @@ lib/
 │   ├── book_screen.dart     # Má knížka: saved sentences, tap = read aloud
 │   ├── win_screen.dart      # Whole-pack completion
 │   └── sentence_builder_screen.dart # Second mode: build a sentence
+├── parent/
+│   ├── parent_gate.dart     # Parent gate: a × b question instead of a PIN
+│   └── parent_screen.dart   # Parent corner: overview, letter grid (strength), tips, method, settings (sound/season/profiles)
 ├── services/
 │   ├── pack_service.dart    # Loads JSON packs (rootBundle); broken pack → falls back to en
 │   ├── achievement_service.dart # GameBadge enum + check(trigger, pack) → newly earned badges
@@ -90,6 +93,7 @@ iOS, Android, macOS, Linux (check pubspec for active platforms).
 - One pack per language: `assets/packs/{cs,en,de,es,it,fr,zh,ja,pt}.json` (schema v2, see `docs/GAMEPLAY.md` §5)
 - `target` is uppercase diacritic-free Latin (what is swyped); `display` carries accents/tones/hiragana
 - Lesson `type`: `swype` | `listen` | `missingLetter` (`gap` index) | `pictureOnly` | `reviewMix` (resolved at runtime to the weakest learned word, `resolveReviewMix`); unknown types fall back to `swype`
+- Parent corner (drawer 👪 → `ParentGate` → `ParentScreen`): sound/music/ambient toggles and season override live here, not in the child's drawer; letter status = mean word strength per letter (≥ 4 mastered)
 - Profiles: `ProgressService.init(profile: id)` loads one child's progress (keys namespaced per profile, profile 1 unprefixed so old installs need no migration); switching rebuilds HomeShell screens via a keyed IndexedStack. Settings (sound, season) stay global
 - Badges (`GameBadge`, 14 from roadmap P4) are global across languages; `AchievementService.check` is called on LessonDone / UnitDone (game), SessionStart (map open) — never add streak-style pressure
 - Word strength 0–5 per target (`ProgressService.recordAttempt`); map offers “Procvičování” (5 weakest learned) via `GameScreen(practice: …)`, which never writes lesson completion or stickers

@@ -3,6 +3,8 @@ import '../audio/audio_service.dart';
 import '../data/lessons.dart';
 import '../services/profile_service.dart';
 import '../services/progress_service.dart';
+import '../parent/parent_gate.dart';
+import '../parent/parent_screen.dart';
 import '../widgets/language_picker.dart';
 import '../world/world_clock.dart';
 import 'book_screen.dart';
@@ -78,6 +80,23 @@ class _HomeShellState extends State<HomeShell> with WidgetsBindingObserver {
     });
   }
 
+  /// Rodičovský koutek za bránou (příklad místo PINu).
+  Future<void> _openParent() async {
+    Navigator.of(context).maybePop();
+    await Navigator.of(context).push(MaterialPageRoute(
+      builder: (ctx) => ParentGate(
+        onPassed: () => Navigator.of(ctx).pushReplacement(MaterialPageRoute(
+          builder: (_) => ParentScreen(language: _lang),
+        )),
+      ),
+    ));
+    if (!mounted) return;
+    // Rodič mohl smazat/přepnout profil nebo změnit nastavení.
+    setState(() {
+      _lang = ProgressService.instance.selectedLanguage ?? _lang;
+    });
+  }
+
   void _openProfiles() {
     showModalBottomSheet<void>(
       context: context,
@@ -107,6 +126,7 @@ class _HomeShellState extends State<HomeShell> with WidgetsBindingObserver {
         onPick: _setView,
         language: _lang,
         onProfileTap: _openProfiles,
+        onParent: _openParent,
       ),
       body: IndexedStack(
         // Jiný profil = jiný postup → obrazovky znovu od začátku.
@@ -134,12 +154,14 @@ class _AppDrawer extends StatelessWidget {
   final ValueChanged<AppView> onPick;
   final Language language;
   final VoidCallback onProfileTap;
+  final VoidCallback onParent;
 
   const _AppDrawer({
     required this.currentView,
     required this.onPick,
     required this.language,
     required this.onProfileTap,
+    required this.onParent,
   });
 
   @override
@@ -235,10 +257,12 @@ class _AppDrawer extends StatelessWidget {
             ),
             const SizedBox(height: 8),
             const Divider(color: Colors.white12, height: 1),
-            const _SoundToggle(),
-            const _AmbientToggle(),
-            const _MusicToggle(),
-            const _SeasonPicker(),
+            _MenuTile(
+              icon: '👪',
+              label: 'Pro rodiče',
+              selected: false,
+              onTap: onParent,
+            ),
             Padding(
               padding: const EdgeInsets.all(16),
               child: Text(
@@ -252,49 +276,6 @@ class _AppDrawer extends StatelessWidget {
             ),
           ],
         ),
-      ),
-    );
-  }
-}
-
-/// Zapnutí / vypnutí zvukových efektů (dočasně v draweru; v3.1 se přesune
-/// do rodičovského koutku).
-class _SoundToggle extends StatefulWidget {
-  const _SoundToggle();
-
-  @override
-  State<_SoundToggle> createState() => _SoundToggleState();
-}
-
-class _SoundToggleState extends State<_SoundToggle> {
-  @override
-  Widget build(BuildContext context) {
-    final on = AudioService.instance.sfxEnabled;
-    return SwitchListTile(
-      value: on,
-      onChanged: (v) {
-        setState(() => AudioService.instance.sfxEnabled = v);
-        if (v) AudioService.instance.play(Sfx.tap);
-      },
-      activeThumbColor: const Color(0xFFFFD200),
-      contentPadding: const EdgeInsets.symmetric(horizontal: 20),
-      title: Row(
-        children: [
-          Text(on ? '🔊' : '🔇', style: const TextStyle(fontSize: 22)),
-          const SizedBox(width: 14),
-          Expanded(
-            child: Text(
-              'Zvuky',
-              overflow: TextOverflow.ellipsis,
-              style: TextStyle(
-                fontFamily: 'Nunito',
-                fontSize: 15,
-                fontWeight: FontWeight.w800,
-                color: Colors.white.withOpacity(0.85),
-              ),
-            ),
-          ),
-        ],
       ),
     );
   }
@@ -395,146 +376,6 @@ class _ProfileTile extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-}
-
-/// Zvuky světa (ptáci, cvrčci, voda) — zvlášť ztlumitelné.
-class _AmbientToggle extends StatefulWidget {
-  const _AmbientToggle();
-
-  @override
-  State<_AmbientToggle> createState() => _AmbientToggleState();
-}
-
-class _AmbientToggleState extends State<_AmbientToggle> {
-  @override
-  Widget build(BuildContext context) {
-    final on = AudioService.instance.ambientEnabled;
-    return SwitchListTile(
-      key: const ValueKey('ambient-toggle'),
-      value: on,
-      onChanged: (v) => setState(() => AudioService.instance.ambientEnabled = v),
-      activeThumbColor: const Color(0xFFFFD200),
-      contentPadding: const EdgeInsets.symmetric(horizontal: 20),
-      title: Row(
-        children: [
-          Text(on ? '🌿' : '🍂', style: const TextStyle(fontSize: 22)),
-          const SizedBox(width: 14),
-          Expanded(
-            child: Text(
-              'Zvuky světa',
-              overflow: TextOverflow.ellipsis,
-              style: TextStyle(
-                fontFamily: 'Nunito',
-                fontSize: 15,
-                fontWeight: FontWeight.w800,
-                color: Colors.white.withOpacity(0.85),
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-/// Hudba (titulní smyčka) — zvlášť ztlumitelná.
-class _MusicToggle extends StatefulWidget {
-  const _MusicToggle();
-
-  @override
-  State<_MusicToggle> createState() => _MusicToggleState();
-}
-
-class _MusicToggleState extends State<_MusicToggle> {
-  @override
-  Widget build(BuildContext context) {
-    final on = AudioService.instance.musicEnabled;
-    return SwitchListTile(
-      key: const ValueKey('music-toggle'),
-      value: on,
-      onChanged: (v) => setState(() => AudioService.instance.musicEnabled = v),
-      activeThumbColor: const Color(0xFFFFD200),
-      contentPadding: const EdgeInsets.symmetric(horizontal: 20),
-      title: Row(
-        children: [
-          Text(on ? '🎵' : '🔇', style: const TextStyle(fontSize: 22)),
-          const SizedBox(width: 14),
-          Expanded(
-            child: Text(
-              'Hudba',
-              overflow: TextOverflow.ellipsis,
-              style: TextStyle(
-                fontFamily: 'Nunito',
-                fontSize: 15,
-                fontWeight: FontWeight.w800,
-                color: Colors.white.withOpacity(0.85),
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-/// Roční období: podle kalendáře (🔄), nebo ručně — rodič tak může dítěti
-/// ukázat sníh v létě. V3.1 se přesune do rodičovského koutku.
-class _SeasonPicker extends StatelessWidget {
-  const _SeasonPicker();
-
-  @override
-  Widget build(BuildContext context) {
-    return ListenableBuilder(
-      listenable: WorldClockService.instance,
-      builder: (context, _) {
-        final clock = WorldClockService.instance;
-        Widget chip(String emoji, Season? value) {
-          final selected = clock.seasonOverride == value;
-          return GestureDetector(
-            key: ValueKey('season-${value?.name ?? 'auto'}'),
-            onTap: () {
-              clock.seasonOverride = value;
-              AudioService.instance.play(Sfx.tap);
-            },
-            child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-              decoration: BoxDecoration(
-                color: selected
-                    ? const Color(0xFFFFD200).withValues(alpha: 0.22)
-                    : Colors.white.withValues(alpha: 0.06),
-                borderRadius: BorderRadius.circular(99),
-                border: Border.all(
-                  color: selected
-                      ? const Color(0xFFFFD200)
-                      : Colors.white.withValues(alpha: 0.1),
-                ),
-              ),
-              child: Text(emoji, style: const TextStyle(fontSize: 18)),
-            ),
-          );
-        }
-
-        return Padding(
-          padding: const EdgeInsets.fromLTRB(20, 6, 20, 10),
-          child: Row(
-            children: [
-              Text(clock.season.emoji, style: const TextStyle(fontSize: 22)),
-              const SizedBox(width: 14),
-              Expanded(
-                child: Wrap(
-                  spacing: 6,
-                  children: [
-                    chip('🔄', null),
-                    for (final s in Season.values) chip(s.emoji, s),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        );
-      },
     );
   }
 }
