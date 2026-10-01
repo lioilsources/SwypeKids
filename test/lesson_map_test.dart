@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:swype_kids/characters/mascot.dart';
 import 'package:swype_kids/data/lessons.dart';
 import 'package:swype_kids/screens/lesson_map_screen.dart';
 import 'package:swype_kids/services/progress_service.dart';
@@ -34,8 +35,9 @@ void main() {
     // Nezískané odměny jednotek jsou ❓
     expect(find.text('❓'), findsWidgets);
 
-    // Otevření mapy se počítá jako hrací den
+    // Otevření mapy se počítá jako hrací den; průvodce je v liště
     expect(ProgressService.instance.playDays.length, 1);
+    expect(find.byType(Mascot), findsOneWidget);
   });
 
   testWidgets('dlouhý stisk na lekci ukáže poznámku pro rodiče',

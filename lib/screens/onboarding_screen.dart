@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../audio/audio_service.dart';
+import '../characters/mascot.dart';
 import '../data/lessons.dart';
 import '../services/profile_service.dart';
 import '../services/progress_service.dart';
@@ -21,8 +22,6 @@ class OnboardingScreen extends StatefulWidget {
     required this.onDone,
   });
 
-  /// Maskot (emoji, dokud nepřijde postava z Rive).
-  static const mascot = '🦊';
 
   /// Fráze průvodce per jazyk: pozdrav, „vyber si zvířátko", „jak se jmenuješ".
   static const phrases = <Language, (String, String, String)>{
@@ -46,6 +45,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   int _step = 0; // 0 jazyk, 1 zvířátko, 2 jméno
   String _avatar = ProfileService.defaultAvatar;
   final _name = TextEditingController();
+  MascotMood _mood = MascotMood.wave;
 
   (String, String, String) get _say =>
       OnboardingScreen.phrases[_lang] ?? OnboardingScreen.phrases[Language.en]!;
@@ -69,7 +69,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   void _pickLanguage(Language l) {
     AudioService.instance.play(Sfx.tap);
-    setState(() => _lang = l);
+    setState(() {
+      _lang = l;
+      _mood = MascotMood.wave; // pozdraví znovu v novém jazyce
+    });
     _speakStep();
   }
 
@@ -77,7 +80,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     AudioService.instance.play(Sfx.success);
     HapticFeedback.mediumImpact();
     if (_step < 2) {
-      setState(() => _step++);
+      setState(() {
+        _step++;
+        _mood = MascotMood.wink;
+      });
       _speakStep();
       return;
     }
@@ -113,8 +119,15 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     onTap: _speakStep,
                     child: Column(
                       children: [
-                        const Text(OnboardingScreen.mascot,
-                            style: TextStyle(fontSize: 96)),
+                        Mascot(
+                          mood: _mood,
+                          size: 80,
+                          onSettled: () {
+                            if (mounted) {
+                              setState(() => _mood = MascotMood.idle);
+                            }
+                          },
+                        ),
                         Container(
                           margin: const EdgeInsets.symmetric(horizontal: 24),
                           padding: const EdgeInsets.symmetric(

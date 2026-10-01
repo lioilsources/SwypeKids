@@ -2,11 +2,14 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import '../audio/audio_service.dart';
+import '../characters/mascot.dart';
 import '../data/lessons.dart';
 import '../data/models/content_pack.dart';
 import '../services/achievement_service.dart';
 import '../services/pack_service.dart';
+import '../services/profile_service.dart';
 import '../services/progress_service.dart';
+import '../services/tts_service.dart';
 import '../widgets/badge_chip.dart';
 import '../widgets/language_picker.dart';
 import '../world/biome_band.dart';
@@ -38,6 +41,26 @@ class LessonMapScreen extends StatefulWidget {
 
 class LessonMapScreenState extends State<LessonMapScreen> {
   ContentPack? _pack;
+
+  // Průvodce: zamává při příchodu, v noci spí; pozdraví jménem (jednou).
+  MascotMood _mood = MascotMood.wave;
+  bool _greeted = false;
+
+  void _greet() {
+    if (_greeted) return;
+    _greeted = true;
+    final world = WorldClockService.instance.theme;
+    TtsService.speak(
+      Mascot.greeting(widget.language, ProfileService.instance.name,
+          night: world.isNight),
+      widget.language,
+    );
+  }
+
+  void _tickle() {
+    AudioService.instance.play(Sfx.tap);
+    setState(() => _mood = MascotMood.cheer);
+  }
 
   // Tajná nálepka právě nalezená (čip ✨ na 3 s).
   String? _foundSecret;
@@ -137,6 +160,7 @@ class LessonMapScreenState extends State<LessonMapScreen> {
     if (mounted && pack.language == widget.language) {
       setState(() => _pack = pack);
       _syncAmbient();
+      _greet();
       _showBadges(AchievementService.instance
           .check(const SessionStart(), pack));
     }
@@ -249,7 +273,20 @@ class LessonMapScreenState extends State<LessonMapScreen> {
                           onPressed: () => Scaffold.of(ctx).openDrawer(),
                         ),
                       ),
-                      const SizedBox(width: 10),
+                      const SizedBox(width: 6),
+                      Mascot(
+                        mood: world.isNight && _mood == MascotMood.idle
+                            ? MascotMood.sleep
+                            : _mood,
+                        size: 26,
+                        onTickle: _tickle,
+                        onSettled: () {
+                          if (mounted) {
+                            setState(() => _mood = MascotMood.idle);
+                          }
+                        },
+                      ),
+                      const SizedBox(width: 6),
                       Expanded(
                         child: Text(
                           pack.title.isNotEmpty ? pack.title : '🎹 Swype Kids',

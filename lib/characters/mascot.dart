@@ -2,6 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import '../data/lessons.dart';
+
 /// Stavy průvodce (roadmap P1). Názvy odpovídají vstupům Rive state machine
 /// z `docs/ILLUSTRATOR_BRIEF.md`, aby se emoji verze dala vyměnit za `.riv`
 /// beze změny volajících.
@@ -31,6 +33,35 @@ class Mascot extends StatefulWidget {
   });
 
   static const emoji = '🦊';
+
+  /// Pozdrav průvodce při příchodu na mapu (TTS). `{name}` = jméno dítěte;
+  /// bez jména se oslovení vynechá. V noci místo pozdravu „dobrou noc".
+  static const _hello = <Language, (String, String)>{
+    Language.cs: ('Ahoj{name}!', 'Dobrou noc{name}, zítra zase.'),
+    Language.en: ('Hi{name}!', 'Good night{name}, see you tomorrow.'),
+    Language.de: ('Hallo{name}!', 'Gute Nacht{name}, bis morgen.'),
+    Language.es: ('¡Hola{name}!', 'Buenas noches{name}, hasta mañana.'),
+    Language.it: ('Ciao{name}!', 'Buonanotte{name}, a domani.'),
+    Language.fr: ('Salut{name} !', 'Bonne nuit{name}, à demain.'),
+    Language.pt: ('Oi{name}!', 'Boa noite{name}, até amanhã.'),
+    Language.zh: ('你好{name}！', '晚安{name}，明天见。'),
+    Language.ja: ('{name}こんにちは！', '{name}おやすみ、またあした。'),
+  };
+
+  static String greeting(Language lang, String name, {bool night = false}) {
+    final (day, nightText) = _hello[lang] ?? _hello[Language.en]!;
+    final template = night ? nightText : day;
+    final n = name.trim();
+    if (n.isEmpty) return template.replaceAll('{name}', '');
+    final sep = switch (lang) {
+      Language.zh => '，',
+      Language.ja => '',
+      _ => ', ',
+    };
+    return lang == Language.ja
+        ? template.replaceAll('{name}', '$n、')
+        : template.replaceAll('{name}', '$sep$n');
+  }
 
   /// Doplněk ke stavu (druhé emoji vedle maskota).
   static String? accessoryFor(MascotMood mood) => switch (mood) {
