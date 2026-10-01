@@ -6,19 +6,22 @@ import 'sentence.dart';
 /// Sběratelská odměna za dokončení jednotky (nálepka do Zvěřince).
 class CollectibleReward {
   final String emoji;
-  final String name;
+  final String name; // písmeno klávesy, ze které nálepka pochází
+  final String label; // jméno nálepky v jazyce packu (Zvěřinec ho řekne nahlas)
 
-  const CollectibleReward({required this.emoji, this.name = ''});
+  const CollectibleReward({required this.emoji, this.name = '', this.label = ''});
 
   factory CollectibleReward.fromJson(Map<String, dynamic> json) =>
       CollectibleReward(
         emoji: json['emoji'] as String,
         name: json['name'] as String? ?? '',
+        label: json['label'] as String? ?? '',
       );
 
   Map<String, dynamic> toJson() => {
         'emoji': emoji,
         if (name.isNotEmpty) 'name': name,
+        if (label.isNotEmpty) 'label': label,
       };
 }
 

@@ -39,6 +39,10 @@ class LessonMapScreen extends StatefulWidget {
 class LessonMapScreenState extends State<LessonMapScreen> {
   ContentPack? _pack;
 
+  // Tajná nálepka právě nalezená (čip ✨ na 3 s).
+  String? _foundSecret;
+  Timer? _secretTimer;
+
   // Odznaky za otevření mapy (noční sova, ranní ptáče, období, vytrvalec).
   List<GameBadge> _newBadges = const [];
   Timer? _badgeTimer;
@@ -64,9 +68,25 @@ class LessonMapScreenState extends State<LessonMapScreen> {
     AudioService.instance.setAmbient(null);
     AudioService.instance.setMusic(false);
     _badgeTimer?.cancel();
+    _secretTimer?.cancel();
     _scroll.dispose();
     _scrollOffset.dispose();
     super.dispose();
+  }
+
+  /// Dítě našlo ✨ v kousku světa: nálepka biotopu do Zvěřince.
+  void _findSecret(Biome biome) {
+    final pack = _pack;
+    if (pack == null) return;
+    ProgressService.instance.addCollectible(pack.id, biome.secret);
+    AudioService.instance.play(Sfx.sticker);
+    _secretTimer?.cancel();
+    setState(() => _foundSecret = biome.secret);
+    _secretTimer = Timer(const Duration(seconds: 3), () {
+      if (mounted) setState(() => _foundSecret = null);
+    });
+    _showBadges(
+        AchievementService.instance.check(const ProgressChanged(), pack));
   }
 
   void _showBadges(List<GameBadge> badges) {
@@ -181,6 +201,13 @@ class LessonMapScreenState extends State<LessonMapScreen> {
                 child: WorldBackdrop(theme: world, scroll: _scrollOffset)),
             _content(context, world),
             Positioned.fill(child: ParticleLayer(kind: world.particles)),
+            if (_foundSecret != null)
+              Positioned(
+                top: 64,
+                left: 0,
+                right: 0,
+                child: Center(child: _SecretChip(emoji: _foundSecret!)),
+              ),
             if (_newBadges.isNotEmpty)
               Positioned(
                 bottom: 24,
@@ -289,6 +316,7 @@ class LessonMapScreenState extends State<LessonMapScreen> {
                               unitIndex: u,
                               world: world,
                               onLessonTap: (l) => _openLesson(u, l),
+                              onSecret: _findSecret,
                             );
                           },
                         ),
@@ -298,6 +326,36 @@ class LessonMapScreenState extends State<LessonMapScreen> {
                 ),
               ],
             ),
+    );
+  }
+}
+
+/// „✨ 🐞" — tajná nálepka právě nalezená.
+class _SecretChip extends StatelessWidget {
+  final String emoji;
+  const _SecretChip({required this.emoji});
+
+  @override
+  Widget build(BuildContext context) {
+    return TweenAnimationBuilder<double>(
+      tween: Tween(begin: 0, end: 1),
+      duration: const Duration(milliseconds: 600),
+      curve: Curves.elasticOut,
+      builder: (context, t, child) => Transform.scale(scale: t, child: child),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+        decoration: BoxDecoration(
+          color: const Color(0xFFFFD200),
+          borderRadius: BorderRadius.circular(99),
+          boxShadow: [
+            BoxShadow(
+              color: const Color(0xFFFFD200).withValues(alpha: 0.5),
+              blurRadius: 16,
+            ),
+          ],
+        ),
+        child: Text('✨ $emoji', style: const TextStyle(fontSize: 24)),
+      ),
     );
   }
 }
@@ -427,12 +485,14 @@ class _UnitBlock extends StatelessWidget {
   final int unitIndex;
   final WorldTheme world;
   final ValueChanged<int> onLessonTap;
+  final ValueChanged<Biome> onSecret;
 
   const _UnitBlock({
     required this.pack,
     required this.unitIndex,
     required this.world,
     required this.onLessonTap,
+    required this.onSecret,
   });
 
   @override
@@ -443,11 +503,24 @@ class _UnitBlock extends StatelessWidget {
     final unitCompleted = progress.isUnitCompleted(pack, unitIndex);
     final hasReward = progress.hasCollectible(pack.id, unit.reward);
     final revealed = progress.isUnitRevealed(pack.id, unit.id);
+    final biome = Biome.parse(unit.biome);
+    final secretFound = progress.collectibles(pack.id).contains(biome.secret);
 
     // Každá jednotka je kousek světa: biotop z packu, mlha dokud je zamčená.
     return BiomeBand(
-      biome: Biome.parse(unit.biome),
+      biome: biome,
       theme: world,
+      // Tajná nálepka: nenápadné ✨, po nalezení zmizí (žádný text — průzkum).
+      hidden: secretFound
+          ? null
+          : GestureDetector(
+              key: ValueKey('secret-${unit.id}'),
+              onTap: () => onSecret(biome),
+              child: const Opacity(
+                opacity: 0.55,
+                child: Text('✨', style: TextStyle(fontSize: 18)),
+              ),
+            ),
       locked: !unitUnlocked,
       revealing: unitUnlocked && !revealed,
       onRevealed: () => progress.markUnitRevealed(pack.id, unit.id),

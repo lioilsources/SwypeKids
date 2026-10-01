@@ -59,8 +59,14 @@ převzetí osvědčených smyček, ne technickou integraci.
 
 - Za dokončení jednotky dítě získá emoji nálepku (zvířátko/věc z klávesnice:
   🐭 🐯 🍌 🐘 …). Odměny v packu se neopakují.
-- `CollectionScreen` = nálepkové album: mřížka, získané barevně se jménem,
-  nezískané šedě ❓. Počítadlo X/Y v hlavičce.
+- `CollectionScreen` = **Zvěřinec jako ostrov** (v3.0): kousek světa pro
+  každou jednotku (biotop jako na mapě, zamčené v mlze), v něm zvířátko
+  jednotky (získané se jménem `reward.label`, ťuknutí ho řekne nahlas a
+  poskočí; nezískané ❓) a nalezená tajná nálepka. Počítadlo X/Y v hlavičce,
+  polička odznaků dole.
+- **Tajné nálepky**: každý biotop má jednu (`Biome.secret`, např. louka 🐞,
+  rybník 🐢). Na mapě je v odemčené jednotce nenápadné ✨ bez textu — vyžaduje
+  průzkum, ne výkon; ťuknutí ji dá do Zvěřince (čip „✨ 🐞") a ✨ zmizí.
 - Motivace sbíráním, ne soutěžením.
 
 ## 5. Content pack model (JSON)

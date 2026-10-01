@@ -42,7 +42,8 @@
       "icon": "👩",
       "reward": {
         "emoji": "🐭",
-        "name": "M"
+        "name": "M",
+        "label": "Maus"
       },
       "scene": {
         "biome": "meadow"
@@ -86,7 +87,8 @@
       "icon": "🐭",
       "reward": {
         "emoji": "🦔",
-        "name": "I"
+        "name": "I",
+        "label": "Igel"
       },
       "scene": {
         "biome": "forest"
@@ -147,7 +149,8 @@
       "icon": "🎵",
       "reward": {
         "emoji": "🦁",
-        "name": "L"
+        "name": "L",
+        "label": "Löwe"
       },
       "scene": {
         "biome": "pond"
@@ -227,7 +230,8 @@
       "icon": "🐮",
       "reward": {
         "emoji": "🍊",
-        "name": "O"
+        "name": "O",
+        "label": "Orange"
       },
       "scene": {
         "biome": "garden"
@@ -311,7 +315,8 @@
       "icon": "👨",
       "reward": {
         "emoji": "🐧",
-        "name": "P"
+        "name": "P",
+        "label": "Pinguin"
       },
       "scene": {
         "biome": "farm"
@@ -344,7 +349,8 @@
       "icon": "👨",
       "reward": {
         "emoji": "🍎",
-        "name": "A"
+        "name": "A",
+        "label": "Apfel"
       },
       "scene": {
         "biome": "city"
@@ -504,7 +510,8 @@
       "icon": "🍵",
       "reward": {
         "emoji": "🐯",
-        "name": "T"
+        "name": "T",
+        "label": "Tiger"
       },
       "scene": {
         "biome": "mountains"
@@ -604,7 +611,8 @@
       "icon": "👃",
       "reward": {
         "emoji": "👃",
-        "name": "N"
+        "name": "N",
+        "label": "Nase"
       },
       "scene": {
         "biome": "beach"
@@ -797,7 +805,8 @@
       "icon": "⚽",
       "reward": {
         "emoji": "🍌",
-        "name": "B"
+        "name": "B",
+        "label": "Banane"
       },
       "scene": {
         "biome": "orchard"
@@ -1008,7 +1017,8 @@
       "icon": "🐰",
       "reward": {
         "emoji": "🏠",
-        "name": "H"
+        "name": "H",
+        "label": "Haus"
       },
       "scene": {
         "biome": "snow"
@@ -1236,7 +1246,8 @@
       "icon": "🍅",
       "reward": {
         "emoji": "🐱",
-        "name": "K"
+        "name": "K",
+        "label": "Katze"
       },
       "scene": {
         "biome": "jungle"

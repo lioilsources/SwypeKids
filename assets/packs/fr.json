@@ -42,7 +42,8 @@
       "icon": "👩",
       "reward": {
         "emoji": "🏠",
-        "name": "M"
+        "name": "M",
+        "label": "maison"
       },
       "scene": {
         "biome": "meadow"
@@ -86,7 +87,8 @@
       "icon": "👨",
       "reward": {
         "emoji": "🍎",
-        "name": "P"
+        "name": "P",
+        "label": "pomme"
       },
       "scene": {
         "biome": "forest"
@@ -166,7 +168,8 @@
       "icon": "🦁",
       "reward": {
         "emoji": "🦁",
-        "name": "L"
+        "name": "L",
+        "label": "lion"
       },
       "scene": {
         "biome": "pond"
@@ -250,7 +253,8 @@
       "icon": "👩‍🦱",
       "reward": {
         "emoji": "🐯",
-        "name": "T"
+        "name": "T",
+        "label": "tigre"
       },
       "scene": {
         "biome": "garden"
@@ -320,7 +324,8 @@
       "icon": "🎵",
       "reward": {
         "emoji": "🎵",
-        "name": "N"
+        "name": "N",
+        "label": "note"
       },
       "scene": {
         "biome": "farm"
@@ -354,7 +359,8 @@
       "icon": "👩",
       "reward": {
         "emoji": "✈️",
-        "name": "A"
+        "name": "A",
+        "label": "avion"
       },
       "scene": {
         "biome": "city"
@@ -484,7 +490,8 @@
       "icon": "🚗",
       "reward": {
         "emoji": "🍊",
-        "name": "O"
+        "name": "O",
+        "label": "orange"
       },
       "scene": {
         "biome": "mountains"
@@ -605,7 +612,8 @@
       "icon": "🍈",
       "reward": {
         "emoji": "🐘",
-        "name": "E"
+        "name": "E",
+        "label": "éléphant"
       },
       "scene": {
         "biome": "beach"
@@ -801,7 +809,8 @@
       "icon": "🐀",
       "reward": {
         "emoji": "🦊",
-        "name": "R"
+        "name": "R",
+        "label": "renard"
       },
       "scene": {
         "biome": "orchard"
@@ -1012,7 +1021,8 @@
       "icon": "🍌",
       "reward": {
         "emoji": "🍌",
-        "name": "B"
+        "name": "B",
+        "label": "banane"
       },
       "scene": {
         "biome": "snow"
@@ -1240,7 +1250,8 @@
       "icon": "🐰",
       "reward": {
         "emoji": "🐱",
-        "name": "C"
+        "name": "C",
+        "label": "chat"
       },
       "scene": {
         "biome": "jungle"

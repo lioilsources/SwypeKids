@@ -23,24 +23,27 @@ enum ParticleKind { none, petals, fireflies, leaves, snow }
 /// Biotop jednotky na mapě (`unit.scene.biome` v packu). Data, ne kód:
 /// pack říká jen jméno, vzhled drží tahle tabulka.
 enum Biome {
-  meadow('🌼', Color(0xFF3E8E41), ['🌼', '🌷', '🦋', '🐝']),
-  forest('🌲', Color(0xFF2E6B3A), ['🌲', '🌳', '🍄', '🦊']),
-  pond('🐸', Color(0xFF2F7F8F), ['🐸', '🌿', '🦆', '🐟']),
-  garden('🌻', Color(0xFF5A9E4B), ['🌻', '🌹', '🐌', '🍓']),
-  farm('🐄', Color(0xFF8A7A3C), ['🐄', '🐓', '🌾', '🚜']),
-  city('🏠', Color(0xFF6B6F80), ['🏠', '🏢', '🚗', '🚦']),
-  mountains('⛰️', Color(0xFF6E7C8A), ['⛰️', '🏔️', '🦅', '🌲']),
-  beach('🏖️', Color(0xFFC9B47A), ['🏖️', '🐚', '⛵', '🌴']),
-  orchard('🍎', Color(0xFF5E9A4E), ['🍎', '🌳', '🍐', '🐝']),
-  snow('⛄', Color(0xFFB9CCDF), ['⛄', '🎿', '🐧', '🌲']),
-  jungle('🌴', Color(0xFF2F7A4F), ['🌴', '🐒', '🦜', '🌺']),
-  sky('☁️', Color(0xFF5F9AD6), ['☁️', '🎈', '🪁', '🐦']);
+  meadow('🌼', Color(0xFF3E8E41), ['🌼', '🌷', '🦋', '🐝'], '🐞'),
+  forest('🌲', Color(0xFF2E6B3A), ['🌲', '🌳', '🍄', '🦊'], '🍄'),
+  pond('🐸', Color(0xFF2F7F8F), ['🐸', '🌿', '🦆', '🐟'], '🐢'),
+  garden('🌻', Color(0xFF5A9E4B), ['🌻', '🌹', '🐌', '🍓'], '🐌'),
+  farm('🐄', Color(0xFF8A7A3C), ['🐄', '🐓', '🌾', '🚜'], '🐓'),
+  city('🏠', Color(0xFF6B6F80), ['🏠', '🏢', '🚗', '🚦'], '🎈'),
+  mountains('⛰️', Color(0xFF6E7C8A), ['⛰️', '🏔️', '🦅', '🌲'], '🦅'),
+  beach('🏖️', Color(0xFFC9B47A), ['🏖️', '🐚', '⛵', '🌴'], '🦀'),
+  orchard('🍎', Color(0xFF5E9A4E), ['🍎', '🌳', '🍐', '🐝'], '🍐'),
+  snow('⛄', Color(0xFFB9CCDF), ['⛄', '🎿', '🐧', '🌲'], '⛄'),
+  jungle('🌴', Color(0xFF2F7A4F), ['🌴', '🐒', '🦜', '🌺'], '🦜'),
+  sky('☁️', Color(0xFF5F9AD6), ['☁️', '🎈', '🪁', '🐦'], '🪁');
 
-  const Biome(this.emoji, this.ground, this.decor);
+  const Biome(this.emoji, this.ground, this.decor, this.secret);
 
   final String emoji;
   final Color ground;
   final List<String> decor;
+
+  /// Tajná nálepka biotopu (roadmap P4): skrytá na mapě, vyžaduje průzkum.
+  final String secret;
 
   /// Neznámé/prázdné jméno padá na louku (starší appka přežije novější pack).
   static Biome parse(String name) =>

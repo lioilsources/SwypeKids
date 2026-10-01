@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import '../audio/audio_service.dart';
 import '../data/lessons.dart';
 import '../data/models/content_pack.dart';
 import '../services/achievement_service.dart';
 import '../services/pack_service.dart';
 import '../services/progress_service.dart';
+import '../services/tts_service.dart';
+import '../world/biome_band.dart';
+import '../world/world_clock.dart';
 
 /// Zvěřinec — nálepkové album sběratelských odměn aktuálního jazyka.
 /// Nezískané nálepky jsou šedé ❓.
@@ -39,6 +43,13 @@ class _CollectionScreenState extends State<CollectionScreen> {
     if (mounted && pack.language == widget.language) {
       setState(() => _pack = pack);
     }
+  }
+
+  /// Ťuknutí na nálepku: jméno nahlas (dítě se učí i to).
+  void _say(String text) {
+    if (text.isEmpty) return;
+    AudioService.instance.play(Sfx.tap);
+    TtsService.speak(text, widget.language);
   }
 
   @override
@@ -99,67 +110,196 @@ class _CollectionScreenState extends State<CollectionScreen> {
                     ),
                   ),
                   Expanded(
-                    child: ListView(
-                      padding: const EdgeInsets.all(16),
-                      children: [
-                        GridView.builder(
-                      shrinkWrap: true,
-                      physics: const NeverScrollableScrollPhysics(),
-                      gridDelegate:
-                          const SliverGridDelegateWithMaxCrossAxisExtent(
-                        maxCrossAxisExtent: 110,
-                        mainAxisSpacing: 12,
-                        crossAxisSpacing: 12,
-                      ),
-                      itemCount: pack.units.length,
-                      itemBuilder: (context, i) {
-                        final reward = pack.units[i].reward;
-                        final has = ProgressService.instance
-                            .hasCollectible(pack.id, reward);
-                        return Container(
-                          decoration: BoxDecoration(
-                            color:
-                                Colors.white.withOpacity(has ? 0.1 : 0.04),
-                            borderRadius: BorderRadius.circular(20),
-                            border: Border.all(
-                              color: has
-                                  ? const Color(0xFFFFD200).withOpacity(0.5)
-                                  : Colors.white.withOpacity(0.1),
-                            ),
-                          ),
-                          alignment: Alignment.center,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Opacity(
-                                opacity: has ? 1.0 : 0.4,
-                                child: Text(
-                                  has ? reward.emoji : '❓',
-                                  style: const TextStyle(fontSize: 38),
-                                ),
-                              ),
-                              if (has && reward.name.isNotEmpty)
-                                Text(
-                                  reward.name,
-                                  style: TextStyle(
-                                    fontFamily: 'Nunito',
-                                    fontSize: 11,
-                                    fontWeight: FontWeight.w800,
-                                    color: Colors.white.withOpacity(0.7),
+                    child: ListenableBuilder(
+                      listenable: WorldClockService.instance,
+                      builder: (context, _) {
+                        final world = WorldClockService.instance.theme;
+                        return Center(
+                          child: ConstrainedBox(
+                            constraints:
+                                const BoxConstraints(maxWidth: 640),
+                            child: ListView(
+                              padding: const EdgeInsets.all(16),
+                              children: [
+                                // Ostrov: každá jednotka = kousek světa se
+                                // svým zvířátkem (a tajnou nálepkou, když ji
+                                // dítě našlo).
+                                for (var i = 0; i < pack.units.length; i++)
+                                  _IslandPiece(
+                                    pack: pack,
+                                    unit: pack.units[i],
+                                    world: world,
+                                    onSay: _say,
                                   ),
-                                ),
-                            ],
+                                const SizedBox(height: 20),
+                                const _BadgeShelf(),
+                              ],
+                            ),
                           ),
                         );
                       },
                     ),
-                        const SizedBox(height: 20),
-                        const _BadgeShelf(),
-                      ],
-                    ),
                   ),
                 ],
               ),
+      ),
+    );
+  }
+}
+
+/// Kousek ostrova jedné jednotky: biotop, zvířátko (nebo ❓) a nalezená
+/// tajná nálepka. Ťuknutí na získané zvířátko řekne jeho jméno.
+class _IslandPiece extends StatelessWidget {
+  final ContentPack pack;
+  final Unit unit;
+  final WorldTheme world;
+  final ValueChanged<String> onSay;
+
+  const _IslandPiece({
+    required this.pack,
+    required this.unit,
+    required this.world,
+    required this.onSay,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final progress = ProgressService.instance;
+    final biome = Biome.parse(unit.biome);
+    final has = progress.hasCollectible(pack.id, unit.reward);
+    final secret = progress.collectibles(pack.id).contains(biome.secret);
+    final unlocked = progress.isUnitUnlocked(pack, pack.units.indexOf(unit));
+
+    return BiomeBand(
+      biome: biome,
+      theme: world,
+      locked: !unlocked,
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(14, 10, 14, 12),
+        child: Row(
+          children: [
+            Text(biome.emoji, style: const TextStyle(fontSize: 22)),
+            const SizedBox(width: 10),
+            Expanded(
+              child: Text(
+                unit.title,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                  fontFamily: 'Nunito',
+                  fontSize: 13,
+                  fontWeight: FontWeight.w800,
+                  color: Colors.white.withValues(alpha: 0.7),
+                ),
+              ),
+            ),
+            if (secret)
+              Padding(
+                padding: const EdgeInsets.only(right: 10),
+                child: _Sticker(
+                  key: ValueKey('secret-${unit.id}'),
+                  emoji: biome.secret,
+                  label: '✨',
+                  owned: true,
+                  onTap: () => onSay(''),
+                ),
+              ),
+            _Sticker(
+              key: ValueKey('sticker-${unit.id}'),
+              emoji: has ? unit.reward.emoji : '❓',
+              label: has ? unit.reward.label : '',
+              owned: has,
+              onTap: () => onSay(unit.reward.label),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _Sticker extends StatefulWidget {
+  final String emoji;
+  final String label;
+  final bool owned;
+  final VoidCallback onTap;
+
+  const _Sticker({
+    super.key,
+    required this.emoji,
+    required this.label,
+    required this.owned,
+    required this.onTap,
+  });
+
+  @override
+  State<_Sticker> createState() => _StickerState();
+}
+
+class _StickerState extends State<_Sticker>
+    with SingleTickerProviderStateMixin {
+  // Poskočení při ťuknutí (bez Rive zatím jen scale bounce).
+  late final AnimationController _bounce = AnimationController(
+    vsync: this,
+    duration: const Duration(milliseconds: 350),
+  );
+
+  @override
+  void dispose() {
+    _bounce.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: widget.owned
+          ? () {
+              if (!MediaQuery.of(context).disableAnimations) {
+                _bounce.forward(from: 0);
+              }
+              widget.onTap();
+            }
+          : null,
+      child: ScaleTransition(
+        scale: TweenSequence<double>([
+          TweenSequenceItem(tween: Tween(begin: 1.0, end: 1.25), weight: 40),
+          TweenSequenceItem(tween: Tween(begin: 1.25, end: 1.0), weight: 60),
+        ]).animate(CurvedAnimation(parent: _bounce, curve: Curves.easeOut)),
+        child: Container(
+          width: 84,
+          padding: const EdgeInsets.symmetric(vertical: 8),
+          decoration: BoxDecoration(
+            color: Colors.white.withValues(alpha: widget.owned ? 0.12 : 0.05),
+            borderRadius: BorderRadius.circular(18),
+            border: Border.all(
+              color: widget.owned
+                  ? const Color(0xFFFFD200).withValues(alpha: 0.5)
+                  : Colors.white.withValues(alpha: 0.1),
+            ),
+          ),
+          child: Column(
+            children: [
+              Opacity(
+                opacity: widget.owned ? 1 : 0.4,
+                child: Text(widget.emoji, style: const TextStyle(fontSize: 36)),
+              ),
+              if (widget.label.isNotEmpty) ...[
+                const SizedBox(height: 2),
+                Text(
+                  widget.label,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    fontFamily: 'Nunito',
+                    fontSize: 11,
+                    fontWeight: FontWeight.w800,
+                    color: Colors.white.withValues(alpha: 0.85),
+                  ),
+                ),
+              ],
+            ],
+          ),
+        ),
       ),
     );
   }

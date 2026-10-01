@@ -42,7 +42,8 @@
       "icon": "👩",
       "reward": {
         "emoji": "🐭",
-        "name": "M"
+        "name": "M",
+        "label": "mouse"
       },
       "scene": {
         "biome": "meadow"
@@ -86,7 +87,8 @@
       "icon": "👨",
       "reward": {
         "emoji": "☂️",
-        "name": "U"
+        "name": "U",
+        "label": "umbrella"
       },
       "scene": {
         "biome": "forest"
@@ -168,7 +170,8 @@
       "icon": "📍",
       "reward": {
         "emoji": "🐯",
-        "name": "T"
+        "name": "T",
+        "label": "tiger"
       },
       "scene": {
         "biome": "pond"
@@ -236,7 +239,8 @@
       "icon": "📌",
       "reward": {
         "emoji": "🥧",
-        "name": "P"
+        "name": "P",
+        "label": "pie"
       },
       "scene": {
         "biome": "garden"
@@ -374,7 +378,8 @@
       "icon": "🐕",
       "reward": {
         "emoji": "🍊",
-        "name": "O"
+        "name": "O",
+        "label": "orange"
       },
       "scene": {
         "biome": "farm"
@@ -503,7 +508,8 @@
       "icon": "🐱",
       "reward": {
         "emoji": "🐱",
-        "name": "C"
+        "name": "C",
+        "label": "cat"
       },
       "scene": {
         "biome": "city"
@@ -639,7 +645,8 @@
       "icon": "☀️",
       "reward": {
         "emoji": "☀️",
-        "name": "S"
+        "name": "S",
+        "label": "sun"
       },
       "scene": {
         "biome": "mountains"
@@ -801,7 +808,8 @@
       "icon": "🎩",
       "reward": {
         "emoji": "🏠",
-        "name": "H"
+        "name": "H",
+        "label": "house"
       },
       "scene": {
         "biome": "beach"
@@ -1001,7 +1009,8 @@
       "icon": "🚌",
       "reward": {
         "emoji": "🐸",
-        "name": "F"
+        "name": "F",
+        "label": "frog"
       },
       "scene": {
         "biome": "orchard"
@@ -1216,7 +1225,8 @@
       "icon": "🦵",
       "reward": {
         "emoji": "🦁",
-        "name": "L"
+        "name": "L",
+        "label": "lion"
       },
       "scene": {
         "biome": "snow"

@@ -19,6 +19,9 @@ class BiomeBand extends StatelessWidget {
   final VoidCallback? onRevealed;
   final Widget child;
 
+  /// Něco schovaného v rohu kousku světa (tajná nálepka ✨).
+  final Widget? hidden;
+
   const BiomeBand({
     super.key,
     required this.biome,
@@ -27,6 +30,7 @@ class BiomeBand extends StatelessWidget {
     this.locked = false,
     this.revealing = false,
     this.onRevealed,
+    this.hidden,
   });
 
   static const Duration revealDuration = Duration(milliseconds: 1600);
@@ -52,6 +56,8 @@ class BiomeBand extends StatelessWidget {
           children: [
             Positioned.fill(child: _Decor(biome: biome, theme: theme)),
             child,
+            if (hidden != null && !locked)
+              Positioned(right: 14, bottom: 12, child: hidden!),
             if (locked)
               const Positioned.fill(child: _Fog())
             else if (revealing)

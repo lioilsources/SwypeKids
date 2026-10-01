@@ -106,4 +106,26 @@ void main() {
     await tester.pump(const Duration(seconds: 2));
     expect(ProgressService.instance.isUnitRevealed('cs-CZ', 'cs-u1'), isTrue);
   });
+
+  testWidgets('✨ v odemčené jednotce dá tajnou nálepku biotopu a zmizí',
+      (tester) async {
+    await tester.pumpWidget(MaterialApp(
+      home: Scaffold(
+        body: LessonMapScreen(
+          language: Language.cs,
+          onLanguageChanged: (_) {},
+        ),
+      ),
+    ));
+    await tester.pump();
+    await tester.pump(const Duration(seconds: 2)); // mlha první jednotky pryč
+
+    expect(find.byKey(const ValueKey('secret-cs-u1')), findsOneWidget);
+    await tester.tap(find.byKey(const ValueKey('secret-cs-u1')));
+    await tester.pump();
+    expect(ProgressService.instance.collectibles('cs-CZ'), contains('🐞'));
+    expect(find.text('✨ 🐞'), findsOneWidget);
+    expect(find.byKey(const ValueKey('secret-cs-u1')), findsNothing);
+    await tester.pump(const Duration(seconds: 4));
+  });
 }
