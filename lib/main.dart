@@ -6,6 +6,7 @@ import 'screens/home_shell.dart';
 import 'screens/onboarding_screen.dart';
 import 'services/profile_service.dart';
 import 'services/progress_service.dart';
+import 'services/session_service.dart';
 import 'services/settings_service.dart';
 import 'world/world_clock.dart';
 
@@ -16,6 +17,8 @@ Future<void> main() async {
   await AudioService.instance.loadSettings();
   await WorldClockService.instance.loadSettings();
   await SettingsService.instance.load();
+  await SessionService.instance.load();
+  SessionService.instance.start();
   WorldClockService.instance.start();
   // Audio engine startuje na pozadí; do té doby je hra tichá.
   AudioService.instance.init();

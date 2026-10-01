@@ -8,6 +8,8 @@ import '../services/achievement_service.dart';
 import '../services/pack_service.dart';
 import '../services/profile_service.dart';
 import '../services/progress_service.dart';
+import '../services/session_service.dart';
+import '../services/settings_service.dart';
 import '../world/world_clock.dart';
 
 /// Stav písmene pro mřížku abecedy (roadmap P6).
@@ -353,6 +355,59 @@ class _ParentSettingsState extends State<ParentSettings> {
             (v) => audio.ambientEnabled = v),
         toggle('music-toggle', '🎵', 'Hudba', audio.musicEnabled,
             (v) => audio.musicEnabled = v),
+        toggle('left-handed-toggle', '🫲', 'Levák (zrcadlená klávesnice)',
+            SettingsService.instance.leftHanded,
+            (v) => SettingsService.instance.leftHanded = v),
+        const SizedBox(height: 8),
+        Text('Časový limit hraní za den',
+            style: TextStyle(
+                fontFamily: 'Nunito',
+                fontWeight: FontWeight.w800,
+                color: Colors.white.withValues(alpha: 0.85))),
+        const SizedBox(height: 6),
+        ListenableBuilder(
+          listenable: Listenable.merge(
+              [SettingsService.instance, SessionService.instance]),
+          builder: (context, _) {
+            final settings = SettingsService.instance;
+            final session = SessionService.instance;
+            return Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Wrap(
+                  spacing: 8,
+                  children: [
+                    for (final m in SettingsService.sessionLimits)
+                      ChoiceChip(
+                        key: ValueKey('limit-$m'),
+                        label: Text(m == 0 ? 'bez limitu' : '$m min'),
+                        selected: settings.sessionLimitMin == m,
+                        onSelected: (_) => settings.sessionLimitMin = m,
+                      ),
+                  ],
+                ),
+                const SizedBox(height: 6),
+                Text(
+                  'Dnes odehráno ${session.playedMinToday} min'
+                  '${session.limitMinToday > 0 ? ' z ${session.limitMinToday}' : ''}'
+                  '${session.limitReached ? ' — průvodce už spí' : ''}',
+                  key: const ValueKey('session-today'),
+                  style: TextStyle(
+                      fontFamily: 'Nunito',
+                      fontWeight: FontWeight.w700,
+                      color: Colors.white.withValues(alpha: 0.7)),
+                ),
+                if (settings.sessionLimitMin > 0)
+                  TextButton(
+                    key: const ValueKey('extend-today'),
+                    onPressed: session.extendToday,
+                    child: Text(
+                        'Prodloužit dnešek o ${SessionService.extendMinutes} min'),
+                  ),
+              ],
+            );
+          },
+        ),
         const SizedBox(height: 8),
         Text('Roční období na mapě',
             style: TextStyle(
