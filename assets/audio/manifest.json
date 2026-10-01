@@ -7,7 +7,10 @@
     "error": "assets/audio/sfx/error.wav",
     "star": "assets/audio/sfx/star.wav",
     "sticker": "assets/audio/sfx/sticker.wav",
-    "tap": "assets/audio/sfx/tap.wav"
+    "tap": "assets/audio/sfx/tap.wav",
+    "babble_0": "assets/audio/sfx/babble_0.wav",
+    "babble_1": "assets/audio/sfx/babble_1.wav",
+    "babble_2": "assets/audio/sfx/babble_2.wav"
   },
   "ambient": {
     "day": "assets/audio/ambient/day.wav",
