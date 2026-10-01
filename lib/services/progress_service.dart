@@ -5,6 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../data/keyboard_layout.dart' show kEmoji;
 import '../data/lessons.dart';
 import '../data/models/content_pack.dart';
+import '../world/world_clock.dart' show Season;
 
 /// Ukládá postup dítěte (hvězdy za lekce, nálepky) per content pack a zvolený
 /// jazyk. Čtení jde ze synchronní in-memory kopie (žádné async v build),
@@ -15,9 +16,11 @@ class ProgressService {
 
   static const _kLanguageKey = 'sk.selectedLanguage';
   static const _kProgressPrefix = 'sk.progress.';
+  static const _kGlobalKey = 'sk.global'; // odznaky a statistiky napříč jazyky
 
   SharedPreferences? _prefs;
   final Map<String, _PackProgress> _byPack = {};
+  _GlobalProgress _global = _GlobalProgress();
   Language? _selectedLanguage;
 
   static Future<void> init() async {
@@ -25,6 +28,16 @@ class ProgressService {
     instance._prefs = prefs;
     instance._byPack.clear();
     instance._selectedLanguage = null;
+    instance._global = _GlobalProgress();
+    final rawGlobal = prefs.getString(_kGlobalKey);
+    if (rawGlobal != null) {
+      try {
+        instance._global = _GlobalProgress.fromJson(
+            (jsonDecode(rawGlobal) as Map).cast<String, dynamic>());
+      } catch (_) {
+        // Poškozený záznam → odznaky od začátku, postup v packech zůstává.
+      }
+    }
     final langName = prefs.getString(_kLanguageKey);
     instance._selectedLanguage =
         Language.values.asNameMap()[langName ?? ''];
@@ -127,6 +140,42 @@ class ProgressService {
         .difference(DateTime.fromMillisecondsSinceEpoch(at));
     return age < newWordWindow;
   }
+
+  // ── Odznaky a statistiky (napříč jazyky) ───────────────────────────────────
+
+  /// Získané odznaky (id → kdy, ms epoch).
+  Map<String, int> get badges => Map.unmodifiable(_global.badges);
+
+  bool hasBadge(String id) => _global.badges.containsKey(id);
+
+  /// Zapíše odznak; true = byl nový.
+  bool earnBadge(String id, {DateTime? now}) {
+    if (_global.badges.containsKey(id)) return false;
+    _global.badges[id] = (now ?? DateTime.now()).millisecondsSinceEpoch;
+    _saveGlobal();
+    return true;
+  }
+
+  /// Hrací dny (YYYY-MM-DD) a období, ve kterých dítě hrálo.
+  Set<String> get playDays => Set.unmodifiable(_global.playDays);
+  Set<String> get seasonsPlayed => Set.unmodifiable(_global.seasons);
+  int get listenPerfectCount => _global.listenPerfect;
+
+  void recordPlayDay(DateTime at, Season season) {
+    final day =
+        '${at.year}-${at.month.toString().padLeft(2, '0')}-${at.day.toString().padLeft(2, '0')}';
+    var changed = _global.playDays.add(day);
+    changed = _global.seasons.add(season.name) || changed;
+    if (changed) _saveGlobal();
+  }
+
+  void bumpListenPerfect() {
+    _global.listenPerfect++;
+    _saveGlobal();
+  }
+
+  void _saveGlobal() =>
+      _prefs?.setString(_kGlobalKey, jsonEncode(_global.toJson()));
 
   // ── Odhalené kousky světa ──────────────────────────────────────────────────
 
@@ -278,6 +327,40 @@ class _PackProgress {
         'strength': strength,
         'book': [for (final page in book) page.toJson()],
         'revealed': revealed.toList(),
+      };
+}
+
+/// Odznaky a statistiky společné pro všechny jazyky.
+class _GlobalProgress {
+  final Map<String, int> badges;
+  final Set<String> playDays;
+  final Set<String> seasons;
+  int listenPerfect;
+
+  _GlobalProgress({
+    Map<String, int>? badges,
+    Set<String>? playDays,
+    Set<String>? seasons,
+    this.listenPerfect = 0,
+  })  : badges = badges ?? {},
+        playDays = playDays ?? {},
+        seasons = seasons ?? {};
+
+  factory _GlobalProgress.fromJson(Map<String, dynamic> json) =>
+      _GlobalProgress(
+        badges: ((json['badges'] as Map?) ?? const {})
+            .map((k, v) => MapEntry(k as String, v as int)),
+        playDays: ((json['playDays'] as List?) ?? const []).cast<String>().toSet(),
+        seasons: ((json['seasons'] as List?) ?? const []).cast<String>().toSet(),
+        listenPerfect: json['listenPerfect'] as int? ?? 0,
+      );
+
+  Map<String, dynamic> toJson() => {
+        'v': 1,
+        'badges': badges,
+        'playDays': playDays.toList(),
+        'seasons': seasons.toList(),
+        'listenPerfect': listenPerfect,
       };
 }
 

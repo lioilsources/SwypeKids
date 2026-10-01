@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../data/lessons.dart';
 import '../data/models/content_pack.dart';
+import '../services/achievement_service.dart';
 import '../services/pack_service.dart';
 import '../services/progress_service.dart';
 
@@ -98,8 +99,12 @@ class _CollectionScreenState extends State<CollectionScreen> {
                     ),
                   ),
                   Expanded(
-                    child: GridView.builder(
+                    child: ListView(
                       padding: const EdgeInsets.all(16),
+                      children: [
+                        GridView.builder(
+                      shrinkWrap: true,
+                      physics: const NeverScrollableScrollPhysics(),
                       gridDelegate:
                           const SliverGridDelegateWithMaxCrossAxisExtent(
                         maxCrossAxisExtent: 110,
@@ -148,9 +153,91 @@ class _CollectionScreenState extends State<CollectionScreen> {
                         );
                       },
                     ),
+                        const SizedBox(height: 20),
+                        const _BadgeShelf(),
+                      ],
+                    ),
                   ),
                 ],
               ),
+      ),
+    );
+  }
+}
+
+/// Polička odznaků: získané barevně s názvem, ostatní šedě s podmínkou
+/// (tu čte rodič; dítě pozná emoji).
+class _BadgeShelf extends StatelessWidget {
+  const _BadgeShelf();
+
+  @override
+  Widget build(BuildContext context) {
+    final earned = ProgressService.instance.badges;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          '🏅 Odznaky ${earned.length}/${GameBadge.values.length}',
+          style: const TextStyle(
+            fontFamily: 'Nunito',
+            fontSize: 14,
+            fontWeight: FontWeight.w900,
+            color: Color(0xFFFFD200),
+          ),
+        ),
+        const SizedBox(height: 10),
+        Wrap(
+          spacing: 8,
+          runSpacing: 8,
+          children: [
+            for (final b in GameBadge.values)
+              _BadgeTile(badge: b, earned: earned.containsKey(b.name)),
+          ],
+        ),
+      ],
+    );
+  }
+}
+
+class _BadgeTile extends StatelessWidget {
+  final GameBadge badge;
+  final bool earned;
+  const _BadgeTile({required this.badge, required this.earned});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 104,
+      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 8),
+      decoration: BoxDecoration(
+        color: Colors.white.withValues(alpha: earned ? 0.1 : 0.04),
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(
+          color: earned
+              ? const Color(0xFFFFD200).withValues(alpha: 0.5)
+              : Colors.white.withValues(alpha: 0.1),
+        ),
+      ),
+      child: Column(
+        children: [
+          Opacity(
+            opacity: earned ? 1 : 0.35,
+            child: Text(badge.emoji, style: const TextStyle(fontSize: 28)),
+          ),
+          const SizedBox(height: 4),
+          Text(
+            earned ? badge.title : badge.condition,
+            textAlign: TextAlign.center,
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+            style: TextStyle(
+              fontFamily: 'Nunito',
+              fontSize: 10,
+              fontWeight: FontWeight.w800,
+              color: Colors.white.withValues(alpha: earned ? 0.85 : 0.4),
+            ),
+          ),
+        ],
       ),
     );
   }

@@ -33,6 +33,9 @@ void main() {
 
     // Nezískané odměny jednotek jsou ❓
     expect(find.text('❓'), findsWidgets);
+
+    // Otevření mapy se počítá jako hrací den
+    expect(ProgressService.instance.playDays.length, 1);
   });
 
   testWidgets('dlouhý stisk na lekci ukáže poznámku pro rodiče',
