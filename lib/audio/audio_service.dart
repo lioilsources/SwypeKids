@@ -8,7 +8,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../data/keyboard_layout.dart' show kRows;
 
 /// Zvukové efekty ze sfx katalogu (`assets/audio/manifest.json`).
-enum Sfx { key, success, error, star, sticker, tap }
+enum Sfx { key, success, error, star, sticker, tap, babble }
 
 /// Přehrává krátké zvuky hry přes flutter_soloud (nízká latence pro tóny
 /// při swype). Hra musí fungovat i beze zvuku: pokud engine nejde spustit
@@ -26,6 +26,7 @@ class AudioService {
   static const _ambientFade = Duration(milliseconds: 900);
   static const _manifestPath = 'assets/audio/manifest.json';
   static const _successVariants = 3;
+  static const _babbleVariants = 3;
 
   SharedPreferences? _prefs;
   bool _sfxEnabled = true;
@@ -41,6 +42,7 @@ class AudioService {
   bool _musicQuiet = false;
   SoundHandle? _musicHandle;
   int _successIdx = 0;
+  int _babbleIdx = 0;
 
   // Ambient: jedna smyčka naráz (scéna podle biotopu × denní doby).
   String? _ambientWanted; // co má hrát (i když je zrovna vypnuto / engine nejede)
@@ -116,6 +118,7 @@ class AudioService {
   void play(Sfx sfx, {double pitch = 1.0, double volume = 1.0}) {
     final id = switch (sfx) {
       Sfx.success => 'success_${_successIdx++ % _successVariants}',
+      Sfx.babble => 'babble_${_babbleIdx++ % _babbleVariants}',
       _ => sfx.name,
     };
     _playId(id, pitch: pitch, volume: volume);

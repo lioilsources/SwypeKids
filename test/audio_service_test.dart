@@ -14,9 +14,11 @@ void main() {
       expect(File(path as String).existsSync(), isTrue, reason: path);
     }
     for (final sfx in Sfx.values) {
-      final ids = sfx == Sfx.success
-          ? ['success_0', 'success_1', 'success_2']
-          : [sfx.name];
+      final ids = switch (sfx) {
+        Sfx.success => ['success_0', 'success_1', 'success_2'],
+        Sfx.babble => ['babble_0', 'babble_1', 'babble_2'],
+        _ => [sfx.name],
+      };
       for (final id in ids) {
         expect(manifest, contains(id), reason: 'chybí sfx $id');
       }

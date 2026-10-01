@@ -184,8 +184,8 @@ class LessonMapScreenState extends State<LessonMapScreen> {
       setState(() => _pack = pack);
       _syncAmbient();
       _greet();
-      _showBadges(AchievementService.instance
-          .check(const SessionStart(), pack));
+      _showBadges(
+          AchievementService.instance.check(const SessionStart(), pack));
     }
   }
 
@@ -356,38 +356,39 @@ class LessonMapScreenState extends State<LessonMapScreen> {
                   child: Stack(
                     children: [
                       Positioned.fill(child: Builder(builder: (context) {
-                    final weakest = ProgressService.instance
-                        .weakestLearned(pack, limit: _practiceSize);
-                    final showPractice = weakest.length >= _practiceMinLearned;
-                    final offset = showPractice ? 1 : 0;
-                    return Center(
-                      child: ConstrainedBox(
-                        constraints:
-                            const BoxConstraints(maxWidth: _maxContentWidth),
-                        child: ListView.builder(
-                          controller: _scroll,
-                          padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
-                          itemCount: pack.units.length + offset,
-                          itemBuilder: (context, i) {
-                            if (showPractice && i == 0) {
-                              return _PracticeCard(
-                                lessons: weakest,
-                                onTap: () => _openPractice(weakest),
-                              );
-                            }
-                            final u = i - offset;
-                            return _UnitBlock(
-                              pack: pack,
-                              unitIndex: u,
-                              world: world,
-                              onLessonTap: (l) => _openLesson(u, l),
-                              onSecret: _findSecret,
-                            );
-                          },
-                        ),
-                      ),
-                    );
-                  })),
+                        final weakest = ProgressService.instance
+                            .weakestLearned(pack, limit: _practiceSize);
+                        final showPractice =
+                            weakest.length >= _practiceMinLearned;
+                        final offset = showPractice ? 1 : 0;
+                        return Center(
+                          child: ConstrainedBox(
+                            constraints: const BoxConstraints(
+                                maxWidth: _maxContentWidth),
+                            child: ListView.builder(
+                              controller: _scroll,
+                              padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
+                              itemCount: pack.units.length + offset,
+                              itemBuilder: (context, i) {
+                                if (showPractice && i == 0) {
+                                  return _PracticeCard(
+                                    lessons: weakest,
+                                    onTap: () => _openPractice(weakest),
+                                  );
+                                }
+                                final u = i - offset;
+                                return _UnitBlock(
+                                  pack: pack,
+                                  unitIndex: u,
+                                  world: world,
+                                  onLessonTap: (l) => _openLesson(u, l),
+                                  onSecret: _findSecret,
+                                );
+                              },
+                            ),
+                          ),
+                        );
+                      })),
                       if (_bedtime)
                         const Positioned.fill(child: _BedtimeCard()),
                     ],
@@ -473,6 +474,9 @@ class _SecretChip extends StatelessWidget {
 
 /// Batoh slov: kolik celých slov dítě swyplo (a může použít ve větách).
 void _showParentNote(BuildContext context, Lesson lesson) {
+  final language = Language.values.firstWhere(
+      (l) => lesson.id.startsWith('${l.name}-'),
+      orElse: () => Language.cs);
   showModalBottomSheet<void>(
     context: context,
     backgroundColor: const Color(0xFF1A1A2E),
@@ -486,14 +490,27 @@ void _showParentNote(BuildContext context, Lesson lesson) {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              '👪 ${lesson.display}',
-              style: TextStyle(
-                fontFamily: kFont,
-                fontSize: 18,
-                fontWeight: FontWeight.w900,
-                color: Color(0xFFFFD200),
-              ),
+            Row(
+              children: [
+                Expanded(
+                  child: Text(
+                    '👪 ${lesson.display}',
+                    style: TextStyle(
+                      fontFamily: kFont,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w900,
+                      color: const Color(0xFFFFD200),
+                    ),
+                  ),
+                ),
+                // „Přečti mi to" — rodič si poznámku nechá přečíst (TTS).
+                IconButton(
+                  key: const ValueKey('read-note'),
+                  icon: const Text('🔊', style: TextStyle(fontSize: 24)),
+                  onPressed: () =>
+                      TtsService.speak(lesson.parentNote, language),
+                ),
+              ],
             ),
             const SizedBox(height: 10),
             Text(

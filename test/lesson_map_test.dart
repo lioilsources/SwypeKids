@@ -61,6 +61,8 @@ void main() {
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 400));
     expect(find.textContaining('První slabika'), findsOneWidget);
+    expect(find.byKey(const ValueKey('read-note')), findsOneWidget);
+    await tester.tap(find.byKey(const ValueKey('read-note'))); // TTS tiše
   });
 
   testWidgets('procvičování se nabídne až od 3 naučených slov', (tester) async {

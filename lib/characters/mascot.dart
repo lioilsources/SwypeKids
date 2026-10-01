@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import '../audio/audio_service.dart';
 import '../data/lessons.dart';
 
 /// Stavy průvodce (roadmap P1). Názvy odpovídají vstupům Rive state machine
@@ -133,6 +134,10 @@ class _MascotState extends State<Mascot> with TickerProviderStateMixin {
 
   void _play() {
     if (!Mascot.isTransient(widget.mood)) return;
+    // Postava „žvatlá" bez jazyka (roadmap P2) — při mávání a jásotu.
+    if (widget.mood == MascotMood.wave || widget.mood == MascotMood.cheer) {
+      AudioService.instance.play(Sfx.babble, volume: 0.6);
+    }
     if (MediaQuery.of(context).disableAnimations) {
       // Bez pohybu: jen chvíli ukázat doplněk, pak uklidit.
       Future.delayed(const Duration(milliseconds: 700), () {

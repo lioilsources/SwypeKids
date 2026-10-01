@@ -236,6 +236,38 @@ List<double> ambientWater() {
   return seamless(out);
 }
 
+// ── Žvatlání postav (Animal Crossing style): krátké „slabiky" bez jazyka ──
+
+/// Jedna slabika: tón s klouzavou výškou a formantovým brumem, 60–110 ms.
+List<double> babbleSyllable(Random rnd, double base) {
+  final len = 0.06 + rnd.nextDouble() * 0.05;
+  final n = (len * sampleRate).round();
+  final f0 = base * (0.85 + rnd.nextDouble() * 0.5);
+  final f1 = f0 * (0.8 + rnd.nextDouble() * 0.5);
+  var phase = 0.0;
+  return List.generate(n, (i) {
+    final t = i / n;
+    phase += 2 * pi * (f0 + (f1 - f0) * t) / sampleRate;
+    final env = sin(pi * t);
+    // dva „formanty" nad základem dávají hlasový charakter
+    return 0.4 * env * (sin(phase) + 0.35 * sin(phase * 2.01) + 0.15 * sin(phase * 3.02));
+  });
+}
+
+/// Žvatlání: 4–7 slabik s pauzami; [base] = základní výška (vyšší = menší
+/// postava). Tři varianty se střídají.
+List<double> babble(int seed, {double base = 330}) {
+  final rnd = Random(seed);
+  var out = <double>[];
+  final count = 4 + rnd.nextInt(4);
+  var t = 0.0;
+  for (var i = 0; i < count; i++) {
+    out = mix(out, babbleSyllable(rnd, base), t);
+    t += 0.09 + rnd.nextDouble() * 0.08;
+  }
+  return out;
+}
+
 // ── Hudba: titulní smyčka (roadmap P2, „první hudební smyčka") ──────────────
 
 /// Měkký basový tón (sinus + oktáva), doznívá přes dobu.
@@ -347,6 +379,14 @@ void main() {
     File(path).writeAsBytesSync(wav(samples));
     ambient[id] = path;
     stdout.writeln('✓ $path (${(samples.length / sampleRate).toStringAsFixed(2)} s loop)');
+  }
+
+  for (var i = 0; i < 3; i++) {
+    final path = '$outDir/babble_$i.wav';
+    final samples = babble(100 + i);
+    File(path).writeAsBytesSync(wav(samples));
+    manifest['babble_$i'] = path;
+    stdout.writeln('✓ $path (${(samples.length / sampleRate).toStringAsFixed(2)} s)');
   }
 
   const musicDir = 'assets/audio/music';
