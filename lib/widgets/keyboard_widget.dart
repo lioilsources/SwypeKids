@@ -16,6 +16,10 @@ class KeyboardWidget extends StatefulWidget {
   /// Prst právě přidal písmeno do tahu (zvuk, haptika).
   final void Function(String letter)? onLetter;
 
+  /// Levák: řady zrcadlově (Q vpravo). Tah i detekce kláves jsou podle
+  /// skutečné pozice klávesy, takže se mění jen rozložení.
+  final bool mirrored;
+
   const KeyboardWidget({
     super.key,
     required this.lesson,
@@ -24,6 +28,7 @@ class KeyboardWidget extends StatefulWidget {
     required this.onSwypeEnd,
     this.onSwypeUpdate,
     this.onLetter,
+    this.mirrored = false,
   });
 
   @override
@@ -266,7 +271,8 @@ class _KeyboardWidgetState extends State<KeyboardWidget>
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: row.map((letter) {
+                      children: (widget.mirrored ? row.reversed : row)
+                          .map((letter) {
                         final active = widget.lesson.unlocked.contains(letter);
                         final inPath = _path.contains(letter);
                         final isNew  = widget.newLetters.contains(letter);

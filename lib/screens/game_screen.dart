@@ -9,6 +9,7 @@ import '../data/models/sentence.dart';
 import '../services/achievement_service.dart';
 import '../services/pack_service.dart';
 import '../services/progress_service.dart';
+import '../services/settings_service.dart';
 import '../services/tts_service.dart';
 import '../widgets/challenge_card.dart';
 import '../widgets/keyboard_widget.dart';
@@ -454,6 +455,7 @@ class _GameScreenState extends State<GameScreen>
           onSwypeEnd: _onSwypeEnd,
           onSwypeUpdate: _onSwypeUpdate,
           onLetter: AudioService.instance.playKeyTone,
+          mirrored: SettingsService.instance.leftHanded,
         ),
       );
 
