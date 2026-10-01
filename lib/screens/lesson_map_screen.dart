@@ -186,7 +186,11 @@ class LessonMapScreenState extends State<LessonMapScreen> {
 
   Future<void> _loadPack() async {
     final pack = await PackService.instance.load(widget.language);
-    if (mounted && pack.language == widget.language) {
+    // Pack jiného jazyka (fallback en) raději ukázat než nechat mapu na 🎹;
+    // jen když mezitím dítě přepnulo jazyk, výsledek zahodit.
+    final stillWanted = pack.language == widget.language ||
+        PackService.instance.cached(widget.language) == null;
+    if (mounted && stillWanted) {
       setState(() => _pack = pack);
       _syncAmbient();
       _greet();

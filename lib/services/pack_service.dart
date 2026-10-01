@@ -36,7 +36,12 @@ class PackService {
   Future<ContentPack> _load(Language lang) async {
     ContentPack pack;
     try {
-      final raw = await rootBundle.loadString('assets/packs/${lang.name}.json');
+      // Bajty + utf8.decode místo loadString: ten assety nad 50 KB dekóduje
+      // v samostatném izolátu, který na iOS (i ve widget testech) nedoběhl —
+      // mapa pak zůstala na 🎹. 70 KB se na hlavním izolátu dekóduje za ~1 ms.
+      final bytes = await rootBundle.load('assets/packs/${lang.name}.json');
+      final raw = utf8.decode(
+          bytes.buffer.asUint8List(bytes.offsetInBytes, bytes.lengthInBytes));
       pack = ContentPack.fromJson(
           (jsonDecode(raw) as Map).cast<String, dynamic>());
     } catch (e) {
