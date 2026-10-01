@@ -409,4 +409,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get badgeExpeditionHow => 'はじめてのしゅうかんふくしゅうたんけん';
+
+  @override
+  String get seasonStickersTitle => 'きせつのシール';
 }

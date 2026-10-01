@@ -22,6 +22,9 @@ class BiomeBand extends StatelessWidget {
   /// Něco schovaného v rohu kousku světa (tajná nálepka ✨).
   final Widget? hidden;
 
+  /// Sezónní překvapení v levém dolním rohu (jen v daném období).
+  final Widget? seasonal;
+
   const BiomeBand({
     super.key,
     required this.biome,
@@ -31,6 +34,7 @@ class BiomeBand extends StatelessWidget {
     this.revealing = false,
     this.onRevealed,
     this.hidden,
+    this.seasonal,
   });
 
   static const Duration revealDuration = Duration(milliseconds: 1600);
@@ -58,6 +62,8 @@ class BiomeBand extends StatelessWidget {
             child,
             if (hidden != null && !locked)
               Positioned(right: 14, bottom: 12, child: hidden!),
+            if (seasonal != null && !locked)
+              Positioned(left: 14, bottom: 12, child: seasonal!),
             if (locked)
               const Positioned.fill(child: _Fog())
             else if (revealing)
