@@ -367,4 +367,19 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get delete => '削除';
+
+  @override
+  String get statMinutesToday => '今日の分数';
+
+  @override
+  String get statMinutesWeek => '今週の分数';
+
+  @override
+  String get letterMastered => 'できた';
+
+  @override
+  String get letterPracticing => '練習中';
+
+  @override
+  String get letterUnseen => 'まだ出ていない';
 }

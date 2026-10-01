@@ -110,5 +110,10 @@
   "deleteProfileTitle": "Delete profile {name}?",
   "deleteProfileBody": "All progress, stickers and the book will be deleted too. This cannot be undone.",
   "cancel": "Cancel",
-  "delete": "Delete"
+  "delete": "Delete",
+  "statMinutesToday": "minutes today",
+  "statMinutesWeek": "minutes this week",
+  "letterMastered": "mastered",
+  "letterPracticing": "practising",
+  "letterUnseen": "not met yet"
 }

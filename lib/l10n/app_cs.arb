@@ -213,5 +213,10 @@
   },
   "deleteProfileBody": "Smaže se i celý postup, nálepky a knížka. Nejde to vrátit.",
   "cancel": "Zrušit",
-  "delete": "Smazat"
+  "delete": "Smazat",
+  "statMinutesToday": "minut dnes",
+  "statMinutesWeek": "minut tento týden",
+  "letterMastered": "zvládnuté",
+  "letterPracticing": "procvičuje",
+  "letterUnseen": "ještě nepotkalo"
 }

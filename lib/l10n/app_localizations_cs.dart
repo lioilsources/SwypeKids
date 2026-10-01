@@ -371,4 +371,19 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get delete => 'Smazat';
+
+  @override
+  String get statMinutesToday => 'minut dnes';
+
+  @override
+  String get statMinutesWeek => 'minut tento týden';
+
+  @override
+  String get letterMastered => 'zvládnuté';
+
+  @override
+  String get letterPracticing => 'procvičuje';
+
+  @override
+  String get letterUnseen => 'ještě nepotkalo';
 }

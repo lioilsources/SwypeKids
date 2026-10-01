@@ -777,6 +777,36 @@ abstract class AppLocalizations {
   /// In cs, this message translates to:
   /// **'Smazat'**
   String get delete;
+
+  /// No description provided for @statMinutesToday.
+  ///
+  /// In cs, this message translates to:
+  /// **'minut dnes'**
+  String get statMinutesToday;
+
+  /// No description provided for @statMinutesWeek.
+  ///
+  /// In cs, this message translates to:
+  /// **'minut tento týden'**
+  String get statMinutesWeek;
+
+  /// No description provided for @letterMastered.
+  ///
+  /// In cs, this message translates to:
+  /// **'zvládnuté'**
+  String get letterMastered;
+
+  /// No description provided for @letterPracticing.
+  ///
+  /// In cs, this message translates to:
+  /// **'procvičuje'**
+  String get letterPracticing;
+
+  /// No description provided for @letterUnseen.
+  ///
+  /// In cs, this message translates to:
+  /// **'ještě nepotkalo'**
+  String get letterUnseen;
 }
 
 class _AppLocalizationsDelegate

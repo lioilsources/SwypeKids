@@ -213,5 +213,10 @@
         "type": "String"
       }
     }
-  }
+  },
+  "statMinutesToday": "minutos hoy",
+  "statMinutesWeek": "minutos esta semana",
+  "letterMastered": "dominada",
+  "letterPracticing": "practicando",
+  "letterUnseen": "aún no vista"
 }

@@ -213,5 +213,10 @@
         "type": "String"
       }
     }
-  }
+  },
+  "statMinutesToday": "今日の分数",
+  "statMinutesWeek": "今週の分数",
+  "letterMastered": "できた",
+  "letterPracticing": "練習中",
+  "letterUnseen": "まだ出ていない"
 }

@@ -55,6 +55,19 @@ class SessionService extends ChangeNotifier {
 
   int get playedMinToday => playedSecToday ~/ 60;
 
+  /// Odehrané minuty za posledních [days] dnů včetně dneška (z uložených
+  /// denních součtů — základ pro „tento týden" v rodičovském koutku).
+  int playedMinLastDays(int days) {
+    final today = _now();
+    var sec = 0;
+    for (var i = 0; i < days; i++) {
+      final d = today.subtract(Duration(days: i));
+      final key = _dayKey(d);
+      sec += key == _day ? playedSecToday : (_prefs?.getInt('$_kPrefix$key') ?? 0);
+    }
+    return sec ~/ 60;
+  }
+
   /// Limit v minutách pro dnešek (nastavení + prodloužení); 0 = bez limitu.
   int get limitMinToday =>
       _settings.sessionLimitMin == 0 ? 0 : _settings.sessionLimitMin + _extraMin;

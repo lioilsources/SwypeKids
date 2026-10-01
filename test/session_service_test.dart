@@ -66,4 +66,27 @@ void main() {
     expect(s.limitReached, isFalse);
     s.dispose();
   });
+
+  test('minuty za posledních 7 dnů sčítají uložené dny i dnešek', () async {
+    final t = DateTime(2026, 10, 8, 12);
+    String key(int back) {
+      final d = t.subtract(Duration(days: back));
+      return 'sk.session.${d.year}-${d.month.toString().padLeft(2, '0')}-${d.day.toString().padLeft(2, '0')}';
+    }
+    SharedPreferences.setMockInitialValues({
+      key(1): 10 * 60, // včera
+      key(6): 5 * 60, // před 6 dny (ještě v týdnu)
+      key(7): 99 * 60, // před 7 dny (mimo)
+    });
+    var now = t;
+    final s = SessionService(now: () => now);
+    await s.load();
+    s.start();
+    now = now.add(const Duration(minutes: 3));
+    s.tick();
+    expect(s.playedMinToday, 3);
+    expect(s.playedMinLastDays(7), 18);
+    expect(s.playedMinLastDays(1), 3);
+    s.dispose();
+  });
 }
