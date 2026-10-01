@@ -531,4 +531,4 @@ kde se směje, a zda po dohrání jednotky chce pokračovat.
    `GameScreen` (úspěch → hvězdy → další lekce).
 6. Screenshoty současného stavu do `GALLERY.md` (baseline před změnou).
 7. Brief pro ilustrátora: maskot, 8 zvířátek, style guide (aby v3.0 mohl
-   začít hned po v2.4).
+   začít hned po v2.4). → `docs/ILLUSTRATOR_BRIEF.md`
