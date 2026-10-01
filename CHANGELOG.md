@@ -1,5 +1,10 @@
 # Changelog
 
+## [01/10/2026] — v2.5.0 „Pro rodiče"
+- Menu, hra, oslavy, builder, knížka, Zvěřinec, odznaky i rodičovský koutek ve všech 9 jazycích (jazyk UI = jazyk packu)
+- Písmo pro dyslektiky (OpenDyslexic) jako volba v rodičovském koutku
+- Rodičovský koutek: přepínače zvuků, hudby, období, levák, časový limit, profily
+
 ## [01/10/2026] — v2.4.2
 - Profily sourozenců: každé dítě má avatara, jméno a vlastní postup; přepínání v menu
 - Zvěřinec jako ostrov: biotopy, zvířátko řekne své jméno nahlas; tajné nálepky ✨ schované na mapě
