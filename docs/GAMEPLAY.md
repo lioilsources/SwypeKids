@@ -133,6 +133,11 @@ kulturní variantu). Přidání jazyka = přidání JSON souboru, žádný Dart.
   (`WordSentenceScreen`) se slovem předvyplněným. Dítě doplní zbylé dvě části
   (max. 4 možnosti, slova z batohu první), trumpeta větu přečte. Automaticky,
   bez zápisu v packu; vždy jde přeskočit ✕.
+- **Onboarding bez čtení** (v3.0): první start = průvodce 🦊 „Pipi" (emoji,
+  dokud nepřijde Rive postava) pozdraví hlasem v jazyce vybraném vlajkou,
+  dítě vybere zvířátko-avatara, rodič může zadat jméno; vše jde jedním
+  velkým ▶. Ťuknutí na průvodce zopakuje hlas. Uloženo v `ProfileService`
+  (avatar, jméno, `onboarded`); jméno a avatar vidí dítě v menu.
 - **Odznaky** (`GameBadge`, roadmap P4): jednorázové, bez streaku. První tah,
   Bez chyby (jednotka od začátku na samé 3⭐), Objevitel / Sběratel / Velký
   sběratel (nálepky), Noční sova / Ranní ptáče (světové hodiny), Čtyři roční

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../audio/audio_service.dart';
 import '../data/lessons.dart';
+import '../services/profile_service.dart';
 import '../services/progress_service.dart';
 import '../widgets/language_picker.dart';
 import '../world/world_clock.dart';
@@ -117,11 +118,30 @@ class _AppDrawer extends StatelessWidget {
               padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
               child: Row(
                 children: [
+                  // Avatar a jméno z onboardingu
+                  Text(ProfileService.instance.avatar,
+                      style: const TextStyle(fontSize: 26)),
+                  const SizedBox(width: 8),
+                  if (ProfileService.instance.name.isNotEmpty) ...[
+                    Expanded(
+                      child: Text(
+                        ProfileService.instance.name,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(
+                          fontFamily: 'Nunito',
+                          fontSize: 16,
+                          fontWeight: FontWeight.w900,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ] else
+                    const Spacer(),
                   Text(
                     kLanguageFlag[language] ?? '🏳️',
                     style: const TextStyle(fontSize: 22),
                   ),
-                  const SizedBox(width: 8),
+                  const SizedBox(width: 6),
                   Text(
                     language.name.toUpperCase(),
                     style: const TextStyle(
@@ -169,7 +189,7 @@ class _AppDrawer extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(16),
               child: Text(
-                'Verze 1.0 • mama@home',
+                'SwypeKids • mama@home',
                 style: TextStyle(
                   fontFamily: 'Nunito',
                   fontSize: 11,

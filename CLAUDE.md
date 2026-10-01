@@ -34,6 +34,7 @@ lib/
 │       ├── content_pack.dart # ContentPack / Unit / CollectibleReward + fromJson
 │       └── sentence.dart     # Sentence builder tiles (pack.sentence), TileUnlock
 ├── screens/
+│   ├── onboarding_screen.dart # First start without reading: flag → avatar → name, TTS guide phrases per language
 │   ├── home_shell.dart      # Drawer shell, view switching (map/sentence/collection/book)
 │   ├── lesson_map_screen.dart   # Lesson map: units, nodes, linear unlocking
 │   ├── game_screen.dart     # Plays one unit; stars, listen rounds, progress writes
@@ -46,6 +47,7 @@ lib/
 ├── services/
 │   ├── pack_service.dart    # Loads JSON packs (rootBundle); broken pack → falls back to en
 │   ├── achievement_service.dart # GameBadge enum + check(trigger, pack) → newly earned badges
+│   ├── profile_service.dart # Child profile: avatar, name, onboarded (single profile for now)
 │   ├── progress_service.dart # shared_preferences: stars, collectibles, language, word bag, book, badges (sk.global)
 │   └── tts_service.dart     # flutter_tts wrapper (listen rounds, sentences)
 ├── world/
@@ -75,12 +77,13 @@ iOS, Android, macOS, Linux (check pubspec for active platforms).
 
 ## Game Flow
 
-1. Lesson map shows units and lesson nodes; linear unlocking, persisted progress
-2. Tapping a node plays the unit from that lesson in `GameScreen`
-3. Challenge card shows target word/syllable (or hides it + plays TTS in `listen` rounds)
-4. Child swipes across keyboard letters in order
-5. Correct swype → 1–3 stars (by attempt count), next lesson; errors never block progress
-6. Unit finished → collectible sticker → back to map; whole pack finished → WinScreen
+1. First start: `OnboardingScreen` (language by flag, avatar, optional name) → `ProfileService.onboarded`
+2. Lesson map shows units and lesson nodes; linear unlocking, persisted progress
+3. Tapping a node plays the unit from that lesson in `GameScreen`
+4. Challenge card shows target word/syllable (or hides it + plays TTS in `listen` rounds)
+5. Child swipes across keyboard letters in order
+6. Correct swype → 1–3 stars (by attempt count), next lesson; errors never block progress
+7. Unit finished → collectible sticker → back to map; whole pack finished → WinScreen
 
 ## Content model
 
