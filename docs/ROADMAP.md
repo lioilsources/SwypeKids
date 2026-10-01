@@ -295,7 +295,7 @@ aby to rodič nemusel pamatovat. Obsah:
 | **Přístupnost** | Kontrast, velké dotykové cíle (≥ 64 px), redukce pohybu, font pro dyslexii (OpenDyslexic jako volba), levák | v3.1 |
 | **Tablet & desktop layout** | Většina dětí hraje na tabletu; landscape mapa | v2.4 |
 | **Soukromí a compliance** | Kategorie Kids v obchodech (COPPA, GDPR-K, Google Families): žádné reklamy, žádný tracking, žádné externí odkazy bez brány → `docs/PRIVACY.md` | v3.1 |
-| **Monetizace bez tlaku na dítě** | Jednorázová koupě / rodinný balíček; žádné IAP ve hře, žádné „gemy" | v3.1 (rozhodnutí), v4.0 (implementace) |
+| **Monetizace bez tlaku na dítě** | Jednorázová koupě / rodinný balíček; žádné IAP ve hře, žádné „gemy" → návrh v `docs/MONETIZATION.md` | v3.1 (rozhodnutí), v4.0 (implementace) |
 | **Analytika privacy-first** | Lokální events log (základ pro statistiky rodičů); volitelný anonymní opt-in agregát | v3.1 |
 | **Testování s dětmi** | 5 dětí × 15 min po každé větší verzi; protokol v `docs/PLAYTEST.md` (hotovo) | průběžně od v2.2 |
 | **Kvalita**: widget testy, golden testy obrazovek, CI na `flutter test`, crash reporting bez PII | v2.2+ |
