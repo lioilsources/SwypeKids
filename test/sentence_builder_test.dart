@@ -5,6 +5,7 @@ import 'package:swype_kids/data/lessons.dart';
 import 'package:swype_kids/screens/sentence_builder_screen.dart';
 import 'package:swype_kids/services/pack_service.dart';
 import 'package:swype_kids/services/progress_service.dart';
+import 'helpers.dart';
 
 void main() {
   setUp(() async {
@@ -16,7 +17,7 @@ void main() {
     tester.view.physicalSize = const Size(1200, 1600);
     tester.view.devicePixelRatio = 1.0;
     addTearDown(tester.view.reset);
-    await tester.pumpWidget(MaterialApp(
+    await tester.pumpWidget(localizedApp(
       home: Scaffold(
         body: SentenceBuilderScreen(
           language: Language.cs,

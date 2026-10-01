@@ -7,6 +7,7 @@ import 'package:swype_kids/screens/lesson_map_screen.dart';
 import 'package:swype_kids/services/progress_service.dart';
 import 'package:swype_kids/services/session_service.dart';
 import 'package:swype_kids/services/settings_service.dart';
+import 'helpers.dart';
 
 void main() {
   setUp(() async {
@@ -15,7 +16,7 @@ void main() {
   });
 
   testWidgets('mapa načte český pack a zobrazí jednotky', (tester) async {
-    await tester.pumpWidget(MaterialApp(
+    await tester.pumpWidget(localizedApp(
       home: Scaffold(
         body: LessonMapScreen(
           language: Language.cs,
@@ -44,7 +45,7 @@ void main() {
 
   testWidgets('dlouhý stisk na lekci ukáže poznámku pro rodiče',
       (tester) async {
-    await tester.pumpWidget(MaterialApp(
+    await tester.pumpWidget(localizedApp(
       home: Scaffold(
         body: LessonMapScreen(
           language: Language.cs,
@@ -64,7 +65,7 @@ void main() {
 
   testWidgets('procvičování se nabídne až od 3 naučených slov', (tester) async {
     Future<void> pumpMap() async {
-      await tester.pumpWidget(MaterialApp(
+      await tester.pumpWidget(localizedApp(
         home: Scaffold(
           body: LessonMapScreen(
             key: UniqueKey(),
@@ -91,7 +92,7 @@ void main() {
 
   testWidgets('zamčené jednotky jsou v mlze, odemčená se jednou rozplyne',
       (tester) async {
-    await tester.pumpWidget(MaterialApp(
+    await tester.pumpWidget(localizedApp(
       home: Scaffold(
         body: LessonMapScreen(
           language: Language.cs,
@@ -113,7 +114,7 @@ void main() {
 
   testWidgets('✨ v odemčené jednotce dá tajnou nálepku biotopu a zmizí',
       (tester) async {
-    await tester.pumpWidget(MaterialApp(
+    await tester.pumpWidget(localizedApp(
       home: Scaffold(
         body: LessonMapScreen(
           language: Language.cs,
@@ -147,7 +148,7 @@ void main() {
     await SessionService.instance.load();
     expect(SessionService.instance.limitReached, isTrue);
 
-    await tester.pumpWidget(MaterialApp(
+    await tester.pumpWidget(localizedApp(
       home: Scaffold(
         body: LessonMapScreen(
           language: Language.cs,

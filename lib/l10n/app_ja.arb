@@ -1,0 +1,217 @@
+{
+  "@@locale": "ja",
+  "appTitle": "Swype Kids",
+  "menuSyllabary": "もじのほん（スワイプ）",
+  "menuSentence": "ぶんをつくる",
+  "menuZoo": "どうぶつえん",
+  "menuBook": "わたしのほん",
+  "menuParents": "保護者の方へ",
+  "practiceTitle": "れんしゅう",
+  "bedtimeText": "ピピはもうねています。またあした！",
+  "typeListen": "きく",
+  "typePicture": "え",
+  "typeGap": "うめる",
+  "typeReview": "ふくしゅう",
+  "typeWord": "ことば",
+  "typeSyllable": "おと",
+  "promptListen": "きいて、きこえたとおりになぞろう",
+  "promptPicture": "えはなに？かいてみよう",
+  "promptGap": "どのもじがない？ことばぜんぶをなぞろう",
+  "promptSwipeTouch": "ゆびでえをなぞろう",
+  "promptSwipeTrackpad": "ゆび2ほんでえをなぞろう",
+  "successText": "すごい！",
+  "errorText": "もういちど！",
+  "newSticker": "あたらしいシールをもらったよ！",
+  "starsGained": "+{count} ほし",
+  "backToMap": "ちずにもどる",
+  "winTitle": "できた！\nチャンピオンだ！",
+  "winStars": "ほしを {count} こあつめたよ！",
+  "playAgain": "もういちどあそぶ",
+  "builderBadge": "ぶん",
+  "who": "だれが",
+  "whatDoes": "なにをする",
+  "whatWhere": "なにを / どこへ",
+  "newLabel": "あたらしい",
+  "clear": "けす",
+  "bookTitle": "わたしのほん",
+  "bookEmptyHint": "ぶんをつくって、ほんにしまおう",
+  "zooTitle": "どうぶつえん",
+  "badgesTitle": "バッジ {earned}/{total}",
+  "badgeFirstSwype": "はじめてのスワイプ",
+  "badgeFirstSwypeHow": "はじめてせいかいしたスワイプ",
+  "badgeNoMistake": "ノーミス",
+  "badgeNoMistakeHow": "ユニットぜんぶほし3つ",
+  "badgeExplorer": "たんけんか",
+  "badgeExplorerHow": "はじめてのシール",
+  "badgeCollectorHalf": "コレクター",
+  "badgeCollectorHalfHow": "どうぶつえんのはんぶん",
+  "badgeCollectorAll": "だいコレクター",
+  "badgeCollectorAllHow": "どうぶつえんぜんぶ",
+  "badgeNightOwl": "よるのふくろう",
+  "badgeNightOwlHow": "よるにあそんだ",
+  "badgeEarlyBird": "はやおきさん",
+  "badgeEarlyBirdHow": "あさにあそんだ",
+  "badgeFourSeasons": "しき",
+  "badgeFourSeasonsHow": "どのきせつにもあそんだ",
+  "badgeWordsmith10": "ことばあつめ",
+  "badgeWordsmith10How": "かばんにことば10こ",
+  "badgeWordsmith25": "ことばあつめの名人",
+  "badgeWordsmith25How": "かばんにことば25こ",
+  "badgeWordsmith50": "ことばマスター",
+  "badgeWordsmith50How": "かばんにことば50こ",
+  "badgePoet": "しじん",
+  "badgePoetHow": "ほんにぶんが10こ",
+  "badgeListener": "きくのめいじん",
+  "badgeListenerHow": "きくラウンドでほし3つを10かい",
+  "badgePersistent": "つづけるひと",
+  "badgePersistentHow": "7日あそんだ",
+  "parentTitle": "保護者の方へ",
+  "gateQuestion": "{a} × {b} はいくつ？",
+  "backToGame": "ゲームにもどる",
+  "sectionOverview": "概要",
+  "sectionLetters": "文字",
+  "sectionTips": "おうちでのヒント",
+  "sectionMethod": "アプリの教え方",
+  "sectionSettings": "設定",
+  "statProfile": "プロフィール",
+  "statPlayDays": "遊んだ日",
+  "statLessons": "レッスン",
+  "statStars": "星",
+  "statWords": "かばんの言葉",
+  "statSentences": "本の文",
+  "statBadges": "バッジ",
+  "lettersLegend": "🟢 できた · 🟡 練習中 · ⚪ まだ出ていない",
+  "troubleWords": "{letter} を含む、まちがえやすい言葉：{words}",
+  "tipNoData": "まだ練習するものがありません。数レッスン後にヒントが出ます。",
+  "tipWeakest": "いちばん苦手な言葉：{words}。おうちで音ごとに手をたたいて読み、同じ音で始まるものを探してみましょう。",
+  "tipLetter": "文字 {letter} はまだ定着していません。おうちで {letter} で始まるものを一緒に探しましょう。",
+  "tipLongPress": "地図のレッスンを長押しすると、何をなぜ練習するかが見られます。",
+  "methodLabel": "方法：{method}",
+  "methodText": "子どもは聞こえた音の順に文字をなぞって、音節や言葉を作ります。まず開音節（MA、TA）、次に言葉全体、文字のない聞き取り、穴うめ、苦手な言葉の復習へ進みます。まちがえても進行は止まりません。カードが揺れてヒントを出すだけです。覚えた言葉はすぐ文に使え（文づくり）、わたしの本に保存できます。",
+  "settingSounds": "効果音",
+  "settingAmbient": "世界の音",
+  "settingMusic": "音楽",
+  "settingLeftHanded": "左利き（鏡のキーボード）",
+  "settingDyslexiaFont": "ディスレクシア向けフォント（OpenDyslexic）",
+  "settingSeason": "地図の季節",
+  "seasonAuto": "カレンダー通り",
+  "seasonSpring": "春",
+  "seasonSummer": "夏",
+  "seasonAutumn": "秋",
+  "seasonWinter": "冬",
+  "settingTimeLimit": "1日の遊び時間の上限",
+  "noLimit": "上限なし",
+  "minutes": "{n} 分",
+  "playedToday": "今日は {played} 分遊びました",
+  "playedTodayOf": "今日は {played} 分遊びました（上限 {limit} 分）",
+  "guideAsleep": "——案内役はもう寝ています",
+  "extendToday": "今日は {n} 分延長",
+  "profilesTitle": "プロフィール",
+  "deleteProfileTitle": "プロフィール {name} を削除しますか？",
+  "deleteProfileBody": "進み具合、シール、本もすべて削除されます。元に戻せません。",
+  "cancel": "キャンセル",
+  "delete": "削除",
+  "@starsGained": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@winStars": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@badgesTitle": {
+    "placeholders": {
+      "earned": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "@gateQuestion": {
+    "placeholders": {
+      "a": {
+        "type": "int"
+      },
+      "b": {
+        "type": "int"
+      }
+    }
+  },
+  "@troubleWords": {
+    "placeholders": {
+      "letter": {
+        "type": "String"
+      },
+      "words": {
+        "type": "String"
+      }
+    }
+  },
+  "@tipWeakest": {
+    "placeholders": {
+      "words": {
+        "type": "String"
+      }
+    }
+  },
+  "@tipLetter": {
+    "placeholders": {
+      "letter": {
+        "type": "String"
+      }
+    }
+  },
+  "@methodLabel": {
+    "placeholders": {
+      "method": {
+        "type": "String"
+      }
+    }
+  },
+  "@minutes": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "@playedToday": {
+    "placeholders": {
+      "played": {
+        "type": "int"
+      }
+    }
+  },
+  "@playedTodayOf": {
+    "placeholders": {
+      "played": {
+        "type": "int"
+      },
+      "limit": {
+        "type": "int"
+      }
+    }
+  },
+  "@extendToday": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "@deleteProfileTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  }
+}

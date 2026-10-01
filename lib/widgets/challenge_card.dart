@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../data/keyboard_data.dart';
 import '../data/lessons.dart';
 import '../ui/app_font.dart';
+import '../ui/l10n.dart';
 
 enum GameStatus { idle, success, error }
 
@@ -217,24 +218,24 @@ class ChallengeCard extends StatelessWidget {
           // Status zpráva
           SizedBox(
             height: 24,
-            child: _statusText(),
+            child: _statusText(context),
           ),
         ],
       ),
     );
   }
 
-  Widget _statusText() {
+  Widget _statusText(BuildContext context) {
     switch (status) {
       case GameStatus.success:
-        return Text('🎉 Výborně!',
+        return Text('🎉 ${context.l.successText}',
             style: TextStyle(
                 fontFamily: kFont,
                 fontSize: 18,
                 fontWeight: FontWeight.w800,
                 color: const Color(0xFF2ECC71)));
       case GameStatus.error:
-        return Text('❌ Zkus to znovu!',
+        return Text('❌ ${context.l.errorText}',
             style: TextStyle(
                 fontFamily: kFont,
                 fontSize: 15,
@@ -243,9 +244,9 @@ class ChallengeCard extends StatelessWidget {
       case GameStatus.idle:
         if (path.isEmpty) {
           final prompt = switch (mode) {
-            CardMode.listen => '🔊 Poslouchej a přejeď, co slyšíš',
-            CardMode.picture => '🖼️ Co je na obrázku? Napiš to',
-            CardMode.gap => '🧩 Které písmenko chybí? Přejeď celé slovo',
+            CardMode.listen => '🔊 ${context.l.promptListen}',
+            CardMode.picture => '🖼️ ${context.l.promptPicture}',
+            CardMode.gap => '🧩 ${context.l.promptGap}',
             CardMode.full => null,
           };
           if (prompt != null) {
@@ -261,8 +262,8 @@ class ChallengeCard extends StatelessWidget {
               Platform.isMacOS || Platform.isWindows || Platform.isLinux;
           return Text(
             isDesktop
-                ? '🖱️ Přejeď dvěma prsty přes obrázky'
-                : '☝️ Přejeď prstem přes obrázky',
+                ? '🖱️ ${context.l.promptSwipeTrackpad}'
+                : '☝️ ${context.l.promptSwipeTouch}',
             style: TextStyle(
                 fontFamily: kFont,
                 fontSize: 13,

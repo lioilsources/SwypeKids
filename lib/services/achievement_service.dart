@@ -6,26 +6,25 @@ import 'progress_service.dart';
 /// Odznaky (roadmap P4): jednorázové, bez streaku s tlakem. Podmínky jsou
 /// čistá pravidla nad postupem a světovými hodinami.
 enum GameBadge {
-  firstSwype('🎯', 'První tah', 'První správný swype'),
-  noMistake('💎', 'Bez chyby', 'Celá jednotka na samé tři hvězdy'),
-  explorer('🧭', 'Objevitel', 'První nálepka'),
-  collectorHalf('🎒', 'Sběratel', 'Polovina Zvěřince'),
-  collectorAll('🏆', 'Velký sběratel', 'Celý Zvěřinec'),
-  nightOwl('🦉', 'Noční sova', 'Hrálo v noci'),
-  earlyBird('🐦', 'Ranní ptáče', 'Hrálo ráno'),
-  fourSeasons('🍀', 'Čtyři roční období', 'Hrálo v každém období'),
-  wordsmith10('📚', 'Slovíčkář', '10 slov v batohu'),
-  wordsmith25('📚', 'Velký slovíčkář', '25 slov v batohu'),
-  wordsmith50('📚', 'Mistr slov', '50 slov v batohu'),
-  poet('✍️', 'Básník', '10 vět v Mé knížce'),
-  listener('👂', 'Posluchač', '10 poslechových kol na tři hvězdy'),
-  persistent('🌱', 'Vytrvalec', '7 hracích dnů');
+  firstSwype('🎯'),
+  noMistake('💎'),
+  explorer('🧭'),
+  collectorHalf('🎒'),
+  collectorAll('🏆'),
+  nightOwl('🦉'),
+  earlyBird('🐦'),
+  fourSeasons('🍀'),
+  wordsmith10('📚'),
+  wordsmith25('📚'),
+  wordsmith50('📚'),
+  poet('✍️'),
+  listener('👂'),
+  persistent('🌱');
 
-  const GameBadge(this.emoji, this.title, this.condition);
+  const GameBadge(this.emoji);
 
+  /// Název a podmínka jsou v ARB (`GameBadgeL10n` v lib/ui/l10n.dart).
   final String emoji;
-  final String title;
-  final String condition;
 }
 
 /// Co se ve hře právě stalo — vstup pro vyhodnocení odznaků.

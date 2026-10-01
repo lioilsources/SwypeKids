@@ -1,0 +1,217 @@
+{
+  "@@locale": "cs",
+  "appTitle": "Swype Kids",
+  "menuSyllabary": "Slabikář (Swype)",
+  "menuSentence": "Skládej větu",
+  "menuZoo": "Zvěřinec",
+  "menuBook": "Má knížka",
+  "menuParents": "Pro rodiče",
+  "practiceTitle": "Procvičování",
+  "bedtimeText": "Pipi už spí. Zítra zase!",
+  "typeListen": "POSLECH",
+  "typePicture": "OBRÁZEK",
+  "typeGap": "DOPLŇ",
+  "typeReview": "OPAKOVÁNÍ",
+  "typeWord": "SLOVO",
+  "typeSyllable": "SLABIKA",
+  "promptListen": "Poslouchej a přejeď, co slyšíš",
+  "promptPicture": "Co je na obrázku? Napiš to",
+  "promptGap": "Které písmenko chybí? Přejeď celé slovo",
+  "promptSwipeTouch": "Přejeď prstem přes obrázky",
+  "promptSwipeTrackpad": "Přejeď dvěma prsty přes obrázky",
+  "successText": "Výborně!",
+  "errorText": "Zkus to znovu!",
+  "newSticker": "Máš novou nálepku!",
+  "starsGained": "+{count} hvězdiček",
+  "@starsGained": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "backToMap": "Zpět na mapu",
+  "winTitle": "Hotovo!\nJsi šampion!",
+  "winStars": "Získal jsi {count} hvězdiček!",
+  "@winStars": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "playAgain": "Hrát znovu",
+  "builderBadge": "VĚTA",
+  "who": "KDO",
+  "whatDoes": "CO DĚLÁ",
+  "whatWhere": "CO / KAM",
+  "newLabel": "NOVÉ",
+  "clear": "Smazat",
+  "bookTitle": "Má knížka",
+  "bookEmptyHint": "Slož větu a ulož ji do knížky",
+  "zooTitle": "Zvěřinec",
+  "badgesTitle": "Odznaky {earned}/{total}",
+  "@badgesTitle": {
+    "placeholders": {
+      "earned": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "badgeFirstSwype": "První tah",
+  "badgeFirstSwypeHow": "První správný swype",
+  "badgeNoMistake": "Bez chyby",
+  "badgeNoMistakeHow": "Celá jednotka na samé tři hvězdy",
+  "badgeExplorer": "Objevitel",
+  "badgeExplorerHow": "První nálepka",
+  "badgeCollectorHalf": "Sběratel",
+  "badgeCollectorHalfHow": "Polovina Zvěřince",
+  "badgeCollectorAll": "Velký sběratel",
+  "badgeCollectorAllHow": "Celý Zvěřinec",
+  "badgeNightOwl": "Noční sova",
+  "badgeNightOwlHow": "Hrálo v noci",
+  "badgeEarlyBird": "Ranní ptáče",
+  "badgeEarlyBirdHow": "Hrálo ráno",
+  "badgeFourSeasons": "Čtyři roční období",
+  "badgeFourSeasonsHow": "Hrálo v každém období",
+  "badgeWordsmith10": "Slovíčkář",
+  "badgeWordsmith10How": "10 slov v batohu",
+  "badgeWordsmith25": "Velký slovíčkář",
+  "badgeWordsmith25How": "25 slov v batohu",
+  "badgeWordsmith50": "Mistr slov",
+  "badgeWordsmith50How": "50 slov v batohu",
+  "badgePoet": "Básník",
+  "badgePoetHow": "10 vět v Mé knížce",
+  "badgeListener": "Posluchač",
+  "badgeListenerHow": "10 poslechových kol na tři hvězdy",
+  "badgePersistent": "Vytrvalec",
+  "badgePersistentHow": "7 hracích dnů",
+  "parentTitle": "Pro rodiče",
+  "gateQuestion": "Kolik je {a} × {b}?",
+  "@gateQuestion": {
+    "placeholders": {
+      "a": {
+        "type": "int"
+      },
+      "b": {
+        "type": "int"
+      }
+    }
+  },
+  "backToGame": "Zpět ke hře",
+  "sectionOverview": "Přehled",
+  "sectionLetters": "Písmena",
+  "sectionTips": "Doporučení pro doma",
+  "sectionMethod": "Jak appka učí",
+  "sectionSettings": "Nastavení",
+  "statProfile": "profil",
+  "statPlayDays": "hracích dnů",
+  "statLessons": "lekcí",
+  "statStars": "hvězd",
+  "statWords": "slov v batohu",
+  "statSentences": "vět v Mé knížce",
+  "statBadges": "odznaků",
+  "lettersLegend": "🟢 zvládnuté · 🟡 procvičuje · ⚪ ještě nepotkalo",
+  "troubleWords": "Slova s {letter}, která se pletou: {words}",
+  "@troubleWords": {
+    "placeholders": {
+      "letter": {
+        "type": "String"
+      },
+      "words": {
+        "type": "String"
+      }
+    }
+  },
+  "tipNoData": "Zatím není co procvičovat — po pár lekcích se tu objeví tipy.",
+  "tipWeakest": "Nejslabší slova: {words}. Zkuste je doma vytleskat po slabikách a hledat, co jimi začíná.",
+  "@tipWeakest": {
+    "placeholders": {
+      "words": {
+        "type": "String"
+      }
+    }
+  },
+  "tipLetter": "Písmeno {letter} ještě sedá: hledejte spolu doma věci, které začínají na {letter}.",
+  "@tipLetter": {
+    "placeholders": {
+      "letter": {
+        "type": "String"
+      }
+    }
+  },
+  "tipLongPress": "Dlouhý stisk lekce na mapě ukáže, co se v ní procvičuje a proč.",
+  "methodLabel": "Metoda: {method}",
+  "@methodLabel": {
+    "placeholders": {
+      "method": {
+        "type": "String"
+      }
+    }
+  },
+  "methodText": "Dítě přejíždí prstem po písmenech v pořadí, jak slabiku nebo slovo slyší. Nejdřív otevřené slabiky (MA, TA), pak celá slova, poslechová kola bez textu, doplňovačky a opakování nejslabších slov. Chyba nikdy neblokuje postup — karta se jen zatřese a napoví. Naučená slova dítě hned použije ve větě (builder vět) a může si je uložit do Mé knížky.",
+  "settingSounds": "Zvuky",
+  "settingAmbient": "Zvuky světa",
+  "settingMusic": "Hudba",
+  "settingLeftHanded": "Levák (zrcadlená klávesnice)",
+  "settingDyslexiaFont": "Písmo pro dyslektiky (OpenDyslexic)",
+  "settingSeason": "Roční období na mapě",
+  "seasonAuto": "podle kalendáře",
+  "seasonSpring": "jaro",
+  "seasonSummer": "léto",
+  "seasonAutumn": "podzim",
+  "seasonWinter": "zima",
+  "settingTimeLimit": "Časový limit hraní za den",
+  "noLimit": "bez limitu",
+  "minutes": "{n} min",
+  "@minutes": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "playedToday": "Dnes odehráno {played} min",
+  "@playedToday": {
+    "placeholders": {
+      "played": {
+        "type": "int"
+      }
+    }
+  },
+  "playedTodayOf": "Dnes odehráno {played} z {limit} min",
+  "@playedTodayOf": {
+    "placeholders": {
+      "played": {
+        "type": "int"
+      },
+      "limit": {
+        "type": "int"
+      }
+    }
+  },
+  "guideAsleep": " — průvodce už spí",
+  "extendToday": "Prodloužit dnešek o {n} min",
+  "@extendToday": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "profilesTitle": "Profily",
+  "deleteProfileTitle": "Smazat profil {name}?",
+  "@deleteProfileTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "deleteProfileBody": "Smaže se i celý postup, nálepky a knížka. Nejde to vrátit.",
+  "cancel": "Zrušit",
+  "delete": "Smazat"
+}

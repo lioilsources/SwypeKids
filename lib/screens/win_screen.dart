@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../ui/app_font.dart';
+import '../ui/l10n.dart';
 
 class WinScreen extends StatelessWidget {
   final int stars;
@@ -26,7 +27,7 @@ class WinScreen extends StatelessWidget {
               const Text('🏆', style: TextStyle(fontSize: 90)),
               const SizedBox(height: 12),
               Text(
-                'Hotovo!\nJsi šampion!',
+                context.l.winTitle,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontFamily: kFont,
@@ -43,7 +44,7 @@ class WinScreen extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               Text(
-                'Získal jsi $stars hvězdiček!',
+                context.l.winStars(stars),
                 style: TextStyle(
                   fontFamily: kFont,
                   fontSize: 20,
@@ -71,7 +72,7 @@ class WinScreen extends StatelessWidget {
                   ),
                   elevation: 8,
                 ),
-                child: const Text('Hrát znovu 🔄'),
+                child: Text('${context.l.playAgain} 🔄'),
               ),
             ],
           ),

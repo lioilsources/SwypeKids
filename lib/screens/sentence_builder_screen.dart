@@ -10,6 +10,7 @@ import '../services/tts_service.dart';
 import 'game_screen.dart';
 import '../widgets/language_picker.dart';
 import '../ui/app_font.dart';
+import '../ui/l10n.dart';
 
 class SentenceBuilderScreen extends StatefulWidget {
   final Language language;
@@ -179,7 +180,7 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
                     ),
                   ),
                   const SizedBox(width: 8),
-                  _badge('🗣️ VĚTA'),
+                  _badge('🗣️ ${context.l.builderBadge}'),
                   const Spacer(),
                   LanguagePicker(
                     value: widget.language,
@@ -222,7 +223,7 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
                         icon: const Icon(Icons.backspace_outlined,
                             color: Color(0xFFA0C4FF), size: 20),
                         onPressed: _clear,
-                        tooltip: 'Smazat',
+                        tooltip: context.l.clear,
                       ),
                     if (_sentence.isComplete)
                       Padding(
@@ -251,7 +252,7 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Expanded(child: _CategoryColumn(
-                      label: 'KDO',
+                      label: context.l.who,
                       items: _data.subjects,
                       selected: _subject,
                       accent: const Color(0xFFFFD200),
@@ -265,7 +266,7 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
                     )),
                     const SizedBox(width: 8),
                     Expanded(child: _CategoryColumn(
-                      label: 'CO DĚLÁ',
+                      label: context.l.whatDoes,
                       items: _data.verbs,
                       selected: _verb,
                       accent: const Color(0xFF7BFFB2),
@@ -280,7 +281,7 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
                     )),
                     const SizedBox(width: 8),
                     Expanded(child: _CategoryColumn(
-                      label: 'CO / KAM',
+                      label: context.l.whatWhere,
                       items: _data.objects,
                       selected: _object,
                       accent: const Color(0xFFA0C4FF),
@@ -593,7 +594,7 @@ class _NewBadgeState extends State<_NewBadge>
           borderRadius: BorderRadius.circular(99),
         ),
         child: Text(
-          'NOVÉ',
+          context.l.newLabel,
           style: TextStyle(
             fontFamily: kFont,
             fontSize: 9,

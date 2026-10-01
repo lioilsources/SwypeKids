@@ -5,6 +5,7 @@ import 'package:swype_kids/data/lessons.dart';
 import 'package:swype_kids/screens/collection_screen.dart';
 import 'package:swype_kids/services/pack_service.dart';
 import 'package:swype_kids/services/progress_service.dart';
+import 'helpers.dart';
 
 void main() {
   setUp(() async {
@@ -20,7 +21,7 @@ void main() {
     final p = ProgressService.instance;
     p.addCollectible('cs-CZ', '🐭');
 
-    await tester.pumpWidget(const MaterialApp(
+    await tester.pumpWidget(localizedApp(
       home: Scaffold(body: CollectionScreen(language: Language.cs)),
     ));
     await tester.runAsync(() => PackService.instance.load(Language.cs));
@@ -36,7 +37,7 @@ void main() {
     await tester.pump(const Duration(milliseconds: 400));
 
     p.addCollectible('cs-CZ', '🐞');
-    await tester.pumpWidget(const MaterialApp(
+    await tester.pumpWidget(localizedApp(
       home: Scaffold(body: CollectionScreen(language: Language.cs, key: ValueKey(2))),
     ));
     await tester.pump();

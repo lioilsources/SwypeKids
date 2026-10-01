@@ -13,6 +13,7 @@ import 'lesson_map_screen.dart';
 import 'onboarding_screen.dart';
 import 'sentence_builder_screen.dart';
 import '../ui/app_font.dart';
+import '../ui/l10n.dart';
 
 enum AppView { swype, sentence, collection, book }
 
@@ -33,6 +34,7 @@ class _HomeShellState extends State<HomeShell> with WidgetsBindingObserver {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
+    AppLanguage.instance.value = _lang;
   }
 
   @override
@@ -56,7 +58,14 @@ class _HomeShellState extends State<HomeShell> with WidgetsBindingObserver {
 
   void _setLang(Language l) {
     ProgressService.instance.selectedLanguage = l;
+    AppLanguage.instance.value = l;
     setState(() => _lang = l);
+  }
+
+  @override
+  void didUpdateWidget(covariant HomeShell old) {
+    super.didUpdateWidget(old);
+    AppLanguage.instance.value = _lang;
   }
 
   /// Přepnutí sourozence: načte jeho postup a znovu postaví obrazovky.
@@ -68,6 +77,7 @@ class _HomeShellState extends State<HomeShell> with WidgetsBindingObserver {
       _lang = ProgressService.instance.selectedLanguage ?? _lang;
       _view = AppView.swype;
     });
+    AppLanguage.instance.value = _lang;
     Navigator.of(context).maybePop();
   }
 
@@ -85,6 +95,7 @@ class _HomeShellState extends State<HomeShell> with WidgetsBindingObserver {
       _lang = ProgressService.instance.selectedLanguage ?? _lang;
       _view = AppView.swype;
     });
+    AppLanguage.instance.value = _lang;
   }
 
   /// Rodičovský koutek za bránou (příklad místo PINu).
@@ -102,6 +113,7 @@ class _HomeShellState extends State<HomeShell> with WidgetsBindingObserver {
     setState(() {
       _lang = ProgressService.instance.selectedLanguage ?? _lang;
     });
+    AppLanguage.instance.value = _lang;
   }
 
   void _openProfiles() {
@@ -240,25 +252,25 @@ class _AppDrawer extends StatelessWidget {
             const Divider(color: Colors.white12, height: 1),
             _MenuTile(
               icon: '🎹',
-              label: 'Slabikář (Swype)',
+              label: context.l.menuSyllabary,
               selected: currentView == AppView.swype,
               onTap: () => onPick(AppView.swype),
             ),
             _MenuTile(
               icon: '🗣️',
-              label: 'Skládej větu',
+              label: context.l.menuSentence,
               selected: currentView == AppView.sentence,
               onTap: () => onPick(AppView.sentence),
             ),
             _MenuTile(
               icon: '🏅',
-              label: 'Zvěřinec',
+              label: context.l.menuZoo,
               selected: currentView == AppView.collection,
               onTap: () => onPick(AppView.collection),
             ),
             _MenuTile(
               icon: '📖',
-              label: 'Má knížka',
+              label: context.l.menuBook,
               selected: currentView == AppView.book,
               onTap: () => onPick(AppView.book),
             ),
@@ -266,7 +278,7 @@ class _AppDrawer extends StatelessWidget {
             const Divider(color: Colors.white12, height: 1),
             _MenuTile(
               icon: '👪',
-              label: 'Pro rodiče',
+              label: context.l.menuParents,
               selected: false,
               onTap: onParent,
             ),

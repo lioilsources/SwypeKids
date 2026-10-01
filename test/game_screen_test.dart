@@ -12,6 +12,7 @@ import 'package:swype_kids/widgets/challenge_card.dart';
 import 'package:swype_kids/widgets/key_widget.dart';
 import 'package:swype_kids/widgets/keyboard_widget.dart';
 import 'package:swype_kids/widgets/star_celebration.dart';
+import 'helpers.dart';
 
 const _pack = ContentPack(
   schemaVersion: 1,
@@ -74,7 +75,7 @@ void main() {
     tester.view.devicePixelRatio = 1.0;
     addTearDown(tester.view.reset);
 
-    await tester.pumpWidget(const MaterialApp(
+    await tester.pumpWidget(localizedApp(
       home: GameScreen(pack: _pack, unitIndex: 0),
     ));
     expect(find.text('👩 1/2'), findsOneWidget);
@@ -164,7 +165,7 @@ void main() {
     tester.view.devicePixelRatio = 1.0;
     addTearDown(tester.view.reset);
 
-    await tester.pumpWidget(MaterialApp(
+    await tester.pumpWidget(localizedApp(
       home: Builder(
         builder: (context) => TextButton(
           onPressed: () => Navigator.of(context).push(MaterialPageRoute(
@@ -223,7 +224,7 @@ void main() {
       ),
     );
 
-    await tester.pumpWidget(MaterialApp(
+    await tester.pumpWidget(localizedApp(
       home: GameScreen(pack: pack, unitIndex: 0),
     ));
     await _swype(tester, ['M', 'A']);
@@ -244,7 +245,7 @@ void main() {
     tester.view.physicalSize = const Size(1200, 600);
     tester.view.devicePixelRatio = 1.0;
     addTearDown(tester.view.reset);
-    await tester.pumpWidget(const MaterialApp(
+    await tester.pumpWidget(localizedApp(
       home: GameScreen(pack: _pack, unitIndex: 0),
     ));
     await tester.pump();
@@ -264,7 +265,7 @@ void main() {
     tester.view.physicalSize = const Size(600, 1000);
     tester.view.devicePixelRatio = 1.0;
     addTearDown(tester.view.reset);
-    await tester.pumpWidget(const MaterialApp(
+    await tester.pumpWidget(localizedApp(
       home: GameScreen(pack: _pack, unitIndex: 0),
     ));
     await tester.pump();

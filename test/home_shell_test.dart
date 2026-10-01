@@ -5,6 +5,7 @@ import 'package:swype_kids/data/lessons.dart';
 import 'package:swype_kids/screens/home_shell.dart';
 import 'package:swype_kids/services/profile_service.dart';
 import 'package:swype_kids/services/progress_service.dart';
+import 'helpers.dart';
 
 void main() {
   testWidgets('menu ukáže sourozence, přepnutí načte jeho postup',
@@ -21,7 +22,7 @@ void main() {
     s.switchTo(1);
     await ProgressService.init(profile: 1);
 
-    await tester.pumpWidget(const MaterialApp(
+    await tester.pumpWidget(localizedApp(
       home: HomeShell(initialLanguage: Language.cs),
     ));
     await tester.pump();

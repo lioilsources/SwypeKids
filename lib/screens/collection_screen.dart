@@ -9,6 +9,7 @@ import '../services/tts_service.dart';
 import '../world/biome_band.dart';
 import '../world/world_clock.dart';
 import '../ui/app_font.dart';
+import '../ui/l10n.dart';
 
 /// Zvěřinec — nálepkové album sběratelských odměn aktuálního jazyka.
 /// Nezískané nálepky jsou šedé ❓.
@@ -89,7 +90,7 @@ class _CollectionScreenState extends State<CollectionScreen> {
                         ),
                         const SizedBox(width: 10),
                         Text(
-                          '🏅 Zvěřinec',
+                          '🏅 ${context.l.zooTitle}',
                           style: TextStyle(
                             fontFamily: kFont,
                             fontSize: 16,
@@ -318,7 +319,7 @@ class _BadgeShelf extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          '🏅 Odznaky ${earned.length}/${GameBadge.values.length}',
+          '🏅 ${context.l.badgesTitle(earned.length, GameBadge.values.length)}',
           style: TextStyle(
             fontFamily: kFont,
             fontSize: 14,
@@ -367,7 +368,7 @@ class _BadgeTile extends StatelessWidget {
           ),
           const SizedBox(height: 4),
           Text(
-            earned ? badge.title : badge.condition,
+            earned ? badge.title(context.l) : badge.condition(context.l),
             textAlign: TextAlign.center,
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
