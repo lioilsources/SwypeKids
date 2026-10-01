@@ -386,4 +386,22 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get letterUnseen => 'not met yet';
+
+  @override
+  String get typeHunt => 'SOUND';
+
+  @override
+  String get typeJoin => 'SYLLABLES';
+
+  @override
+  String get typeRhyme => 'RHYME';
+
+  @override
+  String get promptHunt => 'Which letter did you hear? Tap it';
+
+  @override
+  String get promptJoin => 'Join the syllables — swipe the whole word';
+
+  @override
+  String get promptRhyme => 'What rhymes? Tap the picture';
 }

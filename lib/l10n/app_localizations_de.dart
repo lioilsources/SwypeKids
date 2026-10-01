@@ -386,4 +386,22 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get letterUnseen => 'noch nicht getroffen';
+
+  @override
+  String get typeHunt => 'LAUT';
+
+  @override
+  String get typeJoin => 'SILBEN';
+
+  @override
+  String get typeRhyme => 'REIM';
+
+  @override
+  String get promptHunt => 'Welchen Buchstaben hörst du? Tipp ihn an';
+
+  @override
+  String get promptJoin => 'Verbinde die Silben — wische das ganze Wort';
+
+  @override
+  String get promptRhyme => 'Was reimt sich? Tipp auf das Bild';
 }

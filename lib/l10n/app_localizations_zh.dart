@@ -382,4 +382,22 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get letterUnseen => '还没遇到';
+
+  @override
+  String get typeHunt => '字母音';
+
+  @override
+  String get typeJoin => '音节';
+
+  @override
+  String get typeRhyme => '押韵';
+
+  @override
+  String get promptHunt => '听到了哪个字母？点一点';
+
+  @override
+  String get promptJoin => '把音节连起来——滑出整个词';
+
+  @override
+  String get promptRhyme => '哪个押韵？点图片';
 }

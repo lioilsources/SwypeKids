@@ -20,6 +20,15 @@ enum CardMode {
 
   /// Slovo s dírou: skryté jen písmeno na [ChallengeCard.gapIndex].
   gap,
+
+  /// Lov hlásky: průvodce řekl písmeno, dítě ho ťukne (text skrytý).
+  hunt,
+
+  /// Spojování slabik: nad slovem letí slabiky z `lesson.parts`.
+  join,
+
+  /// Rým: karta ukazuje cíl, výběr je mimo klávesnici.
+  rhyme,
 }
 
 class ChallengeCard extends StatelessWidget {
@@ -49,15 +58,19 @@ class ChallengeCard extends StatelessWidget {
     this.onReplayAudio,
   });
 
-  bool get _hideAll => mode == CardMode.listen || mode == CardMode.picture;
+  bool get _hideAll =>
+      mode == CardMode.listen ||
+      mode == CardMode.picture ||
+      mode == CardMode.hunt;
 
   bool _isHidden(int i) =>
       _hideAll || (mode == CardMode.gap && i == lesson.gapIndex);
 
   String get _labelText => switch (mode) {
-        CardMode.listen || CardMode.picture => '• • •',
+        CardMode.listen || CardMode.picture || CardMode.hunt => '• • •',
         CardMode.gap => _gapped(),
-        CardMode.full => lesson.label,
+        CardMode.join => lesson.parts.join(' + '),
+        CardMode.full || CardMode.rhyme => lesson.label,
       };
 
   /// Slovo s „?" místo chybějícího písmene. Když display odpovídá targetu
@@ -247,6 +260,9 @@ class ChallengeCard extends StatelessWidget {
             CardMode.listen => '🔊 ${context.l.promptListen}',
             CardMode.picture => '🖼️ ${context.l.promptPicture}',
             CardMode.gap => '🧩 ${context.l.promptGap}',
+            CardMode.hunt => '👂 ${context.l.promptHunt}',
+            CardMode.join => '🧱 ${context.l.promptJoin}',
+            CardMode.rhyme => '🎵 ${context.l.promptRhyme}',
             CardMode.full => null,
           };
           if (prompt != null) {

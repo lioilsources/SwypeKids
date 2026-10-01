@@ -273,4 +273,58 @@ void main() {
         lessThan(tester.getTopLeft(find.byType(KeyboardWidget)).dy));
     await tester.pump(const Duration(seconds: 4));
   });
+
+  group('nové typy kol (v4.0)', () {
+    const hunt = Lesson(id: 'h1', type: LessonType.letterHunt,
+        unlocked: ['M', 'A', 'S'], target: 'S', display: 'S', hint: '☀️', label: 'S');
+    const join = Lesson(id: 'j1', type: LessonType.syllableJoin,
+        unlocked: ['M', 'A'], target: 'MAMA', display: 'MÁMA', hint: '👩',
+        label: 'MÁ-MA', parts: ['MÁ', 'MA']);
+    const rhyme = Lesson(id: 'r1', type: LessonType.rhymePick,
+        unlocked: ['M', 'A'], target: 'PES', display: 'PES', hint: '🐶', label: 'PES',
+        options: [RhymeOption(emoji: '🌲', display: 'LES'),
+          RhymeOption(emoji: '🚲', display: 'KOLO'), RhymeOption(emoji: '👃', display: 'NOS')],
+        answer: 0);
+    final pack = ContentPack(schemaVersion: 2, id: 'test-v4', language: Language.cs, units: const [
+      Unit(id: 'u', title: 'U', icon: '👂', reward: CollectibleReward(emoji: '🦁'),
+          lessons: [hunt, join, rhyme]),
+    ]);
+
+    Future<void> pump(WidgetTester tester) async {
+      tester.view.physicalSize = const Size(1200, 900);
+      tester.view.devicePixelRatio = 1.0;
+      addTearDown(tester.view.reset);
+      await tester.pumpWidget(localizedApp(home: GameScreen(pack: pack, unitIndex: 0)));
+      await tester.pump();
+    }
+
+    testWidgets('lov hlásky: text skrytý, ťuknutí na správnou klávesu = 3⭐', (tester) async {
+      await pump(tester);
+      expect(find.text('• • •'), findsOneWidget);
+      expect(find.textContaining('Které písmenko slyšíš'), findsOneWidget);
+      await _swype(tester, ['S']);
+      expect(ProgressService.instance.starsFor(pack.id, 'h1'), 3);
+      await tester.pump(const Duration(milliseconds: 1700));
+      await tester.pump(const Duration(milliseconds: 400));
+
+      // spojování slabik: karta ukazuje MÁ + MA
+      expect(find.text('MÁ + MA'), findsOneWidget);
+      await _swype(tester, ['M', 'A', 'M', 'A']);
+      expect(ProgressService.instance.starsFor(pack.id, 'j1'), 3);
+      await tester.pump(const Duration(milliseconds: 1700));
+      await tester.pump(const Duration(milliseconds: 400));
+
+      // rým: tři obrázky místo klávesnice, chyba odhalí správnou, pak 2⭐
+      expect(find.byType(KeyboardWidget), findsNothing);
+      expect(find.byKey(const ValueKey('rhyme-option-1')), findsOneWidget);
+      await tester.tap(find.byKey(const ValueKey('rhyme-option-1')));
+      await tester.pump();
+      expect(ProgressService.instance.starsFor(pack.id, 'r1'), 0);
+      await tester.pump(const Duration(milliseconds: 1000));
+      await tester.tap(find.byKey(const ValueKey('rhyme-option-0')));
+      await tester.pump();
+      expect(ProgressService.instance.starsFor(pack.id, 'r1'), 2);
+      await tester.pump(const Duration(seconds: 4));
+    });
+  });
 }

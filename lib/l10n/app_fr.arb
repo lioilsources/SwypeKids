@@ -218,5 +218,11 @@
   "statMinutesWeek": "minutes cette semaine",
   "letterMastered": "acquise",
   "letterPracticing": "en cours",
-  "letterUnseen": "pas encore vue"
+  "letterUnseen": "pas encore vue",
+  "typeHunt": "SON",
+  "typeJoin": "SYLLABES",
+  "typeRhyme": "RIME",
+  "promptHunt": "Quelle lettre entends-tu ? Touche-la",
+  "promptJoin": "Relie les syllabes : glisse tout le mot",
+  "promptRhyme": "Qu'est-ce qui rime ? Touche l'image"
 }

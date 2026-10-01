@@ -216,8 +216,14 @@ Zásady:
 - `target` = co se swypuje (velká latinka bez diakritiky), `display` = co se
   zobrazuje (diakritika, tóny, hiragana). Díky tomu fungují i zh/ja na
   latinské klávesnici.
-- `type`: `swype` | `listen` | `missingLetter` | `pictureOnly`; neznámý typ
-  padá na `swype` (starší appka přežije novější pack).
+- `type`: `swype` | `listen` | `missingLetter` | `pictureOnly` | `reviewMix` |
+  `letterHunt` | `syllableJoin` ✅ v4.0 | `rhymePick`; neznámý typ padá na `swype`
+  (starší appka přežije novější pack).
+- `letterHunt`: `target` je jedno písmeno, průvodce ho řekne (TTS), dítě ťukne
+  na klávesu. `syllableJoin`: `parts` (slabiky s diakritikou) se ukážou nad
+  slovem jako „MÁ + MA", swypuje se celé slovo. `rhymePick`: `options` (3 ×
+  emoji + slovo) nahradí klávesnici, `answer` = index správné; po chybě se
+  správná rozsvítí.
 - **Síla slova** (0–5, podle `target`): úspěch +1, chyba −1
   (`ProgressService.recordAttempt`). Z ní vybírá `reviewMix` a „Procvičování"
   na mapě (5 nejslabších naučených slov, nabízí se od 3 naučených; nezapisuje

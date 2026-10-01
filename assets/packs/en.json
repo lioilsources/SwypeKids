@@ -1416,6 +1416,315 @@
           "review": true
         }
       ]
+    },
+    {
+      "id": "en-u11",
+      "title": "Sounds & rhymes",
+      "icon": "👂",
+      "reward": {
+        "emoji": "🍌",
+        "name": "B",
+        "label": "banana"
+      },
+      "scene": {
+        "biome": "jungle"
+      },
+      "lessons": [
+        {
+          "id": "en-u11-l1",
+          "type": "letterHunt",
+          "unlocked": [
+            "M",
+            "A",
+            "U",
+            "D",
+            "T",
+            "P",
+            "I",
+            "N",
+            "O",
+            "G",
+            "C",
+            "S",
+            "E",
+            "H",
+            "R",
+            "B",
+            "F",
+            "L",
+            "K"
+          ],
+          "target": "S",
+          "display": "S",
+          "hint": "☀️",
+          "label": "S",
+          "parentNote": "Letter hunt: the guide says the sound /s/ and your child taps the key — isolating one sound, no spelling yet."
+        },
+        {
+          "id": "en-u11-l2",
+          "type": "letterHunt",
+          "unlocked": [
+            "M",
+            "A",
+            "U",
+            "D",
+            "T",
+            "P",
+            "I",
+            "N",
+            "O",
+            "G",
+            "C",
+            "S",
+            "E",
+            "H",
+            "R",
+            "B",
+            "F",
+            "L",
+            "K"
+          ],
+          "target": "T",
+          "display": "T",
+          "hint": "🐯",
+          "label": "T",
+          "parentNote": "Letter hunt /t/. At home: say a sound and let your child point at something that starts with it."
+        },
+        {
+          "id": "en-u11-l3",
+          "type": "syllableJoin",
+          "unlocked": [
+            "M",
+            "A",
+            "U",
+            "D",
+            "T",
+            "P",
+            "I",
+            "N",
+            "O",
+            "G",
+            "C",
+            "S",
+            "E",
+            "H",
+            "R",
+            "B",
+            "F",
+            "L",
+            "K"
+          ],
+          "target": "SUNSET",
+          "display": "SUNSET",
+          "hint": "🌇",
+          "label": "SUN-SET",
+          "parts": [
+            "SUN",
+            "SET"
+          ],
+          "parentNote": "Joining parts: SUN + SET fly in separately and your child swipes them as one word."
+        },
+        {
+          "id": "en-u11-l4",
+          "type": "syllableJoin",
+          "unlocked": [
+            "M",
+            "A",
+            "U",
+            "D",
+            "T",
+            "P",
+            "I",
+            "N",
+            "O",
+            "G",
+            "C",
+            "S",
+            "E",
+            "H",
+            "R",
+            "B",
+            "F",
+            "L",
+            "K"
+          ],
+          "target": "HOTDOG",
+          "display": "HOTDOG",
+          "hint": "🌭",
+          "label": "HOT-DOG",
+          "parts": [
+            "HOT",
+            "DOG"
+          ],
+          "parentNote": "Joining HOT + DOG — two known words make a new one."
+        },
+        {
+          "id": "en-u11-l5",
+          "type": "rhymePick",
+          "unlocked": [
+            "M",
+            "A",
+            "U",
+            "D",
+            "T",
+            "P",
+            "I",
+            "N",
+            "O",
+            "G",
+            "C",
+            "S",
+            "E",
+            "H",
+            "R",
+            "B",
+            "F",
+            "L",
+            "K"
+          ],
+          "target": "CAT",
+          "display": "CAT",
+          "hint": "🐱",
+          "label": "CAT",
+          "options": [
+            {
+              "emoji": "🚌",
+              "display": "BUS"
+            },
+            {
+              "emoji": "🎩",
+              "display": "HAT"
+            },
+            {
+              "emoji": "🐷",
+              "display": "PIG"
+            }
+          ],
+          "answer": 1,
+          "parentNote": "Rhyme: what rhymes with CAT? Phonological awareness — listening to the end of the word, not the start."
+        },
+        {
+          "id": "en-u11-l6",
+          "type": "rhymePick",
+          "unlocked": [
+            "M",
+            "A",
+            "U",
+            "D",
+            "T",
+            "P",
+            "I",
+            "N",
+            "O",
+            "G",
+            "C",
+            "S",
+            "E",
+            "H",
+            "R",
+            "B",
+            "F",
+            "L",
+            "K"
+          ],
+          "target": "DOG",
+          "display": "DOG",
+          "hint": "🐕",
+          "label": "DOG",
+          "options": [
+            {
+              "emoji": "🌫️",
+              "display": "FOG"
+            },
+            {
+              "emoji": "☀️",
+              "display": "SUN"
+            },
+            {
+              "emoji": "🖊️",
+              "display": "PEN"
+            }
+          ],
+          "answer": 0,
+          "parentNote": "Rhyme DOG – FOG. At home, make up more: log, jog, frog."
+        },
+        {
+          "id": "en-u11-l7",
+          "type": "rhymePick",
+          "unlocked": [
+            "M",
+            "A",
+            "U",
+            "D",
+            "T",
+            "P",
+            "I",
+            "N",
+            "O",
+            "G",
+            "C",
+            "S",
+            "E",
+            "H",
+            "R",
+            "B",
+            "F",
+            "L",
+            "K"
+          ],
+          "target": "HEN",
+          "display": "HEN",
+          "hint": "🐔",
+          "label": "HEN",
+          "options": [
+            {
+              "emoji": "🐛",
+              "display": "BUG"
+            },
+            {
+              "emoji": "🖊️",
+              "display": "PEN"
+            },
+            {
+              "emoji": "🦵",
+              "display": "LEG"
+            }
+          ],
+          "answer": 1,
+          "parentNote": "Rhyme HEN – PEN: the -en family (ten, men, den)."
+        },
+        {
+          "id": "en-u11-l8",
+          "type": "reviewMix",
+          "unlocked": [
+            "M",
+            "A",
+            "U",
+            "D",
+            "T",
+            "P",
+            "I",
+            "N",
+            "O",
+            "G",
+            "C",
+            "S",
+            "E",
+            "H",
+            "R",
+            "B",
+            "F",
+            "L",
+            "K"
+          ],
+          "target": "SUN",
+          "display": "SUN",
+          "hint": "☀️",
+          "label": "SUN",
+          "parentNote": "Review: the game picks the weakest word learned so far.",
+          "review": true
+        }
+      ]
     }
   ],
   "sentence": {

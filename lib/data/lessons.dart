@@ -18,6 +18,30 @@ enum LessonType {
   /// Opakování: za běhu se nahradí nejslabším dříve naučeným slovem, jehož
   /// písmena jsou v `unlocked`. Vlastní `target` je záloha.
   reviewMix,
+
+  /// Průvodce řekne hlásku, dítě ťukne na správnou klávesu (target = 1 písmeno).
+  letterHunt,
+
+  /// Dvě slabiky (`parts`) přiletí, dítě je swypne za sebou jako celé slovo.
+  syllableJoin,
+
+  /// Ze tří obrázků (`options`) vyber, co se rýmuje s cílem (`answer`).
+  rhymePick,
+}
+
+/// Možnost v rýmovém kole: obrázek + slovo.
+class RhymeOption {
+  final String emoji;
+  final String display;
+
+  const RhymeOption({required this.emoji, required this.display});
+
+  factory RhymeOption.fromJson(Map<String, dynamic> json) => RhymeOption(
+        emoji: json['emoji'] as String,
+        display: json['display'] as String,
+      );
+
+  Map<String, dynamic> toJson() => {'emoji': emoji, 'display': display};
 }
 
 class Lesson {
@@ -35,6 +59,9 @@ class Lesson {
   final String vocab;          // id slova do batohu / dlaždice builderu ('' = žádné)
   final String parentNote;     // věta pro rodiče: co se procvičuje a proč
   final int? gap;              // missingLetter: index chybějícího písmene v target
+  final List<String> parts;    // syllableJoin: slabiky, jak přiletí (s diakritikou)
+  final List<RhymeOption> options; // rhymePick: tři obrázky
+  final int answer;            // rhymePick: index správné možnosti
 
   const Lesson({
     this.id = '',
@@ -51,6 +78,9 @@ class Lesson {
     this.vocab = '',
     this.parentNote = '',
     this.gap,
+    this.parts = const [],
+    this.options = const [],
+    this.answer = 0,
   });
 
   /// Index díry pro missingLetter: z packu, jinak prostřední písmeno.
@@ -72,6 +102,12 @@ class Lesson {
         vocab: json['vocab'] as String? ?? '',
         parentNote: json['parentNote'] as String? ?? '',
         gap: json['gap'] as int?,
+        parts: ((json['parts'] as List?) ?? const []).cast<String>(),
+        options: [
+          for (final o in (json['options'] as List?) ?? const [])
+            RhymeOption.fromJson((o as Map).cast<String, dynamic>()),
+        ],
+        answer: json['answer'] as int? ?? 0,
       );
 
   Map<String, dynamic> toJson() => {
@@ -89,5 +125,8 @@ class Lesson {
         if (vocab.isNotEmpty) 'vocab': vocab,
         if (parentNote.isNotEmpty) 'parentNote': parentNote,
         if (gap != null) 'gap': gap,
+        if (parts.isNotEmpty) 'parts': parts,
+        if (options.isNotEmpty) 'options': [for (final o in options) o.toJson()],
+        if (options.isNotEmpty) 'answer': answer,
       };
 }

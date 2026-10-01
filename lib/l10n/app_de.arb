@@ -218,5 +218,11 @@
   "statMinutesWeek": "Minuten diese Woche",
   "letterMastered": "gekonnt",
   "letterPracticing": "übt noch",
-  "letterUnseen": "noch nicht getroffen"
+  "letterUnseen": "noch nicht getroffen",
+  "typeHunt": "LAUT",
+  "typeJoin": "SILBEN",
+  "typeRhyme": "REIM",
+  "promptHunt": "Welchen Buchstaben hörst du? Tipp ihn an",
+  "promptJoin": "Verbinde die Silben — wische das ganze Wort",
+  "promptRhyme": "Was reimt sich? Tipp auf das Bild"
 }

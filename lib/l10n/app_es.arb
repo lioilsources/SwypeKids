@@ -218,5 +218,11 @@
   "statMinutesWeek": "minutos esta semana",
   "letterMastered": "dominada",
   "letterPracticing": "practicando",
-  "letterUnseen": "aún no vista"
+  "letterUnseen": "aún no vista",
+  "typeHunt": "SONIDO",
+  "typeJoin": "SÍLABAS",
+  "typeRhyme": "RIMA",
+  "promptHunt": "¿Qué letra oyes? Tócala",
+  "promptJoin": "Une las sílabas: desliza la palabra entera",
+  "promptRhyme": "¿Qué rima? Toca el dibujo"
 }
