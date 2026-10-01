@@ -416,4 +416,10 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get seasonStickersTitle => 'Nálepky ročních období';
+
+  @override
+  String get mapLoadFailed => 'Mapu se nepodařilo načíst';
+
+  @override
+  String get retry => 'Zkusit znovu';
 }

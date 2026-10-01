@@ -6,6 +6,7 @@ import 'package:swype_kids/data/keyboard_layout.dart';
 import 'package:swype_kids/data/lessons.dart';
 import 'package:swype_kids/data/models/content_pack.dart';
 import 'package:swype_kids/data/models/sentence.dart';
+import 'package:swype_kids/services/pack_service.dart';
 import 'package:swype_kids/world/world_clock.dart';
 
 /// Jazyky s kompletními poznámkami pro rodiče (roadmap v2.3: cs + en).
@@ -164,5 +165,15 @@ void main() {
       expect(table.values.toSet().length, table.length,
           reason: '${lang.name}: duplicitní emoji v tabulce');
     }
+  });
+
+  test('PackService.load dokončí načtení (bez cache) i souběžná volání', () async {
+    final a = PackService.instance.load(Language.de);
+    final b = PackService.instance.load(Language.de);
+    final packs = await Future.wait([a, b]).timeout(const Duration(seconds: 10));
+    expect(packs[0].language, Language.de);
+    expect(identical(packs[0], packs[1]), isTrue);
+    // a znovu z cache
+    expect((await PackService.instance.load(Language.de)).language, Language.de);
   });
 }

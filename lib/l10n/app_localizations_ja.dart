@@ -412,4 +412,10 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get seasonStickersTitle => 'きせつのシール';
+
+  @override
+  String get mapLoadFailed => 'ちずをよみこめませんでした';
+
+  @override
+  String get retry => 'もういちど';
 }

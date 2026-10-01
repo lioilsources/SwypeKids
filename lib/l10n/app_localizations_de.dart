@@ -417,4 +417,10 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get seasonStickersTitle => 'Jahreszeiten-Sticker';
+
+  @override
+  String get mapLoadFailed => 'Die Karte konnte nicht geladen werden';
+
+  @override
+  String get retry => 'Erneut versuchen';
 }

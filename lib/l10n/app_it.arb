@@ -228,5 +228,7 @@
   "expeditionTitle": "Spedizione di ripasso",
   "badgeExpedition": "Esploratore del ripasso",
   "badgeExpeditionHow": "Prima spedizione settimanale di ripasso",
-  "seasonStickersTitle": "Adesivi delle stagioni"
+  "seasonStickersTitle": "Adesivi delle stagioni",
+  "mapLoadFailed": "Impossibile caricare la mappa",
+  "retry": "Riprova"
 }

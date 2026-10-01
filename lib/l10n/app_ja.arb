@@ -228,5 +228,7 @@
   "expeditionTitle": "ふくしゅうたんけん",
   "badgeExpedition": "たんけんたい",
   "badgeExpeditionHow": "はじめてのしゅうかんふくしゅうたんけん",
-  "seasonStickersTitle": "きせつのシール"
+  "seasonStickersTitle": "きせつのシール",
+  "mapLoadFailed": "ちずをよみこめませんでした",
+  "retry": "もういちど"
 }

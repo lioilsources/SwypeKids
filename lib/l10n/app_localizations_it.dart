@@ -416,4 +416,10 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get seasonStickersTitle => 'Adesivi delle stagioni';
+
+  @override
+  String get mapLoadFailed => 'Impossibile caricare la mappa';
+
+  @override
+  String get retry => 'Riprova';
 }

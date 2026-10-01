@@ -412,4 +412,10 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get seasonStickersTitle => '季节贴纸';
+
+  @override
+  String get mapLoadFailed => '地图加载失败';
+
+  @override
+  String get retry => '重试';
 }
