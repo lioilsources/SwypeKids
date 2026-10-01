@@ -40,6 +40,8 @@ void main() {
         expect(ids.add(unit.id), isTrue,
             reason: 'duplicitní id jednotky ${unit.id}');
         expect(unit.reward.emoji, isNotEmpty);
+        expect(unit.reward.label.trim(), isNotEmpty,
+            reason: '${unit.id}: nálepka bez jména (reward.label)');
         expect(Biome.isKnown(unit.biome), isTrue,
             reason: '${unit.id}: neznámý biotop „${unit.biome}“');
         if (unit.reward.name.isNotEmpty) {

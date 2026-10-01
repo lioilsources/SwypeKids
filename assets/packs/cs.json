@@ -42,7 +42,8 @@
       "icon": "👩",
       "reward": {
         "emoji": "🐭",
-        "name": "M"
+        "name": "M",
+        "label": "myš"
       },
       "scene": {
         "biome": "meadow"
@@ -86,7 +87,8 @@
       "icon": "👨",
       "reward": {
         "emoji": "🐯",
-        "name": "T"
+        "name": "T",
+        "label": "tygr"
       },
       "scene": {
         "biome": "forest"
@@ -147,7 +149,8 @@
       "icon": "👵",
       "reward": {
         "emoji": "🍌",
-        "name": "B"
+        "name": "B",
+        "label": "banán"
       },
       "scene": {
         "biome": "pond"
@@ -227,7 +230,8 @@
       "icon": "🌀",
       "reward": {
         "emoji": "👧",
-        "name": "E"
+        "name": "E",
+        "label": "Ema"
       },
       "scene": {
         "biome": "garden"
@@ -315,7 +319,8 @@
       "icon": "🚲",
       "reward": {
         "emoji": "👁️",
-        "name": "O"
+        "name": "O",
+        "label": "oko"
       },
       "scene": {
         "biome": "farm"
@@ -391,7 +396,8 @@
       "icon": "👩",
       "reward": {
         "emoji": "🚗",
-        "name": "A"
+        "name": "A",
+        "label": "auto"
       },
       "scene": {
         "biome": "city"
@@ -512,7 +518,8 @@
       "icon": "🌲",
       "reward": {
         "emoji": "☀️",
-        "name": "S"
+        "name": "S",
+        "label": "slunce"
       },
       "scene": {
         "biome": "mountains"
@@ -649,7 +656,8 @@
       "icon": "🥣",
       "reward": {
         "emoji": "🌈",
-        "name": "I"
+        "name": "I",
+        "label": "duha"
       },
       "scene": {
         "biome": "beach"
@@ -787,7 +795,8 @@
       "icon": "💧",
       "reward": {
         "emoji": "🐺",
-        "name": "V"
+        "name": "V",
+        "label": "vlk"
       },
       "scene": {
         "biome": "orchard"
@@ -934,7 +943,8 @@
       "icon": "🦞",
       "reward": {
         "emoji": "🐟",
-        "name": "R"
+        "name": "R",
+        "label": "ryba"
       },
       "scene": {
         "biome": "snow"
@@ -1119,7 +1129,8 @@
       "icon": "🦷",
       "reward": {
         "emoji": "🦓",
-        "name": "Z"
+        "name": "Z",
+        "label": "zebra"
       },
       "scene": {
         "biome": "jungle"
@@ -1309,7 +1320,8 @@
       "icon": "🦉",
       "reward": {
         "emoji": "🐱",
-        "name": "K"
+        "name": "K",
+        "label": "kočka"
       },
       "scene": {
         "biome": "sky"

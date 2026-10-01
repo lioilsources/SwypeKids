@@ -39,7 +39,7 @@ lib/
 │   ├── lesson_map_screen.dart   # Lesson map: units, nodes, linear unlocking
 │   ├── game_screen.dart     # Plays one unit; stars, listen rounds, progress writes
 │   ├── unit_complete_screen.dart # Unit celebration (new sticker)
-│   ├── collection_screen.dart    # Sticker album (Zvěřinec)
+│   ├── collection_screen.dart    # Zvěřinec as an island: BiomeBand per unit, tap sticker → TTS label, secrets, badge shelf
 │   ├── word_sentence_screen.dart # Mini builder right after a new word (wordToSentence)
 │   ├── book_screen.dart     # Má knížka: saved sentences, tap = read aloud
 │   ├── win_screen.dart      # Whole-pack completion
@@ -94,6 +94,7 @@ iOS, Android, macOS, Linux (check pubspec for active platforms).
 - Badges (`GameBadge`, 14 from roadmap P4) are global across languages; `AchievementService.check` is called on LessonDone / UnitDone (game), SessionStart (map open) — never add streak-style pressure
 - Word strength 0–5 per target (`ProgressService.recordAttempt`); map offers “Procvičování” (5 weakest learned) via `GameScreen(practice: …)`, which never writes lesson completion or stickers
 - Never add lessons to an existing unit (it would re-lock later units for kids who finished it); add new units, or change an existing lesson's type (id + progress stay)
+- `reward.label` = sticker name in the pack language (required; Zvěřinec says it aloud). Each `Biome` has a `secret` sticker found by tapping the hidden ✨ on the map
 - `unit.scene.biome` names the unit's biome (`Biome` enum in `world/world_clock.dart`; unknown → meadow). Map sky = day phase × season; season is calendar-based unless the parent overrides it in the drawer
 - Word bag: a correct swype of a lesson with `vocab` adds the word to the bag (`ProgressService.addWord`); builder tiles with `unlockedBy: "vocab"` stay locked (“?” silhouette) until then
 - JSON packs are the single source of truth (Dart lessons removed in v2.3); edit `assets/packs/*.json` directly, `flutter test` validates them (every lesson needs a `parentNote` in the pack's language; hint emoji ≤ Unicode 12)

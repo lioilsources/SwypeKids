@@ -42,7 +42,8 @@
       "icon": "🐴",
       "reward": {
         "emoji": "🍊",
-        "name": "M"
+        "name": "M",
+        "label": "みかん"
       },
       "scene": {
         "biome": "meadow"
@@ -86,7 +87,8 @@
       "icon": "👨",
       "reward": {
         "emoji": "🐼",
-        "name": "P"
+        "name": "P",
+        "label": "パンダ"
       },
       "scene": {
         "biome": "forest"
@@ -132,7 +134,8 @@
       "icon": "👀",
       "reward": {
         "emoji": "🐶",
-        "name": "I"
+        "name": "I",
+        "label": "いぬ"
       },
       "scene": {
         "biome": "pond"
@@ -180,7 +183,8 @@
       "icon": "🐱",
       "reward": {
         "emoji": "🐱",
-        "name": "N"
+        "name": "N",
+        "label": "ねこ"
       },
       "scene": {
         "biome": "garden"
@@ -250,7 +254,8 @@
       "icon": "🍚",
       "reward": {
         "emoji": "☂️",
-        "name": "K"
+        "name": "K",
+        "label": "かさ"
       },
       "scene": {
         "biome": "farm"
@@ -421,7 +426,8 @@
       "icon": "🐟",
       "reward": {
         "emoji": "🐟",
-        "name": "S"
+        "name": "S",
+        "label": "さかな"
       },
       "scene": {
         "biome": "city"
@@ -608,7 +614,8 @@
       "icon": "🐙",
       "reward": {
         "emoji": "🐙",
-        "name": "T"
+        "name": "T",
+        "label": "たこ"
       },
       "scene": {
         "biome": "mountains"
@@ -812,7 +819,8 @@
       "icon": "🍑",
       "reward": {
         "emoji": "🍙",
-        "name": "O"
+        "name": "O",
+        "label": "おにぎり"
       },
       "scene": {
         "biome": "beach"

@@ -42,7 +42,8 @@
       "icon": "👩",
       "reward": {
         "emoji": "🐴",
-        "name": "M"
+        "name": "M",
+        "label": "马"
       },
       "scene": {
         "biome": "meadow"
@@ -88,7 +89,8 @@
       "icon": "👨",
       "reward": {
         "emoji": "👨",
-        "name": "B"
+        "name": "B",
+        "label": "爸爸"
       },
       "scene": {
         "biome": "forest"
@@ -152,7 +154,8 @@
       "icon": "🍚",
       "reward": {
         "emoji": "1️⃣",
-        "name": "I"
+        "name": "I",
+        "label": "一"
       },
       "scene": {
         "biome": "pond"
@@ -219,7 +222,8 @@
       "icon": "😨",
       "reward": {
         "emoji": "🍎",
-        "name": "P"
+        "name": "P",
+        "label": "苹果"
       },
       "scene": {
         "biome": "garden"
@@ -289,7 +293,8 @@
       "icon": "❓",
       "reward": {
         "emoji": "🐮",
-        "name": "N"
+        "name": "N",
+        "label": "牛"
       },
       "scene": {
         "biome": "farm"
@@ -345,7 +350,8 @@
       "icon": "🥤",
       "reward": {
         "emoji": "❤️",
-        "name": "A"
+        "name": "A",
+        "label": "爱"
       },
       "scene": {
         "biome": "city"
@@ -481,7 +487,8 @@
       "icon": "👍",
       "reward": {
         "emoji": "🌸",
-        "name": "H"
+        "name": "H",
+        "label": "花"
       },
       "scene": {
         "biome": "mountains"
@@ -629,7 +636,8 @@
       "icon": "🐘",
       "reward": {
         "emoji": "🐘",
-        "name": "D"
+        "name": "D",
+        "label": "大象"
       },
       "scene": {
         "biome": "beach"
@@ -809,7 +817,8 @@
       "icon": "🐶",
       "reward": {
         "emoji": "🐶",
-        "name": "G"
+        "name": "G",
+        "label": "狗"
       },
       "scene": {
         "biome": "orchard"
@@ -1030,7 +1039,8 @@
       "icon": "🐯",
       "reward": {
         "emoji": "🐯",
-        "name": "L"
+        "name": "L",
+        "label": "老虎"
       },
       "scene": {
         "biome": "snow"
@@ -1265,7 +1275,8 @@
       "icon": "🍎",
       "reward": {
         "emoji": "🌙",
-        "name": "Y"
+        "name": "Y",
+        "label": "月亮"
       },
       "scene": {
         "biome": "jungle"
