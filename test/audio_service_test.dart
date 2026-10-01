@@ -23,6 +23,26 @@ void main() {
     }
   });
 
+  test('manifest má ambientní smyčky pro každou scénu světa', () {
+    final manifest = (jsonDecode(
+            File('assets/audio/manifest.json').readAsStringSync())
+        as Map<String, dynamic>)['ambient'] as Map<String, dynamic>;
+    for (final id in ['day', 'night', 'water']) {
+      expect(manifest, contains(id));
+      expect(File(manifest[id] as String).existsSync(), isTrue);
+    }
+  });
+
+  test('ambient bez enginu nic nehraje, ale pamatuje si přání', () {
+    final a = AudioService.instance;
+    expect(() => a.setAmbient('day'), returnsNormally);
+    expect(a.ambientPlaying, isNull);
+    a.ambientEnabled = false;
+    a.ambientEnabled = true;
+    expect(a.ambientPlaying, isNull);
+    a.setAmbient(null);
+  });
+
   test('tóny kláves stoupají zleva doprava', () {
     for (final row in kRows) {
       final pitches = row.map(AudioService.keyTonePitch).toList();

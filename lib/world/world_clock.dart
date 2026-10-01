@@ -194,6 +194,14 @@ class WorldTheme {
         colors: sky,
       );
 
+  /// Ambientní scéna (id v `assets/audio/manifest.json`): v noci cvrčci,
+  /// u vody šplouchání, jinak ptáci a vítr.
+  String ambientFor(Biome biome) {
+    if (isNight) return 'night';
+    if (biome == Biome.pond || biome == Biome.beach) return 'water';
+    return 'day';
+  }
+
   /// Barva země biotopu: v noci tmavší, v zimě zasněžená, na podzim teplejší.
   Color groundOf(Biome biome) {
     var c = biome.ground;

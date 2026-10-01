@@ -18,14 +18,24 @@ class AudioService {
   static final AudioService instance = AudioService._();
 
   static const _kSfxEnabledKey = 'sk.settings.sfx';
+  static const _kAmbientEnabledKey = 'sk.settings.ambient';
+  static const ambientVolume = 0.22;
+  static const _ambientFade = Duration(milliseconds: 900);
   static const _manifestPath = 'assets/audio/manifest.json';
   static const _successVariants = 3;
 
   SharedPreferences? _prefs;
   bool _sfxEnabled = true;
+  bool _ambientEnabled = true;
   bool _ready = false;
   final Map<String, AudioSource> _sources = {};
+  final Map<String, AudioSource> _ambientSources = {};
   int _successIdx = 0;
+
+  // Ambient: jedna smyčka naráz (scéna podle biotopu × denní doby).
+  String? _ambientWanted; // co má hrát (i když je zrovna vypnuto / engine nejede)
+  String? _ambientPlaying;
+  SoundHandle? _ambientHandle;
 
   bool get sfxEnabled => _sfxEnabled;
 
@@ -34,10 +44,22 @@ class AudioService {
     _prefs?.setBool(_kSfxEnabledKey, value);
   }
 
+  bool get ambientEnabled => _ambientEnabled;
+
+  set ambientEnabled(bool value) {
+    _ambientEnabled = value;
+    _prefs?.setBool(_kAmbientEnabledKey, value);
+    _syncAmbient();
+  }
+
+  /// Scéna, která právě hraje (null = ticho). Pro testy a ladění.
+  String? get ambientPlaying => _ambientPlaying;
+
   /// Načte nastavení (rychlé) — volat před runApp.
   Future<void> loadSettings() async {
     _prefs = await SharedPreferences.getInstance();
     _sfxEnabled = _prefs!.getBool(_kSfxEnabledKey) ?? true;
+    _ambientEnabled = _prefs!.getBool(_kAmbientEnabledKey) ?? true;
   }
 
   /// Spustí audio engine a načte sfx do paměti. Neblokuje start appky —
@@ -45,12 +67,20 @@ class AudioService {
   Future<void> init() async {
     try {
       await SoLoud.instance.init();
-      final manifest = (jsonDecode(await rootBundle.loadString(_manifestPath))
-          as Map<String, dynamic>)['sfx'] as Map<String, dynamic>;
-      for (final entry in manifest.entries) {
+      final manifest = jsonDecode(await rootBundle.loadString(_manifestPath))
+          as Map<String, dynamic>;
+      final sfx = manifest['sfx'] as Map<String, dynamic>;
+      for (final entry in sfx.entries) {
         _sources[entry.key] = await SoLoud.instance.loadAsset(entry.value);
       }
+      final ambient =
+          (manifest['ambient'] as Map<String, dynamic>?) ?? const {};
+      for (final entry in ambient.entries) {
+        _ambientSources[entry.key] =
+            await SoLoud.instance.loadAsset(entry.value);
+      }
       _ready = true;
+      _syncAmbient(); // scéna vyžádaná před startem enginu
     } catch (_) {
       _ready = false; // bez zvuku, hra běží dál
     }
@@ -63,6 +93,39 @@ class AudioService {
       _ => sfx.name,
     };
     _playId(id, pitch: pitch, volume: volume);
+  }
+
+  // ── Ambient ───────────────────────────────────────────────────────────────
+
+  /// Přepne ambientní scénu (id z manifestu, např. 'day'); null = ticho.
+  /// Stejná scéna se nerestartuje, přechod je s krátkým prolnutím.
+  void setAmbient(String? id) {
+    _ambientWanted = id;
+    _syncAmbient();
+  }
+
+  void _syncAmbient() {
+    final target = (_ready && _ambientEnabled) ? _ambientWanted : null;
+    if (target == _ambientPlaying) return;
+    try {
+      final old = _ambientHandle;
+      if (old != null) {
+        SoLoud.instance.fadeVolume(old, 0, _ambientFade);
+        SoLoud.instance.scheduleStop(old, _ambientFade);
+      }
+      _ambientHandle = null;
+      _ambientPlaying = null;
+      final source = target == null ? null : _ambientSources[target];
+      if (source != null) {
+        final h = SoLoud.instance.play(source, volume: 0, looping: true);
+        SoLoud.instance.fadeVolume(h, ambientVolume, _ambientFade);
+        _ambientHandle = h;
+        _ambientPlaying = target;
+      }
+    } catch (_) {
+      _ambientHandle = null;
+      _ambientPlaying = null;
+    }
   }
 
   /// Tón xylofonu pro písmeno při swype — celý swype tak „zahraje melodii".

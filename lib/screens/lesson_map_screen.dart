@@ -29,10 +29,10 @@ class LessonMapScreen extends StatefulWidget {
   });
 
   @override
-  State<LessonMapScreen> createState() => _LessonMapScreenState();
+  State<LessonMapScreen> createState() => LessonMapScreenState();
 }
 
-class _LessonMapScreenState extends State<LessonMapScreen> {
+class LessonMapScreenState extends State<LessonMapScreen> {
   ContentPack? _pack;
 
   // Posun mapy pro parallax pozadí (mraky, hvězdy).
@@ -47,13 +47,38 @@ class _LessonMapScreenState extends State<LessonMapScreen> {
     super.initState();
     _loadPack();
     _scroll.addListener(() => _scrollOffset.value = _scroll.offset);
+    WorldClockService.instance.addListener(_syncAmbient);
   }
 
   @override
   void dispose() {
+    WorldClockService.instance.removeListener(_syncAmbient);
+    AudioService.instance.setAmbient(null);
     _scroll.dispose();
     _scrollOffset.dispose();
     super.dispose();
+  }
+
+  /// Ambient podle biotopu, kde dítě právě hraje (první nedokončená
+  /// jednotka), a denní doby. Hraje jen dokud je mapa vidět.
+  bool _ambientActive = true;
+
+  void _syncAmbient() {
+    final pack = _pack;
+    if (!_ambientActive || pack == null) {
+      AudioService.instance.setAmbient(null);
+      return;
+    }
+    final at = ProgressService.instance.firstUncompletedIn(pack);
+    final unit = pack.units[at?.unit ?? pack.units.length - 1];
+    AudioService.instance.setAmbient(
+        WorldClockService.instance.theme.ambientFor(Biome.parse(unit.biome)));
+  }
+
+  /// HomeShell: mapa je / není v popředí (jiný pohled, appka na pozadí).
+  void setAmbientActive(bool active) {
+    _ambientActive = active;
+    _syncAmbient();
   }
 
   @override
@@ -69,12 +94,14 @@ class _LessonMapScreenState extends State<LessonMapScreen> {
     final pack = await PackService.instance.load(widget.language);
     if (mounted && pack.language == widget.language) {
       setState(() => _pack = pack);
+      _syncAmbient();
     }
   }
 
   Future<void> _openLesson(int unitIndex, int lessonIndex) async {
     final pack = _pack!;
     AudioService.instance.play(Sfx.tap);
+    AudioService.instance.setAmbient(null); // během kola je ticho (jen hra)
     await Navigator.of(context).push(MaterialPageRoute(
       builder: (_) => GameScreen(
         pack: pack,
@@ -82,7 +109,10 @@ class _LessonMapScreenState extends State<LessonMapScreen> {
         startLessonIndex: lessonIndex,
       ),
     ));
-    if (mounted) setState(() {}); // po návratu překreslit postup
+    if (mounted) {
+      setState(() {}); // po návratu překreslit postup
+      _syncAmbient();
+    }
   }
 
   /// Kolik slov má procvičování a od kolika naučených se nabízí.
@@ -91,6 +121,7 @@ class _LessonMapScreenState extends State<LessonMapScreen> {
 
   Future<void> _openPractice(List<Lesson> lessons) async {
     AudioService.instance.play(Sfx.tap);
+    AudioService.instance.setAmbient(null);
     await Navigator.of(context).push(MaterialPageRoute(
       builder: (_) => GameScreen(
         pack: _pack!,
@@ -104,7 +135,10 @@ class _LessonMapScreenState extends State<LessonMapScreen> {
         ),
       ),
     ));
-    if (mounted) setState(() {});
+    if (mounted) {
+      setState(() {});
+      _syncAmbient();
+    }
   }
 
   @override
