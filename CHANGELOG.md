@@ -1,5 +1,9 @@
 # Changelog
 
+## [01/10/2026] — v2.4.1
+- Odznaky: 14 achievementů bez streaku (První tah, Bez chyby, Objevitel, Sběratel, Noční sova, Ranní ptáče, Čtyři období, Slovíčkář, Básník, Posluchač, Vytrvalec…), polička ve Zvěřinci
+- Onboarding bez čtení: průvodce pozdraví hlasem, jazyk podle vlajky, výběr zvířátka, jméno dítěte
+
 ## [01/10/2026] — v2.4.0 „Svět"
 - Mapa je svět: každá jednotka má biotop (louka, les, rybník, město, hory, pláž…), zamčené jsou v mlze, odemčení mlhu rozplyne
 - Obloha podle denní doby a ročního období (kalendář, nebo ruční volba rodiče v menu), měsíc a hvězdy v noci, mraky s parallaxem
