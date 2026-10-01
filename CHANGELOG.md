@@ -1,5 +1,12 @@
 # Changelog
 
+## [01/10/2026] — v2.6.0 „Obsah"
+- Nové typy kol: lov hlásky (ťuknutí na klávesu), spojování slabik („MÁ + MA“), rým (výběr ze tří obrázků)
+- Čeština: pásmo B — jednotky 13–17 (hlásky a rýmy, H+C, Y+G, F a delší slova, slova do vět), celkem 91 lekcí
+- Angličtina: jednotky 11–15 (sounds & rhymes, J+V+W, blends, sh/ch/th, magic e), celkem 90 lekcí
+- Týdenní výprava za opakováním 🧭 na mapě (od 10 naučených slov) a odznak Výpravník
+- Průvodce žvatlá, poznámku pro rodiče lze nechat přečíst nahlas
+
 ## [01/10/2026] — v2.5.0 „Pro rodiče"
 - Menu, hra, oslavy, builder, knížka, Zvěřinec, odznaky i rodičovský koutek ve všech 9 jazycích (jazyk UI = jazyk packu)
 - Písmo pro dyslektiky (OpenDyslexic) jako volba v rodičovském koutku
