@@ -1,5 +1,13 @@
 # Changelog
 
+## [01/10/2026] — v2.4.2
+- Profily sourozenců: každé dítě má avatara, jméno a vlastní postup; přepínání v menu
+- Zvěřinec jako ostrov: biotopy, zvířátko řekne své jméno nahlas; tajné nálepky ✨ schované na mapě
+- Průvodce Pipi: mává, jásá, „ups“, v noci spí; na mapě pozdraví dítě jménem
+- Rodičovský koutek za bránou (příklad místo PINu): přehled, mřížka písmen, doporučení pro doma, metoda, nastavení
+- Časový limit hraní za den (po limitu Pipi spí, prodloužení jen v koutku), zrcadlená klávesnice pro leváky
+- Zásady ochrany soukromí (docs/PRIVACY.md)
+
 ## [01/10/2026] — v2.4.1
 - Odznaky: 14 achievementů bez streaku (První tah, Bez chyby, Objevitel, Sběratel, Noční sova, Ranní ptáče, Čtyři období, Slovíčkář, Básník, Posluchač, Vytrvalec…), polička ve Zvěřinci
 - Onboarding bez čtení: průvodce pozdraví hlasem, jazyk podle vlajky, výběr zvířátka, jméno dítěte
