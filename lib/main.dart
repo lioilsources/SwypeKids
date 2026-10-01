@@ -3,12 +3,15 @@ import 'package:flutter/services.dart';
 import 'audio/audio_service.dart';
 import 'data/lessons.dart';
 import 'screens/home_shell.dart';
+import 'screens/onboarding_screen.dart';
+import 'services/profile_service.dart';
 import 'services/progress_service.dart';
 import 'world/world_clock.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await ProgressService.init();
+  await ProfileService.init();
   await AudioService.instance.loadSettings();
   await WorldClockService.instance.loadSettings();
   WorldClockService.instance.start();
@@ -52,7 +55,24 @@ class SwyperKidsApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: HomeShell(initialLanguage: _detectLanguage()),
+      home: ProfileService.instance.onboarded
+          ? HomeShell(initialLanguage: _detectLanguage())
+          : const _FirstStart(),
+    );
+  }
+}
+
+/// První start: onboarding, po něm rovnou mapa (bez návratu zpět).
+class _FirstStart extends StatelessWidget {
+  const _FirstStart();
+
+  @override
+  Widget build(BuildContext context) {
+    return OnboardingScreen(
+      initialLanguage: _detectLanguage(),
+      onDone: (lang) => Navigator.of(context).pushReplacement(
+        MaterialPageRoute(builder: (_) => HomeShell(initialLanguage: lang)),
+      ),
     );
   }
 }
