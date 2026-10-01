@@ -3,6 +3,7 @@ import '../data/models/content_pack.dart';
 import '../services/achievement_service.dart';
 import '../widgets/badge_chip.dart';
 import '../ui/app_font.dart';
+import '../ui/l10n.dart';
 
 /// Hero tag nálepky jednotky: po oslavě nálepka odletí na své místo na mapě.
 String stickerHeroTag(String packId, int unitIndex) =>
@@ -60,7 +61,7 @@ class UnitCompleteScreen extends StatelessWidget {
               ),
               const SizedBox(height: 16),
               Text(
-                'Máš novou nálepku!',
+                context.l.newSticker,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontFamily: kFont,
@@ -81,7 +82,7 @@ class UnitCompleteScreen extends StatelessWidget {
                 style: const TextStyle(fontSize: 26),
               ),
               Text(
-                '+$stars hvězdiček',
+                context.l.starsGained(stars),
                 style: TextStyle(
                   fontFamily: kFont,
                   fontSize: 17,
@@ -114,7 +115,7 @@ class UnitCompleteScreen extends StatelessWidget {
                   ),
                   elevation: 8,
                 ),
-                child: const Text('Zpět na mapu 🗺️'),
+                child: Text('${context.l.backToMap} 🗺️'),
               ),
             ],
           ),

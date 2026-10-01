@@ -12,6 +12,7 @@ import '../services/session_service.dart';
 import '../services/settings_service.dart';
 import '../world/world_clock.dart';
 import '../ui/app_font.dart';
+import '../ui/l10n.dart';
 
 /// Stav písmene pro mřížku abecedy (roadmap P6).
 enum LetterStatus { unseen, practicing, mastered }
@@ -83,7 +84,7 @@ class _ParentScreenState extends State<ParentScreen> {
         backgroundColor: Colors.transparent,
         foregroundColor: const Color(0xFFA0C4FF),
         title: Text(
-          '👪 Pro rodiče',
+          '👪 ${context.l.parentTitle}',
           style: TextStyle(
             fontFamily: kFont,
             fontWeight: FontWeight.w900,
@@ -99,13 +100,13 @@ class _ParentScreenState extends State<ParentScreen> {
                 child: ListView(
                   padding: const EdgeInsets.fromLTRB(16, 4, 16, 32),
                   children: [
-                    _Section(title: 'Přehled', child: _overview(pack)),
-                    _Section(title: 'Písmena', child: _letters(pack)),
+                    _Section(title: context.l.sectionOverview, child: _overview(pack)),
+                    _Section(title: context.l.sectionLetters, child: _letters(pack)),
                     _Section(
-                        title: 'Doporučení pro doma',
+                        title: context.l.sectionTips,
                         child: _recommendations(pack)),
-                    _Section(title: 'Jak appka učí', child: _method(pack)),
-                    const _Section(title: 'Nastavení', child: ParentSettings()),
+                    _Section(title: context.l.sectionMethod, child: _method(pack)),
+                    _Section(title: context.l.sectionSettings, child: const ParentSettings()),
                   ],
                 ),
               ),
@@ -118,13 +119,13 @@ class _ParentScreenState extends State<ParentScreen> {
     final done = pack.allLessons.where((l) => p.isCompleted(pack.id, l.id)).length;
     final profile = ProfileService.instance.active;
     final rows = [
-      ('${profile?.avatar ?? '🦊'} ${profile?.name ?? ''}'.trim(), 'profil'),
-      ('${p.playDays.length}', 'hracích dnů'),
-      ('$done / ${pack.allLessons.length}', 'lekcí'),
-      ('${p.totalStars(pack.id)}', 'hvězd'),
-      ('${p.wordBag(pack.id).length}', 'slov v batohu'),
-      ('${p.book(pack.id).length}', 'vět v Mé knížce'),
-      ('${p.badges.length} / ${GameBadge.values.length}', 'odznaků'),
+      ('${profile?.avatar ?? '🦊'} ${profile?.name ?? ''}'.trim(), context.l.statProfile),
+      ('${p.playDays.length}', context.l.statPlayDays),
+      ('$done / ${pack.allLessons.length}', context.l.statLessons),
+      ('${p.totalStars(pack.id)}', context.l.statStars),
+      ('${p.wordBag(pack.id).length}', context.l.statWords),
+      ('${p.book(pack.id).length}', context.l.statSentences),
+      ('${p.badges.length} / ${GameBadge.values.length}', context.l.statBadges),
     ];
     return Wrap(
       spacing: 10,
@@ -153,7 +154,7 @@ class _ParentScreenState extends State<ParentScreen> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('🟢 zvládnuté · 🟡 procvičuje · ⚪ ještě nepotkalo',
+        Text(context.l.lettersLegend,
             style: _labelStyle),
         const SizedBox(height: 8),
         for (final row in kRows)
@@ -206,8 +207,8 @@ class _ParentScreenState extends State<ParentScreen> {
         if (picked != null) ...[
           const SizedBox(height: 6),
           Text(
-            'Slova s $picked, která se pletou: '
-            '${ParentScreen.troubleWords(pack, picked).map((l) => l.display).join(', ')}',
+            context.l.troubleWords(picked,
+                ParentScreen.troubleWords(pack, picked).map((l) => l.display).join(', ')),
             key: const ValueKey('trouble-words'),
             style: _bodyStyle,
           ),
@@ -226,13 +227,11 @@ class _ParentScreenState extends State<ParentScreen> {
         .toList();
     final tips = <String>[
       if (weakest.isEmpty)
-        'Zatím není co procvičovat — po pár lekcích se tu objeví tipy.'
+        context.l.tipNoData
       else
-        'Nejslabší slova: ${weakest.map((l) => l.display).join(', ')}. '
-            'Zkuste je doma vytleskat po slabikách a hledat, co jimi začíná.',
-      for (final ch in practicing)
-        'Písmeno $ch ještě sedá: hledejte spolu doma věci, které začínají na $ch.',
-      'Dlouhý stisk lekce na mapě ukáže, co se v ní procvičuje a proč.',
+        context.l.tipWeakest(weakest.map((l) => l.display).join(', ')),
+      for (final ch in practicing) context.l.tipLetter(ch),
+      context.l.tipLongPress,
     ];
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -249,17 +248,9 @@ class _ParentScreenState extends State<ParentScreen> {
   Widget _method(ContentPack pack) => Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Metoda: ${pack.method}', style: _bodyStyle),
+          Text(context.l.methodLabel(pack.method), style: _bodyStyle),
           const SizedBox(height: 6),
-          Text(
-            'Dítě přejíždí prstem po písmenech v pořadí, jak slabiku nebo slovo '
-            'slyší. Nejdřív otevřené slabiky (MA, TA), pak celá slova, poslechová '
-            'kola bez textu, doplňovačky a opakování nejslabších slov. Chyba '
-            'nikdy neblokuje postup — karta se jen zatřese a napoví. Naučená '
-            'slova dítě hned použije ve větě (builder vět) a může si je uložit '
-            'do Mé knížky.',
-            style: _bodyStyle,
-          ),
+          Text(context.l.methodText, style: _bodyStyle),
         ],
       );
 
@@ -350,20 +341,20 @@ class _ParentSettingsState extends State<ParentSettings> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        toggle('sfx-toggle', '🔊', 'Zvuky', audio.sfxEnabled,
+        toggle('sfx-toggle', '🔊', context.l.settingSounds, audio.sfxEnabled,
             (v) => audio.sfxEnabled = v),
-        toggle('ambient-toggle', '🌿', 'Zvuky světa', audio.ambientEnabled,
+        toggle('ambient-toggle', '🌿', context.l.settingAmbient, audio.ambientEnabled,
             (v) => audio.ambientEnabled = v),
-        toggle('music-toggle', '🎵', 'Hudba', audio.musicEnabled,
+        toggle('music-toggle', '🎵', context.l.settingMusic, audio.musicEnabled,
             (v) => audio.musicEnabled = v),
-        toggle('left-handed-toggle', '🫲', 'Levák (zrcadlená klávesnice)',
+        toggle('left-handed-toggle', '🫲', context.l.settingLeftHanded,
             SettingsService.instance.leftHanded,
             (v) => SettingsService.instance.leftHanded = v),
-        toggle('dyslexia-font-toggle', '🔤', 'Písmo pro dyslektiky (OpenDyslexic)',
+        toggle('dyslexia-font-toggle', '🔤', context.l.settingDyslexiaFont,
             SettingsService.instance.dyslexiaFont,
             (v) => SettingsService.instance.dyslexiaFont = v),
         const SizedBox(height: 8),
-        Text('Časový limit hraní za den',
+        Text(context.l.settingTimeLimit,
             style: TextStyle(
                 fontFamily: kFont,
                 fontWeight: FontWeight.w800,
@@ -384,7 +375,7 @@ class _ParentSettingsState extends State<ParentSettings> {
                     for (final m in SettingsService.sessionLimits)
                       ChoiceChip(
                         key: ValueKey('limit-$m'),
-                        label: Text(m == 0 ? 'bez limitu' : '$m min'),
+                        label: Text(m == 0 ? context.l.noLimit : context.l.minutes(m)),
                         selected: settings.sessionLimitMin == m,
                         onSelected: (_) => settings.sessionLimitMin = m,
                       ),
@@ -392,9 +383,11 @@ class _ParentSettingsState extends State<ParentSettings> {
                 ),
                 const SizedBox(height: 6),
                 Text(
-                  'Dnes odehráno ${session.playedMinToday} min'
-                  '${session.limitMinToday > 0 ? ' z ${session.limitMinToday}' : ''}'
-                  '${session.limitReached ? ' — průvodce už spí' : ''}',
+                  (session.limitMinToday > 0
+                          ? context.l.playedTodayOf(
+                              session.playedMinToday, session.limitMinToday)
+                          : context.l.playedToday(session.playedMinToday)) +
+                      (session.limitReached ? context.l.guideAsleep : ''),
                   key: const ValueKey('session-today'),
                   style: TextStyle(
                       fontFamily: kFont,
@@ -406,14 +399,14 @@ class _ParentSettingsState extends State<ParentSettings> {
                     key: const ValueKey('extend-today'),
                     onPressed: session.extendToday,
                     child: Text(
-                        'Prodloužit dnešek o ${SessionService.extendMinutes} min'),
+                        context.l.extendToday(SessionService.extendMinutes)),
                   ),
               ],
             );
           },
         ),
         const SizedBox(height: 8),
-        Text('Roční období na mapě',
+        Text(context.l.settingSeason,
             style: TextStyle(
                 fontFamily: kFont,
                 fontWeight: FontWeight.w800,
@@ -425,8 +418,8 @@ class _ParentSettingsState extends State<ParentSettings> {
             spacing: 8,
             children: [
               for (final (label, value) in [
-                ('🔄 podle kalendáře', null),
-                for (final s in Season.values) ('${s.emoji} ${_seasonName(s)}', s),
+                ('🔄 ${context.l.seasonAuto}', null),
+                for (final s in Season.values) ('${s.emoji} ${s.label(context.l)}', s),
               ])
                 ChoiceChip(
                   key: ValueKey('season-${value?.name ?? 'auto'}'),
@@ -438,7 +431,7 @@ class _ParentSettingsState extends State<ParentSettings> {
           ),
         ),
         const SizedBox(height: 14),
-        Text('Profily',
+        Text(context.l.profilesTitle,
             style: TextStyle(
                 fontFamily: kFont,
                 fontWeight: FontWeight.w800,
@@ -466,28 +459,20 @@ class _ParentSettingsState extends State<ParentSettings> {
     );
   }
 
-  static String _seasonName(Season s) => switch (s) {
-        Season.spring => 'jaro',
-        Season.summer => 'léto',
-        Season.autumn => 'podzim',
-        Season.winter => 'zima',
-      };
-
   Future<void> _confirmDelete(ChildProfile p) async {
     final ok = await showDialog<bool>(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: Text('Smazat profil ${p.label}?'),
-        content: const Text('Smaže se i celý postup, nálepky a knížka. '
-            'Nejde to vrátit.'),
+        title: Text(context.l.deleteProfileTitle(p.label)),
+        content: Text(context.l.deleteProfileBody),
         actions: [
           TextButton(
               onPressed: () => Navigator.pop(ctx, false),
-              child: const Text('Zrušit')),
+              child: Text(context.l.cancel)),
           TextButton(
               key: const ValueKey('confirm-delete'),
               onPressed: () => Navigator.pop(ctx, true),
-              child: const Text('Smazat')),
+              child: Text(context.l.delete)),
         ],
       ),
     );

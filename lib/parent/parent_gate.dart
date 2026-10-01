@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import '../ui/app_font.dart';
+import '../ui/l10n.dart';
 
 /// Rodičovská brána (roadmap P6): ne PIN, ale jednoduchý příklad
 /// („7 × 3 = ?"), který dítě 5–9 let nespočítá a rodič nemusí pamatovat.
@@ -64,7 +65,7 @@ class _ParentGateState extends State<ParentGate> {
                 const Text('👪', style: TextStyle(fontSize: 56)),
                 const SizedBox(height: 8),
                 Text(
-                  'Pro rodiče',
+                  context.l.parentTitle,
                   style: TextStyle(
                     fontFamily: kFont,
                     fontSize: 18,
@@ -77,7 +78,7 @@ class _ParentGateState extends State<ParentGate> {
                   duration: const Duration(milliseconds: 80),
                   transform: Matrix4.translationValues(_shake ? 8 : 0, 0, 0),
                   child: Text(
-                    'Kolik je $a × $b?',
+                    context.l.gateQuestion(a, b),
                     key: const ValueKey('gate-question'),
                     style: TextStyle(
                       fontFamily: kFont,
@@ -115,7 +116,7 @@ class _ParentGateState extends State<ParentGate> {
                 TextButton(
                   onPressed: () => Navigator.of(context).maybePop(),
                   child: Text(
-                    'Zpět ke hře',
+                    context.l.backToGame,
                     style: TextStyle(
                       fontFamily: kFont,
                       color: Colors.white.withValues(alpha: 0.5),

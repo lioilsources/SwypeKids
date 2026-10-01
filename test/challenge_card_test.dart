@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:swype_kids/data/lessons.dart';
 import 'package:swype_kids/widgets/challenge_card.dart';
+import 'helpers.dart';
 
 const _baba = Lesson(
   id: 'x',
@@ -16,7 +17,7 @@ const _baba = Lesson(
 
 Future<void> _pump(WidgetTester tester, CardMode mode,
     {List<String> path = const []}) {
-  return tester.pumpWidget(MaterialApp(
+  return tester.pumpWidget(localizedApp(
     home: Scaffold(
       body: ChallengeCard(
         lesson: _baba,

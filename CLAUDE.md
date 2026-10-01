@@ -23,7 +23,11 @@ dart run tool/generate_sfx.dart             # regenerate placeholder sfx (assets
 ```
 assets/packs/                # JSON content packs (units + lessons per language)
 lib/
-├── main.dart                # Init (ProgressService), saved-language detection
+├── main.dart                # Init (services), saved-language detection, MaterialApp locale = AppLanguage
+├── l10n/                    # ARB per language (app_cs.arb is the template) + generated AppLocalizations
+├── ui/
+│   ├── app_font.dart        # kFont (Nunito / OpenDyslexic)
+│   └── l10n.dart            # context.l shortcut, AppLanguage notifier, GameBadge/Season label extensions
 ├── audio/
 │   └── audio_service.dart   # flutter_soloud sfx (key tones, fanfare, stars…); silent no-op if engine fails
 ├── data/
@@ -108,6 +112,7 @@ iOS, Android, macOS, Linux (check pubspec for active platforms).
 
 ## Assets
 
+- UI chrome is localized (9 ARBs in `lib/l10n/`, template `app_cs.arb`): never hardcode user-facing strings in widgets — add a key to every ARB, run `flutter gen-l10n`, use `context.l.key`. UI language follows the pack language (`AppLanguage`). Widget tests wrap screens in `localizedApp(...)` from `test/helpers.dart`
 - Custom fonts in `fonts/` (Nunito; OpenDyslexic under SIL OFL). Never hardcode `fontFamily: 'Nunito'` — use `kFont` from `lib/ui/app_font.dart` (switches to OpenDyslexic when the parent enables it)
 - Content packs in `assets/packs/`
 - Sfx in `assets/audio/sfx/`, ambient loops in `assets/audio/ambient/`, title music in `assets/audio/music/` + catalog `assets/audio/manifest.json` (`sfx`, `ambient`, `music`)

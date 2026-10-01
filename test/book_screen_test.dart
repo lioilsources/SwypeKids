@@ -5,6 +5,7 @@ import 'package:swype_kids/data/lessons.dart';
 import 'package:swype_kids/screens/book_screen.dart';
 import 'package:swype_kids/services/pack_service.dart';
 import 'package:swype_kids/services/progress_service.dart';
+import 'helpers.dart';
 
 void main() {
   setUp(() async {
@@ -13,7 +14,7 @@ void main() {
   });
 
   Future<void> pumpBook(WidgetTester tester) async {
-    await tester.pumpWidget(const MaterialApp(
+    await tester.pumpWidget(localizedApp(
       home: Scaffold(body: BookScreen(language: Language.cs)),
     ));
     await tester.runAsync(() => PackService.instance.load(Language.cs));

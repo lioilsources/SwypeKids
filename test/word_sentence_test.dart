@@ -6,6 +6,7 @@ import 'package:swype_kids/data/models/content_pack.dart';
 import 'package:swype_kids/screens/word_sentence_screen.dart';
 import 'package:swype_kids/services/pack_service.dart';
 import 'package:swype_kids/services/progress_service.dart';
+import 'helpers.dart';
 
 void main() {
   late ContentPack cs;
@@ -22,7 +23,7 @@ void main() {
     addTearDown(tester.view.reset);
     cs = (await tester.runAsync(() => PackService.instance.load(Language.cs)))!;
     String? result = 'nevráceno';
-    await tester.pumpWidget(MaterialApp(
+    await tester.pumpWidget(localizedApp(
       home: Builder(
         builder: (context) => TextButton(
           onPressed: () async {

@@ -6,6 +6,7 @@ import '../services/pack_service.dart';
 import '../services/progress_service.dart';
 import '../services/tts_service.dart';
 import '../ui/app_font.dart';
+import '../ui/l10n.dart';
 
 /// Má knížka — věty, které dítě složilo a uložilo (builder vět, slovo do
 /// věty). Ťuknutí na stránku ji přečte nahlas; rodič si ji může nechat číst.
@@ -81,7 +82,7 @@ class _BookScreenState extends State<BookScreen> {
                   ),
                   const SizedBox(width: 10),
                   Text(
-                    '📖 Má knížka',
+                    '📖 ${context.l.bookTitle}',
                     style: TextStyle(
                       fontFamily: kFont,
                       fontSize: 15,
@@ -189,7 +190,7 @@ class _EmptyBook extends StatelessWidget {
           const Text('🗣️ ➡️ 📖', style: TextStyle(fontSize: 32)),
           const SizedBox(height: 8),
           Text(
-            'Slož větu a ulož ji do knížky',
+            context.l.bookEmptyHint,
             style: TextStyle(
               fontFamily: kFont,
               fontSize: 14,

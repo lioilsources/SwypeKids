@@ -152,6 +152,10 @@ kulturní variantu). Přidání jazyka = přidání JSON souboru, žádný Dart.
   (`pack.method` + popis), nastavení (zvuky, hudba, zvuky světa, roční
   období, profily — smazání profilu s potvrzením). Nastavení se přesunulo
   z dětského menu sem.
+- **Jazyk UI** (v3.1): menu, karty, oslavy, builder, knížka, Zvěřinec, odznaky i
+  rodičovský koutek jsou lokalizované do všech 9 jazyků (ARB v `lib/l10n/`);
+  jazyk UI = jazyk packu, který dítě hraje. Obsah (lekce, dlaždice, poznámky
+  pro rodiče, fráze průvodce) zůstává v packu / tabulkách per jazyk.
 - **Časový limit** (v3.1, `SessionService`): rodič v koutku nastaví
   0/10/15/20 min za den; počítá se jen čas v popředí, společně pro všechny
   profily. Po limitu se rozehrané kolo dohraje, pak hra vrátí na mapu, kde

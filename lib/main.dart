@@ -8,6 +8,7 @@ import 'services/profile_service.dart';
 import 'services/progress_service.dart';
 import 'services/session_service.dart';
 import 'services/settings_service.dart';
+import 'ui/l10n.dart';
 import 'world/world_clock.dart';
 
 Future<void> main() async {
@@ -37,12 +38,14 @@ Future<void> main() async {
 Language _detectLanguage() {
   // Uložená volba má přednost; autodetekce jen při prvním startu.
   final saved = ProgressService.instance.selectedLanguage;
-  if (saved != null) return saved;
   final code = WidgetsBinding.instance.platformDispatcher.locale.languageCode;
-  return Language.values.firstWhere(
-    (l) => l.name == code,
-    orElse: () => Language.en,
-  );
+  final lang = saved ??
+      Language.values.firstWhere(
+        (l) => l.name == code,
+        orElse: () => Language.en,
+      );
+  AppLanguage.instance.value = lang;
+  return lang;
 }
 
 class SwyperKidsApp extends StatelessWidget {
@@ -52,9 +55,13 @@ class SwyperKidsApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // Změna písma (rodičovský koutek) překreslí celou appku.
     return ListenableBuilder(
-      listenable: SettingsService.instance,
+      listenable:
+          Listenable.merge([SettingsService.instance, AppLanguage.instance]),
       builder: (context, _) => MaterialApp(
       title: 'Swype Kids',
+      locale: AppLanguage.instance.locale,
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(

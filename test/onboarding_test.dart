@@ -5,6 +5,7 @@ import 'package:swype_kids/data/lessons.dart';
 import 'package:swype_kids/screens/onboarding_screen.dart';
 import 'package:swype_kids/services/profile_service.dart';
 import 'package:swype_kids/services/progress_service.dart';
+import 'helpers.dart';
 
 void main() {
   setUp(() async {
@@ -86,7 +87,7 @@ void main() {
   testWidgets('tři kroky bez čtení: vlajka → zvířátko → jméno → hotovo',
       (tester) async {
     Language? done;
-    await tester.pumpWidget(MaterialApp(
+    await tester.pumpWidget(localizedApp(
       home: OnboardingScreen(
         initialLanguage: Language.en,
         onDone: (l) => done = l,

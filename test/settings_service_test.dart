@@ -6,6 +6,7 @@ import 'package:swype_kids/services/settings_service.dart';
 import 'package:swype_kids/ui/app_font.dart';
 import 'package:swype_kids/widgets/key_widget.dart';
 import 'package:swype_kids/widgets/keyboard_widget.dart';
+import 'helpers.dart';
 
 void main() {
   setUp(() async {
@@ -41,7 +42,7 @@ void main() {
     addTearDown(tester.view.reset);
     const lesson = Lesson(
         unlocked: ['Q', 'P', 'M', 'Z'], target: 'MA', display: 'MA', hint: '👩', label: 'MA');
-    Widget board(bool mirrored) => MaterialApp(
+    Widget board(bool mirrored) => localizedApp(
           home: Scaffold(
             body: KeyboardWidget(
               lesson: lesson,

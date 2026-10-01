@@ -9,6 +9,7 @@ import 'package:swype_kids/parent/parent_screen.dart';
 import 'package:swype_kids/services/pack_service.dart';
 import 'package:swype_kids/services/profile_service.dart';
 import 'package:swype_kids/services/progress_service.dart';
+import 'helpers.dart';
 
 void main() {
   setUp(() async {
@@ -31,7 +32,7 @@ void main() {
   testWidgets('brána: špatná odpověď nepustí a vylosuje nový příklad, správná pustí',
       (tester) async {
     var passed = false;
-    await tester.pumpWidget(MaterialApp(
+    await tester.pumpWidget(localizedApp(
       home: ParentGate(random: Random(7), onPassed: () => passed = true),
     ));
     final (a, b, options, idx) = ParentGate.makeQuestion(Random(7));
@@ -80,7 +81,7 @@ void main() {
     await ProgressService.init(profile: 2);
     ProgressService.instance.markCompleted('cs-CZ', 'cs-u1-l1', 3);
 
-    await tester.pumpWidget(const MaterialApp(
+    await tester.pumpWidget(localizedApp(
       home: ParentScreen(language: Language.cs),
     ));
     await tester.runAsync(() => PackService.instance.load(Language.cs));

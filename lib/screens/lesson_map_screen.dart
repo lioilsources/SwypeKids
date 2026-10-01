@@ -20,6 +20,7 @@ import '../world/world_clock.dart';
 import 'game_screen.dart';
 import 'unit_complete_screen.dart' show stickerHeroTag;
 import '../ui/app_font.dart';
+import '../ui/l10n.dart';
 
 /// Mapa lekcí: svislá cesta jednotek a jejich uzlů (lekcí).
 /// Vstupní obrazovka hry — tap na odemčený uzel spouští GameScreen.
@@ -222,7 +223,7 @@ class LessonMapScreenState extends State<LessonMapScreen> {
         unitIndex: 0,
         practice: Unit(
           id: 'practice',
-          title: 'Procvičování',
+          title: context.l.practiceTitle,
           icon: '🔁',
           reward: const CollectibleReward(emoji: '🔁'),
           lessons: lessons,
@@ -425,7 +426,7 @@ class _BedtimeCard extends StatelessWidget {
             const Text('🌙 💤', style: TextStyle(fontSize: 32)),
             const SizedBox(height: 6),
             Text(
-              'Pipi už spí. Zítra zase!',
+              context.l.bedtimeText,
               style: TextStyle(
                 fontFamily: kFont,
                 fontSize: 16,
@@ -536,7 +537,7 @@ class _PracticeCard extends StatelessWidget {
             const Text('🔁', style: TextStyle(fontSize: 26)),
             const SizedBox(width: 10),
             Text(
-              'Procvičování',
+              context.l.practiceTitle,
               style: TextStyle(
                 fontFamily: kFont,
                 fontSize: 15,

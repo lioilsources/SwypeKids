@@ -20,6 +20,7 @@ import 'unit_complete_screen.dart';
 import 'word_sentence_screen.dart';
 import 'win_screen.dart';
 import '../ui/app_font.dart';
+import '../ui/l10n.dart';
 
 /// reviewMix → konkrétní lekce: nejslabší dříve naučené slovo, jehož písmena
 /// jsou mezi `unlocked`. Id a `unlocked` zůstávají z reviewMix lekce (postup
@@ -368,12 +369,17 @@ class _GameScreenState extends State<GameScreen>
                           ),
                           const SizedBox(width: 6),
                           _badge(switch (lesson.type) {
-                            LessonType.listen => '🔊 POSLECH',
-                            LessonType.pictureOnly => '🖼️ OBRÁZEK',
-                            LessonType.missingLetter => '🧩 DOPLŇ',
-                            LessonType.reviewMix => '🔁 OPAKOVÁNÍ',
+                            LessonType.listen => '🔊 ${context.l.typeListen}',
+                            LessonType.pictureOnly =>
+                              '🖼️ ${context.l.typePicture}',
+                            LessonType.missingLetter =>
+                              '🧩 ${context.l.typeGap}',
+                            LessonType.reviewMix =>
+                              '🔁 ${context.l.typeReview}',
                             LessonType.swype =>
-                              isWord ? '🔤 SLOVO' : '🔡 SLABIKA',
+                              isWord
+                                  ? '🔤 ${context.l.typeWord}'
+                                  : '🔡 ${context.l.typeSyllable}',
                           }),
                           const Spacer(),
                           Text(
