@@ -5,6 +5,8 @@ import 'package:swype_kids/characters/mascot.dart';
 import 'package:swype_kids/data/lessons.dart';
 import 'package:swype_kids/screens/lesson_map_screen.dart';
 import 'package:swype_kids/services/progress_service.dart';
+import 'package:swype_kids/services/session_service.dart';
+import 'package:swype_kids/services/settings_service.dart';
 
 void main() {
   setUp(() async {
@@ -129,5 +131,47 @@ void main() {
     expect(find.text('✨ 🐞'), findsOneWidget);
     expect(find.byKey(const ValueKey('secret-cs-u1')), findsNothing);
     await tester.pump(const Duration(seconds: 4));
+  });
+
+  testWidgets('po časovém limitu průvodce spí a lekce nejdou spustit',
+      (tester) async {
+    final t = DateTime.now();
+    final day =
+        '${t.year}-${t.month.toString().padLeft(2, '0')}-${t.day.toString().padLeft(2, '0')}';
+    SharedPreferences.setMockInitialValues({
+      'sk.settings.sessionLimitMin': 10,
+      'sk.session.$day': 11 * 60,
+    });
+    await ProgressService.init();
+    await SettingsService.instance.load();
+    await SessionService.instance.load();
+    expect(SessionService.instance.limitReached, isTrue);
+
+    await tester.pumpWidget(MaterialApp(
+      home: Scaffold(
+        body: LessonMapScreen(
+          language: Language.cs,
+          onLanguageChanged: (_) {},
+        ),
+      ),
+    ));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 400));
+    expect(find.byKey(const ValueKey('bedtime')), findsOneWidget);
+    expect(find.text('💤'), findsWidgets);
+
+    // Lekce pod kartou se nespustí
+    await tester.tap(find.text('👩').at(1), warnIfMissed: false);
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 400));
+    expect(find.byKey(const ValueKey('bedtime')), findsOneWidget);
+    expect(find.text('M, A'), findsOneWidget); // pořád mapa, ne hra
+
+    // Rodič prodlouží → karta zmizí
+    SessionService.instance.extendToday();
+    await tester.pump();
+    expect(find.byKey(const ValueKey('bedtime')), findsNothing);
+    await tester.pump(const Duration(seconds: 3));
+    SettingsService.instance.sessionLimitMin = 0;
   });
 }

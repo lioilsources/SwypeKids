@@ -3,6 +3,7 @@ import '../audio/audio_service.dart';
 import '../data/lessons.dart';
 import '../services/profile_service.dart';
 import '../services/progress_service.dart';
+import '../services/session_service.dart';
 import '../parent/parent_gate.dart';
 import '../parent/parent_screen.dart';
 import '../widgets/language_picker.dart';
@@ -39,11 +40,17 @@ class _HomeShellState extends State<HomeShell> with WidgetsBindingObserver {
     super.dispose();
   }
 
-  /// Ambient hraje jen na mapě a jen když je appka v popředí.
+  /// Ambient hraje jen na mapě a jen když je appka v popředí; čas session
+  /// se počítá jen v popředí.
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
-    _mapKey.currentState?.setAmbientActive(
-        state == AppLifecycleState.resumed && _view == AppView.swype);
+    final resumed = state == AppLifecycleState.resumed;
+    _mapKey.currentState?.setAmbientActive(resumed && _view == AppView.swype);
+    if (resumed) {
+      SessionService.instance.start();
+    } else {
+      SessionService.instance.stop();
+    }
   }
 
   void _setLang(Language l) {

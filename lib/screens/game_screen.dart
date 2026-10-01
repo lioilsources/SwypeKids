@@ -9,6 +9,7 @@ import '../data/models/sentence.dart';
 import '../services/achievement_service.dart';
 import '../services/pack_service.dart';
 import '../services/progress_service.dart';
+import '../services/session_service.dart';
 import '../services/settings_service.dart';
 import '../services/tts_service.dart';
 import '../widgets/challenge_card.dart';
@@ -232,6 +233,12 @@ class _GameScreenState extends State<GameScreen>
       await Navigator.of(context).push(MaterialPageRoute<String>(
         builder: (_) => WordSentenceScreen(pack: widget.pack, word: word),
       ));
+    }
+    // Časový limit: rozehrané kolo se dohraje, další už ne — zpět na mapu,
+    // kde průvodce spí.
+    if (SessionService.instance.limitReached && mounted) {
+      Navigator.of(context).pop();
+      return;
     }
     _nextLesson();
   }

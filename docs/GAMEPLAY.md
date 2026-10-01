@@ -152,6 +152,13 @@ kulturní variantu). Přidání jazyka = přidání JSON souboru, žádný Dart.
   (`pack.method` + popis), nastavení (zvuky, hudba, zvuky světa, roční
   období, profily — smazání profilu s potvrzením). Nastavení se přesunulo
   z dětského menu sem.
+- **Časový limit** (v3.1, `SessionService`): rodič v koutku nastaví
+  0/10/15/20 min za den; počítá se jen čas v popředí, společně pro všechny
+  profily. Po limitu se rozehrané kolo dohraje, pak hra vrátí na mapu, kde
+  průvodce spí 💤 a lekce nejdou spustit (karta „Pipi už spí"). Prodloužit
+  o 10 min jde jen z rodičovského koutku. Nový den začíná od nuly.
+- **Levák** (v3.1, `SettingsService.leftHanded`): klávesnice zrcadlově
+  (Q vpravo), detekce podle skutečných pozic kláves.
 - **Profily sourozenců** (v3.0): každé dítě má avatara, jméno a vlastní
   postup (hvězdy, nálepky, batoh, knížka, odznaky, jazyk). Přepínání ťuknutím
   na avatara v menu, ➕ založí dalšího přes stejný onboarding (max. 6).

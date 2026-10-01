@@ -50,6 +50,8 @@ lib/
 ├── services/
 │   ├── pack_service.dart    # Loads JSON packs (rootBundle); broken pack → falls back to en
 │   ├── achievement_service.dart # GameBadge enum + check(trigger, pack) → newly earned badges
+│   ├── session_service.dart # Daily foreground play time + parent limit (limitReached notifier, extend today)
+│   ├── settings_service.dart # Parent settings: leftHanded, sessionLimitMin (persisted ChangeNotifier)
 │   ├── profile_service.dart # Child profiles (siblings): avatar, name, active id; profile 1 = legacy keys, others sk.p{id}.…
 │   ├── progress_service.dart # shared_preferences: stars, collectibles, language, word bag, book, badges (sk.global)
 │   └── tts_service.dart     # flutter_tts wrapper (listen rounds, sentences)
@@ -93,6 +95,7 @@ iOS, Android, macOS, Linux (check pubspec for active platforms).
 - One pack per language: `assets/packs/{cs,en,de,es,it,fr,zh,ja,pt}.json` (schema v2, see `docs/GAMEPLAY.md` §5)
 - `target` is uppercase diacritic-free Latin (what is swyped); `display` carries accents/tones/hiragana
 - Lesson `type`: `swype` | `listen` | `missingLetter` (`gap` index) | `pictureOnly` | `reviewMix` (resolved at runtime to the weakest learned word, `resolveReviewMix`); unknown types fall back to `swype`
+- Session limit: `SessionService` counts foreground time (HomeShell lifecycle); when reached the game finishes the round and pops, the map shows the bedtime card and blocks lessons; extension only in the parent corner
 - Parent corner (drawer 👪 → `ParentGate` → `ParentScreen`): sound/music/ambient toggles and season override live here, not in the child's drawer; letter status = mean word strength per letter (≥ 4 mastered)
 - Profiles: `ProgressService.init(profile: id)` loads one child's progress (keys namespaced per profile, profile 1 unprefixed so old installs need no migration); switching rebuilds HomeShell screens via a keyed IndexedStack. Settings (sound, season) stay global
 - Badges (`GameBadge`, 14 from roadmap P4) are global across languages; `AchievementService.check` is called on LessonDone / UnitDone (game), SessionStart (map open) — never add streak-style pressure
