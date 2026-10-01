@@ -416,4 +416,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get seasonStickersTitle => 'Season stickers';
+
+  @override
+  String get mapLoadFailed => 'The map could not be loaded';
+
+  @override
+  String get retry => 'Try again';
 }

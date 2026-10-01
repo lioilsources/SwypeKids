@@ -32,6 +32,9 @@ Future<void> main() async {
     statusBarColor: Colors.transparent,
     statusBarIconBrightness: Brightness.light,
   ));
+  // Jazyk UI se nastaví jednou před startem — nikdy ne během buildu
+  // (notifikace během buildu přestaví MaterialApp a ta zas HomeShell → smyčka).
+  AppLanguage.instance.value = _detectLanguage();
   runApp(const SwyperKidsApp());
 }
 
@@ -39,13 +42,11 @@ Language _detectLanguage() {
   // Uložená volba má přednost; autodetekce jen při prvním startu.
   final saved = ProgressService.instance.selectedLanguage;
   final code = WidgetsBinding.instance.platformDispatcher.locale.languageCode;
-  final lang = saved ??
+  return saved ??
       Language.values.firstWhere(
         (l) => l.name == code,
         orElse: () => Language.en,
       );
-  AppLanguage.instance.value = lang;
-  return lang;
 }
 
 class SwyperKidsApp extends StatelessWidget {

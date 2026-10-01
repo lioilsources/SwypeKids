@@ -228,5 +228,7 @@
   "expeditionTitle": "Výprava za opakováním",
   "badgeExpedition": "Výpravník",
   "badgeExpeditionHow": "První týdenní výprava za opakováním",
-  "seasonStickersTitle": "Nálepky ročních období"
+  "seasonStickersTitle": "Nálepky ročních období",
+  "mapLoadFailed": "Mapu se nepodařilo načíst",
+  "retry": "Zkusit znovu"
 }

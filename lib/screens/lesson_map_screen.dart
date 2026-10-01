@@ -184,8 +184,23 @@ class LessonMapScreenState extends State<LessonMapScreen> {
     }
   }
 
+  /// Chyba načtení packu (nebo timeout) — místo věčného 🎹 karta s
+  /// „Zkusit znovu" a textem chyby pro diagnostiku.
+  String? _loadError;
+
   Future<void> _loadPack() async {
-    final pack = await PackService.instance.load(widget.language);
+    if (_loadError != null) setState(() => _loadError = null);
+    final ContentPack pack;
+    try {
+      pack = await PackService.instance
+          .load(widget.language)
+          .timeout(const Duration(seconds: 8));
+    } catch (e) {
+      // ignore: avoid_print
+      print('LessonMapScreen: pack load failed: $e');
+      if (mounted) setState(() => _loadError = '$e');
+      return;
+    }
     // Pack jiného jazyka (fallback en) raději ukázat než nechat mapu na 🎹;
     // jen když mezitím dítě přepnulo jazyk, výsledek zahodit.
     final stillWanted = pack.language == widget.language ||
@@ -324,7 +339,10 @@ class LessonMapScreenState extends State<LessonMapScreen> {
     final pack = _pack;
     return SafeArea(
       child: pack == null
-          ? const Center(child: Text('🎹', style: TextStyle(fontSize: 64)))
+          ? (_loadError != null
+              ? _LoadErrorCard(error: _loadError!, onRetry: _loadPack)
+              : const Center(
+                  child: Text('🎹', style: TextStyle(fontSize: 64))))
           : Column(
               children: [
                 // ── Top bar ────────────────────────────────────────────
@@ -496,6 +514,56 @@ class _BedtimeCard extends StatelessWidget {
                 fontSize: 16,
                 fontWeight: FontWeight.w800,
                 color: Colors.white.withValues(alpha: 0.85),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _LoadErrorCard extends StatelessWidget {
+  final String error;
+  final VoidCallback onRetry;
+  const _LoadErrorCard({required this.error, required this.onRetry});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(24),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Text('🎹 😕', style: TextStyle(fontSize: 56)),
+            const SizedBox(height: 10),
+            Text(
+              context.l.mapLoadFailed,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontFamily: kFont,
+                fontSize: 18,
+                fontWeight: FontWeight.w900,
+                color: Colors.white,
+              ),
+            ),
+            const SizedBox(height: 14),
+            ElevatedButton(
+              key: const ValueKey('retry-load'),
+              onPressed: onRetry,
+              child: Text(context.l.retry),
+            ),
+            const SizedBox(height: 14),
+            // Text chyby pro rodiče / vývojáře (screenshot do hlášení).
+            Text(
+              error,
+              textAlign: TextAlign.center,
+              maxLines: 6,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(
+                fontSize: 11,
+                color: Colors.white.withValues(alpha: 0.6),
               ),
             ),
           ],

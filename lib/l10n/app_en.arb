@@ -125,5 +125,7 @@
   "expeditionTitle": "Review expedition",
   "badgeExpedition": "Expeditioner",
   "badgeExpeditionHow": "First weekly review expedition",
-  "seasonStickersTitle": "Season stickers"
+  "seasonStickersTitle": "Season stickers",
+  "mapLoadFailed": "The map could not be loaded",
+  "retry": "Try again"
 }

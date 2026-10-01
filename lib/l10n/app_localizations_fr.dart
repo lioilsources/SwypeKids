@@ -416,4 +416,10 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get seasonStickersTitle => 'Autocollants des saisons';
+
+  @override
+  String get mapLoadFailed => 'Impossible de charger la carte';
+
+  @override
+  String get retry => 'Réessayer';
 }

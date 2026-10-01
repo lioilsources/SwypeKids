@@ -34,7 +34,6 @@ class _HomeShellState extends State<HomeShell> with WidgetsBindingObserver {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
-    AppLanguage.instance.value = _lang;
   }
 
   @override
@@ -62,11 +61,6 @@ class _HomeShellState extends State<HomeShell> with WidgetsBindingObserver {
     setState(() => _lang = l);
   }
 
-  @override
-  void didUpdateWidget(covariant HomeShell old) {
-    super.didUpdateWidget(old);
-    AppLanguage.instance.value = _lang;
-  }
 
   /// Přepnutí sourozence: načte jeho postup a znovu postaví obrazovky.
   Future<void> _switchProfile(int id) async {

@@ -29,8 +29,12 @@ class PackService {
   Future<ContentPack> load(Language lang) {
     final hit = _cache[lang];
     if (hit != null) return Future.value(hit);
-    return _inFlight[lang] ??=
-        _load(lang).whenComplete(() => _inFlight.remove(lang));
+    // Pozor: callback nesmí vrátit Future — `() => _inFlight.remove(lang)`
+    // vracel právě tuhle Future a whenComplete pak čekal sám na sebe
+    // (mapa navždy na 🎹, v2.6.0–2.6.1).
+    return _inFlight[lang] ??= _load(lang).whenComplete(() {
+      _inFlight.remove(lang);
+    });
   }
 
   Future<ContentPack> _load(Language lang) async {
@@ -39,12 +43,17 @@ class PackService {
       // Bajty + utf8.decode místo loadString: ten assety nad 50 KB dekóduje
       // v samostatném izolátu, který na iOS (i ve widget testech) nedoběhl —
       // mapa pak zůstala na 🎹. 70 KB se na hlavním izolátu dekóduje za ~1 ms.
+      final sw = Stopwatch()..start();
       final bytes = await rootBundle.load('assets/packs/${lang.name}.json');
       final raw = utf8.decode(
           bytes.buffer.asUint8List(bytes.offsetInBytes, bytes.lengthInBytes));
       pack = ContentPack.fromJson(
           (jsonDecode(raw) as Map).cast<String, dynamic>());
-    } catch (e) {
+      // ignore: avoid_print
+      print('PackService: ${lang.name} loaded in ${sw.elapsedMilliseconds} ms');
+    } catch (e, st) {
+      // ignore: avoid_print
+      print('PackService: ${lang.name} failed: $e\n$st');
       // Rozbitý pack by neprošel testem; kdyby přesto chyběl, dítě dostane
       // anglický pack místo prázdné obrazovky.
       if (lang == Language.en) rethrow;

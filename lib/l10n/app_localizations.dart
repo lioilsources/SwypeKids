@@ -867,6 +867,18 @@ abstract class AppLocalizations {
   /// In cs, this message translates to:
   /// **'Nálepky ročních období'**
   String get seasonStickersTitle;
+
+  /// No description provided for @mapLoadFailed.
+  ///
+  /// In cs, this message translates to:
+  /// **'Mapu se nepodařilo načíst'**
+  String get mapLoadFailed;
+
+  /// No description provided for @retry.
+  ///
+  /// In cs, this message translates to:
+  /// **'Zkusit znovu'**
+  String get retry;
 }
 
 class _AppLocalizationsDelegate

@@ -228,5 +228,7 @@
   "expeditionTitle": "Expédition de révision",
   "badgeExpedition": "Expéditionnaire",
   "badgeExpeditionHow": "Première expédition de révision de la semaine",
-  "seasonStickersTitle": "Autocollants des saisons"
+  "seasonStickersTitle": "Autocollants des saisons",
+  "mapLoadFailed": "Impossible de charger la carte",
+  "retry": "Réessayer"
 }

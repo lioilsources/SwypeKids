@@ -228,5 +228,7 @@
   "expeditionTitle": "Expedição de revisão",
   "badgeExpedition": "Expedicionário",
   "badgeExpeditionHow": "Primeira expedição semanal de revisão",
-  "seasonStickersTitle": "Figurinhas das estações"
+  "seasonStickersTitle": "Figurinhas das estações",
+  "mapLoadFailed": "Não foi possível carregar o mapa",
+  "retry": "Tentar de novo"
 }

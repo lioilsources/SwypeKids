@@ -415,4 +415,10 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get seasonStickersTitle => 'Figurinhas das estações';
+
+  @override
+  String get mapLoadFailed => 'Não foi possível carregar o mapa';
+
+  @override
+  String get retry => 'Tentar de novo';
 }

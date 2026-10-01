@@ -228,5 +228,7 @@
   "expeditionTitle": "Wiederholungs-Expedition",
   "badgeExpedition": "Expeditionsheld",
   "badgeExpeditionHow": "Erste wöchentliche Wiederholungs-Expedition",
-  "seasonStickersTitle": "Jahreszeiten-Sticker"
+  "seasonStickersTitle": "Jahreszeiten-Sticker",
+  "mapLoadFailed": "Die Karte konnte nicht geladen werden",
+  "retry": "Erneut versuchen"
 }
