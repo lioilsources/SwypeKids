@@ -218,5 +218,11 @@
   "statMinutesWeek": "minutos nesta semana",
   "letterMastered": "dominada",
   "letterPracticing": "praticando",
-  "letterUnseen": "ainda não viu"
+  "letterUnseen": "ainda não viu",
+  "typeHunt": "SOM",
+  "typeJoin": "SÍLABAS",
+  "typeRhyme": "RIMA",
+  "promptHunt": "Que letra você ouviu? Toque nela",
+  "promptJoin": "Junte as sílabas: deslize a palavra inteira",
+  "promptRhyme": "O que rima? Toque na figura"
 }

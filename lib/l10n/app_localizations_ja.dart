@@ -382,4 +382,22 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get letterUnseen => 'まだ出ていない';
+
+  @override
+  String get typeHunt => 'おと';
+
+  @override
+  String get typeJoin => 'おとつなぎ';
+
+  @override
+  String get typeRhyme => 'いん';
+
+  @override
+  String get promptHunt => 'どのもじがきこえた？タップしてね';
+
+  @override
+  String get promptJoin => 'おとをつなげて、ことばぜんぶをなぞろう';
+
+  @override
+  String get promptRhyme => 'おなじひびきはどれ？えをタップしてね';
 }

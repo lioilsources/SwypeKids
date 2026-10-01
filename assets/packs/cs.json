@@ -1506,6 +1506,307 @@
           "review": true
         }
       ]
+    },
+    {
+      "id": "cs-u13",
+      "title": "Hlásky a rýmy",
+      "icon": "👂",
+      "reward": {
+        "emoji": "🦁",
+        "name": "L",
+        "label": "lev"
+      },
+      "scene": {
+        "biome": "meadow"
+      },
+      "lessons": [
+        {
+          "id": "cs-u13-l1",
+          "type": "letterHunt",
+          "unlocked": [
+            "M",
+            "A",
+            "T",
+            "B",
+            "E",
+            "L",
+            "O",
+            "K",
+            "S",
+            "N",
+            "P",
+            "I",
+            "U",
+            "D",
+            "V",
+            "J",
+            "R",
+            "Z"
+          ],
+          "target": "M",
+          "display": "M",
+          "hint": "🐭",
+          "label": "M",
+          "parentNote": "Lov hlásky: průvodce řekne „M“ a dítě ťukne na správnou klávesu — izolace hlásky bez psaní."
+        },
+        {
+          "id": "cs-u13-l2",
+          "type": "letterHunt",
+          "unlocked": [
+            "M",
+            "A",
+            "T",
+            "B",
+            "E",
+            "L",
+            "O",
+            "K",
+            "S",
+            "N",
+            "P",
+            "I",
+            "U",
+            "D",
+            "V",
+            "J",
+            "R",
+            "Z"
+          ],
+          "target": "S",
+          "display": "S",
+          "hint": "☀️",
+          "label": "S",
+          "parentNote": "Lov hlásky S. Doma: řekněte hlásku a dítě ukáže věc, která tak začíná."
+        },
+        {
+          "id": "cs-u13-l3",
+          "type": "syllableJoin",
+          "unlocked": [
+            "M",
+            "A",
+            "T",
+            "B",
+            "E",
+            "L",
+            "O",
+            "K",
+            "S",
+            "N",
+            "P",
+            "I",
+            "U",
+            "D",
+            "V",
+            "J",
+            "R",
+            "Z"
+          ],
+          "target": "MAMA",
+          "display": "MÁMA",
+          "hint": "👩",
+          "label": "MÁ-MA",
+          "parts": [
+            "MÁ",
+            "MA"
+          ],
+          "parentNote": "Spojování slabik: MÁ + MA přiletí zvlášť, dítě je swypne za sebou jako jedno slovo."
+        },
+        {
+          "id": "cs-u13-l4",
+          "type": "syllableJoin",
+          "unlocked": [
+            "M",
+            "A",
+            "T",
+            "B",
+            "E",
+            "L",
+            "O",
+            "K",
+            "S",
+            "N",
+            "P",
+            "I",
+            "U",
+            "D",
+            "V",
+            "J",
+            "R",
+            "Z"
+          ],
+          "target": "KOLO",
+          "display": "KOLO",
+          "hint": "🚲",
+          "label": "KO-LO",
+          "parts": [
+            "KO",
+            "LO"
+          ],
+          "parentNote": "Spojování KO + LO. Vytleskejte slabiky a pak slovo řekněte vcelku."
+        },
+        {
+          "id": "cs-u13-l5",
+          "type": "rhymePick",
+          "unlocked": [
+            "M",
+            "A",
+            "T",
+            "B",
+            "E",
+            "L",
+            "O",
+            "K",
+            "S",
+            "N",
+            "P",
+            "I",
+            "U",
+            "D",
+            "V",
+            "J",
+            "R",
+            "Z"
+          ],
+          "target": "PES",
+          "display": "PES",
+          "hint": "🐶",
+          "label": "PES",
+          "options": [
+            {
+              "emoji": "🌲",
+              "display": "LES"
+            },
+            {
+              "emoji": "🚲",
+              "display": "KOLO"
+            },
+            {
+              "emoji": "👃",
+              "display": "NOS"
+            }
+          ],
+          "answer": 0,
+          "parentNote": "Rým: co se rýmuje s PES? Fonologické uvědomění — dítě poslouchá konec slova, ne začátek."
+        },
+        {
+          "id": "cs-u13-l6",
+          "type": "rhymePick",
+          "unlocked": [
+            "M",
+            "A",
+            "T",
+            "B",
+            "E",
+            "L",
+            "O",
+            "K",
+            "S",
+            "N",
+            "P",
+            "I",
+            "U",
+            "D",
+            "V",
+            "J",
+            "R",
+            "Z"
+          ],
+          "target": "RAK",
+          "display": "RAK",
+          "hint": "🦞",
+          "label": "RAK",
+          "options": [
+            {
+              "emoji": "🦷",
+              "display": "ZUB"
+            },
+            {
+              "emoji": "🚂",
+              "display": "VLAK"
+            },
+            {
+              "emoji": "🌙",
+              "display": "MĚSÍC"
+            }
+          ],
+          "answer": 1,
+          "parentNote": "Rým RAK – VLAK. Doma zkuste vymýšlet další: mrak, drak, pták."
+        },
+        {
+          "id": "cs-u13-l7",
+          "type": "rhymePick",
+          "unlocked": [
+            "M",
+            "A",
+            "T",
+            "B",
+            "E",
+            "L",
+            "O",
+            "K",
+            "S",
+            "N",
+            "P",
+            "I",
+            "U",
+            "D",
+            "V",
+            "J",
+            "R",
+            "Z"
+          ],
+          "target": "ZUB",
+          "display": "ZUB",
+          "hint": "🦷",
+          "label": "ZUB",
+          "options": [
+            {
+              "emoji": "🐟",
+              "display": "RYBA"
+            },
+            {
+              "emoji": "🌳",
+              "display": "DUB"
+            },
+            {
+              "emoji": "🥣",
+              "display": "MISKA"
+            }
+          ],
+          "answer": 1,
+          "parentNote": "Rým ZUB – DUB: obě slova končí na B, které se čte jako „p“ — dítě slyší rým i tak."
+        },
+        {
+          "id": "cs-u13-l8",
+          "type": "reviewMix",
+          "unlocked": [
+            "M",
+            "A",
+            "T",
+            "B",
+            "E",
+            "L",
+            "O",
+            "K",
+            "S",
+            "N",
+            "P",
+            "I",
+            "U",
+            "D",
+            "V",
+            "J",
+            "R",
+            "Z"
+          ],
+          "target": "LES",
+          "display": "LES",
+          "hint": "🌲",
+          "label": "LES",
+          "parentNote": "Opakování: hra vybere nejslabší slovo ze všech naučených.",
+          "review": true
+        }
+      ]
     }
   ],
   "sentence": {

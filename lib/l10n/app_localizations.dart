@@ -807,6 +807,42 @@ abstract class AppLocalizations {
   /// In cs, this message translates to:
   /// **'ještě nepotkalo'**
   String get letterUnseen;
+
+  /// No description provided for @typeHunt.
+  ///
+  /// In cs, this message translates to:
+  /// **'HLÁSKA'**
+  String get typeHunt;
+
+  /// No description provided for @typeJoin.
+  ///
+  /// In cs, this message translates to:
+  /// **'SLABIKY'**
+  String get typeJoin;
+
+  /// No description provided for @typeRhyme.
+  ///
+  /// In cs, this message translates to:
+  /// **'RÝM'**
+  String get typeRhyme;
+
+  /// No description provided for @promptHunt.
+  ///
+  /// In cs, this message translates to:
+  /// **'Které písmenko slyšíš? Ťukni na něj'**
+  String get promptHunt;
+
+  /// No description provided for @promptJoin.
+  ///
+  /// In cs, this message translates to:
+  /// **'Spoj slabiky — přejeď celé slovo'**
+  String get promptJoin;
+
+  /// No description provided for @promptRhyme.
+  ///
+  /// In cs, this message translates to:
+  /// **'Co se rýmuje? Ťukni na obrázek'**
+  String get promptRhyme;
 }
 
 class _AppLocalizationsDelegate

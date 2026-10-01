@@ -385,4 +385,22 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get letterUnseen => 'pas encore vue';
+
+  @override
+  String get typeHunt => 'SON';
+
+  @override
+  String get typeJoin => 'SYLLABES';
+
+  @override
+  String get typeRhyme => 'RIME';
+
+  @override
+  String get promptHunt => 'Quelle lettre entends-tu ? Touche-la';
+
+  @override
+  String get promptJoin => 'Relie les syllabes : glisse tout le mot';
+
+  @override
+  String get promptRhyme => 'Qu\'est-ce qui rime ? Touche l\'image';
 }

@@ -218,5 +218,11 @@
   "statMinutesWeek": "本周的分钟数",
   "letterMastered": "掌握",
   "letterPracticing": "练习中",
-  "letterUnseen": "还没遇到"
+  "letterUnseen": "还没遇到",
+  "typeHunt": "字母音",
+  "typeJoin": "音节",
+  "typeRhyme": "押韵",
+  "promptHunt": "听到了哪个字母？点一点",
+  "promptJoin": "把音节连起来——滑出整个词",
+  "promptRhyme": "哪个押韵？点图片"
 }

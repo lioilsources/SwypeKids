@@ -89,7 +89,7 @@ void main() {
     await tester.pump(const Duration(milliseconds: 300));
 
     expect(find.text('Přehled'), findsOneWidget);
-    expect(find.text('1 / 54'), findsOneWidget);
+    expect(find.text('1 / 62'), findsOneWidget);
     expect(find.textContaining('Metoda: analyticko'), findsOneWidget);
     expect(find.byKey(const ValueKey('music-toggle')), findsOneWidget);
     expect(find.byKey(const ValueKey('season-winter')), findsOneWidget);

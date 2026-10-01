@@ -218,5 +218,11 @@
   "statMinutesWeek": "minut tento týden",
   "letterMastered": "zvládnuté",
   "letterPracticing": "procvičuje",
-  "letterUnseen": "ještě nepotkalo"
+  "letterUnseen": "ještě nepotkalo",
+  "typeHunt": "HLÁSKA",
+  "typeJoin": "SLABIKY",
+  "typeRhyme": "RÝM",
+  "promptHunt": "Které písmenko slyšíš? Ťukni na něj",
+  "promptJoin": "Spoj slabiky — přejeď celé slovo",
+  "promptRhyme": "Co se rýmuje? Ťukni na obrázek"
 }

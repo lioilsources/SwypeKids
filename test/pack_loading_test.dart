@@ -11,6 +11,13 @@ import 'package:swype_kids/world/world_clock.dart';
 /// Jazyky s kompletními poznámkami pro rodiče (roadmap v2.3: cs + en).
 const _withParentNotes = {Language.cs, Language.en};
 
+const _diacritics = {
+  'Á': 'A', 'É': 'E', 'Ě': 'E', 'Í': 'I', 'Ó': 'O', 'Ú': 'U', 'Ů': 'U', 'Ý': 'Y',
+  'Š': 'S', 'Č': 'C', 'Ř': 'R', 'Ž': 'Z', 'Ť': 'T', 'Ď': 'D', 'Ň': 'N',
+};
+String _stripDiacritics(String s) =>
+    s.split('').map((c) => _diacritics[c] ?? c).join();
+
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
   final keyboardLetters = kRows.expand((r) => r).toSet();
@@ -73,6 +80,27 @@ void main() {
                 .where((l) => unlocked.containsAll(l.target.split('')));
             expect(earlier, isNotEmpty,
                 reason: '${lesson.id}: reviewMix bez dřívějších slov');
+          }
+          switch (lesson.type) {
+            case LessonType.letterHunt:
+              expect(lesson.target.length, 1,
+                  reason: '${lesson.id}: letterHunt má jedno písmeno');
+            case LessonType.syllableJoin:
+              expect(lesson.parts.length, greaterThanOrEqualTo(2),
+                  reason: '${lesson.id}: syllableJoin potřebuje parts');
+              expect(_stripDiacritics(lesson.parts.join()).toUpperCase(),
+                  lesson.target,
+                  reason: '${lesson.id}: parts neodpovídají target');
+            case LessonType.rhymePick:
+              expect(lesson.options.length, 3,
+                  reason: '${lesson.id}: rhymePick má tři možnosti');
+              expect(lesson.answer, inInclusiveRange(0, 2));
+              expect(lesson.options.map((o) => o.display).toSet().length, 3,
+                  reason: '${lesson.id}: duplicitní možnosti');
+              expect(lesson.options.map((o) => o.emoji).toSet().length, 3);
+            default:
+              expect(lesson.parts, isEmpty);
+              expect(lesson.options, isEmpty);
           }
           if (lesson.gap != null) {
             expect(lesson.type, LessonType.missingLetter,

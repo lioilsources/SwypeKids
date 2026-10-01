@@ -385,4 +385,22 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get letterUnseen => 'ainda não viu';
+
+  @override
+  String get typeHunt => 'SOM';
+
+  @override
+  String get typeJoin => 'SÍLABAS';
+
+  @override
+  String get typeRhyme => 'RIMA';
+
+  @override
+  String get promptHunt => 'Que letra você ouviu? Toque nela';
+
+  @override
+  String get promptJoin => 'Junte as sílabas: deslize a palavra inteira';
+
+  @override
+  String get promptRhyme => 'O que rima? Toque na figura';
 }

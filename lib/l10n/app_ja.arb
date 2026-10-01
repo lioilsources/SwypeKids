@@ -218,5 +218,11 @@
   "statMinutesWeek": "今週の分数",
   "letterMastered": "できた",
   "letterPracticing": "練習中",
-  "letterUnseen": "まだ出ていない"
+  "letterUnseen": "まだ出ていない",
+  "typeHunt": "おと",
+  "typeJoin": "おとつなぎ",
+  "typeRhyme": "いん",
+  "promptHunt": "どのもじがきこえた？タップしてね",
+  "promptJoin": "おとをつなげて、ことばぜんぶをなぞろう",
+  "promptRhyme": "おなじひびきはどれ？えをタップしてね"
 }

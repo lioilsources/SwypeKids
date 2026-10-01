@@ -218,5 +218,11 @@
   "statMinutesWeek": "minuti questa settimana",
   "letterMastered": "acquisita",
   "letterPracticing": "in esercizio",
-  "letterUnseen": "non ancora vista"
+  "letterUnseen": "non ancora vista",
+  "typeHunt": "SUONO",
+  "typeJoin": "SILLABE",
+  "typeRhyme": "RIMA",
+  "promptHunt": "Quale lettera senti? Toccala",
+  "promptJoin": "Unisci le sillabe: scorri tutta la parola",
+  "promptRhyme": "Cosa fa rima? Tocca la figura"
 }

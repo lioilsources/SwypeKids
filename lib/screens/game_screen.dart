@@ -154,7 +154,8 @@ class _GameScreenState extends State<GameScreen>
   void _startLesson() {
     _attempts = 0;
     _revealed = false;
-    if (_lesson.type == LessonType.listen) {
+    if (_lesson.type == LessonType.listen ||
+        _lesson.type == LessonType.letterHunt) {
       TtsService.speak(_lesson.display, _language);
     }
   }
@@ -172,10 +173,19 @@ class _GameScreenState extends State<GameScreen>
       _path = path;
       _livePath = [];
     });
+    _resolveAttempt(path.join('') == _lesson.target);
+  }
 
+  /// Rýmové kolo: výběr obrázku místo swype.
+  void _onRhymePick(int index) {
+    if (_status != GameStatus.idle) return;
+    AudioService.instance.play(Sfx.tap);
+    _resolveAttempt(index == _lesson.answer);
+  }
+
+  void _resolveAttempt(bool correct) {
     _attempts++;
-    final result = path.join('');
-    if (result == _lesson.target) {
+    if (correct) {
       final stars = _attempts == 1 ? 3 : (_attempts == 2 ? 2 : 1);
       final progress = ProgressService.instance;
       if (!_isPractice) {
@@ -319,6 +329,9 @@ class _GameScreenState extends State<GameScreen>
             LessonType.listen => CardMode.listen,
             LessonType.pictureOnly => CardMode.picture,
             LessonType.missingLetter => CardMode.gap,
+            LessonType.letterHunt => CardMode.hunt,
+            LessonType.syllableJoin => CardMode.join,
+            LessonType.rhymePick => CardMode.rhyme,
             LessonType.swype || LessonType.reviewMix => CardMode.full,
           };
 
@@ -376,6 +389,12 @@ class _GameScreenState extends State<GameScreen>
                               '🧩 ${context.l.typeGap}',
                             LessonType.reviewMix =>
                               '🔁 ${context.l.typeReview}',
+                            LessonType.letterHunt =>
+                              '👂 ${context.l.typeHunt}',
+                            LessonType.syllableJoin =>
+                              '🧱 ${context.l.typeJoin}',
+                            LessonType.rhymePick =>
+                              '🎵 ${context.l.typeRhyme}',
                             LessonType.swype =>
                               isWord
                                   ? '🔤 ${context.l.typeWord}'
@@ -430,14 +449,14 @@ class _GameScreenState extends State<GameScreen>
                                 ],
                               ),
                             ),
-                            Expanded(flex: 7, child: _keyboard(lesson)),
+                            Expanded(flex: 7, child: _input(lesson)),
                           ],
                         ),
                       )
                     else ...[
                       _card(lesson, mode),
                       const SizedBox(height: 8),
-                      Expanded(child: _keyboard(lesson)),
+                      Expanded(child: _input(lesson)),
                       _legend(lesson),
                     ],
                   ],
@@ -457,8 +476,21 @@ class _GameScreenState extends State<GameScreen>
         shake: _shake,
         mode: mode,
         emojiFor: _emojiFor,
-        onReplayAudio: lesson.type == LessonType.listen ? _replayAudio : null,
+        onReplayAudio: lesson.type == LessonType.listen ||
+                lesson.type == LessonType.letterHunt
+            ? _replayAudio
+            : null,
       );
+
+  /// Vstup kola: klávesnice, nebo u rýmu tři obrázky.
+  Widget _input(Lesson lesson) => lesson.type == LessonType.rhymePick
+      ? _RhymeOptions(
+          key: ValueKey('rhyme-$_idx'),
+          options: lesson.options,
+          revealed: _revealed ? lesson.answer : null,
+          onPick: _onRhymePick,
+        )
+      : _keyboard(lesson);
 
   Widget _keyboard(Lesson lesson) => Padding(
         padding: const EdgeInsets.symmetric(horizontal: 6),
@@ -597,6 +629,68 @@ class _WordBagChip extends StatelessWidget {
             color: Colors.white,
           ),
         ),
+      ),
+    );
+  }
+}
+
+/// Tři obrázky k rýmu; po chybě se správný rozsvítí (scaffolding).
+class _RhymeOptions extends StatelessWidget {
+  final List<RhymeOption> options;
+  final int? revealed;
+  final ValueChanged<int> onPick;
+
+  const _RhymeOptions({
+    super.key,
+    required this.options,
+    required this.revealed,
+    required this.onPick,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Wrap(
+        spacing: 14,
+        runSpacing: 14,
+        alignment: WrapAlignment.center,
+        children: [
+          for (var i = 0; i < options.length; i++)
+            GestureDetector(
+              key: ValueKey('rhyme-option-$i'),
+              onTap: () => onPick(i),
+              child: Container(
+                width: 112,
+                padding: const EdgeInsets.symmetric(vertical: 12),
+                decoration: BoxDecoration(
+                  color: Colors.white.withValues(alpha: 0.08),
+                  borderRadius: BorderRadius.circular(22),
+                  border: Border.all(
+                    color: revealed == i
+                        ? const Color(0xFFFFD200)
+                        : Colors.white.withValues(alpha: 0.15),
+                    width: revealed == i ? 3 : 1,
+                  ),
+                ),
+                child: Column(
+                  children: [
+                    Text(options[i].emoji,
+                        style: const TextStyle(fontSize: 44)),
+                    const SizedBox(height: 4),
+                    Text(
+                      options[i].display,
+                      style: TextStyle(
+                        fontFamily: kFont,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w900,
+                        color: Colors.white.withValues(alpha: 0.9),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+        ],
       ),
     );
   }

@@ -115,5 +115,11 @@
   "statMinutesWeek": "minutes this week",
   "letterMastered": "mastered",
   "letterPracticing": "practising",
-  "letterUnseen": "not met yet"
+  "letterUnseen": "not met yet",
+  "typeHunt": "SOUND",
+  "typeJoin": "SYLLABLES",
+  "typeRhyme": "RHYME",
+  "promptHunt": "Which letter did you hear? Tap it",
+  "promptJoin": "Join the syllables — swipe the whole word",
+  "promptRhyme": "What rhymes? Tap the picture"
 }

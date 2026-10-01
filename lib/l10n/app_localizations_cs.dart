@@ -386,4 +386,22 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get letterUnseen => 'ještě nepotkalo';
+
+  @override
+  String get typeHunt => 'HLÁSKA';
+
+  @override
+  String get typeJoin => 'SLABIKY';
+
+  @override
+  String get typeRhyme => 'RÝM';
+
+  @override
+  String get promptHunt => 'Které písmenko slyšíš? Ťukni na něj';
+
+  @override
+  String get promptJoin => 'Spoj slabiky — přejeď celé slovo';
+
+  @override
+  String get promptRhyme => 'Co se rýmuje? Ťukni na obrázek';
 }
