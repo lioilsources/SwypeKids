@@ -1,5 +1,11 @@
 # Changelog
 
+## [01/10/2026] — v2.3.2
+- Slovo hned do věty: po novém slově v batohu se otevře mini builder s tím slovem
+- 📖 Má knížka: ukládání složených vět, čtení nahlas; 🎹 vzít slovo z builderu do hry
+- Pásmo A hotové pro všech 9 jazyků (cs 54, en 51, de 58, es 59, it 59, fr 57, pt 50, zh 55, ja 41 lekcí)
+- Poznámky pro rodiče u každé lekce ve všech jazycích
+
 ## [30/09/2026] — v2.3.1
 - Poznámky pro rodiče u každé cs/en lekce (dlouhý stisk lekce na mapě)
 - Nové typy kol: 🧩 doplňovačka (slovo s dírou) a 🖼️ jen obrázek
