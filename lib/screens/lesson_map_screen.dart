@@ -9,6 +9,7 @@ import '../services/achievement_service.dart';
 import '../services/pack_service.dart';
 import '../services/profile_service.dart';
 import '../services/progress_service.dart';
+import '../services/session_service.dart';
 import '../services/tts_service.dart';
 import '../widgets/badge_chip.dart';
 import '../widgets/language_picker.dart';
@@ -83,11 +84,13 @@ class LessonMapScreenState extends State<LessonMapScreen> {
     _loadPack();
     _scroll.addListener(() => _scrollOffset.value = _scroll.offset);
     WorldClockService.instance.addListener(_syncAmbient);
+    SessionService.instance.addListener(_onSessionChanged);
   }
 
   @override
   void dispose() {
     WorldClockService.instance.removeListener(_syncAmbient);
+    SessionService.instance.removeListener(_onSessionChanged);
     AudioService.instance.setAmbient(null);
     AudioService.instance.setMusic(false);
     _badgeTimer?.cancel();
@@ -98,9 +101,27 @@ class LessonMapScreenState extends State<LessonMapScreen> {
   }
 
   /// Dítě našlo ✨ v kousku světa: nálepka biotopu do Zvěřince.
+  /// Časový limit: průvodce spí, nic se nespouští, „dobrou noc" nahlas (jednou).
+  bool get _bedtime => SessionService.instance.limitReached;
+  bool _saidGoodNight = false;
+
+  void _onSessionChanged() {
+    if (!mounted) return;
+    setState(() {});
+    if (_bedtime && !_saidGoodNight) {
+      _saidGoodNight = true;
+      TtsService.speak(
+        Mascot.greeting(widget.language, ProfileService.instance.name,
+            night: true),
+        widget.language,
+      );
+    }
+    if (!_bedtime) _saidGoodNight = false;
+  }
+
   void _findSecret(Biome biome) {
     final pack = _pack;
-    if (pack == null) return;
+    if (pack == null || _bedtime) return;
     ProgressService.instance.addCollectible(pack.id, biome.secret);
     AudioService.instance.play(Sfx.sticker);
     _secretTimer?.cancel();
@@ -167,6 +188,7 @@ class LessonMapScreenState extends State<LessonMapScreen> {
   }
 
   Future<void> _openLesson(int unitIndex, int lessonIndex) async {
+    if (_bedtime) return;
     final pack = _pack!;
     AudioService.instance.play(Sfx.tap);
     AudioService.instance.setAmbient(null); // během kola je ticho (jen hra)
@@ -189,6 +211,7 @@ class LessonMapScreenState extends State<LessonMapScreen> {
   static const _practiceMinLearned = 3;
 
   Future<void> _openPractice(List<Lesson> lessons) async {
+    if (_bedtime) return;
     AudioService.instance.play(Sfx.tap);
     AudioService.instance.setAmbient(null);
     AudioService.instance.setMusic(false);
@@ -275,7 +298,8 @@ class LessonMapScreenState extends State<LessonMapScreen> {
                       ),
                       const SizedBox(width: 6),
                       Mascot(
-                        mood: world.isNight && _mood == MascotMood.idle
+                        mood: (world.isNight || _bedtime) &&
+                                _mood == MascotMood.idle
                             ? MascotMood.sleep
                             : _mood,
                         size: 26,
@@ -327,7 +351,9 @@ class LessonMapScreenState extends State<LessonMapScreen> {
 
                 // ── Cesta jednotek ─────────────────────────────────────
                 Expanded(
-                  child: Builder(builder: (context) {
+                  child: Stack(
+                    children: [
+                      Positioned.fill(child: Builder(builder: (context) {
                     final weakest = ProgressService.instance
                         .weakestLearned(pack, limit: _practiceSize);
                     final showPractice = weakest.length >= _practiceMinLearned;
@@ -359,10 +385,56 @@ class LessonMapScreenState extends State<LessonMapScreen> {
                         ),
                       ),
                     );
-                  }),
+                  })),
+                      if (_bedtime)
+                        const Positioned.fill(child: _BedtimeCard()),
+                    ],
+                  ),
                 ),
               ],
             ),
+    );
+  }
+}
+
+/// Po časovém limitu: průvodce spí, mapa nepustí další lekci. Menu zůstává
+/// dostupné — rodič prodlouží jen z koutku.
+class _BedtimeCard extends StatelessWidget {
+  const _BedtimeCard();
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      key: const ValueKey('bedtime'),
+      color: const Color(0xFF0B1020).withValues(alpha: 0.6),
+      alignment: Alignment.center,
+      child: Container(
+        margin: const EdgeInsets.all(24),
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+        decoration: BoxDecoration(
+          color: const Color(0xFF1A1A2E),
+          borderRadius: BorderRadius.circular(24),
+          border: Border.all(color: Colors.white.withValues(alpha: 0.15)),
+        ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Mascot(mood: MascotMood.sleep, size: 72),
+            const SizedBox(height: 8),
+            const Text('🌙 💤', style: TextStyle(fontSize: 32)),
+            const SizedBox(height: 6),
+            Text(
+              'Pipi už spí. Zítra zase!',
+              style: TextStyle(
+                fontFamily: 'Nunito',
+                fontSize: 16,
+                fontWeight: FontWeight.w800,
+                color: Colors.white.withValues(alpha: 0.85),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
