@@ -419,6 +419,7 @@ class _GameScreenState extends State<GameScreen>
                             '⭐ $_sessionStars',
                             style: TextStyle(
                               fontFamily: kFont,
+                              fontFamilyFallback: kFontFallback,
                               fontSize: 14,
                               fontWeight: FontWeight.w800,
                               color: Color(0xFFFFD200),
@@ -548,6 +549,7 @@ class _GameScreenState extends State<GameScreen>
                   Text(l,
                       style: TextStyle(
                         fontFamily: kFont,
+                        fontFamilyFallback: kFontFallback,
                         fontSize: 11,
                         fontWeight: FontWeight.w800,
                         color: col,
@@ -620,6 +622,7 @@ class _GameScreenState extends State<GameScreen>
           text,
           style: TextStyle(
             fontFamily: kFont,
+            fontFamilyFallback: kFontFallback,
             fontSize: 11,
             fontWeight: FontWeight.w800,
             color: Color(0xFFA0C4FF),
@@ -657,6 +660,7 @@ class _WordBagChip extends StatelessWidget {
           '🎒 $word',
           style: TextStyle(
             fontFamily: kFont,
+            fontFamilyFallback: kFontFallback,
             fontSize: 16,
             fontWeight: FontWeight.w900,
             color: Colors.white,
@@ -714,6 +718,7 @@ class _RhymeOptions extends StatelessWidget {
                       options[i].display,
                       style: TextStyle(
                         fontFamily: kFont,
+                        fontFamilyFallback: kFontFallback,
                         fontSize: 16,
                         fontWeight: FontWeight.w900,
                         color: Colors.white.withValues(alpha: 0.9),

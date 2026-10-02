@@ -35,6 +35,7 @@ class BadgeChip extends StatelessWidget {
           '${badge.emoji} ${badge.title(context.l)}',
           style: TextStyle(
             fontFamily: kFont,
+            fontFamilyFallback: kFontFallback,
             fontSize: 16 * scale,
             fontWeight: FontWeight.w900,
             color: const Color(0xFF3A2E1F),

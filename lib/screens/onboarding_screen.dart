@@ -151,6 +151,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontFamily: kFont,
+                              fontFamilyFallback: kFontFallback,
                               fontSize: 17,
                               fontWeight: FontWeight.w800,
                               color: Colors.white,

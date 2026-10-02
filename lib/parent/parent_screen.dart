@@ -88,6 +88,7 @@ class _ParentScreenState extends State<ParentScreen> {
           '👪 ${context.l.parentTitle}',
           style: TextStyle(
             fontFamily: kFont,
+            fontFamilyFallback: kFontFallback,
             fontWeight: FontWeight.w900,
             color: Color(0xFFFFD200),
           ),
@@ -220,6 +221,7 @@ class _ParentScreenState extends State<ParentScreen> {
                             ch,
                             style: TextStyle(
                               fontFamily: kFont,
+                              fontFamilyFallback: kFontFallback,
                               fontWeight: FontWeight.w900,
                               color: Colors.white.withValues(
                                   alpha: status[ch] == LetterStatus.unseen
@@ -293,18 +295,21 @@ class _ParentScreenState extends State<ParentScreen> {
 
   static final _valueStyle = TextStyle(
     fontFamily: kFont,
+    fontFamilyFallback: kFontFallback,
     fontSize: 18,
     fontWeight: FontWeight.w900,
     color: Color(0xFFFFD200),
   );
   static final _labelStyle = TextStyle(
     fontFamily: kFont,
+    fontFamilyFallback: kFontFallback,
     fontSize: 12,
     fontWeight: FontWeight.w700,
     color: Colors.white.withValues(alpha: 0.55),
   );
   static final _bodyStyle = TextStyle(
     fontFamily: kFont,
+    fontFamilyFallback: kFontFallback,
     fontSize: 14,
     fontWeight: FontWeight.w700,
     height: 1.4,
@@ -328,6 +333,7 @@ class _Section extends StatelessWidget {
             title,
             style: TextStyle(
               fontFamily: kFont,
+              fontFamilyFallback: kFontFallback,
               fontSize: 16,
               fontWeight: FontWeight.w900,
               color: Color(0xFFA0C4FF),
@@ -366,6 +372,7 @@ class _ParentSettingsState extends State<ParentSettings> {
           title: Text('$emoji  $label',
               style: TextStyle(
                   fontFamily: kFont,
+                  fontFamilyFallback: kFontFallback,
                   fontWeight: FontWeight.w800,
                   color: Colors.white)),
         );
@@ -394,6 +401,7 @@ class _ParentSettingsState extends State<ParentSettings> {
         Text(context.l.settingTimeLimit,
             style: TextStyle(
                 fontFamily: kFont,
+                fontFamilyFallback: kFontFallback,
                 fontWeight: FontWeight.w800,
                 color: Colors.white.withValues(alpha: 0.85))),
         const SizedBox(height: 6),
@@ -429,6 +437,7 @@ class _ParentSettingsState extends State<ParentSettings> {
                   key: const ValueKey('session-today'),
                   style: TextStyle(
                       fontFamily: kFont,
+                      fontFamilyFallback: kFontFallback,
                       fontWeight: FontWeight.w700,
                       color: Colors.white.withValues(alpha: 0.7)),
                 ),
@@ -447,6 +456,7 @@ class _ParentSettingsState extends State<ParentSettings> {
         Text(context.l.settingSeason,
             style: TextStyle(
                 fontFamily: kFont,
+                fontFamilyFallback: kFontFallback,
                 fontWeight: FontWeight.w800,
                 color: Colors.white.withValues(alpha: 0.85))),
         const SizedBox(height: 6),
@@ -473,6 +483,7 @@ class _ParentSettingsState extends State<ParentSettings> {
         Text(context.l.profilesTitle,
             style: TextStyle(
                 fontFamily: kFont,
+                fontFamilyFallback: kFontFallback,
                 fontWeight: FontWeight.w800,
                 color: Colors.white.withValues(alpha: 0.85))),
         const SizedBox(height: 6),
@@ -483,6 +494,7 @@ class _ParentSettingsState extends State<ParentSettings> {
             title: Text(p.label,
                 style: TextStyle(
                     fontFamily: kFont,
+                    fontFamilyFallback: kFontFallback,
                     fontWeight: FontWeight.w800,
                     color: Colors.white)),
             // Jak průvodce dítě česky osloví (5. pád) — předvyplněno podle

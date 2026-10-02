@@ -28,7 +28,7 @@ lib/
 ├── ui/
 │   ├── emoji_art.dart       # EmojiArt: sticker image instead of an emoji (assets/emoji/<codepoints>.webp), breathes + pops; falls back to the emoji
 │   ├── emoji_art_index.dart # Generated set of emoji with a sticker (tool/emoji_art/build.py)
-│   ├── app_font.dart        # kFont (Baloo 2) / kDisplayFont (DynaPuff) from cute_kid_fonts; OpenDyslexic overrides both
+│   ├── app_font.dart        # kFont = DynaPuff from cute_kid_fonts everywhere (+ kFontFallback for pinyin); OpenDyslexic overrides it
 │   └── l10n.dart            # context.l shortcut, AppLanguage notifier, GameBadge/Season label extensions
 ├── characters/
 │   ├── mascot.dart          # Guide (Pandička): moods → images in assets/characters/panda/, name per language (diminutive of the animal)
@@ -118,7 +118,7 @@ iOS, Android, macOS, Linux (check pubspec for active platforms).
 ## Assets
 
 - UI chrome is localized (9 ARBs in `lib/l10n/`, template `app_cs.arb`): never hardcode user-facing strings in widgets — add a key to every ARB, run `flutter gen-l10n`, use `context.l.key`. UI language follows the pack language (`AppLanguage`). Widget tests wrap screens in `localizedApp(...)` from `test/helpers.dart`
-- Fonts come from the shared package `cute_kid_fonts` (lioilsources/CuteKidFonts, git ref in pubspec): Baloo 2 for UI text (`kFont`), DynaPuff for headings/letters the child reads (`kDisplayFont` + `kFontFallback`), `BubbleText` for the card label, `KidKeyLabel` on keys. OpenDyslexic (SIL OFL, `fonts/`) replaces all of them when the parent enables it. Never hardcode a font family — use `kFont`/`kDisplayFont` from `lib/ui/app_font.dart`. Widget tests: `findText()` from `test/helpers.dart` also finds `BubbleText`
+- Fonts come from the shared package `cute_kid_fonts` (lioilsources/CuteKidFonts, git ref in pubspec): DynaPuff for all text incl. the parent corner (`kFont`, always with `fontFamilyFallback: kFontFallback`; also the ThemeData default for unstyled text), `BubbleText` for the card label, `KidKeyLabel` on keys. OpenDyslexic (SIL OFL, `fonts/`) replaces it when the parent enables it. Never hardcode a font family — use `kFont` from `lib/ui/app_font.dart`; `test/app_start_test.dart` fails if any text renders in a system font. Widget tests: `findText()` from `test/helpers.dart` also finds `BubbleText`
 - Emoji are shown as stickers: always render pack/UI emoji with `EmojiArt(emoji, size: …)` (not `Text`). Stickers live in `assets/emoji/` (WebP, 320 px, cut out from flux-schnell drafts in `drafts/stickers/round3/out/`, gitignored); `python3 tool/emoji_art/build.py <drafts> [--reject cp,…]` rebuilds them and the index. A new emoji without a sticker still works (fallback). Control symbols (🔊 ✅ ➡️) and flags stay emoji. Widget tests: `findText()` also matches `EmojiArt`; screens with stickers never settle — use `settle(tester)` instead of `pumpAndSettle`
 - Content packs in `assets/packs/`
 - Sfx in `assets/audio/sfx/`, ambient loops in `assets/audio/ambient/`, title music in `assets/audio/music/` + catalog `assets/audio/manifest.json` (`sfx`, `ambient`, `music`)

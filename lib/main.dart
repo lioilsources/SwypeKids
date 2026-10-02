@@ -9,6 +9,7 @@ import 'services/progress_service.dart';
 import 'services/session_service.dart';
 import 'services/settings_service.dart';
 import 'services/tts_service.dart';
+import 'ui/app_font.dart';
 import 'ui/l10n.dart';
 import 'world/world_clock.dart';
 
@@ -68,6 +69,10 @@ class SwyperKidsApp extends StatelessWidget {
       supportedLocales: AppLocalizations.supportedLocales,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        // Výchozí písmo pro všechen text bez vlastního stylu (tlačítka,
+        // dialogy, popisky, pole) — jinak by zůstalo systémové.
+        fontFamily: kFont,
+        fontFamilyFallback: kFontFallback,
         colorScheme: ColorScheme.fromSeed(
           seedColor: const Color(0xFF54A0FF),
           brightness: Brightness.dark,

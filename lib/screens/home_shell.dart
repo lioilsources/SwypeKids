@@ -218,6 +218,7 @@ class _AppDrawer extends StatelessWidget {
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(
                           fontFamily: kFont,
+                          fontFamilyFallback: kFontFallback,
                           fontSize: 16,
                           fontWeight: FontWeight.w900,
                           color: Colors.white,
@@ -235,6 +236,7 @@ class _AppDrawer extends StatelessWidget {
                     language.name.toUpperCase(),
                     style: TextStyle(
                       fontFamily: kFont,
+                      fontFamilyFallback: kFontFallback,
                       fontSize: 13,
                       fontWeight: FontWeight.w800,
                       color: Color(0xFFA0C4FF),
@@ -284,6 +286,7 @@ class _AppDrawer extends StatelessWidget {
                 'SwypeKids • mama@home',
                 style: TextStyle(
                   fontFamily: kFont,
+                  fontFamilyFallback: kFontFallback,
                   fontSize: 11,
                   color: Colors.white.withOpacity(0.3),
                 ),
@@ -382,6 +385,7 @@ class _ProfileTile extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(
                   fontFamily: kFont,
+                  fontFamilyFallback: kFontFallback,
                   fontSize: 12,
                   fontWeight: FontWeight.w800,
                   color: Colors.white.withValues(alpha: 0.85),
@@ -424,6 +428,7 @@ class _MenuTile extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(
                   fontFamily: kFont,
+                  fontFamilyFallback: kFontFallback,
                   fontSize: 15,
                   fontWeight: FontWeight.w800,
                   color: selected

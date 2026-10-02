@@ -30,7 +30,7 @@ void main() {
     expect(SettingsService.instance.dyslexiaFont, isTrue);
     expect(kFont, 'OpenDyslexic');
     SettingsService.instance.dyslexiaFont = false;
-    expect(kFont, KidFonts.baloo2);
+    expect(kFont, KidFonts.dynaPuff);
     s.removeListener(() => n++);
   });
 

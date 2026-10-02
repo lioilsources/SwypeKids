@@ -53,6 +53,7 @@ class LanguagePicker extends StatelessWidget {
                           l.name.toUpperCase(),
                           style: TextStyle(
                             fontFamily: kFont,
+                            fontFamilyFallback: kFontFallback,
                             fontSize: 12,
                             fontWeight: FontWeight.w800,
                             color: Color(0xFFA0C4FF),

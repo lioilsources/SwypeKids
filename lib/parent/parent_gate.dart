@@ -68,6 +68,7 @@ class _ParentGateState extends State<ParentGate> {
                   context.l.parentTitle,
                   style: TextStyle(
                     fontFamily: kFont,
+                    fontFamilyFallback: kFontFallback,
                     fontSize: 18,
                     fontWeight: FontWeight.w900,
                     color: Colors.white.withValues(alpha: 0.85),
@@ -82,6 +83,7 @@ class _ParentGateState extends State<ParentGate> {
                     key: const ValueKey('gate-question'),
                     style: TextStyle(
                       fontFamily: kFont,
+                      fontFamilyFallback: kFontFallback,
                       fontSize: 26,
                       fontWeight: FontWeight.w900,
                       color: Color(0xFFFFD200),
@@ -104,6 +106,7 @@ class _ParentGateState extends State<ParentGate> {
                           shape: const StadiumBorder(),
                           textStyle: TextStyle(
                             fontFamily: kFont,
+                            fontFamilyFallback: kFontFallback,
                             fontSize: 22,
                             fontWeight: FontWeight.w800,
                           ),
@@ -119,6 +122,7 @@ class _ParentGateState extends State<ParentGate> {
                     context.l.backToGame,
                     style: TextStyle(
                       fontFamily: kFont,
+                      fontFamilyFallback: kFontFallback,
                       color: Colors.white.withValues(alpha: 0.5),
                     ),
                   ),

@@ -130,6 +130,7 @@ class _KeyWidgetState extends State<KeyWidget>
                     letter,
                     style: TextStyle(
                       fontFamily: kFont,
+                      fontFamilyFallback: kFontFallback,
                       fontSize: 13 * scale,
                       fontWeight: FontWeight.w900,
                       color: inPath
@@ -152,6 +153,7 @@ class _KeyWidgetState extends State<KeyWidget>
                 letter,
                 style: TextStyle(
                   fontFamily: kFont,
+                  fontFamilyFallback: kFontFallback,
                   fontSize: 14 * scale,
                   fontWeight: FontWeight.w700,
                   color: Colors.white.withOpacity(0.12),

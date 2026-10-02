@@ -436,6 +436,7 @@ class LessonMapScreenState extends State<LessonMapScreen> {
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(
                             fontFamily: kFont,
+                            fontFamilyFallback: kFontFallback,
                             fontSize: 15,
                             fontWeight: FontWeight.w900,
                             color: Color(0xFFFFD200),
@@ -454,6 +455,7 @@ class LessonMapScreenState extends State<LessonMapScreen> {
                         '⭐ ${ProgressService.instance.totalStars(pack.id)}',
                         style: TextStyle(
                           fontFamily: kFont,
+                          fontFamilyFallback: kFontFallback,
                           fontSize: 14,
                           fontWeight: FontWeight.w800,
                           color: Color(0xFFFFD200),
@@ -571,6 +573,7 @@ class _BedtimeCard extends StatelessWidget {
               context.l.bedtimeText(Mascot.name(language)),
               style: TextStyle(
                 fontFamily: kFont,
+                fontFamilyFallback: kFontFallback,
                 fontSize: 16,
                 fontWeight: FontWeight.w800,
                 color: Colors.white.withValues(alpha: 0.85),
@@ -603,6 +606,7 @@ class _LoadErrorCard extends StatelessWidget {
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontFamily: kFont,
+                fontFamilyFallback: kFontFallback,
                 fontSize: 18,
                 fontWeight: FontWeight.w900,
                 color: Colors.white,
@@ -688,6 +692,7 @@ void _showParentNote(BuildContext context, Lesson lesson) {
                     '👪 ${lesson.display}',
                     style: TextStyle(
                       fontFamily: kFont,
+                      fontFamilyFallback: kFontFallback,
                       fontSize: 18,
                       fontWeight: FontWeight.w900,
                       color: const Color(0xFFFFD200),
@@ -708,6 +713,7 @@ void _showParentNote(BuildContext context, Lesson lesson) {
               lesson.parentNote,
               style: TextStyle(
                 fontFamily: kFont,
+                fontFamilyFallback: kFontFallback,
                 fontSize: 15,
                 fontWeight: FontWeight.w700,
                 height: 1.4,
@@ -764,6 +770,7 @@ class _PracticeCard extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(
                   fontFamily: kFont,
+                  fontFamilyFallback: kFontFallback,
                   fontSize: 15,
                   fontWeight: FontWeight.w900,
                   color: expedition
@@ -814,6 +821,7 @@ class _BagChip extends StatelessWidget {
           '🎒 $count',
           style: TextStyle(
             fontFamily: kFont,
+            fontFamilyFallback: kFontFallback,
             fontSize: 13,
             fontWeight: FontWeight.w800,
             color: Color(0xFF7BFFB2),
@@ -918,6 +926,7 @@ class _UnitBlock extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(
                         fontFamily: kFont,
+                        fontFamilyFallback: kFontFallback,
                         fontSize: 15,
                         fontWeight: FontWeight.w900,
                         color: unitUnlocked
