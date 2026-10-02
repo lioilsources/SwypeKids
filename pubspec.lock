@@ -93,11 +93,11 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-      ref: "v0.1.0"
-      resolved-ref: fc1952c9da1555d8b8fbce149f1acf9aa345ce34
+      ref: "v0.1.1"
+      resolved-ref: "2b66b19d2e171262b08a3e2a9af957d371d65c6e"
       url: "https://github.com/lioilsources/CuteKidFonts.git"
     source: git
-    version: "0.1.0"
+    version: "0.1.1"
   fake_async:
     dependency: transitive
     description:
