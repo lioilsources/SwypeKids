@@ -21,7 +21,10 @@ cizího IP** (žádné skutečné postavy z filmů, her, knih).
 
 ## 2. Co potřebujeme (v pořadí priorit)
 
-### 2.1 Maskot — průvodce (pracovní jméno „Pipi")
+### 2.1 Maskot — průvodce
+
+Jméno průvodce = zdrobnělina jména zvířete v jazyce packu (Pandička,
+Gepardíček, Kapybárka, Žirafka…; en Pandy, es Pandita…).
 
 Jedna postava, která dítě vítá, ukazuje tah, fandí a utěšuje. Kulaté
 zvířátko, pohlavně neutrální, cca 3 hlavy vysoké. Návrh druhu je na vás —

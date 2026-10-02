@@ -30,7 +30,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get practiceTitle => '练习';
 
   @override
-  String get bedtimeText => '皮皮睡着了，明天见！';
+  String bedtimeText(String guide) {
+    return '$guide睡着了，明天见！';
+  }
 
   @override
   String get typeListen => '听力';

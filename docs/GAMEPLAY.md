@@ -139,7 +139,7 @@ kulturní variantu). Přidání jazyka = přidání JSON souboru, žádný Dart.
   (`WordSentenceScreen`) se slovem předvyplněným. Dítě doplní zbylé dvě části
   (max. 4 možnosti, slova z batohu první), trumpeta větu přečte. Automaticky,
   bez zápisu v packu; vždy jde přeskočit ✕.
-- **Onboarding bez čtení** (v3.0): první start = průvodce 🦊 „Pipi" (emoji,
+- **Onboarding bez čtení** (v3.0): první start = průvodce „Pandička" (emoji,
   dokud nepřijde Rive postava) pozdraví hlasem v jazyce vybraném vlajkou,
   dítě vybere zvířátko-avatara, rodič může zadat jméno; vše jde jedním
   velkým ▶. Ťuknutí na průvodce zopakuje hlas. Uloženo v `ProfileService`
@@ -159,7 +159,7 @@ kulturní variantu). Přidání jazyka = přidání JSON souboru, žádný Dart.
 - **Časový limit** (v3.1, `SessionService`): rodič v koutku nastaví
   0/10/15/20 min za den; počítá se jen čas v popředí, společně pro všechny
   profily. Po limitu se rozehrané kolo dohraje, pak hra vrátí na mapu, kde
-  průvodce spí 💤 a lekce nejdou spustit (karta „Pipi už spí"). Prodloužit
+  průvodce spí 💤 a lekce nejdou spustit (karta „Pandička už spí"). Prodloužit
   o 10 min jde jen z rodičovského koutku. Nový den začíná od nuly.
 - **Písmo pro dyslektiky** (v3.1, `SettingsService.dyslexiaFont`): OpenDyslexic
   místo Nunito v celé appce (`kFont`), přepínač v koutku.

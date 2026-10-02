@@ -7,7 +7,7 @@
   "menuBook": "わたしのほん",
   "menuParents": "保護者の方へ",
   "practiceTitle": "れんしゅう",
-  "bedtimeText": "ピピはもうねています。またあした！",
+  "bedtimeText": "{guide}はもうねています。またあした！",
   "typeListen": "きく",
   "typePicture": "え",
   "typeGap": "うめる",

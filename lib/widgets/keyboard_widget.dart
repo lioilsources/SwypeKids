@@ -32,15 +32,28 @@ class KeyboardWidget extends StatefulWidget {
   });
 
   @override
-  State<KeyboardWidget> createState() => _KeyboardWidgetState();
+  State<KeyboardWidget> createState() => KeyboardWidgetState();
 }
 
-class _KeyboardWidgetState extends State<KeyboardWidget>
+class KeyboardWidgetState extends State<KeyboardWidget>
     with TickerProviderStateMixin {
   // GlobalKey pro každou klávesu → pro zjištění pozice/velikosti
   final Map<String, GlobalKey> _keyGlobalKeys = {
     for (final l in kRows.expand((r) => r)) l: GlobalKey(),
   };
+
+  /// Plocha kláves v globálních souřadnicích (sjednocení všech kláves) —
+  /// tam průvodce nesmí zůstat stát. `null` před prvním layoutem.
+  Rect? keysRect() {
+    Rect? r;
+    for (final gk in _keyGlobalKeys.values) {
+      final box = gk.currentContext?.findRenderObject() as RenderBox?;
+      if (box == null || !box.hasSize) continue;
+      final k = box.localToGlobal(Offset.zero) & box.size;
+      r = r == null ? k : r.expandToInclude(k);
+    }
+    return r;
+  }
 
   List<String> _path = [];
   List<Offset> _hitPts = [];    // středy trefených kláves (globální)
