@@ -1,5 +1,8 @@
 # Changelog
 
+## [02/10/2026] — v2.7.4
+- Čeština: průvodce oslovuje dítě 5. pádem („Ahoj, Lauro!“); oslovení jde opravit v rodičovském koutku
+
 ## [02/10/2026] — v2.7.3
 - Pandička se přestěhovala z horní lišty na plochu mapy: je větší, občas přejde do druhého rohu a nic nezakrývá
 
