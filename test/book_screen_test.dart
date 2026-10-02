@@ -24,7 +24,7 @@ void main() {
 
   testWidgets('prázdná knížka ukáže obrázkový návod', (tester) async {
     await pumpBook(tester);
-    expect(find.text('🗣️ ➡️ 📖'), findsOneWidget);
+    expect(findText('🗣️ ➡️ 📖'), findsOneWidget);
   });
 
   testWidgets('uložené věty jsou v knížce, nejnovější nahoře', (tester) async {
@@ -32,11 +32,11 @@ void main() {
     ProgressService.instance.addToBook('cs-CZ', 'Já chci les', '👶 ✋ 🌲');
     await pumpBook(tester);
 
-    expect(find.text('Máma jí kolo'), findsOneWidget);
-    expect(find.text('👩 🍽️ 🚲'), findsOneWidget);
-    final newest = tester.getTopLeft(find.text('Já chci les')).dy;
-    final older = tester.getTopLeft(find.text('Máma jí kolo')).dy;
+    expect(findText('Máma jí kolo'), findsOneWidget);
+    expect(findText('👩 🍽️ 🚲'), findsOneWidget);
+    final newest = tester.getTopLeft(findText('Já chci les')).dy;
+    final older = tester.getTopLeft(findText('Máma jí kolo')).dy;
     expect(newest, lessThan(older));
-    await tester.tap(find.text('Máma jí kolo')); // přečte nahlas (TTS tiše v testu)
+    await tester.tap(findText('Máma jí kolo')); // přečte nahlas (TTS tiše v testu)
   });
 }

@@ -2,9 +2,11 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
 import 'package:swype_kids/data/lessons.dart';
 import 'package:swype_kids/data/models/content_pack.dart';
 import 'package:swype_kids/services/pack_service.dart';
+import 'package:swype_kids/ui/emoji_art.dart';
 import 'package:swype_kids/l10n/app_localizations.dart';
 
 /// MaterialApp s lokalizací (UI česky) pro widget testy.
@@ -23,4 +25,24 @@ Future<ContentPack> seedPack(Language lang) async {
       ContentPack.fromJson((jsonDecode(raw) as Map).cast<String, dynamic>());
   PackService.instance.seedCache(pack);
   return pack;
+}
+
+/// Jako `find.text`, ale najde i emoji nahrazené obrázkem ([EmojiArt]).
+/// Záložní `Text` uvnitř [EmojiArt] se nepočítá dvakrát.
+Finder findText(String text) => find.byElementPredicate((e) {
+      final w = e.widget;
+      if (w is EmojiArt) return w.emoji == text;
+      return w is Text &&
+          w.data == text &&
+          e.findAncestorWidgetOfExactType<EmojiArt>() == null;
+    });
+
+/// Náhrada `pumpAndSettle` pro obrazovky s nekonečnou animací (dýchající
+/// nálepky [EmojiArt], průvodce): odpumpuje pevný čas po malých krocích.
+Future<void> settle(WidgetTester tester,
+    [Duration total = const Duration(seconds: 2)]) async {
+  const step = Duration(milliseconds: 100);
+  for (var t = Duration.zero; t < total; t += step) {
+    await tester.pump(step);
+  }
 }

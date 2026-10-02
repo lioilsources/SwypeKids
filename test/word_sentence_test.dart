@@ -39,10 +39,10 @@ void main() {
         ),
       ),
     ));
-    await tester.tap(find.text('hra'));
-    await tester.pumpAndSettle();
+    await tester.tap(findText('hra'));
+    await settle(tester);
     await interact();
-    await tester.pumpAndSettle();
+    await settle(tester);
     return result;
   }
 
@@ -51,12 +51,12 @@ void main() {
     ProgressService.instance.addWord('cs-CZ', 'mama');
     final result = await runScreen(tester, 'kolo', () async {
       // Slovo z batohu je v nabídce první
-      await tester.tap(find.text('Máma'));
+      await tester.tap(findText('Máma'));
       await tester.pump();
       // Sloveso už v nabídce časované podle podmětu
-      await tester.tap(find.text('jí'));
+      await tester.tap(findText('jí'));
       await tester.pump();
-      expect(find.text('kolo'), findsOneWidget); // předvyplněný předmět
+      expect(findText('kolo'), findsOneWidget); // předvyplněný předmět
       await tester.tap(find.byKey(const ValueKey('trumpet')));
       await tester.pump();
       await tester.tap(find.byKey(const ValueKey('done')));

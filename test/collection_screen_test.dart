@@ -28,10 +28,10 @@ void main() {
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 300));
 
-    expect(find.text('myš'), findsOneWidget);
+    expect(findText('myš'), findsOneWidget);
     expect(find.byKey(const ValueKey('secret-cs-u1')), findsNothing);
-    expect(find.text('❓'), findsWidgets); // ostatní jednotky
-    expect(find.text('1/17'), findsOneWidget);
+    expect(findText('❓'), findsWidgets); // ostatní jednotky
+    expect(findText('1/17'), findsOneWidget);
 
     await tester.tap(find.byKey(const ValueKey('sticker-cs-u1')));
     await tester.pump(const Duration(milliseconds: 400));

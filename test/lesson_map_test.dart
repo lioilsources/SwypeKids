@@ -31,14 +31,14 @@ void main() {
 
     // Hlavička packu a první jednotka
     expect(find.textContaining('Slabikář'), findsOneWidget);
-    expect(find.text('M, A'), findsOneWidget);
+    expect(findText('M, A'), findsOneWidget);
 
     // Nic není dokončené → 0 hvězd, zamčené uzly existují
     expect(find.textContaining('⭐ 0'), findsOneWidget);
-    expect(find.text('🔒'), findsWidgets);
+    expect(findText('🔒'), findsWidgets);
 
     // Nezískané odměny jednotek jsou ❓
-    expect(find.text('❓'), findsWidgets);
+    expect(findText('❓'), findsWidgets);
 
     // Otevření mapy se počítá jako hrací den; průvodce je v liště
     expect(ProgressService.instance.playDays.length, 1);
@@ -59,7 +59,7 @@ void main() {
     await tester.pump(const Duration(milliseconds: 400));
 
     // První uzel první jednotky (hint 👩, odemčený)
-    await tester.longPress(find.text('👩').at(1)); // [0] = ikona jednotky
+    await tester.longPress(findText('👩').at(1)); // [0] = ikona jednotky
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 400));
     expect(find.textContaining('První slabika'), findsOneWidget);
@@ -83,7 +83,7 @@ void main() {
     }
 
     await pumpMap();
-    expect(find.text('Procvičování'), findsNothing);
+    expect(findText('Procvičování'), findsNothing);
 
     final p = ProgressService.instance;
     // MA, TA, BA (u1-l1, u2-l1, u3-l1)
@@ -91,7 +91,7 @@ void main() {
       p.markCompleted('cs-CZ', id, 3);
     }
     await pumpMap();
-    expect(find.text('Procvičování'), findsOneWidget);
+    expect(findText('Procvičování'), findsOneWidget);
   });
 
   testWidgets('zamčené jednotky jsou v mlze, odemčená se jednou rozplyne',
@@ -108,7 +108,7 @@ void main() {
     await tester.pump(const Duration(milliseconds: 100));
 
     // Mlha nad zamčenými jednotkami (viditelné jsou jen první dvě tři)
-    expect(find.text('🌫️'), findsWidgets);
+    expect(findText('🌫️'), findsWidgets);
     expect(ProgressService.instance.isUnitRevealed('cs-CZ', 'cs-u1'), isFalse);
 
     // Po rozplynutí se první jednotka zapíše jako odhalená
@@ -133,7 +133,7 @@ void main() {
     await tester.tap(find.byKey(const ValueKey('secret-cs-u1')));
     await tester.pump();
     expect(ProgressService.instance.collectibles('cs-CZ'), contains('🐞'));
-    expect(find.text('✨ 🐞'), findsOneWidget);
+    expect(findText('✨ 🐞'), findsOneWidget);
     expect(find.byKey(const ValueKey('secret-cs-u1')), findsNothing);
     await tester.pump(const Duration(seconds: 4));
   });
@@ -163,14 +163,14 @@ void main() {
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 400));
     expect(find.byKey(const ValueKey('bedtime')), findsOneWidget);
-    expect(find.text('💤'), findsWidgets);
+    expect(findText('💤'), findsWidgets);
 
     // Lekce pod kartou se nespustí
-    await tester.tap(find.text('👩').at(1), warnIfMissed: false);
+    await tester.tap(findText('👩').at(1), warnIfMissed: false);
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 400));
     expect(find.byKey(const ValueKey('bedtime')), findsOneWidget);
-    expect(find.text('M, A'), findsOneWidget); // pořád mapa, ne hra
+    expect(findText('M, A'), findsOneWidget); // pořád mapa, ne hra
 
     // Rodič prodlouží → karta zmizí
     SessionService.instance.extendToday();
@@ -196,8 +196,8 @@ void main() {
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 400));
     expect(find.byKey(const ValueKey('expedition')), findsOneWidget);
-    expect(find.text('Výprava za opakováním'), findsOneWidget);
-    expect(find.text('Procvičování'), findsNothing);
+    expect(findText('Výprava za opakováním'), findsOneWidget);
+    expect(findText('Procvičování'), findsNothing);
 
     // Po dnešní výpravě se zase ukáže obyčejné procvičování
     p.markExpedition(DateTime.now());
@@ -210,7 +210,7 @@ void main() {
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 400));
     expect(find.byKey(const ValueKey('expedition')), findsNothing);
-    expect(find.text('Procvičování'), findsOneWidget);
+    expect(findText('Procvičování'), findsOneWidget);
     await tester.pump(const Duration(seconds: 3));
   });
 

@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 import 'world_clock.dart';
+import '../ui/emoji_art.dart';
 
 /// Kousek světa pro jednu jednotku na mapě: země biotopu zbarvená podle
 /// období a denní doby, dekorace (stromy, zvířátka…) a mlha nad
@@ -118,7 +119,7 @@ class _Decor extends StatelessWidget {
                 top: y * (box.maxHeight - size),
                 child: Opacity(
                   opacity: theme.isNight ? 0.25 : 0.45,
-                  child: Text(emoji, style: TextStyle(fontSize: size)),
+                  child: EmojiArt(emoji, size: size, animate: false),
                 ),
               ),
           ],

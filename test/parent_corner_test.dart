@@ -38,7 +38,7 @@ void main() {
       home: ParentGate(random: Random(7), onPassed: () => passed = true),
     ));
     final (a, b, options, idx) = ParentGate.makeQuestion(Random(7));
-    final question = find.text('Kolik je $a × $b?');
+    final question = findText('Kolik je $a × $b?');
     expect(question, findsOneWidget);
     final wrong = options[(idx + 1) % 3];
     await tester.tap(find.byKey(ValueKey('gate-option-$wrong')));
@@ -89,8 +89,8 @@ void main() {
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 300));
 
-    expect(find.text('Přehled'), findsOneWidget);
-    expect(find.text('1 / 91'), findsOneWidget);
+    expect(findText('Přehled'), findsOneWidget);
+    expect(findText('1 / 91'), findsOneWidget);
     expect(find.textContaining('Metoda: analyticko'), findsOneWidget);
     expect(find.byKey(const ValueKey('music-toggle')), findsOneWidget);
     expect(find.byKey(const ValueKey('season-winter')), findsOneWidget);

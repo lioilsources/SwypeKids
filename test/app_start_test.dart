@@ -33,8 +33,8 @@ void main() {
     for (var i = 0; i < 20; i++) {
       await tester.pump(const Duration(milliseconds: 100));
     }
-    expect(find.text('🎹'), findsNothing, reason: 'mapa visí na placeholderu');
-    expect(find.text('M, A'), findsOneWidget);
+    expect(findText('🎹'), findsNothing, reason: 'mapa visí na placeholderu');
+    expect(findText('M, A'), findsOneWidget);
     await tester.pump(const Duration(seconds: 5));
   }, timeout: const Timeout(Duration(seconds: 60)));
 }

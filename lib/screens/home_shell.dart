@@ -14,6 +14,7 @@ import 'onboarding_screen.dart';
 import 'sentence_builder_screen.dart';
 import '../ui/app_font.dart';
 import '../ui/l10n.dart';
+import '../ui/emoji_art.dart';
 
 enum AppView { swype, sentence, collection, book }
 
@@ -371,7 +372,7 @@ class _ProfileTile extends StatelessWidget {
         ),
         child: Column(
           children: [
-            Text(emoji, style: const TextStyle(fontSize: 36)),
+            EmojiArt(emoji, size: 36),
             if (label.isNotEmpty) ...[
               const SizedBox(height: 4),
               Text(

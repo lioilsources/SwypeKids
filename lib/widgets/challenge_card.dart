@@ -4,6 +4,7 @@ import '../data/keyboard_data.dart';
 import '../data/lessons.dart';
 import '../ui/app_font.dart';
 import '../ui/l10n.dart';
+import '../ui/emoji_art.dart';
 
 enum GameStatus { idle, success, error }
 
@@ -115,7 +116,7 @@ class ChallengeCard extends StatelessWidget {
           Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text(lesson.hint, style: const TextStyle(fontSize: 40)),
+              EmojiArt(lesson.hint, size: 40),
               if (onReplayAudio != null) ...[
                 const SizedBox(width: 14),
                 GestureDetector(
@@ -174,9 +175,11 @@ class ChallengeCard extends StatelessWidget {
                       style: TextStyle(
                         fontSize: hit ? 20 : 16,
                       ),
-                      child: Text(miss
-                          ? '❌'
-                          : (hidden && !hit ? '❓' : emojiFor(ch))),
+                      child: EmojiArt(
+                          miss
+                              ? '❌'
+                              : (hidden && !hit ? '❓' : emojiFor(ch)),
+                          size: hit ? 20 : 16),
                     ),
                     const SizedBox(height: 3),
                     // Políčko s písmenkem

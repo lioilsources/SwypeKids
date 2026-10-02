@@ -22,6 +22,7 @@ import 'game_screen.dart';
 import 'unit_complete_screen.dart' show stickerHeroTag;
 import '../ui/app_font.dart';
 import '../ui/l10n.dart';
+import '../ui/emoji_art.dart';
 
 /// Mapa lekcí: svislá cesta jednotek a jejich uzlů (lekcí).
 /// Vstupní obrazovka hry — tap na odemčený uzel spouští GameScreen.
@@ -906,11 +907,10 @@ class _UnitBlock extends StatelessWidget {
               ),
               child: Row(
                 children: [
-                  Text(unit.icon,
-                      style: TextStyle(
-                          fontSize: 22,
-                          color: Colors.white
-                              .withOpacity(unitUnlocked ? 1.0 : 0.3))),
+                  Opacity(
+                      opacity: unitUnlocked ? 1.0 : 0.3,
+                      child: EmojiArt(unit.icon,
+                          size: 22, animate: unitUnlocked)),
                   const SizedBox(width: 10),
                   Expanded(
                     child: Text(

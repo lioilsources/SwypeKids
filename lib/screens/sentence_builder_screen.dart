@@ -11,6 +11,7 @@ import 'game_screen.dart';
 import '../widgets/language_picker.dart';
 import '../ui/app_font.dart';
 import '../ui/l10n.dart';
+import '../ui/emoji_art.dart';
 
 class SentenceBuilderScreen extends StatefulWidget {
   final Language language;
@@ -315,7 +316,7 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Text(part.emoji, style: const TextStyle(fontSize: 26)),
+        EmojiArt(part.emoji, size: 26),
         const SizedBox(width: 4),
         Text(
           resolvedText ?? part.text,
@@ -479,7 +480,7 @@ class _PartTile extends StatelessWidget {
             ColorFiltered(
               colorFilter: ColorFilter.mode(
                   Colors.black.withOpacity(0.55), BlendMode.srcIn),
-              child: Text(part.emoji, style: const TextStyle(fontSize: 28)),
+              child: EmojiArt(part.emoji, size: 28, animate: false),
             ),
             const SizedBox(height: 2),
             Text(
@@ -527,7 +528,7 @@ class _PartTile extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(part.emoji, style: const TextStyle(fontSize: 28)),
+            EmojiArt(part.emoji, size: 28),
             const SizedBox(height: 2),
             Text(
               displayText,

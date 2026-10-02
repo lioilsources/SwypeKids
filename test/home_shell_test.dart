@@ -32,7 +32,7 @@ void main() {
     tester.state<ScaffoldState>(find.byType(Scaffold).first).openDrawer();
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 400));
-    expect(find.text('Ema'), findsOneWidget);
+    expect(findText('Ema'), findsOneWidget);
     await tester.tap(find.byKey(const ValueKey('profile-header')));
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 400));
