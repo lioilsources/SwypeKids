@@ -22,8 +22,12 @@ class Mascot extends StatefulWidget {
   /// Zavolá se, když dočasná reakce (wave/wink/cheer/oops) dohrála.
   final VoidCallback? onSettled;
 
-  /// Pošimrání prstem (mimo hru) — smích.
+  /// Ťuknutí prstem — volající obvykle nastaví [MascotMood.wave].
   final VoidCallback? onTickle;
+
+  /// Změna hodnoty přehraje reakci znovu, i když se [mood] nezměnil
+  /// (dítě ťukne podruhé, zatímco ještě mává).
+  final int replay;
 
   const Mascot({
     super.key,
@@ -31,6 +35,7 @@ class Mascot extends StatefulWidget {
     this.size = 48,
     this.onSettled,
     this.onTickle,
+    this.replay = 0,
   });
 
   static const emoji = '🐼';
@@ -154,7 +159,7 @@ class _MascotState extends State<Mascot> with TickerProviderStateMixin {
   @override
   void didUpdateWidget(covariant Mascot old) {
     super.didUpdateWidget(old);
-    if (old.mood != widget.mood) _play();
+    if (old.mood != widget.mood || old.replay != widget.replay) _play();
     _syncBreath();
   }
 

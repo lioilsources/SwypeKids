@@ -103,6 +103,7 @@ class _GameScreenState extends State<GameScreen>
   List<String> _livePath = [];
   GameStatus _status = GameStatus.idle;
   MascotMood _mood = MascotMood.wave; // průvodce: zamává při příchodu
+  int _taps = 0; // ťuknutí na průvodce — přehraje zamávání znovu
 
   // Místa, kde průvodce nesmí zůstat stát (globální souřadnice).
   final _topBarKey = GlobalKey();
@@ -572,7 +573,12 @@ class _GameScreenState extends State<GameScreen>
                 mood: _mood,
                 layoutToken: _idx,
                 obstacles: _guideObstacles,
-                onTickle: () => setState(() => _mood = MascotMood.wink),
+                replay: _taps,
+                // Ťuknutí na Pandičku = zamává (pokaždé znovu).
+                onTickle: () => setState(() {
+                  _mood = MascotMood.wave;
+                  _taps++;
+                }),
                 onSettled: () {
                   if (mounted) setState(() => _mood = MascotMood.idle);
                 },

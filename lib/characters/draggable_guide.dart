@@ -19,6 +19,9 @@ class DraggableGuide extends StatefulWidget {
   final VoidCallback? onSettled;
   final VoidCallback? onTickle;
 
+  /// Viz [Mascot.replay].
+  final int replay;
+
   /// Překážky v globálních souřadnicích; čtou se po každém layoutu.
   final List<GuideObstacle> Function() obstacles;
 
@@ -32,6 +35,7 @@ class DraggableGuide extends StatefulWidget {
     required this.obstacles,
     this.onSettled,
     this.onTickle,
+    this.replay = 0,
     this.layoutToken,
   });
 
@@ -189,6 +193,7 @@ class _DraggableGuideState extends State<DraggableGuide> {
                   size: size,
                   onSettled: widget.onSettled,
                   onTickle: widget.onTickle,
+                  replay: widget.replay,
                 ),
               ),
             ),

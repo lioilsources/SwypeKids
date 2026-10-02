@@ -259,4 +259,22 @@ void main() {
     }
     await tester.pump(const Duration(seconds: 3));
   });
+
+  testWidgets('ťuknutí na Pandičku na mapě = zamává', (tester) async {
+    tester.view.physicalSize = const Size(800, 1400);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.reset);
+    await tester.pumpWidget(localizedApp(
+      home: Scaffold(
+        body: LessonMapScreen(language: Language.cs, onLanguageChanged: (_) {}),
+      ),
+    ));
+    await tester.pump();
+    await tester.pump(const Duration(seconds: 2)); // úvodní zamávání dohraje
+    expect(find.byKey(const ValueKey('mascot-wave')), findsNothing);
+    await tester.tap(find.byKey(const ValueKey('map-mascot')));
+    await tester.pump();
+    expect(find.byKey(const ValueKey('mascot-wave')), findsOneWidget);
+    await tester.pump(const Duration(seconds: 3));
+  });
 }
