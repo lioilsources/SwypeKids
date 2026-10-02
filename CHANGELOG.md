@@ -1,5 +1,8 @@
 # Changelog
 
+## [02/10/2026] — v2.7.0
+- Pásmo B pro němčinu, španělštinu, italštinu, francouzštinu a portugalštinu (+21 lekcí v každém jazyce)
+
 ## [01/10/2026] — v2.6.2
 - Oprava: mapa zůstávala na 🎹 (načítání packu čekalo samo na sebe) — skutečná příčina chyby z 2.6.0/2.6.1
 - Když se mapa nenačte, ukáže se „Zkusit znovu“ s popisem chyby místo prázdné obrazovky
