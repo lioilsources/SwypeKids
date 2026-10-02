@@ -1,5 +1,8 @@
 # Changelog
 
+## [02/10/2026] — v2.7.2
+- Oprava (iOS): zvuky hry hrají i v tichém režimu a hlas průvodce už nevypne ostatní zvuky; ztišit lze v rodičovském koutku
+
 ## [02/10/2026] — v2.7.1
 - Pandička: první postava průvodce (pracovní verze) místo emoji — mává, jásá, spí
 
