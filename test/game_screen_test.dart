@@ -82,13 +82,13 @@ void main() {
 
     // Průvodce zamává při příchodu, pak jásá po správném swype
     expect(find.byType(Mascot), findsOneWidget);
-    expect(find.text('👋'), findsOneWidget);
+    expect(find.byKey(const ValueKey('mascot-wave')), findsOneWidget);
     await tester.pump(const Duration(milliseconds: 1000));
-    expect(find.text('👋'), findsNothing);
+    expect(find.byKey(const ValueKey('mascot-wave')), findsNothing);
 
     // Lekce 1: první pokus = 3 hvězdy + oslava s padajícími hvězdami
     await _swype(tester, ['M', 'A']);
-    expect(find.text('🎉'), findsOneWidget);
+    expect(find.byKey(const ValueKey('mascot-cheer')), findsOneWidget);
     expect(ProgressService.instance.starsFor(_pack.id, 'u1-l1'), 3);
     expect(find.text('⭐ 3'), findsOneWidget);
     expect(find.byType(StarCelebration), findsOneWidget);
