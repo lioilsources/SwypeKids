@@ -1,5 +1,7 @@
+import 'package:cute_kid_fonts/cute_kid_fonts.dart';
 import 'package:flutter/material.dart';
 import '../data/keyboard_data.dart';
+import '../services/settings_service.dart';
 import '../ui/app_font.dart';
 import '../ui/emoji_art.dart';
 
@@ -113,25 +115,38 @@ class _KeyWidgetState extends State<KeyWidget>
             : null,
       ),
       child: active
-          ? Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+          // Emoji + bublinkové písmeno se na malé klávese zmenší, nepřeteče.
+          ? FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Column(
+              mainAxisSize: MainAxisSize.min,
               children: [
                 EmojiArt(emoji, size: 18 * scale),
                 const SizedBox(height: 1),
-                Text(
-                  letter,
-                  style: TextStyle(
-                    fontFamily: kFont,
-                    fontSize: 13 * scale,
-                    fontWeight: FontWeight.w900,
-                    color: inPath
-                        ? Colors.white
-                        : Colors.white.withOpacity(0.75),
-                    height: 1,
+                // Baculaté písmo z CuteKidFonts; OpenDyslexic (rodičovské
+                // nastavení) má přednost a zůstává jako plochý text.
+                if (SettingsService.instance.dyslexiaFont)
+                  Text(
+                    letter,
+                    style: TextStyle(
+                      fontFamily: kFont,
+                      fontSize: 13 * scale,
+                      fontWeight: FontWeight.w900,
+                      color: inPath
+                          ? Colors.white
+                          : Colors.white.withOpacity(0.75),
+                      height: 1,
+                    ),
+                  )
+                else
+                  KidKeyLabel(
+                    letter,
+                    size: 18 * scale,
+                    boxWidth: 30 * scale,
+                    boxHeight: 22 * scale,
                   ),
-                ),
               ],
-            )
+            ))
           : Center(
               child: Text(
                 letter,

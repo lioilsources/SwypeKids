@@ -38,7 +38,7 @@ class SettingsService extends ChangeNotifier {
     }
   }
 
-  /// Písmo OpenDyslexic místo Nunito v celé appce.
+  /// Písmo OpenDyslexic místo Baloo 2 / DynaPuff v celé appce.
   bool get dyslexiaFont => _dyslexiaFont;
 
   set dyslexiaFont(bool v) {

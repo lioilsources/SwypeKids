@@ -321,7 +321,8 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
         Text(
           resolvedText ?? part.text,
           style: TextStyle(
-            fontFamily: kFont,
+            fontFamily: kDisplayFont,
+            fontFamilyFallback: kFontFallback,
             fontSize: 20,
             fontWeight: FontWeight.w900,
             color: Color(0xFFFFD200),

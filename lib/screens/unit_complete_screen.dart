@@ -64,7 +64,8 @@ class UnitCompleteScreen extends StatelessWidget {
                 context.l.newSticker,
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontFamily: kFont,
+                  fontFamily: kDisplayFont,
+                  fontFamilyFallback: kFontFallback,
                   fontSize: 30,
                   fontWeight: FontWeight.w900,
                   color: Colors.white,
@@ -109,7 +110,8 @@ class UnitCompleteScreen extends StatelessWidget {
                       horizontal: 40, vertical: 16),
                   shape: const StadiumBorder(),
                   textStyle: TextStyle(
-                    fontFamily: kFont,
+                    fontFamily: kDisplayFont,
+                    fontFamilyFallback: kFontFallback,
                     fontSize: 20,
                     fontWeight: FontWeight.w800,
                   ),

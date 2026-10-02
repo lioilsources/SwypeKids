@@ -158,7 +158,8 @@ class _PageCard extends StatelessWidget {
                   Text(
                     page.text,
                     style: TextStyle(
-                      fontFamily: kFont,
+                      fontFamily: kDisplayFont,
+                      fontFamilyFallback: kFontFallback,
                       fontSize: 20,
                       fontWeight: FontWeight.w900,
                       color: Color(0xFF3A2E1F),

@@ -192,7 +192,8 @@ class _AppDrawer extends StatelessWidget {
               child: Text(
                 '🎹 Swype Kids',
                 style: TextStyle(
-                  fontFamily: kFont,
+                  fontFamily: kDisplayFont,
+                  fontFamilyFallback: kFontFallback,
                   fontSize: 22,
                   fontWeight: FontWeight.w900,
                   color: Color(0xFFFFD200),

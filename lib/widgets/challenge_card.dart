@@ -1,7 +1,10 @@
 import 'dart:io' show Platform;
+
+import 'package:cute_kid_fonts/cute_kid_fonts.dart';
 import 'package:flutter/material.dart';
 import '../data/keyboard_data.dart';
 import '../data/lessons.dart';
+import '../services/settings_service.dart';
 import '../ui/app_font.dart';
 import '../ui/l10n.dart';
 import '../ui/emoji_art.dart';
@@ -134,23 +137,27 @@ class ChallengeCard extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 2),
-          // Název slova (skrytý u poslechu a obrázku, s dírou u doplňovačky)
-          Text(
-            _labelText,
-            style: TextStyle(
-              fontFamily: kFont,
-              fontSize: 22,
-              fontWeight: FontWeight.w900,
-              color: const Color(0xFFFFD200)
-                  .withOpacity(_hideAll ? 0.35 : 1.0),
-              letterSpacing: 5,
-              shadows: [
-                Shadow(
-                  color: const Color(0xFFFFD200).withOpacity(0.4),
-                  blurRadius: 16,
-                ),
-              ],
-            ),
+          // Název slova (skrytý u poslechu a obrázku, s dírou u doplňovačky).
+          // Bublinkové písmo z CuteKidFonts; OpenDyslexic zůstává plochý.
+          Opacity(
+            opacity: _hideAll ? 0.35 : 1.0,
+            child: SettingsService.instance.dyslexiaFont
+                ? Text(
+                    _labelText,
+                    style: TextStyle(
+                      fontFamily: kFont,
+                      fontSize: 22,
+                      fontWeight: FontWeight.w900,
+                      color: const Color(0xFFFFD200),
+                      letterSpacing: 5,
+                    ),
+                  )
+                : BubbleText(
+                    _labelText,
+                    role: KidRole.title,
+                    palette: KidPalette.lemon,
+                    size: 28,
+                  ),
           ),
           const SizedBox(height: 10),
 
@@ -213,7 +220,8 @@ class ChallengeCard extends StatelessWidget {
                       child: Text(
                         hidden && !hit && !miss ? '?' : ch,
                         style: TextStyle(
-                          fontFamily: kFont,
+                          fontFamily: kDisplayFont,
+                          fontFamilyFallback: kFontFallback,
                           fontSize: 26,
                           fontWeight: FontWeight.w900,
                           color: hit

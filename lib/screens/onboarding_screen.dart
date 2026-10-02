@@ -236,7 +236,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               textCapitalization: TextCapitalization.words,
               maxLength: 20,
               style: TextStyle(
-                fontFamily: kFont,
+                fontFamily: kDisplayFont,
+                fontFamilyFallback: kFontFallback,
                 fontSize: 24,
                 fontWeight: FontWeight.w900,
                 color: Colors.white,

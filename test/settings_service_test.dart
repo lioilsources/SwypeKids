@@ -1,3 +1,4 @@
+import 'package:cute_kid_fonts/cute_kid_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -29,7 +30,7 @@ void main() {
     expect(SettingsService.instance.dyslexiaFont, isTrue);
     expect(kFont, 'OpenDyslexic');
     SettingsService.instance.dyslexiaFont = false;
-    expect(kFont, 'Nunito');
+    expect(kFont, KidFonts.baloo2);
     s.removeListener(() => n++);
   });
 

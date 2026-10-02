@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:cute_kid_fonts/cute_kid_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:swype_kids/data/lessons.dart';
@@ -27,11 +28,13 @@ Future<ContentPack> seedPack(Language lang) async {
   return pack;
 }
 
-/// Jako `find.text`, ale najde i emoji nahrazené obrázkem ([EmojiArt]).
+/// Jako `find.text`, ale najde i emoji nahrazené obrázkem ([EmojiArt])
+/// a bublinkový text z CuteKidFonts ([BubbleText], štítek na kartě).
 /// Záložní `Text` uvnitř [EmojiArt] se nepočítá dvakrát.
 Finder findText(String text) => find.byElementPredicate((e) {
       final w = e.widget;
       if (w is EmojiArt) return w.emoji == text;
+      if (w is BubbleText) return w.text == text;
       return w is Text &&
           w.data == text &&
           e.findAncestorWidgetOfExactType<EmojiArt>() == null;
