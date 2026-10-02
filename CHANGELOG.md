@@ -1,5 +1,8 @@
 # Changelog
 
+## [03/10/2026] — v2.9.2
+- Ťuknutí na Pandičku = zamává — ve hře i na mapě, pokaždé znovu
+
 ## [03/10/2026] — v2.9.1
 - Baculaté písmo DynaPuff všude — v celé appce včetně tlačítek, mapy, Zvěřince i rodičovského koutku (písmo pro dyslektiky má dál přednost)
 
