@@ -1,5 +1,8 @@
 # Changelog
 
+## [03/10/2026] — v2.9.1
+- Baculaté písmo DynaPuff všude — v celé appce včetně tlačítek, mapy, Zvěřince i rodičovského koutku (písmo pro dyslektiky má dál přednost)
+
 ## [02/10/2026] — v2.9.0
 - Obrázky místo emoji: 294 ilustrovaných nálepek ve stylu Pandičky (karta, klávesy, Zvěřinec, nálepky za lekce, mapa, věty, avatary) — jemně dýchají a při změně vyskočí
 - Nové dětské písmo z CuteKidFonts: Baloo 2 v celé appce, baculatý DynaPuff v nadpisech a na písmenech, bublinkový štítek slova na kartě (písmo pro dyslektiky má dál přednost)
