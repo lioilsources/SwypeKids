@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import '../data/lessons.dart';
 
@@ -15,6 +16,27 @@ class TtsService {
     Language.ja: 'ja-JP',
     Language.pt: 'pt-BR',
   };
+
+  /// iOS: appka si sama nastaví sdílenou AVAudioSession, než naběhne
+  /// flutter_soloud (ten ve verzi 4 kategorii ani aktivaci neřeší a nechává
+  /// to na appce). Bez toho iOS použije SoloAmbient → zvuky ztichnou
+  /// přepínačem tichého režimu a po domluvení TTS může relace zhasnout.
+  /// Playback + mixWithOthers: hra zní i v tichém režimu a nepřeruší
+  /// hudbu jiných aplikací; TTS relaci po domluvení nevypíná.
+  static Future<void> configureAudioSession() async {
+    if (kIsWeb || defaultTargetPlatform != TargetPlatform.iOS) return;
+    try {
+      await _tts.setIosAudioCategory(
+        IosTextToSpeechAudioCategory.playback,
+        [IosTextToSpeechAudioCategoryOptions.mixWithOthers],
+        IosTextToSpeechAudioMode.defaultMode,
+      );
+      await _tts.setSharedInstance(true); // setActive(true)
+      await _tts.autoStopSharedSession(false);
+    } catch (_) {
+      // Bez nastavení relace hra běží dál (případně potichu).
+    }
+  }
 
   static Future<void> speak(String text, Language lang) async {
     if (text.trim().isEmpty) return;

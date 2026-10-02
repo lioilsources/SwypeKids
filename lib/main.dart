@@ -8,6 +8,7 @@ import 'services/profile_service.dart';
 import 'services/progress_service.dart';
 import 'services/session_service.dart';
 import 'services/settings_service.dart';
+import 'services/tts_service.dart';
 import 'ui/l10n.dart';
 import 'world/world_clock.dart';
 
@@ -21,6 +22,8 @@ Future<void> main() async {
   await SessionService.instance.load();
   SessionService.instance.start();
   WorldClockService.instance.start();
+  // Zvuková relace iOS musí být nastavená dřív, než naběhne audio engine.
+  await TtsService.configureAudioSession();
   // Audio engine startuje na pozadí; do té doby je hra tichá.
   AudioService.instance.init();
   SystemChrome.setPreferredOrientations([
