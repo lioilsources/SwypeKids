@@ -30,7 +30,8 @@ class WinScreen extends StatelessWidget {
                 context.l.winTitle,
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontFamily: kFont,
+                  fontFamily: kDisplayFont,
+                  fontFamilyFallback: kFontFallback,
                   fontSize: 36,
                   fontWeight: FontWeight.w900,
                   color: Colors.white,
@@ -46,7 +47,8 @@ class WinScreen extends StatelessWidget {
               Text(
                 context.l.winStars(stars),
                 style: TextStyle(
-                  fontFamily: kFont,
+                  fontFamily: kDisplayFont,
+                  fontFamilyFallback: kFontFallback,
                   fontSize: 20,
                   color: Colors.white.withOpacity(0.9),
                 ),
@@ -66,7 +68,8 @@ class WinScreen extends StatelessWidget {
                       horizontal: 40, vertical: 16),
                   shape: const StadiumBorder(),
                   textStyle: TextStyle(
-                    fontFamily: kFont,
+                    fontFamily: kDisplayFont,
+                    fontFamilyFallback: kFontFallback,
                     fontSize: 20,
                     fontWeight: FontWeight.w800,
                   ),

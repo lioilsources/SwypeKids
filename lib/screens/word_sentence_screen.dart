@@ -212,7 +212,8 @@ class _WordSentenceScreenState extends State<WordSentenceScreen> {
         Text(
           text,
           style: TextStyle(
-            fontFamily: kFont,
+            fontFamily: kDisplayFont,
+            fontFamilyFallback: kFontFallback,
             fontSize: 20,
             fontWeight: FontWeight.w900,
             color: slot == _fixed

@@ -57,14 +57,6 @@ flutter:
     - assets/audio/ambient/
     - assets/audio/music/
   fonts:
-    - family: Nunito
-      fonts:
-        - asset: fonts/Nunito-Bold.ttf
-          weight: 700
-        - asset: fonts/Nunito-ExtraBold.ttf
-          weight: 800
-        - asset: fonts/Nunito-Black.ttf
-          weight: 900
     - family: OpenDyslexic
       fonts:
         - asset: fonts/OpenDyslexic-Regular.otf

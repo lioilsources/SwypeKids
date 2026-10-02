@@ -115,8 +115,11 @@ class _KeyWidgetState extends State<KeyWidget>
             : null,
       ),
       child: active
-          ? Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+          // Emoji + bublinkové písmeno se na malé klávese zmenší, nepřeteče.
+          ? FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Column(
+              mainAxisSize: MainAxisSize.min,
               children: [
                 EmojiArt(emoji, size: 18 * scale),
                 const SizedBox(height: 1),
@@ -143,7 +146,7 @@ class _KeyWidgetState extends State<KeyWidget>
                     boxHeight: 22 * scale,
                   ),
               ],
-            )
+            ))
           : Center(
               child: Text(
                 letter,
