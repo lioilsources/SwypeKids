@@ -1521,6 +1521,739 @@
           "review": true
         }
       ]
+    },
+    {
+      "id": "it-u12",
+      "title": "F, V",
+      "icon": "🐮",
+      "reward": {
+        "emoji": "🌸",
+        "name": "F",
+        "label": "fiore"
+      },
+      "scene": {
+        "biome": "sky"
+      },
+      "lessons": [
+        {
+          "id": "it-u12-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R",
+            "B",
+            "D",
+            "G",
+            "F",
+            "V"
+          ],
+          "target": "FATA",
+          "display": "FATA",
+          "hint": "🧚",
+          "label": "FA-TA",
+          "info": "Nuovo: 🌸 F, 🌋 V",
+          "parentNote": "Fascia B: nuove lettere F e V. FATA: due sillabe aperte."
+        },
+        {
+          "id": "it-u12-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R",
+            "B",
+            "D",
+            "G",
+            "F",
+            "V"
+          ],
+          "target": "VOLPE",
+          "display": "VOLPE",
+          "hint": "🦊",
+          "label": "VOL-PE",
+          "vocab": "volpe",
+          "parentNote": "VOLPE: L e P vicine. La volpe va nello zaino."
+        },
+        {
+          "id": "it-u12-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R",
+            "B",
+            "D",
+            "G",
+            "F",
+            "V"
+          ],
+          "target": "FIORE",
+          "display": "FIORE",
+          "hint": "🌸",
+          "label": "FIO-RE",
+          "parentNote": "FIORE: I e O insieme."
+        },
+        {
+          "id": "it-u12-l4",
+          "type": "letterHunt",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R",
+            "B",
+            "D",
+            "G",
+            "F",
+            "V"
+          ],
+          "target": "V",
+          "display": "V",
+          "hint": "🐮",
+          "label": "V",
+          "parentNote": "Caccia al suono: la guida dice /v/, il bambino tocca il tasto."
+        },
+        {
+          "id": "it-u12-l5",
+          "type": "syllableJoin",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R",
+            "B",
+            "D",
+            "G",
+            "F",
+            "V"
+          ],
+          "target": "FAVOLA",
+          "display": "FAVOLA",
+          "hint": "📖",
+          "label": "FA-VO-LA",
+          "parts": [
+            "FA",
+            "VO",
+            "LA"
+          ],
+          "parentNote": "Unisci FA + VO + LA."
+        },
+        {
+          "id": "it-u12-l6",
+          "type": "rhymePick",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R",
+            "B",
+            "D",
+            "G",
+            "F",
+            "V"
+          ],
+          "target": "CANE",
+          "display": "CANE",
+          "hint": "🐕",
+          "label": "CA-NE",
+          "options": [
+            {
+              "emoji": "🍞",
+              "display": "PANE"
+            },
+            {
+              "emoji": "🦊",
+              "display": "VOLPE"
+            },
+            {
+              "emoji": "🌸",
+              "display": "FIORE"
+            }
+          ],
+          "answer": 0,
+          "parentNote": "Rima: CANE – PANE."
+        },
+        {
+          "id": "it-u12-l7",
+          "type": "reviewMix",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R",
+            "B",
+            "D",
+            "G",
+            "F",
+            "V"
+          ],
+          "target": "VOLPE",
+          "display": "VOLPE",
+          "hint": "🦊",
+          "label": "VOL-PE",
+          "parentNote": "Ripasso: la parola più debole finora.",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "it-u13",
+      "title": "Z, gruppi",
+      "icon": "🦓",
+      "reward": {
+        "emoji": "🦓",
+        "name": "Z",
+        "label": "zebra"
+      },
+      "scene": {
+        "biome": "meadow"
+      },
+      "lessons": [
+        {
+          "id": "it-u13-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R",
+            "B",
+            "D",
+            "G",
+            "F",
+            "V",
+            "Z"
+          ],
+          "target": "ZEBRA",
+          "display": "ZEBRA",
+          "hint": "🦓",
+          "label": "ZE-BRA",
+          "info": "Nuovo: 🦓 Z",
+          "parentNote": "Nuova lettera Z. ZEBRA: Z dolce /dz/."
+        },
+        {
+          "id": "it-u13-l2",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R",
+            "B",
+            "D",
+            "G",
+            "F",
+            "V",
+            "Z"
+          ],
+          "target": "PIZZA",
+          "display": "PIZZA",
+          "hint": "🍕",
+          "label": "PIZ-ZA",
+          "vocab": "pizza",
+          "parentNote": "PIZZA: doppia Z. Va nello zaino."
+        },
+        {
+          "id": "it-u13-l3",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R",
+            "B",
+            "D",
+            "G",
+            "F",
+            "V",
+            "Z"
+          ],
+          "target": "BAGNO",
+          "display": "BAGNO",
+          "hint": "🛁",
+          "label": "BA-GNO",
+          "parentNote": "BAGNO: GN è un suono unico."
+        },
+        {
+          "id": "it-u13-l4",
+          "type": "missingLetter",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R",
+            "B",
+            "D",
+            "G",
+            "F",
+            "V",
+            "Z"
+          ],
+          "target": "FOGLIA",
+          "display": "FOGLIA",
+          "hint": "🍂",
+          "label": "FO-GLIA",
+          "gap": 2,
+          "parentNote": "Parola con buco FO?LIA: manca la G di GLI."
+        },
+        {
+          "id": "it-u13-l5",
+          "type": "pictureOnly",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R",
+            "B",
+            "D",
+            "G",
+            "F",
+            "V",
+            "Z"
+          ],
+          "target": "ZAINO",
+          "display": "ZAINO",
+          "hint": "🎒",
+          "label": "ZAI-NO",
+          "parentNote": "Solo l'immagine: ZAINO."
+        },
+        {
+          "id": "it-u13-l6",
+          "type": "listen",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R",
+            "B",
+            "D",
+            "G",
+            "F",
+            "V",
+            "Z"
+          ],
+          "target": "ZUCCA",
+          "display": "ZUCCA",
+          "hint": "🎃",
+          "label": "ZUC-CA",
+          "parentNote": "Ascolto ZUCCA — doppia C."
+        },
+        {
+          "id": "it-u13-l7",
+          "type": "reviewMix",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R",
+            "B",
+            "D",
+            "G",
+            "F",
+            "V",
+            "Z"
+          ],
+          "target": "PIZZA",
+          "display": "PIZZA",
+          "hint": "🍕",
+          "label": "PIZ-ZA",
+          "parentNote": "Ripasso: la parola più debole finora.",
+          "review": true
+        }
+      ]
+    },
+    {
+      "id": "it-u14",
+      "title": "Rime e frasi",
+      "icon": "🌙",
+      "reward": {
+        "emoji": "🎲",
+        "name": "D",
+        "label": "dado"
+      },
+      "scene": {
+        "biome": "forest"
+      },
+      "lessons": [
+        {
+          "id": "it-u14-l1",
+          "type": "swype",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R",
+            "B",
+            "D",
+            "G",
+            "F",
+            "V",
+            "Z"
+          ],
+          "target": "FRAGOLA",
+          "display": "FRAGOLA",
+          "hint": "🍓",
+          "label": "FRA-GO-LA",
+          "vocab": "fragola",
+          "parentNote": "FRAGOLA: tre sillabe. Va nello zaino."
+        },
+        {
+          "id": "it-u14-l2",
+          "type": "rhymePick",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R",
+            "B",
+            "D",
+            "G",
+            "F",
+            "V",
+            "Z"
+          ],
+          "target": "GATTO",
+          "display": "GATTO",
+          "hint": "🐱",
+          "label": "GAT-TO",
+          "options": [
+            {
+              "emoji": "🍽️",
+              "display": "PIATTO"
+            },
+            {
+              "emoji": "🍓",
+              "display": "FRAGOLA"
+            },
+            {
+              "emoji": "🎒",
+              "display": "ZAINO"
+            }
+          ],
+          "answer": 0,
+          "parentNote": "Rima: GATTO – PIATTO."
+        },
+        {
+          "id": "it-u14-l3",
+          "type": "syllableJoin",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R",
+            "B",
+            "D",
+            "G",
+            "F",
+            "V",
+            "Z"
+          ],
+          "target": "BALENA",
+          "display": "BALENA",
+          "hint": "🐋",
+          "label": "BA-LE-NA",
+          "parts": [
+            "BA",
+            "LE",
+            "NA"
+          ],
+          "parentNote": "Unisci BA + LE + NA."
+        },
+        {
+          "id": "it-u14-l4",
+          "type": "missingLetter",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R",
+            "B",
+            "D",
+            "G",
+            "F",
+            "V",
+            "Z"
+          ],
+          "target": "SCARPA",
+          "display": "SCARPA",
+          "hint": "👟",
+          "label": "SCAR-PA",
+          "gap": 3,
+          "parentNote": "Parola con buco SCA?PA: manca la R."
+        },
+        {
+          "id": "it-u14-l5",
+          "type": "pictureOnly",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R",
+            "B",
+            "D",
+            "G",
+            "F",
+            "V",
+            "Z"
+          ],
+          "target": "FARFALLA",
+          "display": "FARFALLA",
+          "hint": "🦋",
+          "label": "FAR-FAL-LA",
+          "parentNote": "Solo l'immagine: FARFALLA, la parola più lunga."
+        },
+        {
+          "id": "it-u14-l6",
+          "type": "rhymePick",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R",
+            "B",
+            "D",
+            "G",
+            "F",
+            "V",
+            "Z"
+          ],
+          "target": "MELA",
+          "display": "MELA",
+          "hint": "🍎",
+          "label": "ME-LA",
+          "options": [
+            {
+              "emoji": "⛵",
+              "display": "VELA"
+            },
+            {
+              "emoji": "🐋",
+              "display": "BALENA"
+            },
+            {
+              "emoji": "👟",
+              "display": "SCARPA"
+            }
+          ],
+          "answer": 0,
+          "parentNote": "Rima: MELA – VELA."
+        },
+        {
+          "id": "it-u14-l7",
+          "type": "reviewMix",
+          "unlocked": [
+            "M",
+            "A",
+            "I",
+            "P",
+            "N",
+            "O",
+            "L",
+            "T",
+            "E",
+            "S",
+            "U",
+            "C",
+            "R",
+            "B",
+            "D",
+            "G",
+            "F",
+            "V",
+            "Z"
+          ],
+          "target": "FRAGOLA",
+          "display": "FRAGOLA",
+          "hint": "🍓",
+          "label": "FRA-GO-LA",
+          "parentNote": "Ripasso finale della fascia B.",
+          "review": true
+        }
+      ]
     }
   ],
   "sentence": {
@@ -1579,6 +2312,13 @@
         "id": "gatto",
         "emoji": "🐱",
         "text": "Gatto",
+        "unlockedBy": "vocab",
+        "person": "3sg"
+      },
+      {
+        "id": "volpe",
+        "emoji": "🦊",
+        "text": "Volpe",
         "unlockedBy": "vocab",
         "person": "3sg"
       }
@@ -1782,6 +2522,28 @@
           "dir": "al gelato",
           "loc": "con un gelato",
           "instr": "con un gelato"
+        }
+      },
+      {
+        "id": "pizza",
+        "emoji": "🍕",
+        "text": "la pizza",
+        "unlockedBy": "vocab",
+        "forms": {
+          "dir": "alla pizza",
+          "loc": "con la pizza",
+          "instr": "con la pizza"
+        }
+      },
+      {
+        "id": "fragola",
+        "emoji": "🍓",
+        "text": "una fragola",
+        "unlockedBy": "vocab",
+        "forms": {
+          "dir": "alla fragola",
+          "loc": "con una fragola",
+          "instr": "con una fragola"
         }
       }
     ]
