@@ -27,6 +27,13 @@ Jedna postava, která dítě vítá, ukazuje tah, fandí a utěšuje. Kulaté
 zvířátko, pohlavně neutrální, cca 3 hlavy vysoké. Návrh druhu je na vás —
 dva až tři návrhy (např. lišák, panda, sova, kapybara), vybereme jeden.
 
+**Užší výběr zadavatele (2. 10. 2026)** po prvním kole AI draftů
+(`drafts/stickers/`, galerie mimo repo): **panda, kapybara, žirafa, gepardice**.
+Nejvíc se líbí stav **jásot** (`cheer`) — energie výskoku a radosti je pro
+maskota klíčová, ostatní stavy ať z něj vycházejí. Druhé kolo draftů (4 druhy ×
+10 póz, `drafts/stickers/round2/`) slouží jen jako inspirace; prosíme o vlastní
+návrhy všech čtyř druhů, z nichž vybereme jeden.
+
 Musí fungovat:
 - ve velikosti 48 px (ikona na mapě) i 300 px (onboarding, oslava),
 - na tmavém pozadí (noční obloha `#1A1A2E`) i na světlém (zimní den),
