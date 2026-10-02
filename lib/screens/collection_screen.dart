@@ -94,6 +94,7 @@ class _CollectionScreenState extends State<CollectionScreen> {
                           '🏅 ${context.l.zooTitle}',
                           style: TextStyle(
                             fontFamily: kFont,
+                            fontFamilyFallback: kFontFallback,
                             fontSize: 16,
                             fontWeight: FontWeight.w900,
                             color: Color(0xFFFFD200),
@@ -104,6 +105,7 @@ class _CollectionScreenState extends State<CollectionScreen> {
                           '${owned.length}/${pack.units.length}',
                           style: TextStyle(
                             fontFamily: kFont,
+                            fontFamilyFallback: kFontFallback,
                             fontSize: 13,
                             fontWeight: FontWeight.w800,
                             color: Color(0xFFA0C4FF),
@@ -190,6 +192,7 @@ class _IslandPiece extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(
                   fontFamily: kFont,
+                  fontFamilyFallback: kFontFallback,
                   fontSize: 13,
                   fontWeight: FontWeight.w800,
                   color: Colors.white.withValues(alpha: 0.7),
@@ -295,6 +298,7 @@ class _StickerState extends State<_Sticker>
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     fontFamily: kFont,
+                    fontFamilyFallback: kFontFallback,
                     fontSize: 11,
                     fontWeight: FontWeight.w800,
                     color: Colors.white.withValues(alpha: 0.85),
@@ -324,6 +328,7 @@ class _SeasonShelf extends StatelessWidget {
           '🗓️ ${context.l.seasonStickersTitle}',
           style: TextStyle(
             fontFamily: kFont,
+            fontFamilyFallback: kFontFallback,
             fontSize: 14,
             fontWeight: FontWeight.w900,
             color: const Color(0xFFFFD200),
@@ -381,6 +386,7 @@ class _BadgeShelf extends StatelessWidget {
           '🏅 ${context.l.badgesTitle(earned.length, GameBadge.values.length)}',
           style: TextStyle(
             fontFamily: kFont,
+            fontFamilyFallback: kFontFallback,
             fontSize: 14,
             fontWeight: FontWeight.w900,
             color: Color(0xFFFFD200),
@@ -433,6 +439,7 @@ class _BadgeTile extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
             style: TextStyle(
               fontFamily: kFont,
+              fontFamilyFallback: kFontFallback,
               fontSize: 10,
               fontWeight: FontWeight.w800,
               color: Colors.white.withValues(alpha: earned ? 0.85 : 0.4),

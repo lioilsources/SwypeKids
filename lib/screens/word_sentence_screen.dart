@@ -298,6 +298,7 @@ class _ChoiceTile extends StatelessWidget {
               overflow: TextOverflow.ellipsis,
               style: TextStyle(
                 fontFamily: kFont,
+                fontFamilyFallback: kFontFallback,
                 fontSize: 13,
                 fontWeight: FontWeight.w800,
                 color: selected ? accent : Colors.white.withValues(alpha: 0.85),

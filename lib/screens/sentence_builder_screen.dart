@@ -342,6 +342,7 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
           text,
           style: TextStyle(
             fontFamily: kFont,
+            fontFamilyFallback: kFontFallback,
             fontSize: 11,
             fontWeight: FontWeight.w800,
             color: Color(0xFFA0C4FF),
@@ -386,6 +387,7 @@ class _CategoryColumn extends StatelessWidget {
             textAlign: TextAlign.center,
             style: TextStyle(
               fontFamily: kFont,
+              fontFamilyFallback: kFontFallback,
               fontSize: 11,
               fontWeight: FontWeight.w900,
               color: accent,
@@ -488,6 +490,7 @@ class _PartTile extends StatelessWidget {
               '?',
               style: TextStyle(
                 fontFamily: kFont,
+                fontFamilyFallback: kFontFallback,
                 fontSize: 12,
                 fontWeight: FontWeight.w900,
                 color: Colors.white.withOpacity(0.35),
@@ -538,6 +541,7 @@ class _PartTile extends StatelessWidget {
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontFamily: kFont,
+                fontFamilyFallback: kFontFallback,
                 fontSize: 12,
                 fontWeight: FontWeight.w800,
                 color: isSelected ? accent : Colors.white.withOpacity(0.85),
@@ -599,6 +603,7 @@ class _NewBadgeState extends State<_NewBadge>
           context.l.newLabel,
           style: TextStyle(
             fontFamily: kFont,
+            fontFamilyFallback: kFontFallback,
             fontSize: 9,
             fontWeight: FontWeight.w900,
             color: Colors.white,

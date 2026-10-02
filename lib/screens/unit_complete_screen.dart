@@ -86,6 +86,7 @@ class UnitCompleteScreen extends StatelessWidget {
                 context.l.starsGained(stars),
                 style: TextStyle(
                   fontFamily: kFont,
+                  fontFamilyFallback: kFontFallback,
                   fontSize: 17,
                   fontWeight: FontWeight.w800,
                   color: Colors.white.withOpacity(0.85),

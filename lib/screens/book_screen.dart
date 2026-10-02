@@ -85,6 +85,7 @@ class _BookScreenState extends State<BookScreen> {
                     '📖 ${context.l.bookTitle}',
                     style: TextStyle(
                       fontFamily: kFont,
+                      fontFamilyFallback: kFontFallback,
                       fontSize: 15,
                       fontWeight: FontWeight.w900,
                       color: Color(0xFFFFD200),
@@ -95,6 +96,7 @@ class _BookScreenState extends State<BookScreen> {
                     '${pages.length}',
                     style: TextStyle(
                       fontFamily: kFont,
+                      fontFamilyFallback: kFontFallback,
                       fontSize: 14,
                       fontWeight: FontWeight.w800,
                       color: Color(0xFFA0C4FF),
@@ -194,6 +196,7 @@ class _EmptyBook extends StatelessWidget {
             context.l.bookEmptyHint,
             style: TextStyle(
               fontFamily: kFont,
+              fontFamilyFallback: kFontFallback,
               fontSize: 14,
               fontWeight: FontWeight.w700,
               color: Colors.white.withValues(alpha: 0.5),

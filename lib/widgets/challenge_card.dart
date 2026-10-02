@@ -146,6 +146,7 @@ class ChallengeCard extends StatelessWidget {
                     _labelText,
                     style: TextStyle(
                       fontFamily: kFont,
+                      fontFamilyFallback: kFontFallback,
                       fontSize: 22,
                       fontWeight: FontWeight.w900,
                       color: const Color(0xFFFFD200),
@@ -255,6 +256,7 @@ class ChallengeCard extends StatelessWidget {
         return Text('🎉 ${context.l.successText}',
             style: TextStyle(
                 fontFamily: kFont,
+                fontFamilyFallback: kFontFallback,
                 fontSize: 18,
                 fontWeight: FontWeight.w800,
                 color: const Color(0xFF2ECC71)));
@@ -262,6 +264,7 @@ class ChallengeCard extends StatelessWidget {
         return Text('❌ ${context.l.errorText}',
             style: TextStyle(
                 fontFamily: kFont,
+                fontFamilyFallback: kFontFallback,
                 fontSize: 15,
                 fontWeight: FontWeight.w700,
                 color: const Color(0xFFE74C3C)));
@@ -281,6 +284,7 @@ class ChallengeCard extends StatelessWidget {
               prompt,
               style: TextStyle(
                   fontFamily: kFont,
+                  fontFamilyFallback: kFontFallback,
                   fontSize: 13,
                   color: Colors.white.withOpacity(0.35)),
             );
@@ -293,6 +297,7 @@ class ChallengeCard extends StatelessWidget {
                 : '☝️ ${context.l.promptSwipeTouch}',
             style: TextStyle(
                 fontFamily: kFont,
+                fontFamilyFallback: kFontFallback,
                 fontSize: 13,
                 color: Colors.white.withOpacity(0.35)),
           );

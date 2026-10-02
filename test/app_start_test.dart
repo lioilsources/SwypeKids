@@ -1,3 +1,6 @@
+import 'package:cute_kid_fonts/cute_kid_fonts.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:swype_kids/data/lessons.dart';
@@ -35,6 +38,38 @@ void main() {
     }
     expect(findText('🎹'), findsNothing, reason: 'mapa visí na placeholderu');
     expect(findText('M, A'), findsOneWidget);
+    await tester.pump(const Duration(seconds: 5));
+  }, timeout: const Timeout(Duration(seconds: 60)));
+
+  /// Rodiny písma všech vykreslených textů s písmeny (i těch bez vlastního
+  /// stylu). Ikony (MaterialIcons) a samotná emoji se nepočítají — ta
+  /// kreslí systémové emoji písmo vždy.
+  Set<String?> fontsOnScreen(WidgetTester tester) => {
+        for (final e in find.byType(RichText).evaluate())
+          if (RegExp(r'[\p{L}\p{N}]', unicode: true).hasMatch(
+              (e.renderObject! as RenderParagraph).text.toPlainText()))
+            (e.renderObject! as RenderParagraph).text.style?.fontFamily,
+      }..remove('MaterialIcons');
+
+  testWidgets('všechen text je v písmu appky, nikde systémové', (tester) async {
+    await tester.pumpWidget(const SwyperKidsApp());
+    for (var i = 0; i < 20; i++) {
+      await tester.pump(const Duration(milliseconds: 100));
+    }
+    // I menu (tlačítka, popisky bez vlastního stylu).
+    final scaffold = tester.firstState<ScaffoldState>(find.byType(Scaffold));
+    scaffold.openDrawer();
+    for (var i = 0; i < 10; i++) {
+      await tester.pump(const Duration(milliseconds: 100));
+    }
+    expect(fontsOnScreen(tester),
+        everyElement(isIn([KidFonts.baloo2, KidFonts.dynaPuff])));
+
+    // Písmo pro dyslektiky přepne i text bez vlastního stylu.
+    SettingsService.instance.dyslexiaFont = true;
+    addTearDown(() => SettingsService.instance.dyslexiaFont = false);
+    await tester.pump(const Duration(seconds: 1)); // AnimatedTheme
+    expect(fontsOnScreen(tester), everyElement('OpenDyslexic'));
     await tester.pump(const Duration(seconds: 5));
   }, timeout: const Timeout(Duration(seconds: 60)));
 }
