@@ -422,4 +422,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get retry => 'Try again';
+
+  @override
+  String get vocativeLabel => 'Czech form of address (vocative)';
+
+  @override
+  String get vocativeHint => 'e.g. Lauro';
 }

@@ -122,4 +122,22 @@ void main() {
     expect(ProfileService.instance.name, 'Ema');
     expect(ProgressService.instance.selectedLanguage, Language.cs);
   });
+
+  test('oslovení: čeština 5. pádem, ruční přepsání, ostatní jazyky 1. pádem', () async {
+    final s = ProfileService.instance;
+    final laura = s.complete(avatar: '🐼', name: 'Laura');
+    expect(s.addressIn(Language.cs), 'Lauro');
+    expect(s.addressIn(Language.en), 'Laura');
+    expect(s.addressIn(Language.de), 'Laura');
+
+    final ester = s.complete(avatar: '🐰', name: 'Ester');
+    expect(s.addressIn(Language.cs), 'Estere'); // pravidla pohlaví nepoznají
+    s.setCalled(ester.id, 'Ester');
+    expect(s.addressIn(Language.cs), 'Ester');
+
+    await ProfileService.init(); // přežije restart
+    expect(ProfileService.instance.active!.called, 'Ester');
+    ProfileService.instance.switchTo(laura.id);
+    expect(ProfileService.instance.addressIn(Language.cs), 'Lauro');
+  });
 }

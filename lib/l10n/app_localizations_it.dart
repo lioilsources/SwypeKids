@@ -422,4 +422,10 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get retry => 'Riprova';
+
+  @override
+  String get vocativeLabel => 'Vocativo in ceco';
+
+  @override
+  String get vocativeHint => 'es. Lauro';
 }

@@ -230,5 +230,7 @@
   "badgeExpeditionHow": "Primera expedición semanal de repaso",
   "seasonStickersTitle": "Pegatinas de las estaciones",
   "mapLoadFailed": "No se pudo cargar el mapa",
-  "retry": "Reintentar"
+  "retry": "Reintentar",
+  "vocativeLabel": "Vocativo en checo",
+  "vocativeHint": "p. ej. Lauro"
 }

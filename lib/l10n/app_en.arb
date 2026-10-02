@@ -127,5 +127,7 @@
   "badgeExpeditionHow": "First weekly review expedition",
   "seasonStickersTitle": "Season stickers",
   "mapLoadFailed": "The map could not be loaded",
-  "retry": "Try again"
+  "retry": "Try again",
+  "vocativeLabel": "Czech form of address (vocative)",
+  "vocativeHint": "e.g. Lauro"
 }

@@ -418,4 +418,10 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get retry => '重试';
+
+  @override
+  String get vocativeLabel => '捷克语称呼（呼格）';
+
+  @override
+  String get vocativeHint => '例如 Lauro';
 }

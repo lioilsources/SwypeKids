@@ -230,5 +230,7 @@
   "badgeExpeditionHow": "Première expédition de révision de la semaine",
   "seasonStickersTitle": "Autocollants des saisons",
   "mapLoadFailed": "Impossible de charger la carte",
-  "retry": "Réessayer"
+  "retry": "Réessayer",
+  "vocativeLabel": "Vocatif en tchèque",
+  "vocativeHint": "p. ex. Lauro"
 }

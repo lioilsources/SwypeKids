@@ -418,4 +418,10 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get retry => 'もういちど';
+
+  @override
+  String get vocativeLabel => 'チェコ語の呼びかけ形';
+
+  @override
+  String get vocativeHint => '例：Lauro';
 }

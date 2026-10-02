@@ -423,4 +423,10 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get retry => 'Erneut versuchen';
+
+  @override
+  String get vocativeLabel => 'Tschechische Anrede (Vokativ)';
+
+  @override
+  String get vocativeHint => 'z. B. Lauro';
 }
