@@ -1,5 +1,9 @@
 # Changelog
 
+## [02/10/2026] — v2.8.0
+- Průvodkyně Pandička (místo „Pipi“; v každém jazyce zdrobnělina zvířete) stojí ve hře přímo na ploše — dá se prstem přesunout kamkoli, a když překáží kartě nebo klávesám, pomalu uhne
+- Pandička má všech 10 póz: 5 různých jásotů, jejda, čte, spí
+
 ## [02/10/2026] — v2.7.4
 - Čeština: průvodce oslovuje dítě 5. pádem („Ahoj, Lauro!“); oslovení jde opravit v rodičovském koutku
 
