@@ -33,7 +33,17 @@ class Mascot extends StatefulWidget {
     this.onTickle,
   });
 
-  static const emoji = '🦊';
+  static const emoji = '🐼';
+
+  /// Pracovní postava Pandička (tier‑0 draft z `drafts/stickers/`), než
+  /// ilustrátor dodá `.riv`. Jeden obrázek na stav; wink/oops sdílí klid.
+  static String imageFor(MascotMood mood) => switch (mood) {
+        MascotMood.wave => 'assets/characters/panda/wave.png',
+        MascotMood.cheer => 'assets/characters/panda/cheer.png',
+        MascotMood.sleep => 'assets/characters/panda/sleep.png',
+        MascotMood.idle || MascotMood.wink || MascotMood.oops =>
+          'assets/characters/panda/idle.png',
+      };
 
   /// Pozdrav průvodce při příchodu na mapu (TTS). `{name}` = jméno dítěte;
   /// bez jména se oslovení vynechá. V noci místo pozdravu „dobrou noc".
@@ -64,14 +74,12 @@ class Mascot extends StatefulWidget {
         : template.replaceAll('{name}', '$sep$n');
   }
 
-  /// Doplněk ke stavu (druhé emoji vedle maskota).
+  /// Doplněk ke stavu — jen tam, kde ho nevyjádří samotný obrázek.
   static String? accessoryFor(MascotMood mood) => switch (mood) {
-        MascotMood.wave => '👋',
         MascotMood.wink => '😉',
-        MascotMood.cheer => '🎉',
         MascotMood.oops => '💭',
         MascotMood.sleep => '💤',
-        MascotMood.idle => null,
+        MascotMood.idle || MascotMood.wave || MascotMood.cheer => null,
       };
 
   static bool isTransient(MascotMood mood) =>
@@ -196,20 +204,15 @@ class _MascotState extends State<Mascot> with TickerProviderStateMixin {
                     clipBehavior: Clip.none,
                     alignment: Alignment.bottomLeft,
                     children: [
-                      Text(
-                        Mascot.emoji,
-                        style: TextStyle(
-                          fontSize: widget.size,
-                          shadows: widget.mood == MascotMood.sleep
-                              ? null
-                              : [
-                                  Shadow(
-                                    color: const Color(0xFFFFD200)
-                                        .withValues(alpha: 0.35),
-                                    blurRadius: 12,
-                                  ),
-                                ],
-                        ),
+                      Image.asset(
+                        Mascot.imageFor(widget.mood),
+                        key: ValueKey('mascot-${widget.mood.name}'),
+                        width: widget.size * 1.2,
+                        height: widget.size * 1.2,
+                        filterQuality: FilterQuality.medium,
+                        // Bez assetu (testy, rozbitý build) zůstane emoji.
+                        errorBuilder: (_, __, ___) => Text(Mascot.emoji,
+                            style: TextStyle(fontSize: widget.size)),
                       ),
                       if (accessory != null)
                         Positioned(
