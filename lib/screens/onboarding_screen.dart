@@ -9,6 +9,7 @@ import '../services/progress_service.dart';
 import '../services/tts_service.dart';
 import '../widgets/language_picker.dart' show kLanguageFlag;
 import '../ui/app_font.dart';
+import '../ui/emoji_art.dart';
 
 /// První minuta (roadmap v3.0): průvodce pozdraví hlasem, dítě vybere jazyk
 /// podle vlajky a zvířátko, rodič může zadat jméno. Vše jde bez čtení —
@@ -289,7 +290,7 @@ class _Choice extends StatelessWidget {
             width: selected ? 3 : 1,
           ),
         ),
-        child: Text(emoji, style: const TextStyle(fontSize: 40)),
+        child: EmojiArt(emoji, size: 40),
       ),
     );
   }

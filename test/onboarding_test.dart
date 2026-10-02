@@ -104,14 +104,14 @@ void main() {
     await tester.pump();
 
     // Krok 2: zvířátko
-    expect(find.text('Vyber si zvířátko.'), findsOneWidget);
+    expect(findText('Vyber si zvířátko.'), findsOneWidget);
     await tester.tap(find.byKey(const ValueKey('avatar-🐼')));
     await tester.pump();
     await tester.tap(find.byKey(const ValueKey('next')));
     await tester.pump();
 
     // Krok 3: jméno (může zůstat prázdné)
-    expect(find.text('Jak se jmenuješ?'), findsOneWidget);
+    expect(findText('Jak se jmenuješ?'), findsOneWidget);
     await tester.enterText(find.byKey(const ValueKey('name')), 'Ema');
     await tester.tap(find.byKey(const ValueKey('next')));
     await tester.pump();

@@ -10,6 +10,7 @@ import '../world/biome_band.dart';
 import '../world/world_clock.dart';
 import '../ui/app_font.dart';
 import '../ui/l10n.dart';
+import '../ui/emoji_art.dart';
 
 /// Zvěřinec — nálepkové album sběratelských odměn aktuálního jazyka.
 /// Nezískané nálepky jsou šedé ❓.
@@ -181,7 +182,7 @@ class _IslandPiece extends StatelessWidget {
         padding: const EdgeInsets.fromLTRB(14, 10, 14, 12),
         child: Row(
           children: [
-            Text(biome.emoji, style: const TextStyle(fontSize: 22)),
+            EmojiArt(biome.emoji, size: 22, animate: false),
             const SizedBox(width: 10),
             Expanded(
               child: Text(
@@ -284,7 +285,7 @@ class _StickerState extends State<_Sticker>
             children: [
               Opacity(
                 opacity: widget.owned ? 1 : 0.4,
-                child: Text(widget.emoji, style: const TextStyle(fontSize: 36)),
+                child: EmojiArt(widget.emoji, size: 36, animate: widget.owned),
               ),
               if (widget.label.isNotEmpty) ...[
                 const SizedBox(height: 2),
@@ -351,10 +352,10 @@ class _SeasonShelf extends StatelessWidget {
                   children: [
                     Opacity(
                       opacity: owned.contains(s.secret) ? 1 : 0.35,
-                      child: Text(owned.contains(s.secret) ? s.secret : '❓',
-                          style: const TextStyle(fontSize: 30)),
+                      child: EmojiArt(owned.contains(s.secret) ? s.secret : '❓',
+                          size: 30, animate: owned.contains(s.secret)),
                     ),
-                    Text(s.emoji, style: const TextStyle(fontSize: 14)),
+                    EmojiArt(s.emoji, size: 14, animate: false),
                   ],
                 ),
               ),

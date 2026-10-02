@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../data/keyboard_data.dart';
 import '../ui/app_font.dart';
+import '../ui/emoji_art.dart';
 
 class KeyWidget extends StatefulWidget {
   final String letter;
@@ -115,20 +116,7 @@ class _KeyWidgetState extends State<KeyWidget>
           ? Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
-                  emoji,
-                  style: TextStyle(
-                    fontSize: 18 * scale,
-                    shadows: inPath
-                        ? [
-                            Shadow(
-                              color: Colors.black.withOpacity(0.2),
-                              blurRadius: 4,
-                            )
-                          ]
-                        : null,
-                  ),
-                ),
+                EmojiArt(emoji, size: 18 * scale),
                 const SizedBox(height: 1),
                 Text(
                   letter,

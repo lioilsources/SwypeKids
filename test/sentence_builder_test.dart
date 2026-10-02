@@ -36,24 +36,24 @@ void main() {
     await pumpBuilder(tester);
 
     // Základní dlaždice jsou hned, slova ze hry zatím „?"
-    expect(find.text('Já'), findsOneWidget);
-    expect(find.text('Máma'), findsNothing);
-    expect(find.text('?'), findsWidgets);
-    expect(find.text('NOVÉ'), findsNothing);
+    expect(findText('Já'), findsOneWidget);
+    expect(findText('Máma'), findsNothing);
+    expect(findText('?'), findsWidgets);
+    expect(findText('NOVÉ'), findsNothing);
 
     final packId = PackService.instance.cached(Language.cs)!.id;
     ProgressService.instance.addWord(packId, 'mama');
     await pumpBuilder(tester);
 
-    expect(find.text('Máma'), findsOneWidget);
-    expect(find.text('NOVÉ'), findsOneWidget);
+    expect(findText('Máma'), findsOneWidget);
+    expect(findText('NOVÉ'), findsOneWidget);
 
     // Vybraná Máma se promítne do věty se správným tvarem slovesa
-    await tester.tap(find.text('Máma'));
+    await tester.tap(findText('Máma'));
     await tester.pump();
-    await tester.tap(find.text('jí'));
+    await tester.tap(findText('jí'));
     await tester.pump();
-    expect(find.text('jí'), findsWidgets);
+    expect(findText('jí'), findsWidgets);
   });
 
   testWidgets('hotovou větu jde uložit do Mé knížky, 🎹 vezme slovo do hry',
@@ -63,17 +63,17 @@ void main() {
 
     // Bez celé věty není co uložit
     expect(find.byKey(const ValueKey('save-book')), findsNothing);
-    await tester.tap(find.text('Já'));
+    await tester.tap(findText('Já'));
     await tester.pump();
-    await tester.tap(find.text('chci'));
+    await tester.tap(findText('chci'));
     await tester.pump();
-    await tester.tap(find.text('kolo'));
+    await tester.tap(findText('kolo'));
     await tester.pump();
 
     await tester.tap(find.byKey(const ValueKey('save-book')));
     await tester.pump();
     expect(ProgressService.instance.book('cs-CZ').single.text, 'Já chci kolo');
-    expect(find.text('✅'), findsOneWidget);
+    expect(findText('✅'), findsOneWidget);
 
     // Naučené slovo má 🎹, nenaučené ne
     expect(find.byKey(const ValueKey('play-kolo')), findsOneWidget);

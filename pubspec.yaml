@@ -45,6 +45,7 @@ flutter:
   assets:
     - assets/packs/
     - assets/characters/panda/
+    - assets/emoji/
     - assets/audio/
     - assets/audio/sfx/
     - assets/audio/ambient/

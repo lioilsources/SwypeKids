@@ -22,6 +22,7 @@ import 'word_sentence_screen.dart';
 import 'win_screen.dart';
 import '../ui/app_font.dart';
 import '../ui/l10n.dart';
+import '../ui/emoji_art.dart';
 
 /// reviewMix → konkrétní lekce: nejslabší dříve naučené slovo, jehož písmena
 /// jsou mezi `unlocked`. Id a `unlocked` zůstávají z reviewMix lekce (postup
@@ -541,8 +542,8 @@ class _GameScreenState extends State<GameScreen>
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text(PackService.instance.keyEmojiFor(widget.pack, l),
-                      style: const TextStyle(fontSize: 11)),
+                  EmojiArt(PackService.instance.keyEmojiFor(widget.pack, l),
+                      size: 11, animate: false),
                   const SizedBox(width: 3),
                   Text(l,
                       style: TextStyle(

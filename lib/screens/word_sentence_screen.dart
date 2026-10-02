@@ -6,6 +6,7 @@ import '../data/models/sentence.dart';
 import '../services/progress_service.dart';
 import '../services/tts_service.dart';
 import '../ui/app_font.dart';
+import '../ui/emoji_art.dart';
 
 /// Kolo „slovo do věty" (roadmap P5, wordToSentence): hned po naučení slova
 /// ve hře se otevře malý builder s tím slovem předvyplněným. Dítě doplní
@@ -206,7 +207,7 @@ class _WordSentenceScreenState extends State<WordSentenceScreen> {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Text(part.emoji, style: const TextStyle(fontSize: 26)),
+        EmojiArt(part.emoji, size: 26),
         const SizedBox(width: 4),
         Text(
           text,
@@ -288,7 +289,7 @@ class _ChoiceTile extends StatelessWidget {
         ),
         child: Column(
           children: [
-            Text(emoji, style: const TextStyle(fontSize: 30)),
+            EmojiArt(emoji, size: 30),
             const SizedBox(height: 2),
             Text(
               text,
@@ -342,7 +343,7 @@ class _RoundButton extends StatelessWidget {
         alignment: Alignment.center,
         child: Opacity(
           opacity: enabled ? 1 : 0.3,
-          child: Text(emoji, style: const TextStyle(fontSize: 28)),
+          child: EmojiArt(emoji, size: 28),
         ),
       ),
     );

@@ -79,7 +79,7 @@ void main() {
     await tester.pumpWidget(localizedApp(
       home: GameScreen(pack: _pack, unitIndex: 0),
     ));
-    expect(find.text('👩 1/2'), findsOneWidget);
+    expect(findText('👩 1/2'), findsOneWidget);
 
     // Průvodce zamává při příchodu, pak jásá po správném swype
     expect(find.byType(Mascot), findsOneWidget);
@@ -91,21 +91,21 @@ void main() {
     await _swype(tester, ['M', 'A']);
     expect(find.byKey(const ValueKey('mascot-cheer')), findsOneWidget);
     expect(ProgressService.instance.starsFor(_pack.id, 'u1-l1'), 3);
-    expect(find.text('⭐ 3'), findsOneWidget);
+    expect(findText('⭐ 3'), findsOneWidget);
     expect(find.byType(StarCelebration), findsOneWidget);
 
     // Slovo s vocab přistane do batohu; první tah dá odznak
     expect(ProgressService.instance.wordBag(_pack.id), {'ma'});
     expect(ProgressService.instance.hasBadge('firstSwype'), isTrue);
     await tester.pump(const Duration(milliseconds: 700));
-    expect(find.text('🎯 První tah'), findsOneWidget);
+    expect(findText('🎯 První tah'), findsOneWidget);
     await tester.pump(const Duration(milliseconds: 300));
-    expect(find.text('🎒 MA'), findsOneWidget);
+    expect(findText('🎒 MA'), findsOneWidget);
 
     // Po oslavě se automaticky přejde na další lekci
     await tester.pump(const Duration(milliseconds: 1400));
-    expect(find.text('👩 2/2'), findsOneWidget);
-    expect(find.text('🎒 MA'), findsNothing);
+    expect(findText('👩 2/2'), findsOneWidget);
+    expect(findText('🎒 MA'), findsNothing);
     expect(find.byType(StarCelebration), findsNothing);
 
     // Lekce 2: chyba nic neuloží a neblokuje, druhý pokus = 2 hvězdy
@@ -122,10 +122,10 @@ void main() {
     await tester.pump(const Duration(milliseconds: 1700));
     await tester.pump(const Duration(milliseconds: 500));
     expect(ProgressService.instance.collectibles(_pack.id), ['🐭']);
-    expect(find.text('Máš novou nálepku!'), findsOneWidget);
+    expect(findText('Máš novou nálepku!'), findsOneWidget);
     // Druhá lekce byla na 2⭐ → bez „Bez chyby“; první nálepka → Objevitel
     expect(ProgressService.instance.hasBadge('noMistake'), isFalse);
-    expect(find.text('🧭 Objevitel'), findsOneWidget);
+    expect(findText('🧭 Objevitel'), findsOneWidget);
 
     // Doběhnout zbývající časovače (fade stopy klávesnice)
     await tester.pump(const Duration(seconds: 3));
@@ -187,11 +187,11 @@ void main() {
         ),
       ),
     ));
-    await tester.tap(find.text('mapa'));
+    await tester.tap(findText('mapa'));
     // GameScreen má nekonečnou animaci (blikání nových písmen) → bez settle.
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 400));
-    expect(find.text('🔁 1/1'), findsOneWidget);
+    expect(findText('🔁 1/1'), findsOneWidget);
 
     await _swype(tester, ['M', 'A']);
     expect(ProgressService.instance.strengthOf(_pack.id, 'MA'), 1);
@@ -199,7 +199,7 @@ void main() {
 
     await tester.pump(const Duration(milliseconds: 1700));
     await tester.pump(const Duration(milliseconds: 500));
-    expect(find.text('mapa'), findsOneWidget); // zpět na mapě
+    expect(findText('mapa'), findsOneWidget); // zpět na mapě
     expect(ProgressService.instance.collectibles(_pack.id), isEmpty);
     await tester.pump(const Duration(seconds: 3));
   });
@@ -239,7 +239,7 @@ void main() {
     await tester.pump();
     await tester.pump(const Duration(seconds: 1)); // animace zavření routy
     expect(find.byType(WordSentenceScreen), findsNothing);
-    expect(find.text('👩 2/2'), findsOneWidget);
+    expect(findText('👩 2/2'), findsOneWidget);
     await tester.pump(const Duration(seconds: 3));
   });
 
@@ -302,7 +302,7 @@ void main() {
 
     testWidgets('lov hlásky: text skrytý, ťuknutí na správnou klávesu = 3⭐', (tester) async {
       await pump(tester);
-      expect(find.text('• • •'), findsOneWidget);
+      expect(findText('• • •'), findsOneWidget);
       expect(find.textContaining('Které písmenko slyšíš'), findsOneWidget);
       await _swype(tester, ['S']);
       expect(ProgressService.instance.starsFor(pack.id, 'h1'), 3);
@@ -310,7 +310,7 @@ void main() {
       await tester.pump(const Duration(milliseconds: 400));
 
       // spojování slabik: karta ukazuje MÁ + MA
-      expect(find.text('MÁ + MA'), findsOneWidget);
+      expect(findText('MÁ + MA'), findsOneWidget);
       await _swype(tester, ['M', 'A', 'M', 'A']);
       expect(ProgressService.instance.starsFor(pack.id, 'j1'), 3);
       await tester.pump(const Duration(milliseconds: 1700));

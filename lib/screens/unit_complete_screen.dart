@@ -4,6 +4,7 @@ import '../services/achievement_service.dart';
 import '../widgets/badge_chip.dart';
 import '../ui/app_font.dart';
 import '../ui/l10n.dart';
+import '../ui/emoji_art.dart';
 
 /// Hero tag nálepky jednotky: po oslavě nálepka odletí na své místo na mapě.
 String stickerHeroTag(String packId, int unitIndex) =>
@@ -54,8 +55,7 @@ class UnitCompleteScreen extends StatelessWidget {
                   width: 120,
                   height: 120,
                   child: FittedBox(
-                    child: Text(reward.emoji,
-                        style: const TextStyle(fontSize: 96)),
+                    child: EmojiArt(reward.emoji, size: 96),
                   ),
                 )),
               ),
