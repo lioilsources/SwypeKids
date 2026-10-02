@@ -1,5 +1,8 @@
 # Changelog
 
+## [02/10/2026] — v2.7.1
+- Pandička: první postava průvodce (pracovní verze) místo emoji — mává, jásá, spí
+
 ## [02/10/2026] — v2.7.0
 - Pásmo B pro němčinu, španělštinu, italštinu, francouzštinu a portugalštinu (+21 lekcí v každém jazyce)
 
