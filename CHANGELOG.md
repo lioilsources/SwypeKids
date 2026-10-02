@@ -1,5 +1,9 @@
 # Changelog
 
+## [02/10/2026] — v2.9.0
+- Obrázky místo emoji: 294 ilustrovaných nálepek ve stylu Pandičky (karta, klávesy, Zvěřinec, nálepky za lekce, mapa, věty, avatary) — jemně dýchají a při změně vyskočí
+- Nové dětské písmo z CuteKidFonts: Baloo 2 v celé appce, baculatý DynaPuff v nadpisech a na písmenech, bublinkový štítek slova na kartě (písmo pro dyslektiky má dál přednost)
+
 ## [02/10/2026] — v2.8.0
 - Průvodkyně Pandička (místo „Pipi“; v každém jazyce zdrobnělina zvířete) stojí ve hře přímo na ploše — dá se prstem přesunout kamkoli, a když překáží kartě nebo klávesám, pomalu uhne
 - Pandička má všech 10 póz: 5 různých jásotů, jejda, čte, spí
