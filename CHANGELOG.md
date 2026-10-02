@@ -1,5 +1,8 @@
 # Changelog
 
+## [02/10/2026] — v2.7.3
+- Pandička se přestěhovala z horní lišty na plochu mapy: je větší, občas přejde do druhého rohu a nic nezakrývá
+
 ## [02/10/2026] — v2.7.2
 - Oprava (iOS): zvuky hry hrají i v tichém režimu a hlas průvodce už nevypne ostatní zvuky; ztišit lze v rodičovském koutku
 
