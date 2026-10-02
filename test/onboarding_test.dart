@@ -96,10 +96,10 @@ void main() {
     await tester.pump();
 
     // Krok 1: jazyk podle vlajky
-    expect(find.textContaining("I'm Pipi"), findsOneWidget);
+    expect(find.textContaining("I'm Pandy"), findsOneWidget);
     await tester.tap(find.byKey(const ValueKey('lang-cs')));
     await tester.pump();
-    expect(find.textContaining('Já jsem Pipi'), findsOneWidget);
+    expect(find.textContaining('Já jsem Pandička'), findsOneWidget);
     await tester.tap(find.byKey(const ValueKey('next')));
     await tester.pump();
 

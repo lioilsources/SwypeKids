@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../audio/audio_service.dart';
+import '../characters/draggable_guide.dart';
 import '../characters/mascot.dart';
 import '../data/lessons.dart';
 import '../data/models/content_pack.dart';
@@ -101,6 +102,31 @@ class _GameScreenState extends State<GameScreen>
   List<String> _livePath = [];
   GameStatus _status = GameStatus.idle;
   MascotMood _mood = MascotMood.wave; // průvodce: zamává při příchodu
+
+  // Místa, kde průvodce nesmí zůstat stát (globální souřadnice).
+  final _topBarKey = GlobalKey();
+  final _cardKey = GlobalKey();
+  final _rhymeKey = GlobalKey();
+  final _legendKey = GlobalKey();
+  final _keyboardKey = GlobalKey<KeyboardWidgetState>();
+
+  List<GuideObstacle> _guideObstacles() {
+    Rect? rectOf(GlobalKey k) {
+      final box = k.currentContext?.findRenderObject() as RenderBox?;
+      if (box == null || !box.hasSize) return null;
+      return box.localToGlobal(Offset.zero) & box.size;
+    }
+
+    return [
+      if (rectOf(_topBarKey) case final r?) (rect: r, weight: 3.0),
+      if (rectOf(_cardKey) case final r?) (rect: r, weight: 2.0),
+      if (rectOf(_rhymeKey) case final r?) (rect: r, weight: 4.0),
+      if (rectOf(_legendKey) case final r?) (rect: r, weight: 1.0),
+      if (_keyboardKey.currentState?.keysRect() case final r?)
+        (rect: r.inflate(6), weight: 4.0),
+    ];
+  }
+
   bool _shake = false;
   List<String> _newLetters = [];
 
@@ -359,6 +385,7 @@ class _GameScreenState extends State<GameScreen>
                   children: [
                     // ── Top bar ──────────────────────────────────────────────
                     Padding(
+                      key: _topBarKey,
                       padding: const EdgeInsets.symmetric(
                           horizontal: 8, vertical: 4),
                       child: Row(
@@ -370,17 +397,6 @@ class _GameScreenState extends State<GameScreen>
                             constraints: const BoxConstraints(),
                             onPressed: () => Navigator.of(context).pop(),
                           ),
-                          // Průvodce reaguje na každý výsledek kola.
-                          Mascot(
-                            mood: _mood,
-                            size: 26,
-                            onSettled: () {
-                              if (mounted) {
-                                setState(() => _mood = MascotMood.idle);
-                              }
-                            },
-                          ),
-                          const SizedBox(width: 6),
                           _badge(switch (lesson.type) {
                             LessonType.listen => '🔊 ${context.l.typeListen}',
                             LessonType.pictureOnly =>
@@ -389,16 +405,13 @@ class _GameScreenState extends State<GameScreen>
                               '🧩 ${context.l.typeGap}',
                             LessonType.reviewMix =>
                               '🔁 ${context.l.typeReview}',
-                            LessonType.letterHunt =>
-                              '👂 ${context.l.typeHunt}',
+                            LessonType.letterHunt => '👂 ${context.l.typeHunt}',
                             LessonType.syllableJoin =>
                               '🧱 ${context.l.typeJoin}',
-                            LessonType.rhymePick =>
-                              '🎵 ${context.l.typeRhyme}',
-                            LessonType.swype =>
-                              isWord
-                                  ? '🔤 ${context.l.typeWord}'
-                                  : '🔡 ${context.l.typeSyllable}',
+                            LessonType.rhymePick => '🎵 ${context.l.typeRhyme}',
+                            LessonType.swype => isWord
+                                ? '🔤 ${context.l.typeWord}'
+                                : '🔡 ${context.l.typeSyllable}',
                           }),
                           const Spacer(),
                           Text(
@@ -468,6 +481,7 @@ class _GameScreenState extends State<GameScreen>
   }
 
   Widget _card(Lesson lesson, CardMode mode) => ChallengeCard(
+        key: _cardKey,
         lesson: lesson,
         path: _livePath.isNotEmpty && _status == GameStatus.idle
             ? _livePath
@@ -484,17 +498,20 @@ class _GameScreenState extends State<GameScreen>
 
   /// Vstup kola: klávesnice, nebo u rýmu tři obrázky.
   Widget _input(Lesson lesson) => lesson.type == LessonType.rhymePick
-      ? _RhymeOptions(
-          key: ValueKey('rhyme-$_idx'),
-          options: lesson.options,
-          revealed: _revealed ? lesson.answer : null,
-          onPick: _onRhymePick,
-        )
+      ? KeyedSubtree(
+          key: _rhymeKey,
+          child: _RhymeOptions(
+            key: ValueKey('rhyme-$_idx'),
+            options: lesson.options,
+            revealed: _revealed ? lesson.answer : null,
+            onPick: _onRhymePick,
+          ))
       : _keyboard(lesson);
 
   Widget _keyboard(Lesson lesson) => Padding(
         padding: const EdgeInsets.symmetric(horizontal: 6),
         child: KeyboardWidget(
+          key: _keyboardKey,
           lesson: lesson,
           newLetters: _newLetters,
           emojiFor: _emojiFor,
@@ -506,6 +523,7 @@ class _GameScreenState extends State<GameScreen>
       );
 
   Widget _legend(Lesson lesson) => Padding(
+        key: _legendKey,
         padding: const EdgeInsets.fromLTRB(8, 4, 8, 6),
         child: Wrap(
           alignment: WrapAlignment.center,
@@ -544,6 +562,20 @@ class _GameScreenState extends State<GameScreen>
   Widget _withCelebration(Widget game, {required bool landscape}) => Stack(
         children: [
           game,
+          // Průvodce na ploše: reaguje na každý výsledek kola, dá se přesunout.
+          Positioned.fill(
+            child: SafeArea(
+              child: DraggableGuide(
+                mood: _mood,
+                layoutToken: _idx,
+                obstacles: _guideObstacles,
+                onTickle: () => setState(() => _mood = MascotMood.wink),
+                onSettled: () {
+                  if (mounted) setState(() => _mood = MascotMood.idle);
+                },
+              ),
+            ),
+          ),
           if (_status == GameStatus.success)
             Positioned.fill(
               child: StarCelebration(

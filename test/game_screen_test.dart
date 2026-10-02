@@ -8,6 +8,7 @@ import 'package:swype_kids/data/models/sentence.dart';
 import 'package:swype_kids/screens/game_screen.dart';
 import 'package:swype_kids/screens/word_sentence_screen.dart';
 import 'package:swype_kids/services/progress_service.dart';
+import 'package:swype_kids/services/settings_service.dart';
 import 'package:swype_kids/widgets/challenge_card.dart';
 import 'package:swype_kids/widgets/key_widget.dart';
 import 'package:swype_kids/widgets/keyboard_widget.dart';
@@ -109,7 +110,8 @@ void main() {
 
     // Lekce 2: chyba nic neuloží a neblokuje, druhý pokus = 2 hvězdy
     await _swype(tester, ['M', 'A']);
-    expect(find.text('💭'), findsOneWidget); // průvodce: „ups, zkus to znovu“
+    // průvodce: „ups, zkus to znovu“
+    expect(find.byKey(const ValueKey('mascot-oops')), findsOneWidget);
     expect(ProgressService.instance.starsFor(_pack.id, 'u1-l2'), 0);
     expect(find.byType(StarCelebration), findsNothing);
     await tester.pump(const Duration(milliseconds: 1000));
@@ -326,5 +328,51 @@ void main() {
       expect(ProgressService.instance.starsFor(pack.id, 'r1'), 2);
       await tester.pump(const Duration(seconds: 4));
     });
+  });
+
+  testWidgets('průvodce jde přetáhnout; puštěný na klávesy pomalu uhne',
+      (tester) async {
+    tester.view.physicalSize = const Size(390, 844) * 3;
+    tester.view.devicePixelRatio = 3;
+    addTearDown(tester.view.reset);
+    await SettingsService.instance.load();
+
+    await tester.pumpWidget(localizedApp(
+      home: GameScreen(pack: _pack, unitIndex: 0),
+    ));
+    await tester.pump(const Duration(seconds: 2));
+
+    final guide = find.byKey(const ValueKey('guide-drag'));
+    Rect keys() => [
+          for (final l in ['M', 'A', 'Q', 'P', 'Z', 'L'])
+            if (_key(l).evaluate().isNotEmpty) tester.getRect(_key(l))
+        ].reduce((a, b) => a.expandToInclude(b));
+    final card = tester.getRect(find.byType(ChallengeCard));
+
+    // Výchozí místo nepřekáží ani kartě, ani klávesám.
+    expect(tester.getRect(guide).overlaps(keys()), isFalse);
+    expect(tester.getRect(guide).overlaps(card), isFalse);
+
+    // Dítě ho šoupne doprostřed klávesnice…
+    final g = await tester.startGesture(tester.getCenter(guide));
+    for (var i = 0; i < 10; i++) {
+      await g.moveBy((keys().center - tester.getCenter(guide)) / 4);
+      await tester.pump(const Duration(milliseconds: 16));
+    }
+    expect(tester.getRect(guide).overlaps(keys()), isTrue);
+    await g.up();
+    await tester.pump();
+    // …a on pomalu odejde na volné místo (ne skokem).
+    await tester.pump(const Duration(milliseconds: 300));
+    expect(tester.getRect(guide).overlaps(keys()), isTrue);
+    await tester.pump(const Duration(seconds: 2));
+    expect(tester.getRect(guide).overlaps(keys()), isFalse);
+    expect(tester.getRect(guide).overlaps(card), isFalse);
+    expect(SettingsService.instance.guidePosition, isNotNull);
+
+    // Swype přes klávesy pořád funguje.
+    await _swype(tester, ['M', 'A']);
+    expect(ProgressService.instance.starsFor(_pack.id, 'u1-l1'), 3);
+    await tester.pump(const Duration(seconds: 4));
   });
 }

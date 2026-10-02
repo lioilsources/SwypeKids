@@ -157,8 +157,8 @@ abstract class AppLocalizations {
   /// No description provided for @bedtimeText.
   ///
   /// In cs, this message translates to:
-  /// **'Pipi už spí. Zítra zase!'**
-  String get bedtimeText;
+  /// **'{guide} už spí. Zítra zase!'**
+  String bedtimeText(String guide);
 
   /// No description provided for @typeListen.
   ///

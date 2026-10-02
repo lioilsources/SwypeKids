@@ -7,7 +7,7 @@
   "menuBook": "My Book",
   "menuParents": "For parents",
   "practiceTitle": "Practice",
-  "bedtimeText": "Pipi is asleep. See you tomorrow!",
+  "bedtimeText": "{guide} is asleep. See you tomorrow!",
   "typeListen": "LISTEN",
   "typePicture": "PICTURE",
   "typeGap": "FILL IN",

@@ -28,6 +28,9 @@ lib/
 ├── ui/
 │   ├── app_font.dart        # kFont (Nunito / OpenDyslexic)
 │   └── l10n.dart            # context.l shortcut, AppLanguage notifier, GameBadge/Season label extensions
+├── characters/
+│   ├── mascot.dart          # Guide (Pandička): moods → images in assets/characters/panda/, name per language (diminutive of the animal)
+│   └── draggable_guide.dart # Guide on the game screen: drag anywhere, slowly steps off card/keys; position in SettingsService
 ├── audio/
 │   └── audio_service.dart   # flutter_soloud sfx (key tones, fanfare, stars…); silent no-op if engine fails
 ├── data/

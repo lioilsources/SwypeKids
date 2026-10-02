@@ -7,7 +7,7 @@
   "menuBook": "Mon livre",
   "menuParents": "Pour les parents",
   "practiceTitle": "Entraînement",
-  "bedtimeText": "Pipi dort déjà. À demain !",
+  "bedtimeText": "{guide} dort déjà. À demain !",
   "typeListen": "ÉCOUTE",
   "typePicture": "IMAGE",
   "typeGap": "COMPLÈTE",

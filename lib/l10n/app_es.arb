@@ -7,7 +7,7 @@
   "menuBook": "Mi libro",
   "menuParents": "Para padres",
   "practiceTitle": "Práctica",
-  "bedtimeText": "Pipi ya duerme. ¡Hasta mañana!",
+  "bedtimeText": "{guide} ya duerme. ¡Hasta mañana!",
   "typeListen": "ESCUCHA",
   "typePicture": "IMAGEN",
   "typeGap": "COMPLETA",

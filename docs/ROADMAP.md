@@ -78,7 +78,7 @@ nemožné; cíl je stejná úroveň řemesla. Návrh party:
 
 | Postava | Role | Kde |
 |---|---|---|
-| **Písmenko Pipi** (maskot, kulaté zvířátko, např. lišák nebo panda) | Průvodce: vítá, ukazuje, fandí, utěšuje | Mapa, hra, oslava, onboarding |
+| **Pandička** (maskot; jméno = zdrobnělina zvířete) | Průvodce: vítá, ukazuje, fandí, utěšuje | Mapa, hra, oslava, onboarding |
 | **Zvířátka z klávesnice** (🐭 myška, 🐯 tygřík, 🐶 pejsek…) | Ožívají ze samotných klávesových emoji; po získání nálepky žijí ve Zvěřinci | Klávesy, Zvěřinec, mapa |
 | **Rodina** (👩 máma, 👨 táta, 👵 bába, 👧 holčička) | Postavy z prvních slov (MÁMA, TÁTA…) — dítě „píše" těm, koho zná | Hint na kartě, sentence builder |
 

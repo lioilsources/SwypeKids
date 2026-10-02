@@ -8,9 +8,9 @@ import '../data/lessons.dart';
 /// Stavy průvodce (roadmap P1). Názvy odpovídají vstupům Rive state machine
 /// z `docs/ILLUSTRATOR_BRIEF.md`, aby se emoji verze dala vyměnit za `.riv`
 /// beze změny volajících.
-enum MascotMood { idle, wave, wink, cheer, oops, sleep }
+enum MascotMood { idle, wave, wink, cheer, oops, sleep, read }
 
-/// Průvodce Pipi — zatím emoji 🦊 s jednoduchými animacemi; po dodání
+/// Průvodce Pandička — obrázek na stav s jednoduchými animacemi; po dodání
 /// postavy se tělo widgetu nahradí Rive, API zůstane.
 ///
 /// Reakce jsou krátké (≤ 1,2 s) a po nich se vrací do [MascotMood.idle]
@@ -35,13 +35,36 @@ class Mascot extends StatefulWidget {
 
   static const emoji = '🐼';
 
-  /// Pracovní postava Pandička (tier‑0 draft z `drafts/stickers/`), než
-  /// ilustrátor dodá `.riv`. Jeden obrázek na stav; wink/oops sdílí klid.
-  static String imageFor(MascotMood mood) => switch (mood) {
+  /// Jméno průvodce = zdrobnělina jména zvířete v jazyce packu. Další
+  /// zvířata (Gepardíček, Kapybárka, Žirafka…) přibudou s jejich obrázky.
+  static const _names = <Language, String>{
+    Language.cs: 'Pandička',
+    Language.en: 'Pandy',
+    Language.de: 'Pandi',
+    Language.es: 'Pandita',
+    Language.it: 'Pandina',
+    Language.fr: 'Pandou',
+    Language.pt: 'Pandinha',
+    Language.zh: '熊猫宝宝',
+    Language.ja: 'パンダちゃん',
+  };
+
+  static String name(Language lang) => _names[lang] ?? _names[Language.en]!;
+
+  /// Varianty jásotu — každá oslava si náhodně vybere jednu.
+  static const cheerVariants = ['clap', 'dance', 'hug', 'jump', 'star'];
+
+  /// Pracovní postava Pandička (tier‑0 draft z `drafts/stickers/round2`),
+  /// než ilustrátor dodá `.riv`. Jeden obrázek na stav; wink sdílí klid.
+  static String imageFor(MascotMood mood, {int variant = 0}) => switch (mood) {
         MascotMood.wave => 'assets/characters/panda/wave.png',
-        MascotMood.cheer => 'assets/characters/panda/cheer.png',
+        MascotMood.cheer => 'assets/characters/panda/cheer-'
+            '${cheerVariants[variant % cheerVariants.length]}.png',
+        MascotMood.oops => 'assets/characters/panda/oops.png',
+        MascotMood.read => 'assets/characters/panda/read.png',
         MascotMood.sleep => 'assets/characters/panda/sleep.png',
-        MascotMood.idle || MascotMood.wink || MascotMood.oops =>
+        MascotMood.idle ||
+        MascotMood.wink =>
           'assets/characters/panda/idle.png',
       };
 
@@ -77,9 +100,13 @@ class Mascot extends StatefulWidget {
   /// Doplněk ke stavu — jen tam, kde ho nevyjádří samotný obrázek.
   static String? accessoryFor(MascotMood mood) => switch (mood) {
         MascotMood.wink => '😉',
-        MascotMood.oops => '💭',
         MascotMood.sleep => '💤',
-        MascotMood.idle || MascotMood.wave || MascotMood.cheer => null,
+        MascotMood.idle ||
+        MascotMood.wave ||
+        MascotMood.cheer ||
+        MascotMood.oops ||
+        MascotMood.read =>
+          null,
       };
 
   static bool isTransient(MascotMood mood) =>
@@ -140,8 +167,15 @@ class _MascotState extends State<Mascot> with TickerProviderStateMixin {
     }
   }
 
+  /// Varianta jásotu pro právě hrající oslavu.
+  int _variant = 0;
+  static final _rng = Random();
+
   void _play() {
     if (!Mascot.isTransient(widget.mood)) return;
+    if (widget.mood == MascotMood.cheer) {
+      _variant = _rng.nextInt(Mascot.cheerVariants.length);
+    }
     // Postava „žvatlá" bez jazyka (roadmap P2) — při mávání a jásotu.
     if (widget.mood == MascotMood.wave || widget.mood == MascotMood.cheer) {
       AudioService.instance.play(Sfx.babble, volume: 0.6);
@@ -188,7 +222,7 @@ class _MascotState extends State<Mascot> with TickerProviderStateMixin {
               scale *= 1 + 0.08 * sin(pi * t);
             case MascotMood.sleep:
               scale = 0.96;
-            case MascotMood.idle:
+            case MascotMood.idle || MascotMood.read:
               break;
           }
           return Transform.translate(
@@ -205,7 +239,7 @@ class _MascotState extends State<Mascot> with TickerProviderStateMixin {
                     alignment: Alignment.bottomLeft,
                     children: [
                       Image.asset(
-                        Mascot.imageFor(widget.mood),
+                        Mascot.imageFor(widget.mood, variant: _variant),
                         key: ValueKey('mascot-${widget.mood.name}'),
                         width: widget.size * 1.2,
                         height: widget.size * 1.2,

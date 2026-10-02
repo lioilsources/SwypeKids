@@ -25,16 +25,17 @@ class OnboardingScreen extends StatefulWidget {
 
 
   /// Fráze průvodce per jazyk: pozdrav, „vyber si zvířátko", „jak se jmenuješ".
+  /// `{guide}` = jméno průvodce ([Mascot.name]).
   static const phrases = <Language, (String, String, String)>{
-    Language.cs: ('Ahoj! Já jsem Pipi. Pojď si hrát s písmenky.', 'Vyber si zvířátko.', 'Jak se jmenuješ?'),
-    Language.en: ("Hi! I'm Pipi. Let's play with letters.", 'Pick your animal.', "What's your name?"),
-    Language.de: ('Hallo! Ich bin Pipi. Spielen wir mit Buchstaben.', 'Such dir ein Tier aus.', 'Wie heißt du?'),
-    Language.es: ('¡Hola! Soy Pipi. Vamos a jugar con las letras.', 'Elige tu animal.', '¿Cómo te llamas?'),
-    Language.it: ('Ciao! Sono Pipi. Giochiamo con le lettere.', 'Scegli il tuo animale.', 'Come ti chiami?'),
-    Language.fr: ('Salut ! Je suis Pipi. Jouons avec les lettres.', 'Choisis ton animal.', 'Comment tu t\'appelles ?'),
-    Language.pt: ('Oi! Eu sou o Pipi. Vamos brincar com as letras.', 'Escolha seu bichinho.', 'Qual é o seu nome?'),
-    Language.zh: ('你好！我是皮皮。我们一起玩字母吧。', '选一个小动物。', '你叫什么名字？'),
-    Language.ja: ('こんにちは！ぼくはピピ。もじであそぼう。', 'どうぶつをえらんでね。', 'おなまえは？'),
+    Language.cs: ('Ahoj! Já jsem {guide}. Pojď si hrát s písmenky.', 'Vyber si zvířátko.', 'Jak se jmenuješ?'),
+    Language.en: ("Hi! I'm {guide}. Let's play with letters.", 'Pick your animal.', "What's your name?"),
+    Language.de: ('Hallo! Ich bin {guide}. Spielen wir mit Buchstaben.', 'Such dir ein Tier aus.', 'Wie heißt du?'),
+    Language.es: ('¡Hola! Soy {guide}. Vamos a jugar con las letras.', 'Elige tu animal.', '¿Cómo te llamas?'),
+    Language.it: ('Ciao! Sono {guide}. Giochiamo con le lettere.', 'Scegli il tuo animale.', 'Come ti chiami?'),
+    Language.fr: ('Salut ! Je suis {guide}. Jouons avec les lettres.', 'Choisis ton animal.', 'Comment tu t\'appelles ?'),
+    Language.pt: ('Oi! Eu sou a {guide}. Vamos brincar com as letras.', 'Escolha seu bichinho.', 'Qual é o seu nome?'),
+    Language.zh: ('你好！我是{guide}。我们一起玩字母吧。', '选一个小动物。', '你叫什么名字？'),
+    Language.ja: ('こんにちは！わたしは{guide}。もじであそぼう。', 'どうぶつをえらんでね。', 'おなまえは？'),
   };
 
   @override
@@ -48,8 +49,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   final _name = TextEditingController();
   MascotMood _mood = MascotMood.wave;
 
-  (String, String, String) get _say =>
-      OnboardingScreen.phrases[_lang] ?? OnboardingScreen.phrases[Language.en]!;
+  (String, String, String) get _say {
+    final (hello, pick, name) =
+        OnboardingScreen.phrases[_lang] ?? OnboardingScreen.phrases[Language.en]!;
+    return (hello.replaceAll('{guide}', Mascot.name(_lang)), pick, name);
+  }
 
   @override
   void initState() {

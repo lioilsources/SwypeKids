@@ -7,7 +7,7 @@
   "menuBook": "我的小书",
   "menuParents": "家长专区",
   "practiceTitle": "练习",
-  "bedtimeText": "皮皮睡着了，明天见！",
+  "bedtimeText": "{guide}睡着了，明天见！",
   "typeListen": "听力",
   "typePicture": "看图",
   "typeGap": "填空",

@@ -30,7 +30,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get practiceTitle => 'Practice';
 
   @override
-  String get bedtimeText => 'Pipi is asleep. See you tomorrow!';
+  String bedtimeText(String guide) {
+    return '$guide is asleep. See you tomorrow!';
+  }
 
   @override
   String get typeListen => 'LISTEN';

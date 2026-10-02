@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:math';
 
 import 'package:flutter/material.dart';
 import '../audio/audio_service.dart';
@@ -68,6 +69,7 @@ class LessonMapScreenState extends State<LessonMapScreen> {
 
   // Pandička na ploše mapy: stojí dole v rohu a občas přejde do druhého.
   bool _mascotRight = true;
+  static final _rng = Random();
   Timer? _wanderTimer;
   static const _wanderEvery = Duration(seconds: 25);
 
@@ -107,13 +109,19 @@ class LessonMapScreenState extends State<LessonMapScreen> {
           flipX: !_mascotRight,
           child: Mascot(
             key: const ValueKey('map-mascot'),
-            mood: world.isNight && _mood == MascotMood.idle
+            mood: world.isNight &&
+                    (_mood == MascotMood.idle || _mood == MascotMood.read)
                 ? MascotMood.sleep
                 : _mood,
             size: size,
             onTickle: _tickle,
             onSettled: () {
-              if (mounted) setState(() => _mood = MascotMood.idle);
+              // Po zamávání si občas sedne a čte.
+              if (mounted) {
+                setState(() => _mood = _rng.nextBool()
+                    ? MascotMood.read
+                    : MascotMood.idle);
+              }
             },
           ),
         ),
@@ -519,7 +527,8 @@ class LessonMapScreenState extends State<LessonMapScreen> {
                         );
                       })),
                       if (_bedtime)
-                        const Positioned.fill(child: _BedtimeCard()),
+                        Positioned.fill(
+                            child: _BedtimeCard(language: widget.language)),
                     ],
                   ),
                 ),
@@ -532,7 +541,9 @@ class LessonMapScreenState extends State<LessonMapScreen> {
 /// Po časovém limitu: průvodce spí, mapa nepustí další lekci. Menu zůstává
 /// dostupné — rodič prodlouží jen z koutku.
 class _BedtimeCard extends StatelessWidget {
-  const _BedtimeCard();
+  final Language language;
+
+  const _BedtimeCard({required this.language});
 
   @override
   Widget build(BuildContext context) {
@@ -556,7 +567,7 @@ class _BedtimeCard extends StatelessWidget {
             const Text('🌙 💤', style: TextStyle(fontSize: 32)),
             const SizedBox(height: 6),
             Text(
-              context.l.bedtimeText,
+              context.l.bedtimeText(Mascot.name(language)),
               style: TextStyle(
                 fontFamily: kFont,
                 fontSize: 16,

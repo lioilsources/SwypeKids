@@ -32,7 +32,7 @@ a napoví. Za každou jednotku dostane zvířátko do Zvěřince.
 • Naučená slova hned do věty (Skládej větu) a do Mé knížky
 • Svět, který žije: roční období podle kalendáře, den a noc, zvuky lesa,
   rybníka i cvrčků
-• Průvodce Pipi, nálepky, tajné nálepky, odznaky — bez streaků a tlaku
+• Průvodkyně Pandička, nálepky, tajné nálepky, odznaky — bez streaků a tlaku
 • Pro rodiče (za bránou): které písmeno dítěti nejde, tipy pro doma,
   časový limit, profily sourozenců, levák, písmo pro dyslektiky
 • Funguje úplně offline, nesbírá žádná data, bez reklam a nákupů
@@ -45,7 +45,7 @@ potřebují číst v klidu a vlastním tempem.
 
 **Co je nového (2.4.x):**
 Svět na mapě s ročními obdobími, zvuky a hudbou, profily sourozenců,
-průvodce Pipi, rodičovský koutek, časový limit a písmo pro dyslektiky.
+průvodkyni Pandičku, rodičovský koutek, časový limit a písmo pro dyslektiky.
 
 ---
 
@@ -73,7 +73,7 @@ and hints. Every unit earns an animal for the Zoo.
 • New words go straight into a sentence (sentence builder) and My Book
 • A living world: seasons by the calendar, day and night, sounds of the
   forest, pond and crickets
-• Pipi the guide, stickers, secret stickers, badges — no streaks, no pressure
+• Pandy the panda guide, stickers, secret stickers, badges — no streaks, no pressure
 • For parents (behind a gate): which letter needs work, tips for home,
   daily time limit, sibling profiles, left-handed mode, dyslexia-friendly font
 • Works fully offline, collects no data, no ads, no purchases
@@ -85,7 +85,7 @@ who need calm reading practice at their own pace.
 reading,letters,syllables,kids,phonics,alphabet,first grade,learn,game,offline
 
 **What's new (2.4.x):**
-A living map with seasons, sounds and music, sibling profiles, Pipi the
+A living map with seasons, sounds and music, sibling profiles, Pandy the
 guide, a parent corner, daily time limit and a dyslexia-friendly font.
 
 ---

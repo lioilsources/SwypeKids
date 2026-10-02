@@ -1,3 +1,5 @@
+import 'dart:ui' show Offset;
+
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -11,6 +13,7 @@ class SettingsService extends ChangeNotifier {
   static const _kLeftHanded = 'sk.settings.leftHanded';
   static const _kSessionLimit = 'sk.settings.sessionLimitMin';
   static const _kDyslexiaFont = 'sk.settings.dyslexiaFont';
+  static const _kGuidePos = 'sk.settings.guidePos';
 
   /// Povolené limity session v minutách; 0 = bez limitu.
   static const sessionLimits = [0, 10, 15, 20];
@@ -19,6 +22,21 @@ class SettingsService extends ChangeNotifier {
   bool _leftHanded = false;
   int _sessionLimitMin = 0;
   bool _dyslexiaFont = false;
+
+  Offset? _guidePosition;
+
+  /// Kam dítě naposledy posunulo průvodce na herní obrazovce — podíl volné
+  /// šířky a výšky (0–1); `null` = výchozí vpravo dole.
+  Offset? get guidePosition => _guidePosition;
+
+  set guidePosition(Offset? v) {
+    _guidePosition = v;
+    if (v == null) {
+      _prefs?.remove(_kGuidePos);
+    } else {
+      _prefs?.setString(_kGuidePos, '${v.dx},${v.dy}');
+    }
+  }
 
   /// Písmo OpenDyslexic místo Nunito v celé appce.
   bool get dyslexiaFont => _dyslexiaFont;
@@ -54,5 +72,11 @@ class SettingsService extends ChangeNotifier {
     _leftHanded = _prefs!.getBool(_kLeftHanded) ?? false;
     _sessionLimitMin = _prefs!.getInt(_kSessionLimit) ?? 0;
     _dyslexiaFont = _prefs!.getBool(_kDyslexiaFont) ?? false;
+    final g = _prefs!.getString(_kGuidePos)?.split(',');
+    final gx = g == null || g.length != 2 ? null : double.tryParse(g[0]);
+    final gy = g == null || g.length != 2 ? null : double.tryParse(g[1]);
+    _guidePosition = gx == null || gy == null
+        ? null
+        : Offset(gx.clamp(0.0, 1.0), gy.clamp(0.0, 1.0));
   }
 }
