@@ -879,6 +879,18 @@ abstract class AppLocalizations {
   /// In cs, this message translates to:
   /// **'Zkusit znovu'**
   String get retry;
+
+  /// No description provided for @vocativeLabel.
+  ///
+  /// In cs, this message translates to:
+  /// **'Oslovení v češtině (5. pád)'**
+  String get vocativeLabel;
+
+  /// No description provided for @vocativeHint.
+  ///
+  /// In cs, this message translates to:
+  /// **'např. Lauro'**
+  String get vocativeHint;
 }
 
 class _AppLocalizationsDelegate

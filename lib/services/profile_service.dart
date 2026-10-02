@@ -2,6 +2,9 @@ import 'dart:convert';
 
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../data/czech_vocative.dart';
+import '../data/lessons.dart';
+
 /// Profil dítěte: avatar (emoji zvířátka) a jméno, kterým ho průvodce
 /// oslovuje. Sourozenci na jednom tabletu mají každý svůj profil; postup
 /// každého profilu drží [ProgressService] pod vlastním prefixem klíčů
@@ -12,15 +15,37 @@ class ChildProfile {
   final String name;
   final String avatar;
 
-  const ChildProfile({required this.id, required this.name, required this.avatar});
+  /// Ruční oslovení v češtině (5. pád), když pravidla netrefí (Ester).
+  final String called;
+
+  const ChildProfile({
+    required this.id,
+    required this.name,
+    required this.avatar,
+    this.called = '',
+  });
 
   factory ChildProfile.fromJson(Map<String, dynamic> json) => ChildProfile(
         id: json['id'] as int,
         name: json['name'] as String? ?? '',
         avatar: json['avatar'] as String? ?? ProfileService.defaultAvatar,
+        called: json['called'] as String? ?? '',
       );
 
-  Map<String, dynamic> toJson() => {'id': id, 'name': name, 'avatar': avatar};
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'name': name,
+        'avatar': avatar,
+        if (called.isNotEmpty) 'called': called,
+      };
+
+  /// Jak dítě oslovit v daném jazyce: čeština 5. pádem (ruční tvar má
+  /// přednost), ostatní jazyky appky oslovují 1. pádem.
+  String addressIn(Language lang) {
+    if (name.trim().isEmpty) return '';
+    if (lang != Language.cs) return name.trim();
+    return called.trim().isNotEmpty ? called.trim() : czechVocative(name);
+  }
 
   /// Jak profil oslovit: jméno, nebo jen avatar.
   String get label => name.isNotEmpty ? name : avatar;
@@ -56,6 +81,21 @@ class ProfileService {
   String get name => active?.name ?? '';
   String get avatar => active?.avatar ?? defaultAvatar;
   bool get canAdd => _profiles.length < maxProfiles;
+
+  /// Oslovení aktivního dítěte v jazyce [lang] (prázdné bez jména).
+  String addressIn(Language lang) => active?.addressIn(lang) ?? '';
+
+  /// Rodič opravil oslovení (5. pád) profilu [id]; prázdné = podle pravidel.
+  void setCalled(int id, String called) {
+    _profiles = [
+      for (final p in _profiles)
+        p.id == id
+            ? ChildProfile(
+                id: p.id, name: p.name, avatar: p.avatar, called: called.trim())
+            : p,
+    ];
+    _persist();
+  }
 
   static Future<void> init() async {
     final prefs = await SharedPreferences.getInstance();

@@ -54,7 +54,8 @@ class LessonMapScreenState extends State<LessonMapScreen> {
     _greeted = true;
     final world = WorldClockService.instance.theme;
     TtsService.speak(
-      Mascot.greeting(widget.language, ProfileService.instance.name,
+      Mascot.greeting(widget.language,
+          ProfileService.instance.addressIn(widget.language),
           night: world.isNight),
       widget.language,
     );
@@ -170,7 +171,8 @@ class LessonMapScreenState extends State<LessonMapScreen> {
     if (_bedtime && !_saidGoodNight) {
       _saidGoodNight = true;
       TtsService.speak(
-        Mascot.greeting(widget.language, ProfileService.instance.name,
+        Mascot.greeting(widget.language,
+          ProfileService.instance.addressIn(widget.language),
             night: true),
         widget.language,
       );

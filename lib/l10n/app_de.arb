@@ -230,5 +230,7 @@
   "badgeExpeditionHow": "Erste wöchentliche Wiederholungs-Expedition",
   "seasonStickersTitle": "Jahreszeiten-Sticker",
   "mapLoadFailed": "Die Karte konnte nicht geladen werden",
-  "retry": "Erneut versuchen"
+  "retry": "Erneut versuchen",
+  "vocativeLabel": "Tschechische Anrede (Vokativ)",
+  "vocativeHint": "z. B. Lauro"
 }

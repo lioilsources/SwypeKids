@@ -230,5 +230,7 @@
   "badgeExpeditionHow": "První týdenní výprava za opakováním",
   "seasonStickersTitle": "Nálepky ročních období",
   "mapLoadFailed": "Mapu se nepodařilo načíst",
-  "retry": "Zkusit znovu"
+  "retry": "Zkusit znovu",
+  "vocativeLabel": "Oslovení v češtině (5. pád)",
+  "vocativeHint": "např. Lauro"
 }

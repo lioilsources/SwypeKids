@@ -230,5 +230,7 @@
   "badgeExpeditionHow": "Prima spedizione settimanale di ripasso",
   "seasonStickersTitle": "Adesivi delle stagioni",
   "mapLoadFailed": "Impossibile caricare la mappa",
-  "retry": "Riprova"
+  "retry": "Riprova",
+  "vocativeLabel": "Vocativo in ceco",
+  "vocativeHint": "es. Lauro"
 }

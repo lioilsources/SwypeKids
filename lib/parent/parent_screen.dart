@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../audio/audio_service.dart';
+import '../data/czech_vocative.dart';
 import '../data/keyboard_layout.dart' show kRows;
 import '../data/lessons.dart';
 import '../data/models/content_pack.dart';
@@ -484,6 +485,22 @@ class _ParentSettingsState extends State<ParentSettings> {
                     fontFamily: kFont,
                     fontWeight: FontWeight.w800,
                     color: Colors.white)),
+            // Jak průvodce dítě česky osloví (5. pád) — předvyplněno podle
+            // pravidel, rodič může opravit (Ester, Dagmar…).
+            subtitle: p.name.trim().isEmpty
+                ? null
+                : TextFormField(
+                    key: ValueKey('vocative-${p.id}'),
+                    initialValue: p.addressIn(Language.cs),
+                    style: const TextStyle(color: Colors.white),
+                    decoration: InputDecoration(
+                      labelText: context.l.vocativeLabel,
+                      hintText: context.l.vocativeHint,
+                      isDense: true,
+                    ),
+                    onChanged: (v) => ProfileService.instance.setCalled(
+                        p.id, v.trim() == czechVocative(p.name) ? '' : v),
+                  ),
             trailing: ProfileService.instance.profiles.length > 1
                 ? IconButton(
                     key: ValueKey('delete-profile-${p.id}'),

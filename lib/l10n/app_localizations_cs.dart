@@ -422,4 +422,10 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get retry => 'Zkusit znovu';
+
+  @override
+  String get vocativeLabel => 'Oslovení v češtině (5. pád)';
+
+  @override
+  String get vocativeHint => 'např. Lauro';
 }
