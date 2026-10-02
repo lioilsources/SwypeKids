@@ -232,4 +232,31 @@ void main() {
     expect(find.byKey(const ValueKey('seasonal-cs-u1')), findsNothing);
     await tester.pump(const Duration(seconds: 4));
   });
+
+  testWidgets('Pandička stojí dole na mapě a po chvíli přejde do druhého rohu',
+      (tester) async {
+    tester.view.physicalSize = const Size(800, 1400);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.reset);
+    await tester.pumpWidget(localizedApp(
+      home: Scaffold(
+        body: LessonMapScreen(language: Language.cs, onLanguageChanged: (_) {}),
+      ),
+    ));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 400));
+    final mascot = find.byKey(const ValueKey('map-mascot'));
+    expect(mascot, findsOneWidget);
+    final start = tester.getCenter(mascot);
+    expect(start.dy, greaterThan(1100)); // dole na ploše, ne v liště
+    expect(start.dx, greaterThan(400)); // začíná vpravo
+
+    await tester.pump(const Duration(seconds: 25));
+    await tester.pump(const Duration(seconds: 3)); // dojde
+    // V noci Pandička spí a nechodí (test podle reálných hodin).
+    if (!WorldClockService.instance.theme.isNight) {
+      expect(tester.getCenter(mascot).dx, lessThan(400));
+    }
+    await tester.pump(const Duration(seconds: 3));
+  });
 }

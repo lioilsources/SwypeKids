@@ -65,6 +65,61 @@ class LessonMapScreenState extends State<LessonMapScreen> {
     setState(() => _mood = MascotMood.cheer);
   }
 
+  // Pandička na ploše mapy: stojí dole v rohu a občas přejde do druhého.
+  bool _mascotRight = true;
+  Timer? _wanderTimer;
+  static const _wanderEvery = Duration(seconds: 25);
+
+  /// Velikost podle šířky: telefon ~90 px, tablet až 120 px.
+  static double _mascotSize(BuildContext context) =>
+      (MediaQuery.sizeOf(context).width * 0.22).clamp(80.0, 120.0);
+
+  void _startWandering() {
+    _wanderTimer?.cancel();
+    _wanderTimer = Timer.periodic(_wanderEvery, (_) {
+      if (!mounted || MediaQuery.of(context).disableAnimations) return;
+      if (WorldClockService.instance.theme.isNight) return; // v noci spí
+      setState(() {
+        _mascotRight = !_mascotRight;
+        _mood = MascotMood.wave;
+      });
+    });
+  }
+
+  Widget _wanderingMascot(BuildContext context, WorldTheme world) {
+    final size = _mascotSize(context);
+    final reduceMotion = MediaQuery.of(context).disableAnimations;
+    return Positioned(
+      left: 0,
+      right: 0,
+      bottom: MediaQuery.paddingOf(context).bottom + 4,
+      height: size * 1.25,
+      child: AnimatedAlign(
+        duration: reduceMotion
+            ? Duration.zero
+            : const Duration(milliseconds: 2600),
+        curve: Curves.easeInOut,
+        alignment:
+            _mascotRight ? const Alignment(0.92, 1) : const Alignment(-0.92, 1),
+        child: Transform.flip(
+          // Dívá se tam, kam jde.
+          flipX: !_mascotRight,
+          child: Mascot(
+            key: const ValueKey('map-mascot'),
+            mood: world.isNight && _mood == MascotMood.idle
+                ? MascotMood.sleep
+                : _mood,
+            size: size,
+            onTickle: _tickle,
+            onSettled: () {
+              if (mounted) setState(() => _mood = MascotMood.idle);
+            },
+          ),
+        ),
+      ),
+    );
+  }
+
   // Tajná nálepka právě nalezená (čip ✨ na 3 s).
   String? _foundSecret;
   Timer? _secretTimer;
@@ -86,12 +141,14 @@ class LessonMapScreenState extends State<LessonMapScreen> {
     _loadPack();
     _scroll.addListener(() => _scrollOffset.value = _scroll.offset);
     WorldClockService.instance.addListener(_syncAmbient);
+    _startWandering();
     SessionService.instance.addListener(_onSessionChanged);
   }
 
   @override
   void dispose() {
     WorldClockService.instance.removeListener(_syncAmbient);
+    _wanderTimer?.cancel();
     SessionService.instance.removeListener(_onSessionChanged);
     AudioService.instance.setAmbient(null);
     AudioService.instance.setMusic(false);
@@ -309,6 +366,7 @@ class LessonMapScreenState extends State<LessonMapScreen> {
                 child: WorldBackdrop(theme: world, scroll: _scrollOffset)),
             _content(context, world),
             Positioned.fill(child: ParticleLayer(kind: world.particles)),
+            if (_pack != null && !_bedtime) _wanderingMascot(context, world),
             if (_foundSecret != null)
               Positioned(
                 top: 64,
@@ -360,21 +418,7 @@ class LessonMapScreenState extends State<LessonMapScreen> {
                           onPressed: () => Scaffold.of(ctx).openDrawer(),
                         ),
                       ),
-                      const SizedBox(width: 6),
-                      Mascot(
-                        mood: (world.isNight || _bedtime) &&
-                                _mood == MascotMood.idle
-                            ? MascotMood.sleep
-                            : _mood,
-                        size: 26,
-                        onTickle: _tickle,
-                        onSettled: () {
-                          if (mounted) {
-                            setState(() => _mood = MascotMood.idle);
-                          }
-                        },
-                      ),
-                      const SizedBox(width: 6),
+                      const SizedBox(width: 10),
                       Expanded(
                         child: Text(
                           pack.title.isNotEmpty ? pack.title : '🎹 Swype Kids',
@@ -434,7 +478,9 @@ class LessonMapScreenState extends State<LessonMapScreen> {
                                 maxWidth: _maxContentWidth),
                             child: ListView.builder(
                               controller: _scroll,
-                              padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
+                              // Dole místo pro Pandičku, ať nikdy nic nezakryje.
+                              padding: EdgeInsets.fromLTRB(
+                                  16, 8, 16, 24 + _mascotSize(context)),
                               itemCount: pack.units.length + offset,
                               itemBuilder: (context, i) {
                                 if (expedition && i == 0) {
