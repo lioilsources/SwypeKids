@@ -375,4 +375,31 @@ void main() {
     expect(ProgressService.instance.starsFor(_pack.id, 'u1-l1'), 3);
     await tester.pump(const Duration(seconds: 4));
   });
+
+  testWidgets('ťuknutí na Pandičku ve hře = zamává, i opakovaně',
+      (tester) async {
+    tester.view.physicalSize = const Size(390, 844) * 3;
+    tester.view.devicePixelRatio = 3;
+    addTearDown(tester.view.reset);
+    await SettingsService.instance.load();
+    await tester.pumpWidget(localizedApp(
+      home: GameScreen(pack: _pack, unitIndex: 0),
+    ));
+    await tester.pump(const Duration(seconds: 2)); // úvodní zamávání dohraje
+    final guide = find.byKey(const ValueKey('guide-drag'));
+    expect(find.byKey(const ValueKey('mascot-wave')), findsNothing);
+
+    await tester.tap(guide);
+    await tester.pump();
+    expect(find.byKey(const ValueKey('mascot-wave')), findsOneWidget);
+    // Druhé ťuknutí uprostřed mávání začne mávat znovu (neskončí po 1. ťuknutí).
+    await tester.pump(const Duration(milliseconds: 600));
+    await tester.tap(guide);
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 600));
+    expect(find.byKey(const ValueKey('mascot-wave')), findsOneWidget);
+    await tester.pump(const Duration(seconds: 1));
+    expect(find.byKey(const ValueKey('mascot-wave')), findsNothing);
+    await tester.pump(const Duration(seconds: 3));
+  });
 }

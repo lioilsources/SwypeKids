@@ -63,9 +63,15 @@ class LessonMapScreenState extends State<LessonMapScreen> {
     );
   }
 
+  /// Ťuknutí na Pandičku = zamává (pokaždé znovu, i v noci).
+  int _taps = 0;
+
   void _tickle() {
     AudioService.instance.play(Sfx.tap);
-    setState(() => _mood = MascotMood.cheer);
+    setState(() {
+      _mood = MascotMood.wave;
+      _taps++;
+    });
   }
 
   // Pandička na ploše mapy: stojí dole v rohu a občas přejde do druhého.
@@ -116,6 +122,7 @@ class LessonMapScreenState extends State<LessonMapScreen> {
                 : _mood,
             size: size,
             onTickle: _tickle,
+            replay: _taps,
             onSettled: () {
               // Po zamávání si občas sedne a čte.
               if (mounted) {
