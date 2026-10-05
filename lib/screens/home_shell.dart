@@ -15,6 +15,9 @@ import 'sentence_builder_screen.dart';
 import '../ui/app_font.dart';
 import '../ui/l10n.dart';
 import '../ui/emoji_art.dart';
+import '../characters/guide.dart';
+import '../characters/mascot.dart';
+import '../services/tts_service.dart';
 
 enum AppView { swype, sentence, collection, book }
 
@@ -61,7 +64,6 @@ class _HomeShellState extends State<HomeShell> with WidgetsBindingObserver {
     AppLanguage.instance.value = l;
     setState(() => _lang = l);
   }
-
 
   /// Přepnutí sourozence: načte jeho postup a znovu postaví obrazovky.
   Future<void> _switchProfile(int id) async {
@@ -119,6 +121,7 @@ class _HomeShellState extends State<HomeShell> with WidgetsBindingObserver {
         borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
       ),
       builder: (_) => _ProfileSheet(
+        language: _lang,
         onPick: _switchProfile,
         onAdd: _addProfile,
       ),
@@ -153,8 +156,7 @@ class _HomeShellState extends State<HomeShell> with WidgetsBindingObserver {
             onLanguageChanged: _setLang,
             onOpenBag: () => _setView(AppView.sentence),
           ),
-          SentenceBuilderScreen(
-              language: _lang, onLanguageChanged: _setLang),
+          SentenceBuilderScreen(language: _lang, onLanguageChanged: _setLang),
           CollectionScreen(language: _lang),
           BookScreen(language: _lang),
         ],
@@ -204,47 +206,46 @@ class _AppDrawer extends StatelessWidget {
               key: const ValueKey('profile-header'),
               onTap: onProfileTap,
               child: Padding(
-              padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
-              child: Row(
-                children: [
-                  // Avatar a jméno — ťuknutí otevře přepínání sourozenců
-                  Text(ProfileService.instance.avatar,
-                      style: const TextStyle(fontSize: 26)),
-                  const SizedBox(width: 8),
-                  if (ProfileService.instance.name.isNotEmpty) ...[
-                    Expanded(
-                      child: Text(
-                        ProfileService.instance.name,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
-                          fontFamily: kFont,
-                          fontFamilyFallback: kFontFallback,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w900,
-                          color: Colors.white,
+                padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
+                child: Row(
+                  children: [
+                    // Avatar a jméno — ťuknutí otevře přepínání sourozenců
+                    EmojiArt(ProfileService.instance.avatar, size: 26),
+                    const SizedBox(width: 8),
+                    if (ProfileService.instance.name.isNotEmpty) ...[
+                      Expanded(
+                        child: Text(
+                          ProfileService.instance.name,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                            fontFamily: kFont,
+                            fontFamilyFallback: kFontFallback,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w900,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
+                    ] else
+                      const Spacer(),
+                    Text(
+                      kLanguageFlag[language] ?? '🏳️',
+                      style: const TextStyle(fontSize: 22),
                     ),
-                  ] else
-                    const Spacer(),
-                  Text(
-                    kLanguageFlag[language] ?? '🏳️',
-                    style: const TextStyle(fontSize: 22),
-                  ),
-                  const SizedBox(width: 6),
-                  Text(
-                    language.name.toUpperCase(),
-                    style: TextStyle(
-                      fontFamily: kFont,
-                      fontFamilyFallback: kFontFallback,
-                      fontSize: 13,
-                      fontWeight: FontWeight.w800,
-                      color: Color(0xFFA0C4FF),
-                      letterSpacing: 1.2,
+                    const SizedBox(width: 6),
+                    Text(
+                      language.name.toUpperCase(),
+                      style: TextStyle(
+                        fontFamily: kFont,
+                        fontFamilyFallback: kFontFallback,
+                        fontSize: 13,
+                        fontWeight: FontWeight.w800,
+                        color: Color(0xFFA0C4FF),
+                        letterSpacing: 1.2,
+                      ),
                     ),
-                  ),
-                ],
-              ),
+                  ],
+                ),
               ),
             ),
             const Divider(color: Colors.white12, height: 1),
@@ -305,7 +306,20 @@ class _ProfileSheet extends StatelessWidget {
   final ValueChanged<int> onPick;
   final VoidCallback onAdd;
 
-  const _ProfileSheet({required this.onPick, required this.onAdd});
+  final Language language;
+
+  const _ProfileSheet({
+    required this.language,
+    required this.onPick,
+    required this.onAdd,
+  });
+
+  void _pickGuide(Guide g) {
+    AudioService.instance.play(Sfx.tap);
+    final service = ProfileService.instance;
+    service.setGuide(service.activeId, g);
+    TtsService.speak(g.nameIn(language), language);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -313,29 +327,67 @@ class _ProfileSheet extends StatelessWidget {
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.fromLTRB(16, 16, 16, 20),
-        child: Wrap(
-          spacing: 12,
-          runSpacing: 12,
-          alignment: WrapAlignment.center,
+        // Na malém telefonu na šířku se sourozenci + průvodci nevejdou.
+        child: SingleChildScrollView(
+            child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
-            for (final p in service.profiles)
-              _ProfileTile(
-                key: ValueKey('profile-${p.id}'),
-                emoji: p.avatar,
-                label: p.label,
-                selected: p.id == service.activeId,
-                onTap: () => onPick(p.id),
+            Wrap(
+              spacing: 12,
+              runSpacing: 12,
+              alignment: WrapAlignment.center,
+              children: [
+                for (final p in service.profiles)
+                  _ProfileTile(
+                    key: ValueKey('profile-${p.id}'),
+                    emoji: p.avatar,
+                    label: p.label,
+                    selected: p.id == service.activeId,
+                    onTap: () => onPick(p.id),
+                  ),
+                if (service.canAdd)
+                  _ProfileTile(
+                    key: const ValueKey('profile-add'),
+                    emoji: '➕',
+                    label: '',
+                    selected: false,
+                    onTap: onAdd,
+                  ),
+              ],
+            ),
+            // Výběr průvodce aktivního dítěte — obrázky, žádné čtení.
+            const SizedBox(height: 18),
+            Text(
+              context.l.guideTitle,
+              style: TextStyle(
+                fontFamily: kFont,
+                fontFamilyFallback: kFontFallback,
+                fontSize: 15,
+                fontWeight: FontWeight.w800,
+                color: const Color(0xFFA0C4FF),
               ),
-            if (service.canAdd)
-              _ProfileTile(
-                key: const ValueKey('profile-add'),
-                emoji: '➕',
-                label: '',
-                selected: false,
-                onTap: onAdd,
+            ),
+            const SizedBox(height: 10),
+            ValueListenableBuilder<Guide>(
+              valueListenable: ProfileService.instance.guide,
+              builder: (context, current, _) => Wrap(
+                spacing: 10,
+                runSpacing: 10,
+                alignment: WrapAlignment.center,
+                children: [
+                  for (final g in Guide.values)
+                    _GuideTile(
+                      key: ValueKey('guide-${g.name}'),
+                      guide: g,
+                      label: g.nameIn(language),
+                      selected: g == current,
+                      onTap: () => _pickGuide(g),
+                    ),
+                ],
               ),
+            ),
           ],
-        ),
+        )),
       ),
     );
   }
@@ -435,6 +487,71 @@ class _MenuTile extends StatelessWidget {
                       ? const Color(0xFFFFD200)
                       : Colors.white.withOpacity(0.85),
                 ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// Průvodce na výběr: obrázek v klidu + jméno; vybraný zamává.
+class _GuideTile extends StatelessWidget {
+  final Guide guide;
+  final String label;
+  final bool selected;
+  final VoidCallback onTap;
+
+  const _GuideTile({
+    super.key,
+    required this.guide,
+    required this.label,
+    required this.selected,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 200),
+        width: 84,
+        padding: const EdgeInsets.symmetric(vertical: 8),
+        decoration: BoxDecoration(
+          color: selected
+              ? const Color(0xFFFFD200).withValues(alpha: 0.22)
+              : Colors.white.withValues(alpha: 0.06),
+          borderRadius: BorderRadius.circular(18),
+          border: Border.all(
+            color: selected
+                ? const Color(0xFFFFD200)
+                : Colors.white.withValues(alpha: 0.12),
+            width: selected ? 2 : 1,
+          ),
+        ),
+        child: Column(
+          children: [
+            Image.asset(
+              Mascot.imageFor(selected ? MascotMood.wave : MascotMood.idle,
+                  guide: guide),
+              width: 60,
+              height: 60,
+              errorBuilder: (_, __, ___) =>
+                  Text(guide.emoji, style: const TextStyle(fontSize: 44)),
+            ),
+            const SizedBox(height: 4),
+            Text(
+              label,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(
+                fontFamily: kFont,
+                fontFamilyFallback: kFontFallback,
+                fontSize: 11,
+                fontWeight: FontWeight.w800,
+                color: Colors.white.withValues(alpha: 0.85),
               ),
             ),
           ],

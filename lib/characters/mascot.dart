@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 
 import '../audio/audio_service.dart';
 import '../data/lessons.dart';
+import '../services/profile_service.dart';
+import 'guide.dart';
 
 /// Stavy průvodce (roadmap P1). Názvy odpovídají vstupům Rive state machine
 /// z `docs/ILLUSTRATOR_BRIEF.md`, aby se emoji verze dala vyměnit za `.riv`
@@ -38,40 +40,29 @@ class Mascot extends StatefulWidget {
     this.replay = 0,
   });
 
-  static const emoji = '🐼';
-
-  /// Jméno průvodce = zdrobnělina jména zvířete v jazyce packu. Další
-  /// zvířata (Gepardíček, Kapybárka, Žirafka…) přibudou s jejich obrázky.
-  static const _names = <Language, String>{
-    Language.cs: 'Pandička',
-    Language.en: 'Pandy',
-    Language.de: 'Pandi',
-    Language.es: 'Pandita',
-    Language.it: 'Pandina',
-    Language.fr: 'Pandou',
-    Language.pt: 'Pandinha',
-    Language.zh: '熊猫宝宝',
-    Language.ja: 'パンダちゃん',
-  };
-
-  static String name(Language lang) => _names[lang] ?? _names[Language.en]!;
+  /// Jméno průvodce aktivního dítěte = zdrobnělina zvířete v jazyce packu
+  /// (Pandička, Kapybárka, Žirafka, Gepardíček…).
+  static String name(Language lang) =>
+      ProfileService.instance.guide.value.nameIn(lang);
 
   /// Varianty jásotu — každá oslava si náhodně vybere jednu.
   static const cheerVariants = ['clap', 'dance', 'hug', 'jump', 'star'];
 
-  /// Pracovní postava Pandička (tier‑0 draft z `drafts/stickers/round2`),
-  /// než ilustrátor dodá `.riv`. Jeden obrázek na stav; wink sdílí klid.
-  static String imageFor(MascotMood mood, {int variant = 0}) => switch (mood) {
-        MascotMood.wave => 'assets/characters/panda/wave.png',
-        MascotMood.cheer => 'assets/characters/panda/cheer-'
-            '${cheerVariants[variant % cheerVariants.length]}.png',
-        MascotMood.oops => 'assets/characters/panda/oops.png',
-        MascotMood.read => 'assets/characters/panda/read.png',
-        MascotMood.sleep => 'assets/characters/panda/sleep.png',
-        MascotMood.idle ||
-        MascotMood.wink =>
-          'assets/characters/panda/idle.png',
-      };
+  /// Pracovní postavy (tier‑0 drafty z `drafts/stickers/round2`), než
+  /// ilustrátor dodá `.riv`. Jeden obrázek na stav; wink sdílí klid.
+  static String imageFor(MascotMood mood,
+      {int variant = 0, Guide guide = Guide.panda}) {
+    final pose = switch (mood) {
+      MascotMood.wave => 'wave',
+      MascotMood.cheer =>
+        'cheer-${cheerVariants[variant % cheerVariants.length]}',
+      MascotMood.oops => 'oops',
+      MascotMood.read => 'read',
+      MascotMood.sleep => 'sleep',
+      MascotMood.idle || MascotMood.wink => 'idle',
+    };
+    return '${guide.assetDir}/$pose.png';
+  }
 
   /// Pozdrav průvodce při příchodu na mapu (TTS). `{name}` = jméno dítěte;
   /// bez jména se oslovení vynechá. V noci místo pozdravu „dobrou noc".
@@ -204,6 +195,14 @@ class _MascotState extends State<Mascot> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
+    // Výměna průvodce v profilu se projeví hned.
+    return ValueListenableBuilder<Guide>(
+      valueListenable: ProfileService.instance.guide,
+      builder: (context, _, __) => _buildGuide(context),
+    );
+  }
+
+  Widget _buildGuide(BuildContext context) {
     final accessory = Mascot.accessoryFor(widget.mood);
     return GestureDetector(
       onTap: widget.onTickle,
@@ -244,13 +243,16 @@ class _MascotState extends State<Mascot> with TickerProviderStateMixin {
                     alignment: Alignment.bottomLeft,
                     children: [
                       Image.asset(
-                        Mascot.imageFor(widget.mood, variant: _variant),
+                        Mascot.imageFor(widget.mood,
+                            variant: _variant,
+                            guide: ProfileService.instance.guide.value),
                         key: ValueKey('mascot-${widget.mood.name}'),
                         width: widget.size * 1.2,
                         height: widget.size * 1.2,
                         filterQuality: FilterQuality.medium,
                         // Bez assetu (testy, rozbitý build) zůstane emoji.
-                        errorBuilder: (_, __, ___) => Text(Mascot.emoji,
+                        errorBuilder: (_, __, ___) => Text(
+                            ProfileService.instance.guide.value.emoji,
                             style: TextStyle(fontSize: widget.size)),
                       ),
                       if (accessory != null)

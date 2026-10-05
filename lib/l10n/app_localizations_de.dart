@@ -431,4 +431,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get vocativeHint => 'z. B. Lauro';
+
+  @override
+  String get guideTitle => 'Dein Begleiter';
 }

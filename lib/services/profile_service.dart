@@ -1,7 +1,9 @@
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../characters/guide.dart';
 import '../data/czech_vocative.dart';
 import '../data/lessons.dart';
 
@@ -18,18 +20,31 @@ class ChildProfile {
   /// Ruční oslovení v češtině (5. pád), když pravidla netrefí (Ester).
   final String called;
 
+  /// Průvodce, kterého si dítě vybralo.
+  final Guide guide;
+
   const ChildProfile({
     required this.id,
     required this.name,
     required this.avatar,
     this.called = '',
+    this.guide = Guide.panda,
   });
+
+  ChildProfile copyWith({String? called, Guide? guide}) => ChildProfile(
+        id: id,
+        name: name,
+        avatar: avatar,
+        called: called ?? this.called,
+        guide: guide ?? this.guide,
+      );
 
   factory ChildProfile.fromJson(Map<String, dynamic> json) => ChildProfile(
         id: json['id'] as int,
         name: json['name'] as String? ?? '',
         avatar: json['avatar'] as String? ?? ProfileService.defaultAvatar,
         called: json['called'] as String? ?? '',
+        guide: Guide.fromName(json['guide'] as String?),
       );
 
   Map<String, dynamic> toJson() => {
@@ -37,6 +52,7 @@ class ChildProfile {
         'name': name,
         'avatar': avatar,
         if (called.isNotEmpty) 'called': called,
+        if (guide != Guide.panda) 'guide': guide.name,
       };
 
   /// Jak dítě oslovit v daném jazyce: čeština 5. pádem (ruční tvar má
@@ -82,6 +98,20 @@ class ProfileService {
   String get avatar => active?.avatar ?? defaultAvatar;
   bool get canAdd => _profiles.length < maxProfiles;
 
+  /// Průvodce aktivního dítěte; mění se při přepnutí profilu i výběru.
+  final ValueNotifier<Guide> guide = ValueNotifier(Guide.panda);
+
+  void _syncGuide() => guide.value = active?.guide ?? Guide.panda;
+
+  /// Dítě si v profilu vybralo jiného průvodce.
+  void setGuide(int id, Guide g) {
+    _profiles = [
+      for (final p in _profiles) p.id == id ? p.copyWith(guide: g) : p,
+    ];
+    _persist();
+    _syncGuide();
+  }
+
   /// Oslovení aktivního dítěte v jazyce [lang] (prázdné bez jména).
   String addressIn(Language lang) => active?.addressIn(lang) ?? '';
 
@@ -90,8 +120,7 @@ class ProfileService {
     _profiles = [
       for (final p in _profiles)
         p.id == id
-            ? ChildProfile(
-                id: p.id, name: p.name, avatar: p.avatar, called: called.trim())
+            ? p.copyWith(called: called.trim())
             : p,
     ];
     _persist();
@@ -128,6 +157,7 @@ class ProfileService {
     if (!s._profiles.any((p) => p.id == s._activeId) && s._profiles.isNotEmpty) {
       s._activeId = s._profiles.first.id;
     }
+    s._syncGuide();
   }
 
   /// Založí nový profil a přepne na něj. Vrací ho (id pro ProgressService).
@@ -146,6 +176,7 @@ class ProfileService {
     if (!_profiles.any((p) => p.id == id)) return;
     _activeId = id;
     _prefs?.setInt(_kActive, id);
+    _syncGuide();
   }
 
   /// Smaže profil (postup v ProgressService maže volající). Aktivní se
@@ -160,6 +191,7 @@ class ProfileService {
     _prefs?.setString(
         _kProfiles, jsonEncode([for (final p in _profiles) p.toJson()]));
     _prefs?.setInt(_kActive, _activeId);
+    _syncGuide();
   }
 
   /// Vrátí onboarding (rodičovský koutek / testy): smaže všechny profily.
@@ -168,5 +200,6 @@ class ProfileService {
     _activeId = 1;
     _prefs?.remove(_kProfiles);
     _prefs?.remove(_kActive);
+    _syncGuide();
   }
 }

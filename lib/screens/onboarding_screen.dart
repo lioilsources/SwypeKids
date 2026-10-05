@@ -34,7 +34,7 @@ class OnboardingScreen extends StatefulWidget {
     Language.es: ('¡Hola! Soy {guide}. Vamos a jugar con las letras.', 'Elige tu animal.', '¿Cómo te llamas?'),
     Language.it: ('Ciao! Sono {guide}. Giochiamo con le lettere.', 'Scegli il tuo animale.', 'Come ti chiami?'),
     Language.fr: ('Salut ! Je suis {guide}. Jouons avec les lettres.', 'Choisis ton animal.', 'Comment tu t\'appelles ?'),
-    Language.pt: ('Oi! Eu sou a {guide}. Vamos brincar com as letras.', 'Escolha seu bichinho.', 'Qual é o seu nome?'),
+    Language.pt: ('Oi! Eu sou {guide}. Vamos brincar com as letras.', 'Escolha seu bichinho.', 'Qual é o seu nome?'),
     Language.zh: ('你好！我是{guide}。我们一起玩字母吧。', '选一个小动物。', '你叫什么名字？'),
     Language.ja: ('こんにちは！わたしは{guide}。もじであそぼう。', 'どうぶつをえらんでね。', 'おなまえは？'),
   };
@@ -49,6 +49,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   String _avatar = ProfileService.defaultAvatar;
   final _name = TextEditingController();
   MascotMood _mood = MascotMood.wave;
+  int _taps = 0;
 
   (String, String, String) get _say {
     final (hello, pick, name) =
@@ -119,14 +120,22 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               child: Column(
                 children: [
                   const SizedBox(height: 16),
-                  // Průvodce + bublina; ťuknutí zopakuje hlas.
+                  // Průvodce + bublina; ťuknutí zamává (jako všude) a
+                  // zopakuje hlas.
                   GestureDetector(
                     key: const ValueKey('mascot'),
-                    onTap: _speakStep,
+                    onTap: () {
+                      setState(() {
+                        _mood = MascotMood.wave;
+                        _taps++;
+                      });
+                      _speakStep();
+                    },
                     child: Column(
                       children: [
                         Mascot(
                           mood: _mood,
+                          replay: _taps,
                           size: 80,
                           onSettled: () {
                             if (mounted) {

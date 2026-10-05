@@ -232,5 +232,6 @@
   "mapLoadFailed": "地图加载失败",
   "retry": "重试",
   "vocativeLabel": "捷克语称呼（呼格）",
-  "vocativeHint": "例如 Lauro"
+  "vocativeHint": "例如 Lauro",
+  "guideTitle": "你的小伙伴"
 }

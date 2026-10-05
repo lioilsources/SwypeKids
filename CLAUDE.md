@@ -31,8 +31,9 @@ lib/
 │   ├── app_font.dart        # kFont = DynaPuff from cute_kid_fonts everywhere (+ kFontFallback for pinyin); OpenDyslexic overrides it
 │   └── l10n.dart            # context.l shortcut, AppLanguage notifier, GameBadge/Season label extensions
 ├── characters/
-│   ├── mascot.dart          # Guide (Pandička): moods → images in assets/characters/panda/, name per language (diminutive of the animal)
-│   └── draggable_guide.dart # Guide on the game screen: drag anywhere, slowly steps off card/keys; position in SettingsService
+│   ├── guide.dart           # Guide enum (panda, capybara, giraffe, cheetah): name per language (diminutive), assets/characters/<guide>/
+│   ├── mascot.dart          # The active child's guide: moods → images, Mascot.name(lang), tap = wave (replay)
+│   └── draggable_guide.dart # Guide on the map AND game screen (same behaviour): drag anywhere, slowly steps off GuideAvoid areas, reads when idle 20 s, sleeps at night; position per place in SettingsService
 ├── audio/
 │   └── audio_service.dart   # flutter_soloud sfx (key tones, fanfare, stars…); silent no-op if engine fails
 ├── data/
@@ -106,6 +107,7 @@ iOS, Android, macOS, Linux (check pubspec for active platforms).
 - Lesson `type`: `swype` | `listen` | `missingLetter` (`gap` index) | `pictureOnly` | `reviewMix` (resolved at runtime to the weakest learned word, `resolveReviewMix`) | `letterHunt` (1-letter target, TTS, tap) | `syllableJoin` (`parts` shown as chips, swype whole word) | `rhymePick` (`options` + `answer`, picture choice instead of keyboard); unknown types fall back to `swype`
 - Session limit: `SessionService` counts foreground time (HomeShell lifecycle); when reached the game finishes the round and pops, the map shows the bedtime card and blocks lessons; extension only in the parent corner
 - Parent corner (drawer 👪 → `ParentGate` → `ParentScreen`): sound/music/ambient toggles and season override live here, not in the child's drawer; letter status = mean word strength per letter (≥ 4 mastered)
+- Guides: each profile picks its guide in the profile sheet (drawer → avatar); `ProfileService.guide` notifies, `Mascot` follows it. The guide behaves the same everywhere — use `DraggableGuide` on any new screen with the guide and wrap tap targets the guide must not cover in `GuideAvoid`
 - Profiles: `ProgressService.init(profile: id)` loads one child's progress (keys namespaced per profile, profile 1 unprefixed so old installs need no migration); switching rebuilds HomeShell screens via a keyed IndexedStack. Settings (sound, season) stay global
 - Badges (`GameBadge`, 14 from roadmap P4) are global across languages; `AchievementService.check` is called on LessonDone / UnitDone (game), SessionStart (map open) — never add streak-style pressure
 - Word strength 0–5 per target (`ProgressService.recordAttempt`); map offers “Procvičování” (5 weakest learned) via `GameScreen(practice: …)`, which never writes lesson completion or stickers

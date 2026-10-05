@@ -232,5 +232,6 @@
   "mapLoadFailed": "Impossibile caricare la mappa",
   "retry": "Riprova",
   "vocativeLabel": "Vocativo in ceco",
-  "vocativeHint": "es. Lauro"
+  "vocativeHint": "es. Lauro",
+  "guideTitle": "La tua guida"
 }

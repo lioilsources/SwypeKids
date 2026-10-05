@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:swype_kids/characters/draggable_guide.dart';
+import 'package:swype_kids/characters/guide.dart';
 import 'package:swype_kids/characters/mascot.dart';
 import 'package:swype_kids/data/lessons.dart';
 
@@ -29,13 +30,25 @@ void main() {
     }
   });
 
-  test('každý stav i každá varianta jásotu má obrázek', () {
-    for (final m in MascotMood.values) {
-      for (var v = 0; v < Mascot.cheerVariants.length; v++) {
-        final path = Mascot.imageFor(m, variant: v);
-        expect(File(path).existsSync(), isTrue, reason: path);
+  test('každý průvodce má obrázek každého stavu i varianty jásotu', () {
+    for (final g in Guide.values) {
+      for (final m in MascotMood.values) {
+        for (var v = 0; v < Mascot.cheerVariants.length; v++) {
+          final path = Mascot.imageFor(m, variant: v, guide: g);
+          expect(File(path).existsSync(), isTrue, reason: path);
+        }
       }
     }
+  });
+
+  test('jméno každého průvodce ve všech jazycích', () {
+    for (final g in Guide.values) {
+      for (final l in Language.values) {
+        expect(g.names[l], isNotNull, reason: '${g.name} ${l.name}');
+      }
+    }
+    expect(Guide.cheetah.nameIn(Language.cs), 'Gepardíček');
+    expect(Guide.fromName('nic'), Guide.panda);
   });
 
   group('DraggableGuide.resolve', () {

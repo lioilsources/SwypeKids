@@ -368,7 +368,7 @@ void main() {
     await tester.pump(const Duration(seconds: 2));
     expect(tester.getRect(guide).overlaps(keys()), isFalse);
     expect(tester.getRect(guide).overlaps(card), isFalse);
-    expect(SettingsService.instance.guidePosition, isNotNull);
+    expect(SettingsService.instance.guidePositionFor('game'), isNotNull);
 
     // Swype přes klávesy pořád funguje.
     await _swype(tester, ['M', 'A']);

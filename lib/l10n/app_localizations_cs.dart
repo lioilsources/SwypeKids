@@ -430,4 +430,7 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get vocativeHint => 'např. Lauro';
+
+  @override
+  String get guideTitle => 'Tvůj průvodce';
 }
