@@ -23,22 +23,31 @@ class SettingsService extends ChangeNotifier {
   int _sessionLimitMin = 0;
   bool _dyslexiaFont = false;
 
-  Offset? _guidePosition;
+  final Map<String, Offset> _guidePositions = {};
 
-  /// Kam dítě naposledy posunulo průvodce na herní obrazovce — podíl volné
-  /// šířky a výšky (0–1); `null` = výchozí vpravo dole.
-  Offset? get guidePosition => _guidePosition;
+  /// Kam dítě naposledy posunulo průvodce na obrazovce [place] (`game`,
+  /// `map`) — podíl volné šířky a výšky (0–1); `null` = výchozí vpravo dole.
+  Offset? guidePositionFor(String place) => _guidePositions[place];
 
-  set guidePosition(Offset? v) {
-    _guidePosition = v;
-    if (v == null) {
-      _prefs?.remove(_kGuidePos);
-    } else {
-      _prefs?.setString(_kGuidePos, '${v.dx},${v.dy}');
-    }
+  void setGuidePosition(String place, Offset v) {
+    _guidePositions[place] = v;
+    _prefs?.setString(_guideKey(place), '${v.dx},${v.dy}');
   }
 
-  /// Písmo OpenDyslexic místo Baloo 2 / DynaPuff v celé appce.
+  // Hra používá původní klíč (v2.8), ať se pozice po aktualizaci neztratí.
+  static String _guideKey(String place) =>
+      place == 'game' ? _kGuidePos : '$_kGuidePos.$place';
+
+  static Offset? _parseOffset(String? raw) {
+    final g = raw?.split(',');
+    final gx = g == null || g.length != 2 ? null : double.tryParse(g[0]);
+    final gy = g == null || g.length != 2 ? null : double.tryParse(g[1]);
+    return gx == null || gy == null
+        ? null
+        : Offset(gx.clamp(0.0, 1.0), gy.clamp(0.0, 1.0));
+  }
+
+  /// Písmo OpenDyslexic místo DynaPuff v celé appce.
   bool get dyslexiaFont => _dyslexiaFont;
 
   set dyslexiaFont(bool v) {
@@ -72,11 +81,10 @@ class SettingsService extends ChangeNotifier {
     _leftHanded = _prefs!.getBool(_kLeftHanded) ?? false;
     _sessionLimitMin = _prefs!.getInt(_kSessionLimit) ?? 0;
     _dyslexiaFont = _prefs!.getBool(_kDyslexiaFont) ?? false;
-    final g = _prefs!.getString(_kGuidePos)?.split(',');
-    final gx = g == null || g.length != 2 ? null : double.tryParse(g[0]);
-    final gy = g == null || g.length != 2 ? null : double.tryParse(g[1]);
-    _guidePosition = gx == null || gy == null
-        ? null
-        : Offset(gx.clamp(0.0, 1.0), gy.clamp(0.0, 1.0));
+    _guidePositions.clear();
+    for (final place in const ['game', 'map']) {
+      final o = _parseOffset(_prefs!.getString(_guideKey(place)));
+      if (o != null) _guidePositions[place] = o;
+    }
   }
 }

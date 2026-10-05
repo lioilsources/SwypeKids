@@ -426,4 +426,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get vocativeHint => '例：Lauro';
+
+  @override
+  String get guideTitle => 'きみのなかま';
 }

@@ -570,6 +570,8 @@ class _GameScreenState extends State<GameScreen>
           Positioned.fill(
             child: SafeArea(
               child: DraggableGuide(
+                place: 'game',
+                mascotKey: const ValueKey('game-mascot'),
                 mood: _mood,
                 layoutToken: _idx,
                 obstacles: _guideObstacles,

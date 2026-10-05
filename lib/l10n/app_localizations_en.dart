@@ -430,4 +430,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get vocativeHint => 'e.g. Lauro';
+
+  @override
+  String get guideTitle => 'Your guide';
 }

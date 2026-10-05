@@ -133,7 +133,7 @@ void main() {
     await tester.tap(find.byKey(const ValueKey('secret-cs-u1')));
     await tester.pump();
     expect(ProgressService.instance.collectibles('cs-CZ'), contains('🐞'));
-    expect(findText('✨ 🐞'), findsOneWidget);
+    expect(findText('🐞'), findsWidgets); // čip ✨ + nálepka
     expect(find.byKey(const ValueKey('secret-cs-u1')), findsNothing);
     await tester.pump(const Duration(seconds: 4));
   });
@@ -233,30 +233,52 @@ void main() {
     await tester.pump(const Duration(seconds: 4));
   });
 
-  testWidgets('Pandička stojí dole na mapě a po chvíli přejde do druhého rohu',
-      (tester) async {
-    tester.view.physicalSize = const Size(800, 1400);
-    tester.view.devicePixelRatio = 1.0;
+  testWidgets(
+      'průvodce na mapě: dole na ploše, dá se přetáhnout, z lekce pomalu '
+      'uhne; po chvíli klidu čte', (tester) async {
+    tester.view.physicalSize = const Size(390, 844) * 3;
+    tester.view.devicePixelRatio = 3;
     addTearDown(tester.view.reset);
+    await SettingsService.instance.load();
     await tester.pumpWidget(localizedApp(
       home: Scaffold(
         body: LessonMapScreen(language: Language.cs, onLanguageChanged: (_) {}),
       ),
     ));
     await tester.pump();
-    await tester.pump(const Duration(milliseconds: 400));
-    final mascot = find.byKey(const ValueKey('map-mascot'));
-    expect(mascot, findsOneWidget);
-    final start = tester.getCenter(mascot);
-    expect(start.dy, greaterThan(1100)); // dole na ploše, ne v liště
-    expect(start.dx, greaterThan(400)); // začíná vpravo
+    await tester.pump(const Duration(seconds: 2));
+    final guide = find.byKey(const ValueKey('guide-drag'));
+    expect(find.byKey(const ValueKey('map-mascot')), findsOneWidget);
+    expect(tester.getCenter(guide).dy, greaterThan(600)); // dole, ne v liště
 
-    await tester.pump(const Duration(seconds: 25));
-    await tester.pump(const Duration(seconds: 3)); // dojde
-    // V noci Pandička spí a nechodí (test podle reálných hodin).
-    if (!WorldClockService.instance.theme.isNight) {
-      expect(tester.getCenter(mascot).dx, lessThan(400));
+    // Lekce = kolečko s obrázkem; průvodce na žádném nestojí.
+    final node = find.byKey(const ValueKey('lesson-cs-u1-l1'));
+    Rect nodeRect() => tester.getRect(node);
+    expect(tester.getRect(guide).overlaps(nodeRect()), isFalse);
+
+    // Šoupnutý přímo na lekci…
+    final g = await tester.startGesture(tester.getCenter(guide));
+    for (var i = 0; i < 10; i++) {
+      await g.moveBy((nodeRect().center - tester.getCenter(guide)) / 4);
+      await tester.pump(const Duration(milliseconds: 16));
     }
+    expect(tester.getRect(guide).overlaps(nodeRect()), isTrue);
+    await g.up();
+    await tester.pump();
+    // …pomalu uhne.
+    await tester.pump(const Duration(milliseconds: 300));
+    expect(tester.getRect(guide).overlaps(nodeRect()), isTrue);
+    await tester.pump(const Duration(seconds: 2));
+    expect(tester.getRect(guide).overlaps(nodeRect()), isFalse);
+    expect(SettingsService.instance.guidePositionFor('map'), isNotNull);
+
+    // Po chvíli klidu si sedne a čte (v noci spí — podle reálných hodin).
+    await tester.pump(const Duration(seconds: 21));
+    expect(
+        find.byKey(ValueKey(WorldClockService.instance.theme.isNight
+            ? 'mascot-sleep'
+            : 'mascot-read')),
+        findsOneWidget);
     await tester.pump(const Duration(seconds: 3));
   });
 

@@ -129,5 +129,6 @@
   "mapLoadFailed": "The map could not be loaded",
   "retry": "Try again",
   "vocativeLabel": "Czech form of address (vocative)",
-  "vocativeHint": "e.g. Lauro"
+  "vocativeHint": "e.g. Lauro",
+  "guideTitle": "Your guide"
 }

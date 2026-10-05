@@ -891,6 +891,12 @@ abstract class AppLocalizations {
   /// In cs, this message translates to:
   /// **'např. Lauro'**
   String get vocativeHint;
+
+  /// No description provided for @guideTitle.
+  ///
+  /// In cs, this message translates to:
+  /// **'Tvůj průvodce'**
+  String get guideTitle;
 }
 
 class _AppLocalizationsDelegate

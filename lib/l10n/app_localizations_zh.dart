@@ -426,4 +426,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get vocativeHint => '例如 Lauro';
+
+  @override
+  String get guideTitle => '你的小伙伴';
 }

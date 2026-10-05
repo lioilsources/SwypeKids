@@ -51,6 +51,9 @@ flutter:
   assets:
     - assets/packs/
     - assets/characters/panda/
+    - assets/characters/capybara/
+    - assets/characters/giraffe/
+    - assets/characters/cheetah/
     - assets/emoji/
     - assets/audio/
     - assets/audio/sfx/

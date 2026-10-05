@@ -233,5 +233,6 @@
   "mapLoadFailed": "Mapu se nepodařilo načíst",
   "retry": "Zkusit znovu",
   "vocativeLabel": "Oslovení v češtině (5. pád)",
-  "vocativeHint": "např. Lauro"
+  "vocativeHint": "např. Lauro",
+  "guideTitle": "Tvůj průvodce"
 }

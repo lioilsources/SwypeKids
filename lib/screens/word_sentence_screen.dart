@@ -117,8 +117,14 @@ class _WordSentenceScreenState extends State<WordSentenceScreen> {
                   onPressed: () => Navigator.of(context).pop(),
                 ),
               ),
-              Text('🎒 ${widget.word.emoji}',
-                  style: const TextStyle(fontSize: 40)),
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Text('🎒', style: TextStyle(fontSize: 40)),
+                  const SizedBox(width: 8),
+                  EmojiArt(widget.word.emoji, size: 40),
+                ],
+              ),
               const SizedBox(height: 8),
 
               // ── Náhled věty + trumpeta ────────────────────────────────

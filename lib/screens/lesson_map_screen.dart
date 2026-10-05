@@ -1,8 +1,8 @@
 import 'dart:async';
-import 'dart:math';
 
 import 'package:flutter/material.dart';
 import '../audio/audio_service.dart';
+import '../characters/draggable_guide.dart';
 import '../characters/mascot.dart';
 import '../data/lessons.dart';
 import '../data/models/content_pack.dart';
@@ -56,8 +56,8 @@ class LessonMapScreenState extends State<LessonMapScreen> {
     _greeted = true;
     final world = WorldClockService.instance.theme;
     TtsService.speak(
-      Mascot.greeting(widget.language,
-          ProfileService.instance.addressIn(widget.language),
+      Mascot.greeting(
+          widget.language, ProfileService.instance.addressIn(widget.language),
           night: world.isNight),
       widget.language,
     );
@@ -74,68 +74,26 @@ class LessonMapScreenState extends State<LessonMapScreen> {
     });
   }
 
-  // Pandička na ploše mapy: stojí dole v rohu a občas přejde do druhého.
-  bool _mascotRight = true;
-  static final _rng = Random();
-  Timer? _wanderTimer;
-  static const _wanderEvery = Duration(seconds: 25);
+  // Průvodce na ploše mapy — stejný jako ve hře ([DraggableGuide]): dá se
+  // přetáhnout, uhne z lekcí, po chvíli čte, v noci spí. Po dojetí scrollu
+  // se podívá, jestli mu pod nohy nepřijela lekce.
+  int _scrollStops = 0;
 
-  /// Velikost podle šířky: telefon ~90 px, tablet až 120 px.
-  static double _mascotSize(BuildContext context) =>
-      (MediaQuery.sizeOf(context).width * 0.22).clamp(80.0, 120.0);
-
-  void _startWandering() {
-    _wanderTimer?.cancel();
-    _wanderTimer = Timer.periodic(_wanderEvery, (_) {
-      if (!mounted || MediaQuery.of(context).disableAnimations) return;
-      if (WorldClockService.instance.theme.isNight) return; // v noci spí
-      setState(() {
-        _mascotRight = !_mascotRight;
-        _mood = MascotMood.wave;
-      });
-    });
-  }
-
-  Widget _wanderingMascot(BuildContext context, WorldTheme world) {
-    final size = _mascotSize(context);
-    final reduceMotion = MediaQuery.of(context).disableAnimations;
-    return Positioned(
-      left: 0,
-      right: 0,
-      bottom: MediaQuery.paddingOf(context).bottom + 4,
-      height: size * 1.25,
-      child: AnimatedAlign(
-        duration: reduceMotion
-            ? Duration.zero
-            : const Duration(milliseconds: 2600),
-        curve: Curves.easeInOut,
-        alignment:
-            _mascotRight ? const Alignment(0.92, 1) : const Alignment(-0.92, 1),
-        child: Transform.flip(
-          // Dívá se tam, kam jde.
-          flipX: !_mascotRight,
-          child: Mascot(
-            key: const ValueKey('map-mascot'),
-            mood: world.isNight &&
-                    (_mood == MascotMood.idle || _mood == MascotMood.read)
-                ? MascotMood.sleep
-                : _mood,
-            size: size,
-            onTickle: _tickle,
+  Widget _guide(BuildContext context) => Positioned.fill(
+        child: SafeArea(
+          child: DraggableGuide(
+            place: 'map',
+            mascotKey: const ValueKey('map-mascot'),
+            mood: _mood,
             replay: _taps,
+            layoutToken: _scrollStops,
+            onTickle: _tickle,
             onSettled: () {
-              // Po zamávání si občas sedne a čte.
-              if (mounted) {
-                setState(() => _mood = _rng.nextBool()
-                    ? MascotMood.read
-                    : MascotMood.idle);
-              }
+              if (mounted) setState(() => _mood = MascotMood.idle);
             },
           ),
         ),
-      ),
-    );
-  }
+      );
 
   // Tajná nálepka právě nalezená (čip ✨ na 3 s).
   String? _foundSecret;
@@ -158,14 +116,12 @@ class LessonMapScreenState extends State<LessonMapScreen> {
     _loadPack();
     _scroll.addListener(() => _scrollOffset.value = _scroll.offset);
     WorldClockService.instance.addListener(_syncAmbient);
-    _startWandering();
     SessionService.instance.addListener(_onSessionChanged);
   }
 
   @override
   void dispose() {
     WorldClockService.instance.removeListener(_syncAmbient);
-    _wanderTimer?.cancel();
     SessionService.instance.removeListener(_onSessionChanged);
     AudioService.instance.setAmbient(null);
     AudioService.instance.setMusic(false);
@@ -187,8 +143,8 @@ class LessonMapScreenState extends State<LessonMapScreen> {
     if (_bedtime && !_saidGoodNight) {
       _saidGoodNight = true;
       TtsService.speak(
-        Mascot.greeting(widget.language,
-          ProfileService.instance.addressIn(widget.language),
+        Mascot.greeting(
+            widget.language, ProfileService.instance.addressIn(widget.language),
             night: true),
         widget.language,
       );
@@ -382,9 +338,15 @@ class LessonMapScreenState extends State<LessonMapScreen> {
           children: [
             Positioned.fill(
                 child: WorldBackdrop(theme: world, scroll: _scrollOffset)),
-            _content(context, world),
+            NotificationListener<ScrollEndNotification>(
+              onNotification: (_) {
+                setState(() => _scrollStops++);
+                return false;
+              },
+              child: _content(context, world),
+            ),
             Positioned.fill(child: ParticleLayer(kind: world.particles)),
-            if (_pack != null && !_bedtime) _wanderingMascot(context, world),
+            if (_pack != null && !_bedtime) _guide(context),
             if (_foundSecret != null)
               Positioned(
                 top: 64,
@@ -417,63 +379,67 @@ class LessonMapScreenState extends State<LessonMapScreen> {
       child: pack == null
           ? (_loadError != null
               ? _LoadErrorCard(error: _loadError!, onRetry: _loadPack)
-              : const Center(
-                  child: Text('🎹', style: TextStyle(fontSize: 64))))
+              : const Center(child: Text('🎹', style: TextStyle(fontSize: 64))))
           : Column(
               children: [
                 // ── Top bar ────────────────────────────────────────────
-                Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                  child: Row(
-                    children: [
-                      Builder(
-                        builder: (ctx) => IconButton(
-                          icon: const Icon(Icons.menu,
-                              color: Color(0xFFA0C4FF), size: 22),
-                          padding: EdgeInsets.zero,
-                          constraints: const BoxConstraints(),
-                          onPressed: () => Scaffold.of(ctx).openDrawer(),
+                GuideAvoid(
+                  child: Padding(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                    child: Row(
+                      children: [
+                        Builder(
+                          builder: (ctx) => IconButton(
+                            icon: const Icon(Icons.menu,
+                                color: Color(0xFFA0C4FF), size: 22),
+                            padding: EdgeInsets.zero,
+                            constraints: const BoxConstraints(),
+                            onPressed: () => Scaffold.of(ctx).openDrawer(),
+                          ),
                         ),
-                      ),
-                      const SizedBox(width: 10),
-                      Expanded(
-                        child: Text(
-                          pack.title.isNotEmpty ? pack.title : '🎹 Swype Kids',
-                          overflow: TextOverflow.ellipsis,
+                        const SizedBox(width: 10),
+                        Expanded(
+                          child: Text(
+                            pack.title.isNotEmpty
+                                ? pack.title
+                                : '🎹 Swype Kids',
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              fontFamily: kFont,
+                              fontFamilyFallback: kFontFallback,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w900,
+                              color: Color(0xFFFFD200),
+                            ),
+                          ),
+                        ),
+                        if (pack.allLessons.any((l) => l.vocab.isNotEmpty)) ...[
+                          _BagChip(
+                            count: ProgressService.instance
+                                .wordBag(pack.id)
+                                .length,
+                            onTap: widget.onOpenBag,
+                          ),
+                          const SizedBox(width: 8),
+                        ],
+                        Text(
+                          '⭐ ${ProgressService.instance.totalStars(pack.id)}',
                           style: TextStyle(
                             fontFamily: kFont,
                             fontFamilyFallback: kFontFallback,
-                            fontSize: 15,
-                            fontWeight: FontWeight.w900,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w800,
                             color: Color(0xFFFFD200),
                           ),
                         ),
-                      ),
-                      if (pack.allLessons.any((l) => l.vocab.isNotEmpty)) ...[
-                        _BagChip(
-                          count:
-                              ProgressService.instance.wordBag(pack.id).length,
-                          onTap: widget.onOpenBag,
+                        const SizedBox(width: 6),
+                        LanguagePicker(
+                          value: widget.language,
+                          onChanged: widget.onLanguageChanged,
                         ),
-                        const SizedBox(width: 8),
                       ],
-                      Text(
-                        '⭐ ${ProgressService.instance.totalStars(pack.id)}',
-                        style: TextStyle(
-                          fontFamily: kFont,
-                          fontFamilyFallback: kFontFallback,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w800,
-                          color: Color(0xFFFFD200),
-                        ),
-                      ),
-                      const SizedBox(width: 6),
-                      LanguagePicker(
-                        value: widget.language,
-                        onChanged: widget.onLanguageChanged,
-                      ),
-                    ],
+                    ),
                   ),
                 ),
 
@@ -498,9 +464,17 @@ class LessonMapScreenState extends State<LessonMapScreen> {
                                 maxWidth: _maxContentWidth),
                             child: ListView.builder(
                               controller: _scroll,
-                              // Dole místo pro Pandičku, ať nikdy nic nezakryje.
+                              // Dole místo pro průvodce, ať jde poslední lekce
+                              // odscrollovat nad něj.
                               padding: EdgeInsets.fromLTRB(
-                                  16, 8, 16, 24 + _mascotSize(context)),
+                                  16,
+                                  8,
+                                  16,
+                                  24 +
+                                      DraggableGuide.boxFor(
+                                              DraggableGuide.sizeFor(
+                                                  MediaQuery.sizeOf(context)))
+                                          .height),
                               itemCount: pack.units.length + offset,
                               itemBuilder: (context, i) {
                                 if (expedition && i == 0) {
@@ -668,7 +642,14 @@ class _SecretChip extends StatelessWidget {
             ),
           ],
         ),
-        child: Text('✨ $emoji', style: const TextStyle(fontSize: 24)),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Text('✨', style: TextStyle(fontSize: 24)),
+            const SizedBox(width: 6),
+            EmojiArt(emoji, size: 24),
+          ],
+        ),
       ),
     );
   }
@@ -754,51 +735,60 @@ class _PracticeCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        margin: const EdgeInsets.only(top: 6),
-        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-        decoration: BoxDecoration(
-          color: _accent.withOpacity(0.16),
-          borderRadius: BorderRadius.circular(16),
-          border: Border.all(color: _accent.withOpacity(0.7)),
-        ),
-        child: Row(
-          children: [
-            Text(expedition ? '🧭' : '🔁',
-                style: const TextStyle(fontSize: 26)),
-            const SizedBox(width: 10),
-            Flexible(
-              child: Text(
-                expedition
-                    ? context.l.expeditionTitle
-                    : context.l.practiceTitle,
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle(
-                  fontFamily: kFont,
-                  fontFamilyFallback: kFontFallback,
-                  fontSize: 15,
-                  fontWeight: FontWeight.w900,
-                  color: expedition
-                      ? const Color(0xFFFFD200)
-                      : const Color(0xFF7BFFB2),
+    return GuideAvoid(
+      weight: 3,
+      child: GestureDetector(
+        onTap: onTap,
+        child: Container(
+          margin: const EdgeInsets.only(top: 6),
+          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+          decoration: BoxDecoration(
+            color: _accent.withOpacity(0.16),
+            borderRadius: BorderRadius.circular(16),
+            border: Border.all(color: _accent.withOpacity(0.7)),
+          ),
+          child: Row(
+            children: [
+              EmojiArt(expedition ? '🧭' : '🔁', size: 26),
+              const SizedBox(width: 10),
+              Flexible(
+                child: Text(
+                  expedition
+                      ? context.l.expeditionTitle
+                      : context.l.practiceTitle,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    fontFamily: kFont,
+                    fontFamilyFallback: kFontFallback,
+                    fontSize: 15,
+                    fontWeight: FontWeight.w900,
+                    color: expedition
+                        ? const Color(0xFFFFD200)
+                        : const Color(0xFF7BFFB2),
+                  ),
                 ),
               ),
-            ),
-            const SizedBox(width: 8),
-            // Obrázky slov, ať dítě bez čtení ví, co ho čeká; na úzkém
-            // displeji se řádek zkrátí, místo aby přetekl.
-            Expanded(
-              child: Text(
-                lessons.map((l) => l.hint).join(' '),
-                textAlign: TextAlign.end,
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                style: const TextStyle(fontSize: 20),
+              const SizedBox(width: 8),
+              // Obrázky slov, ať dítě bez čtení ví, co ho čeká; na úzkém
+              // displeji se řádek zkrátí, místo aby přetekl.
+              Expanded(
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  reverse: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  child: Row(
+                    children: [
+                      for (final l in lessons)
+                        Padding(
+                          padding: const EdgeInsets.only(left: 2),
+                          child: EmojiArt(l.hint, size: 20, animate: false),
+                        ),
+                    ],
+                  ),
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
@@ -924,8 +914,8 @@ class _UnitBlock extends StatelessWidget {
                 children: [
                   Opacity(
                       opacity: unitUnlocked ? 1.0 : 0.3,
-                      child: EmojiArt(unit.icon,
-                          size: 22, animate: unitUnlocked)),
+                      child:
+                          EmojiArt(unit.icon, size: 22, animate: unitUnlocked)),
                   const SizedBox(width: 10),
                   Expanded(
                     child: Text(
@@ -952,9 +942,10 @@ class _UnitBlock extends StatelessWidget {
                         width: 28,
                         height: 28,
                         child: FittedBox(
-                          child: Text(
+                          child: EmojiArt(
                             hasReward ? unit.reward.emoji : '❓',
-                            style: const TextStyle(fontSize: 22),
+                            size: 22,
+                            animate: false,
                           ),
                         ),
                       ),
@@ -977,6 +968,7 @@ class _UnitBlock extends StatelessWidget {
                     ? const Alignment(-0.35, 0)
                     : const Alignment(0.35, 0),
                 child: _LessonNode(
+                  key: ValueKey('lesson-${unit.lessons[l].id}'),
                   pack: pack,
                   unitIndex: unitIndex,
                   lessonIndex: l,
@@ -999,6 +991,7 @@ class _LessonNode extends StatelessWidget {
   final VoidCallback onTap;
 
   const _LessonNode({
+    super.key,
     required this.pack,
     required this.unitIndex,
     required this.lessonIndex,
@@ -1018,61 +1011,65 @@ class _LessonNode extends StatelessWidget {
             progress.isCompleted(pack.id, unit.lessons[lessonIndex - 1].id));
     final isCurrent = unlocked && !completed;
 
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 6),
-      child: GestureDetector(
-        onTap: unlocked ? onTap : null,
-        // Dlouhý stisk = poznámka pro rodiče (do v3.1 rodičovského koutku).
-        onLongPress: lesson.parentNote.isEmpty
-            ? null
-            : () => _showParentNote(context, lesson),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Container(
-              width: 64,
-              height: 64,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: completed
-                    ? const Color(0xFF1DD1A1).withOpacity(0.25)
-                    : unlocked
-                        ? const Color(0xFF54A0FF).withOpacity(0.25)
-                        : Colors.white.withOpacity(0.05),
-                border: Border.all(
-                  width: isCurrent ? 3 : 2,
+    return GuideAvoid(
+      weight: 4,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 6),
+        child: GestureDetector(
+          onTap: unlocked ? onTap : null,
+          // Dlouhý stisk = poznámka pro rodiče (do v3.1 rodičovského koutku).
+          onLongPress: lesson.parentNote.isEmpty
+              ? null
+              : () => _showParentNote(context, lesson),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Container(
+                width: 64,
+                height: 64,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
                   color: completed
-                      ? const Color(0xFF1DD1A1)
-                      : isCurrent
-                          ? const Color(0xFFFFD200)
-                          : Colors.white.withOpacity(0.15),
+                      ? const Color(0xFF1DD1A1).withOpacity(0.25)
+                      : unlocked
+                          ? const Color(0xFF54A0FF).withOpacity(0.25)
+                          : Colors.white.withOpacity(0.05),
+                  border: Border.all(
+                    width: isCurrent ? 3 : 2,
+                    color: completed
+                        ? const Color(0xFF1DD1A1)
+                        : isCurrent
+                            ? const Color(0xFFFFD200)
+                            : Colors.white.withOpacity(0.15),
+                  ),
+                  boxShadow: isCurrent
+                      ? [
+                          BoxShadow(
+                            color: const Color(0xFFFFD200).withOpacity(0.4),
+                            blurRadius: 16,
+                            spreadRadius: 1,
+                          ),
+                        ]
+                      : null,
                 ),
-                boxShadow: isCurrent
-                    ? [
-                        BoxShadow(
-                          color: const Color(0xFFFFD200).withOpacity(0.4),
-                          blurRadius: 16,
-                          spreadRadius: 1,
-                        ),
-                      ]
-                    : null,
+                alignment: Alignment.center,
+                child: EmojiArt(
+                  unlocked || completed
+                      ? (lesson.type == LessonType.listen ? '🔊' : lesson.hint)
+                      : '🔒',
+                  size: unlocked ? 28 : 22,
+                  animate: unlocked || completed,
+                ),
               ),
-              alignment: Alignment.center,
-              child: Text(
-                unlocked || completed
-                    ? (lesson.type == LessonType.listen ? '🔊' : lesson.hint)
-                    : '🔒',
-                style: TextStyle(fontSize: unlocked ? 28 : 22),
+              SizedBox(
+                height: 16,
+                child: Text(
+                  completed ? '⭐' * stars : '',
+                  style: const TextStyle(fontSize: 10),
+                ),
               ),
-            ),
-            SizedBox(
-              height: 16,
-              child: Text(
-                completed ? '⭐' * stars : '',
-                style: const TextStyle(fontSize: 10),
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

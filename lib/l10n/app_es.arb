@@ -232,5 +232,6 @@
   "mapLoadFailed": "No se pudo cargar el mapa",
   "retry": "Reintentar",
   "vocativeLabel": "Vocativo en checo",
-  "vocativeHint": "p. ej. Lauro"
+  "vocativeHint": "p. ej. Lauro",
+  "guideTitle": "Tu guía"
 }

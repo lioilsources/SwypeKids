@@ -14,6 +14,7 @@ import '../services/settings_service.dart';
 import '../world/world_clock.dart';
 import '../ui/app_font.dart';
 import '../ui/l10n.dart';
+import '../ui/emoji_art.dart';
 
 /// Stav písmene pro mřížku abecedy (roadmap P6).
 enum LetterStatus { unseen, practicing, mastered }
@@ -490,7 +491,7 @@ class _ParentSettingsState extends State<ParentSettings> {
         for (final p in ProfileService.instance.profiles)
           ListTile(
             contentPadding: EdgeInsets.zero,
-            leading: Text(p.avatar, style: const TextStyle(fontSize: 26)),
+            leading: EmojiArt(p.avatar, size: 26, animate: false),
             title: Text(p.label,
                 style: TextStyle(
                     fontFamily: kFont,
