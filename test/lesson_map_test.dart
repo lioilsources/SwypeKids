@@ -133,7 +133,7 @@ void main() {
     await tester.tap(find.byKey(const ValueKey('secret-cs-u1')));
     await tester.pump();
     expect(ProgressService.instance.collectibles('cs-CZ'), contains('🐞'));
-    expect(findText('✨ 🐞'), findsOneWidget);
+    expect(findText('🐞'), findsWidgets); // čip ✨ + nálepka
     expect(find.byKey(const ValueKey('secret-cs-u1')), findsNothing);
     await tester.pump(const Duration(seconds: 4));
   });

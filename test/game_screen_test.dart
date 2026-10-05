@@ -98,7 +98,7 @@ void main() {
     expect(ProgressService.instance.wordBag(_pack.id), {'ma'});
     expect(ProgressService.instance.hasBadge('firstSwype'), isTrue);
     await tester.pump(const Duration(milliseconds: 700));
-    expect(findText('🎯 První tah'), findsOneWidget);
+    expect(findText('První tah'), findsOneWidget);
     await tester.pump(const Duration(milliseconds: 300));
     expect(findText('🎒 MA'), findsOneWidget);
 
@@ -125,7 +125,7 @@ void main() {
     expect(findText('Máš novou nálepku!'), findsOneWidget);
     // Druhá lekce byla na 2⭐ → bez „Bez chyby“; první nálepka → Objevitel
     expect(ProgressService.instance.hasBadge('noMistake'), isFalse);
-    expect(findText('🧭 Objevitel'), findsOneWidget);
+    expect(findText('Objevitel'), findsOneWidget);
 
     // Doběhnout zbývající časovače (fade stopy klávesnice)
     await tester.pump(const Duration(seconds: 3));

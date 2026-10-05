@@ -429,7 +429,7 @@ class _BadgeTile extends StatelessWidget {
         children: [
           Opacity(
             opacity: earned ? 1 : 0.35,
-            child: Text(badge.emoji, style: const TextStyle(fontSize: 28)),
+            child: EmojiArt(badge.emoji, size: 28, animate: earned),
           ),
           const SizedBox(height: 4),
           Text(

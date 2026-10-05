@@ -668,7 +668,14 @@ class _SecretChip extends StatelessWidget {
             ),
           ],
         ),
-        child: Text('✨ $emoji', style: const TextStyle(fontSize: 24)),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Text('✨', style: TextStyle(fontSize: 24)),
+            const SizedBox(width: 6),
+            EmojiArt(emoji, size: 24),
+          ],
+        ),
       ),
     );
   }
@@ -766,8 +773,7 @@ class _PracticeCard extends StatelessWidget {
         ),
         child: Row(
           children: [
-            Text(expedition ? '🧭' : '🔁',
-                style: const TextStyle(fontSize: 26)),
+            EmojiArt(expedition ? '🧭' : '🔁', size: 26),
             const SizedBox(width: 10),
             Flexible(
               child: Text(
@@ -790,12 +796,19 @@ class _PracticeCard extends StatelessWidget {
             // Obrázky slov, ať dítě bez čtení ví, co ho čeká; na úzkém
             // displeji se řádek zkrátí, místo aby přetekl.
             Expanded(
-              child: Text(
-                lessons.map((l) => l.hint).join(' '),
-                textAlign: TextAlign.end,
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                style: const TextStyle(fontSize: 20),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                reverse: true,
+                physics: const NeverScrollableScrollPhysics(),
+                child: Row(
+                  children: [
+                    for (final l in lessons)
+                      Padding(
+                        padding: const EdgeInsets.only(left: 2),
+                        child: EmojiArt(l.hint, size: 20, animate: false),
+                      ),
+                  ],
+                ),
               ),
             ),
           ],
@@ -952,9 +965,10 @@ class _UnitBlock extends StatelessWidget {
                         width: 28,
                         height: 28,
                         child: FittedBox(
-                          child: Text(
+                          child: EmojiArt(
                             hasReward ? unit.reward.emoji : '❓',
-                            style: const TextStyle(fontSize: 22),
+                            size: 22,
+                            animate: false,
                           ),
                         ),
                       ),
@@ -1058,11 +1072,12 @@ class _LessonNode extends StatelessWidget {
                     : null,
               ),
               alignment: Alignment.center,
-              child: Text(
+              child: EmojiArt(
                 unlocked || completed
                     ? (lesson.type == LessonType.listen ? '🔊' : lesson.hint)
                     : '🔒',
-                style: TextStyle(fontSize: unlocked ? 28 : 22),
+                size: unlocked ? 28 : 22,
+                animate: unlocked || completed,
               ),
             ),
             SizedBox(
