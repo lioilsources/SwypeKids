@@ -1,5 +1,10 @@
 # Changelog
 
+## [05/10/2026] — v2.10.0
+- Výběr průvodce v profilu: Pandička, Kapybárka, Žirafka nebo Gepardíček — každý sourozenec si vybere svého
+- Průvodce se chová všude stejně: na mapě i ve hře ho jde přetáhnout, uhne z cesty, po ťuknutí zamává, po chvíli si čte a v noci spí
+- Obrázky místo emoji i na mapě (lekce, nálepky jednotek, procvičování) a u odznaků
+
 ## [03/10/2026] — v2.9.2
 - Ťuknutí na Pandičku = zamává — ve hře i na mapě, pokaždé znovu
 
