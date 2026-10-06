@@ -235,5 +235,14 @@
   "vocativeLabel": "Oslovení v češtině (5. pád)",
   "vocativeHint": "např. Lauro",
   "guideTitle": "Tvůj průvodce",
-  "petPlay": "Pojď si hrát"
+  "petPlay": "Pojď si hrát",
+  "badgeHost": "Hostitel",
+  "badgeHostHow": "10 dárků zvířátkům",
+  "badgeCuddler": "Mazlík",
+  "badgeCuddlerHow": "Pohladil(a) 5 zvířátek",
+  "badgeWishMaker": "Splněné přání",
+  "badgeWishMakerHow": "10 splněných přání",
+  "badgeFriendOfAll": "Kamarád všech",
+  "badgeFriendOfAllHow": "Každé zvířátko dostalo dárek",
+  "settingPetRounds": "Dárky zvířátkům: nejdřív napsat slovo"
 }

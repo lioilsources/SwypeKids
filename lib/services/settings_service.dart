@@ -14,6 +14,7 @@ class SettingsService extends ChangeNotifier {
   static const _kSessionLimit = 'sk.settings.sessionLimitMin';
   static const _kDyslexiaFont = 'sk.settings.dyslexiaFont';
   static const _kGuidePos = 'sk.settings.guidePos';
+  static const _kPetRounds = 'sk.settings.petRounds';
 
   /// Povolené limity session v minutách; 0 = bez limitu.
   static const sessionLimits = [0, 10, 15, 20];
@@ -45,6 +46,19 @@ class SettingsService extends ChangeNotifier {
     return gx == null || gy == null
         ? null
         : Offset(gx.clamp(0.0, 1.0), gy.clamp(0.0, 1.0));
+  }
+
+  bool _petRounds = true;
+
+  /// Svět zvířátka: ťuknutí na dárek nejdřív nabídne slovo napsat (trénink).
+  /// Vypnuto = dárky se jen dávají.
+  bool get petRounds => _petRounds;
+
+  set petRounds(bool v) {
+    if (v == _petRounds) return;
+    _petRounds = v;
+    _prefs?.setBool(_kPetRounds, v);
+    notifyListeners();
   }
 
   /// Písmo OpenDyslexic místo DynaPuff v celé appce.
@@ -81,6 +95,7 @@ class SettingsService extends ChangeNotifier {
     _leftHanded = _prefs!.getBool(_kLeftHanded) ?? false;
     _sessionLimitMin = _prefs!.getInt(_kSessionLimit) ?? 0;
     _dyslexiaFont = _prefs!.getBool(_kDyslexiaFont) ?? false;
+    _petRounds = _prefs!.getBool(_kPetRounds) ?? true;
     _guidePositions.clear();
     for (final place in const ['game', 'map', 'pet']) {
       final o = _parseOffset(_prefs!.getString(_guideKey(place)));

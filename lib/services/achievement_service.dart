@@ -20,7 +20,11 @@ enum GameBadge {
   poet('✍️'),
   listener('👂'),
   persistent('🌱'),
-  expedition('🧭');
+  expedition('🧭'),
+  host('🍽️'),
+  cuddler('💕'),
+  wishMaker('🎁'),
+  friendOfAll('🏡');
 
   const GameBadge(this.emoji);
 
@@ -51,6 +55,11 @@ class SessionStart extends Trigger {
   const SessionStart();
 }
 
+/// Akce ve světě zvířátka (dárek, pohlazení) — přepočítat jeho odznaky.
+class PetAction extends Trigger {
+  const PetAction();
+}
+
 /// Změna batohu, knížky nebo nálepek — přepočítat počty.
 class ProgressChanged extends Trigger {
   const ProgressChanged();
@@ -68,6 +77,10 @@ class AchievementService {
   static const poetSentences = 10;
   static const listenerRounds = 10;
   static const persistentDays = 7;
+  static const hostGifts = 10;
+  static const cuddlerAnimals = 5;
+  static const wishMakerWishes = 10;
+  static const friendOfAllMin = 5;
 
   /// Vyhodnotí [trigger] pro [pack] a vrátí nově získané odznaky (v pořadí
   /// podle enum). Už získané se nevracejí.
@@ -95,7 +108,7 @@ class AchievementService {
         award(GameBadge.earlyBird, world.phase == DayPhase.morning);
         award(GameBadge.fourSeasons, p.seasonsPlayed.length == Season.values.length);
         award(GameBadge.persistent, p.playDays.length >= persistentDays);
-      case ProgressChanged():
+      case ProgressChanged() || PetAction():
         break;
     }
 
@@ -112,6 +125,17 @@ class AchievementService {
     }
     award(GameBadge.poet, p.book(pack.id).length >= poetSentences);
     award(GameBadge.expedition, p.expeditionsDone >= 1);
+    // Svět zvířátka: dárky, mazlení, přání, každé zvířátko obdarované.
+    final pet = p.petStats(pack.id);
+    award(GameBadge.host, pet.gifts >= hostGifts);
+    award(GameBadge.cuddler, pet.petted.length >= cuddlerAnimals);
+    award(GameBadge.wishMaker, pet.wishes >= wishMakerWishes);
+    final residents = [
+      for (final u in pack.units)
+        if (p.hasCollectible(pack.id, u.reward)) u.reward.emoji,
+    ];
+    award(GameBadge.friendOfAll,
+        residents.length >= friendOfAllMin && residents.every(pet.fed.contains));
     return earned;
   }
 }

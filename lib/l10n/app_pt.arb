@@ -234,5 +234,14 @@
   "vocativeLabel": "Vocativo em tcheco",
   "vocativeHint": "ex.: Lauro",
   "guideTitle": "Seu guia",
-  "petPlay": "Vamos brincar"
+  "petPlay": "Vamos brincar",
+  "badgeHost": "Anfitrião",
+  "badgeHostHow": "10 presentes para os bichos",
+  "badgeCuddler": "Carinhoso",
+  "badgeCuddlerHow": "Fez carinho em 5 bichos",
+  "badgeWishMaker": "Desejo realizado",
+  "badgeWishMakerHow": "10 desejos realizados",
+  "badgeFriendOfAll": "Amigo de todos",
+  "badgeFriendOfAllHow": "Cada bicho ganhou um presente",
+  "settingPetRounds": "Presentes para os bichos: primeiro escrever a palavra"
 }

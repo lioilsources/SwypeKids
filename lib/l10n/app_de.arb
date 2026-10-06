@@ -234,5 +234,14 @@
   "vocativeLabel": "Tschechische Anrede (Vokativ)",
   "vocativeHint": "z. B. Lauro",
   "guideTitle": "Dein Begleiter",
-  "petPlay": "Komm spielen"
+  "petPlay": "Komm spielen",
+  "badgeHost": "Gastgeber",
+  "badgeHostHow": "10 Geschenke für Tiere",
+  "badgeCuddler": "Kuschler",
+  "badgeCuddlerHow": "5 Tiere gestreichelt",
+  "badgeWishMaker": "Wunsch erfüllt",
+  "badgeWishMakerHow": "10 Wünsche erfüllt",
+  "badgeFriendOfAll": "Freund aller",
+  "badgeFriendOfAllHow": "Jedes Tier hat ein Geschenk bekommen",
+  "settingPetRounds": "Geschenke für Tiere: erst das Wort schreiben"
 }

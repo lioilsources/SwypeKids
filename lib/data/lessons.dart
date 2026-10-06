@@ -86,6 +86,24 @@ class Lesson {
   /// Index díry pro missingLetter: z packu, jinak prostřední písmeno.
   int get gapIndex => gap ?? target.length ~/ 2;
 
+  /// Stejná lekce jako jiný typ kola (svět zvířátka: obtížnost podle síly
+  /// slova). Id i target zůstávají — síla slova se zapisuje k témuž.
+  Lesson withType(LessonType t) => Lesson(
+        id: id,
+        type: t,
+        unlocked: unlocked,
+        target: target,
+        display: display,
+        hint: hint,
+        label: label,
+        info: info,
+        ipa: ipa,
+        pinyin: pinyin,
+        vocab: vocab,
+        parentNote: parentNote,
+        gap: gap,
+      );
+
   factory Lesson.fromJson(Map<String, dynamic> json) => Lesson(
         id: json['id'] as String? ?? '',
         type: LessonType.values.asNameMap()[json['type'] as String? ?? ''] ??

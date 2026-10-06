@@ -301,6 +301,35 @@ class ProgressService {
     return limit == null ? learned : learned.take(limit).toList();
   }
 
+  // ── Svět zvířátka ──────────────────────────────────────────────────────────
+
+  /// Statistiky hraní se zvířátky (pro odznaky; žádný hlad, žádný tlak).
+  ({int gifts, int wishes, Set<String> fed, Set<String> petted}) petStats(
+      String packId) {
+    final p = _byPack[packId];
+    return (
+      gifts: p?.gifts ?? 0,
+      wishes: p?.wishes ?? 0,
+      fed: Set.unmodifiable(p?.fed ?? const <String>{}),
+      petted: Set.unmodifiable(p?.petted ?? const <String>{}),
+    );
+  }
+
+  /// Nálepka [resident] dostala dárek; [wish] = splněné přání.
+  void recordGift(String packId, String resident, {bool wish = false}) {
+    final p = _byPack.putIfAbsent(packId, () => _PackProgress());
+    p.gifts++;
+    if (wish) p.wishes++;
+    p.fed.add(resident);
+    _save(packId);
+  }
+
+  /// Dítě pohladilo nálepku [resident].
+  void recordPetting(String packId, String resident) {
+    final p = _byPack.putIfAbsent(packId, () => _PackProgress());
+    if (p.petted.add(resident)) _save(packId);
+  }
+
   // ── Navigace v packu ───────────────────────────────────────────────────────
 
   /// Index (unit, lesson) první nedokončené lekce; null = celý pack hotový.
@@ -337,6 +366,10 @@ class _PackProgress {
   final Map<String, int> strength;  // target → síla 0–5
   final List<BookPage> book;        // Má knížka, nejstarší první
   final Set<String> revealed;       // jednotky, u kterých už hrálo rozplynutí mlhy
+  final Set<String> fed;            // svět zvířátka: nálepky, které dostaly dárek
+  final Set<String> petted;         // … které dítě pohladilo
+  int gifts;                        // … dárků celkem
+  int wishes;                       // … splněných přání
 
   _PackProgress({
     Map<String, int>? completed,
@@ -345,7 +378,13 @@ class _PackProgress {
     Map<String, int>? strength,
     List<BookPage>? book,
     Set<String>? revealed,
-  })  : completed = completed ?? {},
+    Set<String>? fed,
+    Set<String>? petted,
+    this.gifts = 0,
+    this.wishes = 0,
+  })  : fed = fed ?? {},
+        petted = petted ?? {},
+        completed = completed ?? {},
         collectibles = collectibles ?? [],
         words = words ?? {},
         strength = strength ?? {},
@@ -366,6 +405,10 @@ class _PackProgress {
             BookPage.fromJson((page as Map).cast<String, dynamic>()),
         ],
         revealed: ((json['revealed'] as List?) ?? const []).cast<String>().toSet(),
+        fed: ((json['fed'] as List?) ?? const []).cast<String>().toSet(),
+        petted: ((json['petted'] as List?) ?? const []).cast<String>().toSet(),
+        gifts: json['gifts'] as int? ?? 0,
+        wishes: json['wishes'] as int? ?? 0,
       );
 
   Map<String, dynamic> toJson() => {
@@ -376,6 +419,10 @@ class _PackProgress {
         'strength': strength,
         'book': [for (final page in book) page.toJson()],
         'revealed': revealed.toList(),
+        if (fed.isNotEmpty) 'fed': fed.toList(),
+        if (petted.isNotEmpty) 'petted': petted.toList(),
+        if (gifts > 0) 'gifts': gifts,
+        if (wishes > 0) 'wishes': wishes,
       };
 }
 

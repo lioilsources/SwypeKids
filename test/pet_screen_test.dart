@@ -18,6 +18,9 @@ void main() {
 
   // Soubor packu číst mimo fake-async widget testu (jinak visí).
   setUpAll(() async => pack = await seedPack(Language.cs));
+  setUp(() => WorldClockService.instance.debugNowOverride =
+      () => DateTime(2026, 6, 1, 10));
+  tearDown(() => WorldClockService.instance.debugNowOverride = null);
 
   Future<void> setUpProfile({Map<String, Object> prefs = const {}}) async {
     SharedPreferences.setMockInitialValues(prefs);
@@ -69,12 +72,11 @@ void main() {
   });
 
   testWidgets(
-      'dárek přetažený na myš: jí, věta „Myš jí jablko.", ⭐ do knížky; '
-      'v noci spí a dárek odloží', (tester) async {
+      'dárek přetažený na myš: jí, věta „Myš jí jablko.", ⭐ do knížky',
+      (tester) async {
     await setUpProfile();
     await pumpPet(tester);
     final resident = find.byKey(const ValueKey('pet-resident'));
-    final night = WorldClockService.instance.theme.isNight;
 
     final g = await tester.startGesture(
         tester.getCenter(find.byKey(const ValueKey('gift-o2'))));
@@ -84,19 +86,14 @@ void main() {
     await g.up();
     await tester.pump();
 
-    if (night) {
-      // V noci zvířátko spí: dárek „pšt", žádná věta.
-      expect(find.byKey(const ValueKey('pet-shh')), findsOneWidget);
-      expect(find.byKey(const ValueKey('pet-sentence')), findsNothing);
-      await settle(tester, const Duration(seconds: 3));
-      return;
-    }
     // Jí (póza eat, když obrázek existuje) a objeví se věta.
     final art = tester.widget<EmojiArt>(resident);
     expect(art.action, StickerAction.eat);
     expect(art.pose, 'eat');
     expect(findText('Myš jí jablko.'), findsOneWidget);
 
+    // Průvodce před ⭐ pomalu uhne (bublina věty je GuideAvoid).
+    await settle(tester, const Duration(seconds: 2));
     await tester.tap(find.byKey(const ValueKey('pet-save')));
     await tester.pump();
     expect(ProgressService.instance.book(pack.id).single.text, 'Myš jí jablko.');
@@ -122,17 +119,16 @@ void main() {
     await setUpProfile();
     await pumpPet(tester);
     final resident = find.byKey(const ValueKey('pet-resident'));
-    if (!WorldClockService.instance.theme.isNight) {
-      final g = await tester.startGesture(tester.getCenter(resident));
-      for (var i = 0; i < 8; i++) {
-        await g.moveBy(const Offset(12, 0));
-        await tester.pump(const Duration(milliseconds: 60));
-      }
-      await g.up();
-      await tester.pump();
-      expect(tester.widget<EmojiArt>(resident).action, StickerAction.happy);
-      await settle(tester, const Duration(seconds: 2));
+    final g = await tester.startGesture(tester.getCenter(resident));
+    for (var i = 0; i < 10; i++) {
+      await g.moveBy(Offset(i.isEven ? 14 : -14, 2));
+      await tester.pump(const Duration(milliseconds: 60));
     }
+    await g.up();
+    await tester.pump();
+    expect(tester.widget<EmojiArt>(resident).action, StickerAction.happy);
+    expect(ProgressService.instance.petStats(pack.id).petted, {'🐭'});
+    await settle(tester, const Duration(seconds: 2));
 
     // Limit session → spí.
     final t = DateTime.now();
@@ -149,5 +145,25 @@ void main() {
     expect(art.action, StickerAction.sleep);
     expect(art.pose, 'sleep');
     await settle(tester, const Duration(seconds: 2));
+  });
+
+  testWidgets('v noci spí a dárek odloží („pšt"), věta není', (tester) async {
+    WorldClockService.instance.debugNowOverride =
+        () => DateTime(2026, 6, 1, 23);
+    await setUpProfile();
+    await pumpPet(tester);
+    final resident = find.byKey(const ValueKey('pet-resident'));
+    expect(tester.widget<EmojiArt>(resident).action, StickerAction.sleep);
+    final g = await tester.startGesture(
+        tester.getCenter(find.byKey(const ValueKey('gift-o2'))));
+    await tester.pump(const Duration(milliseconds: 50));
+    await g.moveTo(tester.getCenter(resident));
+    await tester.pump(const Duration(milliseconds: 50));
+    await g.up();
+    await tester.pump();
+    expect(find.byKey(const ValueKey('pet-shh')), findsOneWidget);
+    expect(find.byKey(const ValueKey('pet-sentence')), findsNothing);
+    expect(ProgressService.instance.petStats(pack.id).gifts, 0);
+    await settle(tester, const Duration(seconds: 3));
   });
 }

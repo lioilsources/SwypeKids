@@ -436,4 +436,31 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get petPlay => 'Pojď si hrát';
+
+  @override
+  String get badgeHost => 'Hostitel';
+
+  @override
+  String get badgeHostHow => '10 dárků zvířátkům';
+
+  @override
+  String get badgeCuddler => 'Mazlík';
+
+  @override
+  String get badgeCuddlerHow => 'Pohladil(a) 5 zvířátek';
+
+  @override
+  String get badgeWishMaker => 'Splněné přání';
+
+  @override
+  String get badgeWishMakerHow => '10 splněných přání';
+
+  @override
+  String get badgeFriendOfAll => 'Kamarád všech';
+
+  @override
+  String get badgeFriendOfAllHow => 'Každé zvířátko dostalo dárek';
+
+  @override
+  String get settingPetRounds => 'Dárky zvířátkům: nejdřív napsat slovo';
 }

@@ -435,4 +435,32 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get petPlay => 'Vamos brincar';
+
+  @override
+  String get badgeHost => 'Anfitrião';
+
+  @override
+  String get badgeHostHow => '10 presentes para os bichos';
+
+  @override
+  String get badgeCuddler => 'Carinhoso';
+
+  @override
+  String get badgeCuddlerHow => 'Fez carinho em 5 bichos';
+
+  @override
+  String get badgeWishMaker => 'Desejo realizado';
+
+  @override
+  String get badgeWishMakerHow => '10 desejos realizados';
+
+  @override
+  String get badgeFriendOfAll => 'Amigo de todos';
+
+  @override
+  String get badgeFriendOfAllHow => 'Cada bicho ganhou um presente';
+
+  @override
+  String get settingPetRounds =>
+      'Presentes para os bichos: primeiro escrever a palavra';
 }

@@ -73,6 +73,12 @@ převzetí osvědčených smyček, ne technickou integraci.
   → zvířátko jí / pije / hraje si a objeví se věta („Myš jí jablko."), ⭐ ji
   uloží do Mé knížky. V noci a po limitu spí. Plán dalších fází:
   `docs/PLAN_ZVERINEC_HRA.md`.
+- **Učení ve světě zvířátka** (v2.13): ťuknutí na naučené slovo v tácku otevře
+  kolo podle síly slova (0–1 celé slovo, 2–3 chybí písmeno, 4–5 jen obrázek);
+  napsané slovo dárek „oživí" a doletí ke zvířátku. Přání v bublině = slabé
+  slovo z batohu, splněné přání = větší radost. Rodič může psaní vypnout
+  (dárky se pak jen dávají). Odznaky Hostitel, Mazlík, Splněné přání,
+  Kamarád všech.
 - Motivace sbíráním, ne soutěžením.
 
 ## 5. Content pack model (JSON)
