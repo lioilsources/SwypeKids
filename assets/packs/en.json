@@ -44,7 +44,8 @@
         "emoji": "🐭",
         "name": "M",
         "label": "mouse",
-        "subject": "The mouse"
+        "subject": "The mouse",
+        "kind": "animal"
       },
       "scene": {
         "biome": "meadow"
@@ -90,7 +91,8 @@
         "emoji": "☂️",
         "name": "U",
         "label": "umbrella",
-        "subject": "The umbrella"
+        "subject": "The umbrella",
+        "kind": "thing"
       },
       "scene": {
         "biome": "forest"
@@ -174,7 +176,8 @@
         "emoji": "🐯",
         "name": "T",
         "label": "tiger",
-        "subject": "The tiger"
+        "subject": "The tiger",
+        "kind": "animal"
       },
       "scene": {
         "biome": "pond"
@@ -244,7 +247,8 @@
         "emoji": "🥧",
         "name": "P",
         "label": "pie",
-        "subject": "The pie"
+        "subject": "The pie",
+        "kind": "thing"
       },
       "scene": {
         "biome": "garden"
@@ -384,7 +388,8 @@
         "emoji": "🍊",
         "name": "O",
         "label": "orange",
-        "subject": "The orange"
+        "subject": "The orange",
+        "kind": "thing"
       },
       "scene": {
         "biome": "farm"
@@ -515,7 +520,8 @@
         "emoji": "🐱",
         "name": "C",
         "label": "cat",
-        "subject": "The cat"
+        "subject": "The cat",
+        "kind": "animal"
       },
       "scene": {
         "biome": "city"
@@ -653,7 +659,18 @@
         "emoji": "☀️",
         "name": "S",
         "label": "sun",
-        "subject": "The sun"
+        "subject": "The sun",
+        "kind": "thing",
+        "verb": {
+          "text": "shines on",
+          "emoji": "☀️",
+          "frame": "acc",
+          "object": [
+            "toy",
+            "vehicle",
+            "thing"
+          ]
+        }
       },
       "scene": {
         "biome": "mountains"
@@ -817,7 +834,8 @@
         "emoji": "🏠",
         "name": "H",
         "label": "house",
-        "subject": "The house"
+        "subject": "The house",
+        "kind": "thing"
       },
       "scene": {
         "biome": "beach"
@@ -1019,7 +1037,8 @@
         "emoji": "🐸",
         "name": "F",
         "label": "frog",
-        "subject": "The frog"
+        "subject": "The frog",
+        "kind": "animal"
       },
       "scene": {
         "biome": "orchard"
@@ -1236,7 +1255,8 @@
         "emoji": "🦁",
         "name": "L",
         "label": "lion",
-        "subject": "The lion"
+        "subject": "The lion",
+        "kind": "animal"
       },
       "scene": {
         "biome": "snow"
@@ -1435,7 +1455,8 @@
         "emoji": "🍌",
         "name": "B",
         "label": "banana",
-        "subject": "The banana"
+        "subject": "The banana",
+        "kind": "thing"
       },
       "scene": {
         "biome": "jungle"
@@ -1745,7 +1766,8 @@
         "emoji": "🧃",
         "name": "J",
         "label": "juice",
-        "subject": "The juice"
+        "subject": "The juice",
+        "kind": "thing"
       },
       "scene": {
         "biome": "sky"
@@ -1995,7 +2017,8 @@
         "emoji": "🐳",
         "name": "W",
         "label": "whale",
-        "subject": "The whale"
+        "subject": "The whale",
+        "kind": "animal"
       },
       "scene": {
         "biome": "meadow"
@@ -2295,7 +2318,8 @@
         "emoji": "🪀",
         "name": "Y",
         "label": "yo-yo",
-        "subject": "The yo-yo"
+        "subject": "The yo-yo",
+        "kind": "thing"
       },
       "scene": {
         "biome": "forest"
@@ -2579,7 +2603,8 @@
         "emoji": "🎻",
         "name": "V",
         "label": "violin",
-        "subject": "The violin"
+        "subject": "The violin",
+        "kind": "thing"
       },
       "scene": {
         "biome": "pond"
@@ -2874,90 +2899,103 @@
   ],
   "sentence": {
     "joiner": " ",
+    "naming": "This is {nom}.",
     "subjects": [
       {
         "id": "s1",
         "emoji": "👶",
         "text": "I",
         "unlockedBy": "always",
-        "person": "1sg"
+        "person": "1sg",
+        "kind": "person"
       },
       {
         "id": "mum",
         "emoji": "👩",
         "text": "Mum",
         "unlockedBy": "vocab",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "person"
       },
       {
         "id": "dad",
         "emoji": "👨",
         "text": "Dad",
         "unlockedBy": "vocab",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "person"
       },
       {
         "id": "s4",
         "emoji": "👵",
         "text": "Granny",
         "unlockedBy": "always",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "person"
       },
       {
         "id": "dog",
         "emoji": "🐶",
-        "text": "Dog",
+        "text": "The dog",
         "unlockedBy": "vocab",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "animal"
       },
       {
         "id": "cat",
         "emoji": "🐱",
-        "text": "Cat",
+        "text": "The cat",
         "unlockedBy": "vocab",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "animal"
       },
       {
         "id": "pig",
         "emoji": "🐷",
-        "text": "Pig",
+        "text": "The pig",
         "unlockedBy": "vocab",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "animal"
       },
       {
         "id": "hen",
         "emoji": "🐔",
-        "text": "Hen",
+        "text": "The hen",
         "unlockedBy": "vocab",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "animal"
       },
       {
         "id": "bug",
         "emoji": "🐛",
-        "text": "Bug",
+        "text": "The bug",
         "unlockedBy": "vocab",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "animal"
       },
       {
         "id": "frog",
         "emoji": "🐸",
-        "text": "Frog",
+        "text": "The frog",
         "unlockedBy": "vocab",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "animal"
       },
       {
         "id": "fish",
         "emoji": "🐟",
-        "text": "Fish",
+        "text": "The fish",
         "unlockedBy": "vocab",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "animal"
       },
       {
         "id": "chick",
         "emoji": "🐤",
-        "text": "Chick",
+        "text": "The chick",
         "unlockedBy": "vocab",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "animal"
       }
     ],
     "verbs": [
@@ -2969,7 +3007,18 @@
         "frame": "acc",
         "forms": {
           "3sg": "wants"
-        }
+        },
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "food",
+          "drink",
+          "toy",
+          "vehicle",
+          "thing"
+        ]
       },
       {
         "id": "v2",
@@ -2979,7 +3028,14 @@
         "frame": "acc",
         "forms": {
           "3sg": "eats"
-        }
+        },
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "food"
+        ]
       },
       {
         "id": "v3",
@@ -2989,7 +3045,14 @@
         "frame": "acc",
         "forms": {
           "3sg": "drinks"
-        }
+        },
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "drink"
+        ]
       },
       {
         "id": "v4",
@@ -2999,7 +3062,14 @@
         "frame": "loc",
         "forms": {
           "3sg": "sleeps"
-        }
+        },
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "place"
+        ]
       },
       {
         "id": "v5",
@@ -3009,7 +3079,14 @@
         "frame": "dir",
         "forms": {
           "3sg": "goes"
-        }
+        },
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "place"
+        ]
       },
       {
         "id": "v6",
@@ -3019,7 +3096,15 @@
         "frame": "instr",
         "forms": {
           "3sg": "plays"
-        }
+        },
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "toy",
+          "vehicle"
+        ]
       }
     ],
     "objects": [
@@ -3029,8 +3114,12 @@
         "text": "milk",
         "unlockedBy": "always",
         "forms": {
-          "instr": "with milk"
-        }
+          "nom": "milk",
+          "acc": "milk"
+        },
+        "tags": [
+          "drink"
+        ]
       },
       {
         "id": "o2",
@@ -3038,8 +3127,12 @@
         "text": "an apple",
         "unlockedBy": "always",
         "forms": {
-          "instr": "with an apple"
-        }
+          "nom": "an apple",
+          "acc": "an apple"
+        },
+        "tags": [
+          "food"
+        ]
       },
       {
         "id": "o3",
@@ -3047,9 +3140,13 @@
         "text": "a toy",
         "unlockedBy": "always",
         "forms": {
-          "instr": "with a toy",
-          "loc": "with a toy"
-        }
+          "nom": "a toy",
+          "acc": "a toy",
+          "instr": "with a toy"
+        },
+        "tags": [
+          "toy"
+        ]
       },
       {
         "id": "o4",
@@ -3057,10 +3154,16 @@
         "text": "the car",
         "unlockedBy": "always",
         "forms": {
-          "dir": "in the car",
+          "nom": "the car",
+          "acc": "the car",
+          "instr": "with the car",
           "loc": "in the car",
-          "instr": "with the car"
-        }
+          "dir": "to the car"
+        },
+        "tags": [
+          "vehicle",
+          "place"
+        ]
       },
       {
         "id": "o5",
@@ -3068,10 +3171,12 @@
         "text": "outside",
         "unlockedBy": "always",
         "forms": {
-          "dir": "outside",
           "loc": "outside",
-          "instr": "outside"
-        }
+          "dir": "outside"
+        },
+        "tags": [
+          "place"
+        ]
       },
       {
         "id": "home",
@@ -3079,10 +3184,13 @@
         "text": "home",
         "unlockedBy": "vocab",
         "forms": {
-          "dir": "home",
+          "nom": "home",
           "loc": "at home",
-          "instr": "at home"
-        }
+          "dir": "home"
+        },
+        "tags": [
+          "place"
+        ]
       },
       {
         "id": "o7",
@@ -3090,10 +3198,13 @@
         "text": "the bed",
         "unlockedBy": "always",
         "forms": {
-          "dir": "to bed",
+          "nom": "the bed",
           "loc": "in bed",
-          "instr": "in bed"
-        }
+          "dir": "to bed"
+        },
+        "tags": [
+          "place"
+        ]
       },
       {
         "id": "o8",
@@ -3101,10 +3212,12 @@
         "text": "the potty",
         "unlockedBy": "always",
         "forms": {
-          "dir": "to the potty",
-          "loc": "on the potty",
-          "instr": "on the potty"
-        }
+          "nom": "the potty",
+          "dir": "to the potty"
+        },
+        "tags": [
+          "place"
+        ]
       },
       {
         "id": "cup",
@@ -3112,10 +3225,12 @@
         "text": "a cup",
         "unlockedBy": "vocab",
         "forms": {
-          "instr": "with my cup",
-          "loc": "by my cup",
-          "dir": "to my cup"
-        }
+          "nom": "a cup",
+          "acc": "a cup"
+        },
+        "tags": [
+          "thing"
+        ]
       },
       {
         "id": "cap",
@@ -3123,10 +3238,12 @@
         "text": "a cap",
         "unlockedBy": "vocab",
         "forms": {
-          "instr": "with my cap",
-          "loc": "in my cap",
-          "dir": "for my cap"
-        }
+          "nom": "a cap",
+          "acc": "a cap"
+        },
+        "tags": [
+          "thing"
+        ]
       },
       {
         "id": "pot",
@@ -3134,10 +3251,12 @@
         "text": "a pot",
         "unlockedBy": "vocab",
         "forms": {
-          "instr": "with a pot",
-          "loc": "by the pot",
-          "dir": "to the pot"
-        }
+          "nom": "a pot",
+          "acc": "a pot"
+        },
+        "tags": [
+          "thing"
+        ]
       },
       {
         "id": "cot",
@@ -3145,10 +3264,13 @@
         "text": "the cot",
         "unlockedBy": "vocab",
         "forms": {
-          "instr": "in my cot",
-          "loc": "in my cot",
-          "dir": "to my cot"
-        }
+          "nom": "the cot",
+          "loc": "in the cot",
+          "dir": "to the cot"
+        },
+        "tags": [
+          "place"
+        ]
       },
       {
         "id": "sun",
@@ -3156,10 +3278,12 @@
         "text": "the sun",
         "unlockedBy": "vocab",
         "forms": {
-          "instr": "in the sun",
-          "loc": "in the sun",
-          "dir": "into the sun"
-        }
+          "nom": "the sun",
+          "loc": "in the sun"
+        },
+        "tags": [
+          "place"
+        ]
       },
       {
         "id": "hat",
@@ -3167,10 +3291,12 @@
         "text": "a hat",
         "unlockedBy": "vocab",
         "forms": {
-          "instr": "with my hat",
-          "loc": "in my hat",
-          "dir": "for my hat"
-        }
+          "nom": "a hat",
+          "acc": "a hat"
+        },
+        "tags": [
+          "thing"
+        ]
       },
       {
         "id": "bus",
@@ -3178,10 +3304,16 @@
         "text": "the bus",
         "unlockedBy": "vocab",
         "forms": {
-          "instr": "on the bus",
+          "nom": "the bus",
+          "acc": "the bus",
+          "instr": "with the bus",
           "loc": "on the bus",
           "dir": "to the bus"
-        }
+        },
+        "tags": [
+          "vehicle",
+          "place"
+        ]
       },
       {
         "id": "drum",
@@ -3189,10 +3321,13 @@
         "text": "a drum",
         "unlockedBy": "vocab",
         "forms": {
-          "instr": "with a drum",
-          "loc": "by the drum",
-          "dir": "to the drum"
-        }
+          "nom": "a drum",
+          "acc": "a drum",
+          "instr": "with a drum"
+        },
+        "tags": [
+          "toy"
+        ]
       },
       {
         "id": "star",
@@ -3200,10 +3335,12 @@
         "text": "a star",
         "unlockedBy": "vocab",
         "forms": {
-          "instr": "with a star",
-          "loc": "under a star",
-          "dir": "to the star"
-        }
+          "nom": "a star",
+          "acc": "a star"
+        },
+        "tags": [
+          "thing"
+        ]
       },
       {
         "id": "cake",
@@ -3211,20 +3348,37 @@
         "text": "cake",
         "unlockedBy": "vocab",
         "forms": {
-          "instr": "with cake",
-          "loc": "by the cake",
-          "dir": "to the cake"
-        }
+          "nom": "cake",
+          "acc": "cake"
+        },
+        "tags": [
+          "food"
+        ]
       },
       {
         "id": "bike",
         "emoji": "🚲",
-        "text": "my bike",
+        "text": "a bike",
         "unlockedBy": "vocab",
         "forms": {
-          "instr": "with my bike",
-          "loc": "on my bike",
-          "dir": "on my bike"
+          "nom": "a bike",
+          "acc": "a bike"
+        },
+        "tags": [
+          "vehicle"
+        ]
+      },
+      {
+        "id": "o9",
+        "emoji": "💧",
+        "text": "water",
+        "unlockedBy": "always",
+        "tags": [
+          "drink"
+        ],
+        "forms": {
+          "nom": "water",
+          "acc": "water"
         }
       }
     ]

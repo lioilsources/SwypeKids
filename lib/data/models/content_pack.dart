@@ -13,8 +13,22 @@ class CollectibleReward {
   /// „ねこは"); prázdné = [label] s velkým písmenem.
   final String subject;
 
-  const CollectibleReward(
-      {required this.emoji, this.name = '', this.label = '', this.subject = ''});
+  /// Druh nálepky jako podmětu: `person`, `animal`, `thing` (prázdné =
+  /// odhad z emoji). Věc nejí, nepije ani si nehraje.
+  final String kind;
+
+  /// Vlastní sloveso věci ve světě zvířátka („Oko **se dívá na** kolo"):
+  /// `text` = tvar ve větě, `frame` + `object` jako u sloves builderu.
+  final SentencePart? verb;
+
+  const CollectibleReward({
+    required this.emoji,
+    this.name = '',
+    this.label = '',
+    this.subject = '',
+    this.kind = '',
+    this.verb,
+  });
 
   factory CollectibleReward.fromJson(Map<String, dynamic> json) =>
       CollectibleReward(
@@ -22,6 +36,13 @@ class CollectibleReward {
         name: json['name'] as String? ?? '',
         label: json['label'] as String? ?? '',
         subject: json['subject'] as String? ?? '',
+        kind: json['kind'] as String? ?? '',
+        verb: json['verb'] == null
+            ? null
+            : SentencePart.fromJson({
+                'id': 'verb',
+                ...(json['verb'] as Map).cast<String, dynamic>(),
+              }),
       );
 
   Map<String, dynamic> toJson() => {

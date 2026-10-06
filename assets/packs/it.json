@@ -44,7 +44,8 @@
         "emoji": "🍎",
         "name": "M",
         "label": "mela",
-        "subject": "La mela"
+        "subject": "La mela",
+        "kind": "thing"
       },
       "scene": {
         "biome": "meadow"
@@ -90,7 +91,8 @@
         "emoji": "🏝️",
         "name": "I",
         "label": "isola",
-        "subject": "L'isola"
+        "subject": "L'isola",
+        "kind": "thing"
       },
       "scene": {
         "biome": "forest"
@@ -153,7 +155,8 @@
         "emoji": "🍕",
         "name": "P",
         "label": "pizza",
-        "subject": "La pizza"
+        "subject": "La pizza",
+        "kind": "thing"
       },
       "scene": {
         "biome": "pond"
@@ -219,7 +222,16 @@
         "emoji": "👃",
         "name": "N",
         "label": "naso",
-        "subject": "Il naso"
+        "subject": "Il naso",
+        "kind": "thing",
+        "verb": {
+          "text": "annusa",
+          "emoji": "👃",
+          "frame": "acc",
+          "object": [
+            "food"
+          ]
+        }
       },
       "scene": {
         "biome": "garden"
@@ -288,7 +300,8 @@
         "emoji": "🐻",
         "name": "O",
         "label": "orso",
-        "subject": "L'orso"
+        "subject": "L'orso",
+        "kind": "animal"
       },
       "scene": {
         "biome": "farm"
@@ -324,7 +337,8 @@
         "emoji": "🐝",
         "name": "A",
         "label": "ape",
-        "subject": "L'ape"
+        "subject": "L'ape",
+        "kind": "animal"
       },
       "scene": {
         "biome": "city"
@@ -494,7 +508,8 @@
         "emoji": "🐯",
         "name": "T",
         "label": "tigre",
-        "subject": "La tigre"
+        "subject": "La tigre",
+        "kind": "animal"
       },
       "scene": {
         "biome": "mountains"
@@ -617,7 +632,8 @@
         "emoji": "☀️",
         "name": "S",
         "label": "sole",
-        "subject": "Il sole"
+        "subject": "Il sole",
+        "kind": "thing"
       },
       "scene": {
         "biome": "beach"
@@ -837,7 +853,8 @@
         "emoji": "🏠",
         "name": "C",
         "label": "casa",
-        "subject": "La casa"
+        "subject": "La casa",
+        "kind": "thing"
       },
       "scene": {
         "biome": "orchard"
@@ -1075,7 +1092,8 @@
         "emoji": "🍌",
         "name": "B",
         "label": "banana",
-        "subject": "La banana"
+        "subject": "La banana",
+        "kind": "thing"
       },
       "scene": {
         "biome": "snow"
@@ -1303,7 +1321,8 @@
         "emoji": "🐱",
         "name": "G",
         "label": "gatto",
-        "subject": "Il gatto"
+        "subject": "Il gatto",
+        "kind": "animal"
       },
       "scene": {
         "biome": "jungle"
@@ -1541,7 +1560,8 @@
         "emoji": "🌸",
         "name": "F",
         "label": "fiore",
-        "subject": "Il fiore"
+        "subject": "Il fiore",
+        "kind": "thing"
       },
       "scene": {
         "biome": "sky"
@@ -1783,7 +1803,8 @@
         "emoji": "🦓",
         "name": "Z",
         "label": "zebra",
-        "subject": "La zebra"
+        "subject": "La zebra",
+        "kind": "animal"
       },
       "scene": {
         "biome": "meadow"
@@ -2013,7 +2034,8 @@
         "emoji": "🎲",
         "name": "D",
         "label": "dado",
-        "subject": "Il dado"
+        "subject": "Il dado",
+        "kind": "thing"
       },
       "scene": {
         "biome": "forest"
@@ -2272,69 +2294,79 @@
   ],
   "sentence": {
     "joiner": " ",
+    "naming": "Ecco {nom}.",
     "subjects": [
       {
         "id": "s1",
         "emoji": "👶",
         "text": "Io",
         "unlockedBy": "always",
-        "person": "1sg"
+        "person": "1sg",
+        "kind": "person"
       },
       {
         "id": "s2",
         "emoji": "👩",
         "text": "Mamma",
         "unlockedBy": "always",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "person"
       },
       {
         "id": "s3",
         "emoji": "👨",
         "text": "Papà",
         "unlockedBy": "always",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "person"
       },
       {
         "id": "s4",
         "emoji": "👵",
         "text": "Nonna",
         "unlockedBy": "always",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "person"
       },
       {
         "id": "s5",
         "emoji": "🐶",
-        "text": "Cucciolo",
+        "text": "Il cucciolo",
         "unlockedBy": "always",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "animal"
       },
       {
         "id": "topo",
         "emoji": "🐭",
-        "text": "Topo",
+        "text": "Il topo",
         "unlockedBy": "vocab",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "animal"
       },
       {
         "id": "cane",
         "emoji": "🐕",
-        "text": "Cane",
+        "text": "Il cane",
         "unlockedBy": "vocab",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "animal"
       },
       {
         "id": "gatto",
         "emoji": "🐱",
-        "text": "Gatto",
+        "text": "Il gatto",
         "unlockedBy": "vocab",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "animal"
       },
       {
         "id": "volpe",
         "emoji": "🦊",
-        "text": "Volpe",
+        "text": "La volpe",
         "unlockedBy": "vocab",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "animal"
       }
     ],
     "verbs": [
@@ -2346,7 +2378,18 @@
         "frame": "acc",
         "forms": {
           "3sg": "vuole"
-        }
+        },
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "food",
+          "drink",
+          "toy",
+          "vehicle",
+          "thing"
+        ]
       },
       {
         "id": "v2",
@@ -2356,7 +2399,14 @@
         "frame": "acc",
         "forms": {
           "3sg": "mangia"
-        }
+        },
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "food"
+        ]
       },
       {
         "id": "v3",
@@ -2366,7 +2416,14 @@
         "frame": "acc",
         "forms": {
           "3sg": "beve"
-        }
+        },
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "drink"
+        ]
       },
       {
         "id": "v4",
@@ -2376,7 +2433,14 @@
         "frame": "loc",
         "forms": {
           "3sg": "dorme"
-        }
+        },
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "place"
+        ]
       },
       {
         "id": "v5",
@@ -2386,7 +2450,14 @@
         "frame": "dir",
         "forms": {
           "3sg": "va"
-        }
+        },
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "place"
+        ]
       },
       {
         "id": "v6",
@@ -2396,7 +2467,15 @@
         "frame": "instr",
         "forms": {
           "3sg": "gioca"
-        }
+        },
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "toy",
+          "vehicle"
+        ]
       }
     ],
     "objects": [
@@ -2406,8 +2485,12 @@
         "text": "il latte",
         "unlockedBy": "always",
         "forms": {
-          "instr": "con il latte"
-        }
+          "nom": "il latte",
+          "acc": "il latte"
+        },
+        "tags": [
+          "drink"
+        ]
       },
       {
         "id": "mela",
@@ -2415,18 +2498,26 @@
         "text": "una mela",
         "unlockedBy": "vocab",
         "forms": {
-          "instr": "con una mela"
-        }
+          "nom": "una mela",
+          "acc": "una mela"
+        },
+        "tags": [
+          "food"
+        ]
       },
       {
         "id": "o3",
         "emoji": "🧸",
-        "text": "un gioco",
+        "text": "un giocattolo",
         "unlockedBy": "always",
         "forms": {
-          "instr": "con un gioco",
-          "loc": "con un gioco"
-        }
+          "nom": "un giocattolo",
+          "acc": "un giocattolo",
+          "instr": "con un giocattolo"
+        },
+        "tags": [
+          "toy"
+        ]
       },
       {
         "id": "o4",
@@ -2434,10 +2525,16 @@
         "text": "la macchina",
         "unlockedBy": "always",
         "forms": {
-          "dir": "in macchina",
+          "nom": "la macchina",
+          "acc": "la macchina",
+          "instr": "con la macchina",
           "loc": "in macchina",
-          "instr": "con la macchina"
-        }
+          "dir": "in macchina"
+        },
+        "tags": [
+          "vehicle",
+          "place"
+        ]
       },
       {
         "id": "o5",
@@ -2445,10 +2542,12 @@
         "text": "fuori",
         "unlockedBy": "always",
         "forms": {
-          "dir": "fuori",
           "loc": "fuori",
-          "instr": "fuori"
-        }
+          "dir": "fuori"
+        },
+        "tags": [
+          "place"
+        ]
       },
       {
         "id": "casa",
@@ -2456,10 +2555,13 @@
         "text": "casa",
         "unlockedBy": "vocab",
         "forms": {
-          "dir": "a casa",
+          "nom": "la casa",
           "loc": "a casa",
-          "instr": "a casa"
-        }
+          "dir": "a casa"
+        },
+        "tags": [
+          "place"
+        ]
       },
       {
         "id": "o7",
@@ -2467,10 +2569,13 @@
         "text": "il letto",
         "unlockedBy": "always",
         "forms": {
-          "dir": "a letto",
+          "nom": "il letto",
           "loc": "a letto",
-          "instr": "a letto"
-        }
+          "dir": "a letto"
+        },
+        "tags": [
+          "place"
+        ]
       },
       {
         "id": "o8",
@@ -2478,10 +2583,12 @@
         "text": "il vasino",
         "unlockedBy": "always",
         "forms": {
-          "dir": "sul vasino",
-          "loc": "sul vasino",
-          "instr": "sul vasino"
-        }
+          "nom": "il vasino",
+          "dir": "sul vasino"
+        },
+        "tags": [
+          "place"
+        ]
       },
       {
         "id": "sole",
@@ -2489,10 +2596,12 @@
         "text": "il sole",
         "unlockedBy": "vocab",
         "forms": {
-          "dir": "al sole",
-          "loc": "al sole",
-          "instr": "con il sole"
-        }
+          "nom": "il sole",
+          "loc": "al sole"
+        },
+        "tags": [
+          "place"
+        ]
       },
       {
         "id": "luna",
@@ -2500,10 +2609,12 @@
         "text": "la luna",
         "unlockedBy": "vocab",
         "forms": {
-          "dir": "sulla luna",
-          "loc": "sulla luna",
-          "instr": "con la luna"
-        }
+          "nom": "la luna",
+          "dir": "sulla luna"
+        },
+        "tags": [
+          "place"
+        ]
       },
       {
         "id": "torta",
@@ -2511,10 +2622,12 @@
         "text": "la torta",
         "unlockedBy": "vocab",
         "forms": {
-          "dir": "alla torta",
-          "loc": "con la torta",
-          "instr": "con la torta"
-        }
+          "nom": "la torta",
+          "acc": "la torta"
+        },
+        "tags": [
+          "food"
+        ]
       },
       {
         "id": "banana",
@@ -2522,10 +2635,12 @@
         "text": "una banana",
         "unlockedBy": "vocab",
         "forms": {
-          "dir": "alla banana",
-          "loc": "con una banana",
-          "instr": "con una banana"
-        }
+          "nom": "una banana",
+          "acc": "una banana"
+        },
+        "tags": [
+          "food"
+        ]
       },
       {
         "id": "gelato",
@@ -2533,10 +2648,12 @@
         "text": "un gelato",
         "unlockedBy": "vocab",
         "forms": {
-          "dir": "al gelato",
-          "loc": "con un gelato",
-          "instr": "con un gelato"
-        }
+          "nom": "un gelato",
+          "acc": "un gelato"
+        },
+        "tags": [
+          "food"
+        ]
       },
       {
         "id": "pizza",
@@ -2544,10 +2661,12 @@
         "text": "la pizza",
         "unlockedBy": "vocab",
         "forms": {
-          "dir": "alla pizza",
-          "loc": "con la pizza",
-          "instr": "con la pizza"
-        }
+          "nom": "la pizza",
+          "acc": "la pizza"
+        },
+        "tags": [
+          "food"
+        ]
       },
       {
         "id": "fragola",
@@ -2555,9 +2674,24 @@
         "text": "una fragola",
         "unlockedBy": "vocab",
         "forms": {
-          "dir": "alla fragola",
-          "loc": "con una fragola",
-          "instr": "con una fragola"
+          "nom": "una fragola",
+          "acc": "una fragola"
+        },
+        "tags": [
+          "food"
+        ]
+      },
+      {
+        "id": "o9",
+        "emoji": "💧",
+        "text": "l'acqua",
+        "unlockedBy": "always",
+        "tags": [
+          "drink"
+        ],
+        "forms": {
+          "nom": "l'acqua",
+          "acc": "l'acqua"
         }
       }
     ]

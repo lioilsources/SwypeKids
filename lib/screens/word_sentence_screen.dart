@@ -22,8 +22,15 @@ class WordSentenceScreen extends StatefulWidget {
   /// Dlaždice builderu pro slovo z batohu, nebo null (slovo ve větách není).
   static SentencePart? tileFor(ContentPack pack, String vocab) {
     if (vocab.isEmpty) return null;
-    for (final t in pack.sentence.all) {
-      if (t.id == vocab && t.unlockedBy == TileUnlock.vocab) return t;
+    final d = pack.sentence;
+    for (final t in d.all) {
+      if (t.id != vocab || t.unlockedBy != TileUnlock.vocab) continue;
+      // Předmět, se kterým žádné sloveso nedává smysl (nos), větu nemá.
+      if (d.objects.contains(t) &&
+          !d.verbs.any((v) => SentenceRules.objectFits(v, t))) {
+        return null;
+      }
+      return t;
     }
     return null;
   }
@@ -70,7 +77,14 @@ class _WordSentenceScreenState extends State<WordSentenceScreen> {
       for (final t in _category(slot))
         if (t.id != widget.word.id &&
             (t.unlockedBy == TileUnlock.always ||
-                progress.hasWord(widget.pack.id, t.id)))
+                progress.hasWord(widget.pack.id, t.id)) &&
+            // Jen to, co se hodí k už vybraným částem (SentenceRules).
+            SentenceRules.allows(
+              _data,
+              subject: slot == _Slot.subject ? t : _picked[_Slot.subject],
+              verb: slot == _Slot.verb ? t : _picked[_Slot.verb],
+              object: slot == _Slot.object ? t : _picked[_Slot.object],
+            ))
           t,
     ];
     final fromBag = available.where((t) => t.unlockedBy == TileUnlock.vocab);
@@ -82,6 +96,15 @@ class _WordSentenceScreenState extends State<WordSentenceScreen> {
     AudioService.instance.play(Sfx.tap);
     setState(() {
       _picked[slot] = part;
+      // Nové sloveso může uvolnit předmět, který k němu nepatří
+      // (předvyplněné slovo zůstává — slovesa se nabízejí jen k němu).
+      final v = _picked[_Slot.verb], o = _picked[_Slot.object];
+      if (_fixed != _Slot.object &&
+          v != null &&
+          o != null &&
+          !SentenceRules.objectFits(v, o)) {
+        _picked[_Slot.object] = null;
+      }
       _spoken = false;
     });
   }

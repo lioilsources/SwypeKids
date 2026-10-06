@@ -44,7 +44,8 @@
         "emoji": "🐭",
         "name": "M",
         "label": "myš",
-        "subject": "Myš"
+        "subject": "Myš",
+        "kind": "animal"
       },
       "scene": {
         "biome": "meadow"
@@ -90,7 +91,8 @@
         "emoji": "🐯",
         "name": "T",
         "label": "tygr",
-        "subject": "Tygr"
+        "subject": "Tygr",
+        "kind": "animal"
       },
       "scene": {
         "biome": "forest"
@@ -153,7 +155,8 @@
         "emoji": "🍌",
         "name": "B",
         "label": "banán",
-        "subject": "Banán"
+        "subject": "Banán",
+        "kind": "thing"
       },
       "scene": {
         "biome": "pond"
@@ -235,7 +238,8 @@
         "emoji": "👧",
         "name": "E",
         "label": "Ema",
-        "subject": "Ema"
+        "subject": "Ema",
+        "kind": "person"
       },
       "scene": {
         "biome": "garden"
@@ -325,7 +329,20 @@
         "emoji": "👁️",
         "name": "O",
         "label": "oko",
-        "subject": "Oko"
+        "subject": "Oko",
+        "kind": "thing",
+        "verb": {
+          "text": "se dívá na",
+          "emoji": "👀",
+          "frame": "acc",
+          "object": [
+            "food",
+            "drink",
+            "toy",
+            "vehicle",
+            "thing"
+          ]
+        }
       },
       "scene": {
         "biome": "farm"
@@ -403,7 +420,19 @@
         "emoji": "🚗",
         "name": "A",
         "label": "auto",
-        "subject": "Auto"
+        "subject": "Auto",
+        "kind": "thing",
+        "verb": {
+          "text": "veze",
+          "emoji": "🚗",
+          "frame": "acc",
+          "object": [
+            "food",
+            "drink",
+            "toy",
+            "thing"
+          ]
+        }
       },
       "scene": {
         "biome": "city"
@@ -526,7 +555,18 @@
         "emoji": "☀️",
         "name": "S",
         "label": "slunce",
-        "subject": "Slunce"
+        "subject": "Slunce",
+        "kind": "thing",
+        "verb": {
+          "text": "svítí na",
+          "emoji": "☀️",
+          "frame": "acc",
+          "object": [
+            "toy",
+            "vehicle",
+            "thing"
+          ]
+        }
       },
       "scene": {
         "biome": "mountains"
@@ -665,7 +705,8 @@
         "emoji": "🌈",
         "name": "I",
         "label": "duha",
-        "subject": "Duha"
+        "subject": "Duha",
+        "kind": "thing"
       },
       "scene": {
         "biome": "beach"
@@ -805,7 +846,8 @@
         "emoji": "🐺",
         "name": "V",
         "label": "vlk",
-        "subject": "Vlk"
+        "subject": "Vlk",
+        "kind": "animal"
       },
       "scene": {
         "biome": "orchard"
@@ -954,7 +996,8 @@
         "emoji": "🐟",
         "name": "R",
         "label": "ryba",
-        "subject": "Ryba"
+        "subject": "Ryba",
+        "kind": "animal"
       },
       "scene": {
         "biome": "snow"
@@ -1141,7 +1184,8 @@
         "emoji": "🦓",
         "name": "Z",
         "label": "zebra",
-        "subject": "Zebra"
+        "subject": "Zebra",
+        "kind": "animal"
       },
       "scene": {
         "biome": "jungle"
@@ -1333,7 +1377,8 @@
         "emoji": "🐱",
         "name": "K",
         "label": "kočka",
-        "subject": "Kočka"
+        "subject": "Kočka",
+        "kind": "animal"
       },
       "scene": {
         "biome": "sky"
@@ -1527,7 +1572,8 @@
         "emoji": "🦁",
         "name": "L",
         "label": "lev",
-        "subject": "Lev"
+        "subject": "Lev",
+        "kind": "animal"
       },
       "scene": {
         "biome": "meadow"
@@ -1829,7 +1875,8 @@
         "emoji": "🐍",
         "name": "H",
         "label": "had",
-        "subject": "Had"
+        "subject": "Had",
+        "kind": "animal"
       },
       "scene": {
         "biome": "forest"
@@ -2070,7 +2117,8 @@
         "emoji": "🪁",
         "name": "Y",
         "label": "drak",
-        "subject": "Drak"
+        "subject": "Drak",
+        "kind": "thing"
       },
       "scene": {
         "biome": "pond"
@@ -2321,7 +2369,8 @@
         "emoji": "⚽",
         "name": "F",
         "label": "fotbal",
-        "subject": "Fotbal"
+        "subject": "Fotbal",
+        "kind": "thing"
       },
       "scene": {
         "biome": "garden"
@@ -2619,7 +2668,16 @@
         "emoji": "👂",
         "name": "U",
         "label": "ucho",
-        "subject": "Ucho"
+        "subject": "Ucho",
+        "kind": "thing",
+        "verb": {
+          "text": "slyší",
+          "emoji": "👂",
+          "frame": "acc",
+          "object": [
+            "vehicle"
+          ]
+        }
       },
       "scene": {
         "biome": "farm"
@@ -2889,62 +2947,71 @@
   ],
   "sentence": {
     "joiner": " ",
+    "naming": "To je {nom}.",
     "subjects": [
       {
         "id": "s1",
         "emoji": "👶",
         "text": "Já",
         "unlockedBy": "always",
-        "person": "1sg"
+        "person": "1sg",
+        "kind": "person"
       },
       {
         "id": "mama",
         "emoji": "👩",
         "text": "Máma",
         "unlockedBy": "vocab",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "person"
       },
       {
         "id": "tata",
         "emoji": "👨",
         "text": "Táta",
         "unlockedBy": "vocab",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "person"
       },
       {
         "id": "baba",
         "emoji": "👵",
         "text": "Bába",
         "unlockedBy": "vocab",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "person"
       },
       {
         "id": "pes",
         "emoji": "🐶",
         "text": "Pes",
         "unlockedBy": "vocab",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "animal"
       },
       {
         "id": "sova",
         "emoji": "🦉",
         "text": "Sova",
         "unlockedBy": "vocab",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "animal"
       },
       {
         "id": "ryba",
         "emoji": "🐟",
         "text": "Ryba",
         "unlockedBy": "vocab",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "animal"
       },
       {
         "id": "mys",
         "emoji": "🐭",
         "text": "Myš",
         "unlockedBy": "vocab",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "animal"
       }
     ],
     "verbs": [
@@ -2956,7 +3023,18 @@
         "frame": "acc",
         "forms": {
           "3sg": "chce"
-        }
+        },
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "food",
+          "drink",
+          "toy",
+          "vehicle",
+          "thing"
+        ]
       },
       {
         "id": "v2",
@@ -2966,7 +3044,14 @@
         "frame": "acc",
         "forms": {
           "3sg": "jí"
-        }
+        },
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "food"
+        ]
       },
       {
         "id": "v3",
@@ -2976,7 +3061,14 @@
         "frame": "acc",
         "forms": {
           "3sg": "pije"
-        }
+        },
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "drink"
+        ]
       },
       {
         "id": "v4",
@@ -2986,7 +3078,14 @@
         "frame": "loc",
         "forms": {
           "3sg": "spí"
-        }
+        },
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "place"
+        ]
       },
       {
         "id": "v5",
@@ -2996,7 +3095,14 @@
         "frame": "dir",
         "forms": {
           "3sg": "jde"
-        }
+        },
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "place"
+        ]
       },
       {
         "id": "v6",
@@ -3007,7 +3113,15 @@
         "forms": {
           "1sg": "si hraju",
           "3sg": "si hraje"
-        }
+        },
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "toy",
+          "vehicle"
+        ]
       }
     ],
     "objects": [
@@ -3017,9 +3131,12 @@
         "text": "mléko",
         "unlockedBy": "vocab",
         "forms": {
-          "instr": "s mlékem",
-          "loc": "u mléka"
-        }
+          "nom": "mléko",
+          "acc": "mléko"
+        },
+        "tags": [
+          "drink"
+        ]
       },
       {
         "id": "o2",
@@ -3027,9 +3144,12 @@
         "text": "jablko",
         "unlockedBy": "always",
         "forms": {
-          "instr": "s jablkem",
-          "loc": "u jablka"
-        }
+          "nom": "jablko",
+          "acc": "jablko"
+        },
+        "tags": [
+          "food"
+        ]
       },
       {
         "id": "hracka",
@@ -3037,11 +3157,13 @@
         "text": "hračka",
         "unlockedBy": "vocab",
         "forms": {
+          "nom": "hračka",
           "acc": "hračku",
-          "instr": "s hračkou",
-          "loc": "u hračky",
-          "dir": "pro hračku"
-        }
+          "instr": "s hračkou"
+        },
+        "tags": [
+          "toy"
+        ]
       },
       {
         "id": "auto",
@@ -3049,10 +3171,16 @@
         "text": "auto",
         "unlockedBy": "vocab",
         "forms": {
+          "nom": "auto",
+          "acc": "auto",
           "instr": "s autem",
           "loc": "v autě",
           "dir": "do auta"
-        }
+        },
+        "tags": [
+          "vehicle",
+          "place"
+        ]
       },
       {
         "id": "o5",
@@ -3060,10 +3188,12 @@
         "text": "ven",
         "unlockedBy": "always",
         "forms": {
-          "acc": "venek",
           "loc": "venku",
-          "instr": "s venkem"
-        }
+          "dir": "ven"
+        },
+        "tags": [
+          "place"
+        ]
       },
       {
         "id": "o6",
@@ -3071,10 +3201,13 @@
         "text": "domů",
         "unlockedBy": "always",
         "forms": {
-          "acc": "dům",
+          "nom": "dům",
           "loc": "doma",
-          "instr": "s domem"
-        }
+          "dir": "domů"
+        },
+        "tags": [
+          "place"
+        ]
       },
       {
         "id": "o7",
@@ -3082,11 +3215,13 @@
         "text": "postýlka",
         "unlockedBy": "always",
         "forms": {
-          "acc": "postýlku",
-          "dir": "do postýlky",
+          "nom": "postýlka",
           "loc": "v postýlce",
-          "instr": "s postýlkou"
-        }
+          "dir": "do postýlky"
+        },
+        "tags": [
+          "place"
+        ]
       },
       {
         "id": "o8",
@@ -3094,10 +3229,12 @@
         "text": "nočník",
         "unlockedBy": "always",
         "forms": {
-          "dir": "na nočník",
-          "loc": "na nočníku",
-          "instr": "s nočníkem"
-        }
+          "nom": "nočník",
+          "dir": "na nočník"
+        },
+        "tags": [
+          "place"
+        ]
       },
       {
         "id": "kolo",
@@ -3105,10 +3242,13 @@
         "text": "kolo",
         "unlockedBy": "vocab",
         "forms": {
-          "instr": "s kolem",
-          "loc": "u kola",
-          "dir": "ke kolu"
-        }
+          "nom": "kolo",
+          "acc": "kolo",
+          "instr": "s kolem"
+        },
+        "tags": [
+          "vehicle"
+        ]
       },
       {
         "id": "les",
@@ -3116,10 +3256,13 @@
         "text": "les",
         "unlockedBy": "vocab",
         "forms": {
-          "dir": "do lesa",
+          "nom": "les",
           "loc": "v lese",
-          "instr": "v lese"
-        }
+          "dir": "do lesa"
+        },
+        "tags": [
+          "place"
+        ]
       },
       {
         "id": "nos",
@@ -3127,10 +3270,11 @@
         "text": "nos",
         "unlockedBy": "vocab",
         "forms": {
-          "instr": "s nosem",
-          "loc": "u nosu",
-          "dir": "k nosu"
-        }
+          "nom": "nos"
+        },
+        "tags": [
+          "body"
+        ]
       },
       {
         "id": "miska",
@@ -3138,11 +3282,12 @@
         "text": "miska",
         "unlockedBy": "vocab",
         "forms": {
-          "acc": "misku",
-          "instr": "s miskou",
-          "loc": "u misky",
-          "dir": "k misce"
-        }
+          "nom": "miska",
+          "acc": "misku"
+        },
+        "tags": [
+          "thing"
+        ]
       },
       {
         "id": "voda",
@@ -3150,11 +3295,12 @@
         "text": "voda",
         "unlockedBy": "vocab",
         "forms": {
-          "acc": "vodu",
-          "instr": "s vodou",
-          "loc": "u vody",
-          "dir": "k vodě"
-        }
+          "nom": "voda",
+          "acc": "vodu"
+        },
+        "tags": [
+          "drink"
+        ]
       },
       {
         "id": "vlak",
@@ -3162,10 +3308,16 @@
         "text": "vlak",
         "unlockedBy": "vocab",
         "forms": {
+          "nom": "vlak",
+          "acc": "vlak",
           "instr": "s vlakem",
           "loc": "ve vlaku",
           "dir": "do vlaku"
-        }
+        },
+        "tags": [
+          "vehicle",
+          "place"
+        ]
       },
       {
         "id": "fotbal",
@@ -3173,10 +3325,11 @@
         "text": "fotbal",
         "unlockedBy": "vocab",
         "forms": {
-          "instr": "s fotbalem",
-          "loc": "u fotbalu",
-          "dir": "na fotbal"
-        }
+          "nom": "fotbal"
+        },
+        "tags": [
+          "thing"
+        ]
       },
       {
         "id": "banan",
@@ -3184,10 +3337,12 @@
         "text": "banán",
         "unlockedBy": "vocab",
         "forms": {
-          "instr": "s banánem",
-          "loc": "u banánu",
-          "dir": "k banánu"
-        }
+          "nom": "banán",
+          "acc": "banán"
+        },
+        "tags": [
+          "food"
+        ]
       },
       {
         "id": "kniha",
@@ -3195,11 +3350,12 @@
         "text": "kniha",
         "unlockedBy": "vocab",
         "forms": {
-          "acc": "knihu",
-          "instr": "s knihou",
-          "loc": "u knihy",
-          "dir": "ke knize"
-        }
+          "nom": "kniha",
+          "acc": "knihu"
+        },
+        "tags": [
+          "thing"
+        ]
       },
       {
         "id": "skola",
@@ -3207,11 +3363,12 @@
         "text": "škola",
         "unlockedBy": "vocab",
         "forms": {
-          "acc": "školu",
-          "instr": "se školou",
-          "loc": "ve škole",
+          "nom": "škola",
           "dir": "do školy"
-        }
+        },
+        "tags": [
+          "place"
+        ]
       }
     ]
   }

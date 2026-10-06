@@ -53,17 +53,19 @@ void main() {
       // Slovo z batohu je v nabídce první
       await tester.tap(findText('Máma'));
       await tester.pump();
-      // Sloveso už v nabídce časované podle podmětu
-      await tester.tap(findText('jí'));
+      // Sloveso už v nabídce časované podle podmětu; „jí" se ke kolu
+      // nehodí, takže v nabídce není — kolo jde chtít nebo si s ním hrát.
+      expect(findText('jí'), findsNothing);
+      await tester.tap(findText('chce'));
       await tester.pump();
       expect(findText('kolo'), findsOneWidget); // předvyplněný předmět
       await tester.tap(find.byKey(const ValueKey('trumpet')));
       await tester.pump();
       await tester.tap(find.byKey(const ValueKey('done')));
     });
-    expect(result, 'Máma jí kolo');
+    expect(result, 'Máma chce kolo');
     // Hotová věta se uložila do Mé knížky
-    expect(ProgressService.instance.book(cs.id).single.text, 'Máma jí kolo');
+    expect(ProgressService.instance.book(cs.id).single.text, 'Máma chce kolo');
   });
 
   testWidgets('trumpeta čeká na celou větu, přeskočit jde vždy',

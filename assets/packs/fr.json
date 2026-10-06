@@ -44,7 +44,8 @@
         "emoji": "🏠",
         "name": "M",
         "label": "maison",
-        "subject": "La maison"
+        "subject": "La maison",
+        "kind": "thing"
       },
       "scene": {
         "biome": "meadow"
@@ -90,7 +91,8 @@
         "emoji": "🍎",
         "name": "P",
         "label": "pomme",
-        "subject": "La pomme"
+        "subject": "La pomme",
+        "kind": "thing"
       },
       "scene": {
         "biome": "forest"
@@ -172,7 +174,8 @@
         "emoji": "🦁",
         "name": "L",
         "label": "lion",
-        "subject": "Le lion"
+        "subject": "Le lion",
+        "kind": "animal"
       },
       "scene": {
         "biome": "pond"
@@ -258,7 +261,8 @@
         "emoji": "🐯",
         "name": "T",
         "label": "tigre",
-        "subject": "Le tigre"
+        "subject": "Le tigre",
+        "kind": "animal"
       },
       "scene": {
         "biome": "garden"
@@ -330,7 +334,8 @@
         "emoji": "🎵",
         "name": "N",
         "label": "note",
-        "subject": "La note"
+        "subject": "La note",
+        "kind": "thing"
       },
       "scene": {
         "biome": "farm"
@@ -366,7 +371,8 @@
         "emoji": "✈️",
         "name": "A",
         "label": "avion",
-        "subject": "L'avion"
+        "subject": "L'avion",
+        "kind": "thing"
       },
       "scene": {
         "biome": "city"
@@ -498,7 +504,8 @@
         "emoji": "🍊",
         "name": "O",
         "label": "orange",
-        "subject": "L'orange"
+        "subject": "L'orange",
+        "kind": "thing"
       },
       "scene": {
         "biome": "mountains"
@@ -621,7 +628,8 @@
         "emoji": "🐘",
         "name": "E",
         "label": "éléphant",
-        "subject": "L'éléphant"
+        "subject": "L'éléphant",
+        "kind": "animal"
       },
       "scene": {
         "biome": "beach"
@@ -819,7 +827,8 @@
         "emoji": "🦊",
         "name": "R",
         "label": "renard",
-        "subject": "Le renard"
+        "subject": "Le renard",
+        "kind": "animal"
       },
       "scene": {
         "biome": "orchard"
@@ -1032,7 +1041,8 @@
         "emoji": "🍌",
         "name": "B",
         "label": "banane",
-        "subject": "La banane"
+        "subject": "La banane",
+        "kind": "thing"
       },
       "scene": {
         "biome": "snow"
@@ -1262,7 +1272,8 @@
         "emoji": "🐱",
         "name": "C",
         "label": "chat",
-        "subject": "Le chat"
+        "subject": "Le chat",
+        "kind": "animal"
       },
       "scene": {
         "biome": "jungle"
@@ -1491,7 +1502,8 @@
         "emoji": "🌸",
         "name": "F",
         "label": "fleur",
-        "subject": "La fleur"
+        "subject": "La fleur",
+        "kind": "thing"
       },
       "scene": {
         "biome": "sky"
@@ -1739,7 +1751,8 @@
         "emoji": "🎂",
         "name": "G",
         "label": "girafe",
-        "subject": "La girafe"
+        "subject": "La girafe",
+        "kind": "thing"
       },
       "scene": {
         "biome": "meadow"
@@ -1983,7 +1996,8 @@
         "emoji": "🐬",
         "name": "D",
         "label": "dauphin",
-        "subject": "Le dauphin"
+        "subject": "Le dauphin",
+        "kind": "animal"
       },
       "scene": {
         "biome": "forest"
@@ -2256,83 +2270,95 @@
   ],
   "sentence": {
     "joiner": " ",
+    "naming": "C'est {nom}.",
     "subjects": [
       {
         "id": "s1",
         "emoji": "👶",
         "text": "Je",
         "unlockedBy": "always",
-        "person": "1sg"
+        "person": "1sg",
+        "kind": "person"
       },
       {
         "id": "s2",
         "emoji": "👩",
         "text": "Maman",
         "unlockedBy": "always",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "person"
       },
       {
         "id": "s3",
         "emoji": "👨",
         "text": "Papa",
         "unlockedBy": "always",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "person"
       },
       {
         "id": "s4",
         "emoji": "👵",
         "text": "Mamie",
         "unlockedBy": "always",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "person"
       },
       {
         "id": "s5",
         "emoji": "🐶",
         "text": "Toutou",
         "unlockedBy": "always",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "animal"
       },
       {
         "id": "poule",
         "emoji": "🐔",
         "text": "La poule",
         "unlockedBy": "vocab",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "animal"
       },
       {
         "id": "tortue",
         "emoji": "🐢",
         "text": "La tortue",
         "unlockedBy": "vocab",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "animal"
       },
       {
         "id": "canard",
         "emoji": "🦆",
         "text": "Le canard",
         "unlockedBy": "vocab",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "animal"
       },
       {
         "id": "lapin",
         "emoji": "🐰",
         "text": "Le lapin",
         "unlockedBy": "vocab",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "animal"
       },
       {
         "id": "vache",
         "emoji": "🐮",
         "text": "La vache",
         "unlockedBy": "vocab",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "animal"
       },
       {
         "id": "zebre",
         "emoji": "🦓",
         "text": "Le zèbre",
         "unlockedBy": "vocab",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "animal"
       }
     ],
     "verbs": [
@@ -2344,7 +2370,18 @@
         "frame": "acc",
         "forms": {
           "3sg": "veut"
-        }
+        },
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "food",
+          "drink",
+          "toy",
+          "vehicle",
+          "thing"
+        ]
       },
       {
         "id": "v2",
@@ -2354,7 +2391,14 @@
         "frame": "acc",
         "forms": {
           "3sg": "mange"
-        }
+        },
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "food"
+        ]
       },
       {
         "id": "v3",
@@ -2364,7 +2408,14 @@
         "frame": "acc",
         "forms": {
           "3sg": "boit"
-        }
+        },
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "drink"
+        ]
       },
       {
         "id": "v4",
@@ -2374,7 +2425,14 @@
         "frame": "loc",
         "forms": {
           "3sg": "dort"
-        }
+        },
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "place"
+        ]
       },
       {
         "id": "v5",
@@ -2384,7 +2442,14 @@
         "frame": "dir",
         "forms": {
           "3sg": "va"
-        }
+        },
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "place"
+        ]
       },
       {
         "id": "v6",
@@ -2394,7 +2459,15 @@
         "frame": "instr",
         "forms": {
           "3sg": "joue"
-        }
+        },
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "toy",
+          "vehicle"
+        ]
       }
     ],
     "objects": [
@@ -2404,8 +2477,12 @@
         "text": "du lait",
         "unlockedBy": "always",
         "forms": {
-          "instr": "avec du lait"
-        }
+          "nom": "du lait",
+          "acc": "du lait"
+        },
+        "tags": [
+          "drink"
+        ]
       },
       {
         "id": "pomme",
@@ -2413,8 +2490,12 @@
         "text": "une pomme",
         "unlockedBy": "vocab",
         "forms": {
-          "instr": "avec une pomme"
-        }
+          "nom": "une pomme",
+          "acc": "une pomme"
+        },
+        "tags": [
+          "food"
+        ]
       },
       {
         "id": "o3",
@@ -2422,9 +2503,13 @@
         "text": "un jouet",
         "unlockedBy": "always",
         "forms": {
-          "instr": "avec un jouet",
-          "loc": "avec un jouet"
-        }
+          "nom": "un jouet",
+          "acc": "un jouet",
+          "instr": "avec un jouet"
+        },
+        "tags": [
+          "toy"
+        ]
       },
       {
         "id": "o4",
@@ -2432,10 +2517,16 @@
         "text": "la voiture",
         "unlockedBy": "always",
         "forms": {
-          "dir": "en voiture",
+          "nom": "la voiture",
+          "acc": "la voiture",
+          "instr": "avec la voiture",
           "loc": "dans la voiture",
-          "instr": "avec la voiture"
-        }
+          "dir": "en voiture"
+        },
+        "tags": [
+          "vehicle",
+          "place"
+        ]
       },
       {
         "id": "o5",
@@ -2443,10 +2534,12 @@
         "text": "dehors",
         "unlockedBy": "always",
         "forms": {
-          "dir": "dehors",
           "loc": "dehors",
-          "instr": "dehors"
-        }
+          "dir": "dehors"
+        },
+        "tags": [
+          "place"
+        ]
       },
       {
         "id": "maison",
@@ -2454,10 +2547,13 @@
         "text": "à la maison",
         "unlockedBy": "vocab",
         "forms": {
-          "dir": "à la maison",
+          "nom": "la maison",
           "loc": "à la maison",
-          "instr": "à la maison"
-        }
+          "dir": "à la maison"
+        },
+        "tags": [
+          "place"
+        ]
       },
       {
         "id": "o7",
@@ -2465,10 +2561,13 @@
         "text": "le lit",
         "unlockedBy": "always",
         "forms": {
-          "dir": "au lit",
+          "nom": "le lit",
           "loc": "au lit",
-          "instr": "au lit"
-        }
+          "dir": "au lit"
+        },
+        "tags": [
+          "place"
+        ]
       },
       {
         "id": "o8",
@@ -2476,10 +2575,12 @@
         "text": "le pot",
         "unlockedBy": "always",
         "forms": {
-          "dir": "au pot",
-          "loc": "au pot",
-          "instr": "au pot"
-        }
+          "nom": "le pot",
+          "dir": "au pot"
+        },
+        "tags": [
+          "place"
+        ]
       },
       {
         "id": "lune",
@@ -2487,10 +2588,12 @@
         "text": "la lune",
         "unlockedBy": "vocab",
         "forms": {
-          "dir": "sur la lune",
-          "loc": "sur la lune",
-          "instr": "avec la lune"
-        }
+          "nom": "la lune",
+          "dir": "sur la lune"
+        },
+        "tags": [
+          "place"
+        ]
       },
       {
         "id": "soupe",
@@ -2498,10 +2601,12 @@
         "text": "de la soupe",
         "unlockedBy": "vocab",
         "forms": {
-          "dir": "à la soupe",
-          "loc": "près de la soupe",
-          "instr": "avec de la soupe"
-        }
+          "nom": "de la soupe",
+          "acc": "de la soupe"
+        },
+        "tags": [
+          "food"
+        ]
       },
       {
         "id": "carotte",
@@ -2509,10 +2614,12 @@
         "text": "une carotte",
         "unlockedBy": "vocab",
         "forms": {
-          "dir": "à la carotte",
-          "loc": "près de la carotte",
-          "instr": "avec une carotte"
-        }
+          "nom": "une carotte",
+          "acc": "une carotte"
+        },
+        "tags": [
+          "food"
+        ]
       },
       {
         "id": "banane",
@@ -2520,10 +2627,12 @@
         "text": "une banane",
         "unlockedBy": "vocab",
         "forms": {
-          "dir": "à la banane",
-          "loc": "près de la banane",
-          "instr": "avec une banane"
-        }
+          "nom": "une banane",
+          "acc": "une banane"
+        },
+        "tags": [
+          "food"
+        ]
       },
       {
         "id": "ballon",
@@ -2531,10 +2640,13 @@
         "text": "un ballon",
         "unlockedBy": "vocab",
         "forms": {
-          "dir": "au ballon",
-          "loc": "près du ballon",
+          "nom": "un ballon",
+          "acc": "un ballon",
           "instr": "avec un ballon"
-        }
+        },
+        "tags": [
+          "toy"
+        ]
       },
       {
         "id": "fraise",
@@ -2542,9 +2654,24 @@
         "text": "une fraise",
         "unlockedBy": "vocab",
         "forms": {
-          "dir": "à la fraise",
-          "loc": "près de la fraise",
-          "instr": "avec une fraise"
+          "nom": "une fraise",
+          "acc": "une fraise"
+        },
+        "tags": [
+          "food"
+        ]
+      },
+      {
+        "id": "o9",
+        "emoji": "💧",
+        "text": "de l'eau",
+        "unlockedBy": "always",
+        "tags": [
+          "drink"
+        ],
+        "forms": {
+          "nom": "de l'eau",
+          "acc": "de l'eau"
         }
       }
     ]

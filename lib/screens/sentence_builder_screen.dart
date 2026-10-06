@@ -86,8 +86,14 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
     final pack = _pack;
     return switch (p.unlockedBy) {
       TileUnlock.always => true,
-      TileUnlock.vocab =>
-        pack != null && ProgressService.instance.hasWord(pack.id, p.id),
+      // Slovo z batohu; podmět-zvířátko odemkne i jeho nálepka ze
+      // Zvěřince (jedna dlaždice pro obojí, ne dvě stejné).
+      TileUnlock.vocab => pack != null &&
+          (ProgressService.instance.hasWord(pack.id, p.id) ||
+              (p.kind != null &&
+                  ProgressService.instance
+                      .collectibles(pack.id)
+                      .contains(p.emoji))),
       TileUnlock.sticker => pack != null &&
           ProgressService.instance.collectibles(pack.id).contains(p.emoji),
     };
@@ -98,15 +104,32 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
       _pack != null &&
       ProgressService.instance.isNewWord(_pack!.id, p.id);
 
-  void _pick(SentencePart p, void Function() select) {
-    if (!_isUnlocked(p)) {
-      // Siluetka: slovo se teprve naučí ve hře.
+  /// Hodí se dlaždice k tomu, co už je vybrané? (`SentenceRules`: kdo co
+  /// může dělat s čím + výslovný tvar.) Slovesa se neomezují předmětem —
+  /// nové sloveso nepasující předmět samo uvolní.
+  bool _fitsSubject(SentencePart p) =>
+      _verb == null || SentenceRules.subjectFits(p, _verb!);
+  bool _fitsVerb(SentencePart p) =>
+      _subject == null || SentenceRules.subjectFits(_subject!, p);
+  bool _fitsObject(SentencePart p) =>
+      _verb == null || SentenceRules.objectFits(_verb!, p);
+
+  void _pick(SentencePart p, void Function() select,
+      {bool fits = true}) {
+    if (!_isUnlocked(p) || !fits) {
+      // Siluetka (slovo se teprve naučí), nebo dlaždice, která se ke
+      // zbytku věty nehodí: jen cvaknutí, žádná hláška.
       HapticFeedback.selectionClick();
       return;
     }
     AudioService.instance.play(Sfx.tap);
     setState(() {
       select();
+      // Po změně slovesa uvolnit předmět, který k němu nepatří.
+      if (_object != null && _verb != null &&
+          !SentenceRules.objectFits(_verb!, _object!)) {
+        _object = null;
+      }
       _saved = false;
     });
   }
@@ -284,8 +307,10 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
                       selected: _subject,
                       accent: const Color(0xFFFFD200),
                       isUnlocked: _isUnlocked,
+                      fits: _fitsSubject,
                       isNew: _isNew,
-                      onPick: (p) => _pick(p, () => _subject = p),
+                      onPick: (p) =>
+                          _pick(p, () => _subject = p, fits: _fitsSubject(p)),
                       onPlay: (p) {
                         final lesson = _lessonFor(p);
                         return lesson == null ? null : () => _playWord(lesson);
@@ -299,8 +324,10 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
                       accent: const Color(0xFF7BFFB2),
                       contextKey: _subject?.person,
                       isUnlocked: _isUnlocked,
+                      fits: _fitsVerb,
                       isNew: _isNew,
-                      onPick: (p) => _pick(p, () => _verb = p),
+                      onPick: (p) =>
+                          _pick(p, () => _verb = p, fits: _fitsVerb(p)),
                       onPlay: (p) {
                         final lesson = _lessonFor(p);
                         return lesson == null ? null : () => _playWord(lesson);
@@ -314,8 +341,10 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
                       accent: const Color(0xFFA0C4FF),
                       contextKey: _verb?.frame,
                       isUnlocked: _isUnlocked,
+                      fits: _fitsObject,
                       isNew: _isNew,
-                      onPick: (p) => _pick(p, () => _object = p),
+                      onPick: (p) =>
+                          _pick(p, () => _object = p, fits: _fitsObject(p)),
                       onPlay: (p) {
                         final lesson = _lessonFor(p);
                         return lesson == null ? null : () => _playWord(lesson);
@@ -385,6 +414,9 @@ class _CategoryColumn extends StatelessWidget {
   final Color accent;
   final String? contextKey;
   final bool Function(SentencePart) isUnlocked;
+
+  /// Hodí se dlaždice k už vybraným částem věty? Jinak zešedne.
+  final bool Function(SentencePart) fits;
   final bool Function(SentencePart) isNew;
   final ValueChanged<SentencePart> onPick;
   final VoidCallback? Function(SentencePart) onPlay;
@@ -395,6 +427,7 @@ class _CategoryColumn extends StatelessWidget {
     required this.selected,
     required this.accent,
     required this.isUnlocked,
+    required this.fits,
     required this.isNew,
     required this.onPick,
     required this.onPlay,
@@ -427,16 +460,22 @@ class _CategoryColumn extends StatelessWidget {
             separatorBuilder: (_, __) => const SizedBox(height: 8),
             itemBuilder: (_, i) {
               final p = items[i];
-              return _PartTile(
+              final ok = fits(p) || !isUnlocked(p);
+              return AnimatedOpacity(
+                key: ValueKey('tile-${p.id}${ok ? '' : '-off'}'),
+                duration: const Duration(milliseconds: 200),
+                opacity: ok ? 1 : 0.3,
+                child: _PartTile(
                 part: p,
                 isSelected: identical(p, selected),
                 locked: !isUnlocked(p),
                 isNew: isNew(p),
                 onPlay: onPlay(p),
                 accent: accent,
-                contextKey: contextKey,
+                // Nehodící se dlaždice ukazuje svůj základní nápis.
+                contextKey: ok ? contextKey : null,
                 onTap: () => onPick(p),
-              );
+              ));
             },
           ),
         ),

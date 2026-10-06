@@ -44,7 +44,8 @@
         "emoji": "🐴",
         "name": "M",
         "label": "马",
-        "subject": "马"
+        "subject": "马",
+        "kind": "animal"
       },
       "scene": {
         "biome": "meadow"
@@ -92,7 +93,8 @@
         "emoji": "👨",
         "name": "B",
         "label": "爸爸",
-        "subject": "爸爸"
+        "subject": "爸爸",
+        "kind": "person"
       },
       "scene": {
         "biome": "forest"
@@ -158,7 +160,8 @@
         "emoji": "1️⃣",
         "name": "I",
         "label": "一",
-        "subject": "一"
+        "subject": "一",
+        "kind": "thing"
       },
       "scene": {
         "biome": "pond"
@@ -227,7 +230,8 @@
         "emoji": "🍎",
         "name": "P",
         "label": "苹果",
-        "subject": "苹果"
+        "subject": "苹果",
+        "kind": "thing"
       },
       "scene": {
         "biome": "garden"
@@ -299,7 +303,8 @@
         "emoji": "🐮",
         "name": "N",
         "label": "牛",
-        "subject": "牛"
+        "subject": "牛",
+        "kind": "animal"
       },
       "scene": {
         "biome": "farm"
@@ -357,7 +362,8 @@
         "emoji": "❤️",
         "name": "A",
         "label": "爱",
-        "subject": "爱"
+        "subject": "爱",
+        "kind": "thing"
       },
       "scene": {
         "biome": "city"
@@ -495,7 +501,8 @@
         "emoji": "🌸",
         "name": "H",
         "label": "花",
-        "subject": "花"
+        "subject": "花",
+        "kind": "thing"
       },
       "scene": {
         "biome": "mountains"
@@ -645,7 +652,8 @@
         "emoji": "🐘",
         "name": "D",
         "label": "大象",
-        "subject": "大象"
+        "subject": "大象",
+        "kind": "animal"
       },
       "scene": {
         "biome": "beach"
@@ -827,7 +835,8 @@
         "emoji": "🐶",
         "name": "G",
         "label": "狗",
-        "subject": "狗"
+        "subject": "狗",
+        "kind": "animal"
       },
       "scene": {
         "biome": "orchard"
@@ -1050,7 +1059,8 @@
         "emoji": "🐯",
         "name": "L",
         "label": "老虎",
-        "subject": "老虎"
+        "subject": "老虎",
+        "kind": "animal"
       },
       "scene": {
         "biome": "snow"
@@ -1287,7 +1297,8 @@
         "emoji": "🌙",
         "name": "Y",
         "label": "月亮",
-        "subject": "月亮"
+        "subject": "月亮",
+        "kind": "thing"
       },
       "scene": {
         "biome": "jungle"
@@ -1492,76 +1503,82 @@
   ],
   "sentence": {
     "joiner": "",
+    "naming": "这是{nom}。",
     "subjects": [
       {
         "id": "s1",
         "emoji": "👶",
         "text": "我",
         "ipa": "wǒ",
-        "unlockedBy": "always"
+        "unlockedBy": "always",
+        "kind": "person"
       },
       {
         "id": "s2",
         "emoji": "👩",
         "text": "妈妈",
         "ipa": "māma",
-        "unlockedBy": "always"
+        "unlockedBy": "always",
+        "kind": "person"
       },
       {
         "id": "s3",
         "emoji": "👨",
         "text": "爸爸",
         "ipa": "bàba",
-        "unlockedBy": "always"
+        "unlockedBy": "always",
+        "kind": "person"
       },
       {
         "id": "s4",
         "emoji": "👵",
         "text": "奶奶",
         "ipa": "nǎinai",
-        "unlockedBy": "always"
+        "unlockedBy": "always",
+        "kind": "person"
       },
       {
         "id": "gou",
         "emoji": "🐶",
         "text": "狗狗",
         "ipa": "gǒugou",
-        "unlockedBy": "vocab"
+        "unlockedBy": "vocab",
+        "kind": "animal"
       },
       {
         "id": "didi",
         "emoji": "👦",
         "text": "弟弟",
         "unlockedBy": "vocab",
-        "person": "3sg"
+        "kind": "person"
       },
       {
         "id": "niu",
         "emoji": "🐮",
         "text": "牛",
         "unlockedBy": "vocab",
-        "person": "3sg"
+        "kind": "animal"
       },
       {
         "id": "gege",
         "emoji": "👦",
         "text": "哥哥",
         "unlockedBy": "vocab",
-        "person": "3sg"
+        "kind": "person"
       },
       {
         "id": "laohu",
         "emoji": "🐯",
         "text": "老虎",
         "unlockedBy": "vocab",
-        "person": "3sg"
+        "kind": "animal"
       },
       {
         "id": "yeye",
         "emoji": "👴",
         "text": "爷爷",
         "unlockedBy": "vocab",
-        "person": "3sg"
+        "kind": "person"
       }
     ],
     "verbs": [
@@ -1570,42 +1587,95 @@
         "emoji": "✋",
         "text": "要",
         "ipa": "yào",
-        "unlockedBy": "always"
+        "unlockedBy": "always",
+        "frame": "acc",
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "food",
+          "drink",
+          "toy",
+          "vehicle",
+          "thing"
+        ]
       },
       {
         "id": "v2",
         "emoji": "🍽️",
         "text": "吃",
         "ipa": "chī",
-        "unlockedBy": "always"
+        "unlockedBy": "always",
+        "frame": "acc",
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "food"
+        ]
       },
       {
         "id": "v3",
         "emoji": "🥛",
         "text": "喝",
         "ipa": "hē",
-        "unlockedBy": "always"
+        "unlockedBy": "always",
+        "frame": "acc",
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "drink"
+        ]
       },
       {
         "id": "v4",
         "emoji": "💤",
         "text": "睡",
         "ipa": "shuì",
-        "unlockedBy": "always"
+        "unlockedBy": "always",
+        "frame": "loc",
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "place"
+        ]
       },
       {
         "id": "v5",
         "emoji": "🚶",
         "text": "去",
         "ipa": "qù",
-        "unlockedBy": "always"
+        "unlockedBy": "always",
+        "frame": "dir",
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "place"
+        ]
       },
       {
         "id": "v6",
         "emoji": "🎲",
         "text": "玩",
         "ipa": "wán",
-        "unlockedBy": "always"
+        "unlockedBy": "always",
+        "frame": "instr",
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "toy",
+          "vehicle"
+        ]
       }
     ],
     "objects": [
@@ -1614,80 +1684,180 @@
         "emoji": "🥛",
         "text": "牛奶",
         "ipa": "nǎi",
-        "unlockedBy": "vocab"
+        "unlockedBy": "vocab",
+        "tags": [
+          "drink"
+        ],
+        "forms": {
+          "nom": "牛奶",
+          "acc": "牛奶"
+        }
       },
       {
         "id": "pingguo",
         "emoji": "🍎",
         "text": "苹果",
         "ipa": "píngguǒ",
-        "unlockedBy": "vocab"
+        "unlockedBy": "vocab",
+        "tags": [
+          "food"
+        ],
+        "forms": {
+          "nom": "苹果",
+          "acc": "苹果"
+        }
       },
       {
         "id": "o3",
         "emoji": "🧸",
         "text": "玩具",
         "ipa": "wánjù",
-        "unlockedBy": "always"
+        "unlockedBy": "always",
+        "tags": [
+          "toy"
+        ],
+        "forms": {
+          "nom": "玩具",
+          "acc": "玩具",
+          "instr": "玩具"
+        }
       },
       {
         "id": "o4",
         "emoji": "🚗",
         "text": "车车",
         "ipa": "chēche",
-        "unlockedBy": "always"
+        "unlockedBy": "always",
+        "tags": [
+          "vehicle",
+          "place"
+        ],
+        "forms": {
+          "nom": "车车",
+          "acc": "车车",
+          "instr": "车车",
+          "loc": "在车车里"
+        }
       },
       {
         "id": "o5",
         "emoji": "🚪",
         "text": "外面",
         "ipa": "wàimiàn",
-        "unlockedBy": "always"
+        "unlockedBy": "always",
+        "tags": [
+          "place"
+        ],
+        "forms": {
+          "loc": "在外面",
+          "dir": "外面"
+        }
       },
       {
         "id": "o6",
         "emoji": "🏠",
         "text": "家",
         "ipa": "jiā",
-        "unlockedBy": "always"
+        "unlockedBy": "always",
+        "tags": [
+          "place"
+        ],
+        "forms": {
+          "nom": "家",
+          "loc": "在家里"
+        }
       },
       {
         "id": "o7",
         "emoji": "🛏️",
         "text": "床",
         "ipa": "chuáng",
-        "unlockedBy": "always"
+        "unlockedBy": "always",
+        "tags": [
+          "place"
+        ],
+        "forms": {
+          "nom": "床",
+          "loc": "在床上"
+        }
       },
       {
         "id": "o8",
         "emoji": "🚽",
         "text": "上厕所",
         "ipa": "shàng cèsuǒ",
-        "unlockedBy": "always"
+        "unlockedBy": "always",
+        "tags": [
+          "place"
+        ],
+        "forms": {
+          "dir": "上厕所"
+        }
       },
       {
         "id": "tang",
         "emoji": "🍬",
         "text": "糖",
-        "unlockedBy": "vocab"
+        "unlockedBy": "vocab",
+        "tags": [
+          "food"
+        ],
+        "forms": {
+          "nom": "糖",
+          "acc": "糖"
+        }
       },
       {
         "id": "dangao",
         "emoji": "🎂",
         "text": "蛋糕",
-        "unlockedBy": "vocab"
+        "unlockedBy": "vocab",
+        "tags": [
+          "food"
+        ],
+        "forms": {
+          "nom": "蛋糕",
+          "acc": "蛋糕"
+        }
       },
       {
         "id": "mianbao",
         "emoji": "🍞",
         "text": "面包",
-        "unlockedBy": "vocab"
+        "unlockedBy": "vocab",
+        "tags": [
+          "food"
+        ],
+        "forms": {
+          "nom": "面包",
+          "acc": "面包"
+        }
       },
       {
         "id": "putao",
         "emoji": "🍇",
         "text": "葡萄",
-        "unlockedBy": "vocab"
+        "unlockedBy": "vocab",
+        "tags": [
+          "food"
+        ],
+        "forms": {
+          "nom": "葡萄",
+          "acc": "葡萄"
+        }
+      },
+      {
+        "id": "o9",
+        "emoji": "💧",
+        "text": "水",
+        "unlockedBy": "always",
+        "tags": [
+          "drink"
+        ],
+        "forms": {
+          "nom": "水",
+          "acc": "水"
+        }
       }
     ]
   }

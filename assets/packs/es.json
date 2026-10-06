@@ -44,7 +44,8 @@
         "emoji": "🐵",
         "name": "M",
         "label": "mono",
-        "subject": "El mono"
+        "subject": "El mono",
+        "kind": "animal"
       },
       "scene": {
         "biome": "meadow"
@@ -90,7 +91,8 @@
         "emoji": "🏝️",
         "name": "I",
         "label": "isla",
-        "subject": "La isla"
+        "subject": "La isla",
+        "kind": "thing"
       },
       "scene": {
         "biome": "forest"
@@ -153,7 +155,8 @@
         "emoji": "🐶",
         "name": "P",
         "label": "perro",
-        "subject": "El perro"
+        "subject": "El perro",
+        "kind": "animal"
       },
       "scene": {
         "biome": "pond"
@@ -219,7 +222,8 @@
         "emoji": "🐍",
         "name": "S",
         "label": "serpiente",
-        "subject": "La serpiente"
+        "subject": "La serpiente",
+        "kind": "animal"
       },
       "scene": {
         "biome": "garden"
@@ -309,7 +313,8 @@
         "emoji": "🦁",
         "name": "L",
         "label": "león",
-        "subject": "El león"
+        "subject": "El león",
+        "kind": "animal"
       },
       "scene": {
         "biome": "farm"
@@ -345,7 +350,8 @@
         "emoji": "🌳",
         "name": "A",
         "label": "árbol",
-        "subject": "El árbol"
+        "subject": "El árbol",
+        "kind": "thing"
       },
       "scene": {
         "biome": "city"
@@ -496,7 +502,8 @@
         "emoji": "🐘",
         "name": "E",
         "label": "elefante",
-        "subject": "El elefante"
+        "subject": "El elefante",
+        "kind": "animal"
       },
       "scene": {
         "biome": "mountains"
@@ -624,7 +631,8 @@
         "emoji": "🍇",
         "name": "U",
         "label": "uva",
-        "subject": "La uva"
+        "subject": "La uva",
+        "kind": "thing"
       },
       "scene": {
         "biome": "beach"
@@ -829,7 +837,8 @@
         "emoji": "🏠",
         "name": "C",
         "label": "casa",
-        "subject": "La casa"
+        "subject": "La casa",
+        "kind": "thing"
       },
       "scene": {
         "biome": "orchard"
@@ -1076,7 +1085,8 @@
         "emoji": "🐳",
         "name": "B",
         "label": "ballena",
-        "subject": "La ballena"
+        "subject": "La ballena",
+        "kind": "animal"
       },
       "scene": {
         "biome": "snow"
@@ -1340,7 +1350,8 @@
         "emoji": "🐻",
         "name": "O",
         "label": "oso",
-        "subject": "El oso"
+        "subject": "El oso",
+        "kind": "animal"
       },
       "scene": {
         "biome": "jungle"
@@ -1576,7 +1587,8 @@
         "emoji": "🐮",
         "name": "V",
         "label": "vaca",
-        "subject": "La vaca"
+        "subject": "La vaca",
+        "kind": "animal"
       },
       "scene": {
         "biome": "sky"
@@ -1817,7 +1829,8 @@
         "emoji": "🐱",
         "name": "G",
         "label": "gato",
-        "subject": "El gato"
+        "subject": "El gato",
+        "kind": "animal"
       },
       "scene": {
         "biome": "meadow"
@@ -2061,7 +2074,8 @@
         "emoji": "🦕",
         "name": "D",
         "label": "dinosaurio",
-        "subject": "El dinosaurio"
+        "subject": "El dinosaurio",
+        "kind": "animal"
       },
       "scene": {
         "biome": "forest"
@@ -2334,76 +2348,87 @@
   ],
   "sentence": {
     "joiner": " ",
+    "naming": "Esto es {nom}.",
     "subjects": [
       {
         "id": "s1",
         "emoji": "👶",
         "text": "Yo",
         "unlockedBy": "always",
-        "person": "1sg"
+        "person": "1sg",
+        "kind": "person"
       },
       {
         "id": "s2",
         "emoji": "👩",
         "text": "Mamá",
         "unlockedBy": "always",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "person"
       },
       {
         "id": "s3",
         "emoji": "👨",
         "text": "Papá",
         "unlockedBy": "always",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "person"
       },
       {
         "id": "s4",
         "emoji": "👵",
         "text": "Abuela",
         "unlockedBy": "always",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "person"
       },
       {
         "id": "s5",
         "emoji": "🐶",
-        "text": "Perrito",
+        "text": "El perrito",
         "unlockedBy": "always",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "animal"
       },
       {
         "id": "pato",
         "emoji": "🦆",
-        "text": "Pato",
+        "text": "El pato",
         "unlockedBy": "vocab",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "animal"
       },
       {
         "id": "raton",
         "emoji": "🐭",
-        "text": "Ratón",
+        "text": "El ratón",
         "unlockedBy": "vocab",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "animal"
       },
       {
         "id": "gato",
         "emoji": "🐱",
-        "text": "Gato",
+        "text": "El gato",
         "unlockedBy": "vocab",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "animal"
       },
       {
         "id": "tortuga",
         "emoji": "🐢",
-        "text": "Tortuga",
+        "text": "La tortuga",
         "unlockedBy": "vocab",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "animal"
       },
       {
         "id": "vaca",
         "emoji": "🐮",
-        "text": "Vaca",
+        "text": "La vaca",
         "unlockedBy": "vocab",
-        "person": "3sg"
+        "person": "3sg",
+        "kind": "animal"
       }
     ],
     "verbs": [
@@ -2415,7 +2440,18 @@
         "frame": "acc",
         "forms": {
           "3sg": "quiere"
-        }
+        },
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "food",
+          "drink",
+          "toy",
+          "vehicle",
+          "thing"
+        ]
       },
       {
         "id": "v2",
@@ -2425,7 +2461,14 @@
         "frame": "acc",
         "forms": {
           "3sg": "come"
-        }
+        },
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "food"
+        ]
       },
       {
         "id": "v3",
@@ -2435,7 +2478,14 @@
         "frame": "acc",
         "forms": {
           "3sg": "bebe"
-        }
+        },
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "drink"
+        ]
       },
       {
         "id": "v4",
@@ -2445,7 +2495,14 @@
         "frame": "loc",
         "forms": {
           "3sg": "duerme"
-        }
+        },
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "place"
+        ]
       },
       {
         "id": "v5",
@@ -2455,7 +2512,14 @@
         "frame": "dir",
         "forms": {
           "3sg": "va"
-        }
+        },
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "place"
+        ]
       },
       {
         "id": "v6",
@@ -2465,7 +2529,15 @@
         "frame": "instr",
         "forms": {
           "3sg": "juega"
-        }
+        },
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "toy",
+          "vehicle"
+        ]
       }
     ],
     "objects": [
@@ -2475,8 +2547,12 @@
         "text": "leche",
         "unlockedBy": "always",
         "forms": {
-          "instr": "con leche"
-        }
+          "nom": "leche",
+          "acc": "leche"
+        },
+        "tags": [
+          "drink"
+        ]
       },
       {
         "id": "o2",
@@ -2484,8 +2560,12 @@
         "text": "una manzana",
         "unlockedBy": "always",
         "forms": {
-          "instr": "con una manzana"
-        }
+          "nom": "una manzana",
+          "acc": "una manzana"
+        },
+        "tags": [
+          "food"
+        ]
       },
       {
         "id": "o3",
@@ -2493,9 +2573,13 @@
         "text": "un juguete",
         "unlockedBy": "always",
         "forms": {
-          "instr": "con un juguete",
-          "loc": "con un juguete"
-        }
+          "nom": "un juguete",
+          "acc": "un juguete",
+          "instr": "con un juguete"
+        },
+        "tags": [
+          "toy"
+        ]
       },
       {
         "id": "o4",
@@ -2503,10 +2587,16 @@
         "text": "el coche",
         "unlockedBy": "always",
         "forms": {
-          "dir": "en coche",
+          "nom": "el coche",
+          "acc": "el coche",
+          "instr": "con el coche",
           "loc": "en el coche",
-          "instr": "con el coche"
-        }
+          "dir": "al coche"
+        },
+        "tags": [
+          "vehicle",
+          "place"
+        ]
       },
       {
         "id": "o5",
@@ -2514,10 +2604,12 @@
         "text": "fuera",
         "unlockedBy": "always",
         "forms": {
-          "dir": "fuera",
           "loc": "fuera",
-          "instr": "fuera"
-        }
+          "dir": "fuera"
+        },
+        "tags": [
+          "place"
+        ]
       },
       {
         "id": "casa",
@@ -2525,10 +2617,13 @@
         "text": "casa",
         "unlockedBy": "vocab",
         "forms": {
-          "dir": "a casa",
+          "nom": "la casa",
           "loc": "en casa",
-          "instr": "en casa"
-        }
+          "dir": "a casa"
+        },
+        "tags": [
+          "place"
+        ]
       },
       {
         "id": "cama",
@@ -2536,10 +2631,13 @@
         "text": "la cama",
         "unlockedBy": "vocab",
         "forms": {
-          "dir": "a la cama",
+          "nom": "la cama",
           "loc": "en la cama",
-          "instr": "en la cama"
-        }
+          "dir": "a la cama"
+        },
+        "tags": [
+          "place"
+        ]
       },
       {
         "id": "o8",
@@ -2547,10 +2645,12 @@
         "text": "el baño",
         "unlockedBy": "always",
         "forms": {
-          "dir": "al baño",
-          "loc": "en el baño",
-          "instr": "en el baño"
-        }
+          "nom": "el baño",
+          "dir": "al baño"
+        },
+        "tags": [
+          "place"
+        ]
       },
       {
         "id": "luna",
@@ -2558,10 +2658,12 @@
         "text": "la luna",
         "unlockedBy": "vocab",
         "forms": {
-          "dir": "a la luna",
-          "loc": "en la luna",
-          "instr": "con la luna"
-        }
+          "nom": "la luna",
+          "dir": "a la luna"
+        },
+        "tags": [
+          "place"
+        ]
       },
       {
         "id": "galleta",
@@ -2569,10 +2671,12 @@
         "text": "una galleta",
         "unlockedBy": "vocab",
         "forms": {
-          "dir": "a la galleta",
-          "loc": "con una galleta",
-          "instr": "con una galleta"
-        }
+          "nom": "una galleta",
+          "acc": "una galleta"
+        },
+        "tags": [
+          "food"
+        ]
       },
       {
         "id": "platano",
@@ -2580,10 +2684,12 @@
         "text": "un plátano",
         "unlockedBy": "vocab",
         "forms": {
-          "dir": "al plátano",
-          "loc": "con un plátano",
-          "instr": "con un plátano"
-        }
+          "nom": "un plátano",
+          "acc": "un plátano"
+        },
+        "tags": [
+          "food"
+        ]
       },
       {
         "id": "zapato",
@@ -2591,10 +2697,12 @@
         "text": "un zapato",
         "unlockedBy": "vocab",
         "forms": {
-          "dir": "al zapato",
-          "loc": "en el zapato",
-          "instr": "con un zapato"
-        }
+          "nom": "un zapato",
+          "acc": "un zapato"
+        },
+        "tags": [
+          "thing"
+        ]
       },
       {
         "id": "manzana",
@@ -2602,9 +2710,24 @@
         "text": "una manzana",
         "unlockedBy": "vocab",
         "forms": {
-          "dir": "a la manzana",
-          "loc": "con una manzana",
-          "instr": "con una manzana"
+          "nom": "una manzana",
+          "acc": "una manzana"
+        },
+        "tags": [
+          "food"
+        ]
+      },
+      {
+        "id": "o9",
+        "emoji": "💧",
+        "text": "agua",
+        "unlockedBy": "always",
+        "tags": [
+          "drink"
+        ],
+        "forms": {
+          "nom": "agua",
+          "acc": "agua"
         }
       }
     ]

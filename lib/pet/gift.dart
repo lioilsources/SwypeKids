@@ -46,29 +46,44 @@ class Gift {
   }
 }
 
+/// Řádek, který se po dárku objeví v bublině: text věty, obrázky nad ní
+/// a stabilní klíč pro korpus (`<sloveso>.<předmět>`).
+class PetLine {
+  final String text;
+  final List<String> emojis;
+  final String key;
+
+  const PetLine({required this.text, required this.emojis, required this.key});
+
+  /// Obrázková řádka (pro Mou knížku).
+  String get emojiRow => emojis.join(' ');
+}
+
 /// Věta po dárku: „Myš jí jablko." / „ねこはりんごをたべます".
-/// Podmět = nálepka jednotky (`reward.subject`), sloveso podle druhu dárku
-/// (jí / pije / hraje si — id v2/v3/v6 jsou stejná ve všech packech),
-/// předmět jen když ho builder zná i s pády; jinak věta bez předmětu
-/// („Myš jí."), aby nikdy nebyla gramaticky špatně.
+/// Všechno prochází [SentenceRules] — stejná pravidla jako Skládej větu:
+/// - zvíře / člověk: jí (v2) / pije (v3) / hraje si (v6) podle druhu dárku;
+///   předmět jen když ho sloveso bere a má pro něj výslovný tvar, jinak
+///   věta bez předmětu („Myš jí.");
+/// - věc s vlastním slovesem (`reward.verb`): „Oko se dívá na kolo.";
+/// - jiná věc: pojmenovací věta dárku („To je jablko.");
+/// - jinak nic (dárek jen zajiskří).
 class PetSentence {
   static const eatVerb = 'v2';
   static const drinkVerb = 'v3';
   static const playVerb = 'v6';
 
-  /// Sloveso pro dárek; `null` = věta nebude. Věc (oko, banán) nejí,
-  /// nepije a „nehraje si" — dárek jí jen zajiskří (vlastní slovesa věcí
-  /// přijdou s pravidly, `docs/PLAN_VETY_KVALITA.md` §3.2).
-  static String? verbIdFor({required Gift gift, required bool residentEats}) {
-    if (!residentEats) return null;
-    return switch (gift.kind) {
-      StickerKind.food => eatVerb,
-      StickerKind.drink => drinkVerb,
-      _ => playVerb,
+  /// Druh nálepky jako podmětu: z packu (`reward.kind`), jinak z emoji.
+  static String kindOf(CollectibleReward r) {
+    if (r.kind.isNotEmpty) return r.kind;
+    return switch (StickerKind.of(r.emoji)) {
+      StickerKind.animal => 'animal',
+      StickerKind.person => 'person',
+      _ => 'thing',
     };
   }
 
-  /// Věta po dárku, nebo `null`, když k dárku věta nepatří.
+  static bool eats(CollectibleReward r) => kindOf(r) != 'thing';
+
   /// Podmět ze nálepky jednotky („Myš", „Die Maus", „ねこは").
   static SentencePart subjectFor(ContentPack pack, CollectibleReward r) {
     final text = r.subject.isNotEmpty
@@ -83,48 +98,79 @@ class PetSentence {
       emoji: r.emoji,
       text: text,
       person: hasForms ? '3sg' : null,
+      kind: kindOf(r),
       unlockedBy: TileUnlock.sticker,
     );
   }
 
   /// Podměty builderu vět ze zvířátek (a lidí) Zvěřince — odemknou se
   /// nálepkou. Věci (🍌, ☀️) podmětem nejsou: nejedí, nepijí.
-  static List<SentencePart> stickerSubjects(ContentPack pack) => [
-        for (final u in pack.units)
-          if (StickerKind.of(u.reward.emoji).eats)
-            subjectFor(pack, u.reward),
-      ];
-
-  static ComposedSentence? compose(
-      ContentPack pack, CollectibleReward resident, Gift gift) {
-    final data = pack.sentence;
-    final verbId = verbIdFor(
-        gift: gift, residentEats: StickerKind.of(resident.emoji).eats);
-    if (verbId == null) return null;
-    final verb = data.verbs.where((v) => v.id == verbId).firstOrNull;
-    final subject = subjectFor(pack, resident);
-    // Předmět jen s výslovným tvarem pro rámec slovesa („s autem");
-    // 4. pád smí chybět, když je stejný jako základní tvar. Jinak věta
-    // bez předmětu — nikdy tichý základní tvar („spí mléko").
-    final o = gift.object;
-    final frame = verb?.frame;
-    final fits = o != null &&
-        (frame == null ||
-            frame == Frame.acc ||
-            (o.forms?.containsKey(frame) ?? false));
-    return ComposedSentence(
-      subject: subject,
-      verb: verb,
-      object: fits ? o : null,
-      joiner: data.joiner,
-      verbLast: data.order == 'sov',
-    );
+  /// Zvířátko, které už je podmětem v packu (stejný obrázek), se
+  /// nepřidává podruhé.
+  static List<SentencePart> stickerSubjects(ContentPack pack) {
+    final have = {for (final s in pack.sentence.subjects) s.emoji};
+    return [
+      for (final u in pack.units)
+        if (eats(u.reward) && have.add(u.reward.emoji))
+          subjectFor(pack, u.reward),
+    ];
   }
 
-  /// Text s tečkou na konci (čínština/japonština „。").
-  static String sentenceText(ComposedSentence s, Language lang) {
-    final end =
-        lang == Language.zh || lang == Language.ja ? '。' : '.';
-    return '${s.text}$end';
+  static String _stop(Language lang) =>
+      lang == Language.zh || lang == Language.ja ? '。' : '.';
+
+  /// Co se po dárku řekne, nebo `null`, když k dárku věta nepatří.
+  static PetLine? line(
+      ContentPack pack, CollectibleReward resident, Gift gift) {
+    final data = pack.sentence;
+    final subject = subjectFor(pack, resident);
+    final o = gift.object;
+
+    if (eats(resident)) {
+      final verbId = switch (gift.kind) {
+        StickerKind.food => eatVerb,
+        StickerKind.drink => drinkVerb,
+        _ => playVerb,
+      };
+      final verb = data.verbs.where((v) => v.id == verbId).firstOrNull;
+      if (verb == null || !SentenceRules.subjectFits(subject, verb)) {
+        return null;
+      }
+      final object = o != null && SentenceRules.objectFits(verb, o) ? o : null;
+      final c = ComposedSentence(
+        subject: subject,
+        verb: verb,
+        object: object,
+        joiner: data.joiner,
+        verbLast: data.order == 'sov',
+      );
+      return PetLine(
+        text: '${c.text}${_stop(pack.language)}',
+        emojis: [resident.emoji, verb.emoji, if (object != null) object.emoji],
+        key: '${verb.id}.${object?.id ?? '-'}',
+      );
+    }
+
+    // Věc s vlastním slovesem: „Oko se dívá na kolo."
+    final own = resident.verb;
+    if (own != null && o != null && SentenceRules.objectFits(own, o)) {
+      final c = ComposedSentence(
+        subject: subject,
+        verb: own,
+        object: o,
+        joiner: data.joiner,
+        verbLast: data.order == 'sov',
+      );
+      return PetLine(
+        text: '${c.text}${_stop(pack.language)}',
+        emojis: [resident.emoji, own.emoji, o.emoji],
+        key: 'verb.${o.id}',
+      );
+    }
+
+    // Jinak aspoň pojmenovat dárek: „To je jablko."
+    final naming = o == null ? null : SentenceRules.naming(data, o);
+    if (naming == null) return null;
+    return PetLine(text: naming, emojis: [o!.emoji], key: 'naming.${o.id}');
   }
 }

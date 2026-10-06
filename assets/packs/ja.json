@@ -44,7 +44,8 @@
         "emoji": "🍊",
         "name": "M",
         "label": "みかん",
-        "subject": "みかんは"
+        "subject": "みかんは",
+        "kind": "thing"
       },
       "scene": {
         "biome": "meadow"
@@ -90,7 +91,8 @@
         "emoji": "🐼",
         "name": "P",
         "label": "パンダ",
-        "subject": "パンダは"
+        "subject": "パンダは",
+        "kind": "animal"
       },
       "scene": {
         "biome": "forest"
@@ -138,7 +140,8 @@
         "emoji": "🐶",
         "name": "I",
         "label": "いぬ",
-        "subject": "いぬは"
+        "subject": "いぬは",
+        "kind": "animal"
       },
       "scene": {
         "biome": "pond"
@@ -188,7 +191,8 @@
         "emoji": "🐱",
         "name": "N",
         "label": "ねこ",
-        "subject": "ねこは"
+        "subject": "ねこは",
+        "kind": "animal"
       },
       "scene": {
         "biome": "garden"
@@ -260,7 +264,8 @@
         "emoji": "☂️",
         "name": "K",
         "label": "かさ",
-        "subject": "かさは"
+        "subject": "かさは",
+        "kind": "thing"
       },
       "scene": {
         "biome": "farm"
@@ -433,7 +438,8 @@
         "emoji": "🐟",
         "name": "S",
         "label": "さかな",
-        "subject": "さかなは"
+        "subject": "さかなは",
+        "kind": "animal"
       },
       "scene": {
         "biome": "city"
@@ -622,7 +628,8 @@
         "emoji": "🐙",
         "name": "T",
         "label": "たこ",
-        "subject": "たこは"
+        "subject": "たこは",
+        "kind": "animal"
       },
       "scene": {
         "biome": "mountains"
@@ -828,7 +835,8 @@
         "emoji": "🍙",
         "name": "O",
         "label": "おにぎり",
-        "subject": "おにぎりは"
+        "subject": "おにぎりは",
+        "kind": "thing"
       },
       "scene": {
         "biome": "beach"
@@ -1027,47 +1035,59 @@
   "sentence": {
     "joiner": "",
     "order": "sov",
+    "naming": "{nom}です。",
     "subjects": [
       {
         "id": "s1",
         "emoji": "👶",
         "text": "わたしは",
         "ipa": "watashi wa",
-        "unlockedBy": "always"
+        "unlockedBy": "always",
+        "kind": "person",
+        "person": "1sg"
       },
       {
         "id": "s2",
         "emoji": "👩",
         "text": "ママは",
         "ipa": "mama wa",
-        "unlockedBy": "always"
+        "unlockedBy": "always",
+        "kind": "person",
+        "person": "3sg"
       },
       {
         "id": "s3",
         "emoji": "👨",
         "text": "パパは",
         "ipa": "papa wa",
-        "unlockedBy": "always"
+        "unlockedBy": "always",
+        "kind": "person",
+        "person": "3sg"
       },
       {
         "id": "s4",
         "emoji": "👵",
         "text": "おばあちゃんは",
         "ipa": "obaachan wa",
-        "unlockedBy": "always"
+        "unlockedBy": "always",
+        "kind": "person",
+        "person": "3sg"
       },
       {
         "id": "s5",
         "emoji": "🐶",
         "text": "わんわんは",
         "ipa": "wanwan wa",
-        "unlockedBy": "always"
+        "unlockedBy": "always",
+        "kind": "animal",
+        "person": "3sg"
       },
       {
         "id": "neko",
         "emoji": "🐱",
         "text": "ねこは",
         "unlockedBy": "vocab",
+        "kind": "animal",
         "person": "3sg"
       },
       {
@@ -1075,6 +1095,7 @@
         "emoji": "🐢",
         "text": "かめは",
         "unlockedBy": "vocab",
+        "kind": "animal",
         "person": "3sg"
       },
       {
@@ -1082,6 +1103,7 @@
         "emoji": "🐴",
         "text": "うまは",
         "unlockedBy": "vocab",
+        "kind": "animal",
         "person": "3sg"
       },
       {
@@ -1089,6 +1111,7 @@
         "emoji": "🐶",
         "text": "いぬは",
         "unlockedBy": "vocab",
+        "kind": "animal",
         "person": "3sg"
       },
       {
@@ -1096,6 +1119,7 @@
         "emoji": "🐙",
         "text": "たこは",
         "unlockedBy": "vocab",
+        "kind": "animal",
         "person": "3sg"
       },
       {
@@ -1103,6 +1127,7 @@
         "emoji": "🐦",
         "text": "とりは",
         "unlockedBy": "vocab",
+        "kind": "animal",
         "person": "3sg"
       },
       {
@@ -1110,6 +1135,7 @@
         "emoji": "🐸",
         "text": "かえるは",
         "unlockedBy": "vocab",
+        "kind": "animal",
         "person": "3sg"
       }
     ],
@@ -1120,7 +1146,21 @@
         "text": "ほしいです",
         "ipa": "hoshii desu",
         "unlockedBy": "always",
-        "frame": "acc"
+        "frame": "ga",
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "food",
+          "drink",
+          "toy",
+          "vehicle",
+          "thing"
+        ],
+        "forms": {
+          "1sg": "ほしいです"
+        }
       },
       {
         "id": "v2",
@@ -1128,7 +1168,18 @@
         "text": "たべます",
         "ipa": "tabemasu",
         "unlockedBy": "always",
-        "frame": "acc"
+        "frame": "acc",
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "food"
+        ],
+        "forms": {
+          "1sg": "たべます",
+          "3sg": "たべます"
+        }
       },
       {
         "id": "v3",
@@ -1136,7 +1187,18 @@
         "text": "のみます",
         "ipa": "nomimasu",
         "unlockedBy": "always",
-        "frame": "acc"
+        "frame": "acc",
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "drink"
+        ],
+        "forms": {
+          "1sg": "のみます",
+          "3sg": "のみます"
+        }
       },
       {
         "id": "v4",
@@ -1144,7 +1206,18 @@
         "text": "ねます",
         "ipa": "nemasu",
         "unlockedBy": "always",
-        "frame": "loc"
+        "frame": "loc",
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "place"
+        ],
+        "forms": {
+          "1sg": "ねます",
+          "3sg": "ねます"
+        }
       },
       {
         "id": "v5",
@@ -1152,7 +1225,18 @@
         "text": "いきます",
         "ipa": "ikimasu",
         "unlockedBy": "always",
-        "frame": "dir"
+        "frame": "dir",
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "place"
+        ],
+        "forms": {
+          "1sg": "いきます",
+          "3sg": "いきます"
+        }
       },
       {
         "id": "v6",
@@ -1160,7 +1244,19 @@
         "text": "あそびます",
         "ipa": "asobimasu",
         "unlockedBy": "always",
-        "frame": "instr"
+        "frame": "instr",
+        "subject": [
+          "person",
+          "animal"
+        ],
+        "object": [
+          "toy",
+          "vehicle"
+        ],
+        "forms": {
+          "1sg": "あそびます",
+          "3sg": "あそびます"
+        }
       }
     ],
     "objects": [
@@ -1171,9 +1267,13 @@
         "ipa": "gyuunyuu",
         "unlockedBy": "always",
         "forms": {
-          "acc": "ぎゅうにゅうを",
-          "instr": "ぎゅうにゅうで"
-        }
+          "nom": "ぎゅうにゅう",
+          "ga": "ぎゅうにゅうが",
+          "acc": "ぎゅうにゅうを"
+        },
+        "tags": [
+          "drink"
+        ]
       },
       {
         "id": "o2",
@@ -1182,9 +1282,13 @@
         "ipa": "ringo",
         "unlockedBy": "always",
         "forms": {
-          "acc": "りんごを",
-          "instr": "りんごで"
-        }
+          "nom": "りんご",
+          "ga": "りんごが",
+          "acc": "りんごを"
+        },
+        "tags": [
+          "food"
+        ]
       },
       {
         "id": "o3",
@@ -1193,10 +1297,13 @@
         "ipa": "omocha",
         "unlockedBy": "always",
         "forms": {
-          "acc": "おもちゃを",
-          "instr": "おもちゃで",
-          "loc": "おもちゃで"
-        }
+          "nom": "おもちゃ",
+          "ga": "おもちゃが",
+          "instr": "おもちゃで"
+        },
+        "tags": [
+          "toy"
+        ]
       },
       {
         "id": "kuruma",
@@ -1205,11 +1312,16 @@
         "ipa": "kuruma",
         "unlockedBy": "vocab",
         "forms": {
-          "acc": "くるまを",
-          "dir": "くるまに",
+          "nom": "くるま",
+          "ga": "くるまが",
+          "instr": "くるまで",
           "loc": "くるまで",
-          "instr": "くるまで"
-        }
+          "dir": "くるまに"
+        },
+        "tags": [
+          "vehicle",
+          "place"
+        ]
       },
       {
         "id": "o5",
@@ -1218,10 +1330,12 @@
         "ipa": "soto",
         "unlockedBy": "always",
         "forms": {
-          "dir": "そとへ",
           "loc": "そとで",
-          "instr": "そとで"
-        }
+          "dir": "そとへ"
+        },
+        "tags": [
+          "place"
+        ]
       },
       {
         "id": "o6",
@@ -1230,10 +1344,13 @@
         "ipa": "ouchi",
         "unlockedBy": "always",
         "forms": {
-          "dir": "おうちへ",
+          "nom": "おうち",
           "loc": "おうちで",
-          "instr": "おうちで"
-        }
+          "dir": "おうちへ"
+        },
+        "tags": [
+          "place"
+        ]
       },
       {
         "id": "o7",
@@ -1242,10 +1359,13 @@
         "ipa": "beddo",
         "unlockedBy": "always",
         "forms": {
-          "dir": "ベッドへ",
+          "nom": "ベッド",
           "loc": "ベッドで",
-          "instr": "ベッドで"
-        }
+          "dir": "ベッドへ"
+        },
+        "tags": [
+          "place"
+        ]
       },
       {
         "id": "o8",
@@ -1254,10 +1374,12 @@
         "ipa": "omaru",
         "unlockedBy": "always",
         "forms": {
-          "dir": "おまるへ",
-          "loc": "おまるで",
-          "instr": "おまるで"
-        }
+          "nom": "おまる",
+          "dir": "おまるへ"
+        },
+        "tags": [
+          "place"
+        ]
       },
       {
         "id": "kome",
@@ -1265,11 +1387,13 @@
         "text": "こめ",
         "unlockedBy": "vocab",
         "forms": {
-          "acc": "こめを",
-          "instr": "こめで",
-          "loc": "こめで",
-          "dir": "こめへ"
-        }
+          "nom": "こめ",
+          "ga": "こめが",
+          "acc": "こめを"
+        },
+        "tags": [
+          "food"
+        ]
       },
       {
         "id": "sakana",
@@ -1277,11 +1401,13 @@
         "text": "さかな",
         "unlockedBy": "vocab",
         "forms": {
-          "acc": "さかなを",
-          "instr": "さかなで",
-          "loc": "さかなで",
-          "dir": "さかなへ"
-        }
+          "nom": "さかな",
+          "ga": "さかなが",
+          "acc": "さかなを"
+        },
+        "tags": [
+          "food"
+        ]
       },
       {
         "id": "mikan",
@@ -1289,11 +1415,13 @@
         "text": "みかん",
         "unlockedBy": "vocab",
         "forms": {
-          "acc": "みかんを",
-          "instr": "みかんで",
-          "loc": "みかんで",
-          "dir": "みかんへ"
-        }
+          "nom": "みかん",
+          "ga": "みかんが",
+          "acc": "みかんを"
+        },
+        "tags": [
+          "food"
+        ]
       },
       {
         "id": "momo",
@@ -1301,10 +1429,26 @@
         "text": "もも",
         "unlockedBy": "vocab",
         "forms": {
-          "acc": "ももを",
-          "instr": "ももで",
-          "loc": "ももで",
-          "dir": "ももへ"
+          "nom": "もも",
+          "ga": "ももが",
+          "acc": "ももを"
+        },
+        "tags": [
+          "food"
+        ]
+      },
+      {
+        "id": "o9",
+        "emoji": "💧",
+        "text": "みず",
+        "unlockedBy": "always",
+        "tags": [
+          "drink"
+        ],
+        "forms": {
+          "nom": "みず",
+          "ga": "みずが",
+          "acc": "みずを"
         }
       }
     ]
