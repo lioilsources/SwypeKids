@@ -755,6 +755,9 @@ class _PetScreenState extends State<PetScreen> {
                 child: Draggable<Gift>(
                   key: ValueKey('gift-${g.id}'),
                   data: g,
+                  // Tah nahoru (ke zvířátku) dárek zvedne; tah do strany
+                  // posouvá tácek — jinak se k dárkům vpravo nedá dostat.
+                  affinity: Axis.vertical,
                   feedback: Material(
                     color: Colors.transparent,
                     child: EmojiArt(g.emoji, size: 56, animate: false),

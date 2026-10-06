@@ -103,7 +103,10 @@ class _CollectionScreenState extends State<CollectionScreen> {
                         ),
                         const Spacer(),
                         Text(
-                          '${owned.length}/${pack.units.length}',
+                          // Jen zvířátka jednotek — tajné nálepky se
+                          // do „X ze Y" nepočítají.
+                          '${pack.units.where((u) => owned.contains(u.reward.emoji)).length}'
+                          '/${pack.units.length}',
                           style: TextStyle(
                             fontFamily: kFont,
                             fontFamilyFallback: kFontFallback,
