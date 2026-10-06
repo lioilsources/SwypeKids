@@ -7,6 +7,7 @@ import '../services/progress_service.dart';
 import '../services/tts_service.dart';
 import '../ui/app_font.dart';
 import '../ui/l10n.dart';
+import '../ui/emoji_art.dart';
 
 /// Má knížka — věty, které dítě složilo a uložilo (builder vět, slovo do
 /// věty). Ťuknutí na stránku ji přečte nahlas; rodič si ji může nechat číst.
@@ -155,7 +156,13 @@ class _PageCard extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(page.emojis, style: const TextStyle(fontSize: 30)),
+                  Wrap(
+                    spacing: 4,
+                    children: [
+                      for (final e in page.emojis.split(' '))
+                        if (e.isNotEmpty) EmojiArt(e, size: 30),
+                    ],
+                  ),
                   const SizedBox(height: 4),
                   Text(
                     page.text,

@@ -497,6 +497,13 @@ class _GameScreenState extends State<GameScreen>
                 lesson.type == LessonType.letterHunt
             ? _replayAudio
             : null,
+        // Obrázek slova řekne slovo nahlas — jen tam, kde slovo stejně
+        // vidí (u obrázku, doplňovačky a rýmu by to prozradilo odpověď).
+        onHintTap: mode == CardMode.full ||
+                mode == CardMode.listen ||
+                mode == CardMode.hunt
+            ? _replayAudio
+            : null,
       );
 
   /// Vstup kola: klávesnice, nebo u rýmu tři obrázky.
