@@ -243,5 +243,7 @@
   "badgeWishMakerHow": "10 desejos realizados",
   "badgeFriendOfAll": "Amigo de todos",
   "badgeFriendOfAllHow": "Cada bicho ganhou um presente",
-  "settingPetRounds": "Presentes para os bichos: primeiro escrever a palavra"
+  "settingPetRounds": "Presentes para os bichos: primeiro escrever a palavra",
+  "petBowlFood": "tigela",
+  "petBowlWater": "água"
 }

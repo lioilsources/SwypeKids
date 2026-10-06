@@ -464,4 +464,10 @@ class AppLocalizationsIt extends AppLocalizations {
   @override
   String get settingPetRounds =>
       'Regali agli animali: prima scrivere la parola';
+
+  @override
+  String get petBowlFood => 'ciotola';
+
+  @override
+  String get petBowlWater => 'acqua';
 }

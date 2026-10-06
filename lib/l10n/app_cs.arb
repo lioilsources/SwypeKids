@@ -244,5 +244,7 @@
   "badgeWishMakerHow": "10 splněných přání",
   "badgeFriendOfAll": "Kamarád všech",
   "badgeFriendOfAllHow": "Každé zvířátko dostalo dárek",
-  "settingPetRounds": "Dárky zvířátkům: nejdřív napsat slovo"
+  "settingPetRounds": "Dárky zvířátkům: nejdřív napsat slovo",
+  "petBowlFood": "miska",
+  "petBowlWater": "voda"
 }

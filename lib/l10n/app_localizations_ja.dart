@@ -459,4 +459,10 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get settingPetRounds => 'どうぶつへのプレゼント：さきにことばをかく';
+
+  @override
+  String get petBowlFood => 'おさら';
+
+  @override
+  String get petBowlWater => 'みず';
 }

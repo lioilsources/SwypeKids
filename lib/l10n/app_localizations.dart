@@ -957,6 +957,18 @@ abstract class AppLocalizations {
   /// In cs, this message translates to:
   /// **'Dárky zvířátkům: nejdřív napsat slovo'**
   String get settingPetRounds;
+
+  /// No description provided for @petBowlFood.
+  ///
+  /// In cs, this message translates to:
+  /// **'miska'**
+  String get petBowlFood;
+
+  /// No description provided for @petBowlWater.
+  ///
+  /// In cs, this message translates to:
+  /// **'voda'**
+  String get petBowlWater;
 }
 
 class _AppLocalizationsDelegate

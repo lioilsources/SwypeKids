@@ -459,4 +459,10 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get settingPetRounds => '给小动物送礼物：先写出这个词';
+
+  @override
+  String get petBowlFood => '碗';
+
+  @override
+  String get petBowlWater => '水';
 }
