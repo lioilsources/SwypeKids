@@ -79,4 +79,33 @@ void main() {
     expect(find.byKey(const ValueKey('play-kolo')), findsOneWidget);
     expect(find.byKey(const ValueKey('play-mama')), findsNothing);
   });
+
+  testWidgets('zvířátko ze Zvěřince je podmět: „Myš jí jablko"; nezískané je siluetka',
+      (tester) async {
+    await pumpBuilder(tester);
+    expect(findText('Myš'), findsNothing); // zatím siluetka
+
+    final packId = PackService.instance.cached(Language.cs)!.id;
+    ProgressService.instance.addCollectible(packId, '🐭');
+    await pumpBuilder(tester);
+    expect(findText('Myš'), findsOneWidget);
+    expect(findText('Tygr'), findsNothing, reason: 'tygra ještě nemá');
+    expect(findText('Banán'), findsNothing, reason: 'věc podmětem není');
+
+    await tester.tap(findText('Myš'));
+    await tester.pump();
+    // Sloveso se po podmětu ve 3. osobě ukáže ve tvaru „jí".
+    await tester.tap(findText('jí'));
+    await tester.pump();
+    await tester.tap(findText('jablko'));
+    await tester.pump();
+    // Věta = dílky podmět · sloveso · předmět.
+    expect(findText('Myš'), findsWidgets);
+    expect(findText('jí'), findsWidgets);
+    expect(findText('jablko'), findsWidgets);
+    // Uložená do knížky jako celá věta.
+    await tester.tap(find.byKey(const ValueKey('save-book')));
+    await tester.pump();
+    expect(ProgressService.instance.book(packId).single.text, 'Myš jí jablko');
+  });
 }

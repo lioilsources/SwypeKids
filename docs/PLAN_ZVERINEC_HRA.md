@@ -1,6 +1,16 @@
 # Plán: Zvěřinec jako hřiště — „Hraj si se zvířátkem"
 
-Stav: zadání k implementaci (říjen 2026, od v2.10.0). Navazuje na
+Stav (6. 10. 2026): **fáze 1–4 hotové** — v2.11.0 nálepky reagují,
+v2.12.0 svět zvířátka, v2.13.0 kola/přání/odznaky, v2.14.0 zvířata jako
+podměty v builderu. Odchylky od zadání: pózy a pozadí biotopů (fáze 4)
+přišly už ve fázi 2; `reward.subject` je v packech jako text (člen/částice),
+podměty builderu se z něj generují v kódu (`PetSentence.stickerSubjects`),
+ne jako ruční dlaždice; nové sfx (`purr`, `crunch`, `gulp`) zatím nejsou —
+hlazení a šimrání používají `babble`. Otevřené: revize vět rodilými
+mluvčími (`test/golden/pet_sentences_<lang>.txt`), tvary předmětů pro
+slova z batohu (dnes věta bez předmětu, když ho builder nezná).
+
+Původně: zadání k implementaci (říjen 2026, od v2.10.0). Navazuje na
 `docs/ROADMAP.md` P4 („Zvěřinec 2.0: zvířátka lze krmit/pohladit") a P5
 (slovíčka → věty) a na `docs/GAMEPLAY.md` §4. Určeno jako zadání pro
 implementaci po fázích; každá fáze je samostatný PR + release.

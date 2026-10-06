@@ -67,6 +67,32 @@ class PetSentence {
   }
 
   /// Věta po dárku, nebo `null`, když k dárku věta nepatří.
+  /// Podmět ze nálepky jednotky („Myš", „Die Maus", „ねこは").
+  static SentencePart subjectFor(ContentPack pack, CollectibleReward r) {
+    final text = r.subject.isNotEmpty
+        ? r.subject
+        : r.label.isEmpty
+            ? r.emoji
+            : r.label[0].toUpperCase() + r.label.substring(1);
+    // Japonština/čínština nemají tvary slovesa podle osoby.
+    final hasForms = pack.sentence.verbs.any((v) => v.forms != null);
+    return SentencePart(
+      id: 'pet-${r.emoji}',
+      emoji: r.emoji,
+      text: text,
+      person: hasForms ? '3sg' : null,
+      unlockedBy: TileUnlock.sticker,
+    );
+  }
+
+  /// Podměty builderu vět ze zvířátek (a lidí) Zvěřince — odemknou se
+  /// nálepkou. Věci (🍌, ☀️) podmětem nejsou: nejedí, nepijí.
+  static List<SentencePart> stickerSubjects(ContentPack pack) => [
+        for (final u in pack.units)
+          if (StickerKind.of(u.reward.emoji).eats)
+            subjectFor(pack, u.reward),
+      ];
+
   static ComposedSentence? compose(
       ContentPack pack, CollectibleReward resident, Gift gift) {
     final data = pack.sentence;
@@ -74,18 +100,7 @@ class PetSentence {
         gift: gift, residentEats: StickerKind.of(resident.emoji).eats);
     if (verbId == null) return null;
     final verb = data.verbs.where((v) => v.id == verbId).firstOrNull;
-    final text = resident.subject.isNotEmpty
-        ? resident.subject
-        : resident.label.isEmpty
-            ? resident.emoji
-            : resident.label[0].toUpperCase() + resident.label.substring(1);
-    final subject = SentencePart(
-      id: 'pet',
-      emoji: resident.emoji,
-      text: text,
-      // Japonština/čínština nemají tvary slovesa podle osoby.
-      person: verb?.forms == null ? null : '3sg',
-    );
+    final subject = subjectFor(pack, resident);
     // Hraje si „s autem" jen s hračkou z builderu; jinak věta bez předmětu.
     return ComposedSentence(
       subject: subject,
