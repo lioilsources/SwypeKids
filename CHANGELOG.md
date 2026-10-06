@@ -1,5 +1,9 @@
 # Changelog
 
+## [06/10/2026] — v2.11.0
+- Obrázky reagují na dotyk všude: zvířátka pošlou srdíčka, jídlo se zmáčkne, věci poskočí, zavrtí se nebo zatočí
+- Obrázek na klávese poskočí, když písmeno přibude do tahu; ťuknutí na obrázek slova ho řekne nahlas
+
 ## [05/10/2026] — v2.10.0
 - Výběr průvodce v profilu: Pandička, Kapybárka, Žirafka nebo Gepardíček — každý sourozenec si vybere svého
 - Průvodce se chová všude stejně: na mapě i ve hře ho jde přetáhnout, uhne z cesty, po ťuknutí zamává, po chvíli si čte a v noci spí
