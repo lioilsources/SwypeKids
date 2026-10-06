@@ -1,468 +1,372 @@
 id	text	hash	llm	llm_note	human	human_note	reviewer	date
-zh:b:s1.v1.niunai	我要牛奶。	f274eb4c			pending			
-zh:b:s1.v1.pingguo	我要苹果。	0f2fa490			pending			
-zh:b:s1.v1.o3	我要玩具。	5892fd3f			pending			
-zh:b:s1.v1.o4	我要车车。	6eed5337			pending			
-zh:b:s1.v1.tang	我要糖。	7a6a7993			pending			
-zh:b:s1.v1.dangao	我要蛋糕。	12041bb3			pending			
-zh:b:s1.v1.mianbao	我要面包。	8df1da64			pending			
-zh:b:s1.v1.putao	我要葡萄。	85eed160			pending			
-zh:b:s1.v1.o9	我要水。	e10a0311			pending			
-zh:b:s1.v2.pingguo	我吃苹果。	c454d3c6			pending			
-zh:b:s1.v2.tang	我吃糖。	b004bd99			pending			
-zh:b:s1.v2.dangao	我吃蛋糕。	bbce3245			pending			
-zh:b:s1.v2.mianbao	我吃面包。	03315ebe			pending			
-zh:b:s1.v2.putao	我吃葡萄。	73820b46			pending			
-zh:b:s1.v3.niunai	我喝牛奶。	44c24d98			pending			
-zh:b:s1.v3.o9	我喝水。	457636c5			pending			
-zh:b:s1.v4.o4	我睡在车车里。	3196fb4b			pending			
-zh:b:s1.v4.o5	我睡在外面。	df7ffdd1			pending			
-zh:b:s1.v4.o6	我睡在家里。	029b305f			pending			
-zh:b:s1.v4.o7	我睡在床上。	221cf9bd			pending			
-zh:b:s1.v5.o5	我去外面。	4e4edf29			pending			
-zh:b:s1.v5.o8	我去上厕所。	8ef4fdbe			pending			
-zh:b:s1.v6.o3	我玩玩具。	d2ad3907			pending			
-zh:b:s1.v6.o4	我玩车车。	d851ca4f			pending			
-zh:b:s2.v1.niunai	妈妈要牛奶。	6771a4d9			pending			
-zh:b:s2.v1.pingguo	妈妈要苹果。	fe0fd439			pending			
-zh:b:s2.v1.o3	妈妈要玩具。	e7591186			pending			
-zh:b:s2.v1.o4	妈妈要车车。	80ea8406			pending			
-zh:b:s2.v1.tang	妈妈要糖。	6f74c8bc			pending			
-zh:b:s2.v1.dangao	妈妈要蛋糕。	7070ac2e			pending			
-zh:b:s2.v1.mianbao	妈妈要面包。	754cec55			pending			
-zh:b:s2.v1.putao	妈妈要葡萄。	bf6c4b59			pending			
-zh:b:s2.v1.o9	妈妈要水。	8ec71d16			pending			
-zh:b:s2.v2.pingguo	妈妈吃苹果。	b8de83d7			pending			
-zh:b:s2.v2.tang	妈妈吃糖。	e97a5cc2			pending			
-zh:b:s2.v2.dangao	妈妈吃蛋糕。	205b7070			pending			
-zh:b:s2.v2.mianbao	妈妈吃面包。	0d2459bf			pending			
-zh:b:s2.v2.putao	妈妈吃葡萄。	b788cf37			pending			
-zh:b:s2.v3.niunai	妈妈喝牛奶。	195c05e5			pending			
-zh:b:s2.v3.o9	妈妈喝水。	d1e3646a			pending			
-zh:b:s2.v4.o4	妈妈睡在车车里。	bbfb8092			pending			
-zh:b:s2.v4.o5	妈妈睡在外面。	597816da			pending			
-zh:b:s2.v4.o6	妈妈睡在家里。	eb188444			pending			
-zh:b:s2.v4.o7	妈妈睡在床上。	69150046			pending			
-zh:b:s2.v5.o5	妈妈去外面。	ffcce848			pending			
-zh:b:s2.v5.o8	妈妈去上厕所。	5dbdb7d5			pending			
-zh:b:s2.v6.o3	妈妈玩玩具。	481d7b6e			pending			
-zh:b:s2.v6.o4	妈妈玩车车。	5c74695e			pending			
-zh:b:s3.v1.niunai	爸爸要牛奶。	cb2f9919			pending			
-zh:b:s3.v1.pingguo	爸爸要苹果。	e55ce8f9			pending			
-zh:b:s3.v1.o3	爸爸要玩具。	b88f4146			pending			
-zh:b:s3.v1.o4	爸爸要车车。	7feb8146			pending			
-zh:b:s3.v1.tang	爸爸要糖。	c168d5fc			pending			
-zh:b:s3.v1.dangao	爸爸要蛋糕。	968a766e			pending			
-zh:b:s3.v1.mianbao	爸爸要面包。	ac309615			pending			
-zh:b:s3.v1.putao	爸爸要葡萄。	af8b7f19			pending			
-zh:b:s3.v1.o9	爸爸要水。	df7df5d6			pending			
-zh:b:s3.v2.pingguo	爸爸吃苹果。	fb499397			pending			
-zh:b:s3.v2.tang	爸爸吃糖。	27366202			pending			
-zh:b:s3.v2.dangao	爸爸吃蛋糕。	546cf0b0			pending			
-zh:b:s3.v2.mianbao	爸爸吃面包。	d6aadd7f			pending			
-zh:b:s3.v2.putao	爸爸吃葡萄。	fc435af7			pending			
-zh:b:s3.v3.niunai	爸爸喝牛奶。	35ddb025			pending			
-zh:b:s3.v3.o9	爸爸喝水。	bf79d52a			pending			
-zh:b:s3.v4.o4	爸爸睡在车车里。	e0da5dd2			pending			
-zh:b:s3.v4.o5	爸爸睡在外面。	f4cebe9a			pending			
-zh:b:s3.v4.o6	爸爸睡在家里。	86d97504			pending			
-zh:b:s3.v4.o7	爸爸睡在床上。	57749b86			pending			
-zh:b:s3.v5.o5	爸爸去外面。	0f044908			pending			
-zh:b:s3.v5.o8	爸爸去上厕所。	dcaeff15			pending			
-zh:b:s3.v6.o3	爸爸玩玩具。	95e1682e			pending			
-zh:b:s3.v6.o4	爸爸玩车车。	7df0b49e			pending			
-zh:b:s4.v1.niunai	奶奶要牛奶。	6d4e04d9			pending			
-zh:b:s4.v1.pingguo	奶奶要苹果。	21a53439			pending			
-zh:b:s4.v1.o3	奶奶要玩具。	b000f186			pending			
-zh:b:s4.v1.o4	奶奶要车车。	81182406			pending			
-zh:b:s4.v1.tang	奶奶要糖。	04fe68bc			pending			
-zh:b:s4.v1.dangao	奶奶要蛋糕。	0e6f0c2e			pending			
-zh:b:s4.v1.mianbao	奶奶要面包。	74b10c55			pending			
-zh:b:s4.v1.putao	奶奶要葡萄。	bf99eb59			pending			
-zh:b:s4.v1.o9	奶奶要水。	2450bd16			pending			
-zh:b:s4.v2.pingguo	奶奶吃苹果。	766563d7			pending			
-zh:b:s4.v2.tang	奶奶吃糖。	5e407cc2			pending			
-zh:b:s4.v2.dangao	奶奶吃蛋糕。	deabd070			pending			
-zh:b:s4.v2.mianbao	奶奶吃面包。	efa5f9bf			pending			
-zh:b:s4.v2.putao	奶奶吃葡萄。	5cd5ef37			pending			
-zh:b:s4.v3.niunai	奶奶喝牛奶。	c8aa65e5			pending			
-zh:b:s4.v3.o9	奶奶喝水。	46a9846a			pending			
-zh:b:s4.v4.o4	奶奶睡在车车里。	f9d76092			pending			
-zh:b:s4.v4.o5	奶奶睡在外面。	93f0b6da			pending			
-zh:b:s4.v4.o6	奶奶睡在家里。	9ffa2444			pending			
-zh:b:s4.v4.o7	奶奶睡在床上。	e18ba046			pending			
-zh:b:s4.v5.o5	奶奶去外面。	99ec0848			pending			
-zh:b:s4.v5.o8	奶奶去上厕所。	0bd8d7d5			pending			
-zh:b:s4.v6.o3	奶奶玩玩具。	13991b6e			pending			
-zh:b:s4.v6.o4	奶奶玩车车。	6c66495e			pending			
-zh:b:gou.v1.niunai	狗狗要牛奶。	f949e1c3			pending			
-zh:b:gou.v1.pingguo	狗狗要苹果。	6bc63aa3			pending			
-zh:b:gou.v1.o3	狗狗要玩具。	b9e71504			pending			
-zh:b:gou.v1.o4	狗狗要车车。	a412da40			pending			
-zh:b:gou.v1.tang	狗狗要糖。	0f2d9b26			pending			
-zh:b:gou.v1.dangao	狗狗要蛋糕。	cea9e69c			pending			
-zh:b:gou.v1.mianbao	狗狗要面包。	dece1a5b			pending			
-zh:b:gou.v1.putao	狗狗要葡萄。	328a41d3			pending			
-zh:b:gou.v1.o9	狗狗要水。	c19b558c			pending			
-zh:b:gou.v2.pingguo	狗狗吃苹果。	c4d38075			pending			
-zh:b:gou.v2.tang	狗狗吃糖。	3cb33c30			pending			
-zh:b:gou.v2.dangao	狗狗吃蛋糕。	e165bb3a			pending			
-zh:b:gou.v2.mianbao	狗狗吃面包。	7f58a8f1			pending			
-zh:b:gou.v2.putao	狗狗吃葡萄。	d0645a85			pending			
-zh:b:gou.v3.niunai	狗狗喝牛奶。	94daa6d7			pending			
-zh:b:gou.v3.o9	狗狗喝水。	efaf7cc8			pending			
-zh:b:gou.v4.o4	狗狗睡在车车里。	7b9546a4			pending			
-zh:b:gou.v4.o5	狗狗睡在外面。	a4cbb430			pending			
-zh:b:gou.v4.o6	狗狗睡在家里。	314f42ce			pending			
-zh:b:gou.v4.o7	狗狗睡在床上。	b143edc4			pending			
-zh:b:gou.v5.o5	狗狗去外面。	21eaa6ae			pending			
-zh:b:gou.v5.o8	狗狗去上厕所。	9e76b91b			pending			
-zh:b:gou.v6.o3	狗狗玩玩具。	f33c337c			pending			
-zh:b:gou.v6.o4	狗狗玩车车。	647eaa28			pending			
-zh:b:didi.v1.niunai	弟弟要牛奶。	2e9423d3			pending			
-zh:b:didi.v1.pingguo	弟弟要苹果。	4d381ab3			pending			
-zh:b:didi.v1.o3	弟弟要玩具。	823a10f4			pending			
-zh:b:didi.v1.o4	弟弟要车车。	0d8e2790			pending			
-zh:b:didi.v1.tang	弟弟要糖。	5a0d0176			pending			
-zh:b:didi.v1.dangao	弟弟要蛋糕。	d1bfb00c			pending			
-zh:b:didi.v1.mianbao	弟弟要面包。	3071f9eb			pending			
-zh:b:didi.v1.putao	弟弟要葡萄。	e91dc563			pending			
-zh:b:didi.v1.o9	弟弟要水。	b87a1e5c			pending			
-zh:b:didi.v2.pingguo	弟弟吃苹果。	6c865e45			pending			
-zh:b:didi.v2.tang	弟弟吃糖。	3799d680			pending			
-zh:b:didi.v2.dangao	弟弟吃蛋糕。	f6ef04aa			pending			
-zh:b:didi.v2.mianbao	弟弟吃面包。	cf9a3f81			pending			
-zh:b:didi.v2.putao	弟弟吃葡萄。	41c8e515			pending			
-zh:b:didi.v3.niunai	弟弟喝牛奶。	e1380807			pending			
-zh:b:didi.v3.o9	弟弟喝水。	f53fe4b8			pending			
-zh:b:didi.v4.o4	弟弟睡在车车里。	0880c434			pending			
-zh:b:didi.v4.o5	弟弟睡在外面。	05979f80			pending			
-zh:b:didi.v4.o6	弟弟睡在家里。	3386205e			pending			
-zh:b:didi.v4.o7	弟弟睡在床上。	4dcf7534			pending			
-zh:b:didi.v5.o5	弟弟去外面。	7868f37e			pending			
-zh:b:didi.v5.o8	弟弟去上厕所。	ab0f26cb			pending			
-zh:b:didi.v6.o3	弟弟玩玩具。	b7883a6c			pending			
-zh:b:didi.v6.o4	弟弟玩车车。	d0ef9578			pending			
-zh:b:niu.v1.niunai	牛要牛奶。	dc1b799e			pending			
-zh:b:niu.v1.pingguo	牛要苹果。	518a999a			pending			
-zh:b:niu.v1.o3	牛要玩具。	021bdf6d			pending			
-zh:b:niu.v1.o4	牛要车车。	0e233c41			pending			
-zh:b:niu.v1.tang	牛要糖。	20628bb5			pending			
-zh:b:niu.v1.dangao	牛要蛋糕。	70a4bc69			pending			
-zh:b:niu.v1.mianbao	牛要面包。	7b2723c2			pending			
-zh:b:niu.v1.putao	牛要葡萄。	e4bb5a4a			pending			
-zh:b:niu.v1.o9	牛要水。	b9c30237			pending			
-zh:b:niu.v2.pingguo	牛吃苹果。	353c3164			pending			
-zh:b:niu.v2.tang	牛吃糖。	a7be3a0f			pending			
-zh:b:niu.v2.dangao	牛吃蛋糕。	ef772de7			pending			
-zh:b:niu.v2.mianbao	牛吃面包。	e95af128			pending			
-zh:b:niu.v2.putao	牛吃葡萄。	0a18b594			pending			
-zh:b:niu.v3.niunai	牛喝牛奶。	964a2af2			pending			
-zh:b:niu.v3.o9	牛喝水。	7b5ba113			pending			
-zh:b:niu.v4.o4	牛睡在车车里。	f42ba82d			pending			
-zh:b:niu.v4.o5	牛睡在外面。	c7d21167			pending			
-zh:b:niu.v4.o6	牛睡在家里。	f52388a9			pending			
-zh:b:niu.v4.o7	牛睡在床上。	250fa85b			pending			
-zh:b:niu.v5.o5	牛去外面。	563d0fdf			pending			
-zh:b:niu.v5.o8	牛去上厕所。	f1234d74			pending			
-zh:b:niu.v6.o3	牛玩玩具。	c9b84535			pending			
-zh:b:niu.v6.o4	牛玩车车。	93290199			pending			
-zh:b:gege.v1.niunai	哥哥要牛奶。	e8e9d967			pending			
-zh:b:gege.v1.pingguo	哥哥要苹果。	ac1b6987			pending			
-zh:b:gege.v1.o3	哥哥要玩具。	841fe768			pending			
-zh:b:gege.v1.o4	哥哥要车车。	aa2f699c			pending			
-zh:b:gege.v1.tang	哥哥要糖。	e23421b2			pending			
-zh:b:gege.v1.dangao	哥哥要蛋糕。	78318140			pending			
-zh:b:gege.v1.mianbao	哥哥要面包。	551bafef			pending			
-zh:b:gege.v1.putao	哥哥要葡萄。	8da21b67			pending			
-zh:b:gege.v1.o9	哥哥要水。	c1a498d8			pending			
-zh:b:gege.v2.pingguo	哥哥吃苹果。	4938cae9			pending			
-zh:b:gege.v2.tang	哥哥吃糖。	026e75ac			pending			
-zh:b:gege.v2.dangao	哥哥吃蛋糕。	8f2022fe			pending			
-zh:b:gege.v2.mianbao	哥哥吃面包。	76cd3885			pending			
-zh:b:gege.v2.putao	哥哥吃葡萄。	4ace3589			pending			
-zh:b:gege.v3.niunai	哥哥喝牛奶。	5fd46033			pending			
-zh:b:gege.v3.o9	哥哥喝水。	546b327c			pending			
-zh:b:gege.v4.o4	哥哥睡在车车里。	e65b2d78			pending			
-zh:b:gege.v4.o5	哥哥睡在外面。	47e984ac			pending			
-zh:b:gege.v4.o6	哥哥睡在家里。	2684c652			pending			
-zh:b:gege.v4.o7	哥哥睡在床上。	f34cbd08			pending			
-zh:b:gege.v5.o5	哥哥去外面。	68b34bf2			pending			
-zh:b:gege.v5.o8	哥哥去上厕所。	b1ca87a7			pending			
-zh:b:gege.v6.o3	哥哥玩玩具。	a56de2d0			pending			
-zh:b:gege.v6.o4	哥哥玩车车。	39902db4			pending			
-zh:b:laohu.v1.niunai	老虎要牛奶。	449e3bb2			pending			
-zh:b:laohu.v1.pingguo	老虎要苹果。	ad2dcbae			pending			
-zh:b:laohu.v1.o3	老虎要玩具。	1fc4e571			pending			
-zh:b:laohu.v1.o4	老虎要车车。	a023745d			pending			
-zh:b:laohu.v1.tang	老虎要糖。	428d3251			pending			
-zh:b:laohu.v1.dangao	老虎要蛋糕。	badb42bd			pending			
-zh:b:laohu.v1.mianbao	老虎要面包。	4d912c66			pending			
-zh:b:laohu.v1.putao	老虎要葡萄。	bd4dc0ee			pending			
-zh:b:laohu.v1.o9	老虎要水。	8b30f453			pending			
-zh:b:laohu.v2.pingguo	老虎吃苹果。	947ff878			pending			
-zh:b:laohu.v2.tang	老虎吃糖。	1574b5ab			pending			
-zh:b:laohu.v2.dangao	老虎吃蛋糕。	6e20638b			pending			
-zh:b:laohu.v2.mianbao	老虎吃面包。	3de8ebcc			pending			
-zh:b:laohu.v2.putao	老虎吃葡萄。	0ebe64c8			pending			
-zh:b:laohu.v3.niunai	老虎喝牛奶。	a07ee55e			pending			
-zh:b:laohu.v3.o9	老虎喝水。	add57577			pending			
-zh:b:laohu.v4.o4	老虎睡在车车里。	7d63dbb1			pending			
-zh:b:laohu.v4.o5	老虎睡在外面。	5cd43973			pending			
-zh:b:laohu.v4.o6	老虎睡在家里。	0b27f63d			pending			
-zh:b:laohu.v4.o7	老虎睡在床上。	e86eea8f			pending			
-zh:b:laohu.v5.o5	老虎去外面。	f05ecc43			pending			
-zh:b:laohu.v5.o8	老虎去上厕所。	41907d30			pending			
-zh:b:laohu.v6.o3	老虎玩玩具。	ff537589			pending			
-zh:b:laohu.v6.o4	老虎玩车车。	09116a05			pending			
-zh:b:yeye.v1.niunai	爷爷要牛奶。	ca6f9b83			pending			
-zh:b:yeye.v1.pingguo	爷爷要苹果。	353675e3			pending			
-zh:b:yeye.v1.o3	爷爷要玩具。	952db244			pending			
-zh:b:yeye.v1.o4	爷爷要车车。	41125500			pending			
-zh:b:yeye.v1.tang	爷爷要糖。	01e391e6			pending			
-zh:b:yeye.v1.dangao	爷爷要蛋糕。	3c46825c			pending			
-zh:b:yeye.v1.mianbao	爷爷要面包。	43a8b99b			pending			
-zh:b:yeye.v1.putao	爷爷要葡萄。	55d5b713			pending			
-zh:b:yeye.v1.o9	爷爷要水。	6050aecc			pending			
-zh:b:yeye.v2.pingguo	爷爷吃苹果。	cbbef4b5			pending			
-zh:b:yeye.v2.tang	爷爷吃糖。	2a86a3f0			pending			
-zh:b:yeye.v2.dangao	爷爷吃蛋糕。	c6dca5fa			pending			
-zh:b:yeye.v2.mianbao	爷爷吃面包。	5f27e631			pending			
-zh:b:yeye.v2.putao	爷爷吃葡萄。	64ef6dc5			pending			
-zh:b:yeye.v3.niunai	爷爷喝牛奶。	ecae6097			pending			
-zh:b:yeye.v3.o9	爷爷喝水。	c28c6e08			pending			
-zh:b:yeye.v4.o4	爷爷睡在车车里。	de529964			pending			
-zh:b:yeye.v4.o5	爷爷睡在外面。	52904e70			pending			
-zh:b:yeye.v4.o6	爷爷睡在家里。	06a25f0e			pending			
-zh:b:yeye.v4.o7	爷爷睡在床上。	625f9b84			pending			
-zh:b:yeye.v5.o5	爷爷去外面。	01b3a9ee			pending			
-zh:b:yeye.v5.o8	爷爷去上厕所。	177b0cdb			pending			
-zh:b:yeye.v6.o3	爷爷玩玩具。	f9c729bc			pending			
-zh:b:yeye.v6.o4	爷爷玩车车。	6373dde8			pending			
-zh:b:pet-🐴.v1.niunai	马要牛奶。	a3ed2f0b			pending			
-zh:b:pet-🐴.v1.pingguo	马要苹果。	71f3cadb			pending			
-zh:b:pet-🐴.v1.o3	马要玩具。	ca30946c			pending			
-zh:b:pet-🐴.v1.o4	马要车车。	532f3b78			pending			
-zh:b:pet-🐴.v1.tang	马要糖。	19f6914e			pending			
-zh:b:pet-🐴.v1.dangao	马要蛋糕。	532d46e4			pending			
-zh:b:pet-🐴.v1.mianbao	马要面包。	1ed5ab93			pending			
-zh:b:pet-🐴.v1.putao	马要葡萄。	3aa6150b			pending			
-zh:b:pet-🐴.v1.o9	马要水。	f792b3f4			pending			
-zh:b:pet-🐴.v2.pingguo	马吃苹果。	9ce40e6d			pending			
-zh:b:pet-🐴.v2.tang	马吃糖。	164f91d8			pending			
-zh:b:pet-🐴.v2.dangao	马吃蛋糕。	55d76502			pending			
-zh:b:pet-🐴.v2.mianbao	马吃面包。	aac68e29			pending			
-zh:b:pet-🐴.v2.putao	马吃葡萄。	810787bd			pending			
-zh:b:pet-🐴.v3.niunai	马喝牛奶。	76562b2f			pending			
-zh:b:pet-🐴.v3.o9	马喝水。	715c37e0			pending			
-zh:b:pet-🐴.v4.o4	马睡在车车里。	bc97bd5c			pending			
-zh:b:pet-🐴.v4.o5	马睡在外面。	b0b58d68			pending			
-zh:b:pet-🐴.v4.o6	马睡在家里。	868ae676			pending			
-zh:b:pet-🐴.v4.o7	马睡在床上。	d2d80afc			pending			
-zh:b:pet-🐴.v5.o5	马去外面。	132cb7b6			pending			
-zh:b:pet-🐴.v5.o8	马去上厕所。	a0670423			pending			
-zh:b:pet-🐴.v6.o3	马玩玩具。	d3ef86f4			pending			
-zh:b:pet-🐴.v6.o4	马玩车车。	5b3f8990			pending			
-zh:b:pet-👨.v1.niunai	爸爸要牛奶。	cb2f9919			pending			
-zh:b:pet-👨.v1.pingguo	爸爸要苹果。	e55ce8f9			pending			
-zh:b:pet-👨.v1.o3	爸爸要玩具。	b88f4146			pending			
-zh:b:pet-👨.v1.o4	爸爸要车车。	7feb8146			pending			
-zh:b:pet-👨.v1.tang	爸爸要糖。	c168d5fc			pending			
-zh:b:pet-👨.v1.dangao	爸爸要蛋糕。	968a766e			pending			
-zh:b:pet-👨.v1.mianbao	爸爸要面包。	ac309615			pending			
-zh:b:pet-👨.v1.putao	爸爸要葡萄。	af8b7f19			pending			
-zh:b:pet-👨.v1.o9	爸爸要水。	df7df5d6			pending			
-zh:b:pet-👨.v2.pingguo	爸爸吃苹果。	fb499397			pending			
-zh:b:pet-👨.v2.tang	爸爸吃糖。	27366202			pending			
-zh:b:pet-👨.v2.dangao	爸爸吃蛋糕。	546cf0b0			pending			
-zh:b:pet-👨.v2.mianbao	爸爸吃面包。	d6aadd7f			pending			
-zh:b:pet-👨.v2.putao	爸爸吃葡萄。	fc435af7			pending			
-zh:b:pet-👨.v3.niunai	爸爸喝牛奶。	35ddb025			pending			
-zh:b:pet-👨.v3.o9	爸爸喝水。	bf79d52a			pending			
-zh:b:pet-👨.v4.o4	爸爸睡在车车里。	e0da5dd2			pending			
-zh:b:pet-👨.v4.o5	爸爸睡在外面。	f4cebe9a			pending			
-zh:b:pet-👨.v4.o6	爸爸睡在家里。	86d97504			pending			
-zh:b:pet-👨.v4.o7	爸爸睡在床上。	57749b86			pending			
-zh:b:pet-👨.v5.o5	爸爸去外面。	0f044908			pending			
-zh:b:pet-👨.v5.o8	爸爸去上厕所。	dcaeff15			pending			
-zh:b:pet-👨.v6.o3	爸爸玩玩具。	95e1682e			pending			
-zh:b:pet-👨.v6.o4	爸爸玩车车。	7df0b49e			pending			
-zh:b:pet-🐮.v1.niunai	牛要牛奶。	dc1b799e			pending			
-zh:b:pet-🐮.v1.pingguo	牛要苹果。	518a999a			pending			
-zh:b:pet-🐮.v1.o3	牛要玩具。	021bdf6d			pending			
-zh:b:pet-🐮.v1.o4	牛要车车。	0e233c41			pending			
-zh:b:pet-🐮.v1.tang	牛要糖。	20628bb5			pending			
-zh:b:pet-🐮.v1.dangao	牛要蛋糕。	70a4bc69			pending			
-zh:b:pet-🐮.v1.mianbao	牛要面包。	7b2723c2			pending			
-zh:b:pet-🐮.v1.putao	牛要葡萄。	e4bb5a4a			pending			
-zh:b:pet-🐮.v1.o9	牛要水。	b9c30237			pending			
-zh:b:pet-🐮.v2.pingguo	牛吃苹果。	353c3164			pending			
-zh:b:pet-🐮.v2.tang	牛吃糖。	a7be3a0f			pending			
-zh:b:pet-🐮.v2.dangao	牛吃蛋糕。	ef772de7			pending			
-zh:b:pet-🐮.v2.mianbao	牛吃面包。	e95af128			pending			
-zh:b:pet-🐮.v2.putao	牛吃葡萄。	0a18b594			pending			
-zh:b:pet-🐮.v3.niunai	牛喝牛奶。	964a2af2			pending			
-zh:b:pet-🐮.v3.o9	牛喝水。	7b5ba113			pending			
-zh:b:pet-🐮.v4.o4	牛睡在车车里。	f42ba82d			pending			
-zh:b:pet-🐮.v4.o5	牛睡在外面。	c7d21167			pending			
-zh:b:pet-🐮.v4.o6	牛睡在家里。	f52388a9			pending			
-zh:b:pet-🐮.v4.o7	牛睡在床上。	250fa85b			pending			
-zh:b:pet-🐮.v5.o5	牛去外面。	563d0fdf			pending			
-zh:b:pet-🐮.v5.o8	牛去上厕所。	f1234d74			pending			
-zh:b:pet-🐮.v6.o3	牛玩玩具。	c9b84535			pending			
-zh:b:pet-🐮.v6.o4	牛玩车车。	93290199			pending			
-zh:b:pet-🐘.v1.niunai	大象要牛奶。	583b9241			pending			
-zh:b:pet-🐘.v1.pingguo	大象要苹果。	f0884ef1			pending			
-zh:b:pet-🐘.v1.o3	大象要玩具。	9df070ce			pending			
-zh:b:pet-🐘.v1.o4	大象要车车。	148c2bbe			pending			
-zh:b:pet-🐘.v1.tang	大象要糖。	de75d824			pending			
-zh:b:pet-🐘.v1.dangao	大象要蛋糕。	2364ebd6			pending			
-zh:b:pet-🐘.v1.mianbao	大象要面包。	2a4b044d			pending			
-zh:b:pet-🐘.v1.putao	大象要葡萄。	e7514951			pending			
-zh:b:pet-🐘.v1.o9	大象要水。	7cc4d23e			pending			
-zh:b:pet-🐘.v2.pingguo	大象吃苹果。	7f02ce8f			pending			
-zh:b:pet-🐘.v2.tang	大象吃糖。	c0564a8a			pending			
-zh:b:pet-🐘.v2.dangao	大象吃蛋糕。	f70118d8			pending			
-zh:b:pet-🐘.v2.mianbao	大象吃面包。	daf170b7			pending			
-zh:b:pet-🐘.v2.putao	大象吃葡萄。	96e15a2f			pending			
-zh:b:pet-🐘.v3.niunai	大象喝牛奶。	9d33cf7d			pending			
-zh:b:pet-🐘.v3.o9	大象喝水。	871d2b62			pending			
-zh:b:pet-🐘.v4.o4	大象睡在车车里。	2be5010a			pending			
-zh:b:pet-🐘.v4.o5	大象睡在外面。	0dc9e4f2			pending			
-zh:b:pet-🐘.v4.o6	大象睡在家里。	bd3a060c			pending			
-zh:b:pet-🐘.v4.o7	大象睡在床上。	543e477e			pending			
-zh:b:pet-🐘.v5.o5	大象去外面。	e3eda130			pending			
-zh:b:pet-🐘.v5.o8	大象去上厕所。	8f559f9d			pending			
-zh:b:pet-🐘.v6.o3	大象玩玩具。	e92b9826			pending			
-zh:b:pet-🐘.v6.o4	大象玩车车。	57b3a526			pending			
-zh:b:pet-🐶.v1.niunai	狗要牛奶。	22753fa2			pending			
-zh:b:pet-🐶.v1.pingguo	狗要苹果。	9e235bde			pending			
-zh:b:pet-🐶.v1.o3	狗要玩具。	271cbb81			pending			
-zh:b:pet-🐶.v1.o4	狗要车车。	a70606cd			pending			
-zh:b:pet-🐶.v1.tang	狗要糖。	25131201			pending			
-zh:b:pet-🐶.v1.dangao	狗要蛋糕。	aea6f10d			pending			
-zh:b:pet-🐶.v1.mianbao	狗要面包。	5ad066d6			pending			
-zh:b:pet-🐶.v1.putao	狗要葡萄。	54d0515e			pending			
-zh:b:pet-🐶.v1.o9	狗要水。	6c799f83			pending			
-zh:b:pet-🐶.v2.pingguo	狗吃苹果。	0ea0c1a8			pending			
-zh:b:pet-🐶.v2.tang	狗吃糖。	7191411b			pending			
-zh:b:pet-🐶.v2.dangao	狗吃蛋糕。	02049d9b			pending			
-zh:b:pet-🐶.v2.mianbao	狗吃面包。	cfc7847c			pending			
-zh:b:pet-🐶.v2.putao	狗吃葡萄。	1f747f78			pending			
-zh:b:pet-🐶.v3.niunai	狗喝牛奶。	26d63bee			pending			
-zh:b:pet-🐶.v3.o9	狗喝水。	277e1987			pending			
-zh:b:pet-🐶.v4.o4	狗睡在车车里。	b4442461			pending			
-zh:b:pet-🐶.v4.o5	狗睡在外面。	d3948263			pending			
-zh:b:pet-🐶.v4.o6	狗睡在家里。	450ec02d			pending			
-zh:b:pet-🐶.v4.o7	狗睡在床上。	41be9c1f			pending			
-zh:b:pet-🐶.v5.o5	狗去外面。	8838f1b3			pending			
-zh:b:pet-🐶.v5.o8	狗去上厕所。	f77866c0			pending			
-zh:b:pet-🐶.v6.o3	狗玩玩具。	4157d919			pending			
-zh:b:pet-🐶.v6.o4	狗玩车车。	9e1fedb5			pending			
-zh:b:pet-🐯.v1.niunai	老虎要牛奶。	449e3bb2			pending			
-zh:b:pet-🐯.v1.pingguo	老虎要苹果。	ad2dcbae			pending			
-zh:b:pet-🐯.v1.o3	老虎要玩具。	1fc4e571			pending			
-zh:b:pet-🐯.v1.o4	老虎要车车。	a023745d			pending			
-zh:b:pet-🐯.v1.tang	老虎要糖。	428d3251			pending			
-zh:b:pet-🐯.v1.dangao	老虎要蛋糕。	badb42bd			pending			
-zh:b:pet-🐯.v1.mianbao	老虎要面包。	4d912c66			pending			
-zh:b:pet-🐯.v1.putao	老虎要葡萄。	bd4dc0ee			pending			
-zh:b:pet-🐯.v1.o9	老虎要水。	8b30f453			pending			
-zh:b:pet-🐯.v2.pingguo	老虎吃苹果。	947ff878			pending			
-zh:b:pet-🐯.v2.tang	老虎吃糖。	1574b5ab			pending			
-zh:b:pet-🐯.v2.dangao	老虎吃蛋糕。	6e20638b			pending			
-zh:b:pet-🐯.v2.mianbao	老虎吃面包。	3de8ebcc			pending			
-zh:b:pet-🐯.v2.putao	老虎吃葡萄。	0ebe64c8			pending			
-zh:b:pet-🐯.v3.niunai	老虎喝牛奶。	a07ee55e			pending			
-zh:b:pet-🐯.v3.o9	老虎喝水。	add57577			pending			
-zh:b:pet-🐯.v4.o4	老虎睡在车车里。	7d63dbb1			pending			
-zh:b:pet-🐯.v4.o5	老虎睡在外面。	5cd43973			pending			
-zh:b:pet-🐯.v4.o6	老虎睡在家里。	0b27f63d			pending			
-zh:b:pet-🐯.v4.o7	老虎睡在床上。	e86eea8f			pending			
-zh:b:pet-🐯.v5.o5	老虎去外面。	f05ecc43			pending			
-zh:b:pet-🐯.v5.o8	老虎去上厕所。	41907d30			pending			
-zh:b:pet-🐯.v6.o3	老虎玩玩具。	ff537589			pending			
-zh:b:pet-🐯.v6.o4	老虎玩车车。	09116a05			pending			
-zh:p:🐴.v3.niunai	马喝牛奶。	76562b2f			pending			
-zh:p:🐴.v2.pingguo	马吃苹果。	9ce40e6d			pending			
-zh:p:🐴.v6.o3	马玩玩具。	d3ef86f4			pending			
-zh:p:🐴.v6.o4	马玩车车。	5b3f8990			pending			
-zh:p:🐴.v2.tang	马吃糖。	164f91d8			pending			
-zh:p:🐴.v2.dangao	马吃蛋糕。	55d76502			pending			
-zh:p:🐴.v2.mianbao	马吃面包。	aac68e29			pending			
-zh:p:🐴.v2.putao	马吃葡萄。	810787bd			pending			
-zh:p:🐴.v3.o9	马喝水。	715c37e0			pending			
-zh:p:🐴.v2.-	马吃。	8902b96e			pending			
-zh:p:🐴.v3.-	马喝。	97b5d060			pending			
-zh:p:🐴.v6.-	马玩。	b3b0bf4c			pending			
-zh:p:👨.v3.niunai	爸爸喝牛奶。	35ddb025			pending			
-zh:p:👨.v2.pingguo	爸爸吃苹果。	fb499397			pending			
-zh:p:👨.v6.o3	爸爸玩玩具。	95e1682e			pending			
-zh:p:👨.v6.o4	爸爸玩车车。	7df0b49e			pending			
-zh:p:👨.v2.tang	爸爸吃糖。	27366202			pending			
-zh:p:👨.v2.dangao	爸爸吃蛋糕。	546cf0b0			pending			
-zh:p:👨.v2.mianbao	爸爸吃面包。	d6aadd7f			pending			
-zh:p:👨.v2.putao	爸爸吃葡萄。	fc435af7			pending			
-zh:p:👨.v3.o9	爸爸喝水。	bf79d52a			pending			
-zh:p:👨.v2.-	爸爸吃。	7f994078			pending			
-zh:p:👨.v3.-	爸爸喝。	d0a91016			pending			
-zh:p:👨.v6.-	爸爸玩。	890f700a			pending			
-zh:p:🐮.v3.niunai	牛喝牛奶。	964a2af2			pending			
-zh:p:🐮.v2.pingguo	牛吃苹果。	353c3164			pending			
-zh:p:🐮.v6.o3	牛玩玩具。	c9b84535			pending			
-zh:p:🐮.v6.o4	牛玩车车。	93290199			pending			
-zh:p:🐮.v2.tang	牛吃糖。	a7be3a0f			pending			
-zh:p:🐮.v2.dangao	牛吃蛋糕。	ef772de7			pending			
-zh:p:🐮.v2.mianbao	牛吃面包。	e95af128			pending			
-zh:p:🐮.v2.putao	牛吃葡萄。	0a18b594			pending			
-zh:p:🐮.v3.o9	牛喝水。	7b5ba113			pending			
-zh:p:🐮.v2.-	牛吃。	e01a6bbb			pending			
-zh:p:🐮.v3.-	牛喝。	34363925			pending			
-zh:p:🐮.v6.-	牛玩。	fbc85ef1			pending			
-zh:p:🐘.v3.niunai	大象喝牛奶。	9d33cf7d			pending			
-zh:p:🐘.v2.pingguo	大象吃苹果。	7f02ce8f			pending			
-zh:p:🐘.v6.o3	大象玩玩具。	e92b9826			pending			
-zh:p:🐘.v6.o4	大象玩车车。	57b3a526			pending			
-zh:p:🐘.v2.tang	大象吃糖。	c0564a8a			pending			
-zh:p:🐘.v2.dangao	大象吃蛋糕。	f70118d8			pending			
-zh:p:🐘.v2.mianbao	大象吃面包。	daf170b7			pending			
-zh:p:🐘.v2.putao	大象吃葡萄。	96e15a2f			pending			
-zh:p:🐘.v3.o9	大象喝水。	871d2b62			pending			
-zh:p:🐘.v2.-	大象吃。	a9c46a30			pending			
-zh:p:🐘.v3.-	大象喝。	56396e5e			pending			
-zh:p:🐘.v6.-	大象玩。	220e5652			pending			
-zh:p:🐶.v3.niunai	狗喝牛奶。	26d63bee			pending			
-zh:p:🐶.v2.pingguo	狗吃苹果。	0ea0c1a8			pending			
-zh:p:🐶.v6.o3	狗玩玩具。	4157d919			pending			
-zh:p:🐶.v6.o4	狗玩车车。	9e1fedb5			pending			
-zh:p:🐶.v2.tang	狗吃糖。	7191411b			pending			
-zh:p:🐶.v2.dangao	狗吃蛋糕。	02049d9b			pending			
-zh:p:🐶.v2.mianbao	狗吃面包。	cfc7847c			pending			
-zh:p:🐶.v2.putao	狗吃葡萄。	1f747f78			pending			
-zh:p:🐶.v3.o9	狗喝水。	277e1987			pending			
-zh:p:🐶.v2.-	狗吃。	502a66b7			pending			
-zh:p:🐶.v3.-	狗喝。	d706d069			pending			
-zh:p:🐶.v6.-	狗玩。	d9dffbbd			pending			
-zh:p:🐯.v3.niunai	老虎喝牛奶。	a07ee55e			pending			
-zh:p:🐯.v2.pingguo	老虎吃苹果。	947ff878			pending			
-zh:p:🐯.v6.o3	老虎玩玩具。	ff537589			pending			
-zh:p:🐯.v6.o4	老虎玩车车。	09116a05			pending			
-zh:p:🐯.v2.tang	老虎吃糖。	1574b5ab			pending			
-zh:p:🐯.v2.dangao	老虎吃蛋糕。	6e20638b			pending			
-zh:p:🐯.v2.mianbao	老虎吃面包。	3de8ebcc			pending			
-zh:p:🐯.v2.putao	老虎吃葡萄。	0ebe64c8			pending			
-zh:p:🐯.v3.o9	老虎喝水。	add57577			pending			
-zh:p:🐯.v2.-	老虎吃。	ed728447			pending			
-zh:p:🐯.v3.-	老虎喝。	3960ad19			pending			
-zh:p:🐯.v6.-	老虎玩。	fab4d10d			pending			
-zh:n:niunai	这是牛奶。	9b89d19e			pending			
-zh:n:pingguo	这是苹果。	9f38419a			pending			
-zh:n:o3	这是玩具。	99b1476d			pending			
-zh:n:o4	这是车车。	435ea441			pending			
-zh:n:o6	这是家。	3ef0d7d5			pending			
-zh:n:o7	这是床。	3f28c309			pending			
-zh:n:tang	这是糖。	d06913b5			pending			
-zh:n:dangao	这是蛋糕。	35461469			pending			
-zh:n:mianbao	这是面包。	61a4ebc2			pending			
-zh:n:putao	这是葡萄。	329b624a			pending			
-zh:n:o9	这是水。	1a4a0a37			pending			
+zh:b:s1.v1.niunai	我要牛奶。	f274eb4c	ok		pending			
+zh:b:s1.v1.pingguo	我要苹果。	0f2fa490	ok		pending			
+zh:b:s1.v1.o3	我要玩具。	5892fd3f	ok		pending			
+zh:b:s1.v1.o4	我要车车。	6eed5337	ok		pending			
+zh:b:s1.v1.tang	我要糖。	7a6a7993	ok		pending			
+zh:b:s1.v1.dangao	我要蛋糕。	12041bb3	ok		pending			
+zh:b:s1.v1.mianbao	我要面包。	8df1da64	ok		pending			
+zh:b:s1.v1.putao	我要葡萄。	85eed160	ok		pending			
+zh:b:s1.v1.o9	我要水。	e10a0311	ok		pending			
+zh:b:s1.v2.pingguo	我吃苹果。	c454d3c6	ok		pending			
+zh:b:s1.v2.tang	我吃糖。	b004bd99	ok		pending			
+zh:b:s1.v2.dangao	我吃蛋糕。	bbce3245	ok		pending			
+zh:b:s1.v2.mianbao	我吃面包。	03315ebe	ok		pending			
+zh:b:s1.v2.putao	我吃葡萄。	73820b46	ok		pending			
+zh:b:s1.v3.niunai	我喝牛奶。	44c24d98	ok		pending			
+zh:b:s1.v3.o9	我喝水。	457636c5	ok		pending			
+zh:b:s1.v4.o4	我睡在车车里。	3196fb4b	ok		pending			
+zh:b:s1.v4.o5	我睡在外面。	df7ffdd1	ok		pending			
+zh:b:s1.v4.o6	我睡在家里。	029b305f	ok		pending			
+zh:b:s1.v4.o7	我睡在床上。	221cf9bd	ok		pending			
+zh:b:s1.v5.o5	我去外面。	4e4edf29	ok		pending			
+zh:b:s1.v5.o8	我去上厕所。	8ef4fdbe	ok		pending			
+zh:b:s1.v6.o3	我玩玩具。	d2ad3907	ok		pending			
+zh:b:s1.v6.o4	我玩车车。	d851ca4f	ok		pending			
+zh:b:s2.v1.niunai	妈妈要牛奶。	6771a4d9	ok		pending			
+zh:b:s2.v1.pingguo	妈妈要苹果。	fe0fd439	ok		pending			
+zh:b:s2.v1.o3	妈妈要玩具。	e7591186	ok		pending			
+zh:b:s2.v1.o4	妈妈要车车。	80ea8406	ok		pending			
+zh:b:s2.v1.tang	妈妈要糖。	6f74c8bc	ok		pending			
+zh:b:s2.v1.dangao	妈妈要蛋糕。	7070ac2e	ok		pending			
+zh:b:s2.v1.mianbao	妈妈要面包。	754cec55	ok		pending			
+zh:b:s2.v1.putao	妈妈要葡萄。	bf6c4b59	ok		pending			
+zh:b:s2.v1.o9	妈妈要水。	8ec71d16	ok		pending			
+zh:b:s2.v2.pingguo	妈妈吃苹果。	b8de83d7	ok		pending			
+zh:b:s2.v2.tang	妈妈吃糖。	e97a5cc2	ok		pending			
+zh:b:s2.v2.dangao	妈妈吃蛋糕。	205b7070	ok		pending			
+zh:b:s2.v2.mianbao	妈妈吃面包。	0d2459bf	ok		pending			
+zh:b:s2.v2.putao	妈妈吃葡萄。	b788cf37	ok		pending			
+zh:b:s2.v3.niunai	妈妈喝牛奶。	195c05e5	ok		pending			
+zh:b:s2.v3.o9	妈妈喝水。	d1e3646a	ok		pending			
+zh:b:s2.v4.o4	妈妈睡在车车里。	bbfb8092	ok		pending			
+zh:b:s2.v4.o5	妈妈睡在外面。	597816da	ok		pending			
+zh:b:s2.v4.o6	妈妈睡在家里。	eb188444	ok		pending			
+zh:b:s2.v4.o7	妈妈睡在床上。	69150046	ok		pending			
+zh:b:s2.v5.o5	妈妈去外面。	ffcce848	ok		pending			
+zh:b:s2.v5.o8	妈妈去上厕所。	5dbdb7d5	ok		pending			
+zh:b:s2.v6.o3	妈妈玩玩具。	481d7b6e	ok		pending			
+zh:b:s2.v6.o4	妈妈玩车车。	5c74695e	ok		pending			
+zh:b:s3.v1.niunai	爸爸要牛奶。	cb2f9919	ok		pending			
+zh:b:s3.v1.pingguo	爸爸要苹果。	e55ce8f9	ok		pending			
+zh:b:s3.v1.o3	爸爸要玩具。	b88f4146	ok		pending			
+zh:b:s3.v1.o4	爸爸要车车。	7feb8146	ok		pending			
+zh:b:s3.v1.tang	爸爸要糖。	c168d5fc	ok		pending			
+zh:b:s3.v1.dangao	爸爸要蛋糕。	968a766e	ok		pending			
+zh:b:s3.v1.mianbao	爸爸要面包。	ac309615	ok		pending			
+zh:b:s3.v1.putao	爸爸要葡萄。	af8b7f19	ok		pending			
+zh:b:s3.v1.o9	爸爸要水。	df7df5d6	ok		pending			
+zh:b:s3.v2.pingguo	爸爸吃苹果。	fb499397	ok		pending			
+zh:b:s3.v2.tang	爸爸吃糖。	27366202	ok		pending			
+zh:b:s3.v2.dangao	爸爸吃蛋糕。	546cf0b0	ok		pending			
+zh:b:s3.v2.mianbao	爸爸吃面包。	d6aadd7f	ok		pending			
+zh:b:s3.v2.putao	爸爸吃葡萄。	fc435af7	ok		pending			
+zh:b:s3.v3.niunai	爸爸喝牛奶。	35ddb025	ok		pending			
+zh:b:s3.v3.o9	爸爸喝水。	bf79d52a	ok		pending			
+zh:b:s3.v4.o4	爸爸睡在车车里。	e0da5dd2	ok		pending			
+zh:b:s3.v4.o5	爸爸睡在外面。	f4cebe9a	ok		pending			
+zh:b:s3.v4.o6	爸爸睡在家里。	86d97504	ok		pending			
+zh:b:s3.v4.o7	爸爸睡在床上。	57749b86	ok		pending			
+zh:b:s3.v5.o5	爸爸去外面。	0f044908	ok		pending			
+zh:b:s3.v5.o8	爸爸去上厕所。	dcaeff15	ok		pending			
+zh:b:s3.v6.o3	爸爸玩玩具。	95e1682e	ok		pending			
+zh:b:s3.v6.o4	爸爸玩车车。	7df0b49e	ok		pending			
+zh:b:s4.v1.niunai	奶奶要牛奶。	6d4e04d9	ok		pending			
+zh:b:s4.v1.pingguo	奶奶要苹果。	21a53439	ok		pending			
+zh:b:s4.v1.o3	奶奶要玩具。	b000f186	ok		pending			
+zh:b:s4.v1.o4	奶奶要车车。	81182406	ok		pending			
+zh:b:s4.v1.tang	奶奶要糖。	04fe68bc	ok		pending			
+zh:b:s4.v1.dangao	奶奶要蛋糕。	0e6f0c2e	ok		pending			
+zh:b:s4.v1.mianbao	奶奶要面包。	74b10c55	ok		pending			
+zh:b:s4.v1.putao	奶奶要葡萄。	bf99eb59	ok		pending			
+zh:b:s4.v1.o9	奶奶要水。	2450bd16	ok		pending			
+zh:b:s4.v2.pingguo	奶奶吃苹果。	766563d7	ok		pending			
+zh:b:s4.v2.tang	奶奶吃糖。	5e407cc2	ok		pending			
+zh:b:s4.v2.dangao	奶奶吃蛋糕。	deabd070	ok		pending			
+zh:b:s4.v2.mianbao	奶奶吃面包。	efa5f9bf	ok		pending			
+zh:b:s4.v2.putao	奶奶吃葡萄。	5cd5ef37	ok		pending			
+zh:b:s4.v3.niunai	奶奶喝牛奶。	c8aa65e5	ok		pending			
+zh:b:s4.v3.o9	奶奶喝水。	46a9846a	ok		pending			
+zh:b:s4.v4.o4	奶奶睡在车车里。	f9d76092	ok		pending			
+zh:b:s4.v4.o5	奶奶睡在外面。	93f0b6da	ok		pending			
+zh:b:s4.v4.o6	奶奶睡在家里。	9ffa2444	ok		pending			
+zh:b:s4.v4.o7	奶奶睡在床上。	e18ba046	ok		pending			
+zh:b:s4.v5.o5	奶奶去外面。	99ec0848	ok		pending			
+zh:b:s4.v5.o8	奶奶去上厕所。	0bd8d7d5	ok		pending			
+zh:b:s4.v6.o3	奶奶玩玩具。	13991b6e	ok		pending			
+zh:b:s4.v6.o4	奶奶玩车车。	6c66495e	ok		pending			
+zh:b:gou.v1.niunai	狗狗要牛奶。	f949e1c3	ok		pending			
+zh:b:gou.v1.pingguo	狗狗要苹果。	6bc63aa3	ok		pending			
+zh:b:gou.v1.o3	狗狗要玩具。	b9e71504	ok		pending			
+zh:b:gou.v1.o4	狗狗要车车。	a412da40	ok		pending			
+zh:b:gou.v1.tang	狗狗要糖。	0f2d9b26	ok		pending			
+zh:b:gou.v1.dangao	狗狗要蛋糕。	cea9e69c	ok		pending			
+zh:b:gou.v1.mianbao	狗狗要面包。	dece1a5b	ok		pending			
+zh:b:gou.v1.putao	狗狗要葡萄。	328a41d3	ok		pending			
+zh:b:gou.v1.o9	狗狗要水。	c19b558c	ok		pending			
+zh:b:gou.v2.pingguo	狗狗吃苹果。	c4d38075	ok		pending			
+zh:b:gou.v2.tang	狗狗吃糖。	3cb33c30	ok		pending			
+zh:b:gou.v2.dangao	狗狗吃蛋糕。	e165bb3a	ok		pending			
+zh:b:gou.v2.mianbao	狗狗吃面包。	7f58a8f1	ok		pending			
+zh:b:gou.v2.putao	狗狗吃葡萄。	d0645a85	ok		pending			
+zh:b:gou.v3.niunai	狗狗喝牛奶。	94daa6d7	ok		pending			
+zh:b:gou.v3.o9	狗狗喝水。	efaf7cc8	ok		pending			
+zh:b:gou.v4.o4	狗狗睡在车车里。	7b9546a4	ok		pending			
+zh:b:gou.v4.o5	狗狗睡在外面。	a4cbb430	ok		pending			
+zh:b:gou.v4.o6	狗狗睡在家里。	314f42ce	ok		pending			
+zh:b:gou.v4.o7	狗狗睡在床上。	b143edc4	ok		pending			
+zh:b:gou.v5.o5	狗狗去外面。	21eaa6ae	ok		pending			
+zh:b:gou.v5.o8	狗狗去上厕所。	9e76b91b	ok		pending			
+zh:b:gou.v6.o3	狗狗玩玩具。	f33c337c	ok		pending			
+zh:b:gou.v6.o4	狗狗玩车车。	647eaa28	ok		pending			
+zh:b:didi.v1.niunai	弟弟要牛奶。	2e9423d3	ok		pending			
+zh:b:didi.v1.pingguo	弟弟要苹果。	4d381ab3	ok		pending			
+zh:b:didi.v1.o3	弟弟要玩具。	823a10f4	ok		pending			
+zh:b:didi.v1.o4	弟弟要车车。	0d8e2790	ok		pending			
+zh:b:didi.v1.tang	弟弟要糖。	5a0d0176	ok		pending			
+zh:b:didi.v1.dangao	弟弟要蛋糕。	d1bfb00c	ok		pending			
+zh:b:didi.v1.mianbao	弟弟要面包。	3071f9eb	ok		pending			
+zh:b:didi.v1.putao	弟弟要葡萄。	e91dc563	ok		pending			
+zh:b:didi.v1.o9	弟弟要水。	b87a1e5c	ok		pending			
+zh:b:didi.v2.pingguo	弟弟吃苹果。	6c865e45	ok		pending			
+zh:b:didi.v2.tang	弟弟吃糖。	3799d680	ok		pending			
+zh:b:didi.v2.dangao	弟弟吃蛋糕。	f6ef04aa	ok		pending			
+zh:b:didi.v2.mianbao	弟弟吃面包。	cf9a3f81	ok		pending			
+zh:b:didi.v2.putao	弟弟吃葡萄。	41c8e515	ok		pending			
+zh:b:didi.v3.niunai	弟弟喝牛奶。	e1380807	ok		pending			
+zh:b:didi.v3.o9	弟弟喝水。	f53fe4b8	ok		pending			
+zh:b:didi.v4.o4	弟弟睡在车车里。	0880c434	ok		pending			
+zh:b:didi.v4.o5	弟弟睡在外面。	05979f80	ok		pending			
+zh:b:didi.v4.o6	弟弟睡在家里。	3386205e	ok		pending			
+zh:b:didi.v4.o7	弟弟睡在床上。	4dcf7534	ok		pending			
+zh:b:didi.v5.o5	弟弟去外面。	7868f37e	ok		pending			
+zh:b:didi.v5.o8	弟弟去上厕所。	ab0f26cb	ok		pending			
+zh:b:didi.v6.o3	弟弟玩玩具。	b7883a6c	ok		pending			
+zh:b:didi.v6.o4	弟弟玩车车。	d0ef9578	ok		pending			
+zh:b:niu.v1.niunai	牛要牛奶。	dc1b799e	ok		pending			
+zh:b:niu.v1.pingguo	牛要苹果。	518a999a	ok		pending			
+zh:b:niu.v1.o3	牛要玩具。	021bdf6d	ok		pending			
+zh:b:niu.v1.o4	牛要车车。	0e233c41	ok		pending			
+zh:b:niu.v1.tang	牛要糖。	20628bb5	ok		pending			
+zh:b:niu.v1.dangao	牛要蛋糕。	70a4bc69	ok		pending			
+zh:b:niu.v1.mianbao	牛要面包。	7b2723c2	ok		pending			
+zh:b:niu.v1.putao	牛要葡萄。	e4bb5a4a	ok		pending			
+zh:b:niu.v1.o9	牛要水。	b9c30237	ok		pending			
+zh:b:niu.v2.pingguo	牛吃苹果。	353c3164	ok		pending			
+zh:b:niu.v2.tang	牛吃糖。	a7be3a0f	ok		pending			
+zh:b:niu.v2.dangao	牛吃蛋糕。	ef772de7	ok		pending			
+zh:b:niu.v2.mianbao	牛吃面包。	e95af128	ok		pending			
+zh:b:niu.v2.putao	牛吃葡萄。	0a18b594	ok		pending			
+zh:b:niu.v3.niunai	牛喝牛奶。	964a2af2	ok		pending			
+zh:b:niu.v3.o9	牛喝水。	7b5ba113	ok		pending			
+zh:b:niu.v4.o4	牛睡在车车里。	f42ba82d	ok		pending			
+zh:b:niu.v4.o5	牛睡在外面。	c7d21167	ok		pending			
+zh:b:niu.v4.o6	牛睡在家里。	f52388a9	ok		pending			
+zh:b:niu.v4.o7	牛睡在床上。	250fa85b	ok		pending			
+zh:b:niu.v5.o5	牛去外面。	563d0fdf	ok		pending			
+zh:b:niu.v5.o8	牛去上厕所。	f1234d74	ok		pending			
+zh:b:niu.v6.o3	牛玩玩具。	c9b84535	ok		pending			
+zh:b:niu.v6.o4	牛玩车车。	93290199	ok		pending			
+zh:b:gege.v1.niunai	哥哥要牛奶。	e8e9d967	ok		pending			
+zh:b:gege.v1.pingguo	哥哥要苹果。	ac1b6987	ok		pending			
+zh:b:gege.v1.o3	哥哥要玩具。	841fe768	ok		pending			
+zh:b:gege.v1.o4	哥哥要车车。	aa2f699c	ok		pending			
+zh:b:gege.v1.tang	哥哥要糖。	e23421b2	ok		pending			
+zh:b:gege.v1.dangao	哥哥要蛋糕。	78318140	ok		pending			
+zh:b:gege.v1.mianbao	哥哥要面包。	551bafef	ok		pending			
+zh:b:gege.v1.putao	哥哥要葡萄。	8da21b67	ok		pending			
+zh:b:gege.v1.o9	哥哥要水。	c1a498d8	ok		pending			
+zh:b:gege.v2.pingguo	哥哥吃苹果。	4938cae9	ok		pending			
+zh:b:gege.v2.tang	哥哥吃糖。	026e75ac	ok		pending			
+zh:b:gege.v2.dangao	哥哥吃蛋糕。	8f2022fe	ok		pending			
+zh:b:gege.v2.mianbao	哥哥吃面包。	76cd3885	ok		pending			
+zh:b:gege.v2.putao	哥哥吃葡萄。	4ace3589	ok		pending			
+zh:b:gege.v3.niunai	哥哥喝牛奶。	5fd46033	ok		pending			
+zh:b:gege.v3.o9	哥哥喝水。	546b327c	ok		pending			
+zh:b:gege.v4.o4	哥哥睡在车车里。	e65b2d78	ok		pending			
+zh:b:gege.v4.o5	哥哥睡在外面。	47e984ac	ok		pending			
+zh:b:gege.v4.o6	哥哥睡在家里。	2684c652	ok		pending			
+zh:b:gege.v4.o7	哥哥睡在床上。	f34cbd08	ok		pending			
+zh:b:gege.v5.o5	哥哥去外面。	68b34bf2	ok		pending			
+zh:b:gege.v5.o8	哥哥去上厕所。	b1ca87a7	ok		pending			
+zh:b:gege.v6.o3	哥哥玩玩具。	a56de2d0	ok		pending			
+zh:b:gege.v6.o4	哥哥玩车车。	39902db4	ok		pending			
+zh:b:laohu.v1.niunai	老虎要牛奶。	449e3bb2	ok		pending			
+zh:b:laohu.v1.pingguo	老虎要苹果。	ad2dcbae	ok		pending			
+zh:b:laohu.v1.o3	老虎要玩具。	1fc4e571	ok		pending			
+zh:b:laohu.v1.o4	老虎要车车。	a023745d	ok		pending			
+zh:b:laohu.v1.tang	老虎要糖。	428d3251	ok		pending			
+zh:b:laohu.v1.dangao	老虎要蛋糕。	badb42bd	ok		pending			
+zh:b:laohu.v1.mianbao	老虎要面包。	4d912c66	ok		pending			
+zh:b:laohu.v1.putao	老虎要葡萄。	bd4dc0ee	ok		pending			
+zh:b:laohu.v1.o9	老虎要水。	8b30f453	ok		pending			
+zh:b:laohu.v2.pingguo	老虎吃苹果。	947ff878	ok		pending			
+zh:b:laohu.v2.tang	老虎吃糖。	1574b5ab	ok		pending			
+zh:b:laohu.v2.dangao	老虎吃蛋糕。	6e20638b	ok		pending			
+zh:b:laohu.v2.mianbao	老虎吃面包。	3de8ebcc	ok		pending			
+zh:b:laohu.v2.putao	老虎吃葡萄。	0ebe64c8	ok		pending			
+zh:b:laohu.v3.niunai	老虎喝牛奶。	a07ee55e	ok		pending			
+zh:b:laohu.v3.o9	老虎喝水。	add57577	ok		pending			
+zh:b:laohu.v4.o4	老虎睡在车车里。	7d63dbb1	ok		pending			
+zh:b:laohu.v4.o5	老虎睡在外面。	5cd43973	ok		pending			
+zh:b:laohu.v4.o6	老虎睡在家里。	0b27f63d	ok		pending			
+zh:b:laohu.v4.o7	老虎睡在床上。	e86eea8f	ok		pending			
+zh:b:laohu.v5.o5	老虎去外面。	f05ecc43	ok		pending			
+zh:b:laohu.v5.o8	老虎去上厕所。	41907d30	ok		pending			
+zh:b:laohu.v6.o3	老虎玩玩具。	ff537589	ok		pending			
+zh:b:laohu.v6.o4	老虎玩车车。	09116a05	ok		pending			
+zh:b:yeye.v1.niunai	爷爷要牛奶。	ca6f9b83	ok		pending			
+zh:b:yeye.v1.pingguo	爷爷要苹果。	353675e3	ok		pending			
+zh:b:yeye.v1.o3	爷爷要玩具。	952db244	ok		pending			
+zh:b:yeye.v1.o4	爷爷要车车。	41125500	ok		pending			
+zh:b:yeye.v1.tang	爷爷要糖。	01e391e6	ok		pending			
+zh:b:yeye.v1.dangao	爷爷要蛋糕。	3c46825c	ok		pending			
+zh:b:yeye.v1.mianbao	爷爷要面包。	43a8b99b	ok		pending			
+zh:b:yeye.v1.putao	爷爷要葡萄。	55d5b713	ok		pending			
+zh:b:yeye.v1.o9	爷爷要水。	6050aecc	ok		pending			
+zh:b:yeye.v2.pingguo	爷爷吃苹果。	cbbef4b5	ok		pending			
+zh:b:yeye.v2.tang	爷爷吃糖。	2a86a3f0	ok		pending			
+zh:b:yeye.v2.dangao	爷爷吃蛋糕。	c6dca5fa	ok		pending			
+zh:b:yeye.v2.mianbao	爷爷吃面包。	5f27e631	ok		pending			
+zh:b:yeye.v2.putao	爷爷吃葡萄。	64ef6dc5	ok		pending			
+zh:b:yeye.v3.niunai	爷爷喝牛奶。	ecae6097	ok		pending			
+zh:b:yeye.v3.o9	爷爷喝水。	c28c6e08	ok		pending			
+zh:b:yeye.v4.o4	爷爷睡在车车里。	de529964	ok		pending			
+zh:b:yeye.v4.o5	爷爷睡在外面。	52904e70	ok		pending			
+zh:b:yeye.v4.o6	爷爷睡在家里。	06a25f0e	ok		pending			
+zh:b:yeye.v4.o7	爷爷睡在床上。	625f9b84	ok		pending			
+zh:b:yeye.v5.o5	爷爷去外面。	01b3a9ee	ok		pending			
+zh:b:yeye.v5.o8	爷爷去上厕所。	177b0cdb	ok		pending			
+zh:b:yeye.v6.o3	爷爷玩玩具。	f9c729bc	ok		pending			
+zh:b:yeye.v6.o4	爷爷玩车车。	6373dde8	ok		pending			
+zh:b:pet-🐴.v1.niunai	马要牛奶。	a3ed2f0b	ok		pending			
+zh:b:pet-🐴.v1.pingguo	马要苹果。	71f3cadb	ok		pending			
+zh:b:pet-🐴.v1.o3	马要玩具。	ca30946c	ok		pending			
+zh:b:pet-🐴.v1.o4	马要车车。	532f3b78	ok		pending			
+zh:b:pet-🐴.v1.tang	马要糖。	19f6914e	ok		pending			
+zh:b:pet-🐴.v1.dangao	马要蛋糕。	532d46e4	ok		pending			
+zh:b:pet-🐴.v1.mianbao	马要面包。	1ed5ab93	ok		pending			
+zh:b:pet-🐴.v1.putao	马要葡萄。	3aa6150b	ok		pending			
+zh:b:pet-🐴.v1.o9	马要水。	f792b3f4	ok		pending			
+zh:b:pet-🐴.v2.pingguo	马吃苹果。	9ce40e6d	ok		pending			
+zh:b:pet-🐴.v2.tang	马吃糖。	164f91d8	ok		pending			
+zh:b:pet-🐴.v2.dangao	马吃蛋糕。	55d76502	ok		pending			
+zh:b:pet-🐴.v2.mianbao	马吃面包。	aac68e29	ok		pending			
+zh:b:pet-🐴.v2.putao	马吃葡萄。	810787bd	ok		pending			
+zh:b:pet-🐴.v3.niunai	马喝牛奶。	76562b2f	ok		pending			
+zh:b:pet-🐴.v3.o9	马喝水。	715c37e0	ok		pending			
+zh:b:pet-🐴.v4.o4	马睡在车车里。	bc97bd5c	ok		pending			
+zh:b:pet-🐴.v4.o5	马睡在外面。	b0b58d68	ok		pending			
+zh:b:pet-🐴.v4.o6	马睡在家里。	868ae676	ok		pending			
+zh:b:pet-🐴.v4.o7	马睡在床上。	d2d80afc	ok		pending			
+zh:b:pet-🐴.v5.o5	马去外面。	132cb7b6	ok		pending			
+zh:b:pet-🐴.v5.o8	马去上厕所。	a0670423	ok		pending			
+zh:b:pet-🐴.v6.o3	马玩玩具。	d3ef86f4	ok		pending			
+zh:b:pet-🐴.v6.o4	马玩车车。	5b3f8990	ok		pending			
+zh:b:pet-🐘.v1.niunai	大象要牛奶。	583b9241	ok		pending			
+zh:b:pet-🐘.v1.pingguo	大象要苹果。	f0884ef1	ok		pending			
+zh:b:pet-🐘.v1.o3	大象要玩具。	9df070ce	ok		pending			
+zh:b:pet-🐘.v1.o4	大象要车车。	148c2bbe	ok		pending			
+zh:b:pet-🐘.v1.tang	大象要糖。	de75d824	ok		pending			
+zh:b:pet-🐘.v1.dangao	大象要蛋糕。	2364ebd6	ok		pending			
+zh:b:pet-🐘.v1.mianbao	大象要面包。	2a4b044d	ok		pending			
+zh:b:pet-🐘.v1.putao	大象要葡萄。	e7514951	ok		pending			
+zh:b:pet-🐘.v1.o9	大象要水。	7cc4d23e	ok		pending			
+zh:b:pet-🐘.v2.pingguo	大象吃苹果。	7f02ce8f	ok		pending			
+zh:b:pet-🐘.v2.tang	大象吃糖。	c0564a8a	ok		pending			
+zh:b:pet-🐘.v2.dangao	大象吃蛋糕。	f70118d8	ok		pending			
+zh:b:pet-🐘.v2.mianbao	大象吃面包。	daf170b7	ok		pending			
+zh:b:pet-🐘.v2.putao	大象吃葡萄。	96e15a2f	ok		pending			
+zh:b:pet-🐘.v3.niunai	大象喝牛奶。	9d33cf7d	ok		pending			
+zh:b:pet-🐘.v3.o9	大象喝水。	871d2b62	ok		pending			
+zh:b:pet-🐘.v4.o4	大象睡在车车里。	2be5010a	ok		pending			
+zh:b:pet-🐘.v4.o5	大象睡在外面。	0dc9e4f2	ok		pending			
+zh:b:pet-🐘.v4.o6	大象睡在家里。	bd3a060c	ok		pending			
+zh:b:pet-🐘.v4.o7	大象睡在床上。	543e477e	ok		pending			
+zh:b:pet-🐘.v5.o5	大象去外面。	e3eda130	ok		pending			
+zh:b:pet-🐘.v5.o8	大象去上厕所。	8f559f9d	ok		pending			
+zh:b:pet-🐘.v6.o3	大象玩玩具。	e92b9826	ok		pending			
+zh:b:pet-🐘.v6.o4	大象玩车车。	57b3a526	ok		pending			
+zh:p:🐴.v3.niunai	马喝牛奶。	76562b2f	ok		pending			
+zh:p:🐴.v2.pingguo	马吃苹果。	9ce40e6d	ok		pending			
+zh:p:🐴.v6.o3	马玩玩具。	d3ef86f4	ok		pending			
+zh:p:🐴.v6.o4	马玩车车。	5b3f8990	ok		pending			
+zh:p:🐴.v2.tang	马吃糖。	164f91d8	ok		pending			
+zh:p:🐴.v2.dangao	马吃蛋糕。	55d76502	ok		pending			
+zh:p:🐴.v2.mianbao	马吃面包。	aac68e29	ok		pending			
+zh:p:🐴.v2.putao	马吃葡萄。	810787bd	ok		pending			
+zh:p:🐴.v3.o9	马喝水。	715c37e0	ok		pending			
+zh:p:🐴.v2.-	马吃。	8902b96e	ok		pending			
+zh:p:🐴.v3.-	马喝。	97b5d060	ok		pending			
+zh:p:🐴.v6.-	马玩。	b3b0bf4c	ok		pending			
+zh:p:👨.v3.niunai	爸爸喝牛奶。	35ddb025	ok		pending			
+zh:p:👨.v2.pingguo	爸爸吃苹果。	fb499397	ok		pending			
+zh:p:👨.v6.o3	爸爸玩玩具。	95e1682e	ok		pending			
+zh:p:👨.v6.o4	爸爸玩车车。	7df0b49e	ok		pending			
+zh:p:👨.v2.tang	爸爸吃糖。	27366202	ok		pending			
+zh:p:👨.v2.dangao	爸爸吃蛋糕。	546cf0b0	ok		pending			
+zh:p:👨.v2.mianbao	爸爸吃面包。	d6aadd7f	ok		pending			
+zh:p:👨.v2.putao	爸爸吃葡萄。	fc435af7	ok		pending			
+zh:p:👨.v3.o9	爸爸喝水。	bf79d52a	ok		pending			
+zh:p:👨.v2.-	爸爸吃。	7f994078	ok		pending			
+zh:p:👨.v3.-	爸爸喝。	d0a91016	ok		pending			
+zh:p:👨.v6.-	爸爸玩。	890f700a	ok		pending			
+zh:p:🐮.v3.niunai	牛喝牛奶。	964a2af2	ok		pending			
+zh:p:🐮.v2.pingguo	牛吃苹果。	353c3164	ok		pending			
+zh:p:🐮.v6.o3	牛玩玩具。	c9b84535	ok		pending			
+zh:p:🐮.v6.o4	牛玩车车。	93290199	ok		pending			
+zh:p:🐮.v2.tang	牛吃糖。	a7be3a0f	ok		pending			
+zh:p:🐮.v2.dangao	牛吃蛋糕。	ef772de7	ok		pending			
+zh:p:🐮.v2.mianbao	牛吃面包。	e95af128	ok		pending			
+zh:p:🐮.v2.putao	牛吃葡萄。	0a18b594	ok		pending			
+zh:p:🐮.v3.o9	牛喝水。	7b5ba113	ok		pending			
+zh:p:🐮.v2.-	牛吃。	e01a6bbb	ok		pending			
+zh:p:🐮.v3.-	牛喝。	34363925	ok		pending			
+zh:p:🐮.v6.-	牛玩。	fbc85ef1	ok		pending			
+zh:p:🐘.v3.niunai	大象喝牛奶。	9d33cf7d	ok		pending			
+zh:p:🐘.v2.pingguo	大象吃苹果。	7f02ce8f	ok		pending			
+zh:p:🐘.v6.o3	大象玩玩具。	e92b9826	ok		pending			
+zh:p:🐘.v6.o4	大象玩车车。	57b3a526	ok		pending			
+zh:p:🐘.v2.tang	大象吃糖。	c0564a8a	ok		pending			
+zh:p:🐘.v2.dangao	大象吃蛋糕。	f70118d8	ok		pending			
+zh:p:🐘.v2.mianbao	大象吃面包。	daf170b7	ok		pending			
+zh:p:🐘.v2.putao	大象吃葡萄。	96e15a2f	ok		pending			
+zh:p:🐘.v3.o9	大象喝水。	871d2b62	ok		pending			
+zh:p:🐘.v2.-	大象吃。	a9c46a30	ok		pending			
+zh:p:🐘.v3.-	大象喝。	56396e5e	ok		pending			
+zh:p:🐘.v6.-	大象玩。	220e5652	ok		pending			
+zh:p:🐶.v3.niunai	狗喝牛奶。	26d63bee	ok		pending			
+zh:p:🐶.v2.pingguo	狗吃苹果。	0ea0c1a8	ok		pending			
+zh:p:🐶.v6.o3	狗玩玩具。	4157d919	ok		pending			
+zh:p:🐶.v6.o4	狗玩车车。	9e1fedb5	ok		pending			
+zh:p:🐶.v2.tang	狗吃糖。	7191411b	ok		pending			
+zh:p:🐶.v2.dangao	狗吃蛋糕。	02049d9b	ok		pending			
+zh:p:🐶.v2.mianbao	狗吃面包。	cfc7847c	ok		pending			
+zh:p:🐶.v2.putao	狗吃葡萄。	1f747f78	ok		pending			
+zh:p:🐶.v3.o9	狗喝水。	277e1987	ok		pending			
+zh:p:🐶.v2.-	狗吃。	502a66b7	ok		pending			
+zh:p:🐶.v3.-	狗喝。	d706d069	ok		pending			
+zh:p:🐶.v6.-	狗玩。	d9dffbbd	ok		pending			
+zh:p:🐯.v3.niunai	老虎喝牛奶。	a07ee55e	ok		pending			
+zh:p:🐯.v2.pingguo	老虎吃苹果。	947ff878	ok		pending			
+zh:p:🐯.v6.o3	老虎玩玩具。	ff537589	ok		pending			
+zh:p:🐯.v6.o4	老虎玩车车。	09116a05	ok		pending			
+zh:p:🐯.v2.tang	老虎吃糖。	1574b5ab	ok		pending			
+zh:p:🐯.v2.dangao	老虎吃蛋糕。	6e20638b	ok		pending			
+zh:p:🐯.v2.mianbao	老虎吃面包。	3de8ebcc	ok		pending			
+zh:p:🐯.v2.putao	老虎吃葡萄。	0ebe64c8	ok		pending			
+zh:p:🐯.v3.o9	老虎喝水。	add57577	ok		pending			
+zh:p:🐯.v2.-	老虎吃。	ed728447	ok		pending			
+zh:p:🐯.v3.-	老虎喝。	3960ad19	ok		pending			
+zh:p:🐯.v6.-	老虎玩。	fab4d10d	ok		pending			
+zh:n:niunai	这是牛奶。	9b89d19e	ok		pending			
+zh:n:pingguo	这是苹果。	9f38419a	ok		pending			
+zh:n:o3	这是玩具。	99b1476d	ok		pending			
+zh:n:o4	这是车车。	435ea441	ok		pending			
+zh:n:o6	这是家。	3ef0d7d5	ok		pending			
+zh:n:o7	这是床。	3f28c309	ok		pending			
+zh:n:tang	这是糖。	d06913b5	ok		pending			
+zh:n:dangao	这是蛋糕。	35461469	ok		pending			
+zh:n:mianbao	这是面包。	61a4ebc2	ok		pending			
+zh:n:putao	这是葡萄。	329b624a	ok		pending			
+zh:n:o9	这是水。	1a4a0a37	ok		pending			

@@ -86,8 +86,14 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
     final pack = _pack;
     return switch (p.unlockedBy) {
       TileUnlock.always => true,
-      TileUnlock.vocab =>
-        pack != null && ProgressService.instance.hasWord(pack.id, p.id),
+      // Slovo z batohu; podmět-zvířátko odemkne i jeho nálepka ze
+      // Zvěřince (jedna dlaždice pro obojí, ne dvě stejné).
+      TileUnlock.vocab => pack != null &&
+          (ProgressService.instance.hasWord(pack.id, p.id) ||
+              (p.kind != null &&
+                  ProgressService.instance
+                      .collectibles(pack.id)
+                      .contains(p.emoji))),
       TileUnlock.sticker => pack != null &&
           ProgressService.instance.collectibles(pack.id).contains(p.emoji),
     };

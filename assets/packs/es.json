@@ -2385,7 +2385,7 @@
       {
         "id": "s5",
         "emoji": "🐶",
-        "text": "Perrito",
+        "text": "El perrito",
         "unlockedBy": "always",
         "person": "3sg",
         "kind": "animal"
@@ -2393,7 +2393,7 @@
       {
         "id": "pato",
         "emoji": "🦆",
-        "text": "Pato",
+        "text": "El pato",
         "unlockedBy": "vocab",
         "person": "3sg",
         "kind": "animal"
@@ -2401,7 +2401,7 @@
       {
         "id": "raton",
         "emoji": "🐭",
-        "text": "Ratón",
+        "text": "El ratón",
         "unlockedBy": "vocab",
         "person": "3sg",
         "kind": "animal"
@@ -2409,7 +2409,7 @@
       {
         "id": "gato",
         "emoji": "🐱",
-        "text": "Gato",
+        "text": "El gato",
         "unlockedBy": "vocab",
         "person": "3sg",
         "kind": "animal"
@@ -2417,7 +2417,7 @@
       {
         "id": "tortuga",
         "emoji": "🐢",
-        "text": "Tortuga",
+        "text": "La tortuga",
         "unlockedBy": "vocab",
         "person": "3sg",
         "kind": "animal"
@@ -2425,7 +2425,7 @@
       {
         "id": "vaca",
         "emoji": "🐮",
-        "text": "Vaca",
+        "text": "La vaca",
         "unlockedBy": "vocab",
         "person": "3sg",
         "kind": "animal"

@@ -1,6 +1,12 @@
 # Plán: věty, které jsou správně a dávají smysl — ve všech jazycích
 
-Stav (6. 10. 2026): fáze 0 (v2.14.1), fáze 1 a 2 (v2.15.0) hotové —
+Stav (6. 10. 2026): **fáze 0–3 hotové, fáze 4 připravená** (nástroje
+a návod `docs/SENTENCES_REVIEW.md`; čeká na rodilé mluvčí — `human` je
+všude `pending`). Fáze 3: první strojový průchod všech 9 jazyků udělal
+Claude v relaci (API klíč nebyl k dispozici), nálezy v `review/NOTES.md`;
+`tool/sentences/llm_review.dart` je připravený na další kola.
+
+Fáze 0 (v2.14.1), fáze 1 a 2 (v2.15.0) —
 korpus, pravidla a výslovné tvary ve všech 9 packech; z 1 200–2 100 vět na
 jazyk (68–100 s tichým základním tvarem) zbylo 470–800 a žádný tichý tvar.
 Odchylky: nástroje běží přes `flutter test` (datový model používá Flutter),

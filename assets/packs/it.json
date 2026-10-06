@@ -2331,7 +2331,7 @@
       {
         "id": "s5",
         "emoji": "🐶",
-        "text": "Cucciolo",
+        "text": "Il cucciolo",
         "unlockedBy": "always",
         "person": "3sg",
         "kind": "animal"
@@ -2339,7 +2339,7 @@
       {
         "id": "topo",
         "emoji": "🐭",
-        "text": "Topo",
+        "text": "Il topo",
         "unlockedBy": "vocab",
         "person": "3sg",
         "kind": "animal"
@@ -2347,7 +2347,7 @@
       {
         "id": "cane",
         "emoji": "🐕",
-        "text": "Cane",
+        "text": "Il cane",
         "unlockedBy": "vocab",
         "person": "3sg",
         "kind": "animal"
@@ -2355,7 +2355,7 @@
       {
         "id": "gatto",
         "emoji": "🐱",
-        "text": "Gatto",
+        "text": "Il gatto",
         "unlockedBy": "vocab",
         "person": "3sg",
         "kind": "animal"
@@ -2363,7 +2363,7 @@
       {
         "id": "volpe",
         "emoji": "🦊",
-        "text": "Volpe",
+        "text": "La volpe",
         "unlockedBy": "vocab",
         "person": "3sg",
         "kind": "animal"
@@ -2508,12 +2508,12 @@
       {
         "id": "o3",
         "emoji": "🧸",
-        "text": "un gioco",
+        "text": "un giocattolo",
         "unlockedBy": "always",
         "forms": {
-          "nom": "un gioco",
-          "acc": "un gioco",
-          "instr": "con un gioco"
+          "nom": "un giocattolo",
+          "acc": "un giocattolo",
+          "instr": "con un giocattolo"
         },
         "tags": [
           "toy"

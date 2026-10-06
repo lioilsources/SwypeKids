@@ -1,765 +1,669 @@
 id	text	hash	llm	llm_note	human	human_note	reviewer	date
-en:b:s1.v1.o1	I want milk.	78f9a279			pending			
-en:b:s1.v1.o2	I want an apple.	8e962875			pending			
-en:b:s1.v1.o3	I want a toy.	4bb9f00d			pending			
-en:b:s1.v1.o4	I want the car.	8050609b			pending			
-en:b:s1.v1.cup	I want a cup.	0333784d			pending			
-en:b:s1.v1.cap	I want a cap.	c7c4ceb1			pending			
-en:b:s1.v1.pot	I want a pot.	0538fb20			pending			
-en:b:s1.v1.hat	I want a hat.	dfcc1bca			pending			
-en:b:s1.v1.bus	I want the bus.	bf997fd3			pending			
-en:b:s1.v1.drum	I want a drum.	52244127			pending			
-en:b:s1.v1.star	I want a star.	cee2d3ff			pending			
-en:b:s1.v1.cake	I want cake.	71adce2c			pending			
-en:b:s1.v1.bike	I want a bike.	118d782c			pending			
-en:b:s1.v1.o9	I want water.	12732cf5			pending			
-en:b:s1.v2.o2	I eat an apple.	e5923b09			pending			
-en:b:s1.v2.cake	I eat cake.	2d14c460			pending			
-en:b:s1.v3.o1	I drink milk.	707db915			pending			
-en:b:s1.v3.o9	I drink water.	425a12c1			pending			
-en:b:s1.v4.o4	I sleep in the car.	34afa297			pending			
-en:b:s1.v4.o5	I sleep outside.	aa851fc6			pending			
-en:b:s1.v4.home	I sleep at home.	31cae57b			pending			
-en:b:s1.v4.o7	I sleep in bed.	488c39dd			pending			
-en:b:s1.v4.cot	I sleep in the cot.	494862af			pending			
-en:b:s1.v4.sun	I sleep in the sun.	088141a7			pending			
-en:b:s1.v4.bus	I sleep on the bus.	da093899			pending			
-en:b:s1.v5.o4	I go to the car.	d251bfa8			pending			
-en:b:s1.v5.o5	I go outside.	45897a7d			pending			
-en:b:s1.v5.home	I go home.	479f9f7d			pending			
-en:b:s1.v5.o7	I go to bed.	08630752			pending			
-en:b:s1.v5.o8	I go to the potty.	a95a6dee			pending			
-en:b:s1.v5.cot	I go to the cot.	46f4113c			pending			
-en:b:s1.v5.bus	I go to the bus.	e0589188			pending			
-en:b:s1.v6.o3	I play with a toy.	3db8a181			pending			
-en:b:s1.v6.o4	I play with the car.	0b0f53bf			pending			
-en:b:s1.v6.bus	I play with the bus.	1a7d20bf			pending			
-en:b:s1.v6.drum	I play with a drum.	982df35b			pending			
-en:b:s1.v6.bike	I play with a bike.	41a59c80			pending			
-en:b:mum.v1.o1	Mum wants milk.	58f0586e			pending			
-en:b:mum.v1.o2	Mum wants an apple.	323956ba			pending			
-en:b:mum.v1.o3	Mum wants a toy.	e862d094			pending			
-en:b:mum.v1.o4	Mum wants the car.	e513aa9e			pending			
-en:b:mum.v1.cup	Mum wants a cup.	d4d30680			pending			
-en:b:mum.v1.cap	Mum wants a cap.	9042799c			pending			
-en:b:mum.v1.pot	Mum wants a pot.	60a0afe1			pending			
-en:b:mum.v1.hat	Mum wants a hat.	53436fe7			pending			
-en:b:mum.v1.bus	Mum wants the bus.	22f00f86			pending			
-en:b:mum.v1.drum	Mum wants a drum.	e82a75e0			pending			
-en:b:mum.v1.star	Mum wants a star.	55946844			pending			
-en:b:mum.v1.cake	Mum wants cake.	5dad5333			pending			
-en:b:mum.v1.bike	Mum wants a bike.	641839bb			pending			
-en:b:mum.v1.o9	Mum wants water.	0e7f63bc			pending			
-en:b:mum.v2.o2	Mum eats an apple.	f53efb1a			pending			
-en:b:mum.v2.cake	Mum eats cake.	8ca96113			pending			
-en:b:mum.v3.o1	Mum drinks milk.	a3bfc542			pending			
-en:b:mum.v3.o9	Mum drinks water.	d7066550			pending			
-en:b:mum.v4.o4	Mum sleeps in the car.	4a4a05b6			pending			
-en:b:mum.v4.o5	Mum sleeps outside.	d454cf5d			pending			
-en:b:mum.v4.home	Mum sleeps at home.	3cd58974			pending			
-en:b:mum.v4.o7	Mum sleeps in bed.	7ecb1234			pending			
-en:b:mum.v4.cot	Mum sleeps in the cot.	8a0b031a			pending			
-en:b:mum.v4.sun	Mum sleeps in the sun.	00051d6e			pending			
-en:b:mum.v4.bus	Mum sleeps on the bus.	4144c814			pending			
-en:b:mum.v5.o4	Mum goes to the car.	cae849f2			pending			
-en:b:mum.v5.o5	Mum goes outside.	c2e16f17			pending			
-en:b:mum.v5.home	Mum goes home.	61e75617			pending			
-en:b:mum.v5.o7	Mum goes to bed.	2f5d4880			pending			
-en:b:mum.v5.o8	Mum goes to the potty.	29a9689c			pending			
-en:b:mum.v5.cot	Mum goes to the cot.	7659b276			pending			
-en:b:mum.v5.bus	Mum goes to the bus.	a22dc7f2			pending			
-en:b:mum.v6.o3	Mum plays with a toy.	bd319af6			pending			
-en:b:mum.v6.o4	Mum plays with the car.	cfc73fac			pending			
-en:b:mum.v6.bus	Mum plays with the bus.	92a8d794			pending			
-en:b:mum.v6.drum	Mum plays with a drum.	45448116			pending			
-en:b:mum.v6.bike	Mum plays with a bike.	34216f1d			pending			
-en:b:dad.v1.o1	Dad wants milk.	7f8fa996			pending			
-en:b:dad.v1.o2	Dad wants an apple.	5ad4df42			pending			
-en:b:dad.v1.o3	Dad wants a toy.	cc5d032c			pending			
-en:b:dad.v1.o4	Dad wants the car.	7655dd26			pending			
-en:b:dad.v1.cup	Dad wants a cup.	8b552878			pending			
-en:b:dad.v1.cap	Dad wants a cap.	c6c3d214			pending			
-en:b:dad.v1.pot	Dad wants a pot.	4b756f49			pending			
-en:b:dad.v1.hat	Dad wants a hat.	f4194d8f			pending			
-en:b:dad.v1.bus	Dad wants the bus.	398726ee			pending			
-en:b:dad.v1.drum	Dad wants a drum.	687afe98			pending			
-en:b:dad.v1.star	Dad wants a star.	4e14df8c			pending			
-en:b:dad.v1.cake	Dad wants cake.	5ae577cb			pending			
-en:b:dad.v1.bike	Dad wants a bike.	9e178a23			pending			
-en:b:dad.v1.o9	Dad wants water.	45d2baf4			pending			
-en:b:dad.v2.o2	Dad eats an apple.	f5746a22			pending			
-en:b:dad.v2.cake	Dad eats cake.	1110722b			pending			
-en:b:dad.v3.o1	Dad drinks milk.	0edb725a			pending			
-en:b:dad.v3.o9	Dad drinks water.	c6eba9f8			pending			
-en:b:dad.v4.o4	Dad sleeps in the car.	d0382f5e			pending			
-en:b:dad.v4.o5	Dad sleeps outside.	e315ea25			pending			
-en:b:dad.v4.home	Dad sleeps at home.	f75fe1ec			pending			
-en:b:dad.v4.o7	Dad sleeps in bed.	7fc0854c			pending			
-en:b:dad.v4.cot	Dad sleeps in the cot.	427bad12			pending			
-en:b:dad.v4.sun	Dad sleeps in the sun.	9e9c2526			pending			
-en:b:dad.v4.bus	Dad sleeps on the bus.	aedbf05c			pending			
-en:b:dad.v5.o4	Dad goes to the car.	7c1191ea			pending			
-en:b:dad.v5.o5	Dad goes outside.	68c48d1f			pending			
-en:b:dad.v5.home	Dad goes home.	95771e3f			pending			
-en:b:dad.v5.o7	Dad goes to bed.	31db9a08			pending			
-en:b:dad.v5.o8	Dad goes to the potty.	a7975054			pending			
-en:b:dad.v5.cot	Dad goes to the cot.	57c9991e			pending			
-en:b:dad.v5.bus	Dad goes to the bus.	53570fea			pending			
-en:b:dad.v6.o3	Dad plays with a toy.	e6dbc90e			pending			
-en:b:dad.v6.o4	Dad plays with the car.	52867734			pending			
-en:b:dad.v6.bus	Dad plays with the bus.	f5b78e9c			pending			
-en:b:dad.v6.drum	Dad plays with a drum.	31cd1c4e			pending			
-en:b:dad.v6.bike	Dad plays with a bike.	a19bc8c5			pending			
-en:b:s4.v1.o1	Granny wants milk.	de84d072			pending			
-en:b:s4.v1.o2	Granny wants an apple.	cd1ad1d6			pending			
-en:b:s4.v1.o3	Granny wants a toy.	66872850			pending			
-en:b:s4.v1.o4	Granny wants the car.	513b58ba			pending			
-en:b:s4.v1.cup	Granny wants a cup.	6ab17524			pending			
-en:b:s4.v1.cap	Granny wants a cap.	8cb7cf28			pending			
-en:b:s4.v1.pot	Granny wants a pot.	0abe01dd			pending			
-en:b:s4.v1.hat	Granny wants a hat.	301bccab			pending			
-en:b:s4.v1.bus	Granny wants the bus.	0d86a0da			pending			
-en:b:s4.v1.drum	Granny wants a drum.	90952f4c			pending			
-en:b:s4.v1.star	Granny wants a star.	44164810			pending			
-en:b:s4.v1.cake	Granny wants cake.	81dba0ff			pending			
-en:b:s4.v1.bike	Granny wants a bike.	0dbd04b7			pending			
-en:b:s4.v1.o9	Granny wants water.	31ebe0c0			pending			
-en:b:s4.v2.o2	Granny eats an apple.	1466d626			pending			
-en:b:s4.v2.cake	Granny eats cake.	45ee3b0f			pending			
-en:b:s4.v3.o1	Granny drinks milk.	23fed526			pending			
-en:b:s4.v3.o9	Granny drinks water.	de878c84			pending			
-en:b:s4.v4.o4	Granny sleeps in the car.	03c084ba			pending			
-en:b:s4.v4.o5	Granny sleeps outside.	6747aaa9			pending			
-en:b:s4.v4.home	Granny sleeps at home.	bd71ff88			pending			
-en:b:s4.v4.o7	Granny sleeps in bed.	85573d98			pending			
-en:b:s4.v4.cot	Granny sleeps in the cot.	df788bee			pending			
-en:b:s4.v4.sun	Granny sleeps in the sun.	2e7bfbf2			pending			
-en:b:s4.v4.bus	Granny sleeps on the bus.	de70bd68			pending			
-en:b:s4.v5.o4	Granny goes to the car.	73fc89de			pending			
-en:b:s4.v5.o5	Granny goes outside.	30963713			pending			
-en:b:s4.v5.home	Granny goes home.	e0a5d49b			pending			
-en:b:s4.v5.o7	Granny goes to bed.	72dc37cc			pending			
-en:b:s4.v5.o8	Granny goes to the potty.	16981d40			pending			
-en:b:s4.v5.cot	Granny goes to the cot.	e6400792			pending			
-en:b:s4.v5.bus	Granny goes to the bus.	cb25a3c6			pending			
-en:b:s4.v6.o3	Granny plays with a toy.	f77dd39a			pending			
-en:b:s4.v6.o4	Granny plays with the car.	9ad2f880			pending			
-en:b:s4.v6.bus	Granny plays with the bus.	54a3d7a0			pending			
-en:b:s4.v6.drum	Granny plays with a drum.	d0d095da			pending			
-en:b:s4.v6.bike	Granny plays with a bike.	0e48c5b1			pending			
-en:b:dog.v1.o1	Dog wants milk.	9ce3cd51			pending			
-en:b:dog.v1.o2	Dog wants an apple.	461bbbed			pending			
-en:b:dog.v1.o3	Dog wants a toy.	4eb04c95			pending			
-en:b:dog.v1.o4	Dog wants the car.	52a98bf3			pending			
-en:b:dog.v1.cup	Dog wants a cup.	9ae2c7b5			pending			
-en:b:dog.v1.cap	Dog wants a cap.	7d386ed9			pending			
-en:b:dog.v1.pot	Dog wants a pot.	ed0c7f58			pending			
-en:b:dog.v1.hat	Dog wants a hat.	6487d002			pending			
-en:b:dog.v1.bus	Dog wants the bus.	14cd270b			pending			
-en:b:dog.v1.drum	Dog wants a drum.	ce68752f			pending			
-en:b:dog.v1.star	Dog wants a star.	5570b8f7			pending			
-en:b:dog.v1.cake	Dog wants cake.	a4f98354			pending			
-en:b:dog.v1.bike	Dog wants a bike.	f6168824			pending			
-en:b:dog.v1.o9	Dog wants water.	d47fd6fd			pending			
-en:b:dog.v2.o2	Dog eats an apple.	f389f907			pending			
-en:b:dog.v2.cake	Dog eats cake.	8ce7e7e2			pending			
-en:b:dog.v3.o1	Dog drinks milk.	23cc4023			pending			
-en:b:dog.v3.o9	Dog drinks water.	c7519ab7			pending			
-en:b:dog.v4.o4	Dog sleeps in the car.	bd2019cf			pending			
-en:b:dog.v4.o5	Dog sleeps outside.	dfdf3e7e			pending			
-en:b:dog.v4.home	Dog sleeps at home.	82419843			pending			
-en:b:dog.v4.o7	Dog sleeps in bed.	792bb2e5			pending			
-en:b:dog.v4.cot	Dog sleeps in the cot.	c1726d97			pending			
-en:b:dog.v4.sun	Dog sleeps in the sun.	72c7a9cf			pending			
-en:b:dog.v4.bus	Dog sleeps on the bus.	33c0d5f1			pending			
-en:b:dog.v5.o4	Dog goes to the car.	85309d23			pending			
-en:b:dog.v5.o5	Dog goes outside.	53327a54			pending			
-en:b:dog.v5.home	Dog goes home.	4cdae0a6			pending			
-en:b:dog.v5.o7	Dog goes to bed.	8e591f99			pending			
-en:b:dog.v5.o8	Dog goes to the potty.	01483a21			pending			
-en:b:dog.v5.cot	Dog goes to the cot.	c2fefa9b			pending			
-en:b:dog.v5.bus	Dog goes to the bus.	624e6e1b			pending			
-en:b:dog.v6.o3	Dog plays with a toy.	2ad001e1			pending			
-en:b:dog.v6.o4	Dog plays with the car.	85fc6c9f			pending			
-en:b:dog.v6.bus	Dog plays with the bus.	aeb6ee9f			pending			
-en:b:dog.v6.drum	Dog plays with a drum.	8d47c43b			pending			
-en:b:dog.v6.bike	Dog plays with a bike.	1d72b860			pending			
-en:b:cat.v1.o1	Cat wants milk.	d384118b			pending			
-en:b:cat.v1.o2	Cat wants an apple.	c26a3957			pending			
-en:b:cat.v1.o3	Cat wants a toy.	76ea320b			pending			
-en:b:cat.v1.o4	Cat wants the car.	43fe64e5			pending			
-en:b:cat.v1.cup	Cat wants a cup.	bc771093			pending			
-en:b:cat.v1.cap	Cat wants a cap.	756c1aaf			pending			
-en:b:cat.v1.pot	Cat wants a pot.	bbe5c356			pending			
-en:b:cat.v1.hat	Cat wants a hat.	921b4024			pending			
-en:b:cat.v1.bus	Cat wants the bus.	ea5ae1fd			pending			
-en:b:cat.v1.drum	Cat wants a drum.	9036c799			pending			
-en:b:cat.v1.star	Cat wants a star.	4a72a82d			pending			
-en:b:cat.v1.cake	Cat wants cake.	3d3d9ef2			pending			
-en:b:cat.v1.bike	Cat wants a bike.	0795b1d2			pending			
-en:b:cat.v1.o9	Cat wants water.	1262aa4f			pending			
-en:b:cat.v2.o2	Cat eats an apple.	c8a66fad			pending			
-en:b:cat.v2.cake	Cat eats cake.	393e4c94			pending			
-en:b:cat.v3.o1	Cat drinks milk.	d8fdb32d			pending			
-en:b:cat.v3.o9	Cat drinks water.	65b03009			pending			
-en:b:cat.v4.o4	Cat sleeps in the car.	2a9e2401			pending			
-en:b:cat.v4.o5	Cat sleeps outside.	ededa230			pending			
-en:b:cat.v4.home	Cat sleeps at home.	5838c9f9			pending			
-en:b:cat.v4.o7	Cat sleeps in bed.	8d79fa0b			pending			
-en:b:cat.v4.cot	Cat sleeps in the cot.	664c34f9			pending			
-en:b:cat.v4.sun	Cat sleeps in the sun.	92bae4c1			pending			
-en:b:cat.v4.bus	Cat sleeps on the bus.	abb65bdf			pending			
-en:b:cat.v5.o4	Cat goes to the car.	7681bcc1			pending			
-en:b:cat.v5.o5	Cat goes outside.	a8e2476a			pending			
-en:b:cat.v5.home	Cat goes home.	0d4598a4			pending			
-en:b:cat.v5.o7	Cat goes to bed.	0611024b			pending			
-en:b:cat.v5.o8	Cat goes to the potty.	43f609d3			pending			
-en:b:cat.v5.cot	Cat goes to the cot.	afb564b9			pending			
-en:b:cat.v5.bus	Cat goes to the bus.	3cb1a721			pending			
-en:b:cat.v6.o3	Cat plays with a toy.	51c1f14f			pending			
-en:b:cat.v6.o4	Cat plays with the car.	7e33ce79			pending			
-en:b:cat.v6.bus	Cat plays with the bus.	8979b199			pending			
-en:b:cat.v6.drum	Cat plays with a drum.	06d114ed			pending			
-en:b:cat.v6.bike	Cat plays with a bike.	1544fd46			pending			
-en:b:pig.v1.o1	Pig wants milk.	b3799953			pending			
-en:b:pig.v1.o2	Pig wants an apple.	c807553f			pending			
-en:b:pig.v1.o3	Pig wants a toy.	e6c3c463			pending			
-en:b:pig.v1.o4	Pig wants the car.	1fad0bad			pending			
-en:b:pig.v1.cup	Pig wants a cup.	25aede4b			pending			
-en:b:pig.v1.cap	Pig wants a cap.	43593727			pending			
-en:b:pig.v1.pot	Pig wants a pot.	4e722afe			pending			
-en:b:pig.v1.hat	Pig wants a hat.	c80f8e6c			pending			
-en:b:pig.v1.bus	Pig wants the bus.	5ef62ae5			pending			
-en:b:pig.v1.drum	Pig wants a drum.	cd43c211			pending			
-en:b:pig.v1.star	Pig wants a star.	07a77b95			pending			
-en:b:pig.v1.cake	Pig wants cake.	f1298daa			pending			
-en:b:pig.v1.bike	Pig wants a bike.	7ed7a23a			pending			
-en:b:pig.v1.o9	Pig wants water.	b6dd71e7			pending			
-en:b:pig.v2.o2	Pig eats an apple.	363e5e15			pending			
-en:b:pig.v2.cake	Pig eats cake.	6c2bcc4c			pending			
-en:b:pig.v3.o1	Pig drinks milk.	985ff185			pending			
-en:b:pig.v3.o9	Pig drinks water.	78d38531			pending			
-en:b:pig.v4.o4	Pig sleeps in the car.	f6f787e9			pending			
-en:b:pig.v4.o5	Pig sleeps outside.	fad2b5f8			pending			
-en:b:pig.v4.home	Pig sleeps at home.	bb823111			pending			
-en:b:pig.v4.o7	Pig sleeps in bed.	4f95c023			pending			
-en:b:pig.v4.cot	Pig sleeps in the cot.	e25ec7d1			pending			
-en:b:pig.v4.sun	Pig sleeps in the sun.	a5cc9df9			pending			
-en:b:pig.v4.bus	Pig sleeps on the bus.	f6a07a67			pending			
-en:b:pig.v5.o4	Pig goes to the car.	6825b8f9			pending			
-en:b:pig.v5.o5	Pig goes outside.	cfa4d712			pending			
-en:b:pig.v5.home	Pig goes home.	342187ac			pending			
-en:b:pig.v5.o7	Pig goes to bed.	cfa72cf3			pending			
-en:b:pig.v5.o8	Pig goes to the potty.	26b3a02b			pending			
-en:b:pig.v5.cot	Pig goes to the cot.	938d5da1			pending			
-en:b:pig.v5.bus	Pig goes to the bus.	736b9c19			pending			
-en:b:pig.v6.o3	Pig plays with a toy.	7a645fe7			pending			
-en:b:pig.v6.o4	Pig plays with the car.	41118cc1			pending			
-en:b:pig.v6.bus	Pig plays with the bus.	07417721			pending			
-en:b:pig.v6.drum	Pig plays with a drum.	9dfd0565			pending			
-en:b:pig.v6.bike	Pig plays with a bike.	326f59ce			pending			
-en:b:hen.v1.o1	Hen wants milk.	3be57404			pending			
-en:b:hen.v1.o2	Hen wants an apple.	f0baba78			pending			
-en:b:hen.v1.o3	Hen wants a toy.	1b402656			pending			
-en:b:hen.v1.o4	Hen wants the car.	093e238c			pending			
-en:b:hen.v1.cup	Hen wants a cup.	f44e4aea			pending			
-en:b:hen.v1.cap	Hen wants a cap.	fba88dee			pending			
-en:b:hen.v1.pot	Hen wants a pot.	a469424b			pending			
-en:b:hen.v1.hat	Hen wants a hat.	31cb6e6d			pending			
-en:b:hen.v1.bus	Hen wants the bus.	4c2084f4			pending			
-en:b:hen.v1.drum	Hen wants a drum.	f7678276			pending			
-en:b:hen.v1.star	Hen wants a star.	6fdf5b26			pending			
-en:b:hen.v1.cake	Hen wants cake.	2f151975			pending			
-en:b:hen.v1.bike	Hen wants a bike.	e3ca077d			pending			
-en:b:hen.v1.o9	Hen wants water.	66f1e03a			pending			
-en:b:hen.v2.o2	Hen eats an apple.	8014a0c4			pending			
-en:b:hen.v2.cake	Hen eats cake.	715ed1e1			pending			
-en:b:hen.v3.o1	Hen drinks milk.	0d57bbe8			pending			
-en:b:hen.v3.o9	Hen drinks water.	003f3ace			pending			
-en:b:hen.v4.o4	Hen sleeps in the car.	1d94457c			pending			
-en:b:hen.v4.o5	Hen sleeps outside.	a075783b			pending			
-en:b:hen.v4.home	Hen sleeps at home.	a3e33826			pending			
-en:b:hen.v4.o7	Hen sleeps in bed.	923a5d36			pending			
-en:b:hen.v4.cot	Hen sleeps in the cot.	ab3d4010			pending			
-en:b:hen.v4.sun	Hen sleeps in the sun.	653a128c			pending			
-en:b:hen.v4.bus	Hen sleeps on the bus.	639a9f8e			pending			
-en:b:hen.v5.o4	Hen goes to the car.	b79963f4			pending			
-en:b:hen.v5.o5	Hen goes outside.	a58c4a29			pending			
-en:b:hen.v5.home	Hen goes home.	01e39771			pending			
-en:b:hen.v5.o7	Hen goes to bed.	385f1bde			pending			
-en:b:hen.v5.o8	Hen goes to the potty.	18a36072			pending			
-en:b:hen.v5.cot	Hen goes to the cot.	554a4378			pending			
-en:b:hen.v5.bus	Hen goes to the bus.	5850125c			pending			
-en:b:hen.v6.o3	Hen plays with a toy.	c3b4b770			pending			
-en:b:hen.v6.o4	Hen plays with the car.	0af2285a			pending			
-en:b:hen.v6.bus	Hen plays with the bus.	44c23dfa			pending			
-en:b:hen.v6.drum	Hen plays with a drum.	730ed26c			pending			
-en:b:hen.v6.bike	Hen plays with a bike.	032903d7			pending			
-en:b:bug.v1.o1	Bug wants milk.	f1aadfad			pending			
-en:b:bug.v1.o2	Bug wants an apple.	2dcff0c1			pending			
-en:b:bug.v1.o3	Bug wants a toy.	034b2559			pending			
-en:b:bug.v1.o4	Bug wants the car.	32e183a7			pending			
-en:b:bug.v1.cup	Bug wants a cup.	559253b1			pending			
-en:b:bug.v1.cap	Bug wants a cap.	9100fd4d			pending			
-en:b:bug.v1.pot	Bug wants a pot.	fcb0c39c			pending			
-en:b:bug.v1.hat	Bug wants a hat.	bf17c84e			pending			
-en:b:bug.v1.bus	Bug wants the bus.	f6970507			pending			
-en:b:bug.v1.drum	Bug wants a drum.	12d6bf33			pending			
-en:b:bug.v1.star	Bug wants a star.	941e91ab			pending			
-en:b:bug.v1.cake	Bug wants cake.	a69ad3e8			pending			
-en:b:bug.v1.bike	Bug wants a bike.	8e35b4c8			pending			
-en:b:bug.v1.o9	Bug wants water.	be4d3d89			pending			
-en:b:bug.v2.o2	Bug eats an apple.	8b82c94b			pending			
-en:b:bug.v2.cake	Bug eats cake.	4e111e46			pending			
-en:b:bug.v3.o1	Bug drinks milk.	5c31354f			pending			
-en:b:bug.v3.o9	Bug drinks water.	bab14403			pending			
-en:b:bug.v4.o4	Bug sleeps in the car.	f507672b			pending			
-en:b:bug.v4.o5	Bug sleeps outside.	8164a3c2			pending			
-en:b:bug.v4.home	Bug sleeps at home.	4268314f			pending			
-en:b:bug.v4.o7	Bug sleeps in bed.	0896a9b1			pending			
-en:b:bug.v4.cot	Bug sleeps in the cot.	827ec4f3			pending			
-en:b:bug.v4.sun	Bug sleeps in the sun.	c892fa3b			pending			
-en:b:bug.v4.bus	Bug sleeps on the bus.	734012bd			pending			
-en:b:bug.v5.o4	Bug goes to the car.	b498abb7			pending			
-en:b:bug.v5.o5	Bug goes outside.	8d2aa1c8			pending			
-en:b:bug.v5.home	Bug goes home.	00cea562			pending			
-en:b:bug.v5.o7	Bug goes to bed.	ac4498fd			pending			
-en:b:bug.v5.o8	Bug goes to the potty.	fcc143fd			pending			
-en:b:bug.v5.cot	Bug goes to the cot.	c9316bcf			pending			
-en:b:bug.v5.bus	Bug goes to the bus.	dd532db7			pending			
-en:b:bug.v6.o3	Bug plays with a toy.	1a532c0d			pending			
-en:b:bug.v6.o4	Bug plays with the car.	bbc1fc9b			pending			
-en:b:bug.v6.bus	Bug plays with the bus.	fb0b1bd3			pending			
-en:b:bug.v6.drum	Bug plays with a drum.	8d5db527			pending			
-en:b:bug.v6.bike	Bug plays with a bike.	4cc6ec2c			pending			
-en:b:frog.v1.o1	Frog wants milk.	9255efeb			pending			
-en:b:frog.v1.o2	Frog wants an apple.	32d16237			pending			
-en:b:frog.v1.o3	Frog wants a toy.	a8e4316b			pending			
-en:b:frog.v1.o4	Frog wants the car.	ae83f145			pending			
-en:b:frog.v1.cup	Frog wants a cup.	6bf77073			pending			
-en:b:frog.v1.cap	Frog wants a cap.	a7661a0f			pending			
-en:b:frog.v1.pot	Frog wants a pot.	872d4136			pending			
-en:b:frog.v1.hat	Frog wants a hat.	44160904			pending			
-en:b:frog.v1.bus	Frog wants the bus.	70a78c5d			pending			
-en:b:frog.v1.drum	Frog wants a drum.	31c18a79			pending			
-en:b:frog.v1.star	Frog wants a star.	183c7c0d			pending			
-en:b:frog.v1.cake	Frog wants cake.	7c1046d2			pending			
-en:b:frog.v1.bike	Frog wants a bike.	c26d29b2			pending			
-en:b:frog.v1.o9	Frog wants water.	1586ebaf			pending			
-en:b:frog.v2.o2	Frog eats an apple.	8662fd0d			pending			
-en:b:frog.v2.cake	Frog eats cake.	0b464174			pending			
-en:b:frog.v3.o1	Frog drinks milk.	779aca0d			pending			
-en:b:frog.v3.o9	Frog drinks water.	fdc3c869			pending			
-en:b:frog.v4.o4	Frog sleeps in the car.	cfce25e1			pending			
-en:b:frog.v4.o5	Frog sleeps outside.	b28d9890			pending			
-en:b:frog.v4.home	Frog sleeps at home.	70565059			pending			
-en:b:frog.v4.o7	Frog sleeps in bed.	5ad9546b			pending			
-en:b:frog.v4.cot	Frog sleeps in the cot.	0901cdd9			pending			
-en:b:frog.v4.sun	Frog sleeps in the sun.	37eae6a1			pending			
-en:b:frog.v4.bus	Frog sleeps on the bus.	27c873bf			pending			
-en:b:frog.v5.o4	Frog goes to the car.	5390fe21			pending			
-en:b:frog.v5.o5	Frog goes outside.	a7a888ca			pending			
-en:b:frog.v5.home	Frog goes home.	987e3604			pending			
-en:b:frog.v5.o7	Frog goes to bed.	f93dd42b			pending			
-en:b:frog.v5.o8	Frog goes to the potty.	5f065c33			pending			
-en:b:frog.v5.cot	Frog goes to the cot.	8cc4a619			pending			
-en:b:frog.v5.bus	Frog goes to the bus.	9745b601			pending			
-en:b:frog.v6.o3	Frog plays with a toy.	cbf219af			pending			
-en:b:frog.v6.o4	Frog plays with the car.	5f00d0d9			pending			
-en:b:frog.v6.bus	Frog plays with the bus.	ecc05379			pending			
-en:b:frog.v6.drum	Frog plays with a drum.	67538a4d			pending			
-en:b:frog.v6.bike	Frog plays with a bike.	498861a6			pending			
-en:b:fish.v1.o1	Fish wants milk.	c3fc7567			pending			
-en:b:fish.v1.o2	Fish wants an apple.	eed5c02b			pending			
-en:b:fish.v1.o3	Fish wants a toy.	2fafaeff			pending			
-en:b:fish.v1.o4	Fish wants the car.	59d708a9			pending			
-en:b:fish.v1.cup	Fish wants a cup.	f03dc7ff			pending			
-en:b:fish.v1.cap	Fish wants a cap.	92435883			pending			
-en:b:fish.v1.pot	Fish wants a pot.	ed3a752a			pending			
-en:b:fish.v1.hat	Fish wants a hat.	acb43f20			pending			
-en:b:fish.v1.bus	Fish wants the bus.	82918aa9			pending			
-en:b:fish.v1.drum	Fish wants a drum.	6f2225bd			pending			
-en:b:fish.v1.star	Fish wants a star.	e8d81311			pending			
-en:b:fish.v1.cake	Fish wants cake.	628106a6			pending			
-en:b:fish.v1.bike	Fish wants a bike.	5ac19096			pending			
-en:b:fish.v1.o9	Fish wants water.	9197760b			pending			
-en:b:fish.v2.o2	Fish eats an apple.	f20d3991			pending			
-en:b:fish.v2.cake	Fish eats cake.	fe61a538			pending			
-en:b:fish.v3.o1	Fish drinks milk.	dcd6daf9			pending			
-en:b:fish.v3.o9	Fish drinks water.	c7b31e75			pending			
-en:b:fish.v4.o4	Fish sleeps in the car.	4a6de3ad			pending			
-en:b:fish.v4.o5	Fish sleeps outside.	5394f674			pending			
-en:b:fish.v4.home	Fish sleeps at home.	378afbd5			pending			
-en:b:fish.v4.o7	Fish sleeps in bed.	e3f305f7			pending			
-en:b:fish.v4.cot	Fish sleeps in the cot.	8a2453b5			pending			
-en:b:fish.v4.sun	Fish sleeps in the sun.	ffc5c1cd			pending			
-en:b:fish.v4.bus	Fish sleeps on the bus.	0d5b46cb			pending			
-en:b:fish.v5.o4	Fish goes to the car.	416518c5			pending			
-en:b:fish.v5.o5	Fish goes outside.	ec4d3aee			pending			
-en:b:fish.v5.home	Fish goes home.	1f5aed70			pending			
-en:b:fish.v5.o7	Fish goes to bed.	4fcb72bf			pending			
-en:b:fish.v5.o8	Fish goes to the potty.	39c4676f			pending			
-en:b:fish.v5.cot	Fish goes to the cot.	33ee847d			pending			
-en:b:fish.v5.bus	Fish goes to the bus.	0388b3dd			pending			
-en:b:fish.v6.o3	Fish plays with a toy.	096d8ecb			pending			
-en:b:fish.v6.o4	Fish plays with the car.	f682f2a5			pending			
-en:b:fish.v6.bus	Fish plays with the bus.	b8a68dbd			pending			
-en:b:fish.v6.drum	Fish plays with a drum.	e0d23959			pending			
-en:b:fish.v6.bike	Fish plays with a bike.	58312392			pending			
-en:b:chick.v1.o1	Chick wants milk.	9853c19f			pending			
-en:b:chick.v1.o2	Chick wants an apple.	8ec1d6e3			pending			
-en:b:chick.v1.o3	Chick wants a toy.	3db6ee07			pending			
-en:b:chick.v1.o4	Chick wants the car.	b0eea7e1			pending			
-en:b:chick.v1.cup	Chick wants a cup.	6bb6cb47			pending			
-en:b:chick.v1.cap	Chick wants a cap.	ce0ba8eb			pending			
-en:b:chick.v1.pot	Chick wants a pot.	b22ae102			pending			
-en:b:chick.v1.hat	Chick wants a hat.	a0a2a5b8			pending			
-en:b:chick.v1.bus	Chick wants the bus.	f71dc8c1			pending			
-en:b:chick.v1.drum	Chick wants a drum.	23f43985			pending			
-en:b:chick.v1.star	Chick wants a star.	7a750c09			pending			
-en:b:chick.v1.cake	Chick wants cake.	ada455ee			pending			
-en:b:chick.v1.bike	Chick wants a bike.	8ea1e5ee			pending			
-en:b:chick.v1.o9	Chick wants water.	c0a42053			pending			
-en:b:chick.v2.o2	Chick eats an apple.	a5c1a969			pending			
-en:b:chick.v2.cake	Chick eats cake.	ba901240			pending			
-en:b:chick.v3.o1	Chick drinks milk.	aed80521			pending			
-en:b:chick.v3.o9	Chick drinks water.	63344bcd			pending			
-en:b:chick.v4.o4	Chick sleeps in the car.	8737c6a5			pending			
-en:b:chick.v4.o5	Chick sleeps outside.	c70fd04c			pending			
-en:b:chick.v4.home	Chick sleeps at home.	d0ccfbdd			pending			
-en:b:chick.v4.o7	Chick sleeps in bed.	e2e86d1f			pending			
-en:b:chick.v4.cot	Chick sleeps in the cot.	f9c068dd			pending			
-en:b:chick.v4.sun	Chick sleeps in the sun.	3f4247b5			pending			
-en:b:chick.v4.bus	Chick sleeps on the bus.	acf6d1c3			pending			
-en:b:chick.v5.o4	Chick goes to the car.	17f6584d			pending			
-en:b:chick.v5.o5	Chick goes outside.	917e5126			pending			
-en:b:chick.v5.home	Chick goes home.	4c5b0508			pending			
-en:b:chick.v5.o7	Chick goes to bed.	9e610b97			pending			
-en:b:chick.v5.o8	Chick goes to the potty.	da9e3557			pending			
-en:b:chick.v5.cot	Chick goes to the cot.	da27fad5			pending			
-en:b:chick.v5.bus	Chick goes to the bus.	573f7785			pending			
-en:b:chick.v6.o3	Chick plays with a toy.	421b9bb3			pending			
-en:b:chick.v6.o4	Chick plays with the car.	6da7fc7d			pending			
-en:b:chick.v6.bus	Chick plays with the bus.	362f6315			pending			
-en:b:chick.v6.drum	Chick plays with a drum.	add50301			pending			
-en:b:chick.v6.bike	Chick plays with a bike.	83fcc3ea			pending			
-en:b:pet-🐭.v1.o1	The mouse wants milk.	c8edc8db			pending			
-en:b:pet-🐭.v1.o2	The mouse wants an apple.	58b24ba7			pending			
-en:b:pet-🐭.v1.o3	The mouse wants a toy.	c3b464bb			pending			
-en:b:pet-🐭.v1.o4	The mouse wants the car.	fdde8715			pending			
-en:b:pet-🐭.v1.cup	The mouse wants a cup.	cfd870c3			pending			
-en:b:pet-🐭.v1.cap	The mouse wants a cap.	2dd2e03f			pending			
-en:b:pet-🐭.v1.pot	The mouse wants a pot.	4635f1c6			pending			
-en:b:pet-🐭.v1.hat	The mouse wants a hat.	8a826a74			pending			
-en:b:pet-🐭.v1.bus	The mouse wants the bus.	dd76c10d			pending			
-en:b:pet-🐭.v1.drum	The mouse wants a drum.	3c566e29			pending			
-en:b:pet-🐭.v1.star	The mouse wants a star.	fa1275dd			pending			
-en:b:pet-🐭.v1.cake	The mouse wants cake.	6b17be02			pending			
-en:b:pet-🐭.v1.bike	The mouse wants a bike.	6a4a6022			pending			
-en:b:pet-🐭.v1.o9	The mouse wants water.	6164bc5f			pending			
-en:b:pet-🐭.v2.o2	The mouse eats an apple.	5b841b3d			pending			
-en:b:pet-🐭.v2.cake	The mouse eats cake.	25ef4ae4			pending			
-en:b:pet-🐭.v3.o1	The mouse drinks milk.	88a7813d			pending			
-en:b:pet-🐭.v3.o9	The mouse drinks water.	1d9ab599			pending			
-en:b:pet-🐭.v4.o4	The mouse sleeps in the car.	29767ef1			pending			
-en:b:pet-🐭.v4.o5	The mouse sleeps outside.	984681e0			pending			
-en:b:pet-🐭.v4.home	The mouse sleeps at home.	9ddd24a9			pending			
-en:b:pet-🐭.v4.o7	The mouse sleeps in bed.	23d684fb			pending			
-en:b:pet-🐭.v4.cot	The mouse sleeps in the cot.	22a9c229			pending			
-en:b:pet-🐭.v4.sun	The mouse sleeps in the sun.	daae8611			pending			
-en:b:pet-🐭.v4.bus	The mouse sleeps on the bus.	85f9112f			pending			
-en:b:pet-🐭.v5.o4	The mouse goes to the car.	c028f711			pending			
-en:b:pet-🐭.v5.o5	The mouse goes outside.	fd6f781a			pending			
-en:b:pet-🐭.v5.home	The mouse goes home.	3e2c3714			pending			
-en:b:pet-🐭.v5.o7	The mouse goes to bed.	bacc8c9b			pending			
-en:b:pet-🐭.v5.o8	The mouse goes to the potty.	8b212983			pending			
-en:b:pet-🐭.v5.cot	The mouse goes to the cot.	395d03c9			pending			
-en:b:pet-🐭.v5.bus	The mouse goes to the bus.	e8e37911			pending			
-en:b:pet-🐭.v6.o3	The mouse plays with a toy.	1bf572df			pending			
-en:b:pet-🐭.v6.o4	The mouse plays with the car.	d4735289			pending			
-en:b:pet-🐭.v6.bus	The mouse plays with the bus.	fd2dd489			pending			
-en:b:pet-🐭.v6.drum	The mouse plays with a drum.	bca6891d			pending			
-en:b:pet-🐭.v6.bike	The mouse plays with a bike.	6dd28376			pending			
-en:b:pet-🐯.v1.o1	The tiger wants milk.	49455d77			pending			
-en:b:pet-🐯.v1.o2	The tiger wants an apple.	0be9a6fb			pending			
-en:b:pet-🐯.v1.o3	The tiger wants a toy.	630a52af			pending			
-en:b:pet-🐯.v1.o4	The tiger wants the car.	551a31d9			pending			
-en:b:pet-🐯.v1.cup	The tiger wants a cup.	413a202f			pending			
-en:b:pet-🐯.v1.cap	The tiger wants a cap.	88451613			pending			
-en:b:pet-🐯.v1.pot	The tiger wants a pot.	230f81da			pending			
-en:b:pet-🐯.v1.hat	The tiger wants a hat.	62b597f0			pending			
-en:b:pet-🐯.v1.bus	The tiger wants the bus.	e2d9b479			pending			
-en:b:pet-🐯.v1.drum	The tiger wants a drum.	4275454d			pending			
-en:b:pet-🐯.v1.star	The tiger wants a star.	9296bf81			pending			
-en:b:pet-🐯.v1.cake	The tiger wants cake.	6f5ab536			pending			
-en:b:pet-🐯.v1.bike	The tiger wants a bike.	24aa1ca6			pending			
-en:b:pet-🐯.v1.o9	The tiger wants water.	b4c7bfdb			pending			
-en:b:pet-🐯.v2.o2	The tiger eats an apple.	4c5ca8a1			pending			
-en:b:pet-🐯.v2.cake	The tiger eats cake.	e0853848			pending			
-en:b:pet-🐯.v3.o1	The tiger drinks milk.	80ac5949			pending			
-en:b:pet-🐯.v3.o9	The tiger drinks water.	4e08b805			pending			
-en:b:pet-🐯.v4.o4	The tiger sleeps in the car.	65d2c91d			pending			
-en:b:pet-🐯.v4.o5	The tiger sleeps outside.	51c98ce4			pending			
-en:b:pet-🐯.v4.home	The tiger sleeps at home.	bf786045			pending			
-en:b:pet-🐯.v4.o7	The tiger sleeps in bed.	95173a27			pending			
-en:b:pet-🐯.v4.cot	The tiger sleeps in the cot.	258a02a5			pending			
-en:b:pet-🐯.v4.sun	The tiger sleeps in the sun.	1725599d			pending			
-en:b:pet-🐯.v4.bus	The tiger sleeps on the bus.	a981ebdb			pending			
-en:b:pet-🐯.v5.o4	The tiger goes to the car.	1b3385d5			pending			
-en:b:pet-🐯.v5.o5	The tiger goes outside.	412e2b9e			pending			
-en:b:pet-🐯.v5.home	The tiger goes home.	9f7c8520			pending			
-en:b:pet-🐯.v5.o7	The tiger goes to bed.	f131f90f			pending			
-en:b:pet-🐯.v5.o8	The tiger goes to the potty.	8b760f9f			pending			
-en:b:pet-🐯.v5.cot	The tiger goes to the cot.	8dbc280d			pending			
-en:b:pet-🐯.v5.bus	The tiger goes to the bus.	f85156cd			pending			
-en:b:pet-🐯.v6.o3	The tiger plays with a toy.	cebbefdb			pending			
-en:b:pet-🐯.v6.o4	The tiger plays with the car.	c4f441b5			pending			
-en:b:pet-🐯.v6.bus	The tiger plays with the bus.	248d452d			pending			
-en:b:pet-🐯.v6.drum	The tiger plays with a drum.	ccf7c549			pending			
-en:b:pet-🐯.v6.bike	The tiger plays with a bike.	faebb742			pending			
-en:b:pet-🐱.v1.o1	The cat wants milk.	78b29134			pending			
-en:b:pet-🐱.v1.o2	The cat wants an apple.	c7aa33e8			pending			
-en:b:pet-🐱.v1.o3	The cat wants a toy.	0a4bbee6			pending			
-en:b:pet-🐱.v1.o4	The cat wants the car.	f508805c			pending			
-en:b:pet-🐱.v1.cup	The cat wants a cup.	40a1d17a			pending			
-en:b:pet-🐱.v1.cap	The cat wants a cap.	22f7789e			pending			
-en:b:pet-🐱.v1.pot	The cat wants a pot.	50fa0d1b			pending			
-en:b:pet-🐱.v1.hat	The cat wants a hat.	f4e0ad9d			pending			
-en:b:pet-🐱.v1.bus	The cat wants the bus.	12e4b2e4			pending			
-en:b:pet-🐱.v1.drum	The cat wants a drum.	08cf41a6			pending			
-en:b:pet-🐱.v1.star	The cat wants a star.	330bb7b6			pending			
-en:b:pet-🐱.v1.cake	The cat wants cake.	58c046a5			pending			
-en:b:pet-🐱.v1.bike	The cat wants a bike.	52d3dfed			pending			
-en:b:pet-🐱.v1.o9	The cat wants water.	a43df12a			pending			
-en:b:pet-🐱.v2.o2	The cat eats an apple.	a38482f4			pending			
-en:b:pet-🐱.v2.cake	The cat eats cake.	faaa4611			pending			
-en:b:pet-🐱.v3.o1	The cat drinks milk.	934f1d58			pending			
-en:b:pet-🐱.v3.o9	The cat drinks water.	30ab4fbe			pending			
-en:b:pet-🐱.v4.o4	The cat sleeps in the car.	2cc3608c			pending			
-en:b:pet-🐱.v4.o5	The cat sleeps outside.	6a91638b			pending			
-en:b:pet-🐱.v4.home	The cat sleeps at home.	cdb8be36			pending			
-en:b:pet-🐱.v4.o7	The cat sleeps in bed.	80f3da86			pending			
-en:b:pet-🐱.v4.cot	The cat sleeps in the cot.	ba6c5b20			pending			
-en:b:pet-🐱.v4.sun	The cat sleeps in the sun.	7e2372fc			pending			
-en:b:pet-🐱.v4.bus	The cat sleeps on the bus.	24fe3a7e			pending			
-en:b:pet-🐱.v5.o4	The cat goes to the car.	94cda1e4			pending			
-en:b:pet-🐱.v5.o5	The cat goes outside.	b28c7039			pending			
-en:b:pet-🐱.v5.home	The cat goes home.	e2898e81			pending			
-en:b:pet-🐱.v5.o7	The cat goes to bed.	aa49d00e			pending			
-en:b:pet-🐱.v5.o8	The cat goes to the potty.	5f957f42			pending			
-en:b:pet-🐱.v5.cot	The cat goes to the cot.	74f94f28			pending			
-en:b:pet-🐱.v5.bus	The cat goes to the bus.	d2f9b8ac			pending			
-en:b:pet-🐱.v6.o3	The cat plays with a toy.	e6f506e0			pending			
-en:b:pet-🐱.v6.o4	The cat plays with the car.	59dfa38a			pending			
-en:b:pet-🐱.v6.bus	The cat plays with the bus.	4a71d68a			pending			
-en:b:pet-🐱.v6.drum	The cat plays with a drum.	7b1dbb3c			pending			
-en:b:pet-🐱.v6.bike	The cat plays with a bike.	864452e7			pending			
-en:b:pet-🐸.v1.o1	The frog wants milk.	7c2ad6da			pending			
-en:b:pet-🐸.v1.o2	The frog wants an apple.	b7fc037e			pending			
-en:b:pet-🐸.v1.o3	The frog wants a toy.	31353e48			pending			
-en:b:pet-🐸.v1.o4	The frog wants the car.	6a240ac2			pending			
-en:b:pet-🐸.v1.cup	The frog wants a cup.	bc24b57c			pending			
-en:b:pet-🐸.v1.cap	The frog wants a cap.	833074e0			pending			
-en:b:pet-🐸.v1.pot	The frog wants a pot.	f10c2665			pending			
-en:b:pet-🐸.v1.hat	The frog wants a hat.	16fddab3			pending			
-en:b:pet-🐸.v1.bus	The frog wants the bus.	a3f42062			pending			
-en:b:pet-🐸.v1.drum	The frog wants a drum.	d6a65a64			pending			
-en:b:pet-🐸.v1.star	The frog wants a star.	91ba0df8			pending			
-en:b:pet-🐸.v1.cake	The frog wants cake.	1ad92657			pending			
-en:b:pet-🐸.v1.bike	The frog wants a bike.	b4c86ebf			pending			
-en:b:pet-🐸.v1.o9	The frog wants water.	5ae6df78			pending			
-en:b:pet-🐸.v2.o2	The frog eats an apple.	ce66836e			pending			
-en:b:pet-🐸.v2.cake	The frog eats cake.	94f15107			pending			
-en:b:pet-🐸.v3.o1	The frog drinks milk.	d83e7fbe			pending			
-en:b:pet-🐸.v3.o9	The frog drinks water.	f3abc3cc			pending			
-en:b:pet-🐸.v4.o4	The frog sleeps in the car.	8e689b42			pending			
-en:b:pet-🐸.v4.o5	The frog sleeps outside.	fefa0671			pending			
-en:b:pet-🐸.v4.home	The frog sleeps at home.	702dbf20			pending			
-en:b:pet-🐸.v4.o7	The frog sleeps in bed.	0fbf8750			pending			
-en:b:pet-🐸.v4.cot	The frog sleeps in the cot.	f9d99f06			pending			
-en:b:pet-🐸.v4.sun	The frog sleeps in the sun.	9f609c2a			pending			
-en:b:pet-🐸.v4.bus	The frog sleeps on the bus.	0c7239d0			pending			
-en:b:pet-🐸.v5.o4	The frog goes to the car.	504860f6			pending			
-en:b:pet-🐸.v5.o5	The frog goes outside.	b5d469bb			pending			
-en:b:pet-🐸.v5.home	The frog goes home.	a2d15fe3			pending			
-en:b:pet-🐸.v5.o7	The frog goes to bed.	1426d7f4			pending			
-en:b:pet-🐸.v5.o8	The frog goes to the potty.	fe5c3518			pending			
-en:b:pet-🐸.v5.cot	The frog goes to the cot.	9283c75a			pending			
-en:b:pet-🐸.v5.bus	The frog goes to the bus.	87c0fa5e			pending			
-en:b:pet-🐸.v6.o3	The frog plays with a toy.	4933dcd2			pending			
-en:b:pet-🐸.v6.o4	The frog plays with the car.	6a1f7988			pending			
-en:b:pet-🐸.v6.bus	The frog plays with the bus.	dc5ff6e8			pending			
-en:b:pet-🐸.v6.drum	The frog plays with a drum.	51e98392			pending			
-en:b:pet-🐸.v6.bike	The frog plays with a bike.	e5806399			pending			
-en:b:pet-🦁.v1.o1	The lion wants milk.	1f5bbb0e			pending			
-en:b:pet-🦁.v1.o2	The lion wants an apple.	88e353da			pending			
-en:b:pet-🦁.v1.o3	The lion wants a toy.	ce8e6134			pending			
-en:b:pet-🦁.v1.o4	The lion wants the car.	e61afbbe			pending			
-en:b:pet-🦁.v1.cup	The lion wants a cup.	bafe9720			pending			
-en:b:pet-🦁.v1.cap	The lion wants a cap.	f66d40bc			pending			
-en:b:pet-🦁.v1.pot	The lion wants a pot.	ad7ec201			pending			
-en:b:pet-🦁.v1.hat	The lion wants a hat.	396f0087			pending			
-en:b:pet-🦁.v1.bus	The lion wants the bus.	23f760a6			pending			
-en:b:pet-🦁.v1.drum	The lion wants a drum.	c9c09980			pending			
-en:b:pet-🦁.v1.star	The lion wants a star.	372a8be4			pending			
-en:b:pet-🦁.v1.cake	The lion wants cake.	5e8c2653			pending			
-en:b:pet-🦁.v1.bike	The lion wants a bike.	196f4c5b			pending			
-en:b:pet-🦁.v1.o9	The lion wants water.	a10712dc			pending			
-en:b:pet-🦁.v2.o2	The lion eats an apple.	1524473a			pending			
-en:b:pet-🦁.v2.cake	The lion eats cake.	5f123bb3			pending			
-en:b:pet-🦁.v3.o1	The lion drinks milk.	03475f62			pending			
-en:b:pet-🦁.v3.o9	The lion drinks water.	0030ebf0			pending			
-en:b:pet-🦁.v4.o4	The lion sleeps in the car.	98bb0c56			pending			
-en:b:pet-🦁.v4.o5	The lion sleeps outside.	6dda6c7d			pending			
-en:b:pet-🦁.v4.home	The lion sleeps at home.	84169d94			pending			
-en:b:pet-🦁.v4.o7	The lion sleeps in bed.	a8a5f154			pending			
-en:b:pet-🦁.v4.cot	The lion sleeps in the cot.	d87c09ba			pending			
-en:b:pet-🦁.v4.sun	The lion sleeps in the sun.	ce76ed8e			pending			
-en:b:pet-🦁.v4.bus	The lion sleeps on the bus.	b8ed4b34			pending			
-en:b:pet-🦁.v5.o4	The lion goes to the car.	fbc48692			pending			
-en:b:pet-🦁.v5.o5	The lion goes outside.	93193b37			pending			
-en:b:pet-🦁.v5.home	The lion goes home.	d1ce82b7			pending			
-en:b:pet-🦁.v5.o7	The lion goes to bed.	7d90e1a0			pending			
-en:b:pet-🦁.v5.o8	The lion goes to the potty.	2e29e1bc			pending			
-en:b:pet-🦁.v5.cot	The lion goes to the cot.	27352596			pending			
-en:b:pet-🦁.v5.bus	The lion goes to the bus.	d30a0492			pending			
-en:b:pet-🦁.v6.o3	The lion plays with a toy.	4a91a596			pending			
-en:b:pet-🦁.v6.o4	The lion plays with the car.	12714acc			pending			
-en:b:pet-🦁.v6.bus	The lion plays with the bus.	52d94334			pending			
-en:b:pet-🦁.v6.drum	The lion plays with a drum.	89b0f7b6			pending			
-en:b:pet-🦁.v6.bike	The lion plays with a bike.	76137cbd			pending			
-en:b:pet-🐳.v1.o1	The whale wants milk.	7860e429			pending			
-en:b:pet-🐳.v1.o2	The whale wants an apple.	081710a5			pending			
-en:b:pet-🐳.v1.o3	The whale wants a toy.	16fae75d			pending			
-en:b:pet-🐳.v1.o4	The whale wants the car.	31c3d06b			pending			
-en:b:pet-🐳.v1.cup	The whale wants a cup.	b34d241d			pending			
-en:b:pet-🐳.v1.cap	The whale wants a cap.	d5537e21			pending			
-en:b:pet-🐳.v1.pot	The whale wants a pot.	d809ef70			pending			
-en:b:pet-🐳.v1.hat	The whale wants a hat.	3270c3fa			pending			
-en:b:pet-🐳.v1.bus	The whale wants the bus.	1397ec03			pending			
-en:b:pet-🐳.v1.drum	The whale wants a drum.	31ff0497			pending			
-en:b:pet-🐳.v1.star	The whale wants a star.	dfe2078f			pending			
-en:b:pet-🐳.v1.cake	The whale wants cake.	c5ea665c			pending			
-en:b:pet-🐳.v1.bike	The whale wants a bike.	d183f45c			pending			
-en:b:pet-🐳.v1.o9	The whale wants water.	d281e1e5			pending			
-en:b:pet-🐳.v2.o2	The whale eats an apple.	5b1b417f			pending			
-en:b:pet-🐳.v2.cake	The whale eats cake.	c22ba66a			pending			
-en:b:pet-🐳.v3.o1	The whale drinks milk.	5153538b			pending			
-en:b:pet-🐳.v3.o9	The whale drinks water.	1fa7904f			pending			
-en:b:pet-🐳.v4.o4	The whale sleeps in the car.	278c7747			pending			
-en:b:pet-🐳.v4.o5	The whale sleeps outside.	07229fb6			pending			
-en:b:pet-🐳.v4.home	The whale sleeps at home.	b7ec6cab			pending			
-en:b:pet-🐳.v4.o7	The whale sleeps in bed.	176a27cd			pending			
-en:b:pet-🐳.v4.cot	The whale sleeps in the cot.	fc24d29f			pending			
-en:b:pet-🐳.v4.sun	The whale sleeps in the sun.	567b4d37			pending			
-en:b:pet-🐳.v4.bus	The whale sleeps on the bus.	774deba9			pending			
-en:b:pet-🐳.v5.o4	The whale goes to the car.	d9f341cb			pending			
-en:b:pet-🐳.v5.o5	The whale goes outside.	77e6c26c			pending			
-en:b:pet-🐳.v5.home	The whale goes home.	91f615be			pending			
-en:b:pet-🐳.v5.o7	The whale goes to bed.	430d45d1			pending			
-en:b:pet-🐳.v5.o8	The whale goes to the potty.	153292c9			pending			
-en:b:pet-🐳.v5.cot	The whale goes to the cot.	e769d613			pending			
-en:b:pet-🐳.v5.bus	The whale goes to the bus.	a0003f63			pending			
-en:b:pet-🐳.v6.o3	The whale plays with a toy.	f81112c9			pending			
-en:b:pet-🐳.v6.o4	The whale plays with the car.	88af88d7			pending			
-en:b:pet-🐳.v6.bus	The whale plays with the bus.	b16a0ad7			pending			
-en:b:pet-🐳.v6.drum	The whale plays with a drum.	f17a9683			pending			
-en:b:pet-🐳.v6.bike	The whale plays with a bike.	1b68c998			pending			
-en:p:🐭.v3.o1	The mouse drinks milk.	88a7813d			pending			
-en:p:🐭.v2.o2	The mouse eats an apple.	5b841b3d			pending			
-en:p:🐭.v6.o3	The mouse plays with a toy.	1bf572df			pending			
-en:p:🐭.v6.o4	The mouse plays with the car.	d4735289			pending			
-en:p:🐭.v3.-	The mouse drinks.	8a3e2d68			pending			
-en:p:🐭.v2.-	The mouse eats.	e2ccd454			pending			
-en:p:🐭.v6.bus	The mouse plays with the bus.	fd2dd489			pending			
-en:p:🐭.v6.drum	The mouse plays with a drum.	bca6891d			pending			
-en:p:🐭.v2.cake	The mouse eats cake.	25ef4ae4			pending			
-en:p:🐭.v6.bike	The mouse plays with a bike.	6dd28376			pending			
-en:p:🐭.v3.o9	The mouse drinks water.	1d9ab599			pending			
-en:p:🐭.v6.-	The mouse plays.	30d730aa			pending			
-en:p:🐯.v3.o1	The tiger drinks milk.	80ac5949			pending			
-en:p:🐯.v2.o2	The tiger eats an apple.	4c5ca8a1			pending			
-en:p:🐯.v6.o3	The tiger plays with a toy.	cebbefdb			pending			
-en:p:🐯.v6.o4	The tiger plays with the car.	c4f441b5			pending			
-en:p:🐯.v3.-	The tiger drinks.	a9afa0ec			pending			
-en:p:🐯.v2.-	The tiger eats.	09d99858			pending			
-en:p:🐯.v6.bus	The tiger plays with the bus.	248d452d			pending			
-en:p:🐯.v6.drum	The tiger plays with a drum.	ccf7c549			pending			
-en:p:🐯.v2.cake	The tiger eats cake.	e0853848			pending			
-en:p:🐯.v6.bike	The tiger plays with a bike.	faebb742			pending			
-en:p:🐯.v3.o9	The tiger drinks water.	4e08b805			pending			
-en:p:🐯.v6.-	The tiger plays.	0582957e			pending			
-en:p:🐱.v3.o1	The cat drinks milk.	934f1d58			pending			
-en:p:🐱.v2.o2	The cat eats an apple.	a38482f4			pending			
-en:p:🐱.v6.o3	The cat plays with a toy.	e6f506e0			pending			
-en:p:🐱.v6.o4	The cat plays with the car.	59dfa38a			pending			
-en:p:🐱.v3.-	The cat drinks.	f85ac127			pending			
-en:p:🐱.v2.-	The cat eats.	0a1ae5b7			pending			
-en:p:🐱.v6.bus	The cat plays with the bus.	4a71d68a			pending			
-en:p:🐱.v6.drum	The cat plays with a drum.	7b1dbb3c			pending			
-en:p:🐱.v2.cake	The cat eats cake.	faaa4611			pending			
-en:p:🐱.v6.bike	The cat plays with a bike.	864452e7			pending			
-en:p:🐱.v3.o9	The cat drinks water.	30ab4fbe			pending			
-en:p:🐱.v6.-	The cat plays.	b0c86d2f			pending			
-en:p:☀️.verb.o3	The sun shines on a toy.	29fd5682			pending			
-en:p:☀️.verb.o4	The sun shines on the car.	5b3163b8			pending			
-en:p:☀️.verb.cup	The sun shines on a cup.	d4e420be			pending			
-en:p:☀️.verb.pot	The sun shines on a pot.	a24ebd87			pending			
-en:p:☀️.verb.bus	The sun shines on the bus.	3276e1b8			pending			
-en:p:☀️.verb.drum	The sun shines on a drum.	788c8d62			pending			
-en:p:☀️.verb.bike	The sun shines on a bike.	558e65a9			pending			
-en:p:🐸.v3.o1	The frog drinks milk.	d83e7fbe			pending			
-en:p:🐸.v2.o2	The frog eats an apple.	ce66836e			pending			
-en:p:🐸.v6.o3	The frog plays with a toy.	4933dcd2			pending			
-en:p:🐸.v6.o4	The frog plays with the car.	6a1f7988			pending			
-en:p:🐸.v3.-	The frog drinks.	8fbc5635			pending			
-en:p:🐸.v2.-	The frog eats.	325a6c79			pending			
-en:p:🐸.v6.bus	The frog plays with the bus.	dc5ff6e8			pending			
-en:p:🐸.v6.drum	The frog plays with a drum.	51e98392			pending			
-en:p:🐸.v2.cake	The frog eats cake.	94f15107			pending			
-en:p:🐸.v6.bike	The frog plays with a bike.	e5806399			pending			
-en:p:🐸.v3.o9	The frog drinks water.	f3abc3cc			pending			
-en:p:🐸.v6.-	The frog plays.	d38dd345			pending			
-en:p:🦁.v3.o1	The lion drinks milk.	03475f62			pending			
-en:p:🦁.v2.o2	The lion eats an apple.	1524473a			pending			
-en:p:🦁.v6.o3	The lion plays with a toy.	4a91a596			pending			
-en:p:🦁.v6.o4	The lion plays with the car.	12714acc			pending			
-en:p:🦁.v3.-	The lion drinks.	5eb6b001			pending			
-en:p:🦁.v2.-	The lion eats.	1f4d2645			pending			
-en:p:🦁.v6.bus	The lion plays with the bus.	52d94334			pending			
-en:p:🦁.v6.drum	The lion plays with a drum.	89b0f7b6			pending			
-en:p:🦁.v2.cake	The lion eats cake.	5f123bb3			pending			
-en:p:🦁.v6.bike	The lion plays with a bike.	76137cbd			pending			
-en:p:🦁.v3.o9	The lion drinks water.	0030ebf0			pending			
-en:p:🦁.v6.-	The lion plays.	d8248451			pending			
-en:p:🐳.v3.o1	The whale drinks milk.	5153538b			pending			
-en:p:🐳.v2.o2	The whale eats an apple.	5b1b417f			pending			
-en:p:🐳.v6.o3	The whale plays with a toy.	f81112c9			pending			
-en:p:🐳.v6.o4	The whale plays with the car.	88af88d7			pending			
-en:p:🐳.v3.-	The whale drinks.	becc53ce			pending			
-en:p:🐳.v2.-	The whale eats.	5c159e86			pending			
-en:p:🐳.v6.bus	The whale plays with the bus.	b16a0ad7			pending			
-en:p:🐳.v6.drum	The whale plays with a drum.	f17a9683			pending			
-en:p:🐳.v2.cake	The whale eats cake.	c22ba66a			pending			
-en:p:🐳.v6.bike	The whale plays with a bike.	1b68c998			pending			
-en:p:🐳.v3.o9	The whale drinks water.	1fa7904f			pending			
-en:p:🐳.v6.-	The whale plays.	92d77580			pending			
-en:n:o1	This is milk.	04e374c4			pending			
-en:n:o2	This is an apple.	44d88bb8			pending			
-en:n:o3	This is a toy.	4ff63b96			pending			
-en:n:o4	This is the car.	642ed0cc			pending			
-en:n:home	This is home.	7027b9c0			pending			
-en:n:o7	This is the bed.	d8e57147			pending			
-en:n:o8	This is the potty.	43cf772a			pending			
-en:n:cup	This is a cup.	44cb7e2a			pending			
-en:n:cap	This is a cap.	49ab582e			pending			
-en:n:pot	This is a pot.	f26c0c8b			pending			
-en:n:cot	This is the cot.	f1d7cb60			pending			
-en:n:sun	This is the sun.	cedb983c			pending			
-en:n:hat	This is a hat.	8248a1ad			pending			
-en:n:bus	This is the bus.	a496c934			pending			
-en:n:drum	This is a drum.	070919b6			pending			
-en:n:star	This is a star.	92734e66			pending			
-en:n:cake	This is cake.	24522b35			pending			
-en:n:bike	This is a bike.	f36b9ebd			pending			
-en:n:o9	This is water.	0b12f4fa			pending			
+en:b:s1.v1.o1	I want milk.	78f9a279	ok		pending			
+en:b:s1.v1.o2	I want an apple.	8e962875	ok		pending			
+en:b:s1.v1.o3	I want a toy.	4bb9f00d	ok		pending			
+en:b:s1.v1.o4	I want the car.	8050609b	ok		pending			
+en:b:s1.v1.cup	I want a cup.	0333784d	ok		pending			
+en:b:s1.v1.cap	I want a cap.	c7c4ceb1	ok		pending			
+en:b:s1.v1.pot	I want a pot.	0538fb20	ok		pending			
+en:b:s1.v1.hat	I want a hat.	dfcc1bca	ok		pending			
+en:b:s1.v1.bus	I want the bus.	bf997fd3	ok		pending			
+en:b:s1.v1.drum	I want a drum.	52244127	ok		pending			
+en:b:s1.v1.star	I want a star.	cee2d3ff	ok		pending			
+en:b:s1.v1.cake	I want cake.	71adce2c	ok		pending			
+en:b:s1.v1.bike	I want a bike.	118d782c	ok		pending			
+en:b:s1.v1.o9	I want water.	12732cf5	ok		pending			
+en:b:s1.v2.o2	I eat an apple.	e5923b09	ok		pending			
+en:b:s1.v2.cake	I eat cake.	2d14c460	ok		pending			
+en:b:s1.v3.o1	I drink milk.	707db915	ok		pending			
+en:b:s1.v3.o9	I drink water.	425a12c1	ok		pending			
+en:b:s1.v4.o4	I sleep in the car.	34afa297	ok		pending			
+en:b:s1.v4.o5	I sleep outside.	aa851fc6	ok		pending			
+en:b:s1.v4.home	I sleep at home.	31cae57b	ok		pending			
+en:b:s1.v4.o7	I sleep in bed.	488c39dd	ok		pending			
+en:b:s1.v4.cot	I sleep in the cot.	494862af	ok		pending			
+en:b:s1.v4.sun	I sleep in the sun.	088141a7	ok		pending			
+en:b:s1.v4.bus	I sleep on the bus.	da093899	ok		pending			
+en:b:s1.v5.o4	I go to the car.	d251bfa8	ok		pending			
+en:b:s1.v5.o5	I go outside.	45897a7d	ok		pending			
+en:b:s1.v5.home	I go home.	479f9f7d	ok		pending			
+en:b:s1.v5.o7	I go to bed.	08630752	ok		pending			
+en:b:s1.v5.o8	I go to the potty.	a95a6dee	ok		pending			
+en:b:s1.v5.cot	I go to the cot.	46f4113c	ok		pending			
+en:b:s1.v5.bus	I go to the bus.	e0589188	ok		pending			
+en:b:s1.v6.o3	I play with a toy.	3db8a181	ok		pending			
+en:b:s1.v6.o4	I play with the car.	0b0f53bf	ok		pending			
+en:b:s1.v6.bus	I play with the bus.	1a7d20bf	ok		pending			
+en:b:s1.v6.drum	I play with a drum.	982df35b	ok		pending			
+en:b:mum.v1.o1	Mum wants milk.	58f0586e	ok		pending			
+en:b:mum.v1.o2	Mum wants an apple.	323956ba	ok		pending			
+en:b:mum.v1.o3	Mum wants a toy.	e862d094	ok		pending			
+en:b:mum.v1.o4	Mum wants the car.	e513aa9e	ok		pending			
+en:b:mum.v1.cup	Mum wants a cup.	d4d30680	ok		pending			
+en:b:mum.v1.cap	Mum wants a cap.	9042799c	ok		pending			
+en:b:mum.v1.pot	Mum wants a pot.	60a0afe1	ok		pending			
+en:b:mum.v1.hat	Mum wants a hat.	53436fe7	ok		pending			
+en:b:mum.v1.bus	Mum wants the bus.	22f00f86	ok		pending			
+en:b:mum.v1.drum	Mum wants a drum.	e82a75e0	ok		pending			
+en:b:mum.v1.star	Mum wants a star.	55946844	ok		pending			
+en:b:mum.v1.cake	Mum wants cake.	5dad5333	ok		pending			
+en:b:mum.v1.bike	Mum wants a bike.	641839bb	ok		pending			
+en:b:mum.v1.o9	Mum wants water.	0e7f63bc	ok		pending			
+en:b:mum.v2.o2	Mum eats an apple.	f53efb1a	ok		pending			
+en:b:mum.v2.cake	Mum eats cake.	8ca96113	ok		pending			
+en:b:mum.v3.o1	Mum drinks milk.	a3bfc542	ok		pending			
+en:b:mum.v3.o9	Mum drinks water.	d7066550	ok		pending			
+en:b:mum.v4.o4	Mum sleeps in the car.	4a4a05b6	ok		pending			
+en:b:mum.v4.o5	Mum sleeps outside.	d454cf5d	ok		pending			
+en:b:mum.v4.home	Mum sleeps at home.	3cd58974	ok		pending			
+en:b:mum.v4.o7	Mum sleeps in bed.	7ecb1234	ok		pending			
+en:b:mum.v4.cot	Mum sleeps in the cot.	8a0b031a	ok		pending			
+en:b:mum.v4.sun	Mum sleeps in the sun.	00051d6e	ok		pending			
+en:b:mum.v4.bus	Mum sleeps on the bus.	4144c814	ok		pending			
+en:b:mum.v5.o4	Mum goes to the car.	cae849f2	ok		pending			
+en:b:mum.v5.o5	Mum goes outside.	c2e16f17	ok		pending			
+en:b:mum.v5.home	Mum goes home.	61e75617	ok		pending			
+en:b:mum.v5.o7	Mum goes to bed.	2f5d4880	ok		pending			
+en:b:mum.v5.o8	Mum goes to the potty.	29a9689c	ok		pending			
+en:b:mum.v5.cot	Mum goes to the cot.	7659b276	ok		pending			
+en:b:mum.v5.bus	Mum goes to the bus.	a22dc7f2	ok		pending			
+en:b:mum.v6.o3	Mum plays with a toy.	bd319af6	ok		pending			
+en:b:mum.v6.o4	Mum plays with the car.	cfc73fac	ok		pending			
+en:b:mum.v6.bus	Mum plays with the bus.	92a8d794	ok		pending			
+en:b:mum.v6.drum	Mum plays with a drum.	45448116	ok		pending			
+en:b:dad.v1.o1	Dad wants milk.	7f8fa996	ok		pending			
+en:b:dad.v1.o2	Dad wants an apple.	5ad4df42	ok		pending			
+en:b:dad.v1.o3	Dad wants a toy.	cc5d032c	ok		pending			
+en:b:dad.v1.o4	Dad wants the car.	7655dd26	ok		pending			
+en:b:dad.v1.cup	Dad wants a cup.	8b552878	ok		pending			
+en:b:dad.v1.cap	Dad wants a cap.	c6c3d214	ok		pending			
+en:b:dad.v1.pot	Dad wants a pot.	4b756f49	ok		pending			
+en:b:dad.v1.hat	Dad wants a hat.	f4194d8f	ok		pending			
+en:b:dad.v1.bus	Dad wants the bus.	398726ee	ok		pending			
+en:b:dad.v1.drum	Dad wants a drum.	687afe98	ok		pending			
+en:b:dad.v1.star	Dad wants a star.	4e14df8c	ok		pending			
+en:b:dad.v1.cake	Dad wants cake.	5ae577cb	ok		pending			
+en:b:dad.v1.bike	Dad wants a bike.	9e178a23	ok		pending			
+en:b:dad.v1.o9	Dad wants water.	45d2baf4	ok		pending			
+en:b:dad.v2.o2	Dad eats an apple.	f5746a22	ok		pending			
+en:b:dad.v2.cake	Dad eats cake.	1110722b	ok		pending			
+en:b:dad.v3.o1	Dad drinks milk.	0edb725a	ok		pending			
+en:b:dad.v3.o9	Dad drinks water.	c6eba9f8	ok		pending			
+en:b:dad.v4.o4	Dad sleeps in the car.	d0382f5e	ok		pending			
+en:b:dad.v4.o5	Dad sleeps outside.	e315ea25	ok		pending			
+en:b:dad.v4.home	Dad sleeps at home.	f75fe1ec	ok		pending			
+en:b:dad.v4.o7	Dad sleeps in bed.	7fc0854c	ok		pending			
+en:b:dad.v4.cot	Dad sleeps in the cot.	427bad12	ok		pending			
+en:b:dad.v4.sun	Dad sleeps in the sun.	9e9c2526	ok		pending			
+en:b:dad.v4.bus	Dad sleeps on the bus.	aedbf05c	ok		pending			
+en:b:dad.v5.o4	Dad goes to the car.	7c1191ea	ok		pending			
+en:b:dad.v5.o5	Dad goes outside.	68c48d1f	ok		pending			
+en:b:dad.v5.home	Dad goes home.	95771e3f	ok		pending			
+en:b:dad.v5.o7	Dad goes to bed.	31db9a08	ok		pending			
+en:b:dad.v5.o8	Dad goes to the potty.	a7975054	ok		pending			
+en:b:dad.v5.cot	Dad goes to the cot.	57c9991e	ok		pending			
+en:b:dad.v5.bus	Dad goes to the bus.	53570fea	ok		pending			
+en:b:dad.v6.o3	Dad plays with a toy.	e6dbc90e	ok		pending			
+en:b:dad.v6.o4	Dad plays with the car.	52867734	ok		pending			
+en:b:dad.v6.bus	Dad plays with the bus.	f5b78e9c	ok		pending			
+en:b:dad.v6.drum	Dad plays with a drum.	31cd1c4e	ok		pending			
+en:b:s4.v1.o1	Granny wants milk.	de84d072	ok		pending			
+en:b:s4.v1.o2	Granny wants an apple.	cd1ad1d6	ok		pending			
+en:b:s4.v1.o3	Granny wants a toy.	66872850	ok		pending			
+en:b:s4.v1.o4	Granny wants the car.	513b58ba	ok		pending			
+en:b:s4.v1.cup	Granny wants a cup.	6ab17524	ok		pending			
+en:b:s4.v1.cap	Granny wants a cap.	8cb7cf28	ok		pending			
+en:b:s4.v1.pot	Granny wants a pot.	0abe01dd	ok		pending			
+en:b:s4.v1.hat	Granny wants a hat.	301bccab	ok		pending			
+en:b:s4.v1.bus	Granny wants the bus.	0d86a0da	ok		pending			
+en:b:s4.v1.drum	Granny wants a drum.	90952f4c	ok		pending			
+en:b:s4.v1.star	Granny wants a star.	44164810	ok		pending			
+en:b:s4.v1.cake	Granny wants cake.	81dba0ff	ok		pending			
+en:b:s4.v1.bike	Granny wants a bike.	0dbd04b7	ok		pending			
+en:b:s4.v1.o9	Granny wants water.	31ebe0c0	ok		pending			
+en:b:s4.v2.o2	Granny eats an apple.	1466d626	ok		pending			
+en:b:s4.v2.cake	Granny eats cake.	45ee3b0f	ok		pending			
+en:b:s4.v3.o1	Granny drinks milk.	23fed526	ok		pending			
+en:b:s4.v3.o9	Granny drinks water.	de878c84	ok		pending			
+en:b:s4.v4.o4	Granny sleeps in the car.	03c084ba	ok		pending			
+en:b:s4.v4.o5	Granny sleeps outside.	6747aaa9	ok		pending			
+en:b:s4.v4.home	Granny sleeps at home.	bd71ff88	ok		pending			
+en:b:s4.v4.o7	Granny sleeps in bed.	85573d98	ok		pending			
+en:b:s4.v4.cot	Granny sleeps in the cot.	df788bee	ok		pending			
+en:b:s4.v4.sun	Granny sleeps in the sun.	2e7bfbf2	ok		pending			
+en:b:s4.v4.bus	Granny sleeps on the bus.	de70bd68	ok		pending			
+en:b:s4.v5.o4	Granny goes to the car.	73fc89de	ok		pending			
+en:b:s4.v5.o5	Granny goes outside.	30963713	ok		pending			
+en:b:s4.v5.home	Granny goes home.	e0a5d49b	ok		pending			
+en:b:s4.v5.o7	Granny goes to bed.	72dc37cc	ok		pending			
+en:b:s4.v5.o8	Granny goes to the potty.	16981d40	ok		pending			
+en:b:s4.v5.cot	Granny goes to the cot.	e6400792	ok		pending			
+en:b:s4.v5.bus	Granny goes to the bus.	cb25a3c6	ok		pending			
+en:b:s4.v6.o3	Granny plays with a toy.	f77dd39a	ok		pending			
+en:b:s4.v6.o4	Granny plays with the car.	9ad2f880	ok		pending			
+en:b:s4.v6.bus	Granny plays with the bus.	54a3d7a0	ok		pending			
+en:b:s4.v6.drum	Granny plays with a drum.	d0d095da	ok		pending			
+en:b:dog.v1.o1	The dog wants milk.	52c6f2be	ok		pending			
+en:b:dog.v1.o2	The dog wants an apple.	be25000a	ok		pending			
+en:b:dog.v1.o3	The dog wants a toy.	d9395604	ok		pending			
+en:b:dog.v1.o4	The dog wants the car.	b409c88e	ok		pending			
+en:b:dog.v1.cup	The dog wants a cup.	e860d470	ok		pending			
+en:b:dog.v1.cap	The dog wants a cap.	465b43ec	ok		pending			
+en:b:dog.v1.pot	The dog wants a pot.	fd3faf91	ok		pending			
+en:b:dog.v1.hat	The dog wants a hat.	0bd6a337	ok		pending			
+en:b:dog.v1.bus	The dog wants the bus.	5470c516	ok		pending			
+en:b:dog.v1.drum	The dog wants a drum.	0ac88430	ok		pending			
+en:b:dog.v1.star	The dog wants a star.	f03b55b4	ok		pending			
+en:b:dog.v1.cake	The dog wants cake.	19882483	ok		pending			
+en:b:dog.v1.bike	The dog wants a bike.	fd74818b	ok		pending			
+en:b:dog.v1.o9	The dog wants water.	d878cccc	ok		pending			
+en:b:dog.v2.o2	The dog eats an apple.	0ce26e2a	ok		pending			
+en:b:dog.v2.cake	The dog eats cake.	78a03623	ok		pending			
+en:b:dog.v3.o1	The dog drinks milk.	ef136a12	ok		pending			
+en:b:dog.v3.o9	The dog drinks water.	4fe461e0	ok		pending			
+en:b:dog.v4.o4	The dog sleeps in the car.	3ef364a6	ok		pending			
+en:b:dog.v4.o5	The dog sleeps outside.	7a7e8d8d	ok		pending			
+en:b:dog.v4.home	The dog sleeps at home.	9ae507e4	ok		pending			
+en:b:dog.v4.o7	The dog sleeps in bed.	3e084ea4	ok		pending			
+en:b:dog.v4.cot	The dog sleeps in the cot.	812ecb0a	ok		pending			
+en:b:dog.v4.sun	The dog sleeps in the sun.	56bddf7e	ok		pending			
+en:b:dog.v4.bus	The dog sleeps on the bus.	1c329a64	ok		pending			
+en:b:dog.v5.o4	The dog goes to the car.	a5b0db42	ok		pending			
+en:b:dog.v5.o5	The dog goes outside.	67c22e07	ok		pending			
+en:b:dog.v5.home	The dog goes home.	b5c04fc7	ok		pending			
+en:b:dog.v5.o7	The dog goes to bed.	e703c750	ok		pending			
+en:b:dog.v5.o8	The dog goes to the potty.	da0314cc	ok		pending			
+en:b:dog.v5.cot	The dog goes to the cot.	1121df06	ok		pending			
+en:b:dog.v5.bus	The dog goes to the bus.	df80f0e2	ok		pending			
+en:b:dog.v6.o3	The dog plays with a toy.	a4b3d786	ok		pending			
+en:b:dog.v6.o4	The dog plays with the car.	b77b3ffc	ok		pending			
+en:b:dog.v6.bus	The dog plays with the bus.	711f5a04	ok		pending			
+en:b:dog.v6.drum	The dog plays with a drum.	cd3224c6	ok		pending			
+en:b:cat.v1.o1	The cat wants milk.	78b29134	ok		pending			
+en:b:cat.v1.o2	The cat wants an apple.	c7aa33e8	ok		pending			
+en:b:cat.v1.o3	The cat wants a toy.	0a4bbee6	ok		pending			
+en:b:cat.v1.o4	The cat wants the car.	f508805c	ok		pending			
+en:b:cat.v1.cup	The cat wants a cup.	40a1d17a	ok		pending			
+en:b:cat.v1.cap	The cat wants a cap.	22f7789e	ok		pending			
+en:b:cat.v1.pot	The cat wants a pot.	50fa0d1b	ok		pending			
+en:b:cat.v1.hat	The cat wants a hat.	f4e0ad9d	ok		pending			
+en:b:cat.v1.bus	The cat wants the bus.	12e4b2e4	ok		pending			
+en:b:cat.v1.drum	The cat wants a drum.	08cf41a6	ok		pending			
+en:b:cat.v1.star	The cat wants a star.	330bb7b6	ok		pending			
+en:b:cat.v1.cake	The cat wants cake.	58c046a5	ok		pending			
+en:b:cat.v1.bike	The cat wants a bike.	52d3dfed	ok		pending			
+en:b:cat.v1.o9	The cat wants water.	a43df12a	ok		pending			
+en:b:cat.v2.o2	The cat eats an apple.	a38482f4	ok		pending			
+en:b:cat.v2.cake	The cat eats cake.	faaa4611	ok		pending			
+en:b:cat.v3.o1	The cat drinks milk.	934f1d58	ok		pending			
+en:b:cat.v3.o9	The cat drinks water.	30ab4fbe	ok		pending			
+en:b:cat.v4.o4	The cat sleeps in the car.	2cc3608c	ok		pending			
+en:b:cat.v4.o5	The cat sleeps outside.	6a91638b	ok		pending			
+en:b:cat.v4.home	The cat sleeps at home.	cdb8be36	ok		pending			
+en:b:cat.v4.o7	The cat sleeps in bed.	80f3da86	ok		pending			
+en:b:cat.v4.cot	The cat sleeps in the cot.	ba6c5b20	ok		pending			
+en:b:cat.v4.sun	The cat sleeps in the sun.	7e2372fc	ok		pending			
+en:b:cat.v4.bus	The cat sleeps on the bus.	24fe3a7e	ok		pending			
+en:b:cat.v5.o4	The cat goes to the car.	94cda1e4	ok		pending			
+en:b:cat.v5.o5	The cat goes outside.	b28c7039	ok		pending			
+en:b:cat.v5.home	The cat goes home.	e2898e81	ok		pending			
+en:b:cat.v5.o7	The cat goes to bed.	aa49d00e	ok		pending			
+en:b:cat.v5.o8	The cat goes to the potty.	5f957f42	ok		pending			
+en:b:cat.v5.cot	The cat goes to the cot.	74f94f28	ok		pending			
+en:b:cat.v5.bus	The cat goes to the bus.	d2f9b8ac	ok		pending			
+en:b:cat.v6.o3	The cat plays with a toy.	e6f506e0	ok		pending			
+en:b:cat.v6.o4	The cat plays with the car.	59dfa38a	ok		pending			
+en:b:cat.v6.bus	The cat plays with the bus.	4a71d68a	ok		pending			
+en:b:cat.v6.drum	The cat plays with a drum.	7b1dbb3c	ok		pending			
+en:b:pig.v1.o1	The pig wants milk.	082c5884	ok		pending			
+en:b:pig.v1.o2	The pig wants an apple.	39ab66f8	ok		pending			
+en:b:pig.v1.o3	The pig wants a toy.	2ed9dbd6	ok		pending			
+en:b:pig.v1.o4	The pig wants the car.	bec8950c	ok		pending			
+en:b:pig.v1.cup	The pig wants a cup.	07e8006a	ok		pending			
+en:b:pig.v1.cap	The pig wants a cap.	0f42436e	ok		pending			
+en:b:pig.v1.pot	The pig wants a pot.	b802f7cb	ok		pending			
+en:b:pig.v1.hat	The pig wants a hat.	456523ed	ok		pending			
+en:b:pig.v1.bus	The pig wants the bus.	01aaf674	ok		pending			
+en:b:pig.v1.drum	The pig wants a drum.	52603af6	ok		pending			
+en:b:pig.v1.star	The pig wants a star.	cad813a6	ok		pending			
+en:b:pig.v1.cake	The pig wants cake.	fb5bfdf5	ok		pending			
+en:b:pig.v1.bike	The pig wants a bike.	3ec2bffd	ok		pending			
+en:b:pig.v1.o9	The pig wants water.	7a8b95ba	ok		pending			
+en:b:pig.v2.o2	The pig eats an apple.	359f1244	ok		pending			
+en:b:pig.v2.cake	The pig eats cake.	b2fd2b61	ok		pending			
+en:b:pig.v3.o1	The pig drinks milk.	20f17168	ok		pending			
+en:b:pig.v3.o9	The pig drinks water.	5b37f34e	ok		pending			
+en:b:pig.v4.o4	The pig sleeps in the car.	bfb44efc	ok		pending			
+en:b:pig.v4.o5	The pig sleeps outside.	e96624bb	ok		pending			
+en:b:pig.v4.home	The pig sleeps at home.	ecd3e4a6	ok		pending			
+en:b:pig.v4.o7	The pig sleeps in bed.	47c4ceb6	ok		pending			
+en:b:pig.v4.cot	The pig sleeps in the cot.	4d5d4990	ok		pending			
+en:b:pig.v4.sun	The pig sleeps in the sun.	075a1c0c	ok		pending			
+en:b:pig.v4.bus	The pig sleeps on the bus.	05baa90e	ok		pending			
+en:b:pig.v5.o4	The pig goes to the car.	0a78f174	ok		pending			
+en:b:pig.v5.o5	The pig goes outside.	008502a9	ok		pending			
+en:b:pig.v5.home	The pig goes home.	4381f0f1	ok		pending			
+en:b:pig.v5.o7	The pig goes to bed.	4bf8d15e	ok		pending			
+en:b:pig.v5.o8	The pig goes to the potty.	bac369f2	ok		pending			
+en:b:pig.v5.cot	The pig goes to the cot.	a829d0f8	ok		pending			
+en:b:pig.v5.bus	The pig goes to the bus.	ab2f9fdc	ok		pending			
+en:b:pig.v6.o3	The pig plays with a toy.	b9a077f0	ok		pending			
+en:b:pig.v6.o4	The pig plays with the car.	c3611cda	ok		pending			
+en:b:pig.v6.bus	The pig plays with the bus.	fd31327a	ok		pending			
+en:b:pig.v6.drum	The pig plays with a drum.	152edbec	ok		pending			
+en:b:hen.v1.o1	The hen wants milk.	d16035db	ok		pending			
+en:b:hen.v1.o2	The hen wants an apple.	cd1e88a7	ok		pending			
+en:b:hen.v1.o3	The hen wants a toy.	0fd5fbbb	ok		pending			
+en:b:hen.v1.o4	The hen wants the car.	679b7615	ok		pending			
+en:b:hen.v1.cup	The hen wants a cup.	1bfa07c3	ok		pending			
+en:b:hen.v1.cap	The hen wants a cap.	79f4773f	ok		pending			
+en:b:hen.v1.pot	The hen wants a pot.	925788c6	ok		pending			
+en:b:hen.v1.hat	The hen wants a hat.	d6a40174	ok		pending			
+en:b:hen.v1.bus	The hen wants the bus.	4733b00d	ok		pending			
+en:b:hen.v1.drum	The hen wants a drum.	15372329	ok		pending			
+en:b:hen.v1.star	The hen wants a star.	d2f32add	ok		pending			
+en:b:hen.v1.cake	The hen wants cake.	738a2b02	ok		pending			
+en:b:hen.v1.bike	The hen wants a bike.	432b1522	ok		pending			
+en:b:hen.v1.o9	The hen wants water.	ad86535f	ok		pending			
+en:b:hen.v2.o2	The hen eats an apple.	c5410a3d	ok		pending			
+en:b:hen.v2.cake	The hen eats cake.	142b49e4	ok		pending			
+en:b:hen.v3.o1	The hen drinks milk.	d4c9183d	ok		pending			
+en:b:hen.v3.o9	The hen drinks water.	f67b6a99	ok		pending			
+en:b:hen.v4.o4	The hen sleeps in the car.	c1d35df1	ok		pending			
+en:b:hen.v4.o5	The hen sleeps outside.	0cb2bee0	ok		pending			
+en:b:hen.v4.home	The hen sleeps at home.	124961a9	ok		pending			
+en:b:hen.v4.o7	The hen sleeps in bed.	8d9373fb	ok		pending			
+en:b:hen.v4.cot	The hen sleeps in the cot.	bb06a129	ok		pending			
+en:b:hen.v4.sun	The hen sleeps in the sun.	730b6511	ok		pending			
+en:b:hen.v4.bus	The hen sleeps on the bus.	1e55f02f	ok		pending			
+en:b:hen.v5.o4	The hen goes to the car.	068cfe11	ok		pending			
+en:b:hen.v5.o5	The hen goes outside.	d6502d1a	ok		pending			
+en:b:hen.v5.home	The hen goes home.	2c683614	ok		pending			
+en:b:hen.v5.o7	The hen goes to bed.	06ee239b	ok		pending			
+en:b:hen.v5.o8	The hen goes to the potty.	237e0883	ok		pending			
+en:b:hen.v5.cot	The hen goes to the cot.	7fc10ac9	ok		pending			
+en:b:hen.v5.bus	The hen goes to the bus.	2f478011	ok		pending			
+en:b:hen.v6.o3	The hen plays with a toy.	eb6c77df	ok		pending			
+en:b:hen.v6.o4	The hen plays with the car.	aea65f89	ok		pending			
+en:b:hen.v6.bus	The hen plays with the bus.	d760e189	ok		pending			
+en:b:hen.v6.drum	The hen plays with a drum.	5503681d	ok		pending			
+en:b:bug.v1.o1	The bug wants milk.	da683136	ok		pending			
+en:b:bug.v1.o2	The bug wants an apple.	2316c962	ok		pending			
+en:b:bug.v1.o3	The bug wants a toy.	841b354c	ok		pending			
+en:b:bug.v1.o4	The bug wants the car.	eeb06446	ok		pending			
+en:b:bug.v1.cup	The bug wants a cup.	59e5a698	ok		pending			
+en:b:bug.v1.cap	The bug wants a cap.	155519b4	ok		pending			
+en:b:bug.v1.pot	The bug wants a pot.	1c805669	ok		pending			
+en:b:bug.v1.hat	The bug wants a hat.	295de02f	ok		pending			
+en:b:bug.v1.bus	The bug wants the bus.	b1e1ae0e	ok		pending			
+en:b:bug.v1.drum	The bug wants a drum.	f86c58b8	ok		pending			
+en:b:bug.v1.star	The bug wants a star.	db8bd0ac	ok		pending			
+en:b:bug.v1.cake	The bug wants cake.	19f617eb	ok		pending			
+en:b:bug.v1.bike	The bug wants a bike.	ab8db1c3	ok		pending			
+en:b:bug.v1.o9	The bug wants water.	a772a294	ok		pending			
+en:b:bug.v2.o2	The bug eats an apple.	b1230b42	ok		pending			
+en:b:bug.v2.cake	The bug eats cake.	6168e3cb	ok		pending			
+en:b:bug.v3.o1	The bug drinks milk.	446089fa	ok		pending			
+en:b:bug.v3.o9	The bug drinks water.	676f7618	ok		pending			
+en:b:bug.v4.o4	The bug sleeps in the car.	006f767e	ok		pending			
+en:b:bug.v4.o5	The bug sleeps outside.	f86597c5	ok		pending			
+en:b:bug.v4.home	The bug sleeps at home.	38eea08c	ok		pending			
+en:b:bug.v4.o7	The bug sleeps in bed.	367ab26c	ok		pending			
+en:b:bug.v4.cot	The bug sleeps in the cot.	752d5d32	ok		pending			
+en:b:bug.v4.sun	The bug sleeps in the sun.	4ed435c6	ok		pending			
+en:b:bug.v4.bus	The bug sleeps on the bus.	6fce897c	ok		pending			
+en:b:bug.v5.o4	The bug goes to the car.	6399e10a	ok		pending			
+en:b:bug.v5.o5	The bug goes outside.	126f77bf	ok		pending			
+en:b:bug.v5.home	The bug goes home.	34e995df	ok		pending			
+en:b:bug.v5.o7	The bug goes to bed.	9632f928	ok		pending			
+en:b:bug.v5.o8	The bug goes to the potty.	e0ca63f4	ok		pending			
+en:b:bug.v5.cot	The bug goes to the cot.	3cd77f3e	ok		pending			
+en:b:bug.v5.bus	The bug goes to the bus.	542c140a	ok		pending			
+en:b:bug.v6.o3	The bug plays with a toy.	030e842e	ok		pending			
+en:b:bug.v6.o4	The bug plays with the car.	851c4dd4	ok		pending			
+en:b:bug.v6.bus	The bug plays with the bus.	284d653c	ok		pending			
+en:b:bug.v6.drum	The bug plays with a drum.	7823b3ee	ok		pending			
+en:b:frog.v1.o1	The frog wants milk.	7c2ad6da	ok		pending			
+en:b:frog.v1.o2	The frog wants an apple.	b7fc037e	ok		pending			
+en:b:frog.v1.o3	The frog wants a toy.	31353e48	ok		pending			
+en:b:frog.v1.o4	The frog wants the car.	6a240ac2	ok		pending			
+en:b:frog.v1.cup	The frog wants a cup.	bc24b57c	ok		pending			
+en:b:frog.v1.cap	The frog wants a cap.	833074e0	ok		pending			
+en:b:frog.v1.pot	The frog wants a pot.	f10c2665	ok		pending			
+en:b:frog.v1.hat	The frog wants a hat.	16fddab3	ok		pending			
+en:b:frog.v1.bus	The frog wants the bus.	a3f42062	ok		pending			
+en:b:frog.v1.drum	The frog wants a drum.	d6a65a64	ok		pending			
+en:b:frog.v1.star	The frog wants a star.	91ba0df8	ok		pending			
+en:b:frog.v1.cake	The frog wants cake.	1ad92657	ok		pending			
+en:b:frog.v1.bike	The frog wants a bike.	b4c86ebf	ok		pending			
+en:b:frog.v1.o9	The frog wants water.	5ae6df78	ok		pending			
+en:b:frog.v2.o2	The frog eats an apple.	ce66836e	ok		pending			
+en:b:frog.v2.cake	The frog eats cake.	94f15107	ok		pending			
+en:b:frog.v3.o1	The frog drinks milk.	d83e7fbe	ok		pending			
+en:b:frog.v3.o9	The frog drinks water.	f3abc3cc	ok		pending			
+en:b:frog.v4.o4	The frog sleeps in the car.	8e689b42	ok		pending			
+en:b:frog.v4.o5	The frog sleeps outside.	fefa0671	ok		pending			
+en:b:frog.v4.home	The frog sleeps at home.	702dbf20	ok		pending			
+en:b:frog.v4.o7	The frog sleeps in bed.	0fbf8750	ok		pending			
+en:b:frog.v4.cot	The frog sleeps in the cot.	f9d99f06	ok		pending			
+en:b:frog.v4.sun	The frog sleeps in the sun.	9f609c2a	ok		pending			
+en:b:frog.v4.bus	The frog sleeps on the bus.	0c7239d0	ok		pending			
+en:b:frog.v5.o4	The frog goes to the car.	504860f6	ok		pending			
+en:b:frog.v5.o5	The frog goes outside.	b5d469bb	ok		pending			
+en:b:frog.v5.home	The frog goes home.	a2d15fe3	ok		pending			
+en:b:frog.v5.o7	The frog goes to bed.	1426d7f4	ok		pending			
+en:b:frog.v5.o8	The frog goes to the potty.	fe5c3518	ok		pending			
+en:b:frog.v5.cot	The frog goes to the cot.	9283c75a	ok		pending			
+en:b:frog.v5.bus	The frog goes to the bus.	87c0fa5e	ok		pending			
+en:b:frog.v6.o3	The frog plays with a toy.	4933dcd2	ok		pending			
+en:b:frog.v6.o4	The frog plays with the car.	6a1f7988	ok		pending			
+en:b:frog.v6.bus	The frog plays with the bus.	dc5ff6e8	ok		pending			
+en:b:frog.v6.drum	The frog plays with a drum.	51e98392	ok		pending			
+en:b:fish.v1.o1	The fish wants milk.	0e2da536	ok		pending			
+en:b:fish.v1.o2	The fish wants an apple.	1abf7d62	ok		pending			
+en:b:fish.v1.o3	The fish wants a toy.	03f0d14c	ok		pending			
+en:b:fish.v1.o4	The fish wants the car.	61a56046	ok		pending			
+en:b:fish.v1.cup	The fish wants a cup.	d9bb4298	ok		pending			
+en:b:fish.v1.cap	The fish wants a cap.	952ab5b4	ok		pending			
+en:b:fish.v1.pot	The fish wants a pot.	9c55f269	ok		pending			
+en:b:fish.v1.hat	The fish wants a hat.	a9337c2f	ok		pending			
+en:b:fish.v1.bus	The fish wants the bus.	24d6aa0e	ok		pending			
+en:b:fish.v1.drum	The fish wants a drum.	35b0ecb8	ok		pending			
+en:b:fish.v1.star	The fish wants a star.	18d064ac	ok		pending			
+en:b:fish.v1.cake	The fish wants cake.	4dbb8beb	ok		pending			
+en:b:fish.v1.bike	The fish wants a bike.	e8d245c3	ok		pending			
+en:b:fish.v1.o9	The fish wants water.	27483e94	ok		pending			
+en:b:fish.v2.o2	The fish eats an apple.	24180742	ok		pending			
+en:b:fish.v2.cake	The fish eats cake.	dcc61fcb	ok		pending			
+en:b:fish.v3.o1	The fish drinks milk.	c43625fa	ok		pending			
+en:b:fish.v3.o9	The fish drinks water.	a4b40a18	ok		pending			
+en:b:fish.v4.o4	The fish sleeps in the car.	3cb8327e	ok		pending			
+en:b:fish.v4.o5	The fish sleeps outside.	f00e4bc5	ok		pending			
+en:b:fish.v4.home	The fish sleeps at home.	3097548c	ok		pending			
+en:b:fish.v4.o7	The fish sleeps in bed.	a96fae6c	ok		pending			
+en:b:fish.v4.cot	The fish sleeps in the cot.	b1761932	ok		pending			
+en:b:fish.v4.sun	The fish sleeps in the sun.	8b1cf1c6	ok		pending			
+en:b:fish.v4.bus	The fish sleeps on the bus.	ac17457c	ok		pending			
+en:b:fish.v5.o4	The fish goes to the car.	422d3d0a	ok		pending			
+en:b:fish.v5.o5	The fish goes outside.	4fb40bbf	ok		pending			
+en:b:fish.v5.home	The fish goes home.	b046d1df	ok		pending			
+en:b:fish.v5.o7	The fish goes to bed.	16089528	ok		pending			
+en:b:fish.v5.o8	The fish goes to the potty.	1d131ff4	ok		pending			
+en:b:fish.v5.cot	The fish goes to the cot.	1b6adb3e	ok		pending			
+en:b:fish.v5.bus	The fish goes to the bus.	32bf700a	ok		pending			
+en:b:fish.v6.o3	The fish plays with a toy.	6508582e	ok		pending			
+en:b:fish.v6.o4	The fish plays with the car.	6b9c41d4	ok		pending			
+en:b:fish.v6.bus	The fish plays with the bus.	0ecd593c	ok		pending			
+en:b:fish.v6.drum	The fish plays with a drum.	b46c6fee	ok		pending			
+en:b:chick.v1.o1	The chick wants milk.	a9ecdd3c	ok		pending			
+en:b:chick.v1.o2	The chick wants an apple.	04615e70	ok		pending			
+en:b:chick.v1.o3	The chick wants a toy.	5a44429e	ok		pending			
+en:b:chick.v1.o4	The chick wants the car.	cd229704	ok		pending			
+en:b:chick.v1.cup	The chick wants a cup.	20ca1312	ok		pending			
+en:b:chick.v1.cap	The chick wants a cap.	a7d56db6	ok		pending			
+en:b:chick.v1.pot	The chick wants a pot.	85cfb883	ok		pending			
+en:b:chick.v1.hat	The chick wants a hat.	a8293b45	ok		pending			
+en:b:chick.v1.bus	The chick wants the bus.	a49a994c	ok		pending			
+en:b:chick.v1.drum	The chick wants a drum.	3731353e	ok		pending			
+en:b:chick.v1.star	The chick wants a star.	bf1ae8de	ok		pending			
+en:b:chick.v1.cake	The chick wants cake.	3567247d	ok		pending			
+en:b:chick.v1.bike	The chick wants a bike.	b66c35f5	ok		pending			
+en:b:chick.v1.o9	The chick wants water.	83706422	ok		pending			
+en:b:chick.v2.o2	The chick eats an apple.	088d76fc	ok		pending			
+en:b:chick.v2.cake	The chick eats cake.	546d51c9	ok		pending			
+en:b:chick.v3.o1	The chick drinks milk.	d4175df0	ok		pending			
+en:b:chick.v3.o9	The chick drinks water.	66e92346	ok		pending			
+en:b:chick.v4.o4	The chick sleeps in the car.	921d9834	ok		pending			
+en:b:chick.v4.o5	The chick sleeps outside.	780b5f33	ok		pending			
+en:b:chick.v4.home	The chick sleeps at home.	390f908e	ok		pending			
+en:b:chick.v4.o7	The chick sleeps in bed.	38d2de9e	ok		pending			
+en:b:chick.v4.cot	The chick sleeps in the cot.	3248e0b8	ok		pending			
+en:b:chick.v4.sun	The chick sleeps in the sun.	dc760834	ok		pending			
+en:b:chick.v4.bus	The chick sleeps on the bus.	1aae5786	ok		pending			
+en:b:chick.v5.o4	The chick goes to the car.	d50f637c	ok		pending			
+en:b:chick.v5.o5	The chick goes outside.	22b35f21	ok		pending			
+en:b:chick.v5.home	The chick goes home.	8e500869	ok		pending			
+en:b:chick.v5.o7	The chick goes to bed.	c91f9b36	ok		pending			
+en:b:chick.v5.o8	The chick goes to the potty.	03fce2fa	ok		pending			
+en:b:chick.v5.cot	The chick goes to the cot.	62b85e10	ok		pending			
+en:b:chick.v5.bus	The chick goes to the bus.	8eb37d84	ok		pending			
+en:b:chick.v6.o3	The chick plays with a toy.	286c8138	ok		pending			
+en:b:chick.v6.o4	The chick plays with the car.	2002fdb2	ok		pending			
+en:b:chick.v6.bus	The chick plays with the bus.	f7487bb2	ok		pending			
+en:b:chick.v6.drum	The chick plays with a drum.	0609ebb4	ok		pending			
+en:b:pet-🐭.v1.o1	The mouse wants milk.	c8edc8db	ok		pending			
+en:b:pet-🐭.v1.o2	The mouse wants an apple.	58b24ba7	ok		pending			
+en:b:pet-🐭.v1.o3	The mouse wants a toy.	c3b464bb	ok		pending			
+en:b:pet-🐭.v1.o4	The mouse wants the car.	fdde8715	ok		pending			
+en:b:pet-🐭.v1.cup	The mouse wants a cup.	cfd870c3	ok		pending			
+en:b:pet-🐭.v1.cap	The mouse wants a cap.	2dd2e03f	ok		pending			
+en:b:pet-🐭.v1.pot	The mouse wants a pot.	4635f1c6	ok		pending			
+en:b:pet-🐭.v1.hat	The mouse wants a hat.	8a826a74	ok		pending			
+en:b:pet-🐭.v1.bus	The mouse wants the bus.	dd76c10d	ok		pending			
+en:b:pet-🐭.v1.drum	The mouse wants a drum.	3c566e29	ok		pending			
+en:b:pet-🐭.v1.star	The mouse wants a star.	fa1275dd	ok		pending			
+en:b:pet-🐭.v1.cake	The mouse wants cake.	6b17be02	ok		pending			
+en:b:pet-🐭.v1.bike	The mouse wants a bike.	6a4a6022	ok		pending			
+en:b:pet-🐭.v1.o9	The mouse wants water.	6164bc5f	ok		pending			
+en:b:pet-🐭.v2.o2	The mouse eats an apple.	5b841b3d	ok		pending			
+en:b:pet-🐭.v2.cake	The mouse eats cake.	25ef4ae4	ok		pending			
+en:b:pet-🐭.v3.o1	The mouse drinks milk.	88a7813d	ok		pending			
+en:b:pet-🐭.v3.o9	The mouse drinks water.	1d9ab599	ok		pending			
+en:b:pet-🐭.v4.o4	The mouse sleeps in the car.	29767ef1	ok		pending			
+en:b:pet-🐭.v4.o5	The mouse sleeps outside.	984681e0	ok		pending			
+en:b:pet-🐭.v4.home	The mouse sleeps at home.	9ddd24a9	ok		pending			
+en:b:pet-🐭.v4.o7	The mouse sleeps in bed.	23d684fb	ok		pending			
+en:b:pet-🐭.v4.cot	The mouse sleeps in the cot.	22a9c229	ok		pending			
+en:b:pet-🐭.v4.sun	The mouse sleeps in the sun.	daae8611	ok		pending			
+en:b:pet-🐭.v4.bus	The mouse sleeps on the bus.	85f9112f	ok		pending			
+en:b:pet-🐭.v5.o4	The mouse goes to the car.	c028f711	ok		pending			
+en:b:pet-🐭.v5.o5	The mouse goes outside.	fd6f781a	ok		pending			
+en:b:pet-🐭.v5.home	The mouse goes home.	3e2c3714	ok		pending			
+en:b:pet-🐭.v5.o7	The mouse goes to bed.	bacc8c9b	ok		pending			
+en:b:pet-🐭.v5.o8	The mouse goes to the potty.	8b212983	ok		pending			
+en:b:pet-🐭.v5.cot	The mouse goes to the cot.	395d03c9	ok		pending			
+en:b:pet-🐭.v5.bus	The mouse goes to the bus.	e8e37911	ok		pending			
+en:b:pet-🐭.v6.o3	The mouse plays with a toy.	1bf572df	ok		pending			
+en:b:pet-🐭.v6.o4	The mouse plays with the car.	d4735289	ok		pending			
+en:b:pet-🐭.v6.bus	The mouse plays with the bus.	fd2dd489	ok		pending			
+en:b:pet-🐭.v6.drum	The mouse plays with a drum.	bca6891d	ok		pending			
+en:b:pet-🐯.v1.o1	The tiger wants milk.	49455d77	ok		pending			
+en:b:pet-🐯.v1.o2	The tiger wants an apple.	0be9a6fb	ok		pending			
+en:b:pet-🐯.v1.o3	The tiger wants a toy.	630a52af	ok		pending			
+en:b:pet-🐯.v1.o4	The tiger wants the car.	551a31d9	ok		pending			
+en:b:pet-🐯.v1.cup	The tiger wants a cup.	413a202f	ok		pending			
+en:b:pet-🐯.v1.cap	The tiger wants a cap.	88451613	ok		pending			
+en:b:pet-🐯.v1.pot	The tiger wants a pot.	230f81da	ok		pending			
+en:b:pet-🐯.v1.hat	The tiger wants a hat.	62b597f0	ok		pending			
+en:b:pet-🐯.v1.bus	The tiger wants the bus.	e2d9b479	ok		pending			
+en:b:pet-🐯.v1.drum	The tiger wants a drum.	4275454d	ok		pending			
+en:b:pet-🐯.v1.star	The tiger wants a star.	9296bf81	ok		pending			
+en:b:pet-🐯.v1.cake	The tiger wants cake.	6f5ab536	ok		pending			
+en:b:pet-🐯.v1.bike	The tiger wants a bike.	24aa1ca6	ok		pending			
+en:b:pet-🐯.v1.o9	The tiger wants water.	b4c7bfdb	ok		pending			
+en:b:pet-🐯.v2.o2	The tiger eats an apple.	4c5ca8a1	ok		pending			
+en:b:pet-🐯.v2.cake	The tiger eats cake.	e0853848	ok		pending			
+en:b:pet-🐯.v3.o1	The tiger drinks milk.	80ac5949	ok		pending			
+en:b:pet-🐯.v3.o9	The tiger drinks water.	4e08b805	ok		pending			
+en:b:pet-🐯.v4.o4	The tiger sleeps in the car.	65d2c91d	ok		pending			
+en:b:pet-🐯.v4.o5	The tiger sleeps outside.	51c98ce4	ok		pending			
+en:b:pet-🐯.v4.home	The tiger sleeps at home.	bf786045	ok		pending			
+en:b:pet-🐯.v4.o7	The tiger sleeps in bed.	95173a27	ok		pending			
+en:b:pet-🐯.v4.cot	The tiger sleeps in the cot.	258a02a5	ok		pending			
+en:b:pet-🐯.v4.sun	The tiger sleeps in the sun.	1725599d	ok		pending			
+en:b:pet-🐯.v4.bus	The tiger sleeps on the bus.	a981ebdb	ok		pending			
+en:b:pet-🐯.v5.o4	The tiger goes to the car.	1b3385d5	ok		pending			
+en:b:pet-🐯.v5.o5	The tiger goes outside.	412e2b9e	ok		pending			
+en:b:pet-🐯.v5.home	The tiger goes home.	9f7c8520	ok		pending			
+en:b:pet-🐯.v5.o7	The tiger goes to bed.	f131f90f	ok		pending			
+en:b:pet-🐯.v5.o8	The tiger goes to the potty.	8b760f9f	ok		pending			
+en:b:pet-🐯.v5.cot	The tiger goes to the cot.	8dbc280d	ok		pending			
+en:b:pet-🐯.v5.bus	The tiger goes to the bus.	f85156cd	ok		pending			
+en:b:pet-🐯.v6.o3	The tiger plays with a toy.	cebbefdb	ok		pending			
+en:b:pet-🐯.v6.o4	The tiger plays with the car.	c4f441b5	ok		pending			
+en:b:pet-🐯.v6.bus	The tiger plays with the bus.	248d452d	ok		pending			
+en:b:pet-🐯.v6.drum	The tiger plays with a drum.	ccf7c549	ok		pending			
+en:b:pet-🦁.v1.o1	The lion wants milk.	1f5bbb0e	ok		pending			
+en:b:pet-🦁.v1.o2	The lion wants an apple.	88e353da	ok		pending			
+en:b:pet-🦁.v1.o3	The lion wants a toy.	ce8e6134	ok		pending			
+en:b:pet-🦁.v1.o4	The lion wants the car.	e61afbbe	ok		pending			
+en:b:pet-🦁.v1.cup	The lion wants a cup.	bafe9720	ok		pending			
+en:b:pet-🦁.v1.cap	The lion wants a cap.	f66d40bc	ok		pending			
+en:b:pet-🦁.v1.pot	The lion wants a pot.	ad7ec201	ok		pending			
+en:b:pet-🦁.v1.hat	The lion wants a hat.	396f0087	ok		pending			
+en:b:pet-🦁.v1.bus	The lion wants the bus.	23f760a6	ok		pending			
+en:b:pet-🦁.v1.drum	The lion wants a drum.	c9c09980	ok		pending			
+en:b:pet-🦁.v1.star	The lion wants a star.	372a8be4	ok		pending			
+en:b:pet-🦁.v1.cake	The lion wants cake.	5e8c2653	ok		pending			
+en:b:pet-🦁.v1.bike	The lion wants a bike.	196f4c5b	ok		pending			
+en:b:pet-🦁.v1.o9	The lion wants water.	a10712dc	ok		pending			
+en:b:pet-🦁.v2.o2	The lion eats an apple.	1524473a	ok		pending			
+en:b:pet-🦁.v2.cake	The lion eats cake.	5f123bb3	ok		pending			
+en:b:pet-🦁.v3.o1	The lion drinks milk.	03475f62	ok		pending			
+en:b:pet-🦁.v3.o9	The lion drinks water.	0030ebf0	ok		pending			
+en:b:pet-🦁.v4.o4	The lion sleeps in the car.	98bb0c56	ok		pending			
+en:b:pet-🦁.v4.o5	The lion sleeps outside.	6dda6c7d	ok		pending			
+en:b:pet-🦁.v4.home	The lion sleeps at home.	84169d94	ok		pending			
+en:b:pet-🦁.v4.o7	The lion sleeps in bed.	a8a5f154	ok		pending			
+en:b:pet-🦁.v4.cot	The lion sleeps in the cot.	d87c09ba	ok		pending			
+en:b:pet-🦁.v4.sun	The lion sleeps in the sun.	ce76ed8e	ok		pending			
+en:b:pet-🦁.v4.bus	The lion sleeps on the bus.	b8ed4b34	ok		pending			
+en:b:pet-🦁.v5.o4	The lion goes to the car.	fbc48692	ok		pending			
+en:b:pet-🦁.v5.o5	The lion goes outside.	93193b37	ok		pending			
+en:b:pet-🦁.v5.home	The lion goes home.	d1ce82b7	ok		pending			
+en:b:pet-🦁.v5.o7	The lion goes to bed.	7d90e1a0	ok		pending			
+en:b:pet-🦁.v5.o8	The lion goes to the potty.	2e29e1bc	ok		pending			
+en:b:pet-🦁.v5.cot	The lion goes to the cot.	27352596	ok		pending			
+en:b:pet-🦁.v5.bus	The lion goes to the bus.	d30a0492	ok		pending			
+en:b:pet-🦁.v6.o3	The lion plays with a toy.	4a91a596	ok		pending			
+en:b:pet-🦁.v6.o4	The lion plays with the car.	12714acc	ok		pending			
+en:b:pet-🦁.v6.bus	The lion plays with the bus.	52d94334	ok		pending			
+en:b:pet-🦁.v6.drum	The lion plays with a drum.	89b0f7b6	ok		pending			
+en:b:pet-🐳.v1.o1	The whale wants milk.	7860e429	ok		pending			
+en:b:pet-🐳.v1.o2	The whale wants an apple.	081710a5	ok		pending			
+en:b:pet-🐳.v1.o3	The whale wants a toy.	16fae75d	ok		pending			
+en:b:pet-🐳.v1.o4	The whale wants the car.	31c3d06b	ok		pending			
+en:b:pet-🐳.v1.cup	The whale wants a cup.	b34d241d	ok		pending			
+en:b:pet-🐳.v1.cap	The whale wants a cap.	d5537e21	ok		pending			
+en:b:pet-🐳.v1.pot	The whale wants a pot.	d809ef70	ok		pending			
+en:b:pet-🐳.v1.hat	The whale wants a hat.	3270c3fa	ok		pending			
+en:b:pet-🐳.v1.bus	The whale wants the bus.	1397ec03	ok		pending			
+en:b:pet-🐳.v1.drum	The whale wants a drum.	31ff0497	ok		pending			
+en:b:pet-🐳.v1.star	The whale wants a star.	dfe2078f	ok		pending			
+en:b:pet-🐳.v1.cake	The whale wants cake.	c5ea665c	ok		pending			
+en:b:pet-🐳.v1.bike	The whale wants a bike.	d183f45c	ok		pending			
+en:b:pet-🐳.v1.o9	The whale wants water.	d281e1e5	ok		pending			
+en:b:pet-🐳.v2.o2	The whale eats an apple.	5b1b417f	ok		pending			
+en:b:pet-🐳.v2.cake	The whale eats cake.	c22ba66a	ok		pending			
+en:b:pet-🐳.v3.o1	The whale drinks milk.	5153538b	ok		pending			
+en:b:pet-🐳.v3.o9	The whale drinks water.	1fa7904f	ok		pending			
+en:b:pet-🐳.v4.o4	The whale sleeps in the car.	278c7747	ok		pending			
+en:b:pet-🐳.v4.o5	The whale sleeps outside.	07229fb6	ok		pending			
+en:b:pet-🐳.v4.home	The whale sleeps at home.	b7ec6cab	ok		pending			
+en:b:pet-🐳.v4.o7	The whale sleeps in bed.	176a27cd	ok		pending			
+en:b:pet-🐳.v4.cot	The whale sleeps in the cot.	fc24d29f	ok		pending			
+en:b:pet-🐳.v4.sun	The whale sleeps in the sun.	567b4d37	ok		pending			
+en:b:pet-🐳.v4.bus	The whale sleeps on the bus.	774deba9	ok		pending			
+en:b:pet-🐳.v5.o4	The whale goes to the car.	d9f341cb	ok		pending			
+en:b:pet-🐳.v5.o5	The whale goes outside.	77e6c26c	ok		pending			
+en:b:pet-🐳.v5.home	The whale goes home.	91f615be	ok		pending			
+en:b:pet-🐳.v5.o7	The whale goes to bed.	430d45d1	ok		pending			
+en:b:pet-🐳.v5.o8	The whale goes to the potty.	153292c9	ok		pending			
+en:b:pet-🐳.v5.cot	The whale goes to the cot.	e769d613	ok		pending			
+en:b:pet-🐳.v5.bus	The whale goes to the bus.	a0003f63	ok		pending			
+en:b:pet-🐳.v6.o3	The whale plays with a toy.	f81112c9	ok		pending			
+en:b:pet-🐳.v6.o4	The whale plays with the car.	88af88d7	ok		pending			
+en:b:pet-🐳.v6.bus	The whale plays with the bus.	b16a0ad7	ok		pending			
+en:b:pet-🐳.v6.drum	The whale plays with a drum.	f17a9683	ok		pending			
+en:p:🐭.v3.o1	The mouse drinks milk.	88a7813d	ok		pending			
+en:p:🐭.v2.o2	The mouse eats an apple.	5b841b3d	ok		pending			
+en:p:🐭.v6.o3	The mouse plays with a toy.	1bf572df	ok		pending			
+en:p:🐭.v6.o4	The mouse plays with the car.	d4735289	ok		pending			
+en:p:🐭.v3.-	The mouse drinks.	8a3e2d68	ok		pending			
+en:p:🐭.v2.-	The mouse eats.	e2ccd454	ok		pending			
+en:p:🐭.v6.bus	The mouse plays with the bus.	fd2dd489	ok		pending			
+en:p:🐭.v6.drum	The mouse plays with a drum.	bca6891d	ok		pending			
+en:p:🐭.v2.cake	The mouse eats cake.	25ef4ae4	ok		pending			
+en:p:🐭.v6.-	The mouse plays.	30d730aa	ok		pending			
+en:p:🐭.v3.o9	The mouse drinks water.	1d9ab599	ok		pending			
+en:p:🐯.v3.o1	The tiger drinks milk.	80ac5949	ok		pending			
+en:p:🐯.v2.o2	The tiger eats an apple.	4c5ca8a1	ok		pending			
+en:p:🐯.v6.o3	The tiger plays with a toy.	cebbefdb	ok		pending			
+en:p:🐯.v6.o4	The tiger plays with the car.	c4f441b5	ok		pending			
+en:p:🐯.v3.-	The tiger drinks.	a9afa0ec	ok		pending			
+en:p:🐯.v2.-	The tiger eats.	09d99858	ok		pending			
+en:p:🐯.v6.bus	The tiger plays with the bus.	248d452d	ok		pending			
+en:p:🐯.v6.drum	The tiger plays with a drum.	ccf7c549	ok		pending			
+en:p:🐯.v2.cake	The tiger eats cake.	e0853848	ok		pending			
+en:p:🐯.v6.-	The tiger plays.	0582957e	ok		pending			
+en:p:🐯.v3.o9	The tiger drinks water.	4e08b805	ok		pending			
+en:p:🐱.v3.o1	The cat drinks milk.	934f1d58	ok		pending			
+en:p:🐱.v2.o2	The cat eats an apple.	a38482f4	ok		pending			
+en:p:🐱.v6.o3	The cat plays with a toy.	e6f506e0	ok		pending			
+en:p:🐱.v6.o4	The cat plays with the car.	59dfa38a	ok		pending			
+en:p:🐱.v3.-	The cat drinks.	f85ac127	ok		pending			
+en:p:🐱.v2.-	The cat eats.	0a1ae5b7	ok		pending			
+en:p:🐱.v6.bus	The cat plays with the bus.	4a71d68a	ok		pending			
+en:p:🐱.v6.drum	The cat plays with a drum.	7b1dbb3c	ok		pending			
+en:p:🐱.v2.cake	The cat eats cake.	faaa4611	ok		pending			
+en:p:🐱.v6.-	The cat plays.	b0c86d2f	ok		pending			
+en:p:🐱.v3.o9	The cat drinks water.	30ab4fbe	ok		pending			
+en:p:☀️.verb.o3	The sun shines on a toy.	29fd5682	ok		pending			
+en:p:☀️.verb.o4	The sun shines on the car.	5b3163b8	ok		pending			
+en:p:☀️.verb.cup	The sun shines on a cup.	d4e420be	ok		pending			
+en:p:☀️.verb.pot	The sun shines on a pot.	a24ebd87	ok		pending			
+en:p:☀️.verb.bus	The sun shines on the bus.	3276e1b8	ok		pending			
+en:p:☀️.verb.drum	The sun shines on a drum.	788c8d62	ok		pending			
+en:p:☀️.verb.bike	The sun shines on a bike.	558e65a9	ok		pending			
+en:p:🐸.v3.o1	The frog drinks milk.	d83e7fbe	ok		pending			
+en:p:🐸.v2.o2	The frog eats an apple.	ce66836e	ok		pending			
+en:p:🐸.v6.o3	The frog plays with a toy.	4933dcd2	ok		pending			
+en:p:🐸.v6.o4	The frog plays with the car.	6a1f7988	ok		pending			
+en:p:🐸.v3.-	The frog drinks.	8fbc5635	ok		pending			
+en:p:🐸.v2.-	The frog eats.	325a6c79	ok		pending			
+en:p:🐸.v6.bus	The frog plays with the bus.	dc5ff6e8	ok		pending			
+en:p:🐸.v6.drum	The frog plays with a drum.	51e98392	ok		pending			
+en:p:🐸.v2.cake	The frog eats cake.	94f15107	ok		pending			
+en:p:🐸.v6.-	The frog plays.	d38dd345	ok		pending			
+en:p:🐸.v3.o9	The frog drinks water.	f3abc3cc	ok		pending			
+en:p:🦁.v3.o1	The lion drinks milk.	03475f62	ok		pending			
+en:p:🦁.v2.o2	The lion eats an apple.	1524473a	ok		pending			
+en:p:🦁.v6.o3	The lion plays with a toy.	4a91a596	ok		pending			
+en:p:🦁.v6.o4	The lion plays with the car.	12714acc	ok		pending			
+en:p:🦁.v3.-	The lion drinks.	5eb6b001	ok		pending			
+en:p:🦁.v2.-	The lion eats.	1f4d2645	ok		pending			
+en:p:🦁.v6.bus	The lion plays with the bus.	52d94334	ok		pending			
+en:p:🦁.v6.drum	The lion plays with a drum.	89b0f7b6	ok		pending			
+en:p:🦁.v2.cake	The lion eats cake.	5f123bb3	ok		pending			
+en:p:🦁.v6.-	The lion plays.	d8248451	ok		pending			
+en:p:🦁.v3.o9	The lion drinks water.	0030ebf0	ok		pending			
+en:p:🐳.v3.o1	The whale drinks milk.	5153538b	ok		pending			
+en:p:🐳.v2.o2	The whale eats an apple.	5b1b417f	ok		pending			
+en:p:🐳.v6.o3	The whale plays with a toy.	f81112c9	ok		pending			
+en:p:🐳.v6.o4	The whale plays with the car.	88af88d7	ok		pending			
+en:p:🐳.v3.-	The whale drinks.	becc53ce	ok		pending			
+en:p:🐳.v2.-	The whale eats.	5c159e86	ok		pending			
+en:p:🐳.v6.bus	The whale plays with the bus.	b16a0ad7	ok		pending			
+en:p:🐳.v6.drum	The whale plays with a drum.	f17a9683	ok		pending			
+en:p:🐳.v2.cake	The whale eats cake.	c22ba66a	ok		pending			
+en:p:🐳.v6.-	The whale plays.	92d77580	ok		pending			
+en:p:🐳.v3.o9	The whale drinks water.	1fa7904f	ok		pending			
+en:n:o1	This is milk.	04e374c4	ok		pending			
+en:n:o2	This is an apple.	44d88bb8	ok		pending			
+en:n:o3	This is a toy.	4ff63b96	ok		pending			
+en:n:o4	This is the car.	642ed0cc	ok		pending			
+en:n:home	This is home.	7027b9c0	ok		pending			
+en:n:o7	This is the bed.	d8e57147	ok		pending			
+en:n:o8	This is the potty.	43cf772a	ok		pending			
+en:n:cup	This is a cup.	44cb7e2a	ok		pending			
+en:n:cap	This is a cap.	49ab582e	ok		pending			
+en:n:pot	This is a pot.	f26c0c8b	ok		pending			
+en:n:cot	This is the cot.	f1d7cb60	ok		pending			
+en:n:sun	This is the sun.	cedb983c	ok		pending			
+en:n:hat	This is a hat.	8248a1ad	ok		pending			
+en:n:bus	This is the bus.	a496c934	ok		pending			
+en:n:drum	This is a drum.	070919b6	ok		pending			
+en:n:star	This is a star.	92734e66	ok		pending			
+en:n:cake	This is cake.	24522b35	ok		pending			
+en:n:bike	This is a bike.	f36b9ebd	ok		pending			
+en:n:o9	This is water.	0b12f4fa	ok		pending			

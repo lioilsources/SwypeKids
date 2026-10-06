@@ -44,10 +44,10 @@ OBJ = {
   'miska': F('thing', 'miska', acc='misku'),
   'voda': F('drink', 'voda', acc='vodu'),
   'vlak': F('vehicle place', 'vlak', acc='vlak', instr='s vlakem', loc='ve vlaku', dir='do vlaku'),
-  'fotbal': F('thing', 'fotbal', acc='fotbal'),
+  'fotbal': F('thing', 'fotbal'),
   'banan': F('food', 'banán', acc='banán'),
   'kniha': F('thing', 'kniha', acc='knihu'),
-  'skola': F('place', 'škola', loc='ve škole', dir='do školy'),
+  'skola': F('place', 'škola', dir='do školy'),
  },
  'en': {
   'o1': F('drink', 'milk', acc='milk'),
@@ -68,13 +68,13 @@ OBJ = {
   'drum': F('toy', 'a drum', acc='a drum', instr='with a drum'),
   'star': F('thing', 'a star', acc='a star'),
   'cake': F('food', 'cake', acc='cake'),
-  'bike': F('vehicle', 'a bike', acc='a bike', instr='with a bike'),
+  'bike': F('vehicle', 'a bike', acc='a bike'),
  },
  'de': {
   'o1': F('drink', 'Milch', acc='Milch'),
   'o2': F('food', 'ein Apfel', acc='einen Apfel'),
   'o3': F('toy', 'ein Spielzeug', acc='ein Spielzeug', instr='mit einem Spielzeug'),
-  'o4': F('vehicle place', 'das Auto', acc='das Auto', instr='mit dem Auto', loc='im Auto', dir='ins Auto'),
+  'o4': F('vehicle place', 'das Auto', acc='das Auto', instr='mit dem Auto', loc='im Auto'),
   'o5': F('place', None, loc='draußen', dir='raus'),
   'o6': F('place', None, loc='zu Hause', dir='heim'),
   'o7': F('place', 'das Bett', loc='im Bett', dir='ins Bett'),
@@ -103,7 +103,7 @@ OBJ = {
  'it': {
   'o1': F('drink', 'il latte', acc='il latte'),
   'mela': F('food', 'una mela', acc='una mela'),
-  'o3': F('toy', 'un gioco', acc='un gioco', instr='con un gioco'),
+  'o3': F('toy', 'un giocattolo', acc='un giocattolo', instr='con un giocattolo'),
   'o4': F('vehicle place', 'la macchina', acc='la macchina', instr='con la macchina', loc='in macchina', dir='in macchina'),
   'o5': F('place', None, loc='fuori', dir='fuori'),
   'casa': F('place', 'la casa', loc='a casa', dir='a casa'),
@@ -148,7 +148,7 @@ OBJ = {
   'sopa': F('food', 'sopa', acc='sopa'),
   'bola': F('toy', 'a bola', acc='a bola', instr='com a bola'),
   'pipoca': F('food', 'pipoca', acc='pipoca'),
-  'escola': F('place', 'a escola', loc='na escola', dir='para a escola'),
+  'escola': F('place', 'a escola', dir='para a escola'),
   'morango': F('food', 'morango', acc='morango'),
  },
  # Čínština: bez pádů; místo po „睡" nese „在…上/里" samo, pořadí zůstává.
@@ -183,7 +183,18 @@ OBJ = {
  },
 }
 FRAME_OVERRIDE = {'ja': {'v1': 'ga'}, 'zh': {'v6': 'instr'}}
-TEXT_OVERRIDE = {'en': {'bike': 'a bike'}}
+TEXT_OVERRIDE = {'en': {'bike': 'a bike'}, 'it': {'o3': 'un giocattolo'}}
+# Podměty se členem — holé „Dog wants milk" / „Pato quiere" není věta.
+SUBJECT_TEXT = {
+ 'en': {'dog': 'The dog', 'cat': 'The cat', 'pig': 'The pig', 'hen': 'The hen',
+        'bug': 'The bug', 'frog': 'The frog', 'fish': 'The fish', 'chick': 'The chick'},
+ 'es': {'s5': 'El perrito', 'pato': 'El pato', 'raton': 'El ratón', 'gato': 'El gato',
+        'tortuga': 'La tortuga', 'vaca': 'La vaca'},
+ 'it': {'s5': 'Il cucciolo', 'topo': 'Il topo', 'cane': 'Il cane', 'gatto': 'Il gatto',
+        'volpe': 'La volpe'},
+ 'pt': {'s5': 'O cachorrinho', 'leao': 'O leão', 'pato': 'O pato', 'sapo': 'O sapo',
+        'vaca': 'A vaca', 'macaco': 'O macaco', 'gato': 'O gato', 'jacare': 'O jacaré'},
+}
 NAMING = {'cs': 'To je {nom}.', 'en': 'This is {nom}.', 'de': 'Das ist {nom}.',
           'es': 'Esto es {nom}.', 'it': 'Ecco {nom}.', 'fr': "C'est {nom}.",
           'pt': 'Isto é {nom}.', 'zh': '这是{nom}。', 'ja': '{nom}です。'}
@@ -221,13 +232,24 @@ for lang, objs in OBJ.items():
     assert set(o['id'] for o in s['objects']) == set(objs), (lang, set(o['id'] for o in s['objects']) ^ set(objs))
     for x in s['subjects']:
         x['kind'] = kind(x['emoji'])
-        if lang in ('zh', 'ja'):
+        if x['id'] in SUBJECT_TEXT.get(lang, {}):
+            x['text'] = SUBJECT_TEXT[lang][x['id']]
+        if lang == 'zh':
             x.pop('person', None)  # slovesa nemají tvary podle osoby
+        if lang == 'ja':
+            # „ほしいです" jde říct jen o sobě (3. osoba: ほしがっています) →
+            # v1 má tvar jen pro 1. osobu a pravidla ho jinde nenabídnou.
+            x['person'] = '1sg' if x['id'] == 's1' else '3sg'
     for v in s['verbs']:
         tags, frame = VERBS[v['id']]
         v['frame'] = FRAME_OVERRIDE.get(lang, {}).get(v['id'], frame)
         v['subject'] = WHO
         v['object'] = tags
+        if lang == 'ja':
+            if v['id'] == 'v1':
+                v['forms'] = OD([('1sg', v['text'])])
+            else:
+                v['forms'] = OD([('1sg', v['text']), ('3sg', v['text'])])
     for o in s['objects']:
         tags, nom, forms = objs[o['id']]
         if o['id'] in TEXT_OVERRIDE.get(lang, {}):

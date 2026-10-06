@@ -55,12 +55,6 @@ void main() {
         for (final s in SentenceCorpus.of(pack)) {
           expect(s.fallbacks, isEmpty, reason: '${s.id}: ${s.text}');
         }
-        // …a tvar slovesa pro 3. osobu existuje všude, kde se časuje.
-        for (final v in d.verbs) {
-          if (v.forms != null) {
-            expect(v.forms, contains('3sg'), reason: v.id);
-          }
-        }
       });
 
       test('T5 věta se stejným slovesem a předmětem se liší jen podmětem '

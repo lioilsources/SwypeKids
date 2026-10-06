@@ -220,11 +220,15 @@ class SentenceRules {
         !verb.subjectKinds.contains(subject.kind)) {
       return false;
     }
+    // Sloveso s tvary podle osoby musí mít tvar pro osobu podmětu; 1. osoba
+    // smí chybět (= nápis na dlaždici), pokud tvary nevyjmenovává sloveso
+    // jen pro ni (ja „ほしいです" → jen „já").
     final person = subject.person;
-    return person == null ||
-        verb.forms == null ||
-        person == Person.firstSg ||
-        verb.forms!.containsKey(person);
+    final forms = verb.forms;
+    if (person == null || forms == null || forms.containsKey(person)) {
+      return true;
+    }
+    return person == Person.firstSg && !forms.containsKey(Person.firstSg);
   }
 
   static bool objectFits(SentencePart verb, SentencePart object) {

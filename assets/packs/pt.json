@@ -2126,7 +2126,7 @@
       {
         "id": "s5",
         "emoji": "🐶",
-        "text": "Cachorrinho",
+        "text": "O cachorrinho",
         "unlockedBy": "always",
         "person": "3sg",
         "kind": "animal"
@@ -2134,7 +2134,7 @@
       {
         "id": "leao",
         "emoji": "🦁",
-        "text": "Leão",
+        "text": "O leão",
         "unlockedBy": "vocab",
         "person": "3sg",
         "kind": "animal"
@@ -2142,7 +2142,7 @@
       {
         "id": "pato",
         "emoji": "🦆",
-        "text": "Pato",
+        "text": "O pato",
         "unlockedBy": "vocab",
         "person": "3sg",
         "kind": "animal"
@@ -2158,7 +2158,7 @@
       {
         "id": "sapo",
         "emoji": "🐸",
-        "text": "Sapo",
+        "text": "O sapo",
         "unlockedBy": "vocab",
         "person": "3sg",
         "kind": "animal"
@@ -2166,7 +2166,7 @@
       {
         "id": "vaca",
         "emoji": "🐮",
-        "text": "Vaca",
+        "text": "A vaca",
         "unlockedBy": "vocab",
         "person": "3sg",
         "kind": "animal"
@@ -2174,7 +2174,7 @@
       {
         "id": "macaco",
         "emoji": "🐵",
-        "text": "Macaco",
+        "text": "O macaco",
         "unlockedBy": "vocab",
         "person": "3sg",
         "kind": "animal"
@@ -2182,7 +2182,7 @@
       {
         "id": "gato",
         "emoji": "🐱",
-        "text": "Gato",
+        "text": "O gato",
         "unlockedBy": "vocab",
         "person": "3sg",
         "kind": "animal"
@@ -2190,7 +2190,7 @@
       {
         "id": "jacare",
         "emoji": "🐊",
-        "text": "Jacaré",
+        "text": "O jacaré",
         "unlockedBy": "vocab",
         "person": "3sg",
         "kind": "animal"
@@ -2503,7 +2503,6 @@
         "unlockedBy": "vocab",
         "forms": {
           "nom": "a escola",
-          "loc": "na escola",
           "dir": "para a escola"
         },
         "tags": [

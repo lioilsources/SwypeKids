@@ -105,10 +105,16 @@ class PetSentence {
 
   /// Podměty builderu vět ze zvířátek (a lidí) Zvěřince — odemknou se
   /// nálepkou. Věci (🍌, ☀️) podmětem nejsou: nejedí, nepijí.
-  static List<SentencePart> stickerSubjects(ContentPack pack) => [
-        for (final u in pack.units)
-          if (eats(u.reward)) subjectFor(pack, u.reward),
-      ];
+  /// Zvířátko, které už je podmětem v packu (stejný obrázek), se
+  /// nepřidává podruhé.
+  static List<SentencePart> stickerSubjects(ContentPack pack) {
+    final have = {for (final s in pack.sentence.subjects) s.emoji};
+    return [
+      for (final u in pack.units)
+        if (eats(u.reward) && have.add(u.reward.emoji))
+          subjectFor(pack, u.reward),
+    ];
+  }
 
   static String _stop(Language lang) =>
       lang == Language.zh || lang == Language.ja ? '。' : '.';

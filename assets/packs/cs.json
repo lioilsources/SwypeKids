@@ -3325,8 +3325,7 @@
         "text": "fotbal",
         "unlockedBy": "vocab",
         "forms": {
-          "nom": "fotbal",
-          "acc": "fotbal"
+          "nom": "fotbal"
         },
         "tags": [
           "thing"
@@ -3365,7 +3364,6 @@
         "unlockedBy": "vocab",
         "forms": {
           "nom": "škola",
-          "loc": "ve škole",
           "dir": "do školy"
         },
         "tags": [

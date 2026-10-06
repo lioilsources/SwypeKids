@@ -2936,7 +2936,7 @@
       {
         "id": "dog",
         "emoji": "🐶",
-        "text": "Dog",
+        "text": "The dog",
         "unlockedBy": "vocab",
         "person": "3sg",
         "kind": "animal"
@@ -2944,7 +2944,7 @@
       {
         "id": "cat",
         "emoji": "🐱",
-        "text": "Cat",
+        "text": "The cat",
         "unlockedBy": "vocab",
         "person": "3sg",
         "kind": "animal"
@@ -2952,7 +2952,7 @@
       {
         "id": "pig",
         "emoji": "🐷",
-        "text": "Pig",
+        "text": "The pig",
         "unlockedBy": "vocab",
         "person": "3sg",
         "kind": "animal"
@@ -2960,7 +2960,7 @@
       {
         "id": "hen",
         "emoji": "🐔",
-        "text": "Hen",
+        "text": "The hen",
         "unlockedBy": "vocab",
         "person": "3sg",
         "kind": "animal"
@@ -2968,7 +2968,7 @@
       {
         "id": "bug",
         "emoji": "🐛",
-        "text": "Bug",
+        "text": "The bug",
         "unlockedBy": "vocab",
         "person": "3sg",
         "kind": "animal"
@@ -2976,7 +2976,7 @@
       {
         "id": "frog",
         "emoji": "🐸",
-        "text": "Frog",
+        "text": "The frog",
         "unlockedBy": "vocab",
         "person": "3sg",
         "kind": "animal"
@@ -2984,7 +2984,7 @@
       {
         "id": "fish",
         "emoji": "🐟",
-        "text": "Fish",
+        "text": "The fish",
         "unlockedBy": "vocab",
         "person": "3sg",
         "kind": "animal"
@@ -2992,7 +2992,7 @@
       {
         "id": "chick",
         "emoji": "🐤",
-        "text": "Chick",
+        "text": "The chick",
         "unlockedBy": "vocab",
         "person": "3sg",
         "kind": "animal"
@@ -3362,8 +3362,7 @@
         "unlockedBy": "vocab",
         "forms": {
           "nom": "a bike",
-          "acc": "a bike",
-          "instr": "with a bike"
+          "acc": "a bike"
         },
         "tags": [
           "vehicle"

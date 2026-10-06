@@ -1,521 +1,490 @@
 id	text	hash	llm	llm_note	human	human_note	reviewer	date
-it:b:s1.v1.o1	Io voglio il latte.	7fbe44cc			pending			
-it:b:s1.v1.mela	Io voglio una mela.	f0aac25c			pending			
-it:b:s1.v1.o3	Io voglio un gioco.	edd39895			pending			
-it:b:s1.v1.o4	Io voglio la macchina.	76a68d2e			pending			
-it:b:s1.v1.torta	Io voglio la torta.	1111396e			pending			
-it:b:s1.v1.banana	Io voglio una banana.	2c3b54a8			pending			
-it:b:s1.v1.gelato	Io voglio un gelato.	1111ee8e			pending			
-it:b:s1.v1.pizza	Io voglio la pizza.	8b0bec6a			pending			
-it:b:s1.v1.fragola	Io voglio una fragola.	ccdaabb7			pending			
-it:b:s1.v1.o9	Io voglio l'acqua.	b90d2a25			pending			
-it:b:s1.v2.mela	Io mangio una mela.	2c7d71e1			pending			
-it:b:s1.v2.torta	Io mangio la torta.	809bda2f			pending			
-it:b:s1.v2.banana	Io mangio una banana.	765f6955			pending			
-it:b:s1.v2.gelato	Io mangio un gelato.	ebf6fea9			pending			
-it:b:s1.v2.pizza	Io mangio la pizza.	263ee7d3			pending			
-it:b:s1.v2.fragola	Io mangio una fragola.	f0efb184			pending			
-it:b:s1.v3.o1	Io bevo il latte.	0ebe5eee			pending			
-it:b:s1.v3.o9	Io bevo l'acqua.	a9304b43			pending			
-it:b:s1.v4.o4	Io dormo in macchina.	a1eb119b			pending			
-it:b:s1.v4.o5	Io dormo fuori.	5227d1ff			pending			
-it:b:s1.v4.casa	Io dormo a casa.	476e41b1			pending			
-it:b:s1.v4.o7	Io dormo a letto.	a7161a3b			pending			
-it:b:s1.v4.sole	Io dormo al sole.	896dca8c			pending			
-it:b:s1.v5.o4	Io vado in macchina.	d1c0b1fa			pending			
-it:b:s1.v5.o5	Io vado fuori.	18d47652			pending			
-it:b:s1.v5.casa	Io vado a casa.	79471b26			pending			
-it:b:s1.v5.o7	Io vado a letto.	a525077a			pending			
-it:b:s1.v5.o8	Io vado sul vasino.	4e333957			pending			
-it:b:s1.v5.luna	Io vado sulla luna.	9168e1b8			pending			
-it:b:s1.v6.o3	Io gioco con un gioco.	fe55c798			pending			
-it:b:s1.v6.o4	Io gioco con la macchina.	64c2f245			pending			
-it:b:s2.v1.o1	Mamma vuole il latte.	c9a1d8ca			pending			
-it:b:s2.v1.mela	Mamma vuole una mela.	e5b20536			pending			
-it:b:s2.v1.o3	Mamma vuole un gioco.	1166d3bf			pending			
-it:b:s2.v1.o4	Mamma vuole la macchina.	71a83c7c			pending			
-it:b:s2.v1.torta	Mamma vuole la torta.	47faedb4			pending			
-it:b:s2.v1.banana	Mamma vuole una banana.	14c1be9e			pending			
-it:b:s2.v1.gelato	Mamma vuole un gelato.	c49082ac			pending			
-it:b:s2.v1.pizza	Mamma vuole la pizza.	b8edba98			pending			
-it:b:s2.v1.fragola	Mamma vuole una fragola.	89f546cd			pending			
-it:b:s2.v1.o9	Mamma vuole l'acqua.	6652dd37			pending			
-it:b:s2.v2.mela	Mamma mangia una mela.	08ae0238			pending			
-it:b:s2.v2.torta	Mamma mangia la torta.	02c3a622			pending			
-it:b:s2.v2.banana	Mamma mangia una banana.	87c5abfc			pending			
-it:b:s2.v2.gelato	Mamma mangia un gelato.	ef58f732			pending			
-it:b:s2.v2.pizza	Mamma mangia la pizza.	d5394cd6			pending			
-it:b:s2.v2.fragola	Mamma mangia una fragola.	192c63d3			pending			
-it:b:s2.v3.o1	Mamma beve il latte.	73be257f			pending			
-it:b:s2.v3.o9	Mamma beve l'acqua.	09f870f0			pending			
-it:b:s2.v4.o4	Mamma dorme in macchina.	2ef6bc52			pending			
-it:b:s2.v4.o5	Mamma dorme fuori.	db3e0b0a			pending			
-it:b:s2.v4.casa	Mamma dorme a casa.	6522b5ee			pending			
-it:b:s2.v4.o7	Mamma dorme a letto.	ae057e72			pending			
-it:b:s2.v4.sole	Mamma dorme al sole.	2206f089			pending			
-it:b:s2.v5.o4	Mamma va in macchina.	7bbd71c8			pending			
-it:b:s2.v5.o5	Mamma va fuori.	b4b0a984			pending			
-it:b:s2.v5.casa	Mamma va a casa.	d14f8570			pending			
-it:b:s2.v5.o7	Mamma va a letto.	ba93ae2c			pending			
-it:b:s2.v5.o8	Mamma va sul vasino.	820342d5			pending			
-it:b:s2.v5.luna	Mamma va sulla luna.	d332af9a			pending			
-it:b:s2.v6.o3	Mamma gioca con un gioco.	1b94e44b			pending			
-it:b:s2.v6.o4	Mamma gioca con la macchina.	f87895d0			pending			
-it:b:s3.v1.o1	Papà vuole il latte.	7ae9232c			pending			
-it:b:s3.v1.mela	Papà vuole una mela.	c7077d3c			pending			
-it:b:s3.v1.o3	Papà vuole un gioco.	ead19ff5			pending			
-it:b:s3.v1.o4	Papà vuole la macchina.	7038530e			pending			
-it:b:s3.v1.torta	Papà vuole la torta.	eb642ece			pending			
-it:b:s3.v1.banana	Papà vuole una banana.	cc574a88			pending			
-it:b:s3.v1.gelato	Papà vuole un gelato.	8f810f6e			pending			
-it:b:s3.v1.pizza	Papà vuole la pizza.	6ccfcf4a			pending			
-it:b:s3.v1.fragola	Papà vuole una fragola.	23e0fc97			pending			
-it:b:s3.v1.o9	Papà vuole l'acqua.	66f11285			pending			
-it:b:s3.v2.mela	Papà mangia una mela.	d3f4052a			pending			
-it:b:s3.v2.torta	Papà mangia la torta.	860d4c30			pending			
-it:b:s3.v2.banana	Papà mangia una banana.	667e492a			pending			
-it:b:s3.v2.gelato	Papà mangia un gelato.	de9569f8			pending			
-it:b:s3.v2.pizza	Papà mangia la pizza.	d273205c			pending			
-it:b:s3.v2.fragola	Papà mangia una fragola.	47066241			pending			
-it:b:s3.v3.o1	Papà beve il latte.	ef678ea5			pending			
-it:b:s3.v3.o9	Papà beve l'acqua.	2c23899a			pending			
-it:b:s3.v4.o4	Papà dorme in macchina.	d7629ba8			pending			
-it:b:s3.v4.o5	Papà dorme fuori.	041a3464			pending			
-it:b:s3.v4.casa	Papà dorme a casa.	b16a0bd0			pending			
-it:b:s3.v4.o7	Papà dorme a letto.	fd0d0f8c			pending			
-it:b:s3.v4.sole	Papà dorme al sole.	4afb557f			pending			
-it:b:s3.v5.o4	Papà va in macchina.	b379bc7e			pending			
-it:b:s3.v5.o5	Papà va fuori.	d9dab426			pending			
-it:b:s3.v5.casa	Papà va a casa.	e081ff6a			pending			
-it:b:s3.v5.o7	Papà va a letto.	dfb0d2de			pending			
-it:b:s3.v5.o8	Papà va sul vasino.	25428733			pending			
-it:b:s3.v5.luna	Papà va sulla luna.	e5b6679c			pending			
-it:b:s3.v6.o3	Papà gioca con un gioco.	57c19c39			pending			
-it:b:s3.v6.o4	Papà gioca con la macchina.	bcfa461a			pending			
-it:b:s4.v1.o1	Nonna vuole il latte.	3c581417			pending			
-it:b:s4.v1.mela	Nonna vuole una mela.	6f9e970f			pending			
-it:b:s4.v1.o3	Nonna vuole un gioco.	078d36a2			pending			
-it:b:s4.v1.o4	Nonna vuole la macchina.	bbd34663			pending			
-it:b:s4.v1.torta	Nonna vuole la torta.	81450cd9			pending			
-it:b:s4.v1.banana	Nonna vuole una banana.	7499acbf			pending			
-it:b:s4.v1.gelato	Nonna vuole un gelato.	075a04cb			pending			
-it:b:s4.v1.pizza	Nonna vuole la pizza.	5cf6239d			pending			
-it:b:s4.v1.fragola	Nonna vuole una fragola.	099fe63e			pending			
-it:b:s4.v1.o9	Nonna vuole l'acqua.	41048c98			pending			
-it:b:s4.v2.mela	Nonna mangia una mela.	e446052b			pending			
-it:b:s4.v2.torta	Nonna mangia la torta.	e6da6f4d			pending			
-it:b:s4.v2.banana	Nonna mangia una banana.	e46104c3			pending			
-it:b:s4.v2.gelato	Nonna mangia un gelato.	2364b03f			pending			
-it:b:s4.v2.pizza	Nonna mangia la pizza.	ba264689			pending			
-it:b:s4.v2.fragola	Nonna mangia una fragola.	fabe3aca			pending			
-it:b:s4.v3.o1	Nonna beve il latte.	2b37b160			pending			
-it:b:s4.v3.o9	Nonna beve l'acqua.	ce11dac1			pending			
-it:b:s4.v4.o4	Nonna dorme in macchina.	afe323b5			pending			
-it:b:s4.v4.o5	Nonna dorme fuori.	2e647d9d			pending			
-it:b:s4.v4.casa	Nonna dorme a casa.	5b4eb2b7			pending			
-it:b:s4.v4.o7	Nonna dorme a letto.	16df6ad9			pending			
-it:b:s4.v4.sole	Nonna dorme al sole.	6e973616			pending			
-it:b:s4.v5.o4	Nonna va in macchina.	652e8185			pending			
-it:b:s4.v5.o5	Nonna va fuori.	855502ed			pending			
-it:b:s4.v5.casa	Nonna va a casa.	f21286c7			pending			
-it:b:s4.v5.o7	Nonna va a letto.	944a78e9			pending			
-it:b:s4.v5.o8	Nonna va sul vasino.	02eac13a			pending			
-it:b:s4.v5.luna	Nonna va sulla luna.	3de6a025			pending			
-it:b:s4.v6.o3	Nonna gioca con un gioco.	e0057c5e			pending			
-it:b:s4.v6.o4	Nonna gioca con la macchina.	9e564997			pending			
-it:b:s5.v1.o1	Cucciolo vuole il latte.	54d0d6a0			pending			
-it:b:s5.v1.mela	Cucciolo vuole una mela.	86e93420			pending			
-it:b:s5.v1.o3	Cucciolo vuole un gioco.	cb112449			pending			
-it:b:s5.v1.o4	Cucciolo vuole la macchina.	6f2b29aa			pending			
-it:b:s5.v1.torta	Cucciolo vuole la torta.	da2f931a			pending			
-it:b:s5.v1.banana	Cucciolo vuole una banana.	8989f244			pending			
-it:b:s5.v1.gelato	Cucciolo vuole un gelato.	4abb37aa			pending			
-it:b:s5.v1.pizza	Cucciolo vuole la pizza.	183a12ce			pending			
-it:b:s5.v1.fragola	Cucciolo vuole una fragola.	d920d16b			pending			
-it:b:s5.v1.o9	Cucciolo vuole l'acqua.	4b77dd01			pending			
-it:b:s5.v2.mela	Cucciolo mangia una mela.	b35bbc36			pending			
-it:b:s5.v2.torta	Cucciolo mangia la torta.	15a4a4b4			pending			
-it:b:s5.v2.banana	Cucciolo mangia una banana.	be93cd9e			pending			
-it:b:s5.v2.gelato	Cucciolo mangia un gelato.	86bb97ac			pending			
-it:b:s5.v2.pizza	Cucciolo mangia la pizza.	86977198			pending			
-it:b:s5.v2.fragola	Cucciolo mangia una fragola.	dfa2e3cd			pending			
-it:b:s5.v3.o1	Cucciolo beve il latte.	31ecadf1			pending			
-it:b:s5.v3.o9	Cucciolo beve l'acqua.	aa43511e			pending			
-it:b:s5.v4.o4	Cucciolo dorme in macchina.	ba0ee84c			pending			
-it:b:s5.v4.o5	Cucciolo dorme fuori.	fdab5578			pending			
-it:b:s5.v4.casa	Cucciolo dorme a casa.	0cfc0364			pending			
-it:b:s5.v4.o7	Cucciolo dorme a letto.	f2b1deb0			pending			
-it:b:s5.v4.sole	Cucciolo dorme al sole.	b01decdb			pending			
-it:b:s5.v5.o4	Cucciolo va in macchina.	a6723fa2			pending			
-it:b:s5.v5.o5	Cucciolo va fuori.	5beab7da			pending			
-it:b:s5.v5.casa	Cucciolo va a casa.	6c4f403e			pending			
-it:b:s5.v5.o7	Cucciolo va a letto.	451fb902			pending			
-it:b:s5.v5.o8	Cucciolo va sul vasino.	ec70a4ef			pending			
-it:b:s5.v5.luna	Cucciolo va sulla luna.	2d1488d0			pending			
-it:b:s5.v6.o3	Cucciolo gioca con un gioco.	bb2fc955			pending			
-it:b:s5.v6.o4	Cucciolo gioca con la macchina.	e41205ee			pending			
-it:b:topo.v1.o1	Topo vuole il latte.	3fc350a3			pending			
-it:b:topo.v1.mela	Topo vuole una mela.	cff9074b			pending			
-it:b:topo.v1.o3	Topo vuole un gioco.	81a5103e			pending			
-it:b:topo.v1.o4	Topo vuole la macchina.	172c6bf7			pending			
-it:b:topo.v1.torta	Topo vuole la torta.	18ac916d			pending			
-it:b:topo.v1.banana	Topo vuole una banana.	1c9174e3			pending			
-it:b:topo.v1.gelato	Topo vuole un gelato.	1e08075f			pending			
-it:b:topo.v1.pizza	Topo vuole la pizza.	3fb88e29			pending			
-it:b:topo.v1.fragola	Topo vuole una fragola.	ca66ab6a			pending			
-it:b:topo.v1.o9	Topo vuole l'acqua.	b9f0e71c			pending			
-it:b:topo.v2.mela	Topo mangia una mela.	81f51aff			pending			
-it:b:topo.v2.torta	Topo mangia la torta.	c2b93e09			pending			
-it:b:topo.v2.banana	Topo mangia una banana.	843deaaf			pending			
-it:b:topo.v2.gelato	Topo mangia un gelato.	d90d7ffb			pending			
-it:b:topo.v2.pizza	Topo mangia la pizza.	1129c48d			pending			
-it:b:topo.v2.fragola	Topo mangia una fragola.	146f842e			pending			
-it:b:topo.v3.o1	Topo beve il latte.	41ad2844			pending			
-it:b:topo.v3.o9	Topo beve l'acqua.	2e8fe96d			pending			
-it:b:topo.v4.o4	Topo dorme in macchina.	b1204ec1			pending			
-it:b:topo.v4.o5	Topo dorme fuori.	a0a56b39			pending			
-it:b:topo.v4.casa	Topo dorme a casa.	63c798b3			pending			
-it:b:topo.v4.o7	Topo dorme a letto.	dac914b5			pending			
-it:b:topo.v4.sole	Topo dorme al sole.	004d3baa			pending			
-it:b:topo.v5.o4	Topo va in macchina.	59aa03b1			pending			
-it:b:topo.v5.o5	Topo va fuori.	82f9c529			pending			
-it:b:topo.v5.casa	Topo va a casa.	ad3146a3			pending			
-it:b:topo.v5.o7	Topo va a letto.	463321a5			pending			
-it:b:topo.v5.o8	Topo va sul vasino.	c4dc508e			pending			
-it:b:topo.v5.luna	Topo va sulla luna.	8aa6e491			pending			
-it:b:topo.v6.o3	Topo gioca con un gioco.	0185de92			pending			
-it:b:topo.v6.o4	Topo gioca con la macchina.	82a179d3			pending			
-it:b:cane.v1.o1	Cane vuole il latte.	41244f3e			pending			
-it:b:cane.v1.mela	Cane vuole una mela.	62a70aaa			pending			
-it:b:cane.v1.o3	Cane vuole un gioco.	d2853be3			pending			
-it:b:cane.v1.o4	Cane vuole la macchina.	0ff06b68			pending			
-it:b:cane.v1.torta	Cane vuole la torta.	14c051b0			pending			
-it:b:cane.v1.banana	Cane vuole una banana.	498a8aaa			pending			
-it:b:cane.v1.gelato	Cane vuole un gelato.	02671278			pending			
-it:b:cane.v1.pizza	Cane vuole la pizza.	612625dc			pending			
-it:b:cane.v1.fragola	Cane vuole una fragola.	33517ec1			pending			
-it:b:cane.v1.o9	Cane vuole l'acqua.	eb953933			pending			
-it:b:cane.v2.mela	Cane mangia una mela.	4f14ec94			pending			
-it:b:cane.v2.torta	Cane mangia la torta.	b5d016d6			pending			
-it:b:cane.v2.banana	Cane mangia una banana.	58c8d660			pending			
-it:b:cane.v2.gelato	Cane mangia un gelato.	d6fb9896			pending			
-it:b:cane.v2.pizza	Cane mangia la pizza.	ff1baf72			pending			
-it:b:cane.v2.fragola	Cane mangia una fragola.	910c909f			pending			
-it:b:cane.v3.o1	Cane beve il latte.	2336627b			pending			
-it:b:cane.v3.o9	Cane beve l'acqua.	163321c4			pending			
-it:b:cane.v4.o4	Cane dorme in macchina.	0b897966			pending			
-it:b:cane.v4.o5	Cane dorme fuori.	a2584c8e			pending			
-it:b:cane.v4.casa	Cane dorme a casa.	16d60622			pending			
-it:b:cane.v4.o7	Cane dorme a letto.	856173e6			pending			
-it:b:cane.v4.sole	Cane dorme al sole.	2aaf0cd5			pending			
-it:b:cane.v5.o4	Cane va in macchina.	6d47a3ec			pending			
-it:b:cane.v5.o5	Cane va fuori.	bc39d498			pending			
-it:b:cane.v5.casa	Cane va a casa.	f7c3fe84			pending			
-it:b:cane.v5.o7	Cane va a letto.	81153250			pending			
-it:b:cane.v5.o8	Cane va sul vasino.	f9378521			pending			
-it:b:cane.v5.luna	Cane va sulla luna.	4ea7a6be			pending			
-it:b:cane.v6.o3	Cane gioca con un gioco.	6517c397			pending			
-it:b:cane.v6.o4	Cane gioca con la macchina.	4697c3f4			pending			
-it:b:gatto.v1.o1	Gatto vuole il latte.	1ba79b18			pending			
-it:b:gatto.v1.mela	Gatto vuole una mela.	dd3a0398			pending			
-it:b:gatto.v1.o3	Gatto vuole un gioco.	03d9a791			pending			
-it:b:gatto.v1.o4	Gatto vuole la macchina.	57652052			pending			
-it:b:gatto.v1.torta	Gatto vuole la torta.	3bca9502			pending			
-it:b:gatto.v1.banana	Gatto vuole una banana.	2a1e66dc			pending			
-it:b:gatto.v1.gelato	Gatto vuole un gelato.	5130cf12			pending			
-it:b:gatto.v1.pizza	Gatto vuole la pizza.	cb2edeb6			pending			
-it:b:gatto.v1.fragola	Gatto vuole una fragola.	a52f4033			pending			
-it:b:gatto.v1.o9	Gatto vuole l'acqua.	884b07e9			pending			
-it:b:gatto.v2.mela	Gatto mangia una mela.	b9d3466e			pending			
-it:b:gatto.v2.torta	Gatto mangia la torta.	5aa659dc			pending			
-it:b:gatto.v2.banana	Gatto mangia una banana.	ffa140f6			pending			
-it:b:gatto.v2.gelato	Gatto mangia un gelato.	aa32e614			pending			
-it:b:gatto.v2.pizza	Gatto mangia la pizza.	a9456960			pending			
-it:b:gatto.v2.fragola	Gatto mangia una fragola.	7d328555			pending			
-it:b:gatto.v3.o1	Gatto beve il latte.	d67e3159			pending			
-it:b:gatto.v3.o9	Gatto beve l'acqua.	4ff43056			pending			
-it:b:gatto.v4.o4	Gatto dorme in macchina.	ac97d984			pending			
-it:b:gatto.v4.o5	Gatto dorme fuori.	f4e37cf0			pending			
-it:b:gatto.v4.casa	Gatto dorme a casa.	2785734c			pending			
-it:b:gatto.v4.o7	Gatto dorme a letto.	70bcd7e8			pending			
-it:b:gatto.v4.sole	Gatto dorme al sole.	3918a003			pending			
-it:b:gatto.v5.o4	Gatto va in macchina.	b3a4ae2a			pending			
-it:b:gatto.v5.o5	Gatto va fuori.	ba10da42			pending			
-it:b:gatto.v5.casa	Gatto va a casa.	7a6e0196			pending			
-it:b:gatto.v5.o7	Gatto va a letto.	7a99af6a			pending			
-it:b:gatto.v5.o8	Gatto va sul vasino.	038ddc27			pending			
-it:b:gatto.v5.luna	Gatto va sulla luna.	8f4954e8			pending			
-it:b:gatto.v6.o3	Gatto gioca con un gioco.	530c513d			pending			
-it:b:gatto.v6.o4	Gatto gioca con la macchina.	e5e09396			pending			
-it:b:volpe.v1.o1	Volpe vuole il latte.	64a67bdb			pending			
-it:b:volpe.v1.mela	Volpe vuole una mela.	f6e0c1c3			pending			
-it:b:volpe.v1.o3	Volpe vuole un gioco.	c4eecd66			pending			
-it:b:volpe.v1.o4	Volpe vuole la macchina.	91b92e3f			pending			
-it:b:volpe.v1.torta	Volpe vuole la torta.	5108c115			pending			
-it:b:volpe.v1.banana	Volpe vuole una banana.	7884e25b			pending			
-it:b:volpe.v1.gelato	Volpe vuole un gelato.	87fbae47			pending			
-it:b:volpe.v1.pizza	Volpe vuole la pizza.	6b654eb1			pending			
-it:b:volpe.v1.fragola	Volpe vuole una fragola.	fd8680d2			pending			
-it:b:volpe.v1.o9	Volpe vuole l'acqua.	390280a4			pending			
-it:b:volpe.v2.mela	Volpe mangia una mela.	9b6a1217			pending			
-it:b:volpe.v2.torta	Volpe mangia la torta.	1dae40b1			pending			
-it:b:volpe.v2.banana	Volpe mangia una banana.	b4a7af47			pending			
-it:b:volpe.v2.gelato	Volpe mangia un gelato.	3bf7e223			pending			
-it:b:volpe.v2.pizza	Volpe mangia la pizza.	bfdbfa95			pending			
-it:b:volpe.v2.fragola	Volpe mangia una fragola.	1763a436			pending			
-it:b:volpe.v3.o1	Volpe beve il latte.	e40fb7ac			pending			
-it:b:volpe.v3.o9	Volpe beve l'acqua.	4ebefc05			pending			
-it:b:volpe.v4.o4	Volpe dorme in macchina.	3505e699			pending			
-it:b:volpe.v4.o5	Volpe dorme fuori.	5cb10171			pending			
-it:b:volpe.v4.casa	Volpe dorme a casa.	3b5f2abb			pending			
-it:b:volpe.v4.o7	Volpe dorme a letto.	dba949cd			pending			
-it:b:volpe.v4.sole	Volpe dorme al sole.	5131b812			pending			
-it:b:volpe.v5.o4	Volpe va in macchina.	a8ac10b9			pending			
-it:b:volpe.v5.o5	Volpe va fuori.	88570411			pending			
-it:b:volpe.v5.casa	Volpe va a casa.	51b4e7db			pending			
-it:b:volpe.v5.o7	Volpe va a letto.	64a267ed			pending			
-it:b:volpe.v5.o8	Volpe va sul vasino.	c380a386			pending			
-it:b:volpe.v5.luna	Volpe va sulla luna.	960ce469			pending			
-it:b:volpe.v6.o3	Volpe gioca con un gioco.	1b5b8b1a			pending			
-it:b:volpe.v6.o4	Volpe gioca con la macchina.	e6a7d81b			pending			
-it:b:pet-🐻.v1.o1	L'orso vuole il latte.	7ddc7261			pending			
-it:b:pet-🐻.v1.mela	L'orso vuole una mela.	c2f0d3dd			pending			
-it:b:pet-🐻.v1.o3	L'orso vuole un gioco.	e14c0828			pending			
-it:b:pet-🐻.v1.o4	L'orso vuole la macchina.	06eb5cd5			pending			
-it:b:pet-🐻.v1.torta	L'orso vuole la torta.	4d85a0c3			pending			
-it:b:pet-🐻.v1.banana	L'orso vuole una banana.	db2b2c29			pending			
-it:b:pet-🐻.v1.gelato	L'orso vuole un gelato.	b80139ed			pending			
-it:b:pet-🐻.v1.pizza	L'orso vuole la pizza.	7eea810f			pending			
-it:b:pet-🐻.v1.fragola	L'orso vuole una fragola.	dedea280			pending			
-it:b:pet-🐻.v1.o9	L'orso vuole l'acqua.	9b1f53ee			pending			
-it:b:pet-🐻.v2.mela	L'orso mangia una mela.	c1650d65			pending			
-it:b:pet-🐻.v2.torta	L'orso mangia la torta.	036d169b			pending			
-it:b:pet-🐻.v2.banana	L'orso mangia una banana.	69d262b1			pending			
-it:b:pet-🐻.v2.gelato	L'orso mangia un gelato.	8d455725			pending			
-it:b:pet-🐻.v2.pizza	L'orso mangia la pizza.	cf2f2867			pending			
-it:b:pet-🐻.v2.fragola	L'orso mangia una fragola.	4a1ad4f8			pending			
-it:b:pet-🐻.v3.o1	L'orso beve il latte.	5171e1b6			pending			
-it:b:pet-🐻.v3.o9	L'orso beve l'acqua.	ab640bdb			pending			
-it:b:pet-🐻.v4.o4	L'orso dorme in macchina.	2d98c033			pending			
-it:b:pet-🐻.v4.o5	L'orso dorme fuori.	5216a017			pending			
-it:b:pet-🐻.v4.casa	L'orso dorme a casa.	0c410219			pending			
-it:b:pet-🐻.v4.o7	L'orso dorme a letto.	c7777873			pending			
-it:b:pet-🐻.v4.sole	L'orso dorme al sole.	62abb3f4			pending			
-it:b:pet-🐻.v5.o4	L'orso va in macchina.	a7a7a583			pending			
-it:b:pet-🐻.v5.o5	L'orso va fuori.	9e7041e7			pending			
-it:b:pet-🐻.v5.casa	L'orso va a casa.	175fb229			pending			
-it:b:pet-🐻.v5.o7	L'orso va a letto.	6c13b383			pending			
-it:b:pet-🐻.v5.o8	L'orso va sul vasino.	c82a4c58			pending			
-it:b:pet-🐻.v5.luna	L'orso va sulla luna.	b19cb7e7			pending			
-it:b:pet-🐻.v6.o3	L'orso gioca con un gioco.	9d51a5dc			pending			
-it:b:pet-🐻.v6.o4	L'orso gioca con la macchina.	3056e151			pending			
-it:b:pet-🐝.v1.o1	L'ape vuole il latte.	565316a6			pending			
-it:b:pet-🐝.v1.mela	L'ape vuole una mela.	719d6012			pending			
-it:b:pet-🐝.v1.o3	L'ape vuole un gioco.	f1201a7b			pending			
-it:b:pet-🐝.v1.o4	L'ape vuole la macchina.	8cd34080			pending			
-it:b:pet-🐝.v1.torta	L'ape vuole la torta.	575f4808			pending			
-it:b:pet-🐝.v1.banana	L'ape vuole una banana.	f71bf432			pending			
-it:b:pet-🐝.v1.gelato	L'ape vuole un gelato.	faa5ae30			pending			
-it:b:pet-🐝.v1.pizza	L'ape vuole la pizza.	56e382f4			pending			
-it:b:pet-🐝.v1.fragola	L'ape vuole una fragola.	3630b5d9			pending			
-it:b:pet-🐝.v1.o9	L'ape vuole l'acqua.	7e24606b			pending			
-it:b:pet-🐝.v2.mela	L'ape mangia una mela.	7914fa9c			pending			
-it:b:pet-🐝.v2.torta	L'ape mangia la torta.	1dbe61ae			pending			
-it:b:pet-🐝.v2.banana	L'ape mangia una banana.	3a840ce8			pending			
-it:b:pet-🐝.v2.gelato	L'ape mangia un gelato.	4cf9edce			pending			
-it:b:pet-🐝.v2.pizza	L'ape mangia la pizza.	f2ebbaaa			pending			
-it:b:pet-🐝.v2.fragola	L'ape mangia una fragola.	4511e6f7			pending			
-it:b:pet-🐝.v3.o1	L'ape beve il latte.	c9128213			pending			
-it:b:pet-🐝.v3.o9	L'ape beve l'acqua.	34cba36c			pending			
-it:b:pet-🐝.v4.o4	L'ape dorme in macchina.	f983d0ce			pending			
-it:b:pet-🐝.v4.o5	L'ape dorme fuori.	55332076			pending			
-it:b:pet-🐝.v4.casa	L'ape dorme a casa.	591c35ba			pending			
-it:b:pet-🐝.v4.o7	L'ape dorme a letto.	75482cae			pending			
-it:b:pet-🐝.v4.sole	L'ape dorme al sole.	cb33a04d			pending			
-it:b:pet-🐝.v5.o4	L'ape va in macchina.	5f2ef684			pending			
-it:b:pet-🐝.v5.o5	L'ape va fuori.	fbecc1f0			pending			
-it:b:pet-🐝.v5.casa	L'ape va a casa.	3b1d124c			pending			
-it:b:pet-🐝.v5.o7	L'ape va a letto.	486c24e8			pending			
-it:b:pet-🐝.v5.o8	L'ape va sul vasino.	45949fc9			pending			
-it:b:pet-🐝.v5.luna	L'ape va sulla luna.	5ce9bf06			pending			
-it:b:pet-🐝.v6.o3	L'ape gioca con un gioco.	b655e82f			pending			
-it:b:pet-🐝.v6.o4	L'ape gioca con la macchina.	3823d52c			pending			
-it:b:pet-🐯.v1.o1	La tigre vuole il latte.	b4a48dfd			pending			
-it:b:pet-🐯.v1.mela	La tigre vuole una mela.	9e79e309			pending			
-it:b:pet-🐯.v1.o3	La tigre vuole un gioco.	86b5cc24			pending			
-it:b:pet-🐯.v1.o4	La tigre vuole la macchina.	0b6b2959			pending			
-it:b:pet-🐯.v1.torta	La tigre vuole la torta.	c81710a7			pending			
-it:b:pet-🐯.v1.banana	La tigre vuole una banana.	80814d9d			pending			
-it:b:pet-🐯.v1.gelato	La tigre vuole un gelato.	29023b01			pending			
-it:b:pet-🐯.v1.pizza	La tigre vuole la pizza.	688912eb			pending			
-it:b:pet-🐯.v1.fragola	La tigre vuole una fragola.	8c935cfc			pending			
-it:b:pet-🐯.v1.o9	La tigre vuole l'acqua.	48499082			pending			
-it:b:pet-🐯.v2.mela	La tigre mangia una mela.	59f552d9			pending			
-it:b:pet-🐯.v2.torta	La tigre mangia la torta.	021ee9f7			pending			
-it:b:pet-🐯.v2.banana	La tigre mangia una banana.	8c63032d			pending			
-it:b:pet-🐯.v2.gelato	La tigre mangia un gelato.	7ce933d1			pending			
-it:b:pet-🐯.v2.pizza	La tigre mangia la pizza.	f58d9ffb			pending			
-it:b:pet-🐯.v2.fragola	La tigre mangia una fragola.	4cd9870c			pending			
-it:b:pet-🐯.v3.o1	La tigre beve il latte.	9f1098ca			pending			
-it:b:pet-🐯.v3.o9	La tigre beve l'acqua.	0b611d37			pending			
-it:b:pet-🐯.v4.o4	La tigre dorme in macchina.	e5b78fbf			pending			
-it:b:pet-🐯.v4.o5	La tigre dorme fuori.	9ca35cf3			pending			
-it:b:pet-🐯.v4.casa	La tigre dorme a casa.	4b264605			pending			
-it:b:pet-🐯.v4.o7	La tigre dorme a letto.	27f6f69f			pending			
-it:b:pet-🐯.v4.sole	La tigre dorme al sole.	29ae8ff8			pending			
-it:b:pet-🐯.v5.o4	La tigre va in macchina.	6a387e9f			pending			
-it:b:pet-🐯.v5.o5	La tigre va fuori.	c01ec453			pending			
-it:b:pet-🐯.v5.casa	La tigre va a casa.	205fd865			pending			
-it:b:pet-🐯.v5.o7	La tigre va a letto.	4559b77f			pending			
-it:b:pet-🐯.v5.o8	La tigre va sul vasino.	a40d59fc			pending			
-it:b:pet-🐯.v5.luna	La tigre va sulla luna.	192daba3			pending			
-it:b:pet-🐯.v6.o3	La tigre gioca con un gioco.	6f3d9de0			pending			
-it:b:pet-🐯.v6.o4	La tigre gioca con la macchina.	92b1aacd			pending			
-it:b:pet-🐱.v1.o1	Il gatto vuole il latte.	852c8de3			pending			
-it:b:pet-🐱.v1.mela	Il gatto vuole una mela.	bfb7ca8b			pending			
-it:b:pet-🐱.v1.o3	Il gatto vuole un gioco.	ff11627e			pending			
-it:b:pet-🐱.v1.o4	Il gatto vuole la macchina.	3134a837			pending			
-it:b:pet-🐱.v1.torta	Il gatto vuole la torta.	7c6392ad			pending			
-it:b:pet-🐱.v1.banana	Il gatto vuole una banana.	d5f2e423			pending			
-it:b:pet-🐱.v1.gelato	Il gatto vuole un gelato.	2982f39f			pending			
-it:b:pet-🐱.v1.pizza	Il gatto vuole la pizza.	4ab75269			pending			
-it:b:pet-🐱.v1.fragola	Il gatto vuole una fragola.	8aa906aa			pending			
-it:b:pet-🐱.v1.o9	Il gatto vuole l'acqua.	0d2d0d5c			pending			
-it:b:pet-🐱.v2.mela	Il gatto mangia una mela.	92c9cb3f			pending			
-it:b:pet-🐱.v2.torta	Il gatto mangia la torta.	d3db6d49			pending			
-it:b:pet-🐱.v2.banana	Il gatto mangia una banana.	728787ef			pending			
-it:b:pet-🐱.v2.gelato	Il gatto mangia un gelato.	90a9f13b			pending			
-it:b:pet-🐱.v2.pizza	Il gatto mangia la pizza.	8df68ccd			pending			
-it:b:pet-🐱.v2.fragola	Il gatto mangia una fragola.	8cdbf96e			pending			
-it:b:pet-🐱.v3.o1	Il gatto beve il latte.	59228784			pending			
-it:b:pet-🐱.v3.o9	Il gatto beve l'acqua.	8cb408ad			pending			
-it:b:pet-🐱.v4.o4	Il gatto dorme in macchina.	bc37e501			pending			
-it:b:pet-🐱.v4.o5	Il gatto dorme fuori.	d060f0f9			pending			
-it:b:pet-🐱.v4.casa	Il gatto dorme a casa.	8b06a2f3			pending			
-it:b:pet-🐱.v4.o7	Il gatto dorme a letto.	10827cf5			pending			
-it:b:pet-🐱.v4.sole	Il gatto dorme al sole.	3699fdea			pending			
-it:b:pet-🐱.v5.o4	Il gatto va in macchina.	5cc527f1			pending			
-it:b:pet-🐱.v5.o5	Il gatto va fuori.	10ec39e9			pending			
-it:b:pet-🐱.v5.casa	Il gatto va a casa.	fb31a5e3			pending			
-it:b:pet-🐱.v5.o7	Il gatto va a letto.	9171cfe5			pending			
-it:b:pet-🐱.v5.o8	Il gatto va sul vasino.	69f11ece			pending			
-it:b:pet-🐱.v5.luna	Il gatto va sulla luna.	804376d1			pending			
-it:b:pet-🐱.v6.o3	Il gatto gioca con un gioco.	253cd152			pending			
-it:b:pet-🐱.v6.o4	Il gatto gioca con la macchina.	59f54193			pending			
-it:b:pet-🦓.v1.o1	La zebra vuole il latte.	1a2ce34c			pending			
-it:b:pet-🦓.v1.mela	La zebra vuole una mela.	8b1960dc			pending			
-it:b:pet-🦓.v1.o3	La zebra vuole un gioco.	88423715			pending			
-it:b:pet-🦓.v1.o4	La zebra vuole la macchina.	74e27cae			pending			
-it:b:pet-🦓.v1.torta	La zebra vuole la torta.	ab7fd7ee			pending			
-it:b:pet-🦓.v1.banana	La zebra vuole una banana.	78235728			pending			
-it:b:pet-🦓.v1.gelato	La zebra vuole un gelato.	ad35720e			pending			
-it:b:pet-🦓.v1.pizza	La zebra vuole la pizza.	257a8aea			pending			
-it:b:pet-🦓.v1.fragola	La zebra vuole una fragola.	cb169b37			pending			
-it:b:pet-🦓.v1.o9	La zebra vuole l'acqua.	b22121a5			pending			
-it:b:pet-🦓.v2.mela	La zebra mangia una mela.	7188a0ca			pending			
-it:b:pet-🦓.v2.torta	La zebra mangia la torta.	ae767f50			pending			
-it:b:pet-🦓.v2.banana	La zebra mangia una banana.	0e7d1aca			pending			
-it:b:pet-🦓.v2.gelato	La zebra mangia un gelato.	11975b18			pending			
-it:b:pet-🦓.v2.pizza	La zebra mangia la pizza.	b7cca8fc			pending			
-it:b:pet-🦓.v2.fragola	La zebra mangia una fragola.	991d94e1			pending			
-it:b:pet-🦓.v3.o1	La zebra beve il latte.	654a6445			pending			
-it:b:pet-🦓.v3.o9	La zebra beve l'acqua.	29a0c13a			pending			
-it:b:pet-🦓.v4.o4	La zebra dorme in macchina.	0c4b10c8			pending			
-it:b:pet-🦓.v4.o5	La zebra dorme fuori.	7a390084			pending			
-it:b:pet-🦓.v4.casa	La zebra dorme a casa.	c6f07a70			pending			
-it:b:pet-🦓.v4.o7	La zebra dorme a letto.	66f55d2c			pending			
-it:b:pet-🦓.v4.sole	La zebra dorme al sole.	62ec991f			pending			
-it:b:pet-🦓.v5.o4	La zebra va in macchina.	2189a19e			pending			
-it:b:pet-🦓.v5.o5	La zebra va fuori.	85e5e146			pending			
-it:b:pet-🦓.v5.casa	La zebra va a casa.	9756d88a			pending			
-it:b:pet-🦓.v5.o7	La zebra va a letto.	e97a787e			pending			
-it:b:pet-🦓.v5.o8	La zebra va sul vasino.	fe4bc0d3			pending			
-it:b:pet-🦓.v5.luna	La zebra va sulla luna.	b4faf7bc			pending			
-it:b:pet-🦓.v6.o3	La zebra gioca con un gioco.	78dff259			pending			
-it:b:pet-🦓.v6.o4	La zebra gioca con la macchina.	6761b63a			pending			
-it:p:👃.verb.mela	Il naso annusa una mela.	beef7b54			pending			
-it:p:👃.verb.torta	Il naso annusa la torta.	87574596			pending			
-it:p:👃.verb.banana	Il naso annusa una banana.	8a5e0920			pending			
-it:p:👃.verb.gelato	Il naso annusa un gelato.	a24f2456			pending			
-it:p:👃.verb.pizza	Il naso annusa la pizza.	18a90d32			pending			
-it:p:👃.verb.fragola	Il naso annusa una fragola.	99be865f			pending			
-it:p:🐻.v3.o1	L'orso beve il latte.	5171e1b6			pending			
-it:p:🐻.v2.mela	L'orso mangia una mela.	c1650d65			pending			
-it:p:🐻.v6.o3	L'orso gioca con un gioco.	9d51a5dc			pending			
-it:p:🐻.v6.o4	L'orso gioca con la macchina.	3056e151			pending			
-it:p:🐻.v2.torta	L'orso mangia la torta.	036d169b			pending			
-it:p:🐻.v2.banana	L'orso mangia una banana.	69d262b1			pending			
-it:p:🐻.v2.gelato	L'orso mangia un gelato.	8d455725			pending			
-it:p:🐻.v2.pizza	L'orso mangia la pizza.	cf2f2867			pending			
-it:p:🐻.v2.fragola	L'orso mangia una fragola.	4a1ad4f8			pending			
-it:p:🐻.v3.o9	L'orso beve l'acqua.	ab640bdb			pending			
-it:p:🐻.v2.-	L'orso mangia.	53abaa24			pending			
-it:p:🐻.v3.-	L'orso beve.	80a06d2d			pending			
-it:p:🐻.v6.-	L'orso gioca.	3ad37ef8			pending			
-it:p:🐝.v3.o1	L'ape beve il latte.	c9128213			pending			
-it:p:🐝.v2.mela	L'ape mangia una mela.	7914fa9c			pending			
-it:p:🐝.v6.o3	L'ape gioca con un gioco.	b655e82f			pending			
-it:p:🐝.v6.o4	L'ape gioca con la macchina.	3823d52c			pending			
-it:p:🐝.v2.torta	L'ape mangia la torta.	1dbe61ae			pending			
-it:p:🐝.v2.banana	L'ape mangia una banana.	3a840ce8			pending			
-it:p:🐝.v2.gelato	L'ape mangia un gelato.	4cf9edce			pending			
-it:p:🐝.v2.pizza	L'ape mangia la pizza.	f2ebbaaa			pending			
-it:p:🐝.v2.fragola	L'ape mangia una fragola.	4511e6f7			pending			
-it:p:🐝.v3.o9	L'ape beve l'acqua.	34cba36c			pending			
-it:p:🐝.v2.-	L'ape mangia.	a8e5087f			pending			
-it:p:🐝.v3.-	L'ape beve.	abf91a2a			pending			
-it:p:🐝.v6.-	L'ape gioca.	a2fd5b89			pending			
-it:p:🐯.v3.o1	La tigre beve il latte.	9f1098ca			pending			
-it:p:🐯.v2.mela	La tigre mangia una mela.	59f552d9			pending			
-it:p:🐯.v6.o3	La tigre gioca con un gioco.	6f3d9de0			pending			
-it:p:🐯.v6.o4	La tigre gioca con la macchina.	92b1aacd			pending			
-it:p:🐯.v2.torta	La tigre mangia la torta.	021ee9f7			pending			
-it:p:🐯.v2.banana	La tigre mangia una banana.	8c63032d			pending			
-it:p:🐯.v2.gelato	La tigre mangia un gelato.	7ce933d1			pending			
-it:p:🐯.v2.pizza	La tigre mangia la pizza.	f58d9ffb			pending			
-it:p:🐯.v2.fragola	La tigre mangia una fragola.	4cd9870c			pending			
-it:p:🐯.v3.o9	La tigre beve l'acqua.	0b611d37			pending			
-it:p:🐯.v2.-	La tigre mangia.	32cc4e18			pending			
-it:p:🐯.v3.-	La tigre beve.	18455691			pending			
-it:p:🐯.v6.-	La tigre gioca.	dcd023ec			pending			
-it:p:🐱.v3.o1	Il gatto beve il latte.	59228784			pending			
-it:p:🐱.v2.mela	Il gatto mangia una mela.	92c9cb3f			pending			
-it:p:🐱.v6.o3	Il gatto gioca con un gioco.	253cd152			pending			
-it:p:🐱.v6.o4	Il gatto gioca con la macchina.	59f54193			pending			
-it:p:🐱.v2.torta	Il gatto mangia la torta.	d3db6d49			pending			
-it:p:🐱.v2.banana	Il gatto mangia una banana.	728787ef			pending			
-it:p:🐱.v2.gelato	Il gatto mangia un gelato.	90a9f13b			pending			
-it:p:🐱.v2.pizza	Il gatto mangia la pizza.	8df68ccd			pending			
-it:p:🐱.v2.fragola	Il gatto mangia una fragola.	8cdbf96e			pending			
-it:p:🐱.v3.o9	Il gatto beve l'acqua.	8cb408ad			pending			
-it:p:🐱.v2.-	Il gatto mangia.	3d1f7aee			pending			
-it:p:🐱.v3.-	Il gatto beve.	5f11c837			pending			
-it:p:🐱.v6.-	Il gatto gioca.	7715849a			pending			
-it:p:🦓.v3.o1	La zebra beve il latte.	654a6445			pending			
-it:p:🦓.v2.mela	La zebra mangia una mela.	7188a0ca			pending			
-it:p:🦓.v6.o3	La zebra gioca con un gioco.	78dff259			pending			
-it:p:🦓.v6.o4	La zebra gioca con la macchina.	6761b63a			pending			
-it:p:🦓.v2.torta	La zebra mangia la torta.	ae767f50			pending			
-it:p:🦓.v2.banana	La zebra mangia una banana.	0e7d1aca			pending			
-it:p:🦓.v2.gelato	La zebra mangia un gelato.	11975b18			pending			
-it:p:🦓.v2.pizza	La zebra mangia la pizza.	b7cca8fc			pending			
-it:p:🦓.v2.fragola	La zebra mangia una fragola.	991d94e1			pending			
-it:p:🦓.v3.o9	La zebra beve l'acqua.	29a0c13a			pending			
-it:p:🦓.v2.-	La zebra mangia.	b5390ab5			pending			
-it:p:🦓.v3.-	La zebra beve.	efe060d0			pending			
-it:p:🦓.v6.-	La zebra gioca.	71e3e85f			pending			
-it:n:o1	Ecco il latte.	f281e394			pending			
-it:n:mela	Ecco una mela.	f7715544			pending			
-it:n:o3	Ecco un gioco.	53e1e48d			pending			
-it:n:o4	Ecco la macchina.	1589eba6			pending			
-it:n:casa	Ecco la casa.	9cfb3758			pending			
-it:n:o7	Ecco il letto.	e7d01d7a			pending			
-it:n:o8	Ecco il vasino.	3b04b000			pending			
-it:n:sole	Ecco il sole.	9649d5dd			pending			
-it:n:luna	Ecco la luna.	e58841c6			pending			
-it:n:torta	Ecco la torta.	631d8f46			pending			
-it:n:banana	Ecco una banana.	ae8b7a50			pending			
-it:n:gelato	Ecco un gelato.	9ac740c6			pending			
-it:n:pizza	Ecco la pizza.	12f60862			pending			
-it:n:fragola	Ecco una fragola.	49b8134f			pending			
-it:n:o9	Ecco l'acqua.	31085d1d			pending			
+it:b:s1.v1.o1	Io voglio il latte.	7fbe44cc	ok		pending			
+it:b:s1.v1.mela	Io voglio una mela.	f0aac25c	ok		pending			
+it:b:s1.v1.o3	Io voglio un giocattolo.	5ba1bd15	ok		pending			
+it:b:s1.v1.o4	Io voglio la macchina.	76a68d2e	ok		pending			
+it:b:s1.v1.torta	Io voglio la torta.	1111396e	ok		pending			
+it:b:s1.v1.banana	Io voglio una banana.	2c3b54a8	ok		pending			
+it:b:s1.v1.gelato	Io voglio un gelato.	1111ee8e	ok		pending			
+it:b:s1.v1.pizza	Io voglio la pizza.	8b0bec6a	ok		pending			
+it:b:s1.v1.fragola	Io voglio una fragola.	ccdaabb7	ok		pending			
+it:b:s1.v1.o9	Io voglio l'acqua.	b90d2a25	ok		pending			
+it:b:s1.v2.mela	Io mangio una mela.	2c7d71e1	ok		pending			
+it:b:s1.v2.torta	Io mangio la torta.	809bda2f	ok		pending			
+it:b:s1.v2.banana	Io mangio una banana.	765f6955	ok		pending			
+it:b:s1.v2.gelato	Io mangio un gelato.	ebf6fea9	ok		pending			
+it:b:s1.v2.pizza	Io mangio la pizza.	263ee7d3	ok		pending			
+it:b:s1.v2.fragola	Io mangio una fragola.	f0efb184	ok		pending			
+it:b:s1.v3.o1	Io bevo il latte.	0ebe5eee	ok		pending			
+it:b:s1.v3.o9	Io bevo l'acqua.	a9304b43	ok		pending			
+it:b:s1.v4.o4	Io dormo in macchina.	a1eb119b	ok		pending			
+it:b:s1.v4.o5	Io dormo fuori.	5227d1ff	ok		pending			
+it:b:s1.v4.casa	Io dormo a casa.	476e41b1	ok		pending			
+it:b:s1.v4.o7	Io dormo a letto.	a7161a3b	ok		pending			
+it:b:s1.v4.sole	Io dormo al sole.	896dca8c	ok		pending			
+it:b:s1.v5.o4	Io vado in macchina.	d1c0b1fa	ok		pending			
+it:b:s1.v5.o5	Io vado fuori.	18d47652	ok		pending			
+it:b:s1.v5.casa	Io vado a casa.	79471b26	ok		pending			
+it:b:s1.v5.o7	Io vado a letto.	a525077a	ok		pending			
+it:b:s1.v5.o8	Io vado sul vasino.	4e333957	ok		pending			
+it:b:s1.v5.luna	Io vado sulla luna.	9168e1b8	ok		pending			
+it:b:s1.v6.o3	Io gioco con un giocattolo.	b9a48c6a	ok		pending			
+it:b:s1.v6.o4	Io gioco con la macchina.	64c2f245	ok		pending			
+it:b:s2.v1.o1	Mamma vuole il latte.	c9a1d8ca	ok		pending			
+it:b:s2.v1.mela	Mamma vuole una mela.	e5b20536	ok		pending			
+it:b:s2.v1.o3	Mamma vuole un giocattolo.	0d13a0bf	ok		pending			
+it:b:s2.v1.o4	Mamma vuole la macchina.	71a83c7c	ok		pending			
+it:b:s2.v1.torta	Mamma vuole la torta.	47faedb4	ok		pending			
+it:b:s2.v1.banana	Mamma vuole una banana.	14c1be9e	ok		pending			
+it:b:s2.v1.gelato	Mamma vuole un gelato.	c49082ac	ok		pending			
+it:b:s2.v1.pizza	Mamma vuole la pizza.	b8edba98	ok		pending			
+it:b:s2.v1.fragola	Mamma vuole una fragola.	89f546cd	ok		pending			
+it:b:s2.v1.o9	Mamma vuole l'acqua.	6652dd37	ok		pending			
+it:b:s2.v2.mela	Mamma mangia una mela.	08ae0238	ok		pending			
+it:b:s2.v2.torta	Mamma mangia la torta.	02c3a622	ok		pending			
+it:b:s2.v2.banana	Mamma mangia una banana.	87c5abfc	ok		pending			
+it:b:s2.v2.gelato	Mamma mangia un gelato.	ef58f732	ok		pending			
+it:b:s2.v2.pizza	Mamma mangia la pizza.	d5394cd6	ok		pending			
+it:b:s2.v2.fragola	Mamma mangia una fragola.	192c63d3	ok		pending			
+it:b:s2.v3.o1	Mamma beve il latte.	73be257f	ok		pending			
+it:b:s2.v3.o9	Mamma beve l'acqua.	09f870f0	ok		pending			
+it:b:s2.v4.o4	Mamma dorme in macchina.	2ef6bc52	ok		pending			
+it:b:s2.v4.o5	Mamma dorme fuori.	db3e0b0a	ok		pending			
+it:b:s2.v4.casa	Mamma dorme a casa.	6522b5ee	ok		pending			
+it:b:s2.v4.o7	Mamma dorme a letto.	ae057e72	ok		pending			
+it:b:s2.v4.sole	Mamma dorme al sole.	2206f089	ok		pending			
+it:b:s2.v5.o4	Mamma va in macchina.	7bbd71c8	ok		pending			
+it:b:s2.v5.o5	Mamma va fuori.	b4b0a984	ok		pending			
+it:b:s2.v5.casa	Mamma va a casa.	d14f8570	ok		pending			
+it:b:s2.v5.o7	Mamma va a letto.	ba93ae2c	ok		pending			
+it:b:s2.v5.o8	Mamma va sul vasino.	820342d5	ok		pending			
+it:b:s2.v5.luna	Mamma va sulla luna.	d332af9a	ok		pending			
+it:b:s2.v6.o3	Mamma gioca con un giocattolo.	74987c93	ok		pending			
+it:b:s2.v6.o4	Mamma gioca con la macchina.	f87895d0	ok		pending			
+it:b:s3.v1.o1	Papà vuole il latte.	7ae9232c	ok		pending			
+it:b:s3.v1.mela	Papà vuole una mela.	c7077d3c	ok		pending			
+it:b:s3.v1.o3	Papà vuole un giocattolo.	9b6ee0f5	ok		pending			
+it:b:s3.v1.o4	Papà vuole la macchina.	7038530e	ok		pending			
+it:b:s3.v1.torta	Papà vuole la torta.	eb642ece	ok		pending			
+it:b:s3.v1.banana	Papà vuole una banana.	cc574a88	ok		pending			
+it:b:s3.v1.gelato	Papà vuole un gelato.	8f810f6e	ok		pending			
+it:b:s3.v1.pizza	Papà vuole la pizza.	6ccfcf4a	ok		pending			
+it:b:s3.v1.fragola	Papà vuole una fragola.	23e0fc97	ok		pending			
+it:b:s3.v1.o9	Papà vuole l'acqua.	66f11285	ok		pending			
+it:b:s3.v2.mela	Papà mangia una mela.	d3f4052a	ok		pending			
+it:b:s3.v2.torta	Papà mangia la torta.	860d4c30	ok		pending			
+it:b:s3.v2.banana	Papà mangia una banana.	667e492a	ok		pending			
+it:b:s3.v2.gelato	Papà mangia un gelato.	de9569f8	ok		pending			
+it:b:s3.v2.pizza	Papà mangia la pizza.	d273205c	ok		pending			
+it:b:s3.v2.fragola	Papà mangia una fragola.	47066241	ok		pending			
+it:b:s3.v3.o1	Papà beve il latte.	ef678ea5	ok		pending			
+it:b:s3.v3.o9	Papà beve l'acqua.	2c23899a	ok		pending			
+it:b:s3.v4.o4	Papà dorme in macchina.	d7629ba8	ok		pending			
+it:b:s3.v4.o5	Papà dorme fuori.	041a3464	ok		pending			
+it:b:s3.v4.casa	Papà dorme a casa.	b16a0bd0	ok		pending			
+it:b:s3.v4.o7	Papà dorme a letto.	fd0d0f8c	ok		pending			
+it:b:s3.v4.sole	Papà dorme al sole.	4afb557f	ok		pending			
+it:b:s3.v5.o4	Papà va in macchina.	b379bc7e	ok		pending			
+it:b:s3.v5.o5	Papà va fuori.	d9dab426	ok		pending			
+it:b:s3.v5.casa	Papà va a casa.	e081ff6a	ok		pending			
+it:b:s3.v5.o7	Papà va a letto.	dfb0d2de	ok		pending			
+it:b:s3.v5.o8	Papà va sul vasino.	25428733	ok		pending			
+it:b:s3.v5.luna	Papà va sulla luna.	e5b6679c	ok		pending			
+it:b:s3.v6.o3	Papà gioca con un giocattolo.	8c989a51	ok		pending			
+it:b:s3.v6.o4	Papà gioca con la macchina.	bcfa461a	ok		pending			
+it:b:s4.v1.o1	Nonna vuole il latte.	3c581417	ok		pending			
+it:b:s4.v1.mela	Nonna vuole una mela.	6f9e970f	ok		pending			
+it:b:s4.v1.o3	Nonna vuole un giocattolo.	19f0b2bc	ok		pending			
+it:b:s4.v1.o4	Nonna vuole la macchina.	bbd34663	ok		pending			
+it:b:s4.v1.torta	Nonna vuole la torta.	81450cd9	ok		pending			
+it:b:s4.v1.banana	Nonna vuole una banana.	7499acbf	ok		pending			
+it:b:s4.v1.gelato	Nonna vuole un gelato.	075a04cb	ok		pending			
+it:b:s4.v1.pizza	Nonna vuole la pizza.	5cf6239d	ok		pending			
+it:b:s4.v1.fragola	Nonna vuole una fragola.	099fe63e	ok		pending			
+it:b:s4.v1.o9	Nonna vuole l'acqua.	41048c98	ok		pending			
+it:b:s4.v2.mela	Nonna mangia una mela.	e446052b	ok		pending			
+it:b:s4.v2.torta	Nonna mangia la torta.	e6da6f4d	ok		pending			
+it:b:s4.v2.banana	Nonna mangia una banana.	e46104c3	ok		pending			
+it:b:s4.v2.gelato	Nonna mangia un gelato.	2364b03f	ok		pending			
+it:b:s4.v2.pizza	Nonna mangia la pizza.	ba264689	ok		pending			
+it:b:s4.v2.fragola	Nonna mangia una fragola.	fabe3aca	ok		pending			
+it:b:s4.v3.o1	Nonna beve il latte.	2b37b160	ok		pending			
+it:b:s4.v3.o9	Nonna beve l'acqua.	ce11dac1	ok		pending			
+it:b:s4.v4.o4	Nonna dorme in macchina.	afe323b5	ok		pending			
+it:b:s4.v4.o5	Nonna dorme fuori.	2e647d9d	ok		pending			
+it:b:s4.v4.casa	Nonna dorme a casa.	5b4eb2b7	ok		pending			
+it:b:s4.v4.o7	Nonna dorme a letto.	16df6ad9	ok		pending			
+it:b:s4.v4.sole	Nonna dorme al sole.	6e973616	ok		pending			
+it:b:s4.v5.o4	Nonna va in macchina.	652e8185	ok		pending			
+it:b:s4.v5.o5	Nonna va fuori.	855502ed	ok		pending			
+it:b:s4.v5.casa	Nonna va a casa.	f21286c7	ok		pending			
+it:b:s4.v5.o7	Nonna va a letto.	944a78e9	ok		pending			
+it:b:s4.v5.o8	Nonna va sul vasino.	02eac13a	ok		pending			
+it:b:s4.v5.luna	Nonna va sulla luna.	3de6a025	ok		pending			
+it:b:s4.v6.o3	Nonna gioca con un giocattolo.	64467350	ok		pending			
+it:b:s4.v6.o4	Nonna gioca con la macchina.	9e564997	ok		pending			
+it:b:s5.v1.o1	Il cucciolo vuole il latte.	38241b65	ok		pending			
+it:b:s5.v1.mela	Il cucciolo vuole una mela.	7699d731	ok		pending			
+it:b:s5.v1.o3	Il cucciolo vuole un giocattolo.	f571b286	ok		pending			
+it:b:s5.v1.o4	Il cucciolo vuole la macchina.	6dd671d1	ok		pending			
+it:b:s5.v1.torta	Il cucciolo vuole la torta.	bf579c3f	ok		pending			
+it:b:s5.v1.banana	Il cucciolo vuole una banana.	e60ebde5	ok		pending			
+it:b:s5.v1.gelato	Il cucciolo vuole un gelato.	2eb10bb9	ok		pending			
+it:b:s5.v1.pizza	Il cucciolo vuole la pizza.	a4fb0ea3	ok		pending			
+it:b:s5.v1.fragola	Il cucciolo vuole una fragola.	78ce5a14	ok		pending			
+it:b:s5.v1.o9	Il cucciolo vuole l'acqua.	b21d765a	ok		pending			
+it:b:s5.v2.mela	Il cucciolo mangia una mela.	542715e1	ok		pending			
+it:b:s5.v2.torta	Il cucciolo mangia la torta.	a8457e2f	ok		pending			
+it:b:s5.v2.banana	Il cucciolo mangia una banana.	db1bad55	ok		pending			
+it:b:s5.v2.gelato	Il cucciolo mangia un gelato.	5c042aa9	ok		pending			
+it:b:s5.v2.pizza	Il cucciolo mangia la pizza.	4de88bd3	ok		pending			
+it:b:s5.v2.fragola	Il cucciolo mangia una fragola.	854ebd84	ok		pending			
+it:b:s5.v3.o1	Il cucciolo beve il latte.	c1289c62	ok		pending			
+it:b:s5.v3.o9	Il cucciolo beve l'acqua.	5b5a0f1f	ok		pending			
+it:b:s5.v4.o4	Il cucciolo dorme in macchina.	ed0e4147	ok		pending			
+it:b:s5.v4.o5	Il cucciolo dorme fuori.	634bb2bb	ok		pending			
+it:b:s5.v4.casa	Il cucciolo dorme a casa.	37aa7c7d	ok		pending			
+it:b:s5.v4.o7	Il cucciolo dorme a letto.	12639687	ok		pending			
+it:b:s5.v4.sole	Il cucciolo dorme al sole.	e99d02f0	ok		pending			
+it:b:s5.v5.o4	Il cucciolo va in macchina.	ce511617	ok		pending			
+it:b:s5.v5.o5	Il cucciolo va fuori.	d8a6ed0b	ok		pending			
+it:b:s5.v5.casa	Il cucciolo va a casa.	2f7b314d	ok		pending			
+it:b:s5.v5.o7	Il cucciolo va a letto.	5d653d97	ok		pending			
+it:b:s5.v5.o8	Il cucciolo va sul vasino.	63218184	ok		pending			
+it:b:s5.v5.luna	Il cucciolo va sulla luna.	a50cceeb	ok		pending			
+it:b:s5.v6.o3	Il cucciolo gioca con un giocattolo.	9108a3aa	ok		pending			
+it:b:s5.v6.o4	Il cucciolo gioca con la macchina.	f685f185	ok		pending			
+it:b:topo.v1.o1	Il topo vuole il latte.	fce2cd1a	ok		pending			
+it:b:topo.v1.mela	Il topo vuole una mela.	8e52be66	ok		pending			
+it:b:topo.v1.o3	Il topo vuole un giocattolo.	28d2d80f	ok		pending			
+it:b:topo.v1.o4	Il topo vuole la macchina.	02f2d5ec	ok		pending			
+it:b:topo.v1.torta	Il topo vuole la torta.	6fc66f64	ok		pending			
+it:b:topo.v1.banana	Il topo vuole una banana.	08369d4e	ok		pending			
+it:b:topo.v1.gelato	Il topo vuole un gelato.	dc77805c	ok		pending			
+it:b:topo.v1.pizza	Il topo vuole la pizza.	adfa3148	ok		pending			
+it:b:topo.v1.fragola	Il topo vuole una fragola.	9483cffd	ok		pending			
+it:b:topo.v1.o9	Il topo vuole l'acqua.	9c128de7	ok		pending			
+it:b:topo.v2.mela	Il topo mangia una mela.	f8c0fbc8	ok		pending			
+it:b:topo.v2.torta	Il topo mangia la torta.	30ad8672	ok		pending			
+it:b:topo.v2.banana	Il topo mangia una banana.	3280ae0c	ok		pending			
+it:b:topo.v2.gelato	Il topo mangia un gelato.	5be0e502	ok		pending			
+it:b:topo.v2.pizza	Il topo mangia la pizza.	8acdd526	ok		pending			
+it:b:topo.v2.fragola	Il topo mangia una fragola.	c2daada3	ok		pending			
+it:b:topo.v3.o1	Il topo beve il latte.	e96bfdcf	ok		pending			
+it:b:topo.v3.o9	Il topo beve l'acqua.	f5a87420	ok		pending			
+it:b:topo.v4.o4	Il topo dorme in macchina.	89741b22	ok		pending			
+it:b:topo.v4.o5	Il topo dorme fuori.	d93d4f5a	ok		pending			
+it:b:topo.v4.casa	Il topo dorme a casa.	3553bebe	ok		pending			
+it:b:topo.v4.o7	Il topo dorme a letto.	3732dc82	ok		pending			
+it:b:topo.v4.sole	Il topo dorme al sole.	ad64fbb9	ok		pending			
+it:b:topo.v5.o4	Il topo va in macchina.	ff153e38	ok		pending			
+it:b:topo.v5.o5	Il topo va fuori.	d6eddb74	ok		pending			
+it:b:topo.v5.casa	Il topo va a casa.	52fa2ba0	ok		pending			
+it:b:topo.v5.o7	Il topo va a letto.	2d60e25c	ok		pending			
+it:b:topo.v5.o8	Il topo va sul vasino.	e06e9725	ok		pending			
+it:b:topo.v5.luna	Il topo va sulla luna.	5a74778a	ok		pending			
+it:b:topo.v6.o3	Il topo gioca con un giocattolo.	6ae66e23	ok		pending			
+it:b:topo.v6.o4	Il topo gioca con la macchina.	e6761980	ok		pending			
+it:b:cane.v1.o1	Il cane vuole il latte.	12b2fc2f	ok		pending			
+it:b:cane.v1.mela	Il cane vuole una mela.	23e11987	ok		pending			
+it:b:cane.v1.o3	Il cane vuole un giocattolo.	65c23c34	ok		pending			
+it:b:cane.v1.o4	Il cane vuole la macchina.	aaee8d6b	ok		pending			
+it:b:cane.v1.torta	Il cane vuole la torta.	3c7e7f61	ok		pending			
+it:b:cane.v1.banana	Il cane vuole una banana.	a8487477	ok		pending			
+it:b:cane.v1.gelato	Il cane vuole un gelato.	bb820a13	ok		pending			
+it:b:cane.v1.pizza	Il cane vuole la pizza.	45f39785	ok		pending			
+it:b:cane.v1.fragola	Il cane vuole una fragola.	2f993966	ok		pending			
+it:b:cane.v1.o9	Il cane vuole l'acqua.	083f9880	ok		pending			
+it:b:cane.v2.mela	Il cane mangia una mela.	9007ffe3	ok		pending			
+it:b:cane.v2.torta	Il cane mangia la torta.	952b3235	ok		pending			
+it:b:cane.v2.banana	Il cane mangia una banana.	8580c27b	ok		pending			
+it:b:cane.v2.gelato	Il cane mangia un gelato.	0585f467	ok		pending			
+it:b:cane.v2.pizza	Il cane mangia la pizza.	b20228d1	ok		pending			
+it:b:cane.v2.fragola	Il cane mangia una fragola.	337e04f2	ok		pending			
+it:b:cane.v3.o1	Il cane beve il latte.	7f1cf5a8	ok		pending			
+it:b:cane.v3.o9	Il cane beve l'acqua.	40297659	ok		pending			
+it:b:cane.v4.o4	Il cane dorme in macchina.	8ad5512d	ok		pending			
+it:b:cane.v4.o5	Il cane dorme fuori.	6e512fd5	ok		pending			
+it:b:cane.v4.casa	Il cane dorme a casa.	56c95fff	ok		pending			
+it:b:cane.v4.o7	Il cane dorme a letto.	84a0e111	ok		pending			
+it:b:cane.v4.sole	Il cane dorme al sole.	70738b7e	ok		pending			
+it:b:cane.v5.o4	Il cane va in macchina.	0aa79ead	ok		pending			
+it:b:cane.v5.o5	Il cane va fuori.	e8a84955	ok		pending			
+it:b:cane.v5.casa	Il cane va a casa.	6de6847f	ok		pending			
+it:b:cane.v5.o7	Il cane va a letto.	67815691	ok		pending			
+it:b:cane.v5.o8	Il cane va sul vasino.	beb0a512	ok		pending			
+it:b:cane.v5.luna	Il cane va sulla luna.	4b398d1d	ok		pending			
+it:b:cane.v6.o3	Il cane gioca con un giocattolo.	de8b9f88	ok		pending			
+it:b:cane.v6.o4	Il cane gioca con la macchina.	fa99d9ff	ok		pending			
+it:b:gatto.v1.o1	Il gatto vuole il latte.	852c8de3	ok		pending			
+it:b:gatto.v1.mela	Il gatto vuole una mela.	bfb7ca8b	ok		pending			
+it:b:gatto.v1.o3	Il gatto vuole un giocattolo.	94d724f0	ok		pending			
+it:b:gatto.v1.o4	Il gatto vuole la macchina.	3134a837	ok		pending			
+it:b:gatto.v1.torta	Il gatto vuole la torta.	7c6392ad	ok		pending			
+it:b:gatto.v1.banana	Il gatto vuole una banana.	d5f2e423	ok		pending			
+it:b:gatto.v1.gelato	Il gatto vuole un gelato.	2982f39f	ok		pending			
+it:b:gatto.v1.pizza	Il gatto vuole la pizza.	4ab75269	ok		pending			
+it:b:gatto.v1.fragola	Il gatto vuole una fragola.	8aa906aa	ok		pending			
+it:b:gatto.v1.o9	Il gatto vuole l'acqua.	0d2d0d5c	ok		pending			
+it:b:gatto.v2.mela	Il gatto mangia una mela.	92c9cb3f	ok		pending			
+it:b:gatto.v2.torta	Il gatto mangia la torta.	d3db6d49	ok		pending			
+it:b:gatto.v2.banana	Il gatto mangia una banana.	728787ef	ok		pending			
+it:b:gatto.v2.gelato	Il gatto mangia un gelato.	90a9f13b	ok		pending			
+it:b:gatto.v2.pizza	Il gatto mangia la pizza.	8df68ccd	ok		pending			
+it:b:gatto.v2.fragola	Il gatto mangia una fragola.	8cdbf96e	ok		pending			
+it:b:gatto.v3.o1	Il gatto beve il latte.	59228784	ok		pending			
+it:b:gatto.v3.o9	Il gatto beve l'acqua.	8cb408ad	ok		pending			
+it:b:gatto.v4.o4	Il gatto dorme in macchina.	bc37e501	ok		pending			
+it:b:gatto.v4.o5	Il gatto dorme fuori.	d060f0f9	ok		pending			
+it:b:gatto.v4.casa	Il gatto dorme a casa.	8b06a2f3	ok		pending			
+it:b:gatto.v4.o7	Il gatto dorme a letto.	10827cf5	ok		pending			
+it:b:gatto.v4.sole	Il gatto dorme al sole.	3699fdea	ok		pending			
+it:b:gatto.v5.o4	Il gatto va in macchina.	5cc527f1	ok		pending			
+it:b:gatto.v5.o5	Il gatto va fuori.	10ec39e9	ok		pending			
+it:b:gatto.v5.casa	Il gatto va a casa.	fb31a5e3	ok		pending			
+it:b:gatto.v5.o7	Il gatto va a letto.	9171cfe5	ok		pending			
+it:b:gatto.v5.o8	Il gatto va sul vasino.	69f11ece	ok		pending			
+it:b:gatto.v5.luna	Il gatto va sulla luna.	804376d1	ok		pending			
+it:b:gatto.v6.o3	Il gatto gioca con un giocattolo.	790adf4c	ok		pending			
+it:b:gatto.v6.o4	Il gatto gioca con la macchina.	59f54193	ok		pending			
+it:b:volpe.v1.o1	La volpe vuole il latte.	4bba1dee	ok		pending			
+it:b:volpe.v1.mela	La volpe vuole una mela.	17e592ba	ok		pending			
+it:b:volpe.v1.o3	La volpe vuole un giocattolo.	f3c550ab	ok		pending			
+it:b:volpe.v1.o4	La volpe vuole la macchina.	8bd40078	ok		pending			
+it:b:volpe.v1.torta	La volpe vuole la torta.	229e94c0	ok		pending			
+it:b:volpe.v1.banana	La volpe vuole una banana.	f4c4d33a	ok		pending			
+it:b:volpe.v1.gelato	La volpe vuole un gelato.	b0c46388	ok		pending			
+it:b:volpe.v1.pizza	La volpe vuole la pizza.	ee65ceac	ok		pending			
+it:b:volpe.v1.fragola	La volpe vuole una fragola.	602375d1	ok		pending			
+it:b:volpe.v1.o9	La volpe vuole l'acqua.	d858f043	ok		pending			
+it:b:volpe.v2.mela	La volpe mangia una mela.	3982d584	ok		pending			
+it:b:volpe.v2.torta	La volpe mangia la torta.	46ddb186	ok		pending			
+it:b:volpe.v2.banana	La volpe mangia una banana.	93e52a90	ok		pending			
+it:b:volpe.v2.gelato	La volpe mangia un gelato.	9948f706	ok		pending			
+it:b:volpe.v2.pizza	La volpe mangia la pizza.	ca3cfea2	ok		pending			
+it:b:volpe.v2.fragola	La volpe mangia una fragola.	2601a38f	ok		pending			
+it:b:volpe.v3.o1	La volpe beve il latte.	55298a6b	ok		pending			
+it:b:volpe.v3.o9	La volpe beve l'acqua.	ee779f54	ok		pending			
+it:b:volpe.v4.o4	La volpe dorme in macchina.	899e4216	ok		pending			
+it:b:volpe.v4.o5	La volpe dorme fuori.	760ca73e	ok		pending			
+it:b:volpe.v4.casa	La volpe dorme a casa.	9c1f6cd2	ok		pending			
+it:b:volpe.v4.o7	La volpe dorme a letto.	0981ba56	ok		pending			
+it:b:volpe.v4.sole	La volpe dorme al sole.	49ca7da5	ok		pending			
+it:b:volpe.v5.o4	La volpe va in macchina.	e0bbf73c	ok		pending			
+it:b:volpe.v5.o5	La volpe va fuori.	0a10c768	ok		pending			
+it:b:volpe.v5.casa	La volpe va a casa.	386a43d4	ok		pending			
+it:b:volpe.v5.o7	La volpe va a letto.	b966a6a0	ok		pending			
+it:b:volpe.v5.o8	La volpe va sul vasino.	af872751	ok		pending			
+it:b:volpe.v5.luna	La volpe va sulla luna.	be02cc8e	ok		pending			
+it:b:volpe.v6.o3	La volpe gioca con un giocattolo.	c49cecf7	ok		pending			
+it:b:volpe.v6.o4	La volpe gioca con la macchina.	5c267144	ok		pending			
+it:b:pet-🐻.v1.o1	L'orso vuole il latte.	7ddc7261	ok		pending			
+it:b:pet-🐻.v1.mela	L'orso vuole una mela.	c2f0d3dd	ok		pending			
+it:b:pet-🐻.v1.o3	L'orso vuole un giocattolo.	01583c9a	ok		pending			
+it:b:pet-🐻.v1.o4	L'orso vuole la macchina.	06eb5cd5	ok		pending			
+it:b:pet-🐻.v1.torta	L'orso vuole la torta.	4d85a0c3	ok		pending			
+it:b:pet-🐻.v1.banana	L'orso vuole una banana.	db2b2c29	ok		pending			
+it:b:pet-🐻.v1.gelato	L'orso vuole un gelato.	b80139ed	ok		pending			
+it:b:pet-🐻.v1.pizza	L'orso vuole la pizza.	7eea810f	ok		pending			
+it:b:pet-🐻.v1.fragola	L'orso vuole una fragola.	dedea280	ok		pending			
+it:b:pet-🐻.v1.o9	L'orso vuole l'acqua.	9b1f53ee	ok		pending			
+it:b:pet-🐻.v2.mela	L'orso mangia una mela.	c1650d65	ok		pending			
+it:b:pet-🐻.v2.torta	L'orso mangia la torta.	036d169b	ok		pending			
+it:b:pet-🐻.v2.banana	L'orso mangia una banana.	69d262b1	ok		pending			
+it:b:pet-🐻.v2.gelato	L'orso mangia un gelato.	8d455725	ok		pending			
+it:b:pet-🐻.v2.pizza	L'orso mangia la pizza.	cf2f2867	ok		pending			
+it:b:pet-🐻.v2.fragola	L'orso mangia una fragola.	4a1ad4f8	ok		pending			
+it:b:pet-🐻.v3.o1	L'orso beve il latte.	5171e1b6	ok		pending			
+it:b:pet-🐻.v3.o9	L'orso beve l'acqua.	ab640bdb	ok		pending			
+it:b:pet-🐻.v4.o4	L'orso dorme in macchina.	2d98c033	ok		pending			
+it:b:pet-🐻.v4.o5	L'orso dorme fuori.	5216a017	ok		pending			
+it:b:pet-🐻.v4.casa	L'orso dorme a casa.	0c410219	ok		pending			
+it:b:pet-🐻.v4.o7	L'orso dorme a letto.	c7777873	ok		pending			
+it:b:pet-🐻.v4.sole	L'orso dorme al sole.	62abb3f4	ok		pending			
+it:b:pet-🐻.v5.o4	L'orso va in macchina.	a7a7a583	ok		pending			
+it:b:pet-🐻.v5.o5	L'orso va fuori.	9e7041e7	ok		pending			
+it:b:pet-🐻.v5.casa	L'orso va a casa.	175fb229	ok		pending			
+it:b:pet-🐻.v5.o7	L'orso va a letto.	6c13b383	ok		pending			
+it:b:pet-🐻.v5.o8	L'orso va sul vasino.	c82a4c58	ok		pending			
+it:b:pet-🐻.v5.luna	L'orso va sulla luna.	b19cb7e7	ok		pending			
+it:b:pet-🐻.v6.o3	L'orso gioca con un giocattolo.	d0426e06	ok		pending			
+it:b:pet-🐻.v6.o4	L'orso gioca con la macchina.	3056e151	ok		pending			
+it:b:pet-🐝.v1.o1	L'ape vuole il latte.	565316a6	ok		pending			
+it:b:pet-🐝.v1.mela	L'ape vuole una mela.	719d6012	ok		pending			
+it:b:pet-🐝.v1.o3	L'ape vuole un giocattolo.	59b16d23	ok		pending			
+it:b:pet-🐝.v1.o4	L'ape vuole la macchina.	8cd34080	ok		pending			
+it:b:pet-🐝.v1.torta	L'ape vuole la torta.	575f4808	ok		pending			
+it:b:pet-🐝.v1.banana	L'ape vuole una banana.	f71bf432	ok		pending			
+it:b:pet-🐝.v1.gelato	L'ape vuole un gelato.	faa5ae30	ok		pending			
+it:b:pet-🐝.v1.pizza	L'ape vuole la pizza.	56e382f4	ok		pending			
+it:b:pet-🐝.v1.fragola	L'ape vuole una fragola.	3630b5d9	ok		pending			
+it:b:pet-🐝.v1.o9	L'ape vuole l'acqua.	7e24606b	ok		pending			
+it:b:pet-🐝.v2.mela	L'ape mangia una mela.	7914fa9c	ok		pending			
+it:b:pet-🐝.v2.torta	L'ape mangia la torta.	1dbe61ae	ok		pending			
+it:b:pet-🐝.v2.banana	L'ape mangia una banana.	3a840ce8	ok		pending			
+it:b:pet-🐝.v2.gelato	L'ape mangia un gelato.	4cf9edce	ok		pending			
+it:b:pet-🐝.v2.pizza	L'ape mangia la pizza.	f2ebbaaa	ok		pending			
+it:b:pet-🐝.v2.fragola	L'ape mangia una fragola.	4511e6f7	ok		pending			
+it:b:pet-🐝.v3.o1	L'ape beve il latte.	c9128213	ok		pending			
+it:b:pet-🐝.v3.o9	L'ape beve l'acqua.	34cba36c	ok		pending			
+it:b:pet-🐝.v4.o4	L'ape dorme in macchina.	f983d0ce	ok		pending			
+it:b:pet-🐝.v4.o5	L'ape dorme fuori.	55332076	ok		pending			
+it:b:pet-🐝.v4.casa	L'ape dorme a casa.	591c35ba	ok		pending			
+it:b:pet-🐝.v4.o7	L'ape dorme a letto.	75482cae	ok		pending			
+it:b:pet-🐝.v4.sole	L'ape dorme al sole.	cb33a04d	ok		pending			
+it:b:pet-🐝.v5.o4	L'ape va in macchina.	5f2ef684	ok		pending			
+it:b:pet-🐝.v5.o5	L'ape va fuori.	fbecc1f0	ok		pending			
+it:b:pet-🐝.v5.casa	L'ape va a casa.	3b1d124c	ok		pending			
+it:b:pet-🐝.v5.o7	L'ape va a letto.	486c24e8	ok		pending			
+it:b:pet-🐝.v5.o8	L'ape va sul vasino.	45949fc9	ok		pending			
+it:b:pet-🐝.v5.luna	L'ape va sulla luna.	5ce9bf06	ok		pending			
+it:b:pet-🐝.v6.o3	L'ape gioca con un giocattolo.	a49ff74f	ok		pending			
+it:b:pet-🐝.v6.o4	L'ape gioca con la macchina.	3823d52c	ok		pending			
+it:b:pet-🐯.v1.o1	La tigre vuole il latte.	b4a48dfd	ok		pending			
+it:b:pet-🐯.v1.mela	La tigre vuole una mela.	9e79e309	ok		pending			
+it:b:pet-🐯.v1.o3	La tigre vuole un giocattolo.	a9f1a75e	ok		pending			
+it:b:pet-🐯.v1.o4	La tigre vuole la macchina.	0b6b2959	ok		pending			
+it:b:pet-🐯.v1.torta	La tigre vuole la torta.	c81710a7	ok		pending			
+it:b:pet-🐯.v1.banana	La tigre vuole una banana.	80814d9d	ok		pending			
+it:b:pet-🐯.v1.gelato	La tigre vuole un gelato.	29023b01	ok		pending			
+it:b:pet-🐯.v1.pizza	La tigre vuole la pizza.	688912eb	ok		pending			
+it:b:pet-🐯.v1.fragola	La tigre vuole una fragola.	8c935cfc	ok		pending			
+it:b:pet-🐯.v1.o9	La tigre vuole l'acqua.	48499082	ok		pending			
+it:b:pet-🐯.v2.mela	La tigre mangia una mela.	59f552d9	ok		pending			
+it:b:pet-🐯.v2.torta	La tigre mangia la torta.	021ee9f7	ok		pending			
+it:b:pet-🐯.v2.banana	La tigre mangia una banana.	8c63032d	ok		pending			
+it:b:pet-🐯.v2.gelato	La tigre mangia un gelato.	7ce933d1	ok		pending			
+it:b:pet-🐯.v2.pizza	La tigre mangia la pizza.	f58d9ffb	ok		pending			
+it:b:pet-🐯.v2.fragola	La tigre mangia una fragola.	4cd9870c	ok		pending			
+it:b:pet-🐯.v3.o1	La tigre beve il latte.	9f1098ca	ok		pending			
+it:b:pet-🐯.v3.o9	La tigre beve l'acqua.	0b611d37	ok		pending			
+it:b:pet-🐯.v4.o4	La tigre dorme in macchina.	e5b78fbf	ok		pending			
+it:b:pet-🐯.v4.o5	La tigre dorme fuori.	9ca35cf3	ok		pending			
+it:b:pet-🐯.v4.casa	La tigre dorme a casa.	4b264605	ok		pending			
+it:b:pet-🐯.v4.o7	La tigre dorme a letto.	27f6f69f	ok		pending			
+it:b:pet-🐯.v4.sole	La tigre dorme al sole.	29ae8ff8	ok		pending			
+it:b:pet-🐯.v5.o4	La tigre va in macchina.	6a387e9f	ok		pending			
+it:b:pet-🐯.v5.o5	La tigre va fuori.	c01ec453	ok		pending			
+it:b:pet-🐯.v5.casa	La tigre va a casa.	205fd865	ok		pending			
+it:b:pet-🐯.v5.o7	La tigre va a letto.	4559b77f	ok		pending			
+it:b:pet-🐯.v5.o8	La tigre va sul vasino.	a40d59fc	ok		pending			
+it:b:pet-🐯.v5.luna	La tigre va sulla luna.	192daba3	ok		pending			
+it:b:pet-🐯.v6.o3	La tigre gioca con un giocattolo.	8a283462	ok		pending			
+it:b:pet-🐯.v6.o4	La tigre gioca con la macchina.	92b1aacd	ok		pending			
+it:b:pet-🦓.v1.o1	La zebra vuole il latte.	1a2ce34c	ok		pending			
+it:b:pet-🦓.v1.mela	La zebra vuole una mela.	8b1960dc	ok		pending			
+it:b:pet-🦓.v1.o3	La zebra vuole un giocattolo.	1159f895	ok		pending			
+it:b:pet-🦓.v1.o4	La zebra vuole la macchina.	74e27cae	ok		pending			
+it:b:pet-🦓.v1.torta	La zebra vuole la torta.	ab7fd7ee	ok		pending			
+it:b:pet-🦓.v1.banana	La zebra vuole una banana.	78235728	ok		pending			
+it:b:pet-🦓.v1.gelato	La zebra vuole un gelato.	ad35720e	ok		pending			
+it:b:pet-🦓.v1.pizza	La zebra vuole la pizza.	257a8aea	ok		pending			
+it:b:pet-🦓.v1.fragola	La zebra vuole una fragola.	cb169b37	ok		pending			
+it:b:pet-🦓.v1.o9	La zebra vuole l'acqua.	b22121a5	ok		pending			
+it:b:pet-🦓.v2.mela	La zebra mangia una mela.	7188a0ca	ok		pending			
+it:b:pet-🦓.v2.torta	La zebra mangia la torta.	ae767f50	ok		pending			
+it:b:pet-🦓.v2.banana	La zebra mangia una banana.	0e7d1aca	ok		pending			
+it:b:pet-🦓.v2.gelato	La zebra mangia un gelato.	11975b18	ok		pending			
+it:b:pet-🦓.v2.pizza	La zebra mangia la pizza.	b7cca8fc	ok		pending			
+it:b:pet-🦓.v2.fragola	La zebra mangia una fragola.	991d94e1	ok		pending			
+it:b:pet-🦓.v3.o1	La zebra beve il latte.	654a6445	ok		pending			
+it:b:pet-🦓.v3.o9	La zebra beve l'acqua.	29a0c13a	ok		pending			
+it:b:pet-🦓.v4.o4	La zebra dorme in macchina.	0c4b10c8	ok		pending			
+it:b:pet-🦓.v4.o5	La zebra dorme fuori.	7a390084	ok		pending			
+it:b:pet-🦓.v4.casa	La zebra dorme a casa.	c6f07a70	ok		pending			
+it:b:pet-🦓.v4.o7	La zebra dorme a letto.	66f55d2c	ok		pending			
+it:b:pet-🦓.v4.sole	La zebra dorme al sole.	62ec991f	ok		pending			
+it:b:pet-🦓.v5.o4	La zebra va in macchina.	2189a19e	ok		pending			
+it:b:pet-🦓.v5.o5	La zebra va fuori.	85e5e146	ok		pending			
+it:b:pet-🦓.v5.casa	La zebra va a casa.	9756d88a	ok		pending			
+it:b:pet-🦓.v5.o7	La zebra va a letto.	e97a787e	ok		pending			
+it:b:pet-🦓.v5.o8	La zebra va sul vasino.	fe4bc0d3	ok		pending			
+it:b:pet-🦓.v5.luna	La zebra va sulla luna.	b4faf7bc	ok		pending			
+it:b:pet-🦓.v6.o3	La zebra gioca con un giocattolo.	ec961df1	ok		pending			
+it:b:pet-🦓.v6.o4	La zebra gioca con la macchina.	6761b63a	ok		pending			
+it:p:👃.verb.mela	Il naso annusa una mela.	beef7b54	ok		pending			
+it:p:👃.verb.torta	Il naso annusa la torta.	87574596	ok		pending			
+it:p:👃.verb.banana	Il naso annusa una banana.	8a5e0920	ok		pending			
+it:p:👃.verb.gelato	Il naso annusa un gelato.	a24f2456	ok		pending			
+it:p:👃.verb.pizza	Il naso annusa la pizza.	18a90d32	ok		pending			
+it:p:👃.verb.fragola	Il naso annusa una fragola.	99be865f	ok		pending			
+it:p:🐻.v3.o1	L'orso beve il latte.	5171e1b6	ok		pending			
+it:p:🐻.v2.mela	L'orso mangia una mela.	c1650d65	ok		pending			
+it:p:🐻.v6.o3	L'orso gioca con un giocattolo.	d0426e06	ok		pending			
+it:p:🐻.v6.o4	L'orso gioca con la macchina.	3056e151	ok		pending			
+it:p:🐻.v2.torta	L'orso mangia la torta.	036d169b	ok		pending			
+it:p:🐻.v2.banana	L'orso mangia una banana.	69d262b1	ok		pending			
+it:p:🐻.v2.gelato	L'orso mangia un gelato.	8d455725	ok		pending			
+it:p:🐻.v2.pizza	L'orso mangia la pizza.	cf2f2867	ok		pending			
+it:p:🐻.v2.fragola	L'orso mangia una fragola.	4a1ad4f8	ok		pending			
+it:p:🐻.v3.o9	L'orso beve l'acqua.	ab640bdb	ok		pending			
+it:p:🐻.v2.-	L'orso mangia.	53abaa24	ok		pending			
+it:p:🐻.v3.-	L'orso beve.	80a06d2d	ok		pending			
+it:p:🐻.v6.-	L'orso gioca.	3ad37ef8	ok		pending			
+it:p:🐝.v3.o1	L'ape beve il latte.	c9128213	ok		pending			
+it:p:🐝.v2.mela	L'ape mangia una mela.	7914fa9c	ok		pending			
+it:p:🐝.v6.o3	L'ape gioca con un giocattolo.	a49ff74f	ok		pending			
+it:p:🐝.v6.o4	L'ape gioca con la macchina.	3823d52c	ok		pending			
+it:p:🐝.v2.torta	L'ape mangia la torta.	1dbe61ae	ok		pending			
+it:p:🐝.v2.banana	L'ape mangia una banana.	3a840ce8	ok		pending			
+it:p:🐝.v2.gelato	L'ape mangia un gelato.	4cf9edce	ok		pending			
+it:p:🐝.v2.pizza	L'ape mangia la pizza.	f2ebbaaa	ok		pending			
+it:p:🐝.v2.fragola	L'ape mangia una fragola.	4511e6f7	ok		pending			
+it:p:🐝.v3.o9	L'ape beve l'acqua.	34cba36c	ok		pending			
+it:p:🐝.v2.-	L'ape mangia.	a8e5087f	ok		pending			
+it:p:🐝.v3.-	L'ape beve.	abf91a2a	ok		pending			
+it:p:🐝.v6.-	L'ape gioca.	a2fd5b89	ok		pending			
+it:p:🐯.v3.o1	La tigre beve il latte.	9f1098ca	ok		pending			
+it:p:🐯.v2.mela	La tigre mangia una mela.	59f552d9	ok		pending			
+it:p:🐯.v6.o3	La tigre gioca con un giocattolo.	8a283462	ok		pending			
+it:p:🐯.v6.o4	La tigre gioca con la macchina.	92b1aacd	ok		pending			
+it:p:🐯.v2.torta	La tigre mangia la torta.	021ee9f7	ok		pending			
+it:p:🐯.v2.banana	La tigre mangia una banana.	8c63032d	ok		pending			
+it:p:🐯.v2.gelato	La tigre mangia un gelato.	7ce933d1	ok		pending			
+it:p:🐯.v2.pizza	La tigre mangia la pizza.	f58d9ffb	ok		pending			
+it:p:🐯.v2.fragola	La tigre mangia una fragola.	4cd9870c	ok		pending			
+it:p:🐯.v3.o9	La tigre beve l'acqua.	0b611d37	ok		pending			
+it:p:🐯.v2.-	La tigre mangia.	32cc4e18	ok		pending			
+it:p:🐯.v3.-	La tigre beve.	18455691	ok		pending			
+it:p:🐯.v6.-	La tigre gioca.	dcd023ec	ok		pending			
+it:p:🐱.v3.o1	Il gatto beve il latte.	59228784	ok		pending			
+it:p:🐱.v2.mela	Il gatto mangia una mela.	92c9cb3f	ok		pending			
+it:p:🐱.v6.o3	Il gatto gioca con un giocattolo.	790adf4c	ok		pending			
+it:p:🐱.v6.o4	Il gatto gioca con la macchina.	59f54193	ok		pending			
+it:p:🐱.v2.torta	Il gatto mangia la torta.	d3db6d49	ok		pending			
+it:p:🐱.v2.banana	Il gatto mangia una banana.	728787ef	ok		pending			
+it:p:🐱.v2.gelato	Il gatto mangia un gelato.	90a9f13b	ok		pending			
+it:p:🐱.v2.pizza	Il gatto mangia la pizza.	8df68ccd	ok		pending			
+it:p:🐱.v2.fragola	Il gatto mangia una fragola.	8cdbf96e	ok		pending			
+it:p:🐱.v3.o9	Il gatto beve l'acqua.	8cb408ad	ok		pending			
+it:p:🐱.v2.-	Il gatto mangia.	3d1f7aee	ok		pending			
+it:p:🐱.v3.-	Il gatto beve.	5f11c837	ok		pending			
+it:p:🐱.v6.-	Il gatto gioca.	7715849a	ok		pending			
+it:p:🦓.v3.o1	La zebra beve il latte.	654a6445	ok		pending			
+it:p:🦓.v2.mela	La zebra mangia una mela.	7188a0ca	ok		pending			
+it:p:🦓.v6.o3	La zebra gioca con un giocattolo.	ec961df1	ok		pending			
+it:p:🦓.v6.o4	La zebra gioca con la macchina.	6761b63a	ok		pending			
+it:p:🦓.v2.torta	La zebra mangia la torta.	ae767f50	ok		pending			
+it:p:🦓.v2.banana	La zebra mangia una banana.	0e7d1aca	ok		pending			
+it:p:🦓.v2.gelato	La zebra mangia un gelato.	11975b18	ok		pending			
+it:p:🦓.v2.pizza	La zebra mangia la pizza.	b7cca8fc	ok		pending			
+it:p:🦓.v2.fragola	La zebra mangia una fragola.	991d94e1	ok		pending			
+it:p:🦓.v3.o9	La zebra beve l'acqua.	29a0c13a	ok		pending			
+it:p:🦓.v2.-	La zebra mangia.	b5390ab5	ok		pending			
+it:p:🦓.v3.-	La zebra beve.	efe060d0	ok		pending			
+it:p:🦓.v6.-	La zebra gioca.	71e3e85f	ok		pending			
+it:n:o1	Ecco il latte.	f281e394	ok		pending			
+it:n:mela	Ecco una mela.	f7715544	ok		pending			
+it:n:o3	Ecco un giocattolo.	2202411d	ok		pending			
+it:n:o4	Ecco la macchina.	1589eba6	ok		pending			
+it:n:casa	Ecco la casa.	9cfb3758	ok		pending			
+it:n:o7	Ecco il letto.	e7d01d7a	ok		pending			
+it:n:o8	Ecco il vasino.	3b04b000	ok		pending			
+it:n:sole	Ecco il sole.	9649d5dd	ok		pending			
+it:n:luna	Ecco la luna.	e58841c6	ok		pending			
+it:n:torta	Ecco la torta.	631d8f46	ok		pending			
+it:n:banana	Ecco una banana.	ae8b7a50	ok		pending			
+it:n:gelato	Ecco un gelato.	9ac740c6	ok		pending			
+it:n:pizza	Ecco la pizza.	12f60862	ok		pending			
+it:n:fragola	Ecco una fragola.	49b8134f	ok		pending			
+it:n:o9	Ecco l'acqua.	31085d1d	ok		pending			

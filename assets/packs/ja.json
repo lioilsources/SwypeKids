@@ -1043,7 +1043,8 @@
         "text": "わたしは",
         "ipa": "watashi wa",
         "unlockedBy": "always",
-        "kind": "person"
+        "kind": "person",
+        "person": "1sg"
       },
       {
         "id": "s2",
@@ -1051,7 +1052,8 @@
         "text": "ママは",
         "ipa": "mama wa",
         "unlockedBy": "always",
-        "kind": "person"
+        "kind": "person",
+        "person": "3sg"
       },
       {
         "id": "s3",
@@ -1059,7 +1061,8 @@
         "text": "パパは",
         "ipa": "papa wa",
         "unlockedBy": "always",
-        "kind": "person"
+        "kind": "person",
+        "person": "3sg"
       },
       {
         "id": "s4",
@@ -1067,7 +1070,8 @@
         "text": "おばあちゃんは",
         "ipa": "obaachan wa",
         "unlockedBy": "always",
-        "kind": "person"
+        "kind": "person",
+        "person": "3sg"
       },
       {
         "id": "s5",
@@ -1075,56 +1079,64 @@
         "text": "わんわんは",
         "ipa": "wanwan wa",
         "unlockedBy": "always",
-        "kind": "animal"
+        "kind": "animal",
+        "person": "3sg"
       },
       {
         "id": "neko",
         "emoji": "🐱",
         "text": "ねこは",
         "unlockedBy": "vocab",
-        "kind": "animal"
+        "kind": "animal",
+        "person": "3sg"
       },
       {
         "id": "kame",
         "emoji": "🐢",
         "text": "かめは",
         "unlockedBy": "vocab",
-        "kind": "animal"
+        "kind": "animal",
+        "person": "3sg"
       },
       {
         "id": "uma",
         "emoji": "🐴",
         "text": "うまは",
         "unlockedBy": "vocab",
-        "kind": "animal"
+        "kind": "animal",
+        "person": "3sg"
       },
       {
         "id": "inu",
         "emoji": "🐶",
         "text": "いぬは",
         "unlockedBy": "vocab",
-        "kind": "animal"
+        "kind": "animal",
+        "person": "3sg"
       },
       {
         "id": "tako",
         "emoji": "🐙",
         "text": "たこは",
         "unlockedBy": "vocab",
-        "kind": "animal"
+        "kind": "animal",
+        "person": "3sg"
       },
       {
         "id": "tori",
         "emoji": "🐦",
         "text": "とりは",
         "unlockedBy": "vocab",
-        "kind": "animal"
+        "kind": "animal",
+        "person": "3sg"
       },
       {
         "id": "kaeru",
         "emoji": "🐸",
         "text": "かえるは",
         "unlockedBy": "vocab",
-        "kind": "animal"
+        "kind": "animal",
+        "person": "3sg"
       }
     ],
     "verbs": [
@@ -1145,7 +1157,10 @@
           "toy",
           "vehicle",
           "thing"
-        ]
+        ],
+        "forms": {
+          "1sg": "ほしいです"
+        }
       },
       {
         "id": "v2",
@@ -1160,7 +1175,11 @@
         ],
         "object": [
           "food"
-        ]
+        ],
+        "forms": {
+          "1sg": "たべます",
+          "3sg": "たべます"
+        }
       },
       {
         "id": "v3",
@@ -1175,7 +1194,11 @@
         ],
         "object": [
           "drink"
-        ]
+        ],
+        "forms": {
+          "1sg": "のみます",
+          "3sg": "のみます"
+        }
       },
       {
         "id": "v4",
@@ -1190,7 +1213,11 @@
         ],
         "object": [
           "place"
-        ]
+        ],
+        "forms": {
+          "1sg": "ねます",
+          "3sg": "ねます"
+        }
       },
       {
         "id": "v5",
@@ -1205,7 +1232,11 @@
         ],
         "object": [
           "place"
-        ]
+        ],
+        "forms": {
+          "1sg": "いきます",
+          "3sg": "いきます"
+        }
       },
       {
         "id": "v6",
@@ -1221,7 +1252,11 @@
         "object": [
           "toy",
           "vehicle"
-        ]
+        ],
+        "forms": {
+          "1sg": "あそびます",
+          "3sg": "あそびます"
+        }
       }
     ],
     "objects": [

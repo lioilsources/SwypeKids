@@ -2513,8 +2513,7 @@
           "nom": "das Auto",
           "acc": "das Auto",
           "instr": "mit dem Auto",
-          "loc": "im Auto",
-          "dir": "ins Auto"
+          "loc": "im Auto"
         },
         "tags": [
           "vehicle",
