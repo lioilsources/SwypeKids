@@ -1,5 +1,10 @@
 # Changelog
 
+## [06/10/2026] — v2.14.0
+- Misky ve světě zvířátka fungují: jídlo do misky s jídlem, pití do misky s vodou — zvířátko k misce dojde a nají se nebo napije
+- Zvířátka ze Zvěřince můžeš použít ve Skládej větu jako toho, kdo něco dělá: „Myš jí jablko.“
+- Nová ikona: mávající Pandička jako nálepka na žlutém pozadí
+
 ## [06/10/2026] — v2.13.0
 - Ve světě zvířátka se učí: ťukni na slovo v tácku, napiš ho a dárek sám doletí ke zvířátku
 - Zvířátko si v bublině přeje slovíčko, které ještě moc neumíš — splněné přání ho rozradostní
