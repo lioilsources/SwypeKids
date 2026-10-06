@@ -1,0 +1,1954 @@
+id	text	hash	llm	llm_note	human	human_note	reviewer	date
+cs:b:s1.v1.mleko	Já chci mléko.	12dfb5d5			pending			
+cs:b:s1.v1.o2	Já chci jablko.	fa2bc80e			pending			
+cs:b:s1.v1.hracka	Já chci hračku.	44e5c3c9			pending			
+cs:b:s1.v1.auto	Já chci auto.	6c4b3448			pending			
+cs:b:s1.v1.o5	Já chci venek.	7902df90			pending			
+cs:b:s1.v1.o6	Já chci dům.	8863bb6f			pending			
+cs:b:s1.v1.o7	Já chci postýlku.	7adaeed8			pending			
+cs:b:s1.v1.o8	Já chci nočník.	d62a37a9			pending			
+cs:b:s1.v1.kolo	Já chci kolo.	e5f2bb54			pending			
+cs:b:s1.v1.les	Já chci les.	ab772b8f			pending			
+cs:b:s1.v1.nos	Já chci nos.	881423ff			pending			
+cs:b:s1.v1.miska	Já chci misku.	fe2a9276			pending			
+cs:b:s1.v1.voda	Já chci vodu.	42443041			pending			
+cs:b:s1.v1.vlak	Já chci vlak.	81978bb7			pending			
+cs:b:s1.v1.fotbal	Já chci fotbal.	32483ad9			pending			
+cs:b:s1.v1.banan	Já chci banán.	774981cd			pending			
+cs:b:s1.v1.kniha	Já chci knihu.	6f6e708a			pending			
+cs:b:s1.v1.skola	Já chci školu.	2d4868d5			pending			
+cs:b:s1.v2.mleko	Já jím mléko.	30283344			pending			
+cs:b:s1.v2.o2	Já jím jablko.	e2d20ed1			pending			
+cs:b:s1.v2.hracka	Já jím hračku.	ccefaef6			pending			
+cs:b:s1.v2.auto	Já jím auto.	07724a9b			pending			
+cs:b:s1.v2.o5	Já jím venek.	13c75c91			pending			
+cs:b:s1.v2.o6	Já jím dům.	b6758fe6			pending			
+cs:b:s1.v2.o7	Já jím postýlku.	21aa6233			pending			
+cs:b:s1.v2.o8	Já jím nočník.	16b6bb66			pending			
+cs:b:s1.v2.kolo	Já jím kolo.	2062838b			pending			
+cs:b:s1.v2.les	Já jím les.	e2735a5a			pending			
+cs:b:s1.v2.nos	Já jím nos.	c175c3ce			pending			
+cs:b:s1.v2.miska	Já jím misku.	11e70083			pending			
+cs:b:s1.v2.voda	Já jím vodu.	3462a79e			pending			
+cs:b:s1.v2.vlak	Já jím vlak.	2d6a9930			pending			
+cs:b:s1.v2.fotbal	Já jím fotbal.	1b90d95e			pending			
+cs:b:s1.v2.banan	Já jím banán.	ab14fcac			pending			
+cs:b:s1.v2.kniha	Já jím knihu.	0bed55bf			pending			
+cs:b:s1.v2.skola	Já jím školu.	fa13a6ec			pending			
+cs:b:s1.v3.mleko	Já piju mléko.	5a858eea			pending			
+cs:b:s1.v3.o2	Já piju jablko.	c1662073			pending			
+cs:b:s1.v3.hracka	Já piju hračku.	38264368			pending			
+cs:b:s1.v3.auto	Já piju auto.	3752ea79			pending			
+cs:b:s1.v3.o5	Já piju venek.	c8393fd3			pending			
+cs:b:s1.v3.o6	Já piju dům.	23ed2210			pending			
+cs:b:s1.v3.o7	Já piju postýlku.	f8e924a9			pending			
+cs:b:s1.v3.o8	Já piju nočník.	87e22268			pending			
+cs:b:s1.v3.kolo	Já piju kolo.	9316e2a9			pending			
+cs:b:s1.v3.les	Já piju les.	74c06b8c			pending			
+cs:b:s1.v3.nos	Já piju nos.	93439918			pending			
+cs:b:s1.v3.miska	Já piju misku.	46189ca1			pending			
+cs:b:s1.v3.voda	Já piju vodu.	af0a7f38			pending			
+cs:b:s1.v3.vlak	Já piju vlak.	e619d0c2			pending			
+cs:b:s1.v3.fotbal	Já piju fotbal.	0328b054			pending			
+cs:b:s1.v3.banan	Já piju banán.	ffce556e			pending			
+cs:b:s1.v3.kniha	Já piju knihu.	53bfb02d			pending			
+cs:b:s1.v3.skola	Já piju školu.	bcc1b14a			pending			
+cs:b:s1.v4.mleko	Já spím u mléka.	7fd8a230			pending			
+cs:b:s1.v4.o2	Já spím u jablka.	befb1d31			pending			
+cs:b:s1.v4.hracka	Já spím u hračky.	698c2e90			pending			
+cs:b:s1.v4.auto	Já spím v autě.	545598e4			pending			
+cs:b:s1.v4.o5	Já spím venku.	f5481f7e			pending			
+cs:b:s1.v4.o6	Já spím doma.	3574e2ba			pending			
+cs:b:s1.v4.o7	Já spím v postýlce.	8333ef50			pending			
+cs:b:s1.v4.o8	Já spím na nočníku.	da254b99			pending			
+cs:b:s1.v4.kolo	Já spím u kola.	0669c2c3			pending			
+cs:b:s1.v4.les	Já spím v lese.	94e83c8c			pending			
+cs:b:s1.v4.nos	Já spím u nosu.	eeb762c9			pending			
+cs:b:s1.v4.miska	Já spím u misky.	930e2cd9			pending			
+cs:b:s1.v4.voda	Já spím u vody.	ae757320			pending			
+cs:b:s1.v4.vlak	Já spím ve vlaku.	36cec63b			pending			
+cs:b:s1.v4.fotbal	Já spím u fotbalu.	e95a37fd			pending			
+cs:b:s1.v4.banan	Já spím u banánu.	73d622eb			pending			
+cs:b:s1.v4.kniha	Já spím u knihy.	533c944d			pending			
+cs:b:s1.v4.skola	Já spím ve škole.	c6d245da			pending			
+cs:b:s1.v5.mleko	Já jdu mléko.	f1b13283			pending			
+cs:b:s1.v5.o2	Já jdu jablko.	f9968760			pending			
+cs:b:s1.v5.hracka	Já jdu pro hračku.	ee3294e8			pending			
+cs:b:s1.v5.auto	Já jdu do auta.	6b53b693			pending			
+cs:b:s1.v5.o5	Já jdu ven.	75da3826			pending			
+cs:b:s1.v5.o6	Já jdu domů.	96144890			pending			
+cs:b:s1.v5.o7	Já jdu do postýlky.	06f2a411			pending			
+cs:b:s1.v5.o8	Já jdu na nočník.	c1cbd7d8			pending			
+cs:b:s1.v5.kolo	Já jdu ke kolu.	4616f302			pending			
+cs:b:s1.v5.les	Já jdu do lesa.	e6bc0369			pending			
+cs:b:s1.v5.nos	Já jdu k nosu.	4651dc93			pending			
+cs:b:s1.v5.miska	Já jdu k misce.	4a302b37			pending			
+cs:b:s1.v5.voda	Já jdu k vodě.	ac18ba74			pending			
+cs:b:s1.v5.vlak	Já jdu do vlaku.	657fea37			pending			
+cs:b:s1.v5.fotbal	Já jdu na fotbal.	1714bf24			pending			
+cs:b:s1.v5.banan	Já jdu k banánu.	27099f35			pending			
+cs:b:s1.v5.kniha	Já jdu ke knize.	c69584a4			pending			
+cs:b:s1.v5.skola	Já jdu do školy.	dba40dc2			pending			
+cs:b:s1.v6.mleko	Já si hraju s mlékem.	9219d362			pending			
+cs:b:s1.v6.o2	Já si hraju s jablkem.	e6bc9e33			pending			
+cs:b:s1.v6.hracka	Já si hraju s hračkou.	a62adf42			pending			
+cs:b:s1.v6.auto	Já si hraju s autem.	a38504c9			pending			
+cs:b:s1.v6.o5	Já si hraju s venkem.	d0e19ae3			pending			
+cs:b:s1.v6.o6	Já si hraju s domem.	2b50e293			pending			
+cs:b:s1.v6.o7	Já si hraju s postýlkou.	1b5040a9			pending			
+cs:b:s1.v6.o8	Já si hraju s nočníkem.	c626bc15			pending			
+cs:b:s1.v6.kolo	Já si hraju s kolem.	81e44c3d			pending			
+cs:b:s1.v6.les	Já si hraju v lese.	18ea9ea1			pending			
+cs:b:s1.v6.nos	Já si hraju s nosem.	a2bf1ae3			pending			
+cs:b:s1.v6.miska	Já si hraju s miskou.	9b68bd4f			pending			
+cs:b:s1.v6.voda	Já si hraju s vodou.	9f8efb92			pending			
+cs:b:s1.v6.vlak	Já si hraju s vlakem.	4d8af383			pending			
+cs:b:s1.v6.fotbal	Já si hraju s fotbalem.	a5720201			pending			
+cs:b:s1.v6.banan	Já si hraju s banánem.	d2140461			pending			
+cs:b:s1.v6.kniha	Já si hraju s knihou.	6f7e66eb			pending			
+cs:b:s1.v6.skola	Já si hraju se školou.	d4376297			pending			
+cs:b:mama.v1.mleko	Máma chce mléko.	27090540			pending			
+cs:b:mama.v1.o2	Máma chce jablko.	23619d7d			pending			
+cs:b:mama.v1.hracka	Máma chce hračku.	962e3af2			pending			
+cs:b:mama.v1.auto	Máma chce auto.	9e19f87f			pending			
+cs:b:mama.v1.o5	Máma chce venek.	9a199b55			pending			
+cs:b:mama.v1.o6	Máma chce dům.	c09be842			pending			
+cs:b:mama.v1.o7	Máma chce postýlku.	6df30377			pending			
+cs:b:mama.v1.o8	Máma chce nočník.	f0fa938a			pending			
+cs:b:mama.v1.kolo	Máma chce kolo.	920e981f			pending			
+cs:b:mama.v1.les	Máma chce les.	3706006e			pending			
+cs:b:mama.v1.nos	Máma chce nos.	7c6ccc82			pending			
+cs:b:mama.v1.miska	Máma chce misku.	a64e9807			pending			
+cs:b:mama.v1.voda	Máma chce vodu.	436249ba			pending			
+cs:b:mama.v1.vlak	Máma chce vlak.	38b18e1c			pending			
+cs:b:mama.v1.fotbal	Máma chce fotbal.	c6ffc1ea			pending			
+cs:b:mama.v1.banan	Máma chce banán.	888d3ca0			pending			
+cs:b:mama.v1.kniha	Máma chce knihu.	86842563			pending			
+cs:b:mama.v1.skola	Máma chce školu.	79249f08			pending			
+cs:b:mama.v2.mleko	Máma jí mléko.	dbeab746			pending			
+cs:b:mama.v2.o2	Máma jí jablko.	cd7e3edf			pending			
+cs:b:mama.v2.hracka	Máma jí hračku.	f8010f34			pending			
+cs:b:mama.v2.auto	Máma jí auto.	6e9fcf7d			pending			
+cs:b:mama.v2.o5	Máma jí venek.	6b4d75e7			pending			
+cs:b:mama.v2.o6	Máma jí dům.	b9d02a3c			pending			
+cs:b:mama.v2.o7	Máma jí postýlku.	b31393ad			pending			
+cs:b:mama.v2.o8	Máma jí nočník.	1e9e1a6c			pending			
+cs:b:mama.v2.kolo	Máma jí kolo.	e720bdcd			pending			
+cs:b:mama.v2.les	Máma jí les.	74890cc0			pending			
+cs:b:mama.v2.nos	Máma jí nos.	03533dbc			pending			
+cs:b:mama.v2.miska	Máma jí misku.	bb4fb145			pending			
+cs:b:mama.v2.voda	Máma jí vodu.	0f139fc4			pending			
+cs:b:mama.v2.vlak	Máma jí vlak.	f3a8517e			pending			
+cs:b:mama.v2.fotbal	Máma jí fotbal.	f329f8c0			pending			
+cs:b:mama.v2.banan	Máma jí banán.	aa33ebf2			pending			
+cs:b:mama.v2.kniha	Máma jí knihu.	db923791			pending			
+cs:b:mama.v2.skola	Máma jí školu.	2f2b8de6			pending			
+cs:b:mama.v3.mleko	Máma pije mléko.	1beab02f			pending			
+cs:b:mama.v3.o2	Máma pije jablko.	5b9a4cfc			pending			
+cs:b:mama.v3.hracka	Máma pije hračku.	63e7ef87			pending			
+cs:b:mama.v3.auto	Máma pije auto.	0d899f2a			pending			
+cs:b:mama.v3.o5	Máma pije venek.	b238e40e			pending			
+cs:b:mama.v3.o6	Máma pije dům.	9143170d			pending			
+cs:b:mama.v3.o7	Máma pije postýlku.	44116f92			pending			
+cs:b:mama.v3.o8	Máma pije nočník.	f6fd61df			pending			
+cs:b:mama.v3.kolo	Máma pije kolo.	acdddc0e			pending			
+cs:b:mama.v3.les	Máma pije les.	eba0ecb5			pending			
+cs:b:mama.v3.nos	Máma pije nos.	517ec205			pending			
+cs:b:mama.v3.miska	Máma pije misku.	e87946f8			pending			
+cs:b:mama.v3.voda	Máma pije vodu.	b6d98977			pending			
+cs:b:mama.v3.vlak	Máma pije vlak.	58d07c2d			pending			
+cs:b:mama.v3.fotbal	Máma pije fotbal.	3f2ae543			pending			
+cs:b:mama.v3.banan	Máma pije banán.	a048824b			pending			
+cs:b:mama.v3.kniha	Máma pije knihu.	900c49f4			pending			
+cs:b:mama.v3.skola	Máma pije školu.	a4d179c7			pending			
+cs:b:mama.v4.mleko	Máma spí u mléka.	9ce546ba			pending			
+cs:b:mama.v4.o2	Máma spí u jablka.	840b9287			pending			
+cs:b:mama.v4.hracka	Máma spí u hračky.	c9fdaaca			pending			
+cs:b:mama.v4.auto	Máma spí v autě.	e69fe38e			pending			
+cs:b:mama.v4.o5	Máma spí venku.	df576048			pending			
+cs:b:mama.v4.o6	Máma spí doma.	86cbb1b8			pending			
+cs:b:mama.v4.o7	Máma spí v postýlce.	8a45db92			pending			
+cs:b:mama.v4.o8	Máma spí na nočníku.	e6f04f17			pending			
+cs:b:mama.v4.kolo	Máma spí u kola.	4525adad			pending			
+cs:b:mama.v4.les	Máma spí v lese.	0bf240c6			pending			
+cs:b:mama.v4.nos	Máma spí u nosu.	d063443f			pending			
+cs:b:mama.v4.miska	Máma spí u misky.	749fe1c7			pending			
+cs:b:mama.v4.voda	Máma spí u vody.	b04833e2			pending			
+cs:b:mama.v4.vlak	Máma spí ve vlaku.	94b9fab1			pending			
+cs:b:mama.v4.fotbal	Máma spí u fotbalu.	fcf809ff			pending			
+cs:b:mama.v4.banan	Máma spí u banánu.	0cf3ae11			pending			
+cs:b:mama.v4.kniha	Máma spí u knihy.	7896eb7b			pending			
+cs:b:mama.v4.skola	Máma spí ve škole.	0fcce7b0			pending			
+cs:b:mama.v5.mleko	Máma jde mléko.	4c6aa5b4			pending			
+cs:b:mama.v5.o2	Máma jde jablko.	b8376c61			pending			
+cs:b:mama.v5.hracka	Máma jde pro hračku.	b207bf45			pending			
+cs:b:mama.v5.auto	Máma jde do auta.	406fc4cc			pending			
+cs:b:mama.v5.o5	Máma jde ven.	760cc5ed			pending			
+cs:b:mama.v5.o6	Máma jde domů.	8e99a485			pending			
+cs:b:mama.v5.o7	Máma jde do postýlky.	83cce776			pending			
+cs:b:mama.v5.o8	Máma jde na nočník.	c46a9d67			pending			
+cs:b:mama.v5.kolo	Máma jde ke kolu.	51a50c2d			pending			
+cs:b:mama.v5.les	Máma jde do lesa.	816cc332			pending			
+cs:b:mama.v5.nos	Máma jde k nosu.	de5490b6			pending			
+cs:b:mama.v5.miska	Máma jde k misce.	27a56318			pending			
+cs:b:mama.v5.voda	Máma jde k vodě.	ac676061			pending			
+cs:b:mama.v5.vlak	Máma jde do vlaku.	da331a46			pending			
+cs:b:mama.v5.fotbal	Máma jde na fotbal.	631c126b			pending			
+cs:b:mama.v5.banan	Máma jde k banánu.	ef6a6dd0			pending			
+cs:b:mama.v5.kniha	Máma jde ke knize.	c08a4c7d			pending			
+cs:b:mama.v5.skola	Máma jde do školy.	a18916bb			pending			
+cs:b:mama.v6.mleko	Máma si hraje s mlékem.	656f945d			pending			
+cs:b:mama.v6.o2	Máma si hraje s jablkem.	e5322802			pending			
+cs:b:mama.v6.hracka	Máma si hraje s hračkou.	42197933			pending			
+cs:b:mama.v6.auto	Máma si hraje s autem.	9f9a4dc0			pending			
+cs:b:mama.v6.o5	Máma si hraje s venkem.	6ae61d0c			pending			
+cs:b:mama.v6.o6	Máma si hraje s domem.	1d0eb886			pending			
+cs:b:mama.v6.o7	Máma si hraje s postýlkou.	0e2e7548			pending			
+cs:b:mama.v6.o8	Máma si hraje s nočníkem.	c7663a7e			pending			
+cs:b:mama.v6.kolo	Máma si hraje s kolem.	0198eec0			pending			
+cs:b:mama.v6.les	Máma si hraje v lese.	bcd16d02			pending			
+cs:b:mama.v6.nos	Máma si hraje s nosem.	bedaae5e			pending			
+cs:b:mama.v6.miska	Máma si hraje s miskou.	d481a7e0			pending			
+cs:b:mama.v6.voda	Máma si hraje s vodou.	54706c23			pending			
+cs:b:mama.v6.vlak	Máma si hraje s vlakem.	cc4afd88			pending			
+cs:b:mama.v6.fotbal	Máma si hraje s fotbalem.	f610caea			pending			
+cs:b:mama.v6.banan	Máma si hraje s banánem.	ad816294			pending			
+cs:b:mama.v6.kniha	Máma si hraje s knihou.	9062afdc			pending			
+cs:b:mama.v6.skola	Máma si hraje se školou.	5d4a40be			pending			
+cs:b:tata.v1.mleko	Táta chce mléko.	a850a0d4			pending			
+cs:b:tata.v1.o2	Táta chce jablko.	43415b01			pending			
+cs:b:tata.v1.hracka	Táta chce hračku.	fd8528e6			pending			
+cs:b:tata.v1.auto	Táta chce auto.	b8e3c80b			pending			
+cs:b:tata.v1.o5	Táta chce venek.	fd9d3001			pending			
+cs:b:tata.v1.o6	Táta chce dům.	1bff21f6			pending			
+cs:b:tata.v1.o7	Táta chce postýlku.	d2beb483			pending			
+cs:b:tata.v1.o8	Táta chce nočník.	74644f16			pending			
+cs:b:tata.v1.kolo	Táta chce kolo.	ae7d54bb			pending			
+cs:b:tata.v1.les	Táta chce les.	3a463fca			pending			
+cs:b:tata.v1.nos	Táta chce nos.	1bc3123e			pending			
+cs:b:tata.v1.miska	Táta chce misku.	f5fbb2d3			pending			
+cs:b:tata.v1.voda	Táta chce vodu.	eeb0d74e			pending			
+cs:b:tata.v1.vlak	Táta chce vlak.	d64bc2c0			pending			
+cs:b:tata.v1.fotbal	Táta chce fotbal.	e9f9b56e			pending			
+cs:b:tata.v1.banan	Táta chce banán.	6b73c13c			pending			
+cs:b:tata.v1.kniha	Táta chce knihu.	b2a921ef			pending			
+cs:b:tata.v1.skola	Táta chce školu.	4cbf651c			pending			
+cs:b:tata.v2.mleko	Táta jí mléko.	28311eaa			pending			
+cs:b:tata.v2.o2	Táta jí jablko.	61035533			pending			
+cs:b:tata.v2.hracka	Táta jí hračku.	666589a8			pending			
+cs:b:tata.v2.auto	Táta jí auto.	39d91d39			pending			
+cs:b:tata.v2.o5	Táta jí venek.	db709593			pending			
+cs:b:tata.v2.o6	Táta jí dům.	645cf0d0			pending			
+cs:b:tata.v2.o7	Táta jí postýlku.	d8367869			pending			
+cs:b:tata.v2.o8	Táta jí nočník.	b6c062a8			pending			
+cs:b:tata.v2.kolo	Táta jí kolo.	b1643369			pending			
+cs:b:tata.v2.les	Táta jí les.	e7c9a44c			pending			
+cs:b:tata.v2.nos	Táta jí nos.	064cd1d8			pending			
+cs:b:tata.v2.miska	Táta jí misku.	1149c361			pending			
+cs:b:tata.v2.voda	Táta jí vodu.	9e9e55f8			pending			
+cs:b:tata.v2.vlak	Táta jí vlak.	bc60f282			pending			
+cs:b:tata.v2.fotbal	Táta jí fotbal.	b3321814			pending			
+cs:b:tata.v2.banan	Táta jí banán.	108b422e			pending			
+cs:b:tata.v2.kniha	Táta jí knihu.	c63899ed			pending			
+cs:b:tata.v2.skola	Táta jí školu.	4b01b90a			pending			
+cs:b:tata.v3.mleko	Táta pije mléko.	84e70a73			pending			
+cs:b:tata.v3.o2	Táta pije jablko.	2b277db0			pending			
+cs:b:tata.v3.hracka	Táta pije hračku.	11464d5b			pending			
+cs:b:tata.v3.auto	Táta pije auto.	6a48a5f6			pending			
+cs:b:tata.v3.o5	Táta pije venek.	866f81ba			pending			
+cs:b:tata.v3.o6	Táta pije dům.	08e9a7a1			pending			
+cs:b:tata.v3.o7	Táta pije postýlku.	a618089e			pending			
+cs:b:tata.v3.o8	Táta pije nočník.	3886573b			pending			
+cs:b:tata.v3.kolo	Táta pije kolo.	d3971c2a			pending			
+cs:b:tata.v3.les	Táta pije les.	f58e6a91			pending			
+cs:b:tata.v3.nos	Táta pije nos.	48e9f1f1			pending			
+cs:b:tata.v3.miska	Táta pije misku.	102ea5f4			pending			
+cs:b:tata.v3.voda	Táta pije vodu.	d8a796eb			pending			
+cs:b:tata.v3.vlak	Táta pije vlak.	e198aa21			pending			
+cs:b:tata.v3.fotbal	Táta pije fotbal.	2ced6127			pending			
+cs:b:tata.v3.banan	Táta pije banán.	c015ad37			pending			
+cs:b:tata.v3.kniha	Táta pije knihu.	e4223c20			pending			
+cs:b:tata.v3.skola	Táta pije školu.	fe9c036b			pending			
+cs:b:tata.v4.mleko	Táta spí u mléka.	1e76c9b6			pending			
+cs:b:tata.v4.o2	Táta spí u jablka.	2cfea093			pending			
+cs:b:tata.v4.hracka	Táta spí u hračky.	0e86d156			pending			
+cs:b:tata.v4.auto	Táta spí v autě.	b6ef38e2			pending			
+cs:b:tata.v4.o5	Táta spí venku.	bbced9fc			pending			
+cs:b:tata.v4.o6	Táta spí doma.	f99e1fbc			pending			
+cs:b:tata.v4.o7	Táta spí v postýlce.	2c9d02ce			pending			
+cs:b:tata.v4.o8	Táta spí na nočníku.	fbccf1eb			pending			
+cs:b:tata.v4.kolo	Táta spí u kola.	c8883891			pending			
+cs:b:tata.v4.les	Táta spí v lese.	fae80a02			pending			
+cs:b:tata.v4.nos	Táta spí u nosu.	b80d7f5b			pending			
+cs:b:tata.v4.miska	Táta spí u misky.	fde8803b			pending			
+cs:b:tata.v4.voda	Táta spí u vody.	95c59a6e			pending			
+cs:b:tata.v4.vlak	Táta spí ve vlaku.	b41100f5			pending			
+cs:b:tata.v4.fotbal	Táta spí u fotbalu.	f7128db3			pending			
+cs:b:tata.v4.banan	Táta spí u banánu.	b96c217d			pending			
+cs:b:tata.v4.kniha	Táta spí u knihy.	6552167f			pending			
+cs:b:tata.v4.skola	Táta spí ve škole.	858668d4			pending			
+cs:b:tata.v5.mleko	Táta jde mléko.	b67cc728			pending			
+cs:b:tata.v5.o2	Táta jde jablko.	1112d565			pending			
+cs:b:tata.v5.hracka	Táta jde pro hračku.	29024681			pending			
+cs:b:tata.v5.auto	Táta jde do auta.	87a85698			pending			
+cs:b:tata.v5.o5	Táta jde ven.	448a0bd1			pending			
+cs:b:tata.v5.o6	Táta jde domů.	54d4ea19			pending			
+cs:b:tata.v5.o7	Táta jde do postýlky.	aaa89d72			pending			
+cs:b:tata.v5.o8	Táta jde na nočník.	f8c41b63			pending			
+cs:b:tata.v5.kolo	Táta jde ke kolu.	67a15da9			pending			
+cs:b:tata.v5.les	Táta jde do lesa.	028737ce			pending			
+cs:b:tata.v5.nos	Táta jde k nosu.	b83fd072			pending			
+cs:b:tata.v5.miska	Táta jde k misce.	15d4f394			pending			
+cs:b:tata.v5.voda	Táta jde k vodě.	1fcacdbd			pending			
+cs:b:tata.v5.vlak	Táta jde do vlaku.	e06b9e12			pending			
+cs:b:tata.v5.fotbal	Táta jde na fotbal.	a468750f			pending			
+cs:b:tata.v5.banan	Táta jde k banánu.	82dffd7c			pending			
+cs:b:tata.v5.kniha	Táta jde ke knize.	174c2a59			pending			
+cs:b:tata.v5.skola	Táta jde do školy.	353d4d7f			pending			
+cs:b:tata.v6.mleko	Táta si hraje s mlékem.	d0a59c91			pending			
+cs:b:tata.v6.o2	Táta si hraje s jablkem.	8643cc16			pending			
+cs:b:tata.v6.hracka	Táta si hraje s hračkou.	5bcb07c7			pending			
+cs:b:tata.v6.auto	Táta si hraje s autem.	431a93cc			pending			
+cs:b:tata.v6.o5	Táta si hraje s venkem.	8afd1468			pending			
+cs:b:tata.v6.o6	Táta si hraje s domem.	9428cc8a			pending			
+cs:b:tata.v6.o7	Táta si hraje s postýlkou.	069feac4			pending			
+cs:b:tata.v6.o8	Táta si hraje s nočníkem.	5da7367a			pending			
+cs:b:tata.v6.kolo	Táta si hraje s kolem.	9ec9f8bc			pending			
+cs:b:tata.v6.les	Táta si hraje v lese.	dab3ba26			pending			
+cs:b:tata.v6.nos	Táta si hraje s nosem.	a7c6520a			pending			
+cs:b:tata.v6.miska	Táta si hraje s miskou.	f27002fc			pending			
+cs:b:tata.v6.voda	Táta si hraje s vodou.	6d32a837			pending			
+cs:b:tata.v6.vlak	Táta si hraje s vlakem.	8287475c			pending			
+cs:b:tata.v6.fotbal	Táta si hraje s fotbalem.	c75213ee			pending			
+cs:b:tata.v6.banan	Táta si hraje s banánem.	db150540			pending			
+cs:b:tata.v6.kniha	Táta si hraje s knihou.	dffdaa48			pending			
+cs:b:tata.v6.skola	Táta si hraje se školou.	498a3112			pending			
+cs:b:baba.v1.mleko	Bába chce mléko.	f3ca4408			pending			
+cs:b:baba.v1.o2	Bába chce jablko.	1da459c5			pending			
+cs:b:baba.v1.hracka	Bába chce hračku.	bfe5412a			pending			
+cs:b:baba.v1.auto	Bába chce auto.	9c3b9717			pending			
+cs:b:baba.v1.o5	Bába chce venek.	d62b38ad			pending			
+cs:b:baba.v1.o6	Bába chce dům.	074f351a			pending			
+cs:b:baba.v1.o7	Bába chce postýlku.	5ac5d85f			pending			
+cs:b:baba.v1.o8	Bába chce nočník.	98eaaa92			pending			
+cs:b:baba.v1.kolo	Bába chce kolo.	77c76fa7			pending			
+cs:b:baba.v1.les	Bába chce les.	309c2b96			pending			
+cs:b:baba.v1.nos	Bába chce nos.	c44c95fa			pending			
+cs:b:baba.v1.miska	Bába chce misku.	b2b9444f			pending			
+cs:b:baba.v1.voda	Bába chce vodu.	684cbd52			pending			
+cs:b:baba.v1.vlak	Bába chce vlak.	228a2184			pending			
+cs:b:baba.v1.fotbal	Bába chce fotbal.	15d672d2			pending			
+cs:b:baba.v1.banan	Bába chce banán.	6064a8b8			pending			
+cs:b:baba.v1.kniha	Bába chce knihu.	580d4f1b			pending			
+cs:b:baba.v1.skola	Bába chce školu.	fe57d810			pending			
+cs:b:baba.v2.mleko	Bába jí mléko.	292c243e			pending			
+cs:b:baba.v2.o2	Bába jí jablko.	15c14f37			pending			
+cs:b:baba.v2.hracka	Bába jí hračku.	b9fa025c			pending			
+cs:b:baba.v2.auto	Bába jí auto.	3e786ea5			pending			
+cs:b:baba.v2.o5	Bába jí venek.	1903db8f			pending			
+cs:b:baba.v2.o6	Bába jí dům.	f79f0ba4			pending			
+cs:b:baba.v2.o7	Bába jí postýlku.	f3f038c5			pending			
+cs:b:baba.v2.o8	Bába jí nočník.	66013e04			pending			
+cs:b:baba.v2.kolo	Bába jí kolo.	e490b9a5			pending			
+cs:b:baba.v2.les	Bába jí les.	67e83e78			pending			
+cs:b:baba.v2.nos	Bába jí nos.	06ba5464			pending			
+cs:b:baba.v2.miska	Bába jí misku.	8fbd659d			pending			
+cs:b:baba.v2.voda	Bába jí vodu.	2ff8824c			pending			
+cs:b:baba.v2.vlak	Bába jí vlak.	f9cb3816			pending			
+cs:b:baba.v2.fotbal	Bába jí fotbal.	d087fc78			pending			
+cs:b:baba.v2.banan	Bába jí banán.	1e552cfa			pending			
+cs:b:baba.v2.kniha	Bába jí knihu.	c62764b9			pending			
+cs:b:baba.v2.skola	Bába jí školu.	74b28d5e			pending			
+cs:b:baba.v3.mleko	Bába pije mléko.	1ccff9e7			pending			
+cs:b:baba.v3.o2	Bába pije jablko.	3871d454			pending			
+cs:b:baba.v3.hracka	Bába pije hračku.	2036270f			pending			
+cs:b:baba.v3.auto	Bába pije auto.	122fb2b2			pending			
+cs:b:baba.v3.o5	Bába pije venek.	37e4c676			pending			
+cs:b:baba.v3.o6	Bába pije dům.	a611b3f5			pending			
+cs:b:baba.v3.o7	Bába pije postýlku.	2c6967ea			pending			
+cs:b:baba.v3.o8	Bába pije nočník.	1ac249d7			pending			
+cs:b:baba.v3.kolo	Bába pije kolo.	a5ea7786			pending			
+cs:b:baba.v3.les	Bába pije les.	14cee26d			pending			
+cs:b:baba.v3.nos	Bába pije nos.	e829a04d			pending			
+cs:b:baba.v3.miska	Bába pije misku.	3d1903d0			pending			
+cs:b:baba.v3.voda	Bába pije vodu.	ee9c0cff			pending			
+cs:b:baba.v3.vlak	Bába pije vlak.	878c28c5			pending			
+cs:b:baba.v3.fotbal	Bába pije fotbal.	59b7b5bb			pending			
+cs:b:baba.v3.banan	Bába pije banán.	a5ceaa13			pending			
+cs:b:baba.v3.kniha	Bába pije knihu.	6fd25dbc			pending			
+cs:b:baba.v3.skola	Bába pije školu.	1ca0bd1f			pending			
+cs:b:baba.v4.mleko	Bába spí u mléka.	ac117442			pending			
+cs:b:baba.v4.o2	Bába spí u jablka.	93729e6f			pending			
+cs:b:baba.v4.hracka	Bába spí u hračky.	6ea7fa62			pending			
+cs:b:baba.v4.auto	Bába spí v autě.	861ca096			pending			
+cs:b:baba.v4.o5	Bába spí venku.	b6680870			pending			
+cs:b:baba.v4.o6	Bába spí doma.	1404de50			pending			
+cs:b:baba.v4.o7	Bába spí v postýlce.	552f7f7a			pending			
+cs:b:baba.v4.o8	Bába spí na nočníku.	32dbe7ff			pending			
+cs:b:baba.v4.kolo	Bába spí u kola.	de274115			pending			
+cs:b:baba.v4.les	Bába spí v lese.	ca7d0d6e			pending			
+cs:b:baba.v4.nos	Bába spí u nosu.	9c146d97			pending			
+cs:b:baba.v4.miska	Bába spí u misky.	06ced9cf			pending			
+cs:b:baba.v4.voda	Bába spí u vody.	cd0ef6fa			pending			
+cs:b:baba.v4.vlak	Bába spí ve vlaku.	6dd26889			pending			
+cs:b:baba.v4.fotbal	Bába spí u fotbalu.	ee6aec07			pending			
+cs:b:baba.v4.banan	Bába spí u banánu.	50803389			pending			
+cs:b:baba.v4.kniha	Bába spí u knihy.	67a13e73			pending			
+cs:b:baba.v4.skola	Bába spí ve škole.	38306898			pending			
+cs:b:baba.v5.mleko	Bába jde mléko.	ca7b322c			pending			
+cs:b:baba.v5.o2	Bába jde jablko.	86f6bb19			pending			
+cs:b:baba.v5.hracka	Bába jde pro hračku.	f9da6f7d			pending			
+cs:b:baba.v5.auto	Bába jde do auta.	54dbafe4			pending			
+cs:b:baba.v5.o5	Bába jde ven.	103ab145			pending			
+cs:b:baba.v5.o6	Bába jde domů.	7dc2946d			pending			
+cs:b:baba.v5.o7	Bába jde do postýlky.	6de91c5e			pending			
+cs:b:baba.v5.o8	Bába jde na nočník.	8a5252ff			pending			
+cs:b:baba.v5.kolo	Bába jde ke kolu.	20e38f55			pending			
+cs:b:baba.v5.les	Bába jde do lesa.	cdc921fa			pending			
+cs:b:baba.v5.nos	Bába jde k nosu.	b981e41e			pending			
+cs:b:baba.v5.miska	Bába jde k misce.	a5461510			pending			
+cs:b:baba.v5.voda	Bába jde k vodě.	781bd529			pending			
+cs:b:baba.v5.vlak	Bába jde do vlaku.	1a39ab2e			pending			
+cs:b:baba.v5.fotbal	Bába jde na fotbal.	0bf633a3			pending			
+cs:b:baba.v5.banan	Bába jde k banánu.	d6b914f8			pending			
+cs:b:baba.v5.kniha	Bába jde ke knize.	292ca065			pending			
+cs:b:baba.v5.skola	Bába jde do školy.	6c47dd83			pending			
+cs:b:baba.v6.mleko	Bába si hraje s mlékem.	ec0a0295			pending			
+cs:b:baba.v6.o2	Bába si hraje s jablkem.	dff9f07a			pending			
+cs:b:baba.v6.hracka	Bába si hraje s hračkou.	a75f422b			pending			
+cs:b:baba.v6.auto	Bába si hraje s autem.	93b85c08			pending			
+cs:b:baba.v6.o5	Bába si hraje s venkem.	148101c4			pending			
+cs:b:baba.v6.o6	Bába si hraje s domem.	6d13b36e			pending			
+cs:b:baba.v6.o7	Bába si hraje s postýlkou.	e7de8e90			pending			
+cs:b:baba.v6.o8	Bába si hraje s nočníkem.	b9f577b6			pending			
+cs:b:baba.v6.kolo	Bába si hraje s kolem.	9ee17b58			pending			
+cs:b:baba.v6.les	Bába si hraje v lese.	0abd5e3a			pending			
+cs:b:baba.v6.nos	Bába si hraje s nosem.	923cdae6			pending			
+cs:b:baba.v6.miska	Bába si hraje s miskou.	03add648			pending			
+cs:b:baba.v6.voda	Bába si hraje s vodou.	533c5b9b			pending			
+cs:b:baba.v6.vlak	Bába si hraje s vlakem.	9935f4c0			pending			
+cs:b:baba.v6.fotbal	Bába si hraje s fotbalem.	504f75c2			pending			
+cs:b:baba.v6.banan	Bába si hraje s banánem.	1dee967c			pending			
+cs:b:baba.v6.kniha	Bába si hraje s knihou.	e8831f74			pending			
+cs:b:baba.v6.skola	Bába si hraje se školou.	81d46c16			pending			
+cs:b:pes.v1.mleko	Pes chce mléko.	ba2537ba			pending			
+cs:b:pes.v1.o2	Pes chce jablko.	95540823			pending			
+cs:b:pes.v1.hracka	Pes chce hračku.	b95d8418			pending			
+cs:b:pes.v1.auto	Pes chce auto.	80b85429			pending			
+cs:b:pes.v1.o5	Pes chce venek.	d74b7503			pending			
+cs:b:pes.v1.o6	Pes chce dům.	25353da0			pending			
+cs:b:pes.v1.o7	Pes chce postýlku.	67c80af9			pending			
+cs:b:pes.v1.o8	Pes chce nočník.	acdbe798			pending			
+cs:b:pes.v1.kolo	Pes chce kolo.	27714219			pending			
+cs:b:pes.v1.les	Pes chce les.	a33cab3c			pending			
+cs:b:pes.v1.nos	Pes chce nos.	c1bfd8c8			pending			
+cs:b:pes.v1.miska	Pes chce misku.	e5960df1			pending			
+cs:b:pes.v1.voda	Pes chce vodu.	8fddafe8			pending			
+cs:b:pes.v1.vlak	Pes chce vlak.	b57ffb52			pending			
+cs:b:pes.v1.fotbal	Pes chce fotbal.	5ecc7064			pending			
+cs:b:pes.v1.banan	Pes chce banán.	a56dd0fe			pending			
+cs:b:pes.v1.kniha	Pes chce knihu.	62dbc81d			pending			
+cs:b:pes.v1.skola	Pes chce školu.	c62dff7a			pending			
+cs:b:pes.v2.mleko	Pes jí mléko.	5463add4			pending			
+cs:b:pes.v2.o2	Pes jí jablko.	253ed201			pending			
+cs:b:pes.v2.hracka	Pes jí hračku.	87047de6			pending			
+cs:b:pes.v2.auto	Pes jí auto.	e3e0a70b			pending			
+cs:b:pes.v2.o5	Pes jí venek.	a9b03d01			pending			
+cs:b:pes.v2.o6	Pes jí dům.	64ef90f6			pending			
+cs:b:pes.v2.o7	Pes jí postýlku.	3c6a8383			pending			
+cs:b:pes.v2.o8	Pes jí nočník.	07d24016			pending			
+cs:b:pes.v2.kolo	Pes jí kolo.	d97a33bb			pending			
+cs:b:pes.v2.les	Pes jí les.	509d44ca			pending			
+cs:b:pes.v2.nos	Pes jí nos.	321a173e			pending			
+cs:b:pes.v2.miska	Pes jí misku.	a20ebfd3			pending			
+cs:b:pes.v2.voda	Pes jí vodu.	19adb64e			pending			
+cs:b:pes.v2.vlak	Pes jí vlak.	0148a1c0			pending			
+cs:b:pes.v2.fotbal	Pes jí fotbal.	cbf72c6e			pending			
+cs:b:pes.v2.banan	Pes jí banán.	1786ce3c			pending			
+cs:b:pes.v2.kniha	Pes jí knihu.	5ebc2eef			pending			
+cs:b:pes.v2.skola	Pes jí školu.	4ce2801c			pending			
+cs:b:pes.v3.mleko	Pes pije mléko.	2dcd1f15			pending			
+cs:b:pes.v3.o2	Pes pije jablko.	21a2914e			pending			
+cs:b:pes.v3.hracka	Pes pije hračku.	fd790789			pending			
+cs:b:pes.v3.auto	Pes pije auto.	f505e688			pending			
+cs:b:pes.v3.o5	Pes pije venek.	3db274d0			pending			
+cs:b:pes.v3.o6	Pes pije dům.	611293af			pending			
+cs:b:pes.v3.o7	Pes pije postýlku.	61f3fb18			pending			
+cs:b:pes.v3.o8	Pes pije nočník.	2ee8ad69			pending			
+cs:b:pes.v3.kolo	Pes pije kolo.	2921a794			pending			
+cs:b:pes.v3.les	Pes pije les.	86a06ccf			pending			
+cs:b:pes.v3.nos	Pes pije nos.	4776473f			pending			
+cs:b:pes.v3.miska	Pes pije misku.	1b9264b6			pending			
+cs:b:pes.v3.voda	Pes pije vodu.	af37c481			pending			
+cs:b:pes.v3.vlak	Pes pije vlak.	ee8b1ff7			pending			
+cs:b:pes.v3.fotbal	Pes pije fotbal.	bdf56a19			pending			
+cs:b:pes.v3.banan	Pes pije banán.	7b649f0d			pending			
+cs:b:pes.v3.kniha	Pes pije knihu.	710f24ca			pending			
+cs:b:pes.v3.skola	Pes pije školu.	ef7d9515			pending			
+cs:b:pes.v4.mleko	Pes spí u mléka.	eb8614a8			pending			
+cs:b:pes.v4.o2	Pes spí u jablka.	ba633729			pending			
+cs:b:pes.v4.hracka	Pes spí u hračky.	ab9fc078			pending			
+cs:b:pes.v4.auto	Pes spí v autě.	8d5c3b9c			pending			
+cs:b:pes.v4.o5	Pes spí venku.	c130ce76			pending			
+cs:b:pes.v4.o6	Pes spí doma.	903a4f82			pending			
+cs:b:pes.v4.o7	Pes spí v postýlce.	98e59608			pending			
+cs:b:pes.v4.o8	Pes spí na nočníku.	64b3e8d1			pending			
+cs:b:pes.v4.kolo	Pes spí u kola.	58459abb			pending			
+cs:b:pes.v4.les	Pes spí v lese.	67e8c884			pending			
+cs:b:pes.v4.nos	Pes spí u nosu.	52f2ec71			pending			
+cs:b:pes.v4.miska	Pes spí u misky.	f4bb8d31			pending			
+cs:b:pes.v4.voda	Pes spí u vody.	94dd0c28			pending			
+cs:b:pes.v4.vlak	Pes spí ve vlaku.	836caaa3			pending			
+cs:b:pes.v4.fotbal	Pes spí u fotbalu.	1e8215f5			pending			
+cs:b:pes.v4.banan	Pes spí u banánu.	43760833			pending			
+cs:b:pes.v4.kniha	Pes spí u knihy.	05cf2895			pending			
+cs:b:pes.v4.skola	Pes spí ve škole.	26312a72			pending			
+cs:b:pes.v5.mleko	Pes jde mléko.	c7486846			pending			
+cs:b:pes.v5.o2	Pes jde jablko.	51fbe1df			pending			
+cs:b:pes.v5.hracka	Pes jde pro hračku.	e5a8522b			pending			
+cs:b:pes.v5.auto	Pes jde do auta.	dd112df2			pending			
+cs:b:pes.v5.o5	Pes jde ven.	75c8bf5f			pending			
+cs:b:pes.v5.o6	Pes jde domů.	8d0ffbf3			pending			
+cs:b:pes.v5.o7	Pes jde do postýlky.	be8c69f0			pending			
+cs:b:pes.v5.o8	Pes jde na nočník.	c5299435			pending			
+cs:b:pes.v5.kolo	Pes jde ke kolu.	0928ef9b			pending			
+cs:b:pes.v5.les	Pes jde do lesa.	4773d274			pending			
+cs:b:pes.v5.nos	Pes jde k nosu.	4fc66294			pending			
+cs:b:pes.v5.miska	Pes jde k misce.	452511c6			pending			
+cs:b:pes.v5.voda	Pes jde k vodě.	e56e0a27			pending			
+cs:b:pes.v5.vlak	Pes jde do vlaku.	a025aa88			pending			
+cs:b:pes.v5.fotbal	Pes jde na fotbal.	accbaa6d			pending			
+cs:b:pes.v5.banan	Pes jde k banánu.	01b43e5e			pending			
+cs:b:pes.v5.kniha	Pes jde ke knize.	bfc552a3			pending			
+cs:b:pes.v5.skola	Pes jde do školy.	e9bc1095			pending			
+cs:b:pes.v6.mleko	Pes si hraje s mlékem.	c8ad0b67			pending			
+cs:b:pes.v6.o2	Pes si hraje s jablkem.	447f6978			pending			
+cs:b:pes.v6.hracka	Pes si hraje s hračkou.	7eff7c91			pending			
+cs:b:pes.v6.auto	Pes si hraje s autem.	e25abaca			pending			
+cs:b:pes.v6.o5	Pes si hraje s venkem.	c6c92296			pending			
+cs:b:pes.v6.o6	Pes si hraje s domem.	e75ff59c			pending			
+cs:b:pes.v6.o7	Pes si hraje s postýlkou.	6190a36a			pending			
+cs:b:pes.v6.o8	Pes si hraje s nočníkem.	4624f0ec			pending			
+cs:b:pes.v6.kolo	Pes si hraje s kolem.	8fabcf4a			pending			
+cs:b:pes.v6.les	Pes si hraje v lese.	f3fcb2dc			pending			
+cs:b:pes.v6.nos	Pes si hraje s nosem.	727d3574			pending			
+cs:b:pes.v6.miska	Pes si hraje s miskou.	22056d3a			pending			
+cs:b:pes.v6.voda	Pes si hraje s vodou.	ccb1d9d9			pending			
+cs:b:pes.v6.vlak	Pes si hraje s vlakem.	202106f6			pending			
+cs:b:pes.v6.fotbal	Pes si hraje s fotbalem.	bdd2a654			pending			
+cs:b:pes.v6.banan	Pes si hraje s banánem.	2b54cd62			pending			
+cs:b:pes.v6.kniha	Pes si hraje s knihou.	e0ad4906			pending			
+cs:b:pes.v6.skola	Pes si hraje se školou.	3e69b91c			pending			
+cs:b:sova.v1.mleko	Sova chce mléko.	c7a872cf			pending			
+cs:b:sova.v1.o2	Sova chce jablko.	38127f9c			pending			
+cs:b:sova.v1.hracka	Sova chce hračku.	674475e7			pending			
+cs:b:sova.v1.auto	Sova chce auto.	702b294a			pending			
+cs:b:sova.v1.o5	Sova chce venek.	d684efae			pending			
+cs:b:sova.v1.o6	Sova chce dům.	63f64d2d			pending			
+cs:b:sova.v1.o7	Sova chce postýlku.	f0007bb2			pending			
+cs:b:sova.v1.o8	Sova chce nočník.	0e873ebf			pending			
+cs:b:sova.v1.kolo	Sova chce kolo.	e340552e			pending			
+cs:b:sova.v1.les	Sova chce les.	f367f5d5			pending			
+cs:b:sova.v1.nos	Sova chce nos.	56cb6225			pending			
+cs:b:sova.v1.miska	Sova chce misku.	657d8f98			pending			
+cs:b:sova.v1.voda	Sova chce vodu.	997bdd17			pending			
+cs:b:sova.v1.vlak	Sova chce vlak.	bb72064d			pending			
+cs:b:sova.v1.fotbal	Sova chce fotbal.	ece99de3			pending			
+cs:b:sova.v1.banan	Sova chce banán.	eab360eb			pending			
+cs:b:sova.v1.kniha	Sova chce knihu.	2002ee94			pending			
+cs:b:sova.v1.skola	Sova chce školu.	c91d8567			pending			
+cs:b:sova.v2.mleko	Sova jí mléko.	7c8429ed			pending			
+cs:b:sova.v2.o2	Sova jí jablko.	94562a26			pending			
+cs:b:sova.v2.hracka	Sova jí hračku.	70f6c3f1			pending			
+cs:b:sova.v2.auto	Sova jí auto.	df84b3f0			pending			
+cs:b:sova.v2.o5	Sova jí venek.	f7448cb8			pending			
+cs:b:sova.v2.o6	Sova jí dům.	24ba9f57			pending			
+cs:b:sova.v2.o7	Sova jí postýlku.	09d18a70			pending			
+cs:b:sova.v2.o8	Sova jí nočník.	af60d261			pending			
+cs:b:sova.v2.kolo	Sova jí kolo.	24772f6c			pending			
+cs:b:sova.v2.les	Sova jí les.	1b001447			pending			
+cs:b:sova.v2.nos	Sova jí nos.	c7a48ce7			pending			
+cs:b:sova.v2.miska	Sova jí misku.	7174ed6e			pending			
+cs:b:sova.v2.voda	Sova jí vodu.	ef4ddb89			pending			
+cs:b:sova.v2.vlak	Sova jí vlak.	138f892f			pending			
+cs:b:sova.v2.fotbal	Sova jí fotbal.	98550931			pending			
+cs:b:sova.v2.banan	Sova jí banán.	60cc0e95			pending			
+cs:b:sova.v2.kniha	Sova jí knihu.	3fee0892			pending			
+cs:b:sova.v2.skola	Sova jí školu.	503ffa4d			pending			
+cs:b:sova.v3.mleko	Sova pije mléko.	c1fd41b4			pending			
+cs:b:sova.v3.o2	Sova pije jablko.	ce030061			pending			
+cs:b:sova.v3.hracka	Sova pije hračku.	61586d06			pending			
+cs:b:sova.v3.auto	Sova pije auto.	07a3e5eb			pending			
+cs:b:sova.v3.o5	Sova pije venek.	eb0abfe1			pending			
+cs:b:sova.v3.o6	Sova pije dům.	32a60e56			pending			
+cs:b:sova.v3.o7	Sova pije postýlku.	f7e7e5e3			pending			
+cs:b:sova.v3.o8	Sova pije nočník.	7e888436			pending			
+cs:b:sova.v3.kolo	Sova pije kolo.	ce83f89b			pending			
+cs:b:sova.v3.les	Sova pije les.	8507d6aa			pending			
+cs:b:sova.v3.nos	Sova pije nos.	6684a91e			pending			
+cs:b:sova.v3.miska	Sova pije misku.	0fa853b3			pending			
+cs:b:sova.v3.voda	Sova pije vodu.	3d70f52e			pending			
+cs:b:sova.v3.vlak	Sova pije vlak.	be595f20			pending			
+cs:b:sova.v3.fotbal	Sova pije fotbal.	7240f1ce			pending			
+cs:b:sova.v3.banan	Sova pije banán.	722e061c			pending			
+cs:b:sova.v3.kniha	Sova pije knihu.	a50d364f			pending			
+cs:b:sova.v3.skola	Sova pije školu.	3800e17c			pending			
+cs:b:sova.v4.mleko	Sova spí u mléka.	278d9517			pending			
+cs:b:sova.v4.o2	Sova spí u jablka.	7d0434e4			pending			
+cs:b:sova.v4.hracka	Sova spí u hračky.	b07c76e1			pending			
+cs:b:sova.v4.auto	Sova spí v autě.	84953c6d			pending			
+cs:b:sova.v4.o5	Sova spí venku.	85c0a1b9			pending			
+cs:b:sova.v4.o6	Sova spí doma.	b9893dd7			pending			
+cs:b:sova.v4.o7	Sova spí v postýlce.	f2d98011			pending			
+cs:b:sova.v4.o8	Sova spí na nočníku.	9c87cd10			pending			
+cs:b:sova.v4.kolo	Sova spí u kola.	e2cbdbb6			pending			
+cs:b:sova.v4.les	Sova spí v lese.	ba4cee49			pending			
+cs:b:sova.v4.nos	Sova spí u nosu.	2eb53e88			pending			
+cs:b:sova.v4.miska	Sova spí u misky.	2a246956			pending			
+cs:b:sova.v4.voda	Sova spí u vody.	cff91249			pending			
+cs:b:sova.v4.vlak	Sova spí ve vlaku.	b496bd36			pending			
+cs:b:sova.v4.fotbal	Sova spí u fotbalu.	6f44ab86			pending			
+cs:b:sova.v4.banan	Sova spí u banánu.	31ccbbd2			pending			
+cs:b:sova.v4.kniha	Sova spí u knihy.	d3c4dc32			pending			
+cs:b:sova.v4.skola	Sova spí ve škole.	90ea1da7			pending			
+cs:b:sova.v5.mleko	Sova jde mléko.	14c58919			pending			
+cs:b:sova.v5.o2	Sova jde jablko.	a8600b52			pending			
+cs:b:sova.v5.hracka	Sova jde pro hračku.	8fb85ada			pending			
+cs:b:sova.v5.auto	Sova jde do auta.	7804b36d			pending			
+cs:b:sova.v5.o5	Sova jde ven.	3e5c15b4			pending			
+cs:b:sova.v5.o6	Sova jde domů.	f2b8bbca			pending			
+cs:b:sova.v5.o7	Sova jde do postýlky.	ee2fc5d7			pending			
+cs:b:sova.v5.o8	Sova jde na nočník.	cb5aa122			pending			
+cs:b:sova.v5.kolo	Sova jde ke kolu.	007155c4			pending			
+cs:b:sova.v5.les	Sova jde do lesa.	ff5c473f			pending			
+cs:b:sova.v5.nos	Sova jde k nosu.	9bff89a5			pending			
+cs:b:sova.v5.miska	Sova jde k misce.	16ce6099			pending			
+cs:b:sova.v5.voda	Sova jde k vodě.	fa769b5e			pending			
+cs:b:sova.v5.vlak	Sova jde do vlaku.	f4ed39b5			pending			
+cs:b:sova.v5.fotbal	Sova jde na fotbal.	38115fc2			pending			
+cs:b:sova.v5.banan	Sova jde k banánu.	a6e6c767			pending			
+cs:b:sova.v5.kniha	Sova jde ke knize.	820bc14e			pending			
+cs:b:sova.v5.skola	Sova jde do školy.	9a8a2d00			pending			
+cs:b:sova.v6.mleko	Sova si hraje s mlékem.	820dc8e8			pending			
+cs:b:sova.v6.o2	Sova si hraje s jablkem.	b46cdded			pending			
+cs:b:sova.v6.hracka	Sova si hraje s hračkou.	53f124e4			pending			
+cs:b:sova.v6.auto	Sova si hraje s autem.	5b84aa6f			pending			
+cs:b:sova.v6.o5	Sova si hraje s venkem.	64356511			pending			
+cs:b:sova.v6.o6	Sova si hraje s domem.	ea4a3cb5			pending			
+cs:b:sova.v6.o7	Sova si hraje s postýlkou.	37bada27			pending			
+cs:b:sova.v6.o8	Sova si hraje s nočníkem.	dd63809f			pending			
+cs:b:sova.v6.kolo	Sova si hraje s kolem.	3eef929b			pending			
+cs:b:sova.v6.les	Sova si hraje v lese.	2c31568f			pending			
+cs:b:sova.v6.nos	Sova si hraje s nosem.	ebd4c4fd			pending			
+cs:b:sova.v6.miska	Sova si hraje s miskou.	82c2b4b5			pending			
+cs:b:sova.v6.voda	Sova si hraje s vodou.	f129dbdc			pending			
+cs:b:sova.v6.vlak	Sova si hraje s vlakem.	6e20d90d			pending			
+cs:b:sova.v6.fotbal	Sova si hraje s fotbalem.	64f20c67			pending			
+cs:b:sova.v6.banan	Sova si hraje s banánem.	e0795da3			pending			
+cs:b:sova.v6.kniha	Sova si hraje s knihou.	31a2e8e9			pending			
+cs:b:sova.v6.skola	Sova si hraje se školou.	67d8ab11			pending			
+cs:b:ryba.v1.mleko	Ryba chce mléko.	7c010ff0			pending			
+cs:b:ryba.v1.o2	Ryba chce jablko.	6b6e80cd			pending			
+cs:b:ryba.v1.hracka	Ryba chce hračku.	d1966942			pending			
+cs:b:ryba.v1.auto	Ryba chce auto.	d516448f			pending			
+cs:b:ryba.v1.o5	Ryba chce venek.	1f13cc65			pending			
+cs:b:ryba.v1.o6	Ryba chce dům.	fdca36b2			pending			
+cs:b:ryba.v1.o7	Ryba chce postýlku.	96d1c567			pending			
+cs:b:ryba.v1.o8	Ryba chce nočník.	ad5a991a			pending			
+cs:b:ryba.v1.kolo	Ryba chce kolo.	4d60ad2f			pending			
+cs:b:ryba.v1.les	Ryba chce les.	5248143e			pending			
+cs:b:ryba.v1.nos	Ryba chce nos.	b375fe52			pending			
+cs:b:ryba.v1.miska	Ryba chce misku.	e7a7eb37			pending			
+cs:b:ryba.v1.voda	Ryba chce vodu.	346ff48a			pending			
+cs:b:ryba.v1.vlak	Ryba chce vlak.	6e857fcc			pending			
+cs:b:ryba.v1.fotbal	Ryba chce fotbal.	65b4281a			pending			
+cs:b:ryba.v1.banan	Ryba chce banán.	e2ddb150			pending			
+cs:b:ryba.v1.kniha	Ryba chce knihu.	ba709c33			pending			
+cs:b:ryba.v1.skola	Ryba chce školu.	a1e13e18			pending			
+cs:b:ryba.v2.mleko	Ryba jí mléko.	169f4d36			pending			
+cs:b:ryba.v2.o2	Ryba jí jablko.	2a0d53af			pending			
+cs:b:ryba.v2.hracka	Ryba jí hračku.	63749084			pending			
+cs:b:ryba.v2.auto	Ryba jí auto.	9f86480d			pending			
+cs:b:ryba.v2.o5	Ryba jí venek.	68920ef7			pending			
+cs:b:ryba.v2.o6	Ryba jí dům.	226557ac			pending			
+cs:b:ryba.v2.o7	Ryba jí postýlku.	7d72139d			pending			
+cs:b:ryba.v2.o8	Ryba jí nočník.	f3b2b1bc			pending			
+cs:b:ryba.v2.kolo	Ryba jí kolo.	8cc0d41d			pending			
+cs:b:ryba.v2.les	Ryba jí les.	9917ca10			pending			
+cs:b:ryba.v2.nos	Ryba jí nos.	012e4b4c			pending			
+cs:b:ryba.v2.miska	Ryba jí misku.	46cecf35			pending			
+cs:b:ryba.v2.voda	Ryba jí vodu.	7acad354			pending			
+cs:b:ryba.v2.vlak	Ryba jí vlak.	62299fee			pending			
+cs:b:ryba.v2.fotbal	Ryba jí fotbal.	9f6fb030			pending			
+cs:b:ryba.v2.banan	Ryba jí banán.	db317662			pending			
+cs:b:ryba.v2.kniha	Ryba jí knihu.	95f7e521			pending			
+cs:b:ryba.v2.skola	Ryba jí školu.	e716d276			pending			
+cs:b:ryba.v3.mleko	Ryba pije mléko.	71bc803f			pending			
+cs:b:ryba.v3.o2	Ryba pije jablko.	c8f5daec			pending			
+cs:b:ryba.v3.hracka	Ryba pije hračku.	c36363b7			pending			
+cs:b:ryba.v3.auto	Ryba pije auto.	dac5369a			pending			
+cs:b:ryba.v3.o5	Ryba pije venek.	c3ba383e			pending			
+cs:b:ryba.v3.o6	Ryba pije dům.	6549885d			pending			
+cs:b:ryba.v3.o7	Ryba pije postýlku.	86b881e2			pending			
+cs:b:ryba.v3.o8	Ryba pije nočník.	f5c79b4f			pending			
+cs:b:ryba.v3.kolo	Ryba pije kolo.	919062fe			pending			
+cs:b:ryba.v3.les	Ryba pije les.	bbfcaa65			pending			
+cs:b:ryba.v3.nos	Ryba pije nos.	97cf5035			pending			
+cs:b:ryba.v3.miska	Ryba pije misku.	e1329588			pending			
+cs:b:ryba.v3.voda	Ryba pije vodu.	e25efce7			pending			
+cs:b:ryba.v3.vlak	Ryba pije vlak.	5df1f1bd			pending			
+cs:b:ryba.v3.fotbal	Ryba pije fotbal.	a5f185d3			pending			
+cs:b:ryba.v3.banan	Ryba pije banán.	9bbd359b			pending			
+cs:b:ryba.v3.kniha	Ryba pije knihu.	539b6324			pending			
+cs:b:ryba.v3.skola	Ryba pije školu.	765445f7			pending			
+cs:b:ryba.v4.mleko	Ryba spí u mléka.	9d834bea			pending			
+cs:b:ryba.v4.o2	Ryba spí u jablka.	f300ecd7			pending			
+cs:b:ryba.v4.hracka	Ryba spí u hračky.	49fdd61a			pending			
+cs:b:ryba.v4.auto	Ryba spí v autě.	0ffa847e			pending			
+cs:b:ryba.v4.o5	Ryba spí venku.	ea48d658			pending			
+cs:b:ryba.v4.o6	Ryba spí doma.	b927f6a8			pending			
+cs:b:ryba.v4.o7	Ryba spí v postýlce.	3685b122			pending			
+cs:b:ryba.v4.o8	Ryba spí na nočníku.	7e0a44a7			pending			
+cs:b:ryba.v4.kolo	Ryba spí u kola.	b773917d			pending			
+cs:b:ryba.v4.les	Ryba spí v lese.	234589f6			pending			
+cs:b:ryba.v4.nos	Ryba spí u nosu.	bb27ca8f			pending			
+cs:b:ryba.v4.miska	Ryba spí u misky.	75b91b77			pending			
+cs:b:ryba.v4.voda	Ryba spí u vody.	313054f2			pending			
+cs:b:ryba.v4.vlak	Ryba spí ve vlaku.	b935b501			pending			
+cs:b:ryba.v4.fotbal	Ryba spí u fotbalu.	d0ca496f			pending			
+cs:b:ryba.v4.banan	Ryba spí u banánu.	5d879fc1			pending			
+cs:b:ryba.v4.kniha	Ryba spí u knihy.	a820e78b			pending			
+cs:b:ryba.v4.skola	Ryba spí ve škole.	d378d7c0			pending			
+cs:b:ryba.v5.mleko	Ryba jde mléko.	526ed184			pending			
+cs:b:ryba.v5.o2	Ryba jde jablko.	32ccf211			pending			
+cs:b:ryba.v5.hracka	Ryba jde pro hračku.	4b7edfb5			pending			
+cs:b:ryba.v5.auto	Ryba jde do auta.	48e5025c			pending			
+cs:b:ryba.v5.o5	Ryba jde ven.	f7c64c1d			pending			
+cs:b:ryba.v5.o6	Ryba jde domů.	6f8bedf5			pending			
+cs:b:ryba.v5.o7	Ryba jde do postýlky.	c05e1a26			pending			
+cs:b:ryba.v5.o8	Ryba jde na nočník.	29e00437			pending			
+cs:b:ryba.v5.kolo	Ryba jde ke kolu.	53d67a1d			pending			
+cs:b:ryba.v5.les	Ryba jde do lesa.	465e55a2			pending			
+cs:b:ryba.v5.nos	Ryba jde k nosu.	a277aae6			pending			
+cs:b:ryba.v5.miska	Ryba jde k misce.	73d6bb08			pending			
+cs:b:ryba.v5.voda	Ryba jde k vodě.	4b717351			pending			
+cs:b:ryba.v5.vlak	Ryba jde do vlaku.	99eefd76			pending			
+cs:b:ryba.v5.fotbal	Ryba jde na fotbal.	b3242cdb			pending			
+cs:b:ryba.v5.banan	Ryba jde k banánu.	f594e860			pending			
+cs:b:ryba.v5.kniha	Ryba jde ke knize.	672dc34d			pending			
+cs:b:ryba.v5.skola	Ryba jde do školy.	1c13df8b			pending			
+cs:b:ryba.v6.mleko	Ryba si hraje s mlékem.	2f00094d			pending			
+cs:b:ryba.v6.o2	Ryba si hraje s jablkem.	66f1e952			pending			
+cs:b:ryba.v6.hracka	Ryba si hraje s hračkou.	5bf87c83			pending			
+cs:b:ryba.v6.auto	Ryba si hraje s autem.	20b54f10			pending			
+cs:b:ryba.v6.o5	Ryba si hraje s venkem.	aef478dc			pending			
+cs:b:ryba.v6.o6	Ryba si hraje s domem.	ab21e6d6			pending			
+cs:b:ryba.v6.o7	Ryba si hraje s postýlkou.	94366678			pending			
+cs:b:ryba.v6.o8	Ryba si hraje s nočníkem.	65e6eaee			pending			
+cs:b:ryba.v6.kolo	Ryba si hraje s kolem.	fe9db450			pending			
+cs:b:ryba.v6.les	Ryba si hraje v lese.	24856ed2			pending			
+cs:b:ryba.v6.nos	Ryba si hraje s nosem.	2579cd8e			pending			
+cs:b:ryba.v6.miska	Ryba si hraje s miskou.	6bbe6510			pending			
+cs:b:ryba.v6.voda	Ryba si hraje s vodou.	1a1a26f3			pending			
+cs:b:ryba.v6.vlak	Ryba si hraje s vlakem.	74de3ad8			pending			
+cs:b:ryba.v6.fotbal	Ryba si hraje s fotbalem.	a4ca897a			pending			
+cs:b:ryba.v6.banan	Ryba si hraje s banánem.	f6aa2ee4			pending			
+cs:b:ryba.v6.kniha	Ryba si hraje s knihou.	a1e8aeec			pending			
+cs:b:ryba.v6.skola	Ryba si hraje se školou.	92f74dee			pending			
+cs:b:mys.v1.mleko	Myš chce mléko.	22d8feaf			pending			
+cs:b:mys.v1.o2	Myš chce jablko.	1d781d7c			pending			
+cs:b:mys.v1.hracka	Myš chce hračku.	cd479e07			pending			
+cs:b:mys.v1.auto	Myš chce auto.	fbf9dbaa			pending			
+cs:b:mys.v1.o5	Myš chce venek.	8ce8218e			pending			
+cs:b:mys.v1.o6	Myš chce dům.	1d49b88d			pending			
+cs:b:mys.v1.o7	Myš chce postýlku.	77213112			pending			
+cs:b:mys.v1.o8	Myš chce nočník.	9f8e7d5f			pending			
+cs:b:mys.v1.kolo	Myš chce kolo.	9b4e188e			pending			
+cs:b:mys.v1.les	Myš chce les.	77a78e35			pending			
+cs:b:mys.v1.nos	Myš chce nos.	dd856385			pending			
+cs:b:mys.v1.miska	Myš chce misku.	c3288478			pending			
+cs:b:mys.v1.voda	Myš chce vodu.	a549c5f7			pending			
+cs:b:mys.v1.vlak	Myš chce vlak.	4740b8ad			pending			
+cs:b:mys.v1.fotbal	Myš chce fotbal.	0108b5c3			pending			
+cs:b:mys.v1.banan	Myš chce banán.	61ab0acb			pending			
+cs:b:mys.v1.kniha	Myš chce knihu.	6abb8774			pending			
+cs:b:mys.v1.skola	Myš chce školu.	7f80b747			pending			
+cs:b:mys.v2.mleko	Myš jí mléko.	8835794d			pending			
+cs:b:mys.v2.o2	Myš jí jablko.	0fb8a986			pending			
+cs:b:mys.v2.hracka	Myš jí hračku.	d0a4e291			pending			
+cs:b:mys.v2.auto	Myš jí auto.	91010950			pending			
+cs:b:mys.v2.o5	Myš jí venek.	c10feb18			pending			
+cs:b:mys.v2.o6	Myš jí dům.	0aa96fb7			pending			
+cs:b:mys.v2.o7	Myš jí postýlku.	f34e66d0			pending			
+cs:b:mys.v2.o8	Myš jí nočník.	5a2d3c01			pending			
+cs:b:mys.v2.kolo	Myš jí kolo.	29b3aa4c			pending			
+cs:b:mys.v2.les	Myš jí les.	00eee4a7			pending			
+cs:b:mys.v2.nos	Myš jí nos.	2d9426c7			pending			
+cs:b:mys.v2.miska	Myš jí misku.	13f9524e			pending			
+cs:b:mys.v2.voda	Myš jí vodu.	077cb269			pending			
+cs:b:mys.v2.vlak	Myš jí vlak.	2bbe600f			pending			
+cs:b:mys.v2.fotbal	Myš jí fotbal.	d0620311			pending			
+cs:b:mys.v2.banan	Myš jí banán.	2d11d5f5			pending			
+cs:b:mys.v2.kniha	Myš jí knihu.	38acfbf2			pending			
+cs:b:mys.v2.skola	Myš jí školu.	9c868b2d			pending			
+cs:b:mys.v3.mleko	Myš pije mléko.	0f420014			pending			
+cs:b:mys.v3.o2	Myš pije jablko.	e86f7a41			pending			
+cs:b:mys.v3.hracka	Myš pije hračku.	fc1e48a6			pending			
+cs:b:mys.v3.auto	Myš pije auto.	2193bb4b			pending			
+cs:b:mys.v3.o5	Myš pije venek.	df974141			pending			
+cs:b:mys.v3.o6	Myš pije dům.	8209bf36			pending			
+cs:b:mys.v3.o7	Myš pije postýlku.	19a2f7c3			pending			
+cs:b:mys.v3.o8	Myš pije nočník.	646caad6			pending			
+cs:b:mys.v3.kolo	Myš pije kolo.	e873cdfb			pending			
+cs:b:mys.v3.les	Myš pije les.	6db7730a			pending			
+cs:b:mys.v3.nos	Myš pije nos.	336d277e			pending			
+cs:b:mys.v3.miska	Myš pije misku.	7639c713			pending			
+cs:b:mys.v3.voda	Myš pije vodu.	5760ca8e			pending			
+cs:b:mys.v3.vlak	Myš pije vlak.	58486b00			pending			
+cs:b:mys.v3.fotbal	Myš pije fotbal.	36b572ae			pending			
+cs:b:mys.v3.banan	Myš pije banán.	4af3697c			pending			
+cs:b:mys.v3.kniha	Myš pije knihu.	1720182f			pending			
+cs:b:mys.v3.skola	Myš pije školu.	804f1b5c			pending			
+cs:b:mys.v4.mleko	Myš spí u mléka.	306b3a77			pending			
+cs:b:mys.v4.o2	Myš spí u jablka.	132d2444			pending			
+cs:b:mys.v4.hracka	Myš spí u hračky.	9cf5f781			pending			
+cs:b:mys.v4.auto	Myš spí v autě.	94d58b0d			pending			
+cs:b:mys.v4.o5	Myš spí venku.	676f4019			pending			
+cs:b:mys.v4.o6	Myš spí doma.	b5c63437			pending			
+cs:b:mys.v4.o7	Myš spí v postýlce.	65c24371			pending			
+cs:b:mys.v4.o8	Myš spí na nočníku.	c3658bb0			pending			
+cs:b:mys.v4.kolo	Myš spí u kola.	71305b96			pending			
+cs:b:mys.v4.les	Myš spí v lese.	4b2bd729			pending			
+cs:b:mys.v4.nos	Myš spí u nosu.	3d1a87e8			pending			
+cs:b:mys.v4.miska	Myš spí u misky.	b302d836			pending			
+cs:b:mys.v4.voda	Myš spí u vody.	7a24b029			pending			
+cs:b:mys.v4.vlak	Myš spí ve vlaku.	42436716			pending			
+cs:b:mys.v4.fotbal	Myš spí u fotbalu.	738b41e6			pending			
+cs:b:mys.v4.banan	Myš spí u banánu.	71adc9b2			pending			
+cs:b:mys.v4.kniha	Myš spí u knihy.	0170a512			pending			
+cs:b:mys.v4.skola	Myš spí ve škole.	63d43807			pending			
+cs:b:mys.v5.mleko	Myš jde mléko.	70eda679			pending			
+cs:b:mys.v5.o2	Myš jde jablko.	2b529f32			pending			
+cs:b:mys.v5.hracka	Myš jde pro hračku.	ef83407a			pending			
+cs:b:mys.v5.auto	Myš jde do auta.	bb8440cd			pending			
+cs:b:mys.v5.o5	Myš jde ven.	02e70b14			pending			
+cs:b:mys.v5.o6	Myš jde domů.	ce778a2a			pending			
+cs:b:mys.v5.o7	Myš jde do postýlky.	d710dc37			pending			
+cs:b:mys.v5.o8	Myš jde na nočník.	43841742			pending			
+cs:b:mys.v5.kolo	Myš jde ke kolu.	c58cef24			pending			
+cs:b:mys.v5.les	Myš jde do lesa.	6f1ae59f			pending			
+cs:b:mys.v5.nos	Myš jde k nosu.	383ed285			pending			
+cs:b:mys.v5.miska	Myš jde k misce.	dbe9f9f9			pending			
+cs:b:mys.v5.voda	Myš jde k vodě.	fcca94fe			pending			
+cs:b:mys.v5.vlak	Myš jde do vlaku.	f1431615			pending			
+cs:b:mys.v5.fotbal	Myš jde na fotbal.	64c25fa2			pending			
+cs:b:mys.v5.banan	Myš jde k banánu.	bed5e3c7			pending			
+cs:b:mys.v5.kniha	Myš jde ke knize.	edbb032e			pending			
+cs:b:mys.v5.skola	Myš jde do školy.	7d935460			pending			
+cs:b:mys.v6.mleko	Myš si hraje s mlékem.	28462dc8			pending			
+cs:b:mys.v6.o2	Myš si hraje s jablkem.	dac4c34d			pending			
+cs:b:mys.v6.hracka	Myš si hraje s hračkou.	6f83ac84			pending			
+cs:b:mys.v6.auto	Myš si hraje s autem.	160355cf			pending			
+cs:b:mys.v6.o5	Myš si hraje s venkem.	7121de71			pending			
+cs:b:mys.v6.o6	Myš si hraje s domem.	df3deb95			pending			
+cs:b:mys.v6.o7	Myš si hraje s postýlkou.	bc92d107			pending			
+cs:b:mys.v6.o8	Myš si hraje s nočníkem.	bd87acbf			pending			
+cs:b:mys.v6.kolo	Myš si hraje s kolem.	6022527b			pending			
+cs:b:mys.v6.les	Myš si hraje v lese.	e123f1ef			pending			
+cs:b:mys.v6.nos	Myš si hraje s nosem.	7a145f5d			pending			
+cs:b:mys.v6.miska	Myš si hraje s miskou.	a8fbe315			pending			
+cs:b:mys.v6.voda	Myš si hraje s vodou.	0460c43c			pending			
+cs:b:mys.v6.vlak	Myš si hraje s vlakem.	4c53d86d			pending			
+cs:b:mys.v6.fotbal	Myš si hraje s fotbalem.	b885b4c7			pending			
+cs:b:mys.v6.banan	Myš si hraje s banánem.	b1744803			pending			
+cs:b:mys.v6.kniha	Myš si hraje s knihou.	eac52f49			pending			
+cs:b:mys.v6.skola	Myš si hraje se školou.	603312f1			pending			
+cs:b:pet-🐭.v1.mleko	Myš chce mléko.	22d8feaf			pending			
+cs:b:pet-🐭.v1.o2	Myš chce jablko.	1d781d7c			pending			
+cs:b:pet-🐭.v1.hracka	Myš chce hračku.	cd479e07			pending			
+cs:b:pet-🐭.v1.auto	Myš chce auto.	fbf9dbaa			pending			
+cs:b:pet-🐭.v1.o5	Myš chce venek.	8ce8218e			pending			
+cs:b:pet-🐭.v1.o6	Myš chce dům.	1d49b88d			pending			
+cs:b:pet-🐭.v1.o7	Myš chce postýlku.	77213112			pending			
+cs:b:pet-🐭.v1.o8	Myš chce nočník.	9f8e7d5f			pending			
+cs:b:pet-🐭.v1.kolo	Myš chce kolo.	9b4e188e			pending			
+cs:b:pet-🐭.v1.les	Myš chce les.	77a78e35			pending			
+cs:b:pet-🐭.v1.nos	Myš chce nos.	dd856385			pending			
+cs:b:pet-🐭.v1.miska	Myš chce misku.	c3288478			pending			
+cs:b:pet-🐭.v1.voda	Myš chce vodu.	a549c5f7			pending			
+cs:b:pet-🐭.v1.vlak	Myš chce vlak.	4740b8ad			pending			
+cs:b:pet-🐭.v1.fotbal	Myš chce fotbal.	0108b5c3			pending			
+cs:b:pet-🐭.v1.banan	Myš chce banán.	61ab0acb			pending			
+cs:b:pet-🐭.v1.kniha	Myš chce knihu.	6abb8774			pending			
+cs:b:pet-🐭.v1.skola	Myš chce školu.	7f80b747			pending			
+cs:b:pet-🐭.v2.mleko	Myš jí mléko.	8835794d			pending			
+cs:b:pet-🐭.v2.o2	Myš jí jablko.	0fb8a986			pending			
+cs:b:pet-🐭.v2.hracka	Myš jí hračku.	d0a4e291			pending			
+cs:b:pet-🐭.v2.auto	Myš jí auto.	91010950			pending			
+cs:b:pet-🐭.v2.o5	Myš jí venek.	c10feb18			pending			
+cs:b:pet-🐭.v2.o6	Myš jí dům.	0aa96fb7			pending			
+cs:b:pet-🐭.v2.o7	Myš jí postýlku.	f34e66d0			pending			
+cs:b:pet-🐭.v2.o8	Myš jí nočník.	5a2d3c01			pending			
+cs:b:pet-🐭.v2.kolo	Myš jí kolo.	29b3aa4c			pending			
+cs:b:pet-🐭.v2.les	Myš jí les.	00eee4a7			pending			
+cs:b:pet-🐭.v2.nos	Myš jí nos.	2d9426c7			pending			
+cs:b:pet-🐭.v2.miska	Myš jí misku.	13f9524e			pending			
+cs:b:pet-🐭.v2.voda	Myš jí vodu.	077cb269			pending			
+cs:b:pet-🐭.v2.vlak	Myš jí vlak.	2bbe600f			pending			
+cs:b:pet-🐭.v2.fotbal	Myš jí fotbal.	d0620311			pending			
+cs:b:pet-🐭.v2.banan	Myš jí banán.	2d11d5f5			pending			
+cs:b:pet-🐭.v2.kniha	Myš jí knihu.	38acfbf2			pending			
+cs:b:pet-🐭.v2.skola	Myš jí školu.	9c868b2d			pending			
+cs:b:pet-🐭.v3.mleko	Myš pije mléko.	0f420014			pending			
+cs:b:pet-🐭.v3.o2	Myš pije jablko.	e86f7a41			pending			
+cs:b:pet-🐭.v3.hracka	Myš pije hračku.	fc1e48a6			pending			
+cs:b:pet-🐭.v3.auto	Myš pije auto.	2193bb4b			pending			
+cs:b:pet-🐭.v3.o5	Myš pije venek.	df974141			pending			
+cs:b:pet-🐭.v3.o6	Myš pije dům.	8209bf36			pending			
+cs:b:pet-🐭.v3.o7	Myš pije postýlku.	19a2f7c3			pending			
+cs:b:pet-🐭.v3.o8	Myš pije nočník.	646caad6			pending			
+cs:b:pet-🐭.v3.kolo	Myš pije kolo.	e873cdfb			pending			
+cs:b:pet-🐭.v3.les	Myš pije les.	6db7730a			pending			
+cs:b:pet-🐭.v3.nos	Myš pije nos.	336d277e			pending			
+cs:b:pet-🐭.v3.miska	Myš pije misku.	7639c713			pending			
+cs:b:pet-🐭.v3.voda	Myš pije vodu.	5760ca8e			pending			
+cs:b:pet-🐭.v3.vlak	Myš pije vlak.	58486b00			pending			
+cs:b:pet-🐭.v3.fotbal	Myš pije fotbal.	36b572ae			pending			
+cs:b:pet-🐭.v3.banan	Myš pije banán.	4af3697c			pending			
+cs:b:pet-🐭.v3.kniha	Myš pije knihu.	1720182f			pending			
+cs:b:pet-🐭.v3.skola	Myš pije školu.	804f1b5c			pending			
+cs:b:pet-🐭.v4.mleko	Myš spí u mléka.	306b3a77			pending			
+cs:b:pet-🐭.v4.o2	Myš spí u jablka.	132d2444			pending			
+cs:b:pet-🐭.v4.hracka	Myš spí u hračky.	9cf5f781			pending			
+cs:b:pet-🐭.v4.auto	Myš spí v autě.	94d58b0d			pending			
+cs:b:pet-🐭.v4.o5	Myš spí venku.	676f4019			pending			
+cs:b:pet-🐭.v4.o6	Myš spí doma.	b5c63437			pending			
+cs:b:pet-🐭.v4.o7	Myš spí v postýlce.	65c24371			pending			
+cs:b:pet-🐭.v4.o8	Myš spí na nočníku.	c3658bb0			pending			
+cs:b:pet-🐭.v4.kolo	Myš spí u kola.	71305b96			pending			
+cs:b:pet-🐭.v4.les	Myš spí v lese.	4b2bd729			pending			
+cs:b:pet-🐭.v4.nos	Myš spí u nosu.	3d1a87e8			pending			
+cs:b:pet-🐭.v4.miska	Myš spí u misky.	b302d836			pending			
+cs:b:pet-🐭.v4.voda	Myš spí u vody.	7a24b029			pending			
+cs:b:pet-🐭.v4.vlak	Myš spí ve vlaku.	42436716			pending			
+cs:b:pet-🐭.v4.fotbal	Myš spí u fotbalu.	738b41e6			pending			
+cs:b:pet-🐭.v4.banan	Myš spí u banánu.	71adc9b2			pending			
+cs:b:pet-🐭.v4.kniha	Myš spí u knihy.	0170a512			pending			
+cs:b:pet-🐭.v4.skola	Myš spí ve škole.	63d43807			pending			
+cs:b:pet-🐭.v5.mleko	Myš jde mléko.	70eda679			pending			
+cs:b:pet-🐭.v5.o2	Myš jde jablko.	2b529f32			pending			
+cs:b:pet-🐭.v5.hracka	Myš jde pro hračku.	ef83407a			pending			
+cs:b:pet-🐭.v5.auto	Myš jde do auta.	bb8440cd			pending			
+cs:b:pet-🐭.v5.o5	Myš jde ven.	02e70b14			pending			
+cs:b:pet-🐭.v5.o6	Myš jde domů.	ce778a2a			pending			
+cs:b:pet-🐭.v5.o7	Myš jde do postýlky.	d710dc37			pending			
+cs:b:pet-🐭.v5.o8	Myš jde na nočník.	43841742			pending			
+cs:b:pet-🐭.v5.kolo	Myš jde ke kolu.	c58cef24			pending			
+cs:b:pet-🐭.v5.les	Myš jde do lesa.	6f1ae59f			pending			
+cs:b:pet-🐭.v5.nos	Myš jde k nosu.	383ed285			pending			
+cs:b:pet-🐭.v5.miska	Myš jde k misce.	dbe9f9f9			pending			
+cs:b:pet-🐭.v5.voda	Myš jde k vodě.	fcca94fe			pending			
+cs:b:pet-🐭.v5.vlak	Myš jde do vlaku.	f1431615			pending			
+cs:b:pet-🐭.v5.fotbal	Myš jde na fotbal.	64c25fa2			pending			
+cs:b:pet-🐭.v5.banan	Myš jde k banánu.	bed5e3c7			pending			
+cs:b:pet-🐭.v5.kniha	Myš jde ke knize.	edbb032e			pending			
+cs:b:pet-🐭.v5.skola	Myš jde do školy.	7d935460			pending			
+cs:b:pet-🐭.v6.mleko	Myš si hraje s mlékem.	28462dc8			pending			
+cs:b:pet-🐭.v6.o2	Myš si hraje s jablkem.	dac4c34d			pending			
+cs:b:pet-🐭.v6.hracka	Myš si hraje s hračkou.	6f83ac84			pending			
+cs:b:pet-🐭.v6.auto	Myš si hraje s autem.	160355cf			pending			
+cs:b:pet-🐭.v6.o5	Myš si hraje s venkem.	7121de71			pending			
+cs:b:pet-🐭.v6.o6	Myš si hraje s domem.	df3deb95			pending			
+cs:b:pet-🐭.v6.o7	Myš si hraje s postýlkou.	bc92d107			pending			
+cs:b:pet-🐭.v6.o8	Myš si hraje s nočníkem.	bd87acbf			pending			
+cs:b:pet-🐭.v6.kolo	Myš si hraje s kolem.	6022527b			pending			
+cs:b:pet-🐭.v6.les	Myš si hraje v lese.	e123f1ef			pending			
+cs:b:pet-🐭.v6.nos	Myš si hraje s nosem.	7a145f5d			pending			
+cs:b:pet-🐭.v6.miska	Myš si hraje s miskou.	a8fbe315			pending			
+cs:b:pet-🐭.v6.voda	Myš si hraje s vodou.	0460c43c			pending			
+cs:b:pet-🐭.v6.vlak	Myš si hraje s vlakem.	4c53d86d			pending			
+cs:b:pet-🐭.v6.fotbal	Myš si hraje s fotbalem.	b885b4c7			pending			
+cs:b:pet-🐭.v6.banan	Myš si hraje s banánem.	b1744803			pending			
+cs:b:pet-🐭.v6.kniha	Myš si hraje s knihou.	eac52f49			pending			
+cs:b:pet-🐭.v6.skola	Myš si hraje se školou.	603312f1			pending			
+cs:b:pet-🐯.v1.mleko	Tygr chce mléko.	9a89ebc6			pending			
+cs:b:pet-🐯.v1.o2	Tygr chce jablko.	bad6215f			pending			
+cs:b:pet-🐯.v1.hracka	Tygr chce hračku.	3dd713b4			pending			
+cs:b:pet-🐯.v1.auto	Tygr chce auto.	ba434dfd			pending			
+cs:b:pet-🐯.v1.o5	Tygr chce venek.	fdad9967			pending			
+cs:b:pet-🐯.v1.o6	Tygr chce dům.	8967c1bc			pending			
+cs:b:pet-🐯.v1.o7	Tygr chce postýlku.	5a583d2d			pending			
+cs:b:pet-🐯.v1.o8	Tygr chce nočník.	73d237ec			pending			
+cs:b:pet-🐯.v1.kolo	Tygr chce kolo.	32c43c4d			pending			
+cs:b:pet-🐯.v1.les	Tygr chce les.	4420a440			pending			
+cs:b:pet-🐯.v1.nos	Tygr chce nos.	d2ead53c			pending			
+cs:b:pet-🐯.v1.miska	Tygr chce misku.	4dafd4c5			pending			
+cs:b:pet-🐯.v1.voda	Tygr chce vodu.	5ab71e44			pending			
+cs:b:pet-🐯.v1.vlak	Tygr chce vlak.	3f4bcffe			pending			
+cs:b:pet-🐯.v1.fotbal	Tygr chce fotbal.	e081db40			pending			
+cs:b:pet-🐯.v1.banan	Tygr chce banán.	55e0c472			pending			
+cs:b:pet-🐯.v1.kniha	Tygr chce knihu.	6df25b11			pending			
+cs:b:pet-🐯.v1.skola	Tygr chce školu.	159bbf66			pending			
+cs:b:pet-🐯.v2.mleko	Tygr jí mléko.	069a1ea0			pending			
+cs:b:pet-🐯.v2.o2	Tygr jí jablko.	320be6dd			pending			
+cs:b:pet-🐯.v2.hracka	Tygr jí hračku.	3367d892			pending			
+cs:b:pet-🐯.v2.auto	Tygr jí auto.	6ca8fedf			pending			
+cs:b:pet-🐯.v2.o5	Tygr jí venek.	9e774535			pending			
+cs:b:pet-🐯.v2.o6	Tygr jí dům.	f81a5922			pending			
+cs:b:pet-🐯.v2.o7	Tygr jí postýlku.	7697b157			pending			
+cs:b:pet-🐯.v2.o8	Tygr jí nočník.	dbd8a52a			pending			
+cs:b:pet-🐯.v2.kolo	Tygr jí kolo.	e318d0ff			pending			
+cs:b:pet-🐯.v2.les	Tygr jí les.	055786ce			pending			
+cs:b:pet-🐯.v2.nos	Tygr jí nos.	e684a762			pending			
+cs:b:pet-🐯.v2.miska	Tygr jí misku.	321df8e7			pending			
+cs:b:pet-🐯.v2.voda	Tygr jí vodu.	946c829a			pending			
+cs:b:pet-🐯.v2.vlak	Tygr jí vlak.	0740947c			pending			
+cs:b:pet-🐯.v2.fotbal	Tygr jí fotbal.	eef6c04a			pending			
+cs:b:pet-🐯.v2.banan	Tygr jí banán.	8f654f80			pending			
+cs:b:pet-🐯.v2.kniha	Tygr jí knihu.	8d5c3843			pending			
+cs:b:pet-🐯.v2.skola	Tygr jí školu.	d5b21568			pending			
+cs:b:pet-🐯.v3.mleko	Tygr pije mléko.	3f903261			pending			
+cs:b:pet-🐯.v3.o2	Tygr pije jablko.	36b550da			pending			
+cs:b:pet-🐯.v3.hracka	Tygr pije hračku.	ff723115			pending			
+cs:b:pet-🐯.v3.auto	Tygr pije auto.	9a53da4c			pending			
+cs:b:pet-🐯.v3.o5	Tygr pije venek.	a9246e34			pending			
+cs:b:pet-🐯.v3.o6	Tygr pije dům.	19c45a0b			pending			
+cs:b:pet-🐯.v3.o7	Tygr pije postýlku.	a3bc81ac			pending			
+cs:b:pet-🐯.v3.o8	Tygr pije nočník.	f4a048dd			pending			
+cs:b:pet-🐯.v3.kolo	Tygr pije kolo.	9b827ee8			pending			
+cs:b:pet-🐯.v3.les	Tygr pije les.	7a222a03			pending			
+cs:b:pet-🐯.v3.nos	Tygr pije nos.	a6c76c23			pending			
+cs:b:pet-🐯.v3.miska	Tygr pije misku.	5556c1fa			pending			
+cs:b:pet-🐯.v3.voda	Tygr pije vodu.	0a2effad			pending			
+cs:b:pet-🐯.v3.vlak	Tygr pije vlak.	cfdd4a43			pending			
+cs:b:pet-🐯.v3.fotbal	Tygr pije fotbal.	dd42d9d5			pending			
+cs:b:pet-🐯.v3.banan	Tygr pije banán.	aaae1c91			pending			
+cs:b:pet-🐯.v3.kniha	Tygr pije knihu.	60d4aaee			pending			
+cs:b:pet-🐯.v3.skola	Tygr pije školu.	9a54a0c1			pending			
+cs:b:pet-🐯.v4.mleko	Tygr spí u mléka.	8b6cfebc			pending			
+cs:b:pet-🐯.v4.o2	Tygr spí u jablka.	d743ae6d			pending			
+cs:b:pet-🐯.v4.hracka	Tygr spí u hračky.	7872676c			pending			
+cs:b:pet-🐯.v4.auto	Tygr spí v autě.	8fd8b098			pending			
+cs:b:pet-🐯.v4.o5	Tygr spí venku.	484204e2			pending			
+cs:b:pet-🐯.v4.o6	Tygr spí doma.	84b0073e			pending			
+cs:b:pet-🐯.v4.o7	Tygr spí v postýlce.	3856414c			pending			
+cs:b:pet-🐯.v4.o8	Tygr spí na nočníku.	c6c7be0d			pending			
+cs:b:pet-🐯.v4.kolo	Tygr spí u kola.	f68b2197			pending			
+cs:b:pet-🐯.v4.les	Tygr spí v lese.	e9534ef8			pending			
+cs:b:pet-🐯.v4.nos	Tygr spí u nosu.	ac69fdb5			pending			
+cs:b:pet-🐯.v4.miska	Tygr spí u misky.	8089e0ed			pending			
+cs:b:pet-🐯.v4.voda	Tygr spí u vody.	fafe8b3c			pending			
+cs:b:pet-🐯.v4.vlak	Tygr spí ve vlaku.	0127c8cf			pending			
+cs:b:pet-🐯.v4.fotbal	Tygr spí u fotbalu.	ad3cec01			pending			
+cs:b:pet-🐯.v4.banan	Tygr spí u banánu.	1c223f57			pending			
+cs:b:pet-🐯.v4.kniha	Tygr spí u knihy.	d17d0261			pending			
+cs:b:pet-🐯.v4.skola	Tygr spí ve škole.	75e45f5e			pending			
+cs:b:pet-🐯.v5.mleko	Tygr jde mléko.	ab11c962			pending			
+cs:b:pet-🐯.v5.o2	Tygr jde jablko.	1bd2f7eb			pending			
+cs:b:pet-🐯.v5.hracka	Tygr jde pro hračku.	770f7c7f			pending			
+cs:b:pet-🐯.v5.auto	Tygr jde do auta.	45762106			pending			
+cs:b:pet-🐯.v5.o5	Tygr jde ven.	1c1a9c6b			pending			
+cs:b:pet-🐯.v5.o6	Tygr jde domů.	4e41f01f			pending			
+cs:b:pet-🐯.v5.o7	Tygr jde do postýlky.	d6bd6c14			pending			
+cs:b:pet-🐯.v5.o8	Tygr jde na nočník.	0d32a0e9			pending			
+cs:b:pet-🐯.v5.kolo	Tygr jde ke kolu.	ccffba5f			pending			
+cs:b:pet-🐯.v5.les	Tygr jde do lesa.	8d65c048			pending			
+cs:b:pet-🐯.v5.nos	Tygr jde k nosu.	809f1ee8			pending			
+cs:b:pet-🐯.v5.miska	Tygr jde k misce.	938d283a			pending			
+cs:b:pet-🐯.v5.voda	Tygr jde k vodě.	406e1b5b			pending			
+cs:b:pet-🐯.v5.vlak	Tygr jde do vlaku.	3b132f8c			pending			
+cs:b:pet-🐯.v5.fotbal	Tygr jde na fotbal.	b58c1299			pending			
+cs:b:pet-🐯.v5.banan	Tygr jde k banánu.	8105b8b2			pending			
+cs:b:pet-🐯.v5.kniha	Tygr jde ke knize.	d4945d97			pending			
+cs:b:pet-🐯.v5.skola	Tygr jde do školy.	a2046d91			pending			
+cs:b:pet-🐯.v6.mleko	Tygr si hraje s mlékem.	714ab6f3			pending			
+cs:b:pet-🐯.v6.o2	Tygr si hraje s jablkem.	a0c18c74			pending			
+cs:b:pet-🐯.v6.hracka	Tygr si hraje s hračkou.	cb1a4d6d			pending			
+cs:b:pet-🐯.v6.auto	Tygr si hraje s autem.	748da50e			pending			
+cs:b:pet-🐯.v6.o5	Tygr si hraje s venkem.	6b29c98a			pending			
+cs:b:pet-🐯.v6.o6	Tygr si hraje s domem.	0c071b48			pending			
+cs:b:pet-🐯.v6.o7	Tygr si hraje s postýlkou.	f67f9b5e			pending			
+cs:b:pet-🐯.v6.o8	Tygr si hraje s nočníkem.	50c2e570			pending			
+cs:b:pet-🐯.v6.kolo	Tygr si hraje s kolem.	432453be			pending			
+cs:b:pet-🐯.v6.les	Tygr si hraje v lese.	550b5d08			pending			
+cs:b:pet-🐯.v6.nos	Tygr si hraje s nosem.	9fb158c8			pending			
+cs:b:pet-🐯.v6.miska	Tygr si hraje s miskou.	523c7b2e			pending			
+cs:b:pet-🐯.v6.voda	Tygr si hraje s vodou.	b14d7675			pending			
+cs:b:pet-🐯.v6.vlak	Tygr si hraje s vlakem.	4c7beff2			pending			
+cs:b:pet-🐯.v6.fotbal	Tygr si hraje s fotbalem.	96620d90			pending			
+cs:b:pet-🐯.v6.banan	Tygr si hraje s banánem.	804f40a6			pending			
+cs:b:pet-🐯.v6.kniha	Tygr si hraje s knihou.	cf0db0da			pending			
+cs:b:pet-🐯.v6.skola	Tygr si hraje se školou.	9fa627b8			pending			
+cs:b:pet-👧.v1.mleko	Ema chce mléko.	f4ad1803			pending			
+cs:b:pet-👧.v1.o2	Ema chce jablko.	d36892e0			pending			
+cs:b:pet-👧.v1.hracka	Ema chce hračku.	c560df0b			pending			
+cs:b:pet-👧.v1.auto	Ema chce auto.	e6a7a6e6			pending			
+cs:b:pet-👧.v1.o5	Ema chce venek.	55bcf26a			pending			
+cs:b:pet-👧.v1.o6	Ema chce dům.	1ddd29f1			pending			
+cs:b:pet-👧.v1.o7	Ema chce postýlku.	999b3aae			pending			
+cs:b:pet-👧.v1.o8	Ema chce nočník.	df866aeb			pending			
+cs:b:pet-👧.v1.kolo	Ema chce kolo.	09c5b39a			pending			
+cs:b:pet-👧.v1.les	Ema chce les.	e41def01			pending			
+cs:b:pet-👧.v1.nos	Ema chce nos.	37797661			pending			
+cs:b:pet-👧.v1.miska	Ema chce misku.	760ce9c4			pending			
+cs:b:pet-👧.v1.voda	Ema chce vodu.	b0bc295b			pending			
+cs:b:pet-👧.v1.vlak	Ema chce vlak.	12aaa471			pending			
+cs:b:pet-👧.v1.fotbal	Ema chce fotbal.	d5b3f537			pending			
+cs:b:pet-👧.v1.banan	Ema chce banán.	5837c787			pending			
+cs:b:pet-👧.v1.kniha	Ema chce knihu.	a5251fd0			pending			
+cs:b:pet-👧.v1.skola	Ema chce školu.	52eaa4db			pending			
+cs:b:pet-👧.v2.mleko	Ema jí mléko.	e4914df1			pending			
+cs:b:pet-👧.v2.o2	Ema jí jablko.	bc5abc0a			pending			
+cs:b:pet-👧.v2.hracka	Ema jí hračku.	c3e81205			pending			
+cs:b:pet-👧.v2.auto	Ema jí auto.	46b31a3c			pending			
+cs:b:pet-👧.v2.o5	Ema jí venek.	9c8e05a4			pending			
+cs:b:pet-👧.v2.o6	Ema jí dům.	4ce77f9b			pending			
+cs:b:pet-👧.v2.o7	Ema jí postýlku.	9bbae2bc			pending			
+cs:b:pet-👧.v2.o8	Ema jí nočník.	5812820d			pending			
+cs:b:pet-👧.v2.kolo	Ema jí kolo.	d39dee58			pending			
+cs:b:pet-👧.v2.les	Ema jí les.	ed956633			pending			
+cs:b:pet-👧.v2.nos	Ema jí nos.	80ed29d3			pending			
+cs:b:pet-👧.v2.miska	Ema jí misku.	f80010ca			pending			
+cs:b:pet-👧.v2.voda	Ema jí vodu.	cf08dd9d			pending			
+cs:b:pet-👧.v2.vlak	Ema jí vlak.	da1cd2d3			pending			
+cs:b:pet-👧.v2.fotbal	Ema jí fotbal.	a0b86ba5			pending			
+cs:b:pet-👧.v2.banan	Ema jí banán.	47ca3de1			pending			
+cs:b:pet-👧.v2.kniha	Ema jí knihu.	a4ae2bde			pending			
+cs:b:pet-👧.v2.skola	Ema jí školu.	175ea3f1			pending			
+cs:b:pet-👧.v3.mleko	Ema pije mléko.	42192f28			pending			
+cs:b:pet-👧.v3.o2	Ema pije jablko.	d84a8d65			pending			
+cs:b:pet-👧.v3.hracka	Ema pije hračku.	9103958a			pending			
+cs:b:pet-👧.v3.auto	Ema pije auto.	29843937			pending			
+cs:b:pet-👧.v3.o5	Ema pije venek.	650dd24d			pending			
+cs:b:pet-👧.v3.o6	Ema pije dům.	622500ba			pending			
+cs:b:pet-👧.v3.o7	Ema pije postýlku.	4dc20cff			pending			
+cs:b:pet-👧.v3.o8	Ema pije nočník.	059dfef2			pending			
+cs:b:pet-👧.v3.kolo	Ema pije kolo.	56576147			pending			
+cs:b:pet-👧.v3.les	Ema pije les.	0ded29b6			pending			
+cs:b:pet-👧.v3.nos	Ema pije nos.	9f232b1a			pending			
+cs:b:pet-👧.v3.miska	Ema pije misku.	ee15d36f			pending			
+cs:b:pet-👧.v3.voda	Ema pije vodu.	f31af672			pending			
+cs:b:pet-👧.v3.vlak	Ema pije vlak.	940ba5a4			pending			
+cs:b:pet-👧.v3.fotbal	Ema pije fotbal.	938d39f2			pending			
+cs:b:pet-👧.v3.banan	Ema pije banán.	1bc06e58			pending			
+cs:b:pet-👧.v3.kniha	Ema pije knihu.	95e4473b			pending			
+cs:b:pet-👧.v3.skola	Ema pije školu.	1fddaeb0			pending			
+cs:b:pet-👧.v4.mleko	Ema spí u mléka.	8bf9eee3			pending			
+cs:b:pet-👧.v4.o2	Ema spí u jablka.	49bfd090			pending			
+cs:b:pet-👧.v4.hracka	Ema spí u hračky.	fed945ad			pending			
+cs:b:pet-👧.v4.auto	Ema spí v autě.	1807fbc1			pending			
+cs:b:pet-👧.v4.o5	Ema spí venku.	f22bef1d			pending			
+cs:b:pet-👧.v4.o6	Ema spí doma.	3957612b			pending			
+cs:b:pet-👧.v4.o7	Ema spí v postýlce.	ed28bb6d			pending			
+cs:b:pet-👧.v4.o8	Ema spí na nočníku.	c0781f14			pending			
+cs:b:pet-👧.v4.kolo	Ema spí u kola.	a98f8aaa			pending			
+cs:b:pet-👧.v4.les	Ema spí v lese.	ffb8dba5			pending			
+cs:b:pet-👧.v4.nos	Ema spí u nosu.	b36d00d4			pending			
+cs:b:pet-👧.v4.miska	Ema spí u misky.	2d1b825a			pending			
+cs:b:pet-👧.v4.voda	Ema spí u vody.	746ab3f5			pending			
+cs:b:pet-👧.v4.vlak	Ema spí ve vlaku.	d02a617a			pending			
+cs:b:pet-👧.v4.fotbal	Ema spí u fotbalu.	08dcd35a			pending			
+cs:b:pet-👧.v4.banan	Ema spí u banánu.	63d9e09e			pending			
+cs:b:pet-👧.v4.kniha	Ema spí u knihy.	9ba78e16			pending			
+cs:b:pet-👧.v4.skola	Ema spí ve škole.	5d2c1c4b			pending			
+cs:b:pet-👧.v5.mleko	Ema jde mléko.	4991253d			pending			
+cs:b:pet-👧.v5.o2	Ema jde jablko.	b0bdc516			pending			
+cs:b:pet-👧.v5.hracka	Ema jde pro hračku.	bb7cf2c6			pending			
+cs:b:pet-👧.v5.auto	Ema jde do auta.	33355f99			pending			
+cs:b:pet-👧.v5.o5	Ema jde ven.	2eaa3898			pending			
+cs:b:pet-👧.v5.o6	Ema jde domů.	85bf5b8e			pending			
+cs:b:pet-👧.v5.o7	Ema jde do postýlky.	4324ba23			pending			
+cs:b:pet-👧.v5.o8	Ema jde na nočník.	971b094e			pending			
+cs:b:pet-👧.v5.kolo	Ema jde ke kolu.	57e414a0			pending			
+cs:b:pet-👧.v5.les	Ema jde do lesa.	70a0866b			pending			
+cs:b:pet-👧.v5.nos	Ema jde k nosu.	887522e1			pending			
+cs:b:pet-👧.v5.miska	Ema jde k misce.	cc264fe5			pending			
+cs:b:pet-👧.v5.voda	Ema jde k vodě.	cfb5f1ca			pending			
+cs:b:pet-👧.v5.vlak	Ema jde do vlaku.	26830821			pending			
+cs:b:pet-👧.v5.fotbal	Ema jde na fotbal.	bda5e8e6			pending			
+cs:b:pet-👧.v5.banan	Ema jde k banánu.	7c5d1683			pending			
+cs:b:pet-👧.v5.kniha	Ema jde ke knize.	2ec0a8ea			pending			
+cs:b:pet-👧.v5.skola	Ema jde do školy.	6094c074			pending			
+cs:b:pet-👧.v6.mleko	Ema si hraje s mlékem.	c26440ac			pending			
+cs:b:pet-👧.v6.o2	Ema si hraje s jablkem.	f9150ba1			pending			
+cs:b:pet-👧.v6.hracka	Ema si hraje s hračkou.	1794a698			pending			
+cs:b:pet-👧.v6.auto	Ema si hraje s autem.	309ec7eb			pending			
+cs:b:pet-👧.v6.o5	Ema si hraje s venkem.	f3ceb87d			pending			
+cs:b:pet-👧.v6.o6	Ema si hraje s domem.	d6516029			pending			
+cs:b:pet-👧.v6.o7	Ema si hraje s postýlkou.	48aa4833			pending			
+cs:b:pet-👧.v6.o8	Ema si hraje s nočníkem.	57afe09b			pending			
+cs:b:pet-👧.v6.kolo	Ema si hraje s kolem.	6f559917			pending			
+cs:b:pet-👧.v6.les	Ema si hraje v lese.	3ff66c03			pending			
+cs:b:pet-👧.v6.nos	Ema si hraje s nosem.	3d6b0799			pending			
+cs:b:pet-👧.v6.miska	Ema si hraje s miskou.	7e0f5221			pending			
+cs:b:pet-👧.v6.voda	Ema si hraje s vodou.	6fc67b50			pending			
+cs:b:pet-👧.v6.vlak	Ema si hraje s vlakem.	6dcaed51			pending			
+cs:b:pet-👧.v6.fotbal	Ema si hraje s fotbalem.	a195cb4b			pending			
+cs:b:pet-👧.v6.banan	Ema si hraje s banánem.	9322e81f			pending			
+cs:b:pet-👧.v6.kniha	Ema si hraje s knihou.	b29a1ef5			pending			
+cs:b:pet-👧.v6.skola	Ema si hraje se školou.	4773f585			pending			
+cs:b:pet-🐺.v1.mleko	Vlk chce mléko.	1f6ecbb1			pending			
+cs:b:pet-🐺.v1.o2	Vlk chce jablko.	878679ca			pending			
+cs:b:pet-🐺.v1.hracka	Vlk chce hračku.	4f3b5f45			pending			
+cs:b:pet-🐺.v1.auto	Vlk chce auto.	856ee8fc			pending			
+cs:b:pet-🐺.v1.o5	Vlk chce venek.	1cf74964			pending			
+cs:b:pet-🐺.v1.o6	Vlk chce dům.	6889775b			pending			
+cs:b:pet-🐺.v1.o7	Vlk chce postýlku.	ddfd6a7c			pending			
+cs:b:pet-🐺.v1.o8	Vlk chce nočník.	2b12df4d			pending			
+cs:b:pet-🐺.v1.kolo	Vlk chce kolo.	e61aac18			pending			
+cs:b:pet-🐺.v1.les	Vlk chce les.	06bcf4f3			pending			
+cs:b:pet-🐺.v1.nos	Vlk chce nos.	b5dbd693			pending			
+cs:b:pet-🐺.v1.miska	Vlk chce misku.	4ea4ac8a			pending			
+cs:b:pet-🐺.v1.voda	Vlk chce vodu.	2711615d			pending			
+cs:b:pet-🐺.v1.vlak	Vlk chce vlak.	349fbf93			pending			
+cs:b:pet-🐺.v1.fotbal	Vlk chce fotbal.	9a9da365			pending			
+cs:b:pet-🐺.v1.banan	Vlk chce banán.	236627a1			pending			
+cs:b:pet-🐺.v1.kniha	Vlk chce knihu.	804a159e			pending			
+cs:b:pet-🐺.v1.skola	Vlk chce školu.	6b88d6b1			pending			
+cs:b:pet-🐺.v2.mleko	Vlk jí mléko.	9d94e793			pending			
+cs:b:pet-🐺.v2.o2	Vlk jí jablko.	5e51a4d0			pending			
+cs:b:pet-🐺.v2.hracka	Vlk jí hračku.	562c2bbb			pending			
+cs:b:pet-🐺.v2.auto	Vlk jí auto.	03152a96			pending			
+cs:b:pet-🐺.v2.o5	Vlk jí venek.	c6a0065a			pending			
+cs:b:pet-🐺.v2.o6	Vlk jí dům.	cefe0bc1			pending			
+cs:b:pet-🐺.v2.o7	Vlk jí postýlku.	3d56b73e			pending			
+cs:b:pet-🐺.v2.o8	Vlk jí nočník.	ef04251b			pending			
+cs:b:pet-🐺.v2.kolo	Vlk jí kolo.	85b055ca			pending			
+cs:b:pet-🐺.v2.les	Vlk jí les.	3ba39831			pending			
+cs:b:pet-🐺.v2.nos	Vlk jí nos.	0efe5611			pending			
+cs:b:pet-🐺.v2.miska	Vlk jí misku.	b4974314			pending			
+cs:b:pet-🐺.v2.voda	Vlk jí vodu.	0ac19a0b			pending			
+cs:b:pet-🐺.v2.vlak	Vlk jí vlak.	93b1e3c1			pending			
+cs:b:pet-🐺.v2.fotbal	Vlk jí fotbal.	5d9d1f47			pending			
+cs:b:pet-🐺.v2.banan	Vlk jí banán.	8bc6d6d7			pending			
+cs:b:pet-🐺.v2.kniha	Vlk jí knihu.	a1d78e40			pending			
+cs:b:pet-🐺.v2.skola	Vlk jí školu.	3c521f0b			pending			
+cs:b:pet-🐺.v3.mleko	Vlk pije mléko.	26cd1e22			pending			
+cs:b:pet-🐺.v3.o2	Vlk pije jablko.	e807f3ab			pending			
+cs:b:pet-🐺.v3.hracka	Vlk pije hračku.	b65c3490			pending			
+cs:b:pet-🐺.v3.auto	Vlk pije auto.	6288c0a1			pending			
+cs:b:pet-🐺.v3.o5	Vlk pije venek.	435c569b			pending			
+cs:b:pet-🐺.v3.o6	Vlk pije dům.	92984958			pending			
+cs:b:pet-🐺.v3.o7	Vlk pije postýlku.	ba1bc8e1			pending			
+cs:b:pet-🐺.v3.o8	Vlk pije nočník.	ffa0e000			pending			
+cs:b:pet-🐺.v3.kolo	Vlk pije kolo.	ec2244e1			pending			
+cs:b:pet-🐺.v3.les	Vlk pije les.	e93701a4			pending			
+cs:b:pet-🐺.v3.nos	Vlk pije nos.	0c48b4a0			pending			
+cs:b:pet-🐺.v3.miska	Vlk pije misku.	12748a59			pending			
+cs:b:pet-🐺.v3.voda	Vlk pije vodu.	93933920			pending			
+cs:b:pet-🐺.v3.vlak	Vlk pije vlak.	4aca639a			pending			
+cs:b:pet-🐺.v3.fotbal	Vlk pije fotbal.	f2b1962c			pending			
+cs:b:pet-🐺.v3.banan	Vlk pije banán.	56129e36			pending			
+cs:b:pet-🐺.v3.kniha	Vlk pije knihu.	47465a15			pending			
+cs:b:pet-🐺.v3.skola	Vlk pije školu.	e6800bc2			pending			
+cs:b:pet-🐺.v4.mleko	Vlk spí u mléka.	3dceb64d			pending			
+cs:b:pet-🐺.v4.o2	Vlk spí u jablka.	fc86e976			pending			
+cs:b:pet-🐺.v4.hracka	Vlk spí u hračky.	62129c37			pending			
+cs:b:pet-🐺.v4.auto	Vlk spí v autě.	141b8303			pending			
+cs:b:pet-🐺.v4.o5	Vlk spí venku.	ce1562df			pending			
+cs:b:pet-🐺.v4.o6	Vlk spí doma.	1423a009			pending			
+cs:b:pet-🐺.v4.o7	Vlk spí v postýlce.	74c00637			pending			
+cs:b:pet-🐺.v4.o8	Vlk spí na nočníku.	e4ac314a			pending			
+cs:b:pet-🐺.v4.kolo	Vlk spí u kola.	99b4399c			pending			
+cs:b:pet-🐺.v4.les	Vlk spí v lese.	18d639af			pending			
+cs:b:pet-🐺.v4.nos	Vlk spí u nosu.	aee27a4a			pending			
+cs:b:pet-🐺.v4.miska	Vlk spí u misky.	e9258860			pending			
+cs:b:pet-🐺.v4.voda	Vlk spí u vody.	aafe0c87			pending			
+cs:b:pet-🐺.v4.vlak	Vlk spí ve vlaku.	40cb4ac0			pending			
+cs:b:pet-🐺.v4.fotbal	Vlk spí u fotbalu.	3f755724			pending			
+cs:b:pet-🐺.v4.banan	Vlk spí u banánu.	dca13634			pending			
+cs:b:pet-🐺.v4.kniha	Vlk spí u knihy.	5b3b93b4			pending			
+cs:b:pet-🐺.v4.skola	Vlk spí ve škole.	96624ac1			pending			
+cs:b:pet-🐺.v5.mleko	Vlk jde mléko.	f7854b1b			pending			
+cs:b:pet-🐺.v5.o2	Vlk jde jablko.	20c7e7f8			pending			
+cs:b:pet-🐺.v5.hracka	Vlk jde pro hračku.	bdb02aa0			pending			
+cs:b:pet-🐺.v5.auto	Vlk jde do auta.	b39da58b			pending			
+cs:b:pet-🐺.v5.o5	Vlk jde ven.	ede0acbe			pending			
+cs:b:pet-🐺.v5.o6	Vlk jde domů.	3a6f3ed8			pending			
+cs:b:pet-🐺.v5.o7	Vlk jde do postýlky.	9650fb59			pending			
+cs:b:pet-🐺.v5.o8	Vlk jde na nočník.	7fc04610			pending			
+cs:b:pet-🐺.v5.kolo	Vlk jde ke kolu.	f4f25aca			pending			
+cs:b:pet-🐺.v5.les	Vlk jde do lesa.	4042b651			pending			
+cs:b:pet-🐺.v5.nos	Vlk jde k nosu.	c585da3b			pending			
+cs:b:pet-🐺.v5.miska	Vlk jde k misce.	1596af0f			pending			
+cs:b:pet-🐺.v5.voda	Vlk jde k vodě.	d9b0269c			pending			
+cs:b:pet-🐺.v5.vlak	Vlk jde do vlaku.	96bca85f			pending			
+cs:b:pet-🐺.v5.fotbal	Vlk jde na fotbal.	dd40a81c			pending			
+cs:b:pet-🐺.v5.banan	Vlk jde k banánu.	22c626dd			pending			
+cs:b:pet-🐺.v5.kniha	Vlk jde ke knize.	9135ba2c			pending			
+cs:b:pet-🐺.v5.skola	Vlk jde do školy.	b71cf9ca			pending			
+cs:b:pet-🐺.v6.mleko	Vlk si hraje s mlékem.	a8b5a2ba			pending			
+cs:b:pet-🐺.v6.o2	Vlk si hraje s jablkem.	6fc794cb			pending			
+cs:b:pet-🐺.v6.hracka	Vlk si hraje s hračkou.	1a12effa			pending			
+cs:b:pet-🐺.v6.auto	Vlk si hraje s autem.	4a2a3eb1			pending			
+cs:b:pet-🐺.v6.o5	Vlk si hraje s venkem.	df320adb			pending			
+cs:b:pet-🐺.v6.o6	Vlk si hraje s domem.	69f2605b			pending			
+cs:b:pet-🐺.v6.o7	Vlk si hraje s postýlkou.	f16ce851			pending			
+cs:b:pet-🐺.v6.o8	Vlk si hraje s nočníkem.	8cace86d			pending			
+cs:b:pet-🐺.v6.kolo	Vlk si hraje s kolem.	0d6126d5			pending			
+cs:b:pet-🐺.v6.les	Vlk si hraje v lese.	d6099f39			pending			
+cs:b:pet-🐺.v6.nos	Vlk si hraje s nosem.	19df84cb			pending			
+cs:b:pet-🐺.v6.miska	Vlk si hraje s miskou.	0aecbbb7			pending			
+cs:b:pet-🐺.v6.voda	Vlk si hraje s vodou.	462774aa			pending			
+cs:b:pet-🐺.v6.vlak	Vlk si hraje s vlakem.	5a1ca9db			pending			
+cs:b:pet-🐺.v6.fotbal	Vlk si hraje s fotbalem.	84942f19			pending			
+cs:b:pet-🐺.v6.banan	Vlk si hraje s banánem.	9d025de9			pending			
+cs:b:pet-🐺.v6.kniha	Vlk si hraje s knihou.	a4ca4683			pending			
+cs:b:pet-🐺.v6.skola	Vlk si hraje se školou.	7cca5e0f			pending			
+cs:b:pet-🐟.v1.mleko	Ryba chce mléko.	7c010ff0			pending			
+cs:b:pet-🐟.v1.o2	Ryba chce jablko.	6b6e80cd			pending			
+cs:b:pet-🐟.v1.hracka	Ryba chce hračku.	d1966942			pending			
+cs:b:pet-🐟.v1.auto	Ryba chce auto.	d516448f			pending			
+cs:b:pet-🐟.v1.o5	Ryba chce venek.	1f13cc65			pending			
+cs:b:pet-🐟.v1.o6	Ryba chce dům.	fdca36b2			pending			
+cs:b:pet-🐟.v1.o7	Ryba chce postýlku.	96d1c567			pending			
+cs:b:pet-🐟.v1.o8	Ryba chce nočník.	ad5a991a			pending			
+cs:b:pet-🐟.v1.kolo	Ryba chce kolo.	4d60ad2f			pending			
+cs:b:pet-🐟.v1.les	Ryba chce les.	5248143e			pending			
+cs:b:pet-🐟.v1.nos	Ryba chce nos.	b375fe52			pending			
+cs:b:pet-🐟.v1.miska	Ryba chce misku.	e7a7eb37			pending			
+cs:b:pet-🐟.v1.voda	Ryba chce vodu.	346ff48a			pending			
+cs:b:pet-🐟.v1.vlak	Ryba chce vlak.	6e857fcc			pending			
+cs:b:pet-🐟.v1.fotbal	Ryba chce fotbal.	65b4281a			pending			
+cs:b:pet-🐟.v1.banan	Ryba chce banán.	e2ddb150			pending			
+cs:b:pet-🐟.v1.kniha	Ryba chce knihu.	ba709c33			pending			
+cs:b:pet-🐟.v1.skola	Ryba chce školu.	a1e13e18			pending			
+cs:b:pet-🐟.v2.mleko	Ryba jí mléko.	169f4d36			pending			
+cs:b:pet-🐟.v2.o2	Ryba jí jablko.	2a0d53af			pending			
+cs:b:pet-🐟.v2.hracka	Ryba jí hračku.	63749084			pending			
+cs:b:pet-🐟.v2.auto	Ryba jí auto.	9f86480d			pending			
+cs:b:pet-🐟.v2.o5	Ryba jí venek.	68920ef7			pending			
+cs:b:pet-🐟.v2.o6	Ryba jí dům.	226557ac			pending			
+cs:b:pet-🐟.v2.o7	Ryba jí postýlku.	7d72139d			pending			
+cs:b:pet-🐟.v2.o8	Ryba jí nočník.	f3b2b1bc			pending			
+cs:b:pet-🐟.v2.kolo	Ryba jí kolo.	8cc0d41d			pending			
+cs:b:pet-🐟.v2.les	Ryba jí les.	9917ca10			pending			
+cs:b:pet-🐟.v2.nos	Ryba jí nos.	012e4b4c			pending			
+cs:b:pet-🐟.v2.miska	Ryba jí misku.	46cecf35			pending			
+cs:b:pet-🐟.v2.voda	Ryba jí vodu.	7acad354			pending			
+cs:b:pet-🐟.v2.vlak	Ryba jí vlak.	62299fee			pending			
+cs:b:pet-🐟.v2.fotbal	Ryba jí fotbal.	9f6fb030			pending			
+cs:b:pet-🐟.v2.banan	Ryba jí banán.	db317662			pending			
+cs:b:pet-🐟.v2.kniha	Ryba jí knihu.	95f7e521			pending			
+cs:b:pet-🐟.v2.skola	Ryba jí školu.	e716d276			pending			
+cs:b:pet-🐟.v3.mleko	Ryba pije mléko.	71bc803f			pending			
+cs:b:pet-🐟.v3.o2	Ryba pije jablko.	c8f5daec			pending			
+cs:b:pet-🐟.v3.hracka	Ryba pije hračku.	c36363b7			pending			
+cs:b:pet-🐟.v3.auto	Ryba pije auto.	dac5369a			pending			
+cs:b:pet-🐟.v3.o5	Ryba pije venek.	c3ba383e			pending			
+cs:b:pet-🐟.v3.o6	Ryba pije dům.	6549885d			pending			
+cs:b:pet-🐟.v3.o7	Ryba pije postýlku.	86b881e2			pending			
+cs:b:pet-🐟.v3.o8	Ryba pije nočník.	f5c79b4f			pending			
+cs:b:pet-🐟.v3.kolo	Ryba pije kolo.	919062fe			pending			
+cs:b:pet-🐟.v3.les	Ryba pije les.	bbfcaa65			pending			
+cs:b:pet-🐟.v3.nos	Ryba pije nos.	97cf5035			pending			
+cs:b:pet-🐟.v3.miska	Ryba pije misku.	e1329588			pending			
+cs:b:pet-🐟.v3.voda	Ryba pije vodu.	e25efce7			pending			
+cs:b:pet-🐟.v3.vlak	Ryba pije vlak.	5df1f1bd			pending			
+cs:b:pet-🐟.v3.fotbal	Ryba pije fotbal.	a5f185d3			pending			
+cs:b:pet-🐟.v3.banan	Ryba pije banán.	9bbd359b			pending			
+cs:b:pet-🐟.v3.kniha	Ryba pije knihu.	539b6324			pending			
+cs:b:pet-🐟.v3.skola	Ryba pije školu.	765445f7			pending			
+cs:b:pet-🐟.v4.mleko	Ryba spí u mléka.	9d834bea			pending			
+cs:b:pet-🐟.v4.o2	Ryba spí u jablka.	f300ecd7			pending			
+cs:b:pet-🐟.v4.hracka	Ryba spí u hračky.	49fdd61a			pending			
+cs:b:pet-🐟.v4.auto	Ryba spí v autě.	0ffa847e			pending			
+cs:b:pet-🐟.v4.o5	Ryba spí venku.	ea48d658			pending			
+cs:b:pet-🐟.v4.o6	Ryba spí doma.	b927f6a8			pending			
+cs:b:pet-🐟.v4.o7	Ryba spí v postýlce.	3685b122			pending			
+cs:b:pet-🐟.v4.o8	Ryba spí na nočníku.	7e0a44a7			pending			
+cs:b:pet-🐟.v4.kolo	Ryba spí u kola.	b773917d			pending			
+cs:b:pet-🐟.v4.les	Ryba spí v lese.	234589f6			pending			
+cs:b:pet-🐟.v4.nos	Ryba spí u nosu.	bb27ca8f			pending			
+cs:b:pet-🐟.v4.miska	Ryba spí u misky.	75b91b77			pending			
+cs:b:pet-🐟.v4.voda	Ryba spí u vody.	313054f2			pending			
+cs:b:pet-🐟.v4.vlak	Ryba spí ve vlaku.	b935b501			pending			
+cs:b:pet-🐟.v4.fotbal	Ryba spí u fotbalu.	d0ca496f			pending			
+cs:b:pet-🐟.v4.banan	Ryba spí u banánu.	5d879fc1			pending			
+cs:b:pet-🐟.v4.kniha	Ryba spí u knihy.	a820e78b			pending			
+cs:b:pet-🐟.v4.skola	Ryba spí ve škole.	d378d7c0			pending			
+cs:b:pet-🐟.v5.mleko	Ryba jde mléko.	526ed184			pending			
+cs:b:pet-🐟.v5.o2	Ryba jde jablko.	32ccf211			pending			
+cs:b:pet-🐟.v5.hracka	Ryba jde pro hračku.	4b7edfb5			pending			
+cs:b:pet-🐟.v5.auto	Ryba jde do auta.	48e5025c			pending			
+cs:b:pet-🐟.v5.o5	Ryba jde ven.	f7c64c1d			pending			
+cs:b:pet-🐟.v5.o6	Ryba jde domů.	6f8bedf5			pending			
+cs:b:pet-🐟.v5.o7	Ryba jde do postýlky.	c05e1a26			pending			
+cs:b:pet-🐟.v5.o8	Ryba jde na nočník.	29e00437			pending			
+cs:b:pet-🐟.v5.kolo	Ryba jde ke kolu.	53d67a1d			pending			
+cs:b:pet-🐟.v5.les	Ryba jde do lesa.	465e55a2			pending			
+cs:b:pet-🐟.v5.nos	Ryba jde k nosu.	a277aae6			pending			
+cs:b:pet-🐟.v5.miska	Ryba jde k misce.	73d6bb08			pending			
+cs:b:pet-🐟.v5.voda	Ryba jde k vodě.	4b717351			pending			
+cs:b:pet-🐟.v5.vlak	Ryba jde do vlaku.	99eefd76			pending			
+cs:b:pet-🐟.v5.fotbal	Ryba jde na fotbal.	b3242cdb			pending			
+cs:b:pet-🐟.v5.banan	Ryba jde k banánu.	f594e860			pending			
+cs:b:pet-🐟.v5.kniha	Ryba jde ke knize.	672dc34d			pending			
+cs:b:pet-🐟.v5.skola	Ryba jde do školy.	1c13df8b			pending			
+cs:b:pet-🐟.v6.mleko	Ryba si hraje s mlékem.	2f00094d			pending			
+cs:b:pet-🐟.v6.o2	Ryba si hraje s jablkem.	66f1e952			pending			
+cs:b:pet-🐟.v6.hracka	Ryba si hraje s hračkou.	5bf87c83			pending			
+cs:b:pet-🐟.v6.auto	Ryba si hraje s autem.	20b54f10			pending			
+cs:b:pet-🐟.v6.o5	Ryba si hraje s venkem.	aef478dc			pending			
+cs:b:pet-🐟.v6.o6	Ryba si hraje s domem.	ab21e6d6			pending			
+cs:b:pet-🐟.v6.o7	Ryba si hraje s postýlkou.	94366678			pending			
+cs:b:pet-🐟.v6.o8	Ryba si hraje s nočníkem.	65e6eaee			pending			
+cs:b:pet-🐟.v6.kolo	Ryba si hraje s kolem.	fe9db450			pending			
+cs:b:pet-🐟.v6.les	Ryba si hraje v lese.	24856ed2			pending			
+cs:b:pet-🐟.v6.nos	Ryba si hraje s nosem.	2579cd8e			pending			
+cs:b:pet-🐟.v6.miska	Ryba si hraje s miskou.	6bbe6510			pending			
+cs:b:pet-🐟.v6.voda	Ryba si hraje s vodou.	1a1a26f3			pending			
+cs:b:pet-🐟.v6.vlak	Ryba si hraje s vlakem.	74de3ad8			pending			
+cs:b:pet-🐟.v6.fotbal	Ryba si hraje s fotbalem.	a4ca897a			pending			
+cs:b:pet-🐟.v6.banan	Ryba si hraje s banánem.	f6aa2ee4			pending			
+cs:b:pet-🐟.v6.kniha	Ryba si hraje s knihou.	a1e8aeec			pending			
+cs:b:pet-🐟.v6.skola	Ryba si hraje se školou.	92f74dee			pending			
+cs:b:pet-🦓.v1.mleko	Zebra chce mléko.	474a5e62			pending			
+cs:b:pet-🦓.v1.o2	Zebra chce jablko.	08e586eb			pending			
+cs:b:pet-🦓.v1.hracka	Zebra chce hračku.	46118d50			pending			
+cs:b:pet-🦓.v1.auto	Zebra chce auto.	643518e1			pending			
+cs:b:pet-🦓.v1.o5	Zebra chce venek.	26e877db			pending			
+cs:b:pet-🦓.v1.o6	Zebra chce dům.	c89c6398			pending			
+cs:b:pet-🦓.v1.o7	Zebra chce postýlku.	018d3d21			pending			
+cs:b:pet-🦓.v1.o8	Zebra chce nočník.	070b6cc0			pending			
+cs:b:pet-🦓.v1.kolo	Zebra chce kolo.	dd56aa21			pending			
+cs:b:pet-🦓.v1.les	Zebra chce les.	51d485e4			pending			
+cs:b:pet-🦓.v1.nos	Zebra chce nos.	5e13ece0			pending			
+cs:b:pet-🦓.v1.miska	Zebra chce misku.	092d2299			pending			
+cs:b:pet-🦓.v1.voda	Zebra chce vodu.	b106af60			pending			
+cs:b:pet-🦓.v1.vlak	Zebra chce vlak.	4ef124da			pending			
+cs:b:pet-🦓.v1.fotbal	Zebra chce fotbal.	db8c146c			pending			
+cs:b:pet-🦓.v1.banan	Zebra chce banán.	768fde76			pending			
+cs:b:pet-🦓.v1.kniha	Zebra chce knihu.	3dfef255			pending			
+cs:b:pet-🦓.v1.skola	Zebra chce školu.	9b52b302			pending			
+cs:b:pet-🦓.v2.mleko	Zebra jí mléko.	f1a3000c			pending			
+cs:b:pet-🦓.v2.o2	Zebra jí jablko.	f0ed5b79			pending			
+cs:b:pet-🦓.v2.hracka	Zebra jí hračku.	4a76334e			pending			
+cs:b:pet-🦓.v2.auto	Zebra jí auto.	961190d3			pending			
+cs:b:pet-🦓.v2.o5	Zebra jí venek.	8c80a1a9			pending			
+cs:b:pet-🦓.v2.o6	Zebra jí dům.	9ef35f5e			pending			
+cs:b:pet-🦓.v2.o7	Zebra jí postýlku.	55049bbb			pending			
+cs:b:pet-🦓.v2.o8	Zebra jí nočník.	f587692e			pending			
+cs:b:pet-🦓.v2.kolo	Zebra jí kolo.	39da0b53			pending			
+cs:b:pet-🦓.v2.les	Zebra jí les.	7e9eee82			pending			
+cs:b:pet-🦓.v2.nos	Zebra jí nos.	54d9be26			pending			
+cs:b:pet-🦓.v2.miska	Zebra jí misku.	f613636b			pending			
+cs:b:pet-🦓.v2.voda	Zebra jí vodu.	539c47d6			pending			
+cs:b:pet-🦓.v2.vlak	Zebra jí vlak.	545cd8d8			pending			
+cs:b:pet-🦓.v2.fotbal	Zebra jí fotbal.	e2595606			pending			
+cs:b:pet-🦓.v2.banan	Zebra jí banán.	ab658444			pending			
+cs:b:pet-🦓.v2.kniha	Zebra jí knihu.	a83fced7			pending			
+cs:b:pet-🦓.v2.skola	Zebra jí školu.	a3ac3594			pending			
+cs:b:pet-🦓.v3.mleko	Zebra pije mléko.	bd1307ad			pending			
+cs:b:pet-🦓.v3.o2	Zebra pije jablko.	0fc728e6			pending			
+cs:b:pet-🦓.v3.hracka	Zebra pije hračku.	29c5ca31			pending			
+cs:b:pet-🦓.v3.auto	Zebra pije auto.	73afd5b0			pending			
+cs:b:pet-🦓.v3.o5	Zebra pije venek.	4ea5b678			pending			
+cs:b:pet-🦓.v3.o6	Zebra pije dům.	07832317			pending			
+cs:b:pet-🦓.v3.o7	Zebra pije postýlku.	d58d1930			pending			
+cs:b:pet-🦓.v3.o8	Zebra pije nočník.	40525fa1			pending			
+cs:b:pet-🦓.v3.kolo	Zebra pije kolo.	8c63402c			pending			
+cs:b:pet-🦓.v3.les	Zebra pije les.	30620207			pending			
+cs:b:pet-🦓.v3.nos	Zebra pije nos.	c6342ea7			pending			
+cs:b:pet-🦓.v3.miska	Zebra pije misku.	f515282e			pending			
+cs:b:pet-🦓.v3.voda	Zebra pije vodu.	3ded3749			pending			
+cs:b:pet-🦓.v3.vlak	Zebra pije vlak.	64a94def			pending			
+cs:b:pet-🦓.v3.fotbal	Zebra pije fotbal.	69be00f1			pending			
+cs:b:pet-🦓.v3.banan	Zebra pije banán.	baa7a155			pending			
+cs:b:pet-🦓.v3.kniha	Zebra pije knihu.	99c99b52			pending			
+cs:b:pet-🦓.v3.skola	Zebra pije školu.	7da2610d			pending			
+cs:b:pet-🦓.v4.mleko	Zebra spí u mléka.	f9341e50			pending			
+cs:b:pet-🦓.v4.o2	Zebra spí u jablka.	1d414551			pending			
+cs:b:pet-🦓.v4.hracka	Zebra spí u hračky.	9d7cadf0			pending			
+cs:b:pet-🦓.v4.auto	Zebra spí v autě.	779f9644			pending			
+cs:b:pet-🦓.v4.o5	Zebra spí venku.	c40e5b9e			pending			
+cs:b:pet-🦓.v4.o6	Zebra spí doma.	a92e585a			pending			
+cs:b:pet-🦓.v4.o7	Zebra spí v postýlce.	33cf16f0			pending			
+cs:b:pet-🦓.v4.o8	Zebra spí na nočníku.	9e9e7b79			pending			
+cs:b:pet-🦓.v4.kolo	Zebra spí u kola.	aa925563			pending			
+cs:b:pet-🦓.v4.les	Zebra spí v lese.	0b548eac			pending			
+cs:b:pet-🦓.v4.nos	Zebra spí u nosu.	155994e9			pending			
+cs:b:pet-🦓.v4.miska	Zebra spí u misky.	6029ce79			pending			
+cs:b:pet-🦓.v4.voda	Zebra spí u vody.	b9508740			pending			
+cs:b:pet-🦓.v4.vlak	Zebra spí ve vlaku.	daacf15b			pending			
+cs:b:pet-🦓.v4.fotbal	Zebra spí u fotbalu.	30ea249d			pending			
+cs:b:pet-🦓.v4.banan	Zebra spí u banánu.	a820cd8b			pending			
+cs:b:pet-🦓.v4.kniha	Zebra spí u knihy.	9dde966d			pending			
+cs:b:pet-🦓.v4.skola	Zebra spí ve škole.	b03c36fa			pending			
+cs:b:pet-🦓.v5.mleko	Zebra jde mléko.	4be90d1e			pending			
+cs:b:pet-🦓.v5.o2	Zebra jde jablko.	e2a9e397			pending			
+cs:b:pet-🦓.v5.hracka	Zebra jde pro hračku.	ff5815a3			pending			
+cs:b:pet-🦓.v5.auto	Zebra jde do auta.	0aba674a			pending			
+cs:b:pet-🦓.v5.o5	Zebra jde ven.	e17fab77			pending			
+cs:b:pet-🦓.v5.o6	Zebra jde domů.	cf833c7b			pending			
+cs:b:pet-🦓.v5.o7	Zebra jde do postýlky.	a50e04d8			pending			
+cs:b:pet-🦓.v5.o8	Zebra jde na nočník.	93dd3d2d			pending			
+cs:b:pet-🦓.v5.kolo	Zebra jde ke kolu.	9ccb48a3			pending			
+cs:b:pet-🦓.v5.les	Zebra jde do lesa.	ee5ab03c			pending			
+cs:b:pet-🦓.v5.nos	Zebra jde k nosu.	c004cb5c			pending			
+cs:b:pet-🦓.v5.miska	Zebra jde k misce.	c8745a3e			pending			
+cs:b:pet-🦓.v5.voda	Zebra jde k vodě.	f92ffa0f			pending			
+cs:b:pet-🦓.v5.vlak	Zebra jde do vlaku.	123b28b0			pending			
+cs:b:pet-🦓.v5.fotbal	Zebra jde na fotbal.	e702a985			pending			
+cs:b:pet-🦓.v5.banan	Zebra jde k banánu.	3acff786			pending			
+cs:b:pet-🦓.v5.kniha	Zebra jde ke knize.	7c2116eb			pending			
+cs:b:pet-🦓.v5.skola	Zebra jde do školy.	476224fd			pending			
+cs:b:pet-🦓.v6.mleko	Zebra si hraje s mlékem.	d64453bf			pending			
+cs:b:pet-🦓.v6.o2	Zebra si hraje s jablkem.	0f9598d0			pending			
+cs:b:pet-🦓.v6.hracka	Zebra si hraje s hračkou.	0daf48c9			pending			
+cs:b:pet-🦓.v6.auto	Zebra si hraje s autem.	4ff48992			pending			
+cs:b:pet-🦓.v6.o5	Zebra si hraje s venkem.	91a8170e			pending			
+cs:b:pet-🦓.v6.o6	Zebra si hraje s domem.	a3b7dc84			pending			
+cs:b:pet-🦓.v6.o7	Zebra si hraje s postýlkou.	e4f0cb72			pending			
+cs:b:pet-🦓.v6.o8	Zebra si hraje s nočníkem.	834c96e4			pending			
+cs:b:pet-🦓.v6.kolo	Zebra si hraje s kolem.	548d5ea2			pending			
+cs:b:pet-🦓.v6.les	Zebra si hraje v lese.	c7dab934			pending			
+cs:b:pet-🦓.v6.nos	Zebra si hraje s nosem.	df2e3f3c			pending			
+cs:b:pet-🦓.v6.miska	Zebra si hraje s miskou.	9ebbed62			pending			
+cs:b:pet-🦓.v6.voda	Zebra si hraje s vodou.	f2ca0211			pending			
+cs:b:pet-🦓.v6.vlak	Zebra si hraje s vlakem.	16bd780e			pending			
+cs:b:pet-🦓.v6.fotbal	Zebra si hraje s fotbalem.	c05ec1ac			pending			
+cs:b:pet-🦓.v6.banan	Zebra si hraje s banánem.	b84a9e2a			pending			
+cs:b:pet-🦓.v6.kniha	Zebra si hraje s knihou.	42c07fde			pending			
+cs:b:pet-🦓.v6.skola	Zebra si hraje se školou.	e5a5dd34			pending			
+cs:b:pet-🐱.v1.mleko	Kočka chce mléko.	54351833			pending			
+cs:b:pet-🐱.v1.o2	Kočka chce jablko.	77ebdb70			pending			
+cs:b:pet-🐱.v1.hracka	Kočka chce hračku.	578f169b			pending			
+cs:b:pet-🐱.v1.auto	Kočka chce auto.	66f84db6			pending			
+cs:b:pet-🐱.v1.o5	Kočka chce venek.	a487307a			pending			
+cs:b:pet-🐱.v1.o6	Kočka chce dům.	da71e761			pending			
+cs:b:pet-🐱.v1.o7	Kočka chce postýlku.	b63c375e			pending			
+cs:b:pet-🐱.v1.o8	Kočka chce nočník.	a2cca97b			pending			
+cs:b:pet-🐱.v1.kolo	Kočka chce kolo.	135820ea			pending			
+cs:b:pet-🐱.v1.les	Kočka chce les.	15773251			pending			
+cs:b:pet-🐱.v1.nos	Kočka chce nos.	665850b1			pending			
+cs:b:pet-🐱.v1.miska	Kočka chce misku.	977684b4			pending			
+cs:b:pet-🐱.v1.voda	Kočka chce vodu.	ff1be6ab			pending			
+cs:b:pet-🐱.v1.vlak	Kočka chce vlak.	2159aee1			pending			
+cs:b:pet-🐱.v1.fotbal	Kočka chce fotbal.	3a8c11e7			pending			
+cs:b:pet-🐱.v1.banan	Kočka chce banán.	dbb2f2f7			pending			
+cs:b:pet-🐱.v1.kniha	Kočka chce knihu.	0239eae0			pending			
+cs:b:pet-🐱.v1.skola	Kočka chce školu.	0594c32b			pending			
+cs:b:pet-🐱.v2.mleko	Kočka jí mléko.	45220ae1			pending			
+cs:b:pet-🐱.v2.o2	Kočka jí jablko.	d4055f5a			pending			
+cs:b:pet-🐱.v2.hracka	Kočka jí hračku.	f5406195			pending			
+cs:b:pet-🐱.v2.auto	Kočka jí auto.	3e70a4cc			pending			
+cs:b:pet-🐱.v2.o5	Kočka jí venek.	827735b4			pending			
+cs:b:pet-🐱.v2.o6	Kočka jí dům.	d0638b8b			pending			
+cs:b:pet-🐱.v2.o7	Kočka jí postýlku.	c633b12c			pending			
+cs:b:pet-🐱.v2.o8	Kočka jí nočník.	78a3a25d			pending			
+cs:b:pet-🐱.v2.kolo	Kočka jí kolo.	3f9f4968			pending			
+cs:b:pet-🐱.v2.les	Kočka jí les.	635ac583			pending			
+cs:b:pet-🐱.v2.nos	Kočka jí nos.	900007a3			pending			
+cs:b:pet-🐱.v2.miska	Kočka jí misku.	2ea9897a			pending			
+cs:b:pet-🐱.v2.voda	Kočka jí vodu.	ae4bca2d			pending			
+cs:b:pet-🐱.v2.vlak	Kočka jí vlak.	73fa14c3			pending			
+cs:b:pet-🐱.v2.fotbal	Kočka jí fotbal.	7a92e855			pending			
+cs:b:pet-🐱.v2.banan	Kočka jí banán.	9d4d9911			pending			
+cs:b:pet-🐱.v2.kniha	Kočka jí knihu.	3a27726e			pending			
+cs:b:pet-🐱.v2.skola	Kočka jí školu.	1f975a41			pending			
+cs:b:pet-🐱.v3.mleko	Kočka pije mléko.	a318b578			pending			
+cs:b:pet-🐱.v3.o2	Kočka pije jablko.	23918515			pending			
+cs:b:pet-🐱.v3.hracka	Kočka pije hračku.	e56b357a			pending			
+cs:b:pet-🐱.v3.auto	Kočka pije auto.	0bafe667			pending			
+cs:b:pet-🐱.v3.o5	Kočka pije venek.	465ce53d			pending			
+cs:b:pet-🐱.v3.o6	Kočka pije dům.	b59786ca			pending			
+cs:b:pet-🐱.v3.o7	Kočka pije postýlku.	e84e224f			pending			
+cs:b:pet-🐱.v3.o8	Kočka pije nočník.	f1068de2			pending			
+cs:b:pet-🐱.v3.kolo	Kočka pije kolo.	0a926b37			pending			
+cs:b:pet-🐱.v3.les	Kočka pije les.	dade71e6			pending			
+cs:b:pet-🐱.v3.nos	Kočka pije nos.	6c14734a			pending			
+cs:b:pet-🐱.v3.miska	Kočka pije misku.	b644a2bf			pending			
+cs:b:pet-🐱.v3.voda	Kočka pije vodu.	c7372862			pending			
+cs:b:pet-🐱.v3.vlak	Kočka pije vlak.	bc0fab74			pending			
+cs:b:pet-🐱.v3.fotbal	Kočka pije fotbal.	e7c8f602			pending			
+cs:b:pet-🐱.v3.banan	Kočka pije banán.	5b348468			pending			
+cs:b:pet-🐱.v3.kniha	Kočka pije knihu.	3c5009ab			pending			
+cs:b:pet-🐱.v3.skola	Kočka pije školu.	3d9d6060			pending			
+cs:b:pet-🐱.v4.mleko	Kočka spí u mléka.	a733d2d3			pending			
+cs:b:pet-🐱.v4.o2	Kočka spí u jablka.	19540860			pending			
+cs:b:pet-🐱.v4.hracka	Kočka spí u hračky.	a75ffabd			pending			
+cs:b:pet-🐱.v4.auto	Kočka spí v autě.	c523a5b1			pending			
+cs:b:pet-🐱.v4.o5	Kočka spí venku.	5960bdad			pending			
+cs:b:pet-🐱.v4.o6	Kočka spí doma.	15771f9b			pending			
+cs:b:pet-🐱.v4.o7	Kočka spí v postýlce.	e835fe3d			pending			
+cs:b:pet-🐱.v4.o8	Kočka spí na nočníku.	8b530ca4			pending			
+cs:b:pet-🐱.v4.kolo	Kočka spí u kola.	32e06dfa			pending			
+cs:b:pet-🐱.v4.les	Kočka spí v lese.	9a2dca15			pending			
+cs:b:pet-🐱.v4.nos	Kočka spí u nosu.	00974a64			pending			
+cs:b:pet-🐱.v4.miska	Kočka spí u misky.	263c160a			pending			
+cs:b:pet-🐱.v4.voda	Kočka spí u vody.	febd8545			pending			
+cs:b:pet-🐱.v4.vlak	Kočka spí ve vlaku.	2f68138a			pending			
+cs:b:pet-🐱.v4.fotbal	Kočka spí u fotbalu.	a56cb78a			pending			
+cs:b:pet-🐱.v4.banan	Kočka spí u banánu.	088f80ce			pending			
+cs:b:pet-🐱.v4.kniha	Kočka spí u knihy.	3631cce6			pending			
+cs:b:pet-🐱.v4.skola	Kočka spí ve škole.	074b4f1b			pending			
+cs:b:pet-🐱.v5.mleko	Kočka jde mléko.	af8ff84d			pending			
+cs:b:pet-🐱.v5.o2	Kočka jde jablko.	032e9686			pending			
+cs:b:pet-🐱.v5.hracka	Kočka jde pro hračku.	01a5c3b6			pending			
+cs:b:pet-🐱.v5.auto	Kočka jde do auta.	4875d869			pending			
+cs:b:pet-🐱.v5.o5	Kočka jde ven.	2f775d88			pending			
+cs:b:pet-🐱.v5.o6	Kočka jde domů.	2a652c7e			pending			
+cs:b:pet-🐱.v5.o7	Kočka jde do postýlky.	62fc69d3			pending			
+cs:b:pet-🐱.v5.o8	Kočka jde na nočník.	97b7f19e			pending			
+cs:b:pet-🐱.v5.kolo	Kočka jde ke kolu.	6945ff50			pending			
+cs:b:pet-🐱.v5.les	Kočka jde do lesa.	9f5ac9db			pending			
+cs:b:pet-🐱.v5.nos	Kočka jde k nosu.	e5724c11			pending			
+cs:b:pet-🐱.v5.miska	Kočka jde k misce.	876da555			pending			
+cs:b:pet-🐱.v5.voda	Kočka jde k vodě.	649579fa			pending			
+cs:b:pet-🐱.v5.vlak	Kočka jde do vlaku.	ea157911			pending			
+cs:b:pet-🐱.v5.fotbal	Kočka jde na fotbal.	65bd1696			pending			
+cs:b:pet-🐱.v5.banan	Kočka jde k banánu.	a22e99d3			pending			
+cs:b:pet-🐱.v5.kniha	Kočka jde ke knize.	94d80a7a			pending			
+cs:b:pet-🐱.v5.skola	Kočka jde do školy.	c5471244			pending			
+cs:b:pet-🐱.v6.mleko	Kočka si hraje s mlékem.	1f2aaf5c			pending			
+cs:b:pet-🐱.v6.o2	Kočka si hraje s jablkem.	046cf571			pending			
+cs:b:pet-🐱.v6.hracka	Kočka si hraje s hračkou.	5d71b0a8			pending			
+cs:b:pet-🐱.v6.auto	Kočka si hraje s autem.	ca0c8dbb			pending			
+cs:b:pet-🐱.v6.o5	Kočka si hraje s venkem.	fb4eb8cd			pending			
+cs:b:pet-🐱.v6.o6	Kočka si hraje s domem.	79ff5d39			pending			
+cs:b:pet-🐱.v6.o7	Kočka si hraje s postýlkou.	f70cc8a3			pending			
+cs:b:pet-🐱.v6.o8	Kočka si hraje s nočníkem.	dd469fcb			pending			
+cs:b:pet-🐱.v6.kolo	Kočka si hraje s kolem.	ae51bae7			pending			
+cs:b:pet-🐱.v6.les	Kočka si hraje v lese.	8700fa93			pending			
+cs:b:pet-🐱.v6.nos	Kočka si hraje s nosem.	6142ee49			pending			
+cs:b:pet-🐱.v6.miska	Kočka si hraje s miskou.	b876cc91			pending			
+cs:b:pet-🐱.v6.voda	Kočka si hraje s vodou.	3b6ad460			pending			
+cs:b:pet-🐱.v6.vlak	Kočka si hraje s vlakem.	b40bbb61			pending			
+cs:b:pet-🐱.v6.fotbal	Kočka si hraje s fotbalem.	2d57791b			pending			
+cs:b:pet-🐱.v6.banan	Kočka si hraje s banánem.	33bd27af			pending			
+cs:b:pet-🐱.v6.kniha	Kočka si hraje s knihou.	db9a1a45			pending			
+cs:b:pet-🐱.v6.skola	Kočka si hraje se školou.	7f5e68f5			pending			
+cs:b:pet-🦁.v1.mleko	Lev chce mléko.	edeb5db9			pending			
+cs:b:pet-🦁.v1.o2	Lev chce jablko.	2d7ce472			pending			
+cs:b:pet-🦁.v1.hracka	Lev chce hračku.	efc9b77d			pending			
+cs:b:pet-🦁.v1.auto	Lev chce auto.	cc52a9f4			pending			
+cs:b:pet-🦁.v1.o5	Lev chce venek.	dc54173c			pending			
+cs:b:pet-🦁.v1.o6	Lev chce dům.	734f3c53			pending			
+cs:b:pet-🦁.v1.o7	Lev chce postýlku.	3856cc64			pending			
+cs:b:pet-🦁.v1.o8	Lev chce nočník.	dbe96475			pending			
+cs:b:pet-🦁.v1.kolo	Lev chce kolo.	2f69fec0			pending			
+cs:b:pet-🦁.v1.les	Lev chce les.	54c2f9fb			pending			
+cs:b:pet-🦁.v1.nos	Lev chce nos.	b15f28eb			pending			
+cs:b:pet-🦁.v1.miska	Lev chce misku.	d069fab2			pending			
+cs:b:pet-🦁.v1.voda	Lev chce vodu.	d8322f95			pending			
+cs:b:pet-🦁.v1.vlak	Lev chce vlak.	6598b4db			pending			
+cs:b:pet-🦁.v1.fotbal	Lev chce fotbal.	ae45072d			pending			
+cs:b:pet-🦁.v1.banan	Lev chce banán.	28a17219			pending			
+cs:b:pet-🦁.v1.kniha	Lev chce knihu.	dec3db16			pending			
+cs:b:pet-🦁.v1.skola	Lev chce školu.	038d94d9			pending			
+cs:b:pet-🦁.v2.mleko	Lev jí mléko.	c5e7b44b			pending			
+cs:b:pet-🦁.v2.o2	Lev jí jablko.	8959c288			pending			
+cs:b:pet-🦁.v2.hracka	Lev jí hračku.	a5ff7523			pending			
+cs:b:pet-🦁.v2.auto	Lev jí auto.	74126c1e			pending			
+cs:b:pet-🦁.v2.o5	Lev jí venek.	dbda0782			pending			
+cs:b:pet-🦁.v2.o6	Lev jí dům.	046b87e9			pending			
+cs:b:pet-🦁.v2.o7	Lev jí postýlku.	f675a396			pending			
+cs:b:pet-🦁.v2.o8	Lev jí nočník.	b75f8af3			pending			
+cs:b:pet-🦁.v2.kolo	Lev jí kolo.	930e6a42			pending			
+cs:b:pet-🦁.v2.les	Lev jí les.	0e2053c9			pending			
+cs:b:pet-🦁.v2.nos	Lev jí nos.	73fe2919			pending			
+cs:b:pet-🦁.v2.miska	Lev jí misku.	ee7ce62c			pending			
+cs:b:pet-🦁.v2.voda	Lev jí vodu.	b1e08093			pending			
+cs:b:pet-🦁.v2.vlak	Lev jí vlak.	d368d899			pending			
+cs:b:pet-🦁.v2.fotbal	Lev jí fotbal.	30f88a3f			pending			
+cs:b:pet-🦁.v2.banan	Lev jí banán.	191d5adf			pending			
+cs:b:pet-🦁.v2.kniha	Lev jí knihu.	544e3bc8			pending			
+cs:b:pet-🦁.v2.skola	Lev jí školu.	5135cf23			pending			
+cs:b:pet-🦁.v3.mleko	Lev pije mléko.	7fe5181a			pending			
+cs:b:pet-🦁.v3.o2	Lev pije jablko.	ef356383			pending			
+cs:b:pet-🦁.v3.hracka	Lev pije hračku.	e60032b8			pending			
+cs:b:pet-🦁.v3.auto	Lev pije auto.	8aed5109			pending			
+cs:b:pet-🦁.v3.o5	Lev pije venek.	c6cffd63			pending			
+cs:b:pet-🦁.v3.o6	Lev pije dům.	45a85a80			pending			
+cs:b:pet-🦁.v3.o7	Lev pije postýlku.	7da385d9			pending			
+cs:b:pet-🦁.v3.o8	Lev pije nočník.	70a63e38			pending			
+cs:b:pet-🦁.v3.kolo	Lev pije kolo.	dde48679			pending			
+cs:b:pet-🦁.v3.les	Lev pije les.	43b0919c			pending			
+cs:b:pet-🦁.v3.nos	Lev pije nos.	6233bf28			pending			
+cs:b:pet-🦁.v3.miska	Lev pije misku.	3e4780d1			pending			
+cs:b:pet-🦁.v3.voda	Lev pije vodu.	4650f448			pending			
+cs:b:pet-🦁.v3.vlak	Lev pije vlak.	853ff4b2			pending			
+cs:b:pet-🦁.v3.fotbal	Lev pije fotbal.	22222444			pending			
+cs:b:pet-🦁.v3.banan	Lev pije banán.	7e200d5e			pending			
+cs:b:pet-🦁.v3.kniha	Lev pije knihu.	26213f7d			pending			
+cs:b:pet-🦁.v3.skola	Lev pije školu.	bcd51fda			pending			
+cs:b:pet-🦁.v4.mleko	Lev spí u mléka.	eb9fb935			pending			
+cs:b:pet-🦁.v4.o2	Lev spí u jablka.	b4d0b6de			pending			
+cs:b:pet-🦁.v4.hracka	Lev spí u hračky.	a55d8f8f			pending			
+cs:b:pet-🦁.v4.auto	Lev spí v autě.	158e0d4b			pending			
+cs:b:pet-🦁.v4.o5	Lev spí venku.	6a9e6ee7			pending			
+cs:b:pet-🦁.v4.o6	Lev spí doma.	28833821			pending			
+cs:b:pet-🦁.v4.o7	Lev spí v postýlce.	276aaaff			pending			
+cs:b:pet-🦁.v4.o8	Lev spí na nočníku.	d4e5ec52			pending			
+cs:b:pet-🦁.v4.kolo	Lev spí u kola.	7f76c084			pending			
+cs:b:pet-🦁.v4.les	Lev spí v lese.	7590eeb7			pending			
+cs:b:pet-🦁.v4.nos	Lev spí u nosu.	3b916d62			pending			
+cs:b:pet-🦁.v4.miska	Lev spí u misky.	5be36be8			pending			
+cs:b:pet-🦁.v4.voda	Lev spí u vody.	c8734c3f			pending			
+cs:b:pet-🦁.v4.vlak	Lev spí ve vlaku.	dc2f2918			pending			
+cs:b:pet-🦁.v4.fotbal	Lev spí u fotbalu.	409cf22c			pending			
+cs:b:pet-🦁.v4.banan	Lev spí u banánu.	05fd418c			pending			
+cs:b:pet-🦁.v4.kniha	Lev spí u knihy.	8f5d634c			pending			
+cs:b:pet-🦁.v4.skola	Lev spí ve škole.	21015d09			pending			
+cs:b:pet-🦁.v5.mleko	Lev jde mléko.	9ecb8793			pending			
+cs:b:pet-🦁.v5.o2	Lev jde jablko.	474f84d0			pending			
+cs:b:pet-🦁.v5.hracka	Lev jde pro hračku.	3651a6d8			pending			
+cs:b:pet-🦁.v5.auto	Lev jde do auta.	e9afd3a3			pending			
+cs:b:pet-🦁.v5.o5	Lev jde ven.	077fe056			pending			
+cs:b:pet-🦁.v5.o6	Lev jde domů.	b3977dc0			pending			
+cs:b:pet-🦁.v5.o7	Lev jde do postýlky.	d9cd47c1			pending			
+cs:b:pet-🦁.v5.o8	Lev jde na nočník.	57df8668			pending			
+cs:b:pet-🦁.v5.kolo	Lev jde ke kolu.	9ac00e72			pending			
+cs:b:pet-🦁.v5.les	Lev jde do lesa.	bf302099			pending			
+cs:b:pet-🦁.v5.nos	Lev jde k nosu.	ed083a83			pending			
+cs:b:pet-🦁.v5.miska	Lev jde k misce.	809a9a67			pending			
+cs:b:pet-🦁.v5.voda	Lev jde k vodě.	282acda4			pending			
+cs:b:pet-🦁.v5.vlak	Lev jde do vlaku.	7876a3e7			pending			
+cs:b:pet-🦁.v5.fotbal	Lev jde na fotbal.	d3261454			pending			
+cs:b:pet-🦁.v5.banan	Lev jde k banánu.	ed9c6245			pending			
+cs:b:pet-🦁.v5.kniha	Lev jde ke knize.	3f9fe574			pending			
+cs:b:pet-🦁.v5.skola	Lev jde do školy.	7cf7e892			pending			
+cs:b:pet-🦁.v6.mleko	Lev si hraje s mlékem.	b74af4f2			pending			
+cs:b:pet-🦁.v6.o2	Lev si hraje s jablkem.	cfa351e3			pending			
+cs:b:pet-🦁.v6.hracka	Lev si hraje s hračkou.	af08b8b2			pending			
+cs:b:pet-🦁.v6.auto	Lev si hraje s autem.	5c59d479			pending			
+cs:b:pet-🦁.v6.o5	Lev si hraje s venkem.	8accc713			pending			
+cs:b:pet-🦁.v6.o6	Lev si hraje s domem.	8f203283			pending			
+cs:b:pet-🦁.v6.o7	Lev si hraje s postýlkou.	af627a79			pending			
+cs:b:pet-🦁.v6.o8	Lev si hraje s nočníkem.	e82917a5			pending			
+cs:b:pet-🦁.v6.kolo	Lev si hraje s kolem.	1d2fa2ed			pending			
+cs:b:pet-🦁.v6.les	Lev si hraje v lese.	4e291591			pending			
+cs:b:pet-🦁.v6.nos	Lev si hraje s nosem.	ad8f36b3			pending			
+cs:b:pet-🦁.v6.miska	Lev si hraje s miskou.	d5378f5f			pending			
+cs:b:pet-🦁.v6.voda	Lev si hraje s vodou.	50a1c842			pending			
+cs:b:pet-🦁.v6.vlak	Lev si hraje s vlakem.	3f70ba33			pending			
+cs:b:pet-🦁.v6.fotbal	Lev si hraje s fotbalem.	b0de7ff1			pending			
+cs:b:pet-🦁.v6.banan	Lev si hraje s banánem.	80218a91			pending			
+cs:b:pet-🦁.v6.kniha	Lev si hraje s knihou.	53f4c61b			pending			
+cs:b:pet-🦁.v6.skola	Lev si hraje se školou.	4c98aca7			pending			
+cs:b:pet-🐍.v1.mleko	Had chce mléko.	6f9aa2b3			pending			
+cs:b:pet-🐍.v1.o2	Had chce jablko.	c00ca5f0			pending			
+cs:b:pet-🐍.v1.hracka	Had chce hračku.	f82e031b			pending			
+cs:b:pet-🐍.v1.auto	Had chce auto.	c2f07436			pending			
+cs:b:pet-🐍.v1.o5	Had chce venek.	ec2bcbfa			pending			
+cs:b:pet-🐍.v1.o6	Had chce dům.	69eb36e1			pending			
+cs:b:pet-🐍.v1.o7	Had chce postýlku.	d9e882de			pending			
+cs:b:pet-🐍.v1.o8	Had chce nočník.	b5aaa2fb			pending			
+cs:b:pet-🐍.v1.kolo	Had chce kolo.	6f50476a			pending			
+cs:b:pet-🐍.v1.les	Had chce les.	a4f081d1			pending			
+cs:b:pet-🐍.v1.nos	Had chce nos.	f5d1a031			pending			
+cs:b:pet-🐍.v1.miska	Had chce misku.	df1b2034			pending			
+cs:b:pet-🐍.v1.voda	Had chce vodu.	5b140d2b			pending			
+cs:b:pet-🐍.v1.vlak	Had chce vlak.	7d51d561			pending			
+cs:b:pet-🐍.v1.fotbal	Had chce fotbal.	82acdc67			pending			
+cs:b:pet-🐍.v1.banan	Had chce banán.	0a0ad977			pending			
+cs:b:pet-🐍.v1.kniha	Had chce knihu.	49de8660			pending			
+cs:b:pet-🐍.v1.skola	Had chce školu.	a1496cab			pending			
+cs:b:pet-🐍.v2.mleko	Had jí mléko.	09bb6a61			pending			
+cs:b:pet-🐍.v2.o2	Had jí jablko.	78be78da			pending			
+cs:b:pet-🐍.v2.hracka	Had jí hračku.	417b5915			pending			
+cs:b:pet-🐍.v2.auto	Had jí auto.	9d5ec24c			pending			
+cs:b:pet-🐍.v2.o5	Had jí venek.	734fa634			pending			
+cs:b:pet-🐍.v2.o6	Had jí dům.	36fed20b			pending			
+cs:b:pet-🐍.v2.o7	Had jí postýlku.	668de9ac			pending			
+cs:b:pet-🐍.v2.o8	Had jí nočník.	36a970dd			pending			
+cs:b:pet-🐍.v2.kolo	Had jí kolo.	9e8d66e8			pending			
+cs:b:pet-🐍.v2.les	Had jí les.	975ca203			pending			
+cs:b:pet-🐍.v2.nos	Had jí nos.	c401e423			pending			
+cs:b:pet-🐍.v2.miska	Had jí misku.	1f81f9fa			pending			
+cs:b:pet-🐍.v2.voda	Had jí vodu.	0d39e7ad			pending			
+cs:b:pet-🐍.v2.vlak	Had jí vlak.	d2e83243			pending			
+cs:b:pet-🐍.v2.fotbal	Had jí fotbal.	1f4c01d5			pending			
+cs:b:pet-🐍.v2.banan	Had jí banán.	74d95491			pending			
+cs:b:pet-🐍.v2.kniha	Had jí knihu.	2affe2ee			pending			
+cs:b:pet-🐍.v2.skola	Had jí školu.	647fd8c1			pending			
+cs:b:pet-🐍.v3.mleko	Had pije mléko.	be7e3ff8			pending			
+cs:b:pet-🐍.v3.o2	Had pije jablko.	6bb24f95			pending			
+cs:b:pet-🐍.v3.hracka	Had pije hračku.	2d8bfffa			pending			
+cs:b:pet-🐍.v3.auto	Had pije auto.	67a80ce7			pending			
+cs:b:pet-🐍.v3.o5	Had pije venek.	8e0180bd			pending			
+cs:b:pet-🐍.v3.o6	Had pije dům.	12776c4a			pending			
+cs:b:pet-🐍.v3.o7	Had pije postýlku.	0bfa6dcf			pending			
+cs:b:pet-🐍.v3.o8	Had pije nočník.	52740d62			pending			
+cs:b:pet-🐍.v3.kolo	Had pije kolo.	668a91b7			pending			
+cs:b:pet-🐍.v3.les	Had pije les.	6a57c166			pending			
+cs:b:pet-🐍.v3.nos	Had pije nos.	fb8dc2ca			pending			
+cs:b:pet-🐍.v3.miska	Had pije misku.	fde93e3f			pending			
+cs:b:pet-🐍.v3.voda	Had pije vodu.	232f4ee2			pending			
+cs:b:pet-🐍.v3.vlak	Had pije vlak.	1807d1f4			pending			
+cs:b:pet-🐍.v3.fotbal	Had pije fotbal.	2fe9c082			pending			
+cs:b:pet-🐍.v3.banan	Had pije banán.	bc25d4e8			pending			
+cs:b:pet-🐍.v3.kniha	Had pije knihu.	83f4a52b			pending			
+cs:b:pet-🐍.v3.skola	Had pije školu.	d95209e0			pending			
+cs:b:pet-🐍.v4.mleko	Had spí u mléka.	a3523753			pending			
+cs:b:pet-🐍.v4.o2	Had spí u jablka.	d5e47ae0			pending			
+cs:b:pet-🐍.v4.hracka	Had spí u hračky.	63f06d3d			pending			
+cs:b:pet-🐍.v4.auto	Had spí v autě.	55893431			pending			
+cs:b:pet-🐍.v4.o5	Had spí venku.	16b8052d			pending			
+cs:b:pet-🐍.v4.o6	Had spí doma.	fa4d6a1b			pending			
+cs:b:pet-🐍.v4.o7	Had spí v postýlce.	a24db7bd			pending			
+cs:b:pet-🐍.v4.o8	Had spí na nočníku.	ca621424			pending			
+cs:b:pet-🐍.v4.kolo	Had spí u kola.	c345fc7a			pending			
+cs:b:pet-🐍.v4.les	Had spí v lese.	2a935895			pending			
+cs:b:pet-🐍.v4.nos	Had spí u nosu.	90fcd8e4			pending			
+cs:b:pet-🐍.v4.miska	Had spí u misky.	f61b698a			pending			
+cs:b:pet-🐍.v4.voda	Had spí u vody.	8f2313c5			pending			
+cs:b:pet-🐍.v4.vlak	Had spí ve vlaku.	ebf8860a			pending			
+cs:b:pet-🐍.v4.fotbal	Had spí u fotbalu.	fcd0f70a			pending			
+cs:b:pet-🐍.v4.banan	Had spí u banánu.	98e0e24e			pending			
+cs:b:pet-🐍.v4.kniha	Had spí u knihy.	06112066			pending			
+cs:b:pet-🐍.v4.skola	Had spí ve škole.	17ebcf9b			pending			
+cs:b:pet-🐍.v5.mleko	Had jde mléko.	df490dcd			pending			
+cs:b:pet-🐍.v5.o2	Had jde jablko.	4ad33206			pending			
+cs:b:pet-🐍.v5.hracka	Had jde pro hračku.	ffd89736			pending			
+cs:b:pet-🐍.v5.auto	Had jde do auta.	9096a2e9			pending			
+cs:b:pet-🐍.v5.o5	Had jde ven.	39088008			pending			
+cs:b:pet-🐍.v5.o6	Had jde domů.	b9de7bfe			pending			
+cs:b:pet-🐍.v5.o7	Had jde do postýlky.	b4471f53			pending			
+cs:b:pet-🐍.v5.o8	Had jde na nočník.	ca883b1e			pending			
+cs:b:pet-🐍.v5.kolo	Had jde ke kolu.	b166c9d0			pending			
+cs:b:pet-🐍.v5.les	Had jde do lesa.	e77b945b			pending			
+cs:b:pet-🐍.v5.nos	Had jde k nosu.	2d16e791			pending			
+cs:b:pet-🐍.v5.miska	Had jde k misce.	cf8e6fd5			pending			
+cs:b:pet-🐍.v5.voda	Had jde k vodě.	ac3a157a			pending			
+cs:b:pet-🐍.v5.vlak	Had jde do vlaku.	f5b44091			pending			
+cs:b:pet-🐍.v5.fotbal	Had jde na fotbal.	30b12516			pending			
+cs:b:pet-🐍.v5.banan	Had jde k banánu.	818e5053			pending			
+cs:b:pet-🐍.v5.kniha	Had jde ke knize.	a076d1fa			pending			
+cs:b:pet-🐍.v5.skola	Had jde do školy.	24f5e7c4			pending			
+cs:b:pet-🐍.v6.mleko	Had si hraje s mlékem.	ce38e8dc			pending			
+cs:b:pet-🐍.v6.o2	Had si hraje s jablkem.	c1d980f1			pending			
+cs:b:pet-🐍.v6.hracka	Had si hraje s hračkou.	696dc228			pending			
+cs:b:pet-🐍.v6.auto	Had si hraje s autem.	ecb04d3b			pending			
+cs:b:pet-🐍.v6.o5	Had si hraje s venkem.	03152f4d			pending			
+cs:b:pet-🐍.v6.o6	Had si hraje s domem.	9ca31cb9			pending			
+cs:b:pet-🐍.v6.o7	Had si hraje s postýlkou.	24150723			pending			
+cs:b:pet-🐍.v6.o8	Had si hraje s nočníkem.	e127f34b			pending			
+cs:b:pet-🐍.v6.kolo	Had si hraje s kolem.	d0f57a67			pending			
+cs:b:pet-🐍.v6.les	Had si hraje v lese.	3103ed13			pending			
+cs:b:pet-🐍.v6.nos	Had si hraje s nosem.	83e6adc9			pending			
+cs:b:pet-🐍.v6.miska	Had si hraje s miskou.	c03d4311			pending			
+cs:b:pet-🐍.v6.voda	Had si hraje s vodou.	5e0e93e0			pending			
+cs:b:pet-🐍.v6.vlak	Had si hraje s vlakem.	bbd231e1			pending			
+cs:b:pet-🐍.v6.fotbal	Had si hraje s fotbalem.	df37139b			pending			
+cs:b:pet-🐍.v6.banan	Had si hraje s banánem.	49e1f02f			pending			
+cs:b:pet-🐍.v6.kniha	Had si hraje s knihou.	e36090c5			pending			
+cs:b:pet-🐍.v6.skola	Had si hraje se školou.	e784ea75			pending			
+cs:p:🐭.v3.mleko	Myš pije mléko.	0f420014			pending			
+cs:p:🐭.v2.o2	Myš jí jablko.	0fb8a986			pending			
+cs:p:🐭.v6.auto	Myš si hraje s autem.	160355cf			pending			
+cs:p:🐭.v6.kolo	Myš si hraje s kolem.	6022527b			pending			
+cs:p:🐭.v2.miska	Myš jí misku.	13f9524e			pending			
+cs:p:🐭.v3.voda	Myš pije vodu.	5760ca8e			pending			
+cs:p:🐭.v6.vlak	Myš si hraje s vlakem.	4c53d86d			pending			
+cs:p:🐭.v6.fotbal	Myš si hraje s fotbalem.	b885b4c7			pending			
+cs:p:🐭.v2.banan	Myš jí banán.	2d11d5f5			pending			
+cs:p:🐭.v6.kniha	Myš si hraje s knihou.	eac52f49			pending			
+cs:p:🐭.v2.-	Myš jí.	204978b3			pending			
+cs:p:🐭.v3.-	Myš pije.	89f9456a			pending			
+cs:p:🐭.v6.-	Myš si hraje.	ff6eb7d8			pending			
+cs:p:🐯.v3.mleko	Tygr pije mléko.	3f903261			pending			
+cs:p:🐯.v2.o2	Tygr jí jablko.	320be6dd			pending			
+cs:p:🐯.v6.auto	Tygr si hraje s autem.	748da50e			pending			
+cs:p:🐯.v6.kolo	Tygr si hraje s kolem.	432453be			pending			
+cs:p:🐯.v2.miska	Tygr jí misku.	321df8e7			pending			
+cs:p:🐯.v3.voda	Tygr pije vodu.	0a2effad			pending			
+cs:p:🐯.v6.vlak	Tygr si hraje s vlakem.	4c7beff2			pending			
+cs:p:🐯.v6.fotbal	Tygr si hraje s fotbalem.	96620d90			pending			
+cs:p:🐯.v2.banan	Tygr jí banán.	8f654f80			pending			
+cs:p:🐯.v6.kniha	Tygr si hraje s knihou.	cf0db0da			pending			
+cs:p:🐯.v2.-	Tygr jí.	ccda8e0e			pending			
+cs:p:🐯.v3.-	Tygr pije.	b3d411af			pending			
+cs:p:🐯.v6.-	Tygr si hraje.	dabeb489			pending			
+cs:p:👧.v3.mleko	Ema pije mléko.	42192f28			pending			
+cs:p:👧.v2.o2	Ema jí jablko.	bc5abc0a			pending			
+cs:p:👧.v6.auto	Ema si hraje s autem.	309ec7eb			pending			
+cs:p:👧.v6.kolo	Ema si hraje s kolem.	6f559917			pending			
+cs:p:👧.v2.miska	Ema jí misku.	f80010ca			pending			
+cs:p:👧.v3.voda	Ema pije vodu.	f31af672			pending			
+cs:p:👧.v6.vlak	Ema si hraje s vlakem.	6dcaed51			pending			
+cs:p:👧.v6.fotbal	Ema si hraje s fotbalem.	a195cb4b			pending			
+cs:p:👧.v2.banan	Ema jí banán.	47ca3de1			pending			
+cs:p:👧.v6.kniha	Ema si hraje s knihou.	b29a1ef5			pending			
+cs:p:👧.v2.-	Ema jí.	8c705abf			pending			
+cs:p:👧.v3.-	Ema pije.	6851bce6			pending			
+cs:p:👧.v6.-	Ema si hraje.	73d05a14			pending			
+cs:p:🐺.v3.mleko	Vlk pije mléko.	26cd1e22			pending			
+cs:p:🐺.v2.o2	Vlk jí jablko.	5e51a4d0			pending			
+cs:p:🐺.v6.auto	Vlk si hraje s autem.	4a2a3eb1			pending			
+cs:p:🐺.v6.kolo	Vlk si hraje s kolem.	0d6126d5			pending			
+cs:p:🐺.v2.miska	Vlk jí misku.	b4974314			pending			
+cs:p:🐺.v3.voda	Vlk pije vodu.	93933920			pending			
+cs:p:🐺.v6.vlak	Vlk si hraje s vlakem.	5a1ca9db			pending			
+cs:p:🐺.v6.fotbal	Vlk si hraje s fotbalem.	84942f19			pending			
+cs:p:🐺.v2.banan	Vlk jí banán.	8bc6d6d7			pending			
+cs:p:🐺.v6.kniha	Vlk si hraje s knihou.	a4ca4683			pending			
+cs:p:🐺.v2.-	Vlk jí.	26ff0081			pending			
+cs:p:🐺.v3.-	Vlk pije.	6240d650			pending			
+cs:p:🐺.v6.-	Vlk si hraje.	c67bdeb6			pending			
+cs:p:🐟.v3.mleko	Ryba pije mléko.	71bc803f			pending			
+cs:p:🐟.v2.o2	Ryba jí jablko.	2a0d53af			pending			
+cs:p:🐟.v6.auto	Ryba si hraje s autem.	20b54f10			pending			
+cs:p:🐟.v6.kolo	Ryba si hraje s kolem.	fe9db450			pending			
+cs:p:🐟.v2.miska	Ryba jí misku.	46cecf35			pending			
+cs:p:🐟.v3.voda	Ryba pije vodu.	e25efce7			pending			
+cs:p:🐟.v6.vlak	Ryba si hraje s vlakem.	74de3ad8			pending			
+cs:p:🐟.v6.fotbal	Ryba si hraje s fotbalem.	a4ca897a			pending			
+cs:p:🐟.v2.banan	Ryba jí banán.	db317662			pending			
+cs:p:🐟.v6.kniha	Ryba si hraje s knihou.	a1e8aeec			pending			
+cs:p:🐟.v2.-	Ryba jí.	83e3535c			pending			
+cs:p:🐟.v3.-	Ryba pije.	376aac25			pending			
+cs:p:🐟.v6.-	Ryba si hraje.	0f68e157			pending			
+cs:p:🦓.v3.mleko	Zebra pije mléko.	bd1307ad			pending			
+cs:p:🦓.v2.o2	Zebra jí jablko.	f0ed5b79			pending			
+cs:p:🦓.v6.auto	Zebra si hraje s autem.	4ff48992			pending			
+cs:p:🦓.v6.kolo	Zebra si hraje s kolem.	548d5ea2			pending			
+cs:p:🦓.v2.miska	Zebra jí misku.	f613636b			pending			
+cs:p:🦓.v3.voda	Zebra pije vodu.	3ded3749			pending			
+cs:p:🦓.v6.vlak	Zebra si hraje s vlakem.	16bd780e			pending			
+cs:p:🦓.v6.fotbal	Zebra si hraje s fotbalem.	c05ec1ac			pending			
+cs:p:🦓.v2.banan	Zebra jí banán.	ab658444			pending			
+cs:p:🦓.v6.kniha	Zebra si hraje s knihou.	42c07fde			pending			
+cs:p:🦓.v2.-	Zebra jí.	b9949b72			pending			
+cs:p:🦓.v3.-	Zebra pije.	9717be13			pending			
+cs:p:🦓.v6.-	Zebra si hraje.	972f8b9d			pending			
+cs:p:🐱.v3.mleko	Kočka pije mléko.	a318b578			pending			
+cs:p:🐱.v2.o2	Kočka jí jablko.	d4055f5a			pending			
+cs:p:🐱.v6.auto	Kočka si hraje s autem.	ca0c8dbb			pending			
+cs:p:🐱.v6.kolo	Kočka si hraje s kolem.	ae51bae7			pending			
+cs:p:🐱.v2.miska	Kočka jí misku.	2ea9897a			pending			
+cs:p:🐱.v3.voda	Kočka pije vodu.	c7372862			pending			
+cs:p:🐱.v6.vlak	Kočka si hraje s vlakem.	b40bbb61			pending			
+cs:p:🐱.v6.fotbal	Kočka si hraje s fotbalem.	2d57791b			pending			
+cs:p:🐱.v2.banan	Kočka jí banán.	9d4d9911			pending			
+cs:p:🐱.v6.kniha	Kočka si hraje s knihou.	db9a1a45			pending			
+cs:p:🐱.v2.-	Kočka jí.	8231f52f			pending			
+cs:p:🐱.v3.-	Kočka pije.	abfde876			pending			
+cs:p:🐱.v6.-	Kočka si hraje.	116257c4			pending			
+cs:p:🦁.v3.mleko	Lev pije mléko.	7fe5181a			pending			
+cs:p:🦁.v2.o2	Lev jí jablko.	8959c288			pending			
+cs:p:🦁.v6.auto	Lev si hraje s autem.	5c59d479			pending			
+cs:p:🦁.v6.kolo	Lev si hraje s kolem.	1d2fa2ed			pending			
+cs:p:🦁.v2.miska	Lev jí misku.	ee7ce62c			pending			
+cs:p:🦁.v3.voda	Lev pije vodu.	4650f448			pending			
+cs:p:🦁.v6.vlak	Lev si hraje s vlakem.	3f70ba33			pending			
+cs:p:🦁.v6.fotbal	Lev si hraje s fotbalem.	b0de7ff1			pending			
+cs:p:🦁.v2.banan	Lev jí banán.	191d5adf			pending			
+cs:p:🦁.v6.kniha	Lev si hraje s knihou.	53f4c61b			pending			
+cs:p:🦁.v2.-	Lev jí.	c719a649			pending			
+cs:p:🦁.v3.-	Lev pije.	d38cee18			pending			
+cs:p:🦁.v6.-	Lev si hraje.	85fd596e			pending			
+cs:p:🐍.v3.mleko	Had pije mléko.	be7e3ff8			pending			
+cs:p:🐍.v2.o2	Had jí jablko.	78be78da			pending			
+cs:p:🐍.v6.auto	Had si hraje s autem.	ecb04d3b			pending			
+cs:p:🐍.v6.kolo	Had si hraje s kolem.	d0f57a67			pending			
+cs:p:🐍.v2.miska	Had jí misku.	1f81f9fa			pending			
+cs:p:🐍.v3.voda	Had pije vodu.	232f4ee2			pending			
+cs:p:🐍.v6.vlak	Had si hraje s vlakem.	bbd231e1			pending			
+cs:p:🐍.v6.fotbal	Had si hraje s fotbalem.	df37139b			pending			
+cs:p:🐍.v2.banan	Had jí banán.	74d95491			pending			
+cs:p:🐍.v6.kniha	Had si hraje s knihou.	e36090c5			pending			
+cs:p:🐍.v2.-	Had jí.	55d709af			pending			
+cs:p:🐍.v3.-	Had pije.	23393ff6			pending			
+cs:p:🐍.v6.-	Had si hraje.	a0dba744			pending			

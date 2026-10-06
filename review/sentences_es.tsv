@@ -1,0 +1,1651 @@
+id	text	hash	llm	llm_note	human	human_note	reviewer	date
+es:b:s1.v1.o1	Yo quiero leche.	ecdb2d63			pending			
+es:b:s1.v1.o2	Yo quiero una manzana.	ad1002e8			pending			
+es:b:s1.v1.o3	Yo quiero un juguete.	8ba4d282			pending			
+es:b:s1.v1.o4	Yo quiero el coche.	e6de6d05			pending			
+es:b:s1.v1.o5	Yo quiero fuera.	af02c729			pending			
+es:b:s1.v1.casa	Yo quiero casa.	b08464e2			pending			
+es:b:s1.v1.cama	Yo quiero la cama.	51cf0bbb			pending			
+es:b:s1.v1.o8	Yo quiero el baño.	cda69f30			pending			
+es:b:s1.v1.luna	Yo quiero la luna.	b33c176b			pending			
+es:b:s1.v1.galleta	Yo quiero una galleta.	45b6ed88			pending			
+es:b:s1.v1.platano	Yo quiero un plátano.	9fe7c202			pending			
+es:b:s1.v1.zapato	Yo quiero un zapato.	6e4cb4c0			pending			
+es:b:s1.v1.manzana	Yo quiero una manzana.	ad1002e8			pending			
+es:b:s1.v2.o1	Yo como leche.	9faa6fe0			pending			
+es:b:s1.v2.o2	Yo como una manzana.	7c20c257			pending			
+es:b:s1.v2.o3	Yo como un juguete.	667295b7			pending			
+es:b:s1.v2.o4	Yo como el coche.	4060e360			pending			
+es:b:s1.v2.o5	Yo como fuera.	4b0f46c6			pending			
+es:b:s1.v2.casa	Yo como casa.	64bfeedb			pending			
+es:b:s1.v2.cama	Yo como la cama.	c069f88c			pending			
+es:b:s1.v2.o8	Yo como el baño.	8b5f12a7			pending			
+es:b:s1.v2.luna	Yo como la luna.	57674574			pending			
+es:b:s1.v2.galleta	Yo como una galleta.	e15dff47			pending			
+es:b:s1.v2.platano	Yo como un plátano.	68a1f97b			pending			
+es:b:s1.v2.zapato	Yo como un zapato.	7e9b0c73			pending			
+es:b:s1.v2.manzana	Yo como una manzana.	7c20c257			pending			
+es:b:s1.v3.o1	Yo bebo leche.	6dd010d0			pending			
+es:b:s1.v3.o2	Yo bebo una manzana.	b3570c47			pending			
+es:b:s1.v3.o3	Yo bebo un juguete.	67a0a847			pending			
+es:b:s1.v3.o4	Yo bebo el coche.	ffe35730			pending			
+es:b:s1.v3.o5	Yo bebo fuera.	1116e1f6			pending			
+es:b:s1.v3.casa	Yo bebo casa.	13a426cb			pending			
+es:b:s1.v3.cama	Yo bebo la cama.	a297de7c			pending			
+es:b:s1.v3.o8	Yo bebo el baño.	961a42f7			pending			
+es:b:s1.v3.luna	Yo bebo la luna.	f9c1dc44			pending			
+es:b:s1.v3.galleta	Yo bebo una galleta.	982743b7			pending			
+es:b:s1.v3.platano	Yo bebo un plátano.	8766b4eb			pending			
+es:b:s1.v3.zapato	Yo bebo un zapato.	93c36c23			pending			
+es:b:s1.v3.manzana	Yo bebo una manzana.	b3570c47			pending			
+es:b:s1.v4.o1	Yo duermo leche.	281f7d82			pending			
+es:b:s1.v4.o2	Yo duermo una manzana.	32ff36c5			pending			
+es:b:s1.v4.o3	Yo duermo con un juguete.	707a34c1			pending			
+es:b:s1.v4.o4	Yo duermo en el coche.	e8d35dcb			pending			
+es:b:s1.v4.o5	Yo duermo fuera.	99a0770c			pending			
+es:b:s1.v4.casa	Yo duermo en casa.	d20ff074			pending			
+es:b:s1.v4.cama	Yo duermo en la cama.	5e830d05			pending			
+es:b:s1.v4.o8	Yo duermo en el baño.	dd0c944e			pending			
+es:b:s1.v4.luna	Yo duermo en la luna.	07827a8d			pending			
+es:b:s1.v4.galleta	Yo duermo con una galleta.	e8ba34f1			pending			
+es:b:s1.v4.platano	Yo duermo con un plátano.	310ef09d			pending			
+es:b:s1.v4.zapato	Yo duermo en el zapato.	f0036568			pending			
+es:b:s1.v4.manzana	Yo duermo con una manzana.	e8e42b21			pending			
+es:b:s1.v5.o1	Yo voy leche.	30f7cb7a			pending			
+es:b:s1.v5.o2	Yo voy una manzana.	e6a5670d			pending			
+es:b:s1.v5.o3	Yo voy un juguete.	78c851dd			pending			
+es:b:s1.v5.o4	Yo voy en coche.	fecb8258			pending			
+es:b:s1.v5.o5	Yo voy fuera.	346f2cc4			pending			
+es:b:s1.v5.casa	Yo voy a casa.	7776061a			pending			
+es:b:s1.v5.cama	Yo voy a la cama.	c450f9c3			pending			
+es:b:s1.v5.o8	Yo voy al baño.	dc74ddb9			pending			
+es:b:s1.v5.luna	Yo voy a la luna.	fb8f2683			pending			
+es:b:s1.v5.galleta	Yo voy a la galleta.	741c0413			pending			
+es:b:s1.v5.platano	Yo voy al plátano.	ca2c5307			pending			
+es:b:s1.v5.zapato	Yo voy al zapato.	add5cb27			pending			
+es:b:s1.v5.manzana	Yo voy a la manzana.	17935ac3			pending			
+es:b:s1.v6.o1	Yo juego con leche.	9629e53e			pending			
+es:b:s1.v6.o2	Yo juego con una manzana.	48cacf01			pending			
+es:b:s1.v6.o3	Yo juego con un juguete.	eb719c21			pending			
+es:b:s1.v6.o4	Yo juego con el coche.	26655cda			pending			
+es:b:s1.v6.o5	Yo juego fuera.	f0841fec			pending			
+es:b:s1.v6.casa	Yo juego en casa.	c3cec0d4			pending			
+es:b:s1.v6.cama	Yo juego en la cama.	a3c89365			pending			
+es:b:s1.v6.o8	Yo juego en el baño.	1d5a032e			pending			
+es:b:s1.v6.luna	Yo juego con la luna.	16407e3a			pending			
+es:b:s1.v6.galleta	Yo juego con una galleta.	cd8c66d1			pending			
+es:b:s1.v6.platano	Yo juego con un plátano.	54e0e2fd			pending			
+es:b:s1.v6.zapato	Yo juego con un zapato.	0d0416f1			pending			
+es:b:s1.v6.manzana	Yo juego con una manzana.	48cacf01			pending			
+es:b:s2.v1.o1	Mamá quiere leche.	a9d5181d			pending			
+es:b:s2.v1.o2	Mamá quiere una manzana.	8adce936			pending			
+es:b:s2.v1.o3	Mamá quiere un juguete.	15d384d0			pending			
+es:b:s2.v1.o4	Mamá quiere el coche.	61eb843b			pending			
+es:b:s2.v1.o5	Mamá quiere fuera.	47672be7			pending			
+es:b:s2.v1.casa	Mamá quiere casa.	c17c5444			pending			
+es:b:s2.v1.cama	Mamá quiere la cama.	c1182855			pending			
+es:b:s2.v1.o8	Mamá quiere el baño.	eace867e			pending			
+es:b:s2.v1.luna	Mamá quiere la luna.	8f1bc2fd			pending			
+es:b:s2.v1.galleta	Mamá quiere una galleta.	85d22f8e			pending			
+es:b:s2.v1.platano	Mamá quiere un plátano.	550c0210			pending			
+es:b:s2.v1.zapato	Mamá quiere un zapato.	2ebf00e2			pending			
+es:b:s2.v1.manzana	Mamá quiere una manzana.	8adce936			pending			
+es:b:s2.v2.o1	Mamá come leche.	4911fa8e			pending			
+es:b:s2.v2.o2	Mamá come una manzana.	af453c51			pending			
+es:b:s2.v2.o3	Mamá come un juguete.	8ba69351			pending			
+es:b:s2.v2.o4	Mamá come el coche.	1702c8ca			pending			
+es:b:s2.v2.o5	Mamá come fuera.	00feaa48			pending			
+es:b:s2.v2.casa	Mamá come casa.	cacac529			pending			
+es:b:s2.v2.cama	Mamá come la cama.	9f55c492			pending			
+es:b:s2.v2.o8	Mamá come el baño.	7eb0b489			pending			
+es:b:s2.v2.luna	Mamá come la luna.	3de24b6a			pending			
+es:b:s2.v2.galleta	Mamá come una galleta.	93a93f61			pending			
+es:b:s2.v2.platano	Mamá come un plátano.	8d1e500d			pending			
+es:b:s2.v2.zapato	Mamá come un zapato.	2de97d41			pending			
+es:b:s2.v2.manzana	Mamá come una manzana.	af453c51			pending			
+es:b:s2.v3.o1	Mamá bebe leche.	e220289e			pending			
+es:b:s2.v3.o2	Mamá bebe una manzana.	8e2156e1			pending			
+es:b:s2.v3.o3	Mamá bebe un juguete.	69d50f81			pending			
+es:b:s2.v3.o4	Mamá bebe el coche.	8f687cba			pending			
+es:b:s2.v3.o5	Mamá bebe fuera.	c99b6e18			pending			
+es:b:s2.v3.casa	Mamá bebe casa.	92333e39			pending			
+es:b:s2.v3.cama	Mamá bebe la cama.	5837db62			pending			
+es:b:s2.v3.o8	Mamá bebe el baño.	85ff43b9			pending			
+es:b:s2.v3.luna	Mamá bebe la luna.	100d981a			pending			
+es:b:s2.v3.galleta	Mamá bebe una galleta.	78b7dcb1			pending			
+es:b:s2.v3.platano	Mamá bebe un plátano.	401c6b5d			pending			
+es:b:s2.v3.zapato	Mamá bebe un zapato.	958eefd1			pending			
+es:b:s2.v3.manzana	Mamá bebe una manzana.	8e2156e1			pending			
+es:b:s2.v4.o1	Mamá duerme leche.	112bd1d4			pending			
+es:b:s2.v4.o2	Mamá duerme una manzana.	e3b04a5b			pending			
+es:b:s2.v4.o3	Mamá duerme con un juguete.	318c67a3			pending			
+es:b:s2.v4.o4	Mamá duerme en el coche.	c534e6d1			pending			
+es:b:s2.v4.o5	Mamá duerme fuera.	4c1184ba			pending			
+es:b:s2.v4.casa	Mamá duerme en casa.	adb49a3e			pending			
+es:b:s2.v4.cama	Mamá duerme en la cama.	298a106f			pending			
+es:b:s2.v4.o8	Mamá duerme en el baño.	5eacefac			pending			
+es:b:s2.v4.luna	Mamá duerme en la luna.	39bd4ccf			pending			
+es:b:s2.v4.galleta	Mamá duerme con una galleta.	dca5bcb3			pending			
+es:b:s2.v4.platano	Mamá duerme con un plátano.	022ae327			pending			
+es:b:s2.v4.zapato	Mamá duerme en el zapato.	6c1f5eee			pending			
+es:b:s2.v4.manzana	Mamá duerme con una manzana.	9cc50a63			pending			
+es:b:s2.v5.o1	Mamá va leche.	d55b4f69			pending			
+es:b:s2.v5.o2	Mamá va una manzana.	37df0052			pending			
+es:b:s2.v5.o3	Mamá va un juguete.	a2ff7c7c			pending			
+es:b:s2.v5.o4	Mamá va en coche.	1486ce19			pending			
+es:b:s2.v5.o5	Mamá va fuera.	7f364a43			pending			
+es:b:s2.v5.casa	Mamá va a casa.	a03b30f3			pending			
+es:b:s2.v5.cama	Mamá va a la cama.	25a61814			pending			
+es:b:s2.v5.o8	Mamá va al baño.	aee8b486			pending			
+es:b:s2.v5.luna	Mamá va a la luna.	4b6609ec			pending			
+es:b:s2.v5.galleta	Mamá va a la galleta.	1682127e			pending			
+es:b:s2.v5.platano	Mamá va al plátano.	c63d4992			pending			
+es:b:s2.v5.zapato	Mamá va al zapato.	8eb72090			pending			
+es:b:s2.v5.manzana	Mamá va a la manzana.	9a6d2f66			pending			
+es:b:s2.v6.o1	Mamá juega con leche.	23cdd8a0			pending			
+es:b:s2.v6.o2	Mamá juega con una manzana.	c0f31e97			pending			
+es:b:s2.v6.o3	Mamá juega con un juguete.	ea59eef7			pending			
+es:b:s2.v6.o4	Mamá juega con el coche.	68399fa0			pending			
+es:b:s2.v6.o5	Mamá juega fuera.	c105c16e			pending			
+es:b:s2.v6.casa	Mamá juega en casa.	c250fb0a			pending			
+es:b:s2.v6.cama	Mamá juega en la cama.	50466573			pending			
+es:b:s2.v6.o8	Mamá juega en el baño.	d0877648			pending			
+es:b:s2.v6.luna	Mamá juega con la luna.	027930b4			pending			
+es:b:s2.v6.galleta	Mamá juega con una galleta.	c3d96087			pending			
+es:b:s2.v6.platano	Mamá juega con un plátano.	352a7fbb			pending			
+es:b:s2.v6.zapato	Mamá juega con un zapato.	6d6c91b3			pending			
+es:b:s2.v6.manzana	Mamá juega con una manzana.	c0f31e97			pending			
+es:b:s3.v1.o1	Papá quiere leche.	e7a05eb9			pending			
+es:b:s3.v1.o2	Papá quiere una manzana.	cee2e462			pending			
+es:b:s3.v1.o3	Papá quiere un juguete.	7f62c0ec			pending			
+es:b:s3.v1.o4	Papá quiere el coche.	237fc437			pending			
+es:b:s3.v1.o5	Papá quiere fuera.	e51a4f93			pending			
+es:b:s3.v1.casa	Papá quiere casa.	505b37c0			pending			
+es:b:s3.v1.cama	Papá quiere la cama.	86f1a3a9			pending			
+es:b:s3.v1.o8	Papá quiere el baño.	1e4c97ba			pending			
+es:b:s3.v1.luna	Papá quiere la luna.	6a70c2b1			pending			
+es:b:s3.v1.galleta	Papá quiere una galleta.	903d9b4a			pending			
+es:b:s3.v1.platano	Papá quiere un plátano.	8796f25c			pending			
+es:b:s3.v1.zapato	Papá quiere un zapato.	77ae09a6			pending			
+es:b:s3.v1.manzana	Papá quiere una manzana.	cee2e462			pending			
+es:b:s3.v2.o1	Papá come leche.	8622ee4a			pending			
+es:b:s3.v2.o2	Papá come una manzana.	3d8710dd			pending			
+es:b:s3.v2.o3	Papá come un juguete.	53062ccd			pending			
+es:b:s3.v2.o4	Papá come el coche.	9de5c2a6			pending			
+es:b:s3.v2.o5	Papá come fuera.	b909d5d4			pending			
+es:b:s3.v2.casa	Papá come casa.	4bf48395			pending			
+es:b:s3.v2.cama	Papá come la cama.	767c9976			pending			
+es:b:s3.v2.o8	Papá come el baño.	3f59abc5			pending			
+es:b:s3.v2.luna	Papá come la luna.	bc67577e			pending			
+es:b:s3.v2.galleta	Papá come una galleta.	f2b76fad			pending			
+es:b:s3.v2.platano	Papá come un plátano.	d23ace39			pending			
+es:b:s3.v2.zapato	Papá come un zapato.	e7cac0c5			pending			
+es:b:s3.v2.manzana	Papá come una manzana.	3d8710dd			pending			
+es:b:s3.v3.o1	Papá bebe leche.	ce39ed62			pending			
+es:b:s3.v3.o2	Papá bebe una manzana.	589b4725			pending			
+es:b:s3.v3.o3	Papá bebe un juguete.	fa2504d5			pending			
+es:b:s3.v3.o4	Papá bebe el coche.	844b9cde			pending			
+es:b:s3.v3.o5	Papá bebe fuera.	79f5cf6c			pending			
+es:b:s3.v3.casa	Papá bebe casa.	a7b7d27d			pending			
+es:b:s3.v3.cama	Papá bebe la cama.	9d6f912e			pending			
+es:b:s3.v3.o8	Papá bebe el baño.	80847b1d			pending			
+es:b:s3.v3.luna	Papá bebe la luna.	4d45dca6			pending			
+es:b:s3.v3.galleta	Papá bebe una galleta.	9c7aefd5			pending			
+es:b:s3.v3.platano	Papá bebe un plátano.	976df741			pending			
+es:b:s3.v3.zapato	Papá bebe un zapato.	9cf27b4d			pending			
+es:b:s3.v3.manzana	Papá bebe una manzana.	589b4725			pending			
+es:b:s3.v4.o1	Papá duerme leche.	cc7279b0			pending			
+es:b:s3.v4.o2	Papá duerme una manzana.	ad5307a7			pending			
+es:b:s3.v4.o3	Papá duerme con un juguete.	bf07708f			pending			
+es:b:s3.v4.o4	Papá duerme en el coche.	64408845			pending			
+es:b:s3.v4.o5	Papá duerme fuera.	8b8068d6			pending			
+es:b:s3.v4.casa	Papá duerme en casa.	f1a1b6a2			pending			
+es:b:s3.v4.cama	Papá duerme en la cama.	7b151cfb			pending			
+es:b:s3.v4.o8	Papá duerme en el baño.	08fe3370			pending			
+es:b:s3.v4.luna	Papá duerme en la luna.	08c139ab			pending			
+es:b:s3.v4.galleta	Papá duerme con una galleta.	bf7b41ff			pending			
+es:b:s3.v4.platano	Papá duerme con un plátano.	94b69a53			pending			
+es:b:s3.v4.zapato	Papá duerme en el zapato.	a2b3396a			pending			
+es:b:s3.v4.manzana	Papá duerme con una manzana.	ae9fb74f			pending			
+es:b:s3.v5.o1	Papá va leche.	f333dc75			pending			
+es:b:s3.v5.o2	Papá va una manzana.	00a6aebe			pending			
+es:b:s3.v5.o3	Papá va un juguete.	c4db7458			pending			
+es:b:s3.v5.o4	Papá va en coche.	3c9bcbb5			pending			
+es:b:s3.v5.o5	Papá va fuera.	88bc9d5f			pending			
+es:b:s3.v5.casa	Papá va a casa.	0138000f			pending			
+es:b:s3.v5.cama	Papá va a la cama.	4ebb8188			pending			
+es:b:s3.v5.o8	Papá va al baño.	7829fb9a			pending			
+es:b:s3.v5.luna	Papá va a la luna.	4089fdc0			pending			
+es:b:s3.v5.galleta	Papá va a la galleta.	dfcbb31a			pending			
+es:b:s3.v5.platano	Papá va al plátano.	07925b76			pending			
+es:b:s3.v5.zapato	Papá va al zapato.	244fec3c			pending			
+es:b:s3.v5.manzana	Papá va a la manzana.	6dda14b2			pending			
+es:b:s3.v6.o1	Papá juega con leche.	ec7a88a4			pending			
+es:b:s3.v6.o2	Papá juega con una manzana.	918ff46b			pending			
+es:b:s3.v6.o3	Papá juega con un juguete.	6328f9cb			pending			
+es:b:s3.v6.o4	Papá juega con el coche.	3af61cc4			pending			
+es:b:s3.v6.o5	Papá juega fuera.	19edea72			pending			
+es:b:s3.v6.casa	Papá juega en casa.	8d20b726			pending			
+es:b:s3.v6.cama	Papá juega en la cama.	79303e47			pending			
+es:b:s3.v6.o8	Papá juega en el baño.	aa6218e4			pending			
+es:b:s3.v6.luna	Papá juega con la luna.	1d654fd0			pending			
+es:b:s3.v6.galleta	Papá juega con una galleta.	5869c69b			pending			
+es:b:s3.v6.platano	Papá juega con un plátano.	20e338cf			pending			
+es:b:s3.v6.zapato	Papá juega con un zapato.	958d266f			pending			
+es:b:s3.v6.manzana	Papá juega con una manzana.	918ff46b			pending			
+es:b:s4.v1.o1	Abuela quiere leche.	8cb3ceaf			pending			
+es:b:s4.v1.o2	Abuela quiere una manzana.	2c47a204			pending			
+es:b:s4.v1.o3	Abuela quiere un juguete.	bd0b8b6e			pending			
+es:b:s4.v1.o4	Abuela quiere el coche.	733506c1			pending			
+es:b:s4.v1.o5	Abuela quiere fuera.	571770a5			pending			
+es:b:s4.v1.casa	Abuela quiere casa.	dc83a44e			pending			
+es:b:s4.v1.cama	Abuela quiere la cama.	f5c197bf			pending			
+es:b:s4.v1.o8	Abuela quiere el baño.	e399549c			pending			
+es:b:s4.v1.luna	Abuela quiere la luna.	ecd534bf			pending			
+es:b:s4.v1.galleta	Abuela quiere una galleta.	54134af4			pending			
+es:b:s4.v1.platano	Abuela quiere un plátano.	007c18ce			pending			
+es:b:s4.v1.zapato	Abuela quiere un zapato.	bcb952d4			pending			
+es:b:s4.v1.manzana	Abuela quiere una manzana.	2c47a204			pending			
+es:b:s4.v2.o1	Abuela come leche.	22f0bdac			pending			
+es:b:s4.v2.o2	Abuela come una manzana.	568a8983			pending			
+es:b:s4.v2.o3	Abuela come un juguete.	b27864c3			pending			
+es:b:s4.v2.o4	Abuela come el coche.	6a1be66c			pending			
+es:b:s4.v2.o5	Abuela come fuera.	1801e972			pending			
+es:b:s4.v2.casa	Abuela come casa.	4a490697			pending			
+es:b:s4.v2.cama	Abuela come la cama.	4856d500			pending			
+es:b:s4.v2.o8	Abuela come el baño.	6c54f273			pending			
+es:b:s4.v2.luna	Abuela come la luna.	abfb06e8			pending			
+es:b:s4.v2.galleta	Abuela come una galleta.	ad3d87d3			pending			
+es:b:s4.v2.platano	Abuela come un plátano.	0317a9c7			pending			
+es:b:s4.v2.zapato	Abuela come un zapato.	db2fd3e7			pending			
+es:b:s4.v2.manzana	Abuela come una manzana.	568a8983			pending			
+es:b:s4.v3.o1	Abuela bebe leche.	aff6ca84			pending			
+es:b:s4.v3.o2	Abuela bebe una manzana.	d8c041cb			pending			
+es:b:s4.v3.o3	Abuela bebe un juguete.	055e732b			pending			
+es:b:s4.v3.o4	Abuela bebe el coche.	f6a68f24			pending			
+es:b:s4.v3.o5	Abuela bebe fuera.	c061192a			pending			
+es:b:s4.v3.casa	Abuela bebe casa.	60679adf			pending			
+es:b:s4.v3.cama	Abuela bebe la cama.	311e00d8			pending			
+es:b:s4.v3.o8	Abuela bebe el baño.	fe23770b			pending			
+es:b:s4.v3.luna	Abuela bebe la luna.	2aa98fb0			pending			
+es:b:s4.v3.galleta	Abuela bebe una galleta.	b8e6c8fb			pending			
+es:b:s4.v3.platano	Abuela bebe un plátano.	3e714caf			pending			
+es:b:s4.v3.zapato	Abuela bebe un zapato.	00b3f44f			pending			
+es:b:s4.v3.manzana	Abuela bebe una manzana.	d8c041cb			pending			
+es:b:s4.v4.o1	Abuela duerme leche.	2087c00e			pending			
+es:b:s4.v4.o2	Abuela duerme una manzana.	75e0d5d1			pending			
+es:b:s4.v4.o3	Abuela duerme con un juguete.	9f1ed7bd			pending			
+es:b:s4.v4.o4	Abuela duerme en el coche.	784b60af			pending			
+es:b:s4.v4.o5	Abuela duerme fuera.	d8746fc8			pending			
+es:b:s4.v4.casa	Abuela duerme en casa.	4bd04168			pending			
+es:b:s4.v4.cama	Abuela duerme en la cama.	c78c97e1			pending			
+es:b:s4.v4.o8	Abuela duerme en el baño.	dd2aaf92			pending			
+es:b:s4.v4.luna	Abuela duerme en la luna.	e928ee79			pending			
+es:b:s4.v4.galleta	Abuela duerme con una galleta.	1ec9e9bd			pending			
+es:b:s4.v4.platano	Abuela duerme con un plátano.	6246ea09			pending			
+es:b:s4.v4.zapato	Abuela duerme en el zapato.	cfea9484			pending			
+es:b:s4.v4.manzana	Abuela duerme con una manzana.	e5a3bbed			pending			
+es:b:s4.v5.o1	Abuela va leche.	a50268d3			pending			
+es:b:s4.v5.o2	Abuela va una manzana.	c6f05698			pending			
+es:b:s4.v5.o3	Abuela va un juguete.	5276eb52			pending			
+es:b:s4.v5.o4	Abuela va en coche.	f5843ef3			pending			
+es:b:s4.v5.o5	Abuela va fuera.	bd46a719			pending			
+es:b:s4.v5.casa	Abuela va a casa.	3e664ea5			pending			
+es:b:s4.v5.cama	Abuela va a la cama.	bec35fc6			pending			
+es:b:s4.v5.o8	Abuela va al baño.	f820ddc4			pending			
+es:b:s4.v5.luna	Abuela va a la luna.	c520072e			pending			
+es:b:s4.v5.galleta	Abuela va a la galleta.	49cd7474			pending			
+es:b:s4.v5.platano	Abuela va al plátano.	ad47430c			pending			
+es:b:s4.v5.zapato	Abuela va al zapato.	62f5e696			pending			
+es:b:s4.v5.manzana	Abuela va a la manzana.	2201cb84			pending			
+es:b:s4.v6.o1	Abuela juega con leche.	59a9b23e			pending			
+es:b:s4.v6.o2	Abuela juega con una manzana.	cfe43401			pending			
+es:b:s4.v6.o3	Abuela juega con un juguete.	02a5c321			pending			
+es:b:s4.v6.o4	Abuela juega con el coche.	f72d6bda			pending			
+es:b:s4.v6.o5	Abuela juega fuera.	7ef11cec			pending			
+es:b:s4.v6.casa	Abuela juega en casa.	191485d4			pending			
+es:b:s4.v6.cama	Abuela juega en la cama.	65f84a65			pending			
+es:b:s4.v6.o8	Abuela juega en el baño.	df89ba2e			pending			
+es:b:s4.v6.luna	Abuela juega con la luna.	c75d933a			pending			
+es:b:s4.v6.galleta	Abuela juega con una galleta.	54a5cbd1			pending			
+es:b:s4.v6.platano	Abuela juega con un plátano.	6c1509fd			pending			
+es:b:s4.v6.zapato	Abuela juega con un zapato.	b7f3b3f1			pending			
+es:b:s4.v6.manzana	Abuela juega con una manzana.	cfe43401			pending			
+es:b:s5.v1.o1	Perrito quiere leche.	5fb21710			pending			
+es:b:s5.v1.o2	Perrito quiere una manzana.	1b158a07			pending			
+es:b:s5.v1.o3	Perrito quiere un juguete.	b4d1e807			pending			
+es:b:s5.v1.o4	Perrito quiere el coche.	28b368f0			pending			
+es:b:s5.v1.o5	Perrito quiere fuera.	77784336			pending			
+es:b:s5.v1.casa	Perrito quiere casa.	36fa050b			pending			
+es:b:s5.v1.cama	Perrito quiere la cama.	7eae813c			pending			
+es:b:s5.v1.o8	Perrito quiere el baño.	758c27b7			pending			
+es:b:s5.v1.luna	Perrito quiere la luna.	e8cadb04			pending			
+es:b:s5.v1.galleta	Perrito quiere una galleta.	ba1fe077			pending			
+es:b:s5.v1.platano	Perrito quiere un plátano.	00d705ab			pending			
+es:b:s5.v1.zapato	Perrito quiere un zapato.	520ba2e3			pending			
+es:b:s5.v1.manzana	Perrito quiere una manzana.	1b158a07			pending			
+es:b:s5.v2.o1	Perrito come leche.	ec2524b3			pending			
+es:b:s5.v2.o2	Perrito come una manzana.	4c661af8			pending			
+es:b:s5.v2.o3	Perrito come un juguete.	458bc3b2			pending			
+es:b:s5.v2.o4	Perrito come el coche.	5b3a5975			pending			
+es:b:s5.v2.o5	Perrito come fuera.	6b1be479			pending			
+es:b:s5.v2.casa	Perrito come casa.	a325efb2			pending			
+es:b:s5.v2.cama	Perrito come la cama.	ec4504cb			pending			
+es:b:s5.v2.o8	Perrito come el baño.	a436b060			pending			
+es:b:s5.v2.luna	Perrito come la luna.	51fcbe1b			pending			
+es:b:s5.v2.galleta	Perrito come una galleta.	69e1f758			pending			
+es:b:s5.v2.platano	Perrito come un plátano.	a44d8b92			pending			
+es:b:s5.v2.zapato	Perrito come un zapato.	8c171690			pending			
+es:b:s5.v2.manzana	Perrito come una manzana.	4c661af8			pending			
+es:b:s5.v3.o1	Perrito bebe leche.	f1f17a4f			pending			
+es:b:s5.v3.o2	Perrito bebe una manzana.	4de5e924			pending			
+es:b:s5.v3.o3	Perrito bebe un juguete.	159b888e			pending			
+es:b:s5.v3.o4	Perrito bebe el coche.	87673261			pending			
+es:b:s5.v3.o5	Perrito bebe fuera.	a6e85745			pending			
+es:b:s5.v3.casa	Perrito bebe casa.	2cfd1f6e			pending			
+es:b:s5.v3.cama	Perrito bebe la cama.	1ea8b7df			pending			
+es:b:s5.v3.o8	Perrito bebe el baño.	27103e3c			pending			
+es:b:s5.v3.luna	Perrito bebe la luna.	15bc54df			pending			
+es:b:s5.v3.galleta	Perrito bebe una galleta.	cb0e8d14			pending			
+es:b:s5.v3.platano	Perrito bebe un plátano.	8a35eb6e			pending			
+es:b:s5.v3.zapato	Perrito bebe un zapato.	619b8874			pending			
+es:b:s5.v3.manzana	Perrito bebe una manzana.	4de5e924			pending			
+es:b:s5.v4.o1	Perrito duerme leche.	5206abdd			pending			
+es:b:s5.v4.o2	Perrito duerme una manzana.	3f1b8776			pending			
+es:b:s5.v4.o3	Perrito duerme con un juguete.	9276a8d8			pending			
+es:b:s5.v4.o4	Perrito duerme en el coche.	a093b934			pending			
+es:b:s5.v4.o5	Perrito duerme fuera.	0b5fdda7			pending			
+es:b:s5.v4.casa	Perrito duerme en casa.	896e1c0f			pending			
+es:b:s5.v4.cama	Perrito duerme en la cama.	3429b588			pending			
+es:b:s5.v4.o8	Perrito duerme en el baño.	01e6251b			pending			
+es:b:s5.v4.luna	Perrito duerme en la luna.	25f831c0			pending			
+es:b:s5.v4.galleta	Perrito duerme con una galleta.	2a797d56			pending			
+es:b:s5.v4.platano	Perrito duerme con un plátano.	c0626678			pending			
+es:b:s5.v4.zapato	Perrito duerme en el zapato.	94175289			pending			
+es:b:s5.v4.manzana	Perrito duerme con una manzana.	2bfa543e			pending			
+es:b:s5.v5.o1	Perrito va leche.	4ff75654			pending			
+es:b:s5.v5.o2	Perrito va una manzana.	52fbaadb			pending			
+es:b:s5.v5.o3	Perrito va un juguete.	a314b31b			pending			
+es:b:s5.v5.o4	Perrito va en coche.	deff0b32			pending			
+es:b:s5.v5.o5	Perrito va fuera.	8add093a			pending			
+es:b:s5.v5.casa	Perrito va a casa.	fa03b8d4			pending			
+es:b:s5.v5.cama	Perrito va a la cama.	5eb53b65			pending			
+es:b:s5.v5.o8	Perrito va al baño.	fc334a9f			pending			
+es:b:s5.v5.luna	Perrito va a la luna.	053a3fed			pending			
+es:b:s5.v5.galleta	Perrito va a la galleta.	209ebbf9			pending			
+es:b:s5.v5.platano	Perrito va al plátano.	4c50bfd9			pending			
+es:b:s5.v5.zapato	Perrito va al zapato.	1f6183e5			pending			
+es:b:s5.v5.manzana	Perrito va a la manzana.	e42bb449			pending			
+es:b:s5.v6.o1	Perrito juega con leche.	c834f207			pending			
+es:b:s5.v6.o2	Perrito juega con una manzana.	7892d5ac			pending			
+es:b:s5.v6.o3	Perrito juega con un juguete.	5841def6			pending			
+es:b:s5.v6.o4	Perrito juega con el coche.	3e9c37f9			pending			
+es:b:s5.v6.o5	Perrito juega fuera.	3f781a71			pending			
+es:b:s5.v6.casa	Perrito juega en casa.	58b7699d			pending			
+es:b:s5.v6.cama	Perrito juega en la cama.	680937ce			pending			
+es:b:s5.v6.o8	Perrito juega en el baño.	08ed9dbd			pending			
+es:b:s5.v6.luna	Perrito juega con la luna.	6155fc07			pending			
+es:b:s5.v6.galleta	Perrito juega con una galleta.	41cf115c			pending			
+es:b:s5.v6.platano	Perrito juega con un plátano.	34970216			pending			
+es:b:s5.v6.zapato	Perrito juega con un zapato.	0ef575dc			pending			
+es:b:s5.v6.manzana	Perrito juega con una manzana.	7892d5ac			pending			
+es:b:pato.v1.o1	Pato quiere leche.	9658ee37			pending			
+es:b:pato.v1.o2	Pato quiere una manzana.	6c93a1dc			pending			
+es:b:pato.v1.o3	Pato quiere un juguete.	60653386			pending			
+es:b:pato.v1.o4	Pato quiere el coche.	10209249			pending			
+es:b:pato.v1.o5	Pato quiere fuera.	d9abf38d			pending			
+es:b:pato.v1.casa	Pato quiere casa.	d8e3ad06			pending			
+es:b:pato.v1.cama	Pato quiere la cama.	3811a427			pending			
+es:b:pato.v1.o8	Pato quiere el baño.	13a546c4			pending			
+es:b:pato.v1.luna	Pato quiere la luna.	686b24d7			pending			
+es:b:pato.v1.galleta	Pato quiere una galleta.	e0a689cc			pending			
+es:b:pato.v1.platano	Pato quiere un plátano.	047b2d46			pending			
+es:b:pato.v1.zapato	Pato quiere un zapato.	2413a0cc			pending			
+es:b:pato.v1.manzana	Pato quiere una manzana.	6c93a1dc			pending			
+es:b:pato.v2.o1	Pato come leche.	538d6d04			pending			
+es:b:pato.v2.o2	Pato come una manzana.	418dd04b			pending			
+es:b:pato.v2.o3	Pato come un juguete.	69adbaab			pending			
+es:b:pato.v2.o4	Pato come el coche.	3667aaa4			pending			
+es:b:pato.v2.o5	Pato come fuera.	63f7bbaa			pending			
+es:b:pato.v2.casa	Pato come casa.	f5c5fe5f			pending			
+es:b:pato.v2.cama	Pato come la cama.	5857a758			pending			
+es:b:pato.v2.o8	Pato come el baño.	0c10688b			pending			
+es:b:pato.v2.luna	Pato come la luna.	51e33630			pending			
+es:b:pato.v2.galleta	Pato come una galleta.	21b4577b			pending			
+es:b:pato.v2.platano	Pato come un plátano.	f8b88d2f			pending			
+es:b:pato.v2.zapato	Pato come un zapato.	ddb23ecf			pending			
+es:b:pato.v2.manzana	Pato come una manzana.	418dd04b			pending			
+es:b:pato.v3.o1	Pato bebe leche.	f704d4bc			pending			
+es:b:pato.v3.o2	Pato bebe una manzana.	8c668213			pending			
+es:b:pato.v3.o3	Pato bebe un juguete.	8beb5473			pending			
+es:b:pato.v3.o4	Pato bebe el coche.	7c63b29c			pending			
+es:b:pato.v3.o5	Pato bebe fuera.	785ceec2			pending			
+es:b:pato.v3.casa	Pato bebe casa.	ecaf8e67			pending			
+es:b:pato.v3.cama	Pato bebe la cama.	aba488d0			pending			
+es:b:pato.v3.o8	Pato bebe el baño.	f12d04e3			pending			
+es:b:pato.v3.luna	Pato bebe la luna.	878ade98			pending			
+es:b:pato.v3.galleta	Pato bebe una galleta.	8d7aefe3			pending			
+es:b:pato.v3.platano	Pato bebe un plátano.	81a7d7d7			pending			
+es:b:pato.v3.zapato	Pato bebe un zapato.	2e49dab7			pending			
+es:b:pato.v3.manzana	Pato bebe una manzana.	8c668213			pending			
+es:b:pato.v4.o1	Pato duerme leche.	c42bcbb6			pending			
+es:b:pato.v4.o2	Pato duerme una manzana.	39738509			pending			
+es:b:pato.v4.o3	Pato duerme con un juguete.	f2cdc2f5			pending			
+es:b:pato.v4.o4	Pato duerme en el coche.	7e0572d7			pending			
+es:b:pato.v4.o5	Pato duerme fuera.	9ff61970			pending			
+es:b:pato.v4.casa	Pato duerme en casa.	cb86b0e0			pending			
+es:b:pato.v4.cama	Pato duerme en la cama.	5a53f0c9			pending			
+es:b:pato.v4.o8	Pato duerme en el baño.	79209bda			pending			
+es:b:pato.v4.luna	Pato duerme en la luna.	c04caf51			pending			
+es:b:pato.v4.galleta	Pato duerme con una galleta.	a9a394f5			pending			
+es:b:pato.v4.platano	Pato duerme con un plátano.	e3d86de1			pending			
+es:b:pato.v4.zapato	Pato duerme en el zapato.	4472977c			pending			
+es:b:pato.v4.manzana	Pato duerme con una manzana.	eb563845			pending			
+es:b:pato.v5.o1	Pato va leche.	4db9138b			pending			
+es:b:pato.v5.o2	Pato va una manzana.	0a3c6680			pending			
+es:b:pato.v5.o3	Pato va un juguete.	fcac667a			pending			
+es:b:pato.v5.o4	Pato va en coche.	2242d3ab			pending			
+es:b:pato.v5.o5	Pato va fuera.	c4ec4051			pending			
+es:b:pato.v5.casa	Pato va a casa.	ec562b2d			pending			
+es:b:pato.v5.cama	Pato va a la cama.	553b57de			pending			
+es:b:pato.v5.o8	Pato va al baño.	2a3bf41c			pending			
+es:b:pato.v5.luna	Pato va a la luna.	c5838cb6			pending			
+es:b:pato.v5.galleta	Pato va a la galleta.	e82c568c			pending			
+es:b:pato.v5.platano	Pato va al plátano.	c3830434			pending			
+es:b:pato.v5.zapato	Pato va al zapato.	15b02a9e			pending			
+es:b:pato.v5.manzana	Pato va a la manzana.	9ba4909c			pending			
+es:b:pato.v6.o1	Pato juega con leche.	e2855d76			pending			
+es:b:pato.v6.o2	Pato juega con una manzana.	4b015749			pending			
+es:b:pato.v6.o3	Pato juega con un juguete.	ad1d0969			pending			
+es:b:pato.v6.o4	Pato juega con el coche.	6f0a3492			pending			
+es:b:pato.v6.o5	Pato juega fuera.	4ef68ca4			pending			
+es:b:pato.v6.casa	Pato juega en casa.	3b385a3c			pending			
+es:b:pato.v6.cama	Pato juega en la cama.	628a31fd			pending			
+es:b:pato.v6.o8	Pato juega en el baño.	2008bc86			pending			
+es:b:pato.v6.luna	Pato juega con la luna.	c509bd82			pending			
+es:b:pato.v6.galleta	Pato juega con una galleta.	87745ef9			pending			
+es:b:pato.v6.platano	Pato juega con un plátano.	e345a445			pending			
+es:b:pato.v6.zapato	Pato juega con un zapato.	bb82f959			pending			
+es:b:pato.v6.manzana	Pato juega con una manzana.	4b015749			pending			
+es:b:raton.v1.o1	Ratón quiere leche.	15ce1f09			pending			
+es:b:raton.v1.o2	Ratón quiere una manzana.	d4553172			pending			
+es:b:raton.v1.o3	Ratón quiere un juguete.	d603ce1c			pending			
+es:b:raton.v1.o4	Ratón quiere el coche.	9eafd327			pending			
+es:b:raton.v1.o5	Ratón quiere fuera.	803d91e3			pending			
+es:b:raton.v1.casa	Ratón quiere casa.	8b58eb90			pending			
+es:b:raton.v1.cama	Ratón quiere la cama.	2966a039			pending			
+es:b:raton.v1.o8	Ratón quiere el baño.	735e892a			pending			
+es:b:raton.v1.luna	Ratón quiere la luna.	a1492c61			pending			
+es:b:raton.v1.galleta	Ratón quiere una galleta.	6dd1f1da			pending			
+es:b:raton.v1.platano	Ratón quiere un plátano.	dcef226c			pending			
+es:b:raton.v1.zapato	Ratón quiere un zapato.	c0432e76			pending			
+es:b:raton.v1.manzana	Ratón quiere una manzana.	d4553172			pending			
+es:b:raton.v2.o1	Ratón come leche.	37a07efa			pending			
+es:b:raton.v2.o2	Ratón come una manzana.	bf6c7e8d			pending			
+es:b:raton.v2.o3	Ratón come un juguete.	6d918c5d			pending			
+es:b:raton.v2.o4	Ratón come el coche.	f6f55d36			pending			
+es:b:raton.v2.o5	Ratón come fuera.	3b17e044			pending			
+es:b:raton.v2.casa	Ratón come casa.	2f116b85			pending			
+es:b:raton.v2.cama	Ratón come la cama.	d5d53e26			pending			
+es:b:raton.v2.o8	Ratón come el baño.	4c186b95			pending			
+es:b:raton.v2.luna	Ratón come la luna.	2ff39e0e			pending			
+es:b:raton.v2.galleta	Ratón come una galleta.	dccb8e5d			pending			
+es:b:raton.v2.platano	Ratón come un plátano.	4a0653a9			pending			
+es:b:raton.v2.zapato	Ratón come un zapato.	6d1929b5			pending			
+es:b:raton.v2.manzana	Ratón come una manzana.	bf6c7e8d			pending			
+es:b:raton.v3.o1	Ratón bebe leche.	b8312092			pending			
+es:b:raton.v3.o2	Ratón bebe una manzana.	9ca853d5			pending			
+es:b:raton.v3.o3	Ratón bebe un juguete.	a2142425			pending			
+es:b:raton.v3.o4	Ratón bebe el coche.	2f3e46ae			pending			
+es:b:raton.v3.o5	Ratón bebe fuera.	090cd0dc			pending			
+es:b:raton.v3.casa	Ratón bebe casa.	1714a66d			pending			
+es:b:raton.v3.cama	Ratón bebe la cama.	a70c979e			pending			
+es:b:raton.v3.o8	Ratón bebe el baño.	9c478bad			pending			
+es:b:raton.v3.luna	Ratón bebe la luna.	e89b5276			pending			
+es:b:raton.v3.galleta	Ratón bebe una galleta.	84192205			pending			
+es:b:raton.v3.platano	Ratón bebe un plátano.	9210a371			pending			
+es:b:raton.v3.zapato	Ratón bebe un zapato.	c3d56d7d			pending			
+es:b:raton.v3.manzana	Ratón bebe una manzana.	9ca853d5			pending			
+es:b:raton.v4.o1	Ratón duerme leche.	78b1ad60			pending			
+es:b:raton.v4.o2	Ratón duerme una manzana.	fc0213d7			pending			
+es:b:raton.v4.o3	Ratón duerme con un juguete.	9e8caf5f			pending			
+es:b:raton.v4.o4	Ratón duerme en el coche.	4f350835			pending			
+es:b:raton.v4.o5	Ratón duerme fuera.	24168446			pending			
+es:b:raton.v4.casa	Ratón duerme en casa.	51b0acf2			pending			
+es:b:raton.v4.cama	Ratón duerme en la cama.	0f4ae88b			pending			
+es:b:raton.v4.o8	Ratón duerme en el baño.	9afd8320			pending			
+es:b:raton.v4.luna	Ratón duerme en la luna.	777d0adb			pending			
+es:b:raton.v4.galleta	Ratón duerme con una galleta.	d8554b2f			pending			
+es:b:raton.v4.platano	Ratón duerme con un plátano.	b30f5d03			pending			
+es:b:raton.v4.zapato	Ratón duerme en el zapato.	e9970a1a			pending			
+es:b:raton.v4.manzana	Ratón duerme con una manzana.	53f1b33f			pending			
+es:b:raton.v5.o1	Ratón va leche.	d7223405			pending			
+es:b:raton.v5.o2	Ratón va una manzana.	089ab54e			pending			
+es:b:raton.v5.o3	Ratón va un juguete.	31d5f588			pending			
+es:b:raton.v5.o4	Ratón va en coche.	e1e42d25			pending			
+es:b:raton.v5.o5	Ratón va fuera.	82c734af			pending			
+es:b:raton.v5.casa	Ratón va a casa.	d21de99f			pending			
+es:b:raton.v5.cama	Ratón va a la cama.	f1aa8b18			pending			
+es:b:raton.v5.o8	Ratón va al baño.	e85a898a			pending			
+es:b:raton.v5.luna	Ratón va a la luna.	06fd37f0			pending			
+es:b:raton.v5.galleta	Ratón va a la galleta.	a8e2abea			pending			
+es:b:raton.v5.platano	Ratón va al plátano.	e361a826			pending			
+es:b:raton.v5.zapato	Ratón va al zapato.	e9015aac			pending			
+es:b:raton.v5.manzana	Ratón va a la manzana.	e787f502			pending			
+es:b:raton.v6.o1	Ratón juega con leche.	36e98114			pending			
+es:b:raton.v6.o2	Ratón juega con una manzana.	2b7f2a1b			pending			
+es:b:raton.v6.o3	Ratón juega con un juguete.	f728bb5b			pending			
+es:b:raton.v6.o4	Ratón juega con el coche.	4d15e454			pending			
+es:b:raton.v6.o5	Ratón juega fuera.	84fe0d62			pending			
+es:b:raton.v6.casa	Ratón juega en casa.	a4d29836			pending			
+es:b:raton.v6.cama	Ratón juega en la cama.	83878397			pending			
+es:b:raton.v6.o8	Ratón juega en el baño.	1993e614			pending			
+es:b:raton.v6.luna	Ratón juega con la luna.	beb99460			pending			
+es:b:raton.v6.galleta	Ratón juega con una galleta.	f8c9fdcb			pending			
+es:b:raton.v6.platano	Ratón juega con un plátano.	9c15cd3f			pending			
+es:b:raton.v6.zapato	Ratón juega con un zapato.	ca42a51f			pending			
+es:b:raton.v6.manzana	Ratón juega con una manzana.	2b7f2a1b			pending			
+es:b:gato.v1.o1	Gato quiere leche.	6d93534c			pending			
+es:b:gato.v1.o2	Gato quiere una manzana.	798ce5a3			pending			
+es:b:gato.v1.o3	Gato quiere un juguete.	ce9f0fe3			pending			
+es:b:gato.v1.o4	Gato quiere el coche.	0883a80c			pending			
+es:b:gato.v1.o5	Gato quiere fuera.	38e31c92			pending			
+es:b:gato.v1.casa	Gato quiere casa.	ce31e3b7			pending			
+es:b:gato.v1.cama	Gato quiere la cama.	09b329a0			pending			
+es:b:gato.v1.o8	Gato quiere el baño.	e8c8f993			pending			
+es:b:gato.v1.luna	Gato quiere la luna.	efd0fb08			pending			
+es:b:gato.v1.galleta	Gato quiere una galleta.	7ae2e8f3			pending			
+es:b:gato.v1.platano	Gato quiere un plátano.	9be24967			pending			
+es:b:gato.v1.zapato	Gato quiere un zapato.	e986b287			pending			
+es:b:gato.v1.manzana	Gato quiere una manzana.	798ce5a3			pending			
+es:b:gato.v2.o1	Gato come leche.	eb2c439f			pending			
+es:b:gato.v2.o2	Gato come una manzana.	a13b66f4			pending			
+es:b:gato.v2.o3	Gato come un juguete.	f68d80be			pending			
+es:b:gato.v2.o4	Gato come el coche.	d8a56611			pending			
+es:b:gato.v2.o5	Gato come fuera.	38c12455			pending			
+es:b:gato.v2.casa	Gato come casa.	0542b3fe			pending			
+es:b:gato.v2.cama	Gato come la cama.	45398daf			pending			
+es:b:gato.v2.o8	Gato come el baño.	374b0fec			pending			
+es:b:gato.v2.luna	Gato come la luna.	0fe1040f			pending			
+es:b:gato.v2.galleta	Gato come una galleta.	789f6324			pending			
+es:b:gato.v2.platano	Gato come un plátano.	521f2a3e			pending			
+es:b:gato.v2.zapato	Gato come un zapato.	aee6b444			pending			
+es:b:gato.v2.manzana	Gato come una manzana.	a13b66f4			pending			
+es:b:gato.v3.o1	Gato bebe leche.	185389b3			pending			
+es:b:gato.v3.o2	Gato bebe una manzana.	91f957f8			pending			
+es:b:gato.v3.o3	Gato bebe un juguete.	ade5b2b2			pending			
+es:b:gato.v3.o4	Gato bebe el coche.	7b70f075			pending			
+es:b:gato.v3.o5	Gato bebe fuera.	974a4979			pending			
+es:b:gato.v3.casa	Gato bebe casa.	421116b2			pending			
+es:b:gato.v3.cama	Gato bebe la cama.	f16e71cb			pending			
+es:b:gato.v3.o8	Gato bebe el baño.	a9601d60			pending			
+es:b:gato.v3.luna	Gato bebe la luna.	57262b1b			pending			
+es:b:gato.v3.galleta	Gato bebe una galleta.	af753458			pending			
+es:b:gato.v3.platano	Gato bebe un plátano.	0ca77a92			pending			
+es:b:gato.v3.zapato	Gato bebe un zapato.	4206cb90			pending			
+es:b:gato.v3.manzana	Gato bebe una manzana.	91f957f8			pending			
+es:b:gato.v4.o1	Gato duerme leche.	8b8b63a9			pending			
+es:b:gato.v4.o2	Gato duerme una manzana.	cd0f7812			pending			
+es:b:gato.v4.o3	Gato duerme con un juguete.	00193f24			pending			
+es:b:gato.v4.o4	Gato duerme en el coche.	b5912ff8			pending			
+es:b:gato.v4.o5	Gato duerme fuera.	df288a83			pending			
+es:b:gato.v4.casa	Gato duerme en casa.	b55011c3			pending			
+es:b:gato.v4.cama	Gato duerme en la cama.	323eeda4			pending			
+es:b:gato.v4.o8	Gato duerme en el baño.	6e51027f			pending			
+es:b:gato.v4.luna	Gato duerme en la luna.	84dfd29c			pending			
+es:b:gato.v4.galleta	Gato duerme con una galleta.	5c365282			pending			
+es:b:gato.v4.platano	Gato duerme con un plátano.	056d2294			pending			
+es:b:gato.v4.zapato	Gato duerme en el zapato.	6fb2fa45			pending			
+es:b:gato.v4.manzana	Gato duerme con una manzana.	63b9e39a			pending			
+es:b:gato.v5.o1	Gato va leche.	8828d460			pending			
+es:b:gato.v5.o2	Gato va una manzana.	f08802d7			pending			
+es:b:gato.v5.o3	Gato va un juguete.	1c18a337			pending			
+es:b:gato.v5.o4	Gato va en coche.	bdf8767e			pending			
+es:b:gato.v5.o5	Gato va fuera.	338dab46			pending			
+es:b:gato.v5.casa	Gato va a casa.	5ea26180			pending			
+es:b:gato.v5.cama	Gato va a la cama.	302e7de9			pending			
+es:b:gato.v5.o8	Gato va al baño.	6de25763			pending			
+es:b:gato.v5.luna	Gato va a la luna.	2cfa51f1			pending			
+es:b:gato.v5.galleta	Gato va a la galleta.	d2544335			pending			
+es:b:gato.v5.platano	Gato va al plátano.	9cb93eed			pending			
+es:b:gato.v5.zapato	Gato va al zapato.	a0cccba1			pending			
+es:b:gato.v5.manzana	Gato va a la manzana.	bdc91285			pending			
+es:b:gato.v6.o1	Gato juega con leche.	776e9d6b			pending			
+es:b:gato.v6.o2	Gato juega con una manzana.	5deeb360			pending			
+es:b:gato.v6.o3	Gato juega con un juguete.	1e9c77da			pending			
+es:b:gato.v6.o4	Gato juega con el coche.	5a78efed			pending			
+es:b:gato.v6.o5	Gato juega fuera.	b1275795			pending			
+es:b:gato.v6.casa	Gato juega en casa.	e264dce9			pending			
+es:b:gato.v6.cama	Gato juega en la cama.	160108d2			pending			
+es:b:gato.v6.o8	Gato juega en el baño.	ba437cc9			pending			
+es:b:gato.v6.luna	Gato juega con la luna.	1c7d8923			pending			
+es:b:gato.v6.galleta	Gato juega con una galleta.	f22426c0			pending			
+es:b:gato.v6.platano	Gato juega con un plátano.	75bf2f3a			pending			
+es:b:gato.v6.zapato	Gato juega con un zapato.	08dd5578			pending			
+es:b:gato.v6.manzana	Gato juega con una manzana.	5deeb360			pending			
+es:b:tortuga.v1.o1	Tortuga quiere leche.	e9bdf351			pending			
+es:b:tortuga.v1.o2	Tortuga quiere una manzana.	7239eb2a			pending			
+es:b:tortuga.v1.o3	Tortuga quiere un juguete.	34804e54			pending			
+es:b:tortuga.v1.o4	Tortuga quiere el coche.	422bb04f			pending			
+es:b:tortuga.v1.o5	Tortuga quiere fuera.	fb6afd4b			pending			
+es:b:tortuga.v1.casa	Tortuga quiere casa.	7c67c888			pending			
+es:b:tortuga.v1.cama	Tortuga quiere la cama.	63a53c01			pending			
+es:b:tortuga.v1.o8	Tortuga quiere el baño.	529fd2b2			pending			
+es:b:tortuga.v1.luna	Tortuga quiere la luna.	1e8f1119			pending			
+es:b:tortuga.v1.galleta	Tortuga quiere una galleta.	d2858312			pending			
+es:b:tortuga.v1.platano	Tortuga quiere un plátano.	17f894a4			pending			
+es:b:tortuga.v1.zapato	Tortuga quiere un zapato.	1be0c38e			pending			
+es:b:tortuga.v1.manzana	Tortuga quiere una manzana.	7239eb2a			pending			
+es:b:tortuga.v2.o1	Tortuga come leche.	80a470d2			pending			
+es:b:tortuga.v2.o2	Tortuga come una manzana.	003af295			pending			
+es:b:tortuga.v2.o3	Tortuga come un juguete.	755030e5			pending			
+es:b:tortuga.v2.o4	Tortuga come el coche.	f515626e			pending			
+es:b:tortuga.v2.o5	Tortuga come fuera.	56776f1c			pending			
+es:b:tortuga.v2.casa	Tortuga come casa.	77aaadad			pending			
+es:b:tortuga.v2.cama	Tortuga come la cama.	7d3d135e			pending			
+es:b:tortuga.v2.o8	Tortuga come el baño.	cb30446d			pending			
+es:b:tortuga.v2.luna	Tortuga come la luna.	ed854836			pending			
+es:b:tortuga.v2.galleta	Tortuga come una galleta.	fd9d33c5			pending			
+es:b:tortuga.v2.platano	Tortuga come un plátano.	8f115831			pending			
+es:b:tortuga.v2.zapato	Tortuga come un zapato.	8846a73d			pending			
+es:b:tortuga.v2.manzana	Tortuga come una manzana.	003af295			pending			
+es:b:tortuga.v3.o1	Tortuga bebe leche.	a088b44a			pending			
+es:b:tortuga.v3.o2	Tortuga bebe una manzana.	da8ea6dd			pending			
+es:b:tortuga.v3.o3	Tortuga bebe un juguete.	d275fecd			pending			
+es:b:tortuga.v3.o4	Tortuga bebe el coche.	6728c4a6			pending			
+es:b:tortuga.v3.o5	Tortuga bebe fuera.	d36f9bd4			pending			
+es:b:tortuga.v3.casa	Tortuga bebe casa.	f82b6595			pending			
+es:b:tortuga.v3.cama	Tortuga bebe la cama.	5696cf76			pending			
+es:b:tortuga.v3.o8	Tortuga bebe el baño.	1f73e1c5			pending			
+es:b:tortuga.v3.luna	Tortuga bebe la luna.	9c818d7e			pending			
+es:b:tortuga.v3.galleta	Tortuga bebe una galleta.	8fbf05ad			pending			
+es:b:tortuga.v3.platano	Tortuga bebe un plátano.	51aaa039			pending			
+es:b:tortuga.v3.zapato	Tortuga bebe un zapato.	bc46e6c5			pending			
+es:b:tortuga.v3.manzana	Tortuga bebe una manzana.	da8ea6dd			pending			
+es:b:tortuga.v4.o1	Tortuga duerme leche.	5ac8e108			pending			
+es:b:tortuga.v4.o2	Tortuga duerme una manzana.	a3e9584f			pending			
+es:b:tortuga.v4.o3	Tortuga duerme con un juguete.	22a79897			pending			
+es:b:tortuga.v4.o4	Tortuga duerme en el coche.	68fc95bd			pending			
+es:b:tortuga.v4.o5	Tortuga duerme fuera.	181af58e			pending			
+es:b:tortuga.v4.casa	Tortuga duerme en casa.	738a45aa			pending			
+es:b:tortuga.v4.cama	Tortuga duerme en la cama.	8a4f4593			pending			
+es:b:tortuga.v4.o8	Tortuga duerme en el baño.	6eca01e8			pending			
+es:b:tortuga.v4.luna	Tortuga duerme en la luna.	3ee6bd33			pending			
+es:b:tortuga.v4.galleta	Tortuga duerme con una galleta.	0182bd27			pending			
+es:b:tortuga.v4.platano	Tortuga duerme con un plátano.	ecdc61db			pending			
+es:b:tortuga.v4.zapato	Tortuga duerme en el zapato.	3edbec12			pending			
+es:b:tortuga.v4.manzana	Tortuga duerme con una manzana.	d8f0c437			pending			
+es:b:tortuga.v5.o1	Tortuga va leche.	656bbb9d			pending			
+es:b:tortuga.v5.o2	Tortuga va una manzana.	a1a270b6			pending			
+es:b:tortuga.v5.o3	Tortuga va un juguete.	696a8f50			pending			
+es:b:tortuga.v5.o4	Tortuga va en coche.	728d045d			pending			
+es:b:tortuga.v5.o5	Tortuga va fuera.	02fdcf67			pending			
+es:b:tortuga.v5.casa	Tortuga va a casa.	81224347			pending			
+es:b:tortuga.v5.cama	Tortuga va a la cama.	16c8c5b0			pending			
+es:b:tortuga.v5.o8	Tortuga va al baño.	314fe4a2			pending			
+es:b:tortuga.v5.luna	Tortuga va a la luna.	8e7702f8			pending			
+es:b:tortuga.v5.galleta	Tortuga va a la galleta.	173f6b02			pending			
+es:b:tortuga.v5.platano	Tortuga va al plátano.	f9a74bce			pending			
+es:b:tortuga.v5.zapato	Tortuga va al zapato.	276d33d4			pending			
+es:b:tortuga.v5.manzana	Tortuga va a la manzana.	1ec2fc1a			pending			
+es:b:tortuga.v6.o1	Tortuga juega con leche.	ad9b824c			pending			
+es:b:tortuga.v6.o2	Tortuga juega con una manzana.	41db9ca3			pending			
+es:b:tortuga.v6.o3	Tortuga juega con un juguete.	82e3dce3			pending			
+es:b:tortuga.v6.o4	Tortuga juega con el coche.	bdc66d0c			pending			
+es:b:tortuga.v6.o5	Tortuga juega fuera.	605349fa			pending			
+es:b:tortuga.v6.casa	Tortuga juega en casa.	4d9738fe			pending			
+es:b:tortuga.v6.cama	Tortuga juega en la cama.	0cfb84af			pending			
+es:b:tortuga.v6.o8	Tortuga juega en el baño.	ff0d06ec			pending			
+es:b:tortuga.v6.luna	Tortuga juega con la luna.	77924208			pending			
+es:b:tortuga.v6.galleta	Tortuga juega con una galleta.	43319ff3			pending			
+es:b:tortuga.v6.platano	Tortuga juega con un plátano.	50271667			pending			
+es:b:tortuga.v6.zapato	Tortuga juega con un zapato.	41a2d187			pending			
+es:b:tortuga.v6.manzana	Tortuga juega con una manzana.	41db9ca3			pending			
+es:b:vaca.v1.o1	Vaca quiere leche.	115cdd60			pending			
+es:b:vaca.v1.o2	Vaca quiere una manzana.	95d3c3d7			pending			
+es:b:vaca.v1.o3	Vaca quiere un juguete.	ec3a7e37			pending			
+es:b:vaca.v1.o4	Vaca quiere el coche.	b33777e0			pending			
+es:b:vaca.v1.o5	Vaca quiere fuera.	bcc1b446			pending			
+es:b:vaca.v1.casa	Vaca quiere casa.	dade3b5b			pending			
+es:b:vaca.v1.cama	Vaca quiere la cama.	45c7e20c			pending			
+es:b:vaca.v1.o8	Vaca quiere el baño.	2a09b127			pending			
+es:b:vaca.v1.luna	Vaca quiere la luna.	dcc52ef4			pending			
+es:b:vaca.v1.galleta	Vaca quiere una galleta.	fb1100c7			pending			
+es:b:vaca.v1.platano	Vaca quiere un plátano.	4461dafb			pending			
+es:b:vaca.v1.zapato	Vaca quiere un zapato.	c666d1f3			pending			
+es:b:vaca.v1.manzana	Vaca quiere una manzana.	95d3c3d7			pending			
+es:b:vaca.v2.o1	Vaca come leche.	e108bde3			pending			
+es:b:vaca.v2.o2	Vaca come una manzana.	1e4d0f68			pending			
+es:b:vaca.v2.o3	Vaca come un juguete.	70ed6402			pending			
+es:b:vaca.v2.o4	Vaca come el coche.	1f414285			pending			
+es:b:vaca.v2.o5	Vaca come fuera.	a33057a9			pending			
+es:b:vaca.v2.casa	Vaca come casa.	307ce262			pending			
+es:b:vaca.v2.cama	Vaca come la cama.	505c503b			pending			
+es:b:vaca.v2.o8	Vaca come el baño.	e58098b0			pending			
+es:b:vaca.v2.luna	Vaca come la luna.	b1c95beb			pending			
+es:b:vaca.v2.galleta	Vaca come una galleta.	b6f3fa08			pending			
+es:b:vaca.v2.platano	Vaca come un plátano.	db284c82			pending			
+es:b:vaca.v2.zapato	Vaca come un zapato.	b1e2cd40			pending			
+es:b:vaca.v2.manzana	Vaca come una manzana.	1e4d0f68			pending			
+es:b:vaca.v3.o1	Vaca bebe leche.	6d371cff			pending			
+es:b:vaca.v3.o2	Vaca bebe una manzana.	07f009d4			pending			
+es:b:vaca.v3.o3	Vaca bebe un juguete.	43e83b9e			pending			
+es:b:vaca.v3.o4	Vaca bebe el coche.	7cfb3e71			pending			
+es:b:vaca.v3.o5	Vaca bebe fuera.	3850cb35			pending			
+es:b:vaca.v3.casa	Vaca bebe casa.	135e85de			pending			
+es:b:vaca.v3.cama	Vaca bebe la cama.	cfa6af0f			pending			
+es:b:vaca.v3.o8	Vaca bebe el baño.	db04e64c			pending			
+es:b:vaca.v3.luna	Vaca bebe la luna.	1a4eeeef			pending			
+es:b:vaca.v3.galleta	Vaca bebe una galleta.	5e73f684			pending			
+es:b:vaca.v3.platano	Vaca bebe un plátano.	9f79e51e			pending			
+es:b:vaca.v3.zapato	Vaca bebe un zapato.	f60e3b24			pending			
+es:b:vaca.v3.manzana	Vaca bebe una manzana.	07f009d4			pending			
+es:b:vaca.v4.o1	Vaca duerme leche.	87f8c30d			pending			
+es:b:vaca.v4.o2	Vaca duerme una manzana.	71419626			pending			
+es:b:vaca.v4.o3	Vaca duerme con un juguete.	ad744a28			pending			
+es:b:vaca.v4.o4	Vaca duerme en el coche.	425eafa4			pending			
+es:b:vaca.v4.o5	Vaca duerme fuera.	0d32d517			pending			
+es:b:vaca.v4.casa	Vaca duerme en casa.	4326b35f			pending			
+es:b:vaca.v4.cama	Vaca duerme en la cama.	403bae58			pending			
+es:b:vaca.v4.o8	Vaca duerme en el baño.	f3f46f8b			pending			
+es:b:vaca.v4.luna	Vaca duerme en la luna.	39c73d30			pending			
+es:b:vaca.v4.galleta	Vaca duerme con una galleta.	8eb6c286			pending			
+es:b:vaca.v4.platano	Vaca duerme con un plátano.	57ba6528			pending			
+es:b:vaca.v4.zapato	Vaca duerme en el zapato.	64cd05b9			pending			
+es:b:vaca.v4.manzana	Vaca duerme con una manzana.	5c18136e			pending			
+es:b:vaca.v5.o1	Vaca va leche.	8689f164			pending			
+es:b:vaca.v5.o2	Vaca va una manzana.	516433ab			pending			
+es:b:vaca.v5.o3	Vaca va un juguete.	0b25250b			pending			
+es:b:vaca.v5.o4	Vaca va en coche.	6b3a2e22			pending			
+es:b:vaca.v5.o5	Vaca va fuera.	867c4d0a			pending			
+es:b:vaca.v5.casa	Vaca va a casa.	ab8890a4			pending			
+es:b:vaca.v5.cama	Vaca va a la cama.	97761eb5			pending			
+es:b:vaca.v5.o8	Vaca va al baño.	eeaa8c0f			pending			
+es:b:vaca.v5.luna	Vaca va a la luna.	67f4225d			pending			
+es:b:vaca.v5.galleta	Vaca va a la galleta.	15b14ac9			pending			
+es:b:vaca.v5.platano	Vaca va al plátano.	70e11b89			pending			
+es:b:vaca.v5.zapato	Vaca va al zapato.	007c6a15			pending			
+es:b:vaca.v5.manzana	Vaca va a la manzana.	efff3f59			pending			
+es:b:vaca.v6.o1	Vaca juega con leche.	d8faeef7			pending			
+es:b:vaca.v6.o2	Vaca juega con una manzana.	887a4d1c			pending			
+es:b:vaca.v6.o3	Vaca juega con un juguete.	f808adc6			pending			
+es:b:vaca.v6.o4	Vaca juega con el coche.	824e8089			pending			
+es:b:vaca.v6.o5	Vaca juega fuera.	6b806821			pending			
+es:b:vaca.v6.casa	Vaca juega en casa.	5183deed			pending			
+es:b:vaca.v6.cama	Vaca juega en la cama.	4d23a51e			pending			
+es:b:vaca.v6.o8	Vaca juega en el baño.	2911e42d			pending			
+es:b:vaca.v6.luna	Vaca juega con la luna.	b9d96817			pending			
+es:b:vaca.v6.galleta	Vaca juega con una galleta.	d502130c			pending			
+es:b:vaca.v6.platano	Vaca juega con un plátano.	467bd186			pending			
+es:b:vaca.v6.zapato	Vaca juega con un zapato.	cbc7800c			pending			
+es:b:vaca.v6.manzana	Vaca juega con una manzana.	887a4d1c			pending			
+es:b:pet-🐵.v1.o1	El mono quiere leche.	a85c7263			pending			
+es:b:pet-🐵.v1.o2	El mono quiere una manzana.	b05f1fe8			pending			
+es:b:pet-🐵.v1.o3	El mono quiere un juguete.	3c3f6182			pending			
+es:b:pet-🐵.v1.o4	El mono quiere el coche.	36fca405			pending			
+es:b:pet-🐵.v1.o5	El mono quiere fuera.	6a840c29			pending			
+es:b:pet-🐵.v1.casa	El mono quiere casa.	9a1d2be2			pending			
+es:b:pet-🐵.v1.cama	El mono quiere la cama.	5eb658bb			pending			
+es:b:pet-🐵.v1.o8	El mono quiere el baño.	da8dec30			pending			
+es:b:pet-🐵.v1.luna	El mono quiere la luna.	c023646b			pending			
+es:b:pet-🐵.v1.galleta	El mono quiere una galleta.	49060a88			pending			
+es:b:pet-🐵.v1.platano	El mono quiere un plátano.	50825102			pending			
+es:b:pet-🐵.v1.zapato	El mono quiere un zapato.	8ddd49c0			pending			
+es:b:pet-🐵.v1.manzana	El mono quiere una manzana.	b05f1fe8			pending			
+es:b:pet-🐵.v2.o1	El mono come leche.	38f54a20			pending			
+es:b:pet-🐵.v2.o2	El mono come una manzana.	12530417			pending			
+es:b:pet-🐵.v2.o3	El mono come un juguete.	025fe377			pending			
+es:b:pet-🐵.v2.o4	El mono come el coche.	28246020			pending			
+es:b:pet-🐵.v2.o5	El mono come fuera.	fa010106			pending			
+es:b:pet-🐵.v2.casa	El mono come casa.	d60bdd1b			pending			
+es:b:pet-🐵.v2.cama	El mono come la cama.	e3878f4c			pending			
+es:b:pet-🐵.v2.o8	El mono come el baño.	2a2c1967			pending			
+es:b:pet-🐵.v2.luna	El mono come la luna.	5ebdbe34			pending			
+es:b:pet-🐵.v2.galleta	El mono come una galleta.	15394607			pending			
+es:b:pet-🐵.v2.platano	El mono come un plátano.	f7387b3b			pending			
+es:b:pet-🐵.v2.zapato	El mono come un zapato.	0bf99b33			pending			
+es:b:pet-🐵.v2.manzana	El mono come una manzana.	12530417			pending			
+es:b:pet-🐵.v3.o1	El mono bebe leche.	ea59cc10			pending			
+es:b:pet-🐵.v3.o2	El mono bebe una manzana.	e0d79707			pending			
+es:b:pet-🐵.v3.o3	El mono bebe un juguete.	e8c3c707			pending			
+es:b:pet-🐵.v3.o4	El mono bebe el coche.	a9646ff0			pending			
+es:b:pet-🐵.v3.o5	El mono bebe fuera.	021ff836			pending			
+es:b:pet-🐵.v3.casa	El mono bebe casa.	02989c0b			pending			
+es:b:pet-🐵.v3.cama	El mono bebe la cama.	b3b9be3c			pending			
+es:b:pet-🐵.v3.o8	El mono bebe el baño.	aa9764b7			pending			
+es:b:pet-🐵.v3.luna	El mono bebe la luna.	1dd61804			pending			
+es:b:pet-🐵.v3.galleta	El mono bebe una galleta.	7fe1ed77			pending			
+es:b:pet-🐵.v3.platano	El mono bebe un plátano.	34c8e4ab			pending			
+es:b:pet-🐵.v3.zapato	El mono bebe un zapato.	e8b9a7e3			pending			
+es:b:pet-🐵.v3.manzana	El mono bebe una manzana.	e0d79707			pending			
+es:b:pet-🐵.v4.o1	El mono duerme leche.	22741592			pending			
+es:b:pet-🐵.v4.o2	El mono duerme una manzana.	eb2ba0d5			pending			
+es:b:pet-🐵.v4.o3	El mono duerme con un juguete.	ef877a71			pending			
+es:b:pet-🐵.v4.o4	El mono duerme en el coche.	16dddb9b			pending			
+es:b:pet-🐵.v4.o5	El mono duerme fuera.	734fc5dc			pending			
+es:b:pet-🐵.v4.casa	El mono duerme en casa.	429e9524			pending			
+es:b:pet-🐵.v4.cama	El mono duerme en la cama.	4b0ef035			pending			
+es:b:pet-🐵.v4.o8	El mono duerme en el baño.	f74080de			pending			
+es:b:pet-🐵.v4.luna	El mono duerme en la luna.	1b8cf3dd			pending			
+es:b:pet-🐵.v4.galleta	El mono duerme con una galleta.	287beb01			pending			
+es:b:pet-🐵.v4.platano	El mono duerme con un plátano.	9e62802d			pending			
+es:b:pet-🐵.v4.zapato	El mono duerme en el zapato.	752a52f8			pending			
+es:b:pet-🐵.v4.manzana	El mono duerme con una manzana.	625cb471			pending			
+es:b:pet-🐵.v5.o1	El mono va leche.	a05c92b7			pending			
+es:b:pet-🐵.v5.o2	El mono va una manzana.	4c56225c			pending			
+es:b:pet-🐵.v5.o3	El mono va un juguete.	534b0106			pending			
+es:b:pet-🐵.v5.o4	El mono va en coche.	591b3e77			pending			
+es:b:pet-🐵.v5.o5	El mono va fuera.	e3af980d			pending			
+es:b:pet-🐵.v5.casa	El mono va a casa.	33f21d79			pending			
+es:b:pet-🐵.v5.cama	El mono va a la cama.	ce305122			pending			
+es:b:pet-🐵.v5.o8	El mono va al baño.	06300100			pending			
+es:b:pet-🐵.v5.luna	El mono va a la luna.	b2451eda			pending			
+es:b:pet-🐵.v5.galleta	El mono va a la galleta.	b5988c48			pending			
+es:b:pet-🐵.v5.platano	El mono va al plátano.	ca7bc9c8			pending			
+es:b:pet-🐵.v5.zapato	El mono va al zapato.	b4c234fa			pending			
+es:b:pet-🐵.v5.manzana	El mono va a la manzana.	756403a8			pending			
+es:b:pet-🐵.v6.o1	El mono juega con leche.	056f54da			pending			
+es:b:pet-🐵.v6.o2	El mono juega con una manzana.	d0ecd7ed			pending			
+es:b:pet-🐵.v6.o3	El mono juega con un juguete.	8fd2cbbd			pending			
+es:b:pet-🐵.v6.o4	El mono juega con el coche.	0a79a196			pending			
+es:b:pet-🐵.v6.o5	El mono juega fuera.	8dcdabc8			pending			
+es:b:pet-🐵.v6.casa	El mono juega en casa.	ac01dd68			pending			
+es:b:pet-🐵.v6.cama	El mono juega en la cama.	ce294be1			pending			
+es:b:pet-🐵.v6.o8	El mono juega en el baño.	e3c76392			pending			
+es:b:pet-🐵.v6.luna	El mono juega con la luna.	9c5cfdee			pending			
+es:b:pet-🐵.v6.galleta	El mono juega con una galleta.	0a1305bd			pending			
+es:b:pet-🐵.v6.platano	El mono juega con un plátano.	52fade09			pending			
+es:b:pet-🐵.v6.zapato	El mono juega con un zapato.	6b06f095			pending			
+es:b:pet-🐵.v6.manzana	El mono juega con una manzana.	d0ecd7ed			pending			
+es:b:pet-🐶.v1.o1	El perro quiere leche.	b6747e8c			pending			
+es:b:pet-🐶.v1.o2	El perro quiere una manzana.	33c1f663			pending			
+es:b:pet-🐶.v1.o3	El perro quiere un juguete.	9b5f4ba3			pending			
+es:b:pet-🐶.v1.o4	El perro quiere el coche.	b09993cc			pending			
+es:b:pet-🐶.v1.o5	El perro quiere fuera.	711239d2			pending			
+es:b:pet-🐶.v1.casa	El perro quiere casa.	e97ccff7			pending			
+es:b:pet-🐶.v1.cama	El perro quiere la cama.	37b48b60			pending			
+es:b:pet-🐶.v1.o8	El perro quiere el baño.	56ba9153			pending			
+es:b:pet-🐶.v1.luna	El perro quiere la luna.	1b57f3c8			pending			
+es:b:pet-🐶.v1.galleta	El perro quiere una galleta.	73a2a8b3			pending			
+es:b:pet-🐶.v1.platano	El perro quiere un plátano.	6bfdc727			pending			
+es:b:pet-🐶.v1.zapato	El perro quiere un zapato.	2b846847			pending			
+es:b:pet-🐶.v1.manzana	El perro quiere una manzana.	33c1f663			pending			
+es:b:pet-🐶.v2.o1	El perro come leche.	427be9df			pending			
+es:b:pet-🐶.v2.o2	El perro come una manzana.	af9392b4			pending			
+es:b:pet-🐶.v2.o3	El perro come un juguete.	8600817e			pending			
+es:b:pet-🐶.v2.o4	El perro come el coche.	1c5637d1			pending			
+es:b:pet-🐶.v2.o5	El perro come fuera.	37588d95			pending			
+es:b:pet-🐶.v2.casa	El perro come casa.	32f2db3e			pending			
+es:b:pet-🐶.v2.cama	El perro come la cama.	203a1b6f			pending			
+es:b:pet-🐶.v2.o8	El perro come el baño.	555cfaac			pending			
+es:b:pet-🐶.v2.luna	El perro come la luna.	306d57cf			pending			
+es:b:pet-🐶.v2.galleta	El perro come una galleta.	cbe856e4			pending			
+es:b:pet-🐶.v2.platano	El perro come un plátano.	c84575fe			pending			
+es:b:pet-🐶.v2.zapato	El perro come un zapato.	644c0604			pending			
+es:b:pet-🐶.v2.manzana	El perro come una manzana.	af9392b4			pending			
+es:b:pet-🐶.v3.o1	El perro bebe leche.	26e23cf3			pending			
+es:b:pet-🐶.v3.o2	El perro bebe una manzana.	895330b8			pending			
+es:b:pet-🐶.v3.o3	El perro bebe un juguete.	331f0a72			pending			
+es:b:pet-🐶.v3.o4	El perro bebe el coche.	c0f27a35			pending			
+es:b:pet-🐶.v3.o5	El perro bebe fuera.	20e1aeb9			pending			
+es:b:pet-🐶.v3.casa	El perro bebe casa.	f29afef2			pending			
+es:b:pet-🐶.v3.cama	El perro bebe la cama.	b746ee8b			pending			
+es:b:pet-🐶.v3.o8	El perro bebe el baño.	42f98920			pending			
+es:b:pet-🐶.v3.luna	El perro bebe la luna.	1f7910db			pending			
+es:b:pet-🐶.v3.galleta	El perro bebe una galleta.	4b9c6718			pending			
+es:b:pet-🐶.v3.platano	El perro bebe un plátano.	e5ab0552			pending			
+es:b:pet-🐶.v3.zapato	El perro bebe un zapato.	8a16bd50			pending			
+es:b:pet-🐶.v3.manzana	El perro bebe una manzana.	895330b8			pending			
+es:b:pet-🐶.v4.o1	El perro duerme leche.	68c8dfe9			pending			
+es:b:pet-🐶.v4.o2	El perro duerme una manzana.	4e5c0cd2			pending			
+es:b:pet-🐶.v4.o3	El perro duerme con un juguete.	3abd6064			pending			
+es:b:pet-🐶.v4.o4	El perro duerme en el coche.	43669138			pending			
+es:b:pet-🐶.v4.o5	El perro duerme fuera.	12a3dac3			pending			
+es:b:pet-🐶.v4.casa	El perro duerme en casa.	2a212883			pending			
+es:b:pet-🐶.v4.cama	El perro duerme en la cama.	83d97de4			pending			
+es:b:pet-🐶.v4.o8	El perro duerme en el baño.	ff571abf			pending			
+es:b:pet-🐶.v4.luna	El perro duerme en la luna.	02b973dc			pending			
+es:b:pet-🐶.v4.galleta	El perro duerme con una galleta.	cc2333c2			pending			
+es:b:pet-🐶.v4.platano	El perro duerme con un plátano.	c1357bd4			pending			
+es:b:pet-🐶.v4.zapato	El perro duerme en el zapato.	d2c78d85			pending			
+es:b:pet-🐶.v4.manzana	El perro duerme con una manzana.	0080d3da			pending			
+es:b:pet-🐶.v5.o1	El perro va leche.	fc7143a0			pending			
+es:b:pet-🐶.v5.o2	El perro va una manzana.	ab233197			pending			
+es:b:pet-🐶.v5.o3	El perro va un juguete.	0e816ff7			pending			
+es:b:pet-🐶.v5.o4	El perro va en coche.	b8243d3e			pending			
+es:b:pet-🐶.v5.o5	El perro va fuera.	bd7cfa86			pending			
+es:b:pet-🐶.v5.casa	El perro va a casa.	bfdbda40			pending			
+es:b:pet-🐶.v5.cama	El perro va a la cama.	2240bf29			pending			
+es:b:pet-🐶.v5.o8	El perro va al baño.	06f17523			pending			
+es:b:pet-🐶.v5.luna	El perro va a la luna.	05bfde31			pending			
+es:b:pet-🐶.v5.galleta	El perro va a la galleta.	976cef75			pending			
+es:b:pet-🐶.v5.platano	El perro va al plátano.	a246c9ad			pending			
+es:b:pet-🐶.v5.zapato	El perro va al zapato.	7b3a6a61			pending			
+es:b:pet-🐶.v5.manzana	El perro va a la manzana.	d91f92c5			pending			
+es:b:pet-🐶.v6.o1	El perro juega con leche.	4b88492b			pending			
+es:b:pet-🐶.v6.o2	El perro juega con una manzana.	b733a1a0			pending			
+es:b:pet-🐶.v6.o3	El perro juega con un juguete.	4146721a			pending			
+es:b:pet-🐶.v6.o4	El perro juega con el coche.	9cdd222d			pending			
+es:b:pet-🐶.v6.o5	El perro juega fuera.	187661d5			pending			
+es:b:pet-🐶.v6.casa	El perro juega en casa.	60b59da9			pending			
+es:b:pet-🐶.v6.cama	El perro juega en la cama.	4384b212			pending			
+es:b:pet-🐶.v6.o8	El perro juega en el baño.	3c2c5709			pending			
+es:b:pet-🐶.v6.luna	El perro juega con la luna.	bb0ab563			pending			
+es:b:pet-🐶.v6.galleta	El perro juega con una galleta.	f9387200			pending			
+es:b:pet-🐶.v6.platano	El perro juega con un plátano.	5d9d507a			pending			
+es:b:pet-🐶.v6.zapato	El perro juega con un zapato.	94fa8bb8			pending			
+es:b:pet-🐶.v6.manzana	El perro juega con una manzana.	b733a1a0			pending			
+es:b:pet-🐍.v1.o1	La serpiente quiere leche.	b6890b77			pending			
+es:b:pet-🐍.v1.o2	La serpiente quiere una manzana.	9bb3859c			pending			
+es:b:pet-🐍.v1.o3	La serpiente quiere un juguete.	bcafe346			pending			
+es:b:pet-🐍.v1.o4	La serpiente quiere el coche.	63de5a09			pending			
+es:b:pet-🐍.v1.o5	La serpiente quiere fuera.	52944dcd			pending			
+es:b:pet-🐍.v1.casa	La serpiente quiere casa.	c79d7846			pending			
+es:b:pet-🐍.v1.cama	La serpiente quiere la cama.	5b5e97e7			pending			
+es:b:pet-🐍.v1.o8	La serpiente quiere el baño.	fd5c5d84			pending			
+es:b:pet-🐍.v1.luna	La serpiente quiere la luna.	8bb81897			pending			
+es:b:pet-🐍.v1.galleta	La serpiente quiere una galleta.	e83b4b8c			pending			
+es:b:pet-🐍.v1.platano	La serpiente quiere un plátano.	611b0006			pending			
+es:b:pet-🐍.v1.zapato	La serpiente quiere un zapato.	613ae48c			pending			
+es:b:pet-🐍.v1.manzana	La serpiente quiere una manzana.	9bb3859c			pending			
+es:b:pet-🐍.v2.o1	La serpiente come leche.	784d5244			pending			
+es:b:pet-🐍.v2.o2	La serpiente come una manzana.	f682440b			pending			
+es:b:pet-🐍.v2.o3	La serpiente come un juguete.	b029c26b			pending			
+es:b:pet-🐍.v2.o4	La serpiente come el coche.	914e7764			pending			
+es:b:pet-🐍.v2.o5	La serpiente come fuera.	75c544ea			pending			
+es:b:pet-🐍.v2.casa	La serpiente come casa.	e7675b9f			pending			
+es:b:pet-🐍.v2.cama	La serpiente come la cama.	f4e4f118			pending			
+es:b:pet-🐍.v2.o8	La serpiente come el baño.	6bac934b			pending			
+es:b:pet-🐍.v2.luna	La serpiente come la luna.	0a379df0			pending			
+es:b:pet-🐍.v2.galleta	La serpiente come una galleta.	93976e3b			pending			
+es:b:pet-🐍.v2.platano	La serpiente come un plátano.	d6e53def			pending			
+es:b:pet-🐍.v2.zapato	La serpiente come un zapato.	8cab728f			pending			
+es:b:pet-🐍.v2.manzana	La serpiente come una manzana.	f682440b			pending			
+es:b:pet-🐍.v3.o1	La serpiente bebe leche.	04e263fc			pending			
+es:b:pet-🐍.v3.o2	La serpiente bebe una manzana.	bc8126d3			pending			
+es:b:pet-🐍.v3.o3	La serpiente bebe un juguete.	8142d533			pending			
+es:b:pet-🐍.v3.o4	La serpiente bebe el coche.	2a777f5c			pending			
+es:b:pet-🐍.v3.o5	La serpiente bebe fuera.	1a8fe502			pending			
+es:b:pet-🐍.v3.casa	La serpiente bebe casa.	502fc8a7			pending			
+es:b:pet-🐍.v3.cama	La serpiente bebe la cama.	03a84f90			pending			
+es:b:pet-🐍.v3.o8	La serpiente bebe el baño.	ba54e4a3			pending			
+es:b:pet-🐍.v3.luna	La serpiente bebe la luna.	cf16b258			pending			
+es:b:pet-🐍.v3.galleta	La serpiente bebe una galleta.	6757c0a3			pending			
+es:b:pet-🐍.v3.platano	La serpiente bebe un plátano.	317f5297			pending			
+es:b:pet-🐍.v3.zapato	La serpiente bebe un zapato.	3e325777			pending			
+es:b:pet-🐍.v3.manzana	La serpiente bebe una manzana.	bc8126d3			pending			
+es:b:pet-🐍.v4.o1	La serpiente duerme leche.	5f07bef6			pending			
+es:b:pet-🐍.v4.o2	La serpiente duerme una manzana.	9164acc9			pending			
+es:b:pet-🐍.v4.o3	La serpiente duerme con un juguete.	d612dd35			pending			
+es:b:pet-🐍.v4.o4	La serpiente duerme en el coche.	f9096517			pending			
+es:b:pet-🐍.v4.o5	La serpiente duerme fuera.	4dfe83b0			pending			
+es:b:pet-🐍.v4.casa	La serpiente duerme en casa.	8fdee2a0			pending			
+es:b:pet-🐍.v4.cama	La serpiente duerme en la cama.	c8831e09			pending			
+es:b:pet-🐍.v4.o8	La serpiente duerme en el baño.	5fde121a			pending			
+es:b:pet-🐍.v4.luna	La serpiente duerme en la luna.	2c017391			pending			
+es:b:pet-🐍.v4.galleta	La serpiente duerme con una galleta.	fb85b035			pending			
+es:b:pet-🐍.v4.platano	La serpiente duerme con un plátano.	b9c6bc21			pending			
+es:b:pet-🐍.v4.zapato	La serpiente duerme en el zapato.	859e63bc			pending			
+es:b:pet-🐍.v4.manzana	La serpiente duerme con una manzana.	e6fa7f85			pending			
+es:b:pet-🐍.v5.o1	La serpiente va leche.	dcc58ecb			pending			
+es:b:pet-🐍.v5.o2	La serpiente va una manzana.	87d11640			pending			
+es:b:pet-🐍.v5.o3	La serpiente va un juguete.	b837f23a			pending			
+es:b:pet-🐍.v5.o4	La serpiente va en coche.	89be7e6b			pending			
+es:b:pet-🐍.v5.o5	La serpiente va fuera.	df796091			pending			
+es:b:pet-🐍.v5.casa	La serpiente va a casa.	738e81ed			pending			
+es:b:pet-🐍.v5.cama	La serpiente va a la cama.	283a661e			pending			
+es:b:pet-🐍.v5.o8	La serpiente va al baño.	4b591edc			pending			
+es:b:pet-🐍.v5.luna	La serpiente va a la luna.	69c920f6			pending			
+es:b:pet-🐍.v5.galleta	La serpiente va a la galleta.	29cb55cc			pending			
+es:b:pet-🐍.v5.platano	La serpiente va al plátano.	22ea1bf4			pending			
+es:b:pet-🐍.v5.zapato	La serpiente va al zapato.	99371c5e			pending			
+es:b:pet-🐍.v5.manzana	La serpiente va a la manzana.	b5b86ddc			pending			
+es:b:pet-🐍.v6.o1	La serpiente juega con leche.	383a2836			pending			
+es:b:pet-🐍.v6.o2	La serpiente juega con una manzana.	ad2afd89			pending			
+es:b:pet-🐍.v6.o3	La serpiente juega con un juguete.	2d4e66a9			pending			
+es:b:pet-🐍.v6.o4	La serpiente juega con el coche.	d073b0d2			pending			
+es:b:pet-🐍.v6.o5	La serpiente juega fuera.	3b2163e4			pending			
+es:b:pet-🐍.v6.casa	La serpiente juega en casa.	21e366fc			pending			
+es:b:pet-🐍.v6.cama	La serpiente juega en la cama.	7920fb3d			pending			
+es:b:pet-🐍.v6.o8	La serpiente juega en el baño.	471778c6			pending			
+es:b:pet-🐍.v6.luna	La serpiente juega con la luna.	229b79c2			pending			
+es:b:pet-🐍.v6.galleta	La serpiente juega con una galleta.	0c345539			pending			
+es:b:pet-🐍.v6.platano	La serpiente juega con un plátano.	bb4e6585			pending			
+es:b:pet-🐍.v6.zapato	La serpiente juega con un zapato.	dced2799			pending			
+es:b:pet-🐍.v6.manzana	La serpiente juega con una manzana.	ad2afd89			pending			
+es:b:pet-🦁.v1.o1	El león quiere leche.	470fec72			pending			
+es:b:pet-🦁.v1.o2	El león quiere una manzana.	d4f28435			pending			
+es:b:pet-🦁.v1.o3	El león quiere un juguete.	4c664385			pending			
+es:b:pet-🦁.v1.o4	El león quiere el coche.	e76eb28e			pending			
+es:b:pet-🦁.v1.o5	El león quiere fuera.	1ce2eabc			pending			
+es:b:pet-🦁.v1.casa	El león quiere casa.	c95418cd			pending			
+es:b:pet-🦁.v1.cama	El león quiere la cama.	4ccc617e			pending			
+es:b:pet-🦁.v1.o8	El león quiere el baño.	70faea8d			pending			
+es:b:pet-🦁.v1.luna	El león quiere la luna.	aa223a56			pending			
+es:b:pet-🦁.v1.galleta	El león quiere una galleta.	943b7fe5			pending			
+es:b:pet-🦁.v1.platano	El león quiere un plátano.	925abbd1			pending			
+es:b:pet-🦁.v1.zapato	El león quiere un zapato.	83b2ed5d			pending			
+es:b:pet-🦁.v1.manzana	El león quiere una manzana.	d4f28435			pending			
+es:b:pet-🦁.v2.o1	El león come leche.	9c358cb9			pending			
+es:b:pet-🦁.v2.o2	El león come una manzana.	a95ea262			pending			
+es:b:pet-🦁.v2.o3	El león come un juguete.	6ec6caec			pending			
+es:b:pet-🦁.v2.o4	El león come el coche.	ae5e3e37			pending			
+es:b:pet-🦁.v2.o5	El león come fuera.	99af7d93			pending			
+es:b:pet-🦁.v2.casa	El león come casa.	4ee611c0			pending			
+es:b:pet-🦁.v2.cama	El león come la cama.	0c0d81a9			pending			
+es:b:pet-🦁.v2.o8	El león come el baño.	a36875ba			pending			
+es:b:pet-🦁.v2.luna	El león come la luna.	ef8ca0b1			pending			
+es:b:pet-🦁.v2.galleta	El león come una galleta.	6ab9594a			pending			
+es:b:pet-🦁.v2.platano	El león come un plátano.	76fafc5c			pending			
+es:b:pet-🦁.v2.zapato	El león come un zapato.	13e817a6			pending			
+es:b:pet-🦁.v2.manzana	El león come una manzana.	a95ea262			pending			
+es:b:pet-🦁.v3.o1	El león bebe leche.	1e259f8d			pending			
+es:b:pet-🦁.v3.o2	El león bebe una manzana.	02238ea6			pending			
+es:b:pet-🦁.v3.o3	El león bebe un juguete.	70caeca0			pending			
+es:b:pet-🦁.v3.o4	El león bebe el coche.	6828728b			pending			
+es:b:pet-🦁.v3.o5	El león bebe fuera.	a35fb197			pending			
+es:b:pet-🦁.v3.casa	El león bebe casa.	a47ab3b4			pending			
+es:b:pet-🦁.v3.cama	El león bebe la cama.	b6ffb7c5			pending			
+es:b:pet-🦁.v3.o8	El león bebe el baño.	6121920e			pending			
+es:b:pet-🦁.v3.luna	El león bebe la luna.	46b2704d			pending			
+es:b:pet-🦁.v3.galleta	El león bebe una galleta.	996491be			pending			
+es:b:pet-🦁.v3.platano	El león bebe un plátano.	d8107b40			pending			
+es:b:pet-🦁.v3.zapato	El león bebe un zapato.	ff437592			pending			
+es:b:pet-🦁.v3.manzana	El león bebe una manzana.	02238ea6			pending			
+es:b:pet-🦁.v4.o1	El león duerme leche.	b59c2047			pending			
+es:b:pet-🦁.v4.o2	El león duerme una manzana.	f1552c6c			pending			
+es:b:pet-🦁.v4.o3	El león duerme con un juguete.	55c575b2			pending			
+es:b:pet-🦁.v4.o4	El león duerme en el coche.	f6c7d412			pending			
+es:b:pet-🦁.v4.o5	El león duerme fuera.	d576721d			pending			
+es:b:pet-🦁.v4.casa	El león duerme en casa.	1073b701			pending			
+es:b:pet-🦁.v4.cama	El león duerme en la cama.	3a1d6c5a			pending			
+es:b:pet-🦁.v4.o8	El león duerme en el baño.	96411351			pending			
+es:b:pet-🦁.v4.luna	El león duerme en la luna.	05375002			pending			
+es:b:pet-🦁.v4.galleta	El león duerme con una galleta.	f4b52d58			pending			
+es:b:pet-🦁.v4.platano	El león duerme con un plátano.	b4873d92			pending			
+es:b:pet-🦁.v4.zapato	El león duerme en el zapato.	c93c6ccf			pending			
+es:b:pet-🦁.v4.manzana	El león duerme con una manzana.	d73950f8			pending			
+es:b:pet-🦁.v5.o1	El león va leche.	829a7d66			pending			
+es:b:pet-🦁.v5.o2	El león va una manzana.	e78f8779			pending			
+es:b:pet-🦁.v5.o3	El león va un juguete.	b2a03e39			pending			
+es:b:pet-🦁.v5.o4	El león va en coche.	f1a79184			pending			
+es:b:pet-🦁.v5.o5	El león va fuera.	26b689a0			pending			
+es:b:pet-🦁.v5.casa	El león va a casa.	5b65cf46			pending			
+es:b:pet-🦁.v5.cama	El león va a la cama.	e5e514e7			pending			
+es:b:pet-🦁.v5.o8	El león va al baño.	d27401fd			pending			
+es:b:pet-🦁.v5.luna	El león va a la luna.	163e9597			pending			
+es:b:pet-🦁.v5.galleta	El león va a la galleta.	6657d08f			pending			
+es:b:pet-🦁.v5.platano	El león va al plátano.	3fadfecb			pending			
+es:b:pet-🦁.v5.zapato	El león va al zapato.	4097a303			pending			
+es:b:pet-🦁.v5.manzana	El león va a la manzana.	0a60339f			pending			
+es:b:pet-🦁.v6.o1	El león juega con leche.	4cef8e05			pending			
+es:b:pet-🦁.v6.o2	El león juega con una manzana.	a12d3f4e			pending			
+es:b:pet-🦁.v6.o3	El león juega con un juguete.	97378388			pending			
+es:b:pet-🦁.v6.o4	El león juega con el coche.	c3bd7683			pending			
+es:b:pet-🦁.v6.o5	El león juega fuera.	ea9a1e77			pending			
+es:b:pet-🦁.v6.casa	El león juega en casa.	eb27edbf			pending			
+es:b:pet-🦁.v6.cama	El león juega en la cama.	2fa4f038			pending			
+es:b:pet-🦁.v6.o8	El león juega en el baño.	23f15feb			pending			
+es:b:pet-🦁.v6.luna	El león juega con la luna.	6ec467b5			pending			
+es:b:pet-🦁.v6.galleta	El león juega con una galleta.	6cd1fee6			pending			
+es:b:pet-🦁.v6.platano	El león juega con un plátano.	04375c88			pending			
+es:b:pet-🦁.v6.zapato	El león juega con un zapato.	b74953ba			pending			
+es:b:pet-🦁.v6.manzana	El león juega con una manzana.	a12d3f4e			pending			
+es:b:pet-🐘.v1.o1	El elefante quiere leche.	f5057dce			pending			
+es:b:pet-🐘.v1.o2	El elefante quiere una manzana.	41f53711			pending			
+es:b:pet-🐘.v1.o3	El elefante quiere un juguete.	a1456711			pending			
+es:b:pet-🐘.v1.o4	El elefante quiere el coche.	d579a88a			pending			
+es:b:pet-🐘.v1.o5	El elefante quiere fuera.	c8b94b88			pending			
+es:b:pet-🐘.v1.casa	El elefante quiere casa.	640b6269			pending			
+es:b:pet-🐘.v1.cama	El elefante quiere la cama.	7222a552			pending			
+es:b:pet-🐘.v1.o8	El elefante quiere el baño.	fd186449			pending			
+es:b:pet-🐘.v1.luna	El elefante quiere la luna.	f762772a			pending			
+es:b:pet-🐘.v1.galleta	El elefante quiere una galleta.	51f18d21			pending			
+es:b:pet-🐘.v1.platano	El elefante quiere un plátano.	9250f0cd			pending			
+es:b:pet-🐘.v1.zapato	El elefante quiere un zapato.	39a20901			pending			
+es:b:pet-🐘.v1.manzana	El elefante quiere una manzana.	41f53711			pending			
+es:b:pet-🐘.v2.o1	El elefante come leche.	78d18025			pending			
+es:b:pet-🐘.v2.o2	El elefante come una manzana.	149d17ee			pending			
+es:b:pet-🐘.v2.o3	El elefante come un juguete.	f93003a8			pending			
+es:b:pet-🐘.v2.o4	El elefante come el coche.	e4f2fda3			pending			
+es:b:pet-🐘.v2.o5	El elefante come fuera.	ffa85d4f			pending			
+es:b:pet-🐘.v2.casa	El elefante come casa.	fd045d5c			pending			
+es:b:pet-🐘.v2.cama	El elefante come la cama.	77954e1d			pending			
+es:b:pet-🐘.v2.o8	El elefante come el baño.	83b43f26			pending			
+es:b:pet-🐘.v2.luna	El elefante come la luna.	b5de47d5			pending			
+es:b:pet-🐘.v2.galleta	El elefante come una galleta.	473bc706			pending			
+es:b:pet-🐘.v2.platano	El elefante come un plátano.	4d7e25a8			pending			
+es:b:pet-🐘.v2.zapato	El elefante come un zapato.	eacaa05a			pending			
+es:b:pet-🐘.v2.manzana	El elefante come una manzana.	149d17ee			pending			
+es:b:pet-🐘.v3.o1	El elefante bebe leche.	164fb8a1			pending			
+es:b:pet-🐘.v3.o2	El elefante bebe una manzana.	4fc59c7a			pending			
+es:b:pet-🐘.v3.o3	El elefante bebe un juguete.	07090584			pending			
+es:b:pet-🐘.v3.o4	El elefante bebe el coche.	8bdc3d7f			pending			
+es:b:pet-🐘.v3.o5	El elefante bebe fuera.	b5e8d81b			pending			
+es:b:pet-🐘.v3.casa	El elefante bebe casa.	49c9c258			pending			
+es:b:pet-🐘.v3.cama	El elefante bebe la cama.	239cb151			pending			
+es:b:pet-🐘.v3.o8	El elefante bebe el baño.	93c7bee2			pending			
+es:b:pet-🐘.v3.luna	El elefante bebe la luna.	6a153189			pending			
+es:b:pet-🐘.v3.galleta	El elefante bebe una galleta.	f24a1262			pending			
+es:b:pet-🐘.v3.platano	El elefante bebe un plátano.	c99166f4			pending			
+es:b:pet-🐘.v3.zapato	El elefante bebe un zapato.	a46d855e			pending			
+es:b:pet-🐘.v3.manzana	El elefante bebe una manzana.	4fc59c7a			pending			
+es:b:pet-🐘.v4.o1	El elefante duerme leche.	acec8833			pending			
+es:b:pet-🐘.v4.o2	El elefante duerme una manzana.	38d66278			pending			
+es:b:pet-🐘.v4.o3	El elefante duerme con un juguete.	8992240e			pending			
+es:b:pet-🐘.v4.o4	El elefante duerme en el coche.	99b81fe6			pending			
+es:b:pet-🐘.v4.o5	El elefante duerme fuera.	2be347f9			pending			
+es:b:pet-🐘.v4.casa	El elefante duerme en casa.	2ff5f955			pending			
+es:b:pet-🐘.v4.cama	El elefante duerme en la cama.	0c6171b6			pending			
+es:b:pet-🐘.v4.o8	El elefante duerme en el baño.	14aa0c05			pending			
+es:b:pet-🐘.v4.luna	El elefante duerme en la luna.	260d1ebe			pending			
+es:b:pet-🐘.v4.galleta	El elefante duerme con una galleta.	d8455794			pending			
+es:b:pet-🐘.v4.platano	El elefante duerme con un plátano.	a8348dee			pending			
+es:b:pet-🐘.v4.zapato	El elefante duerme en el zapato.	b0ee6e9b			pending			
+es:b:pet-🐘.v4.manzana	El elefante duerme con una manzana.	5b1cb3a4			pending			
+es:b:pet-🐘.v5.o1	El elefante va leche.	9d623022			pending			
+es:b:pet-🐘.v5.o2	El elefante va una manzana.	333ac665			pending			
+es:b:pet-🐘.v5.o3	El elefante va un juguete.	1f93d615			pending			
+es:b:pet-🐘.v5.o4	El elefante va en coche.	37d9ca80			pending			
+es:b:pet-🐘.v5.o5	El elefante va fuera.	b8a89b2c			pending			
+es:b:pet-🐘.v5.casa	El elefante va a casa.	4804a812			pending			
+es:b:pet-🐘.v5.cama	El elefante va a la cama.	c0d180ab			pending			
+es:b:pet-🐘.v5.o8	El elefante va al baño.	b89a1201			pending			
+es:b:pet-🐘.v5.luna	El elefante va a la luna.	a9046c7b			pending			
+es:b:pet-🐘.v5.galleta	El elefante va a la galleta.	09929d7b			pending			
+es:b:pet-🐘.v5.platano	El elefante va al plátano.	dca7b71f			pending			
+es:b:pet-🐘.v5.zapato	El elefante va al zapato.	8e756cff			pending			
+es:b:pet-🐘.v5.manzana	El elefante va a la manzana.	296c164b			pending			
+es:b:pet-🐘.v6.o1	El elefante juega con leche.	88f51f19			pending			
+es:b:pet-🐘.v6.o2	El elefante juega con una manzana.	6c940142			pending			
+es:b:pet-🐘.v6.o3	El elefante juega con un juguete.	31fbcacc			pending			
+es:b:pet-🐘.v6.o4	El elefante juega con el coche.	8de0a217			pending			
+es:b:pet-🐘.v6.o5	El elefante juega fuera.	454f8bbb			pending			
+es:b:pet-🐘.v6.casa	El elefante juega en casa.	9ce5d7ab			pending			
+es:b:pet-🐘.v6.cama	El elefante juega en la cama.	6cbf1edc			pending			
+es:b:pet-🐘.v6.o8	El elefante juega en el baño.	e3f5bcd7			pending			
+es:b:pet-🐘.v6.luna	El elefante juega con la luna.	a2876291			pending			
+es:b:pet-🐘.v6.galleta	El elefante juega con una galleta.	ad049b2a			pending			
+es:b:pet-🐘.v6.platano	El elefante juega con un plátano.	e8e0323c			pending			
+es:b:pet-🐘.v6.zapato	El elefante juega con un zapato.	14bb3286			pending			
+es:b:pet-🐘.v6.manzana	El elefante juega con una manzana.	6c940142			pending			
+es:b:pet-🐳.v1.o1	La ballena quiere leche.	232e9bdf			pending			
+es:b:pet-🐳.v1.o2	La ballena quiere una manzana.	c120b4b4			pending			
+es:b:pet-🐳.v1.o3	La ballena quiere un juguete.	5b7c177e			pending			
+es:b:pet-🐳.v1.o4	La ballena quiere el coche.	cf265dd1			pending			
+es:b:pet-🐳.v1.o5	La ballena quiere fuera.	180b3f95			pending			
+es:b:pet-🐳.v1.casa	La ballena quiere casa.	2e6ca13e			pending			
+es:b:pet-🐳.v1.cama	La ballena quiere la cama.	d6591d6f			pending			
+es:b:pet-🐳.v1.o8	La ballena quiere el baño.	0b7bfcac			pending			
+es:b:pet-🐳.v1.luna	La ballena quiere la luna.	e68c59cf			pending			
+es:b:pet-🐳.v1.galleta	La ballena quiere una galleta.	dd7578e4			pending			
+es:b:pet-🐳.v1.platano	La ballena quiere un plátano.	9dc10bfe			pending			
+es:b:pet-🐳.v1.zapato	La ballena quiere un zapato.	e1f7d804			pending			
+es:b:pet-🐳.v1.manzana	La ballena quiere una manzana.	c120b4b4			pending			
+es:b:pet-🐳.v2.o1	La ballena come leche.	47c7f37c			pending			
+es:b:pet-🐳.v2.o2	La ballena come una manzana.	f0be3a53			pending			
+es:b:pet-🐳.v2.o3	La ballena come un juguete.	bd6ba3b3			pending			
+es:b:pet-🐳.v2.o4	La ballena come el coche.	340f09dc			pending			
+es:b:pet-🐳.v2.o5	La ballena come fuera.	5d757482			pending			
+es:b:pet-🐳.v2.casa	La ballena come casa.	bd4bab27			pending			
+es:b:pet-🐳.v2.cama	La ballena come la cama.	f9332b10			pending			
+es:b:pet-🐳.v2.o8	La ballena come el baño.	96930b23			pending			
+es:b:pet-🐳.v2.luna	La ballena come la luna.	c4a18dd8			pending			
+es:b:pet-🐳.v2.galleta	La ballena come una galleta.	9b94d423			pending			
+es:b:pet-🐳.v2.platano	La ballena come un plátano.	c3a01a17			pending			
+es:b:pet-🐳.v2.zapato	La ballena come un zapato.	d7c15ef7			pending			
+es:b:pet-🐳.v2.manzana	La ballena come una manzana.	f0be3a53			pending			
+es:b:pet-🐳.v3.o1	La ballena bebe leche.	bdd4c314			pending			
+es:b:pet-🐳.v3.o2	La ballena bebe una manzana.	4d005c1b			pending			
+es:b:pet-🐳.v3.o3	La ballena bebe un juguete.	09aa015b			pending			
+es:b:pet-🐳.v3.o4	La ballena bebe el coche.	9f283a54			pending			
+es:b:pet-🐳.v3.o5	La ballena bebe fuera.	f8ba75fa			pending			
+es:b:pet-🐳.v3.casa	La ballena bebe casa.	90cec6af			pending			
+es:b:pet-🐳.v3.cama	La ballena bebe la cama.	a9160c28			pending			
+es:b:pet-🐳.v3.o8	La ballena bebe el baño.	93dcae3b			pending			
+es:b:pet-🐳.v3.luna	La ballena bebe la luna.	b6aba660			pending			
+es:b:pet-🐳.v3.galleta	La ballena bebe una galleta.	1a4b2fcb			pending			
+es:b:pet-🐳.v3.platano	La ballena bebe un plátano.	ae97133f			pending			
+es:b:pet-🐳.v3.zapato	La ballena bebe un zapato.	fd20071f			pending			
+es:b:pet-🐳.v3.manzana	La ballena bebe una manzana.	4d005c1b			pending			
+es:b:pet-🐳.v4.o1	La ballena duerme leche.	561b5cde			pending			
+es:b:pet-🐳.v4.o2	La ballena duerme una manzana.	7f6a5ca1			pending			
+es:b:pet-🐳.v4.o3	La ballena duerme con un juguete.	cfc0276d			pending			
+es:b:pet-🐳.v4.o4	La ballena duerme en el coche.	2fbd8a7f			pending			
+es:b:pet-🐳.v4.o5	La ballena duerme fuera.	98c94858			pending			
+es:b:pet-🐳.v4.casa	La ballena duerme en casa.	4d803f58			pending			
+es:b:pet-🐳.v4.cama	La ballena duerme en la cama.	217a5051			pending			
+es:b:pet-🐳.v4.o8	La ballena duerme en el baño.	91a55de2			pending			
+es:b:pet-🐳.v4.luna	La ballena duerme en la luna.	67f2d089			pending			
+es:b:pet-🐳.v4.galleta	La ballena duerme con una galleta.	fb8f2a4d			pending			
+es:b:pet-🐳.v4.platano	La ballena duerme con un plátano.	a8f9f2d9			pending			
+es:b:pet-🐳.v4.zapato	La ballena duerme en el zapato.	501b8d14			pending			
+es:b:pet-🐳.v4.manzana	La ballena duerme con una manzana.	1bbc8ffd			pending			
+es:b:pet-🐳.v5.o1	La ballena va leche.	4a8264c3			pending			
+es:b:pet-🐳.v5.o2	La ballena va una manzana.	4613f548			pending			
+es:b:pet-🐳.v5.o3	La ballena va un juguete.	3f7d1662			pending			
+es:b:pet-🐳.v5.o4	La ballena va en coche.	f2a6b2c3			pending			
+es:b:pet-🐳.v5.o5	La ballena va fuera.	33f28b09			pending			
+es:b:pet-🐳.v5.casa	La ballena va a casa.	721a7b95			pending			
+es:b:pet-🐳.v5.cama	La ballena va a la cama.	00044176			pending			
+es:b:pet-🐳.v5.o8	La ballena va al baño.	b2281294			pending			
+es:b:pet-🐳.v5.luna	La ballena va a la luna.	45eeff7e			pending			
+es:b:pet-🐳.v5.galleta	La ballena va a la galleta.	320108e4			pending			
+es:b:pet-🐳.v5.platano	La ballena va al plátano.	1c18eb9c			pending			
+es:b:pet-🐳.v5.zapato	La ballena va al zapato.	2717e8e6			pending			
+es:b:pet-🐳.v5.manzana	La ballena va a la manzana.	15ac44b4			pending			
+es:b:pet-🐳.v6.o1	La ballena juega con leche.	d926554e			pending			
+es:b:pet-🐳.v6.o2	La ballena juega con una manzana.	63535291			pending			
+es:b:pet-🐳.v6.o3	La ballena juega con un juguete.	168e0d91			pending			
+es:b:pet-🐳.v6.o4	La ballena juega con el coche.	3ec74b0a			pending			
+es:b:pet-🐳.v6.o5	La ballena juega fuera.	dc0438fc			pending			
+es:b:pet-🐳.v6.casa	La ballena juega en casa.	c8202cc4			pending			
+es:b:pet-🐳.v6.cama	La ballena juega en la cama.	c67a15d5			pending			
+es:b:pet-🐳.v6.o8	La ballena juega en el baño.	d6e3befe			pending			
+es:b:pet-🐳.v6.luna	La ballena juega con la luna.	de8ddaaa			pending			
+es:b:pet-🐳.v6.galleta	La ballena juega con una galleta.	734fa8a1			pending			
+es:b:pet-🐳.v6.platano	La ballena juega con un plátano.	b1a19e4d			pending			
+es:b:pet-🐳.v6.zapato	La ballena juega con un zapato.	7ed8d881			pending			
+es:b:pet-🐳.v6.manzana	La ballena juega con una manzana.	63535291			pending			
+es:b:pet-🐻.v1.o1	El oso quiere leche.	48f56473			pending			
+es:b:pet-🐻.v1.o2	El oso quiere una manzana.	46911c38			pending			
+es:b:pet-🐻.v1.o3	El oso quiere un juguete.	3c2aa0f2			pending			
+es:b:pet-🐻.v1.o4	El oso quiere el coche.	9e2d8cb5			pending			
+es:b:pet-🐻.v1.o5	El oso quiere fuera.	42f4d639			pending			
+es:b:pet-🐻.v1.casa	El oso quiere casa.	3cb1e972			pending			
+es:b:pet-🐻.v1.cama	El oso quiere la cama.	20f5220b			pending			
+es:b:pet-🐻.v1.o8	El oso quiere el baño.	935b07a0			pending			
+es:b:pet-🐻.v1.luna	El oso quiere la luna.	8927445b			pending			
+es:b:pet-🐻.v1.galleta	El oso quiere una galleta.	08da5298			pending			
+es:b:pet-🐻.v1.platano	El oso quiere un plátano.	44ae94d2			pending			
+es:b:pet-🐻.v1.zapato	El oso quiere un zapato.	4e14dcd0			pending			
+es:b:pet-🐻.v1.manzana	El oso quiere una manzana.	46911c38			pending			
+es:b:pet-🐻.v2.o1	El oso come leche.	bfdb3110			pending			
+es:b:pet-🐻.v2.o2	El oso come una manzana.	ed25d407			pending			
+es:b:pet-🐻.v2.o3	El oso come un juguete.	5056b607			pending			
+es:b:pet-🐻.v2.o4	El oso come el coche.	6dec06f0			pending			
+es:b:pet-🐻.v2.o5	El oso come fuera.	d7a15d36			pending			
+es:b:pet-🐻.v2.casa	El oso come casa.	32c4c30b			pending			
+es:b:pet-🐻.v2.cama	El oso come la cama.	b9ee2b3c			pending			
+es:b:pet-🐻.v2.o8	El oso come el baño.	b0cbd1b7			pending			
+es:b:pet-🐻.v2.luna	El oso come la luna.	240a8504			pending			
+es:b:pet-🐻.v2.galleta	El oso come una galleta.	8c302a77			pending			
+es:b:pet-🐻.v2.platano	El oso come un plátano.	9c5bd3ab			pending			
+es:b:pet-🐻.v2.zapato	El oso come un zapato.	4a2c5ce3			pending			
+es:b:pet-🐻.v2.manzana	El oso come una manzana.	ed25d407			pending			
+es:b:pet-🐻.v3.o1	El oso bebe leche.	a76b80c0			pending			
+es:b:pet-🐻.v3.o2	El oso bebe una manzana.	57eb8537			pending			
+es:b:pet-🐻.v3.o3	El oso bebe un juguete.	3bbe7397			pending			
+es:b:pet-🐻.v3.o4	El oso bebe el coche.	a3355fc0			pending			
+es:b:pet-🐻.v3.o5	El oso bebe fuera.	81c3eca6			pending			
+es:b:pet-🐻.v3.casa	El oso bebe casa.	07a239bb			pending			
+es:b:pet-🐻.v3.cama	El oso bebe la cama.	b419896c			pending			
+es:b:pet-🐻.v3.o8	El oso bebe el baño.	adb07507			pending			
+es:b:pet-🐻.v3.luna	El oso bebe la luna.	f4dab4d4			pending			
+es:b:pet-🐻.v3.galleta	El oso bebe una galleta.	807d7e27			pending			
+es:b:pet-🐻.v3.platano	El oso bebe un plátano.	05f33cdb			pending			
+es:b:pet-🐻.v3.zapato	El oso bebe un zapato.	996ee653			pending			
+es:b:pet-🐻.v3.manzana	El oso bebe una manzana.	57eb8537			pending			
+es:b:pet-🐻.v4.o1	El oso duerme leche.	0635f082			pending			
+es:b:pet-🐻.v4.o2	El oso duerme una manzana.	0eca11c5			pending			
+es:b:pet-🐻.v4.o3	El oso duerme con un juguete.	6e095dc1			pending			
+es:b:pet-🐻.v4.o4	El oso duerme en el coche.	c49e38cb			pending			
+es:b:pet-🐻.v4.o5	El oso duerme fuera.	77b6ea0c			pending			
+es:b:pet-🐻.v4.casa	El oso duerme en casa.	82131b74			pending			
+es:b:pet-🐻.v4.cama	El oso duerme en la cama.	c881a605			pending			
+es:b:pet-🐻.v4.o8	El oso duerme en el baño.	470b2d4e			pending			
+es:b:pet-🐻.v4.luna	El oso duerme en la luna.	7181138d			pending			
+es:b:pet-🐻.v4.galleta	El oso duerme con una galleta.	1117bff1			pending			
+es:b:pet-🐻.v4.platano	El oso duerme con un plátano.	2e9e199d			pending			
+es:b:pet-🐻.v4.zapato	El oso duerme en el zapato.	f05a2668			pending			
+es:b:pet-🐻.v4.manzana	El oso duerme con una manzana.	1141b621			pending			
+es:b:pet-🐻.v5.o1	El oso va leche.	859cb507			pending			
+es:b:pet-🐻.v5.o2	El oso va una manzana.	8ea480ac			pending			
+es:b:pet-🐻.v5.o3	El oso va un juguete.	9a6067f6			pending			
+es:b:pet-🐻.v5.o4	El oso va en coche.	3a325067			pending			
+es:b:pet-🐻.v5.o5	El oso va fuera.	5fb125dd			pending			
+es:b:pet-🐻.v5.casa	El oso va a casa.	9d4b2509			pending			
+es:b:pet-🐻.v5.cama	El oso va a la cama.	eb2d8bf2			pending			
+es:b:pet-🐻.v5.o8	El oso va al baño.	08e7ceb0			pending			
+es:b:pet-🐻.v5.luna	El oso va a la luna.	5d7b01ca			pending			
+es:b:pet-🐻.v5.galleta	El oso va a la galleta.	b7c26418			pending			
+es:b:pet-🐻.v5.platano	El oso va al plátano.	f633aaf8			pending			
+es:b:pet-🐻.v5.zapato	El oso va al zapato.	bd1ebfaa			pending			
+es:b:pet-🐻.v5.manzana	El oso va a la manzana.	f5792db8			pending			
+es:b:pet-🐻.v6.o1	El oso juega con leche.	133c890a			pending			
+es:b:pet-🐻.v6.o2	El oso juega con una manzana.	cbd8a81d			pending			
+es:b:pet-🐻.v6.o3	El oso juega con un juguete.	5d14130d			pending			
+es:b:pet-🐻.v6.o4	El oso juega con el coche.	068cdce6			pending			
+es:b:pet-🐻.v6.o5	El oso juega fuera.	df3aa7f8			pending			
+es:b:pet-🐻.v6.casa	El oso juega en casa.	aee2e3f8			pending			
+es:b:pet-🐻.v6.cama	El oso juega en la cama.	64cdd6f1			pending			
+es:b:pet-🐻.v6.o8	El oso juega en el baño.	43a29482			pending			
+es:b:pet-🐻.v6.luna	El oso juega con la luna.	b90f8dbe			pending			
+es:b:pet-🐻.v6.galleta	El oso juega con una galleta.	7e8e9ded			pending			
+es:b:pet-🐻.v6.platano	El oso juega con un plátano.	f9a29a79			pending			
+es:b:pet-🐻.v6.zapato	El oso juega con un zapato.	14555905			pending			
+es:b:pet-🐻.v6.manzana	El oso juega con una manzana.	cbd8a81d			pending			
+es:b:pet-🐮.v1.o1	La vaca quiere leche.	1f031937			pending			
+es:b:pet-🐮.v1.o2	La vaca quiere una manzana.	d09474dc			pending			
+es:b:pet-🐮.v1.o3	La vaca quiere un juguete.	b8f0f486			pending			
+es:b:pet-🐮.v1.o4	La vaca quiere el coche.	b80c2b49			pending			
+es:b:pet-🐮.v1.o5	La vaca quiere fuera.	62561e8d			pending			
+es:b:pet-🐮.v1.casa	La vaca quiere casa.	ff57b606			pending			
+es:b:pet-🐮.v1.cama	La vaca quiere la cama.	b45b4727			pending			
+es:b:pet-🐮.v1.o8	La vaca quiere el baño.	8feee9c4			pending			
+es:b:pet-🐮.v1.luna	La vaca quiere la luna.	e4b4c7d7			pending			
+es:b:pet-🐮.v1.galleta	La vaca quiere una galleta.	44a75ccc			pending			
+es:b:pet-🐮.v1.platano	La vaca quiere un plátano.	5d06ee46			pending			
+es:b:pet-🐮.v1.zapato	La vaca quiere un zapato.	7bf57bcc			pending			
+es:b:pet-🐮.v1.manzana	La vaca quiere una manzana.	d09474dc			pending			
+es:b:pet-🐮.v2.o1	La vaca come leche.	ea32e004			pending			
+es:b:pet-🐮.v2.o2	La vaca come una manzana.	996fab4b			pending			
+es:b:pet-🐮.v2.o3	La vaca come un juguete.	119953ab			pending			
+es:b:pet-🐮.v2.o4	La vaca come el coche.	5a495ba4			pending			
+es:b:pet-🐮.v2.o5	La vaca come fuera.	fa9d2eaa			pending			
+es:b:pet-🐮.v2.casa	La vaca come casa.	327e9f5f			pending			
+es:b:pet-🐮.v2.cama	La vaca come la cama.	e101d258			pending			
+es:b:pet-🐮.v2.o8	La vaca come el baño.	94ba938b			pending			
+es:b:pet-🐮.v2.luna	La vaca come la luna.	da8d6130			pending			
+es:b:pet-🐮.v2.galleta	La vaca come una galleta.	7996327b			pending			
+es:b:pet-🐮.v2.platano	La vaca come un plátano.	a0a4262f			pending			
+es:b:pet-🐮.v2.zapato	La vaca come un zapato.	59fbe1cf			pending			
+es:b:pet-🐮.v2.manzana	La vaca come una manzana.	996fab4b			pending			
+es:b:pet-🐮.v3.o1	La vaca bebe leche.	8daa47bc			pending			
+es:b:pet-🐮.v3.o2	La vaca bebe una manzana.	e4485d13			pending			
+es:b:pet-🐮.v3.o3	La vaca bebe un juguete.	33d6ed73			pending			
+es:b:pet-🐮.v3.o4	La vaca bebe el coche.	a045639c			pending			
+es:b:pet-🐮.v3.o5	La vaca bebe fuera.	0f0261c2			pending			
+es:b:pet-🐮.v3.casa	La vaca bebe casa.	29682f67			pending			
+es:b:pet-🐮.v3.cama	La vaca bebe la cama.	344eb3d0			pending			
+es:b:pet-🐮.v3.o8	La vaca bebe el baño.	79d72fe3			pending			
+es:b:pet-🐮.v3.luna	La vaca bebe la luna.	10350998			pending			
+es:b:pet-🐮.v3.galleta	La vaca bebe una galleta.	e55ccae3			pending			
+es:b:pet-🐮.v3.platano	La vaca bebe un plátano.	299370d7			pending			
+es:b:pet-🐮.v3.zapato	La vaca bebe un zapato.	aa937db7			pending			
+es:b:pet-🐮.v3.manzana	La vaca bebe una manzana.	e4485d13			pending			
+es:b:pet-🐮.v4.o1	La vaca duerme leche.	4cd5f6b6			pending			
+es:b:pet-🐮.v4.o2	La vaca duerme una manzana.	9d745809			pending			
+es:b:pet-🐮.v4.o3	La vaca duerme con un juguete.	649493f5			pending			
+es:b:pet-🐮.v4.o4	La vaca duerme en el coche.	e20645d7			pending			
+es:b:pet-🐮.v4.o5	La vaca duerme fuera.	28a04470			pending			
+es:b:pet-🐮.v4.casa	La vaca duerme en casa.	47d053e0			pending			
+es:b:pet-🐮.v4.cama	La vaca duerme en la cama.	b2dfb1c9			pending			
+es:b:pet-🐮.v4.o8	La vaca duerme en el baño.	d1ac5cda			pending			
+es:b:pet-🐮.v4.luna	La vaca duerme en la luna.	18d87051			pending			
+es:b:pet-🐮.v4.galleta	La vaca duerme con una galleta.	c59e97f5			pending			
+es:b:pet-🐮.v4.platano	La vaca duerme con un plátano.	559f3ee1			pending			
+es:b:pet-🐮.v4.zapato	La vaca duerme en el zapato.	b1bec07c			pending			
+es:b:pet-🐮.v4.manzana	La vaca duerme con una manzana.	07513b45			pending			
+es:b:pet-🐮.v5.o1	La vaca va leche.	38468e8b			pending			
+es:b:pet-🐮.v5.o2	La vaca va una manzana.	86860980			pending			
+es:b:pet-🐮.v5.o3	La vaca va un juguete.	208e177a			pending			
+es:b:pet-🐮.v5.o4	La vaca va en coche.	48b6dcab			pending			
+es:b:pet-🐮.v5.o5	La vaca va fuera.	af79bb51			pending			
+es:b:pet-🐮.v5.casa	La vaca va a casa.	290ecc2d			pending			
+es:b:pet-🐮.v5.cama	La vaca va a la cama.	dde582de			pending			
+es:b:pet-🐮.v5.o8	La vaca va al baño.	c0e1671c			pending			
+es:b:pet-🐮.v5.luna	La vaca va a la luna.	4e2db7b6			pending			
+es:b:pet-🐮.v5.galleta	La vaca va a la galleta.	9017ef8c			pending			
+es:b:pet-🐮.v5.platano	La vaca va al plátano.	e764b534			pending			
+es:b:pet-🐮.v5.zapato	La vaca va al zapato.	9e5a559e			pending			
+es:b:pet-🐮.v5.manzana	La vaca va a la manzana.	4390299c			pending			
+es:b:pet-🐮.v6.o1	La vaca juega con leche.	8a70f676			pending			
+es:b:pet-🐮.v6.o2	La vaca juega con una manzana.	bcc82849			pending			
+es:b:pet-🐮.v6.o3	La vaca juega con un juguete.	bc019469			pending			
+es:b:pet-🐮.v6.o4	La vaca juega con el coche.	d30b0792			pending			
+es:b:pet-🐮.v6.o5	La vaca juega fuera.	756a95a4			pending			
+es:b:pet-🐮.v6.casa	La vaca juega en casa.	5f1a0b3c			pending			
+es:b:pet-🐮.v6.cama	La vaca juega en la cama.	ba6c0cfd			pending			
+es:b:pet-🐮.v6.o8	La vaca juega en el baño.	77ea9786			pending			
+es:b:pet-🐮.v6.luna	La vaca juega con la luna.	1d957e82			pending			
+es:b:pet-🐮.v6.galleta	La vaca juega con una galleta.	f93b2ff9			pending			
+es:b:pet-🐮.v6.platano	La vaca juega con un plátano.	f22a2f45			pending			
+es:b:pet-🐮.v6.zapato	La vaca juega con un zapato.	28cf2259			pending			
+es:b:pet-🐮.v6.manzana	La vaca juega con una manzana.	bcc82849			pending			
+es:b:pet-🐱.v1.o1	El gato quiere leche.	9b24779d			pending			
+es:b:pet-🐱.v1.o2	El gato quiere una manzana.	8bb54cb6			pending			
+es:b:pet-🐱.v1.o3	El gato quiere un juguete.	3545c350			pending			
+es:b:pet-🐱.v1.o4	El gato quiere el coche.	60f2febb			pending			
+es:b:pet-🐱.v1.o5	El gato quiere fuera.	38b68b67			pending			
+es:b:pet-🐱.v1.casa	El gato quiere casa.	a3e926c4			pending			
+es:b:pet-🐱.v1.cama	El gato quiere la cama.	4d2953d5			pending			
+es:b:pet-🐱.v1.o8	El gato quiere el baño.	5d92fcfe			pending			
+es:b:pet-🐱.v1.luna	El gato quiere la luna.	1b2cee7d			pending			
+es:b:pet-🐱.v1.galleta	El gato quiere una galleta.	86aa930e			pending			
+es:b:pet-🐱.v1.platano	El gato quiere un plátano.	1e864790			pending			
+es:b:pet-🐱.v1.zapato	El gato quiere un zapato.	2784d862			pending			
+es:b:pet-🐱.v1.manzana	El gato quiere una manzana.	8bb54cb6			pending			
+es:b:pet-🐱.v2.o1	El gato come leche.	0edf6e0e			pending			
+es:b:pet-🐱.v2.o2	El gato come una manzana.	a80b13d1			pending			
+es:b:pet-🐱.v2.o3	El gato come un juguete.	8aae0dd1			pending			
+es:b:pet-🐱.v2.o4	El gato come el coche.	76f61f4a			pending			
+es:b:pet-🐱.v2.o5	El gato come fuera.	c6cc1dc8			pending			
+es:b:pet-🐱.v2.casa	El gato come casa.	02ddb3a9			pending			
+es:b:pet-🐱.v2.cama	El gato come la cama.	90a52412			pending			
+es:b:pet-🐱.v2.o8	El gato come el baño.	894cc909			pending			
+es:b:pet-🐱.v2.luna	El gato come la luna.	2f31aaea			pending			
+es:b:pet-🐱.v2.galleta	El gato come una galleta.	8c6f16e1			pending			
+es:b:pet-🐱.v2.platano	El gato come un plátano.	362dd18d			pending			
+es:b:pet-🐱.v2.zapato	El gato come un zapato.	b9faa8c1			pending			
+es:b:pet-🐱.v2.manzana	El gato come una manzana.	a80b13d1			pending			
+es:b:pet-🐱.v3.o1	El gato bebe leche.	a7ed9c1e			pending			
+es:b:pet-🐱.v3.o2	El gato bebe una manzana.	86e72e61			pending			
+es:b:pet-🐱.v3.o3	El gato bebe un juguete.	68dc8a01			pending			
+es:b:pet-🐱.v3.o4	El gato bebe el coche.	ef5bd33a			pending			
+es:b:pet-🐱.v3.o5	El gato bebe fuera.	8f68e198			pending			
+es:b:pet-🐱.v3.casa	El gato bebe casa.	ca462cb9			pending			
+es:b:pet-🐱.v3.cama	El gato bebe la cama.	49873ae2			pending			
+es:b:pet-🐱.v3.o8	El gato bebe el baño.	5e01ee39			pending			
+es:b:pet-🐱.v3.luna	El gato bebe la luna.	015cf79a			pending			
+es:b:pet-🐱.v3.galleta	El gato bebe una galleta.	717db431			pending			
+es:b:pet-🐱.v3.platano	El gato bebe un plátano.	951bdedd			pending			
+es:b:pet-🐱.v3.zapato	El gato bebe un zapato.	21a01b51			pending			
+es:b:pet-🐱.v3.manzana	El gato bebe una manzana.	86e72e61			pending			
+es:b:pet-🐱.v4.o1	El gato duerme leche.	027b3154			pending			
+es:b:pet-🐱.v4.o2	El gato duerme una manzana.	e488addb			pending			
+es:b:pet-🐱.v4.o3	El gato duerme con un juguete.	23840e23			pending			
+es:b:pet-🐱.v4.o4	El gato duerme en el coche.	c60d4a51			pending			
+es:b:pet-🐱.v4.o5	El gato duerme fuera.	3d60e43a			pending			
+es:b:pet-🐱.v4.casa	El gato duerme en casa.	39c5c5be			pending			
+es:b:pet-🐱.v4.cama	El gato duerme en la cama.	48fc4eef			pending			
+es:b:pet-🐱.v4.o8	El gato duerme en el baño.	976be32c			pending			
+es:b:pet-🐱.v4.luna	El gato duerme en la luna.	592f8b4f			pending			
+es:b:pet-🐱.v4.galleta	El gato duerme con una galleta.	4580d833			pending			
+es:b:pet-🐱.v4.platano	El gato duerme con un plátano.	9e2a90a7			pending			
+es:b:pet-🐱.v4.zapato	El gato duerme en el zapato.	40c4016e			pending			
+es:b:pet-🐱.v4.manzana	El gato duerme con una manzana.	05a025e3			pending			
+es:b:pet-🐱.v5.o1	El gato va leche.	a62bb6e9			pending			
+es:b:pet-🐱.v5.o2	El gato va una manzana.	c3f02bd2			pending			
+es:b:pet-🐱.v5.o3	El gato va un juguete.	02f2d2fc			pending			
+es:b:pet-🐱.v5.o4	El gato va en coche.	f6f3a099			pending			
+es:b:pet-🐱.v5.o5	El gato va fuera.	5006b1c3			pending			
+es:b:pet-🐱.v5.casa	El gato va a casa.	d84e1f73			pending			
+es:b:pet-🐱.v5.cama	El gato va a la cama.	16f57794			pending			
+es:b:pet-🐱.v5.o8	El gato va al baño.	5b697306			pending			
+es:b:pet-🐱.v5.luna	El gato va a la luna.	3cb5696c			pending			
+es:b:pet-🐱.v5.galleta	El gato va a la galleta.	15898cfe			pending			
+es:b:pet-🐱.v5.platano	El gato va al plátano.	d038a712			pending			
+es:b:pet-🐱.v5.zapato	El gato va al zapato.	80068010			pending			
+es:b:pet-🐱.v5.manzana	El gato va a la manzana.	9974a9e6			pending			
+es:b:pet-🐱.v6.o1	El gato juega con leche.	22d55320			pending			
+es:b:pet-🐱.v6.o2	El gato juega con una manzana.	b2eac517			pending			
+es:b:pet-🐱.v6.o3	El gato juega con un juguete.	2985be77			pending			
+es:b:pet-🐱.v6.o4	El gato juega con el coche.	69120320			pending			
+es:b:pet-🐱.v6.o5	El gato juega fuera.	a37293ee			pending			
+es:b:pet-🐱.v6.casa	El gato juega en casa.	2244518a			pending			
+es:b:pet-🐱.v6.cama	El gato juega en la cama.	490c3cf3			pending			
+es:b:pet-🐱.v6.o8	El gato juega en el baño.	b00098c8			pending			
+es:b:pet-🐱.v6.luna	El gato juega con la luna.	21eb6f34			pending			
+es:b:pet-🐱.v6.galleta	El gato juega con una galleta.	b5d10707			pending			
+es:b:pet-🐱.v6.platano	El gato juega con un plátano.	1e5e563b			pending			
+es:b:pet-🐱.v6.zapato	El gato juega con un zapato.	42113433			pending			
+es:b:pet-🐱.v6.manzana	El gato juega con una manzana.	b2eac517			pending			
+es:b:pet-🦕.v1.o1	El dinosaurio quiere leche.	45b4cb87			pending			
+es:b:pet-🦕.v1.o2	El dinosaurio quiere una manzana.	1c47e32c			pending			
+es:b:pet-🦕.v1.o3	El dinosaurio quiere un juguete.	48770b76			pending			
+es:b:pet-🦕.v1.o4	El dinosaurio quiere el coche.	d1257079			pending			
+es:b:pet-🦕.v1.o5	El dinosaurio quiere fuera.	1fc93c5d			pending			
+es:b:pet-🦕.v1.casa	El dinosaurio quiere casa.	b779b556			pending			
+es:b:pet-🦕.v1.cama	El dinosaurio quiere la cama.	46c90337			pending			
+es:b:pet-🦕.v1.o8	El dinosaurio quiere el baño.	2de29a34			pending			
+es:b:pet-🦕.v1.luna	El dinosaurio quiere la luna.	7b6d3187			pending			
+es:b:pet-🦕.v1.galleta	El dinosaurio quiere una galleta.	e5841edc			pending			
+es:b:pet-🦕.v1.platano	El dinosaurio quiere un plátano.	ced43596			pending			
+es:b:pet-🦕.v1.zapato	El dinosaurio quiere un zapato.	3cf9675c			pending			
+es:b:pet-🦕.v1.manzana	El dinosaurio quiere una manzana.	1c47e32c			pending			
+es:b:pet-🦕.v2.o1	El dinosaurio come leche.	23bd62f4			pending			
+es:b:pet-🦕.v2.o2	El dinosaurio come una manzana.	7c8b127b			pending			
+es:b:pet-🦕.v2.o3	El dinosaurio come un juguete.	0522603b			pending			
+es:b:pet-🦕.v2.o4	El dinosaurio come el coche.	985639b4			pending			
+es:b:pet-🦕.v2.o5	El dinosaurio come fuera.	5ea315da			pending			
+es:b:pet-🦕.v2.casa	El dinosaurio come casa.	4251948f			pending			
+es:b:pet-🦕.v2.cama	El dinosaurio come la cama.	af0f8308			pending			
+es:b:pet-🦕.v2.o8	El dinosaurio come el baño.	637f3d9b			pending			
+es:b:pet-🦕.v2.luna	El dinosaurio come la luna.	a0ddff40			pending			
+es:b:pet-🦕.v2.galleta	El dinosaurio come una galleta.	7162baab			pending			
+es:b:pet-🦕.v2.platano	El dinosaurio come un plátano.	9c139a9f			pending			
+es:b:pet-🦕.v2.zapato	El dinosaurio come un zapato.	e67dee7f			pending			
+es:b:pet-🦕.v2.manzana	El dinosaurio come una manzana.	7c8b127b			pending			
+es:b:pet-🦕.v3.o1	El dinosaurio bebe leche.	04d391ac			pending			
+es:b:pet-🦕.v3.o2	El dinosaurio bebe una manzana.	4ab6bd83			pending			
+es:b:pet-🦕.v3.o3	El dinosaurio bebe un juguete.	f70be0c3			pending			
+es:b:pet-🦕.v3.o4	El dinosaurio bebe el coche.	a9cc026c			pending			
+es:b:pet-🦕.v3.o5	El dinosaurio bebe fuera.	f9e4bd72			pending			
+es:b:pet-🦕.v3.casa	El dinosaurio bebe casa.	7eef6297			pending			
+es:b:pet-🦕.v3.cama	El dinosaurio bebe la cama.	af67c900			pending			
+es:b:pet-🦕.v3.o8	El dinosaurio bebe el baño.	d365e673			pending			
+es:b:pet-🦕.v3.luna	El dinosaurio bebe la luna.	130bfae8			pending			
+es:b:pet-🦕.v3.galleta	El dinosaurio bebe una galleta.	a169bbd3			pending			
+es:b:pet-🦕.v3.platano	El dinosaurio bebe un plátano.	47ab25c7			pending			
+es:b:pet-🦕.v3.zapato	El dinosaurio bebe un zapato.	1d6be7e7			pending			
+es:b:pet-🦕.v3.manzana	El dinosaurio bebe una manzana.	4ab6bd83			pending			
+es:b:pet-🦕.v4.o1	El dinosaurio duerme leche.	b01040a6			pending			
+es:b:pet-🦕.v4.o2	El dinosaurio duerme una manzana.	3237d839			pending			
+es:b:pet-🦕.v4.o3	El dinosaurio duerme con un juguete.	fcd35a85			pending			
+es:b:pet-🦕.v4.o4	El dinosaurio duerme en el coche.	9d683ec7			pending			
+es:b:pet-🦕.v4.o5	El dinosaurio duerme fuera.	d1af67e0			pending			
+es:b:pet-🦕.v4.casa	El dinosaurio duerme en casa.	d8394eb0			pending			
+es:b:pet-🦕.v4.cama	El dinosaurio duerme en la cama.	68e80259			pending			
+es:b:pet-🦕.v4.o8	El dinosaurio duerme en el baño.	32df21ca			pending			
+es:b:pet-🦕.v4.luna	El dinosaurio duerme en la luna.	73bc2101			pending			
+es:b:pet-🦕.v4.galleta	El dinosaurio duerme con una galleta.	4ff6b4e5			pending			
+es:b:pet-🦕.v4.platano	El dinosaurio duerme con un plátano.	42c7d2d1			pending			
+es:b:pet-🦕.v4.zapato	El dinosaurio duerme en el zapato.	d1c96aec			pending			
+es:b:pet-🦕.v4.manzana	El dinosaurio duerme con una manzana.	90adb935			pending			
+es:b:pet-🦕.v5.o1	El dinosaurio va leche.	4dc318db			pending			
+es:b:pet-🦕.v5.o2	El dinosaurio va una manzana.	8f2f1e10			pending			
+es:b:pet-🦕.v5.o3	El dinosaurio va un juguete.	a07a502a			pending			
+es:b:pet-🦕.v5.o4	El dinosaurio va en coche.	0323811b			pending			
+es:b:pet-🦕.v5.o5	El dinosaurio va fuera.	e9717c21			pending			
+es:b:pet-🦕.v5.casa	El dinosaurio va a casa.	d9693d3d			pending			
+es:b:pet-🦕.v5.cama	El dinosaurio va a la cama.	718d2b6e			pending			
+es:b:pet-🦕.v5.o8	El dinosaurio va al baño.	17dfaf4c			pending			
+es:b:pet-🦕.v5.luna	El dinosaurio va a la luna.	f52465e6			pending			
+es:b:pet-🦕.v5.galleta	El dinosaurio va a la galleta.	d920e3dc			pending			
+es:b:pet-🦕.v5.platano	El dinosaurio va al plátano.	68134d24			pending			
+es:b:pet-🦕.v5.zapato	El dinosaurio va al zapato.	4a583c0e			pending			
+es:b:pet-🦕.v5.manzana	El dinosaurio va a la manzana.	0fe4a82c			pending			
+es:b:pet-🦕.v6.o1	El dinosaurio juega con leche.	e8427fa6			pending			
+es:b:pet-🦕.v6.o2	El dinosaurio juega con una manzana.	40e01f39			pending			
+es:b:pet-🦕.v6.o3	El dinosaurio juega con un juguete.	babafdf9			pending			
+es:b:pet-🦕.v6.o4	El dinosaurio juega con el coche.	64d5f462			pending			
+es:b:pet-🦕.v6.o5	El dinosaurio juega fuera.	5e50b654			pending			
+es:b:pet-🦕.v6.casa	El dinosaurio juega en casa.	3ce5c60c			pending			
+es:b:pet-🦕.v6.cama	El dinosaurio juega en la cama.	e15d210d			pending			
+es:b:pet-🦕.v6.o8	El dinosaurio juega en el baño.	60787f36			pending			
+es:b:pet-🦕.v6.luna	El dinosaurio juega con la luna.	c5e22d12			pending			
+es:b:pet-🦕.v6.galleta	El dinosaurio juega con una galleta.	69526ea9			pending			
+es:b:pet-🦕.v6.platano	El dinosaurio juega con un plátano.	851fa575			pending			
+es:b:pet-🦕.v6.zapato	El dinosaurio juega con un zapato.	a9cd14c9			pending			
+es:b:pet-🦕.v6.manzana	El dinosaurio juega con una manzana.	40e01f39			pending			
+es:p:🐵.v3.o1	El mono bebe leche.	ea59cc10			pending			
+es:p:🐵.v2.o2	El mono come una manzana.	12530417			pending			
+es:p:🐵.v6.o4	El mono juega con el coche.	0a79a196			pending			
+es:p:🐵.v2.galleta	El mono come una galleta.	15394607			pending			
+es:p:🐵.v2.platano	El mono come un plátano.	f7387b3b			pending			
+es:p:🐵.v2.manzana	El mono come una manzana.	12530417			pending			
+es:p:🐵.v2.-	El mono come.	2d1a17e9			pending			
+es:p:🐵.v3.-	El mono bebe.	66d77a59			pending			
+es:p:🐵.v6.-	El mono juega.	10efc36b			pending			
+es:p:🐶.v3.o1	El perro bebe leche.	26e23cf3			pending			
+es:p:🐶.v2.o2	El perro come una manzana.	af9392b4			pending			
+es:p:🐶.v6.o4	El perro juega con el coche.	9cdd222d			pending			
+es:p:🐶.v2.galleta	El perro come una galleta.	cbe856e4			pending			
+es:p:🐶.v2.platano	El perro come un plátano.	c84575fe			pending			
+es:p:🐶.v2.manzana	El perro come una manzana.	af9392b4			pending			
+es:p:🐶.v2.-	El perro come.	79d47186			pending			
+es:p:🐶.v3.-	El perro bebe.	ddcf94c2			pending			
+es:p:🐶.v6.-	El perro juega.	9a37ea46			pending			
+es:p:🐍.v3.o1	La serpiente bebe leche.	04e263fc			pending			
+es:p:🐍.v2.o2	La serpiente come una manzana.	f682440b			pending			
+es:p:🐍.v6.o4	La serpiente juega con el coche.	d073b0d2			pending			
+es:p:🐍.v2.galleta	La serpiente come una galleta.	93976e3b			pending			
+es:p:🐍.v2.platano	La serpiente come un plátano.	d6e53def			pending			
+es:p:🐍.v2.manzana	La serpiente come una manzana.	f682440b			pending			
+es:p:🐍.v2.-	La serpiente come.	ad125715			pending			
+es:p:🐍.v3.-	La serpiente bebe.	9b5f4dad			pending			
+es:p:🐍.v6.-	La serpiente juega.	314e9f3f			pending			
+es:p:🦁.v3.o1	El león bebe leche.	1e259f8d			pending			
+es:p:🦁.v2.o2	El león come una manzana.	a95ea262			pending			
+es:p:🦁.v6.o4	El león juega con el coche.	c3bd7683			pending			
+es:p:🦁.v2.galleta	El león come una galleta.	6ab9594a			pending			
+es:p:🦁.v2.platano	El león come un plátano.	76fafc5c			pending			
+es:p:🦁.v2.manzana	El león come una manzana.	a95ea262			pending			
+es:p:🦁.v2.-	El león come.	5572dd94			pending			
+es:p:🦁.v3.-	El león bebe.	bda9aab0			pending			
+es:p:🦁.v6.-	El león juega.	f186ff10			pending			
+es:p:🐘.v3.o1	El elefante bebe leche.	164fb8a1			pending			
+es:p:🐘.v2.o2	El elefante come una manzana.	149d17ee			pending			
+es:p:🐘.v6.o4	El elefante juega con el coche.	8de0a217			pending			
+es:p:🐘.v2.galleta	El elefante come una galleta.	473bc706			pending			
+es:p:🐘.v2.platano	El elefante come un plátano.	4d7e25a8			pending			
+es:p:🐘.v2.manzana	El elefante come una manzana.	149d17ee			pending			
+es:p:🐘.v2.-	El elefante come.	9ccfbe88			pending			
+es:p:🐘.v3.-	El elefante bebe.	222e071c			pending			
+es:p:🐘.v6.-	El elefante juega.	797e063c			pending			
+es:p:🐳.v3.o1	La ballena bebe leche.	bdd4c314			pending			
+es:p:🐳.v2.o2	La ballena come una manzana.	f0be3a53			pending			
+es:p:🐳.v6.o4	La ballena juega con el coche.	3ec74b0a			pending			
+es:p:🐳.v2.galleta	La ballena come una galleta.	9b94d423			pending			
+es:p:🐳.v2.platano	La ballena come un plátano.	c3a01a17			pending			
+es:p:🐳.v2.manzana	La ballena come una manzana.	f0be3a53			pending			
+es:p:🐳.v2.-	La ballena come.	d4e8392d			pending			
+es:p:🐳.v3.-	La ballena bebe.	d5ec83a5			pending			
+es:p:🐳.v6.-	La ballena juega.	6b265017			pending			
+es:p:🐻.v3.o1	El oso bebe leche.	a76b80c0			pending			
+es:p:🐻.v2.o2	El oso come una manzana.	ed25d407			pending			
+es:p:🐻.v6.o4	El oso juega con el coche.	068cdce6			pending			
+es:p:🐻.v2.galleta	El oso come una galleta.	8c302a77			pending			
+es:p:🐻.v2.platano	El oso come un plátano.	9c5bd3ab			pending			
+es:p:🐻.v2.manzana	El oso come una manzana.	ed25d407			pending			
+es:p:🐻.v2.-	El oso come.	15ff4759			pending			
+es:p:🐻.v3.-	El oso bebe.	d9287589			pending			
+es:p:🐻.v6.-	El oso juega.	3a4a989b			pending			
+es:p:🐮.v3.o1	La vaca bebe leche.	8daa47bc			pending			
+es:p:🐮.v2.o2	La vaca come una manzana.	996fab4b			pending			
+es:p:🐮.v6.o4	La vaca juega con el coche.	d30b0792			pending			
+es:p:🐮.v2.galleta	La vaca come una galleta.	7996327b			pending			
+es:p:🐮.v2.platano	La vaca come un plátano.	a0a4262f			pending			
+es:p:🐮.v2.manzana	La vaca come una manzana.	996fab4b			pending			
+es:p:🐮.v2.-	La vaca come.	ca7c1b55			pending			
+es:p:🐮.v3.-	La vaca bebe.	8a0f97ed			pending			
+es:p:🐮.v6.-	La vaca juega.	c00bc47f			pending			
+es:p:🐱.v3.o1	El gato bebe leche.	a7ed9c1e			pending			
+es:p:🐱.v2.o2	El gato come una manzana.	a80b13d1			pending			
+es:p:🐱.v6.o4	El gato juega con el coche.	69120320			pending			
+es:p:🐱.v2.galleta	El gato come una galleta.	8c6f16e1			pending			
+es:p:🐱.v2.platano	El gato come un plátano.	362dd18d			pending			
+es:p:🐱.v2.manzana	El gato come una manzana.	a80b13d1			pending			
+es:p:🐱.v2.-	El gato come.	4312456b			pending			
+es:p:🐱.v3.-	El gato bebe.	96db353b			pending			
+es:p:🐱.v6.-	El gato juega.	451bf8d1			pending			
+es:p:🦕.v3.o1	El dinosaurio bebe leche.	04d391ac			pending			
+es:p:🦕.v2.o2	El dinosaurio come una manzana.	7c8b127b			pending			
+es:p:🦕.v6.o4	El dinosaurio juega con el coche.	64d5f462			pending			
+es:p:🦕.v2.galleta	El dinosaurio come una galleta.	7162baab			pending			
+es:p:🦕.v2.platano	El dinosaurio come un plátano.	9c139a9f			pending			
+es:p:🦕.v2.manzana	El dinosaurio come una manzana.	7c8b127b			pending			
+es:p:🦕.v2.-	El dinosaurio come.	a829c685			pending			
+es:p:🦕.v3.-	El dinosaurio bebe.	2ef4431d			pending			
+es:p:🦕.v6.-	El dinosaurio juega.	c72bc92f			pending			

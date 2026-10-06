@@ -1,0 +1,1495 @@
+id	text	hash	llm	llm_note	human	human_note	reviewer	date
+fr:b:s1.v1.o1	Je veux du lait.	ba832be3			pending			
+fr:b:s1.v1.pomme	Je veux une pomme.	cd954d0e			pending			
+fr:b:s1.v1.o3	Je veux un jouet.	1d078b06			pending			
+fr:b:s1.v1.o4	Je veux la voiture.	50fa7c2f			pending			
+fr:b:s1.v1.o5	Je veux dehors.	e0a4ccd5			pending			
+fr:b:s1.v1.maison	Je veux à la maison.	c1169c44			pending			
+fr:b:s1.v1.o7	Je veux le lit.	cdfd9324			pending			
+fr:b:s1.v1.o8	Je veux le pot.	d19fe402			pending			
+fr:b:s1.v1.lune	Je veux la lune.	b3684b97			pending			
+fr:b:s1.v1.soupe	Je veux de la soupe.	934ee012			pending			
+fr:b:s1.v1.carotte	Je veux une carotte.	b9bfaeea			pending			
+fr:b:s1.v1.banane	Je veux une banane.	cb9f5983			pending			
+fr:b:s1.v1.ballon	Je veux un ballon.	c7b309ed			pending			
+fr:b:s1.v1.fraise	Je veux une fraise.	ed227aaa			pending			
+fr:b:s1.v2.o1	Je mange du lait.	33ccdc0f			pending			
+fr:b:s1.v2.pomme	Je mange une pomme.	0ce1ff82			pending			
+fr:b:s1.v2.o3	Je mange un jouet.	2e01064a			pending			
+fr:b:s1.v2.o4	Je mange la voiture.	61e15343			pending			
+fr:b:s1.v2.o5	Je mange dehors.	ba688281			pending			
+fr:b:s1.v2.maison	Je mange à la maison.	ffe363a0			pending			
+fr:b:s1.v2.o7	Je mange le lit.	0c33d7f8			pending			
+fr:b:s1.v2.o8	Je mange le pot.	f4091186			pending			
+fr:b:s1.v2.lune	Je mange la lune.	1b97829b			pending			
+fr:b:s1.v2.soupe	Je mange de la soupe.	b2762dce			pending			
+fr:b:s1.v2.carotte	Je mange une carotte.	c10226fe			pending			
+fr:b:s1.v2.banane	Je mange une banane.	6c898087			pending			
+fr:b:s1.v2.ballon	Je mange un ballon.	648eb759			pending			
+fr:b:s1.v2.fraise	Je mange une fraise.	f86816e6			pending			
+fr:b:s1.v3.o1	Je bois du lait.	250ff182			pending			
+fr:b:s1.v3.pomme	Je bois une pomme.	ffd8505f			pending			
+fr:b:s1.v3.o3	Je bois un jouet.	555d2551			pending			
+fr:b:s1.v3.o4	Je bois la voiture.	dfe671a4			pending			
+fr:b:s1.v3.o5	Je bois dehors.	1635023a			pending			
+fr:b:s1.v3.maison	Je bois à la maison.	ca7ac7d1			pending			
+fr:b:s1.v3.o7	Je bois le lit.	ab662e6f			pending			
+fr:b:s1.v3.o8	Je bois le pot.	bfe4a76d			pending			
+fr:b:s1.v3.lune	Je bois la lune.	2621b786			pending			
+fr:b:s1.v3.soupe	Je bois de la soupe.	b71860af			pending			
+fr:b:s1.v3.carotte	Je bois une carotte.	16ffcf8b			pending			
+fr:b:s1.v3.banane	Je bois une banane.	e6c9513c			pending			
+fr:b:s1.v3.ballon	Je bois un ballon.	08c8acdc			pending			
+fr:b:s1.v3.fraise	Je bois une fraise.	50a5bbc9			pending			
+fr:b:s1.v4.o1	Je dors du lait.	d877b519			pending			
+fr:b:s1.v4.pomme	Je dors une pomme.	cc03125c			pending			
+fr:b:s1.v4.o3	Je dors avec un jouet.	9565f993			pending			
+fr:b:s1.v4.o4	Je dors dans la voiture.	6c697839			pending			
+fr:b:s1.v4.o5	Je dors dehors.	498117c3			pending			
+fr:b:s1.v4.maison	Je dors à la maison.	8644191e			pending			
+fr:b:s1.v4.o7	Je dors au lit.	5156f881			pending			
+fr:b:s1.v4.o8	Je dors au pot.	6496082b			pending			
+fr:b:s1.v4.lune	Je dors sur la lune.	95da750f			pending			
+fr:b:s1.v4.soupe	Je dors près de la soupe.	5b545b6d			pending			
+fr:b:s1.v4.carotte	Je dors près de la carotte.	ef2cd3ad			pending			
+fr:b:s1.v4.banane	Je dors près de la banane.	a9ee014a			pending			
+fr:b:s1.v4.ballon	Je dors près du ballon.	2ae5331e			pending			
+fr:b:s1.v4.fraise	Je dors près de la fraise.	187a01d7			pending			
+fr:b:s1.v5.o1	Je vais du lait.	7631b804			pending			
+fr:b:s1.v5.pomme	Je vais une pomme.	11566899			pending			
+fr:b:s1.v5.o3	Je vais un jouet.	c11142fb			pending			
+fr:b:s1.v5.o4	Je vais en voiture.	a9f7f2de			pending			
+fr:b:s1.v5.o5	Je vais dehors.	76f28c54			pending			
+fr:b:s1.v5.maison	Je vais à la maison.	0432a45f			pending			
+fr:b:s1.v5.o7	Je vais au lit.	b0c866ca			pending			
+fr:b:s1.v5.o8	Je vais au pot.	cbc1bb4c			pending			
+fr:b:s1.v5.lune	Je vais sur la lune.	7ae92686			pending			
+fr:b:s1.v5.soupe	Je vais à la soupe.	9d99f714			pending			
+fr:b:s1.v5.carotte	Je vais à la carotte.	a6d02850			pending			
+fr:b:s1.v5.banane	Je vais à la banane.	ae8c9af5			pending			
+fr:b:s1.v5.ballon	Je vais au ballon.	da0808db			pending			
+fr:b:s1.v5.fraise	Je vais à la fraise.	90bcbdfc			pending			
+fr:b:s1.v6.o1	Je joue avec du lait.	78fa613b			pending			
+fr:b:s1.v6.pomme	Je joue avec une pomme.	fb388026			pending			
+fr:b:s1.v6.o3	Je joue avec un jouet.	3dba9a1e			pending			
+fr:b:s1.v6.o4	Je joue avec la voiture.	ec1be8a7			pending			
+fr:b:s1.v6.o5	Je joue dehors.	7da86040			pending			
+fr:b:s1.v6.maison	Je joue à la maison.	986e214b			pending			
+fr:b:s1.v6.o7	Je joue au lit.	68b9cfd6			pending			
+fr:b:s1.v6.o8	Je joue au pot.	ccca8bb8			pending			
+fr:b:s1.v6.lune	Je joue avec la lune.	cac8725f			pending			
+fr:b:s1.v6.soupe	Je joue avec de la soupe.	218e856a			pending			
+fr:b:s1.v6.carotte	Je joue avec une carotte.	e2e04282			pending			
+fr:b:s1.v6.banane	Je joue avec une banane.	628d159b			pending			
+fr:b:s1.v6.ballon	Je joue avec un ballon.	02fdcf55			pending			
+fr:b:s1.v6.fraise	Je joue avec une fraise.	087c0c12			pending			
+fr:b:s2.v1.o1	Maman veut du lait.	04e5b7f6			pending			
+fr:b:s2.v1.pomme	Maman veut une pomme.	ea13711b			pending			
+fr:b:s2.v1.o3	Maman veut un jouet.	9d5f90fd			pending			
+fr:b:s2.v1.o4	Maman veut la voiture.	34226c20			pending			
+fr:b:s2.v1.o5	Maman veut dehors.	6bb6db3e			pending			
+fr:b:s2.v1.maison	Maman veut à la maison.	914b4c35			pending			
+fr:b:s2.v1.o7	Maman veut le lit.	538dc2eb			pending			
+fr:b:s2.v1.o8	Maman veut le pot.	367cfb59			pending			
+fr:b:s2.v1.lune	Maman veut la lune.	b5c5cf72			pending			
+fr:b:s2.v1.soupe	Maman veut de la soupe.	0d63dd73			pending			
+fr:b:s2.v1.carotte	Maman veut une carotte.	523b26e7			pending			
+fr:b:s2.v1.banane	Maman veut une banane.	53f881b8			pending			
+fr:b:s2.v1.ballon	Maman veut un ballon.	c866db70			pending			
+fr:b:s2.v1.fraise	Maman veut une fraise.	bc2c473d			pending			
+fr:b:s2.v2.o1	Maman mange du lait.	55f9eea8			pending			
+fr:b:s2.v2.pomme	Maman mange une pomme.	110ee645			pending			
+fr:b:s2.v2.o3	Maman mange un jouet.	bbeb5d47			pending			
+fr:b:s2.v2.o4	Maman mange la voiture.	97b5801a			pending			
+fr:b:s2.v2.o5	Maman mange dehors.	16007778			pending			
+fr:b:s2.v2.maison	Maman mange à la maison.	96c229a3			pending			
+fr:b:s2.v2.o7	Maman mange le lit.	1b524fb9			pending			
+fr:b:s2.v2.o8	Maman mange le pot.	1efac7b3			pending			
+fr:b:s2.v2.lune	Maman mange la lune.	d2f119b0			pending			
+fr:b:s2.v2.soupe	Maman mange de la soupe.	3931c7cd			pending			
+fr:b:s2.v2.carotte	Maman mange une carotte.	3ae40241			pending			
+fr:b:s2.v2.banane	Maman mange une banane.	4e0c1dee			pending			
+fr:b:s2.v2.ballon	Maman mange un ballon.	013f268a			pending			
+fr:b:s2.v2.fraise	Maman mange une fraise.	4e267a33			pending			
+fr:b:s2.v3.o1	Maman boit du lait.	136df728			pending			
+fr:b:s2.v3.pomme	Maman boit une pomme.	22b362c5			pending			
+fr:b:s2.v3.o3	Maman boit un jouet.	7994bec7			pending			
+fr:b:s2.v3.o4	Maman boit la voiture.	dda57d9a			pending			
+fr:b:s2.v3.o5	Maman boit dehors.	4b839cf8			pending			
+fr:b:s2.v3.maison	Maman boit à la maison.	a31e0923			pending			
+fr:b:s2.v3.o7	Maman boit le lit.	50d57539			pending			
+fr:b:s2.v3.o8	Maman boit le pot.	547ded33			pending			
+fr:b:s2.v3.lune	Maman boit la lune.	90652230			pending			
+fr:b:s2.v3.soupe	Maman boit de la soupe.	d1fdd84d			pending			
+fr:b:s2.v3.carotte	Maman boit une carotte.	d3b012c1			pending			
+fr:b:s2.v3.banane	Maman boit une banane.	93fc1b6e			pending			
+fr:b:s2.v3.ballon	Maman boit un ballon.	12e3a30a			pending			
+fr:b:s2.v3.fraise	Maman boit une fraise.	941677b3			pending			
+fr:b:s2.v4.o1	Maman dort du lait.	a277d637			pending			
+fr:b:s2.v4.pomme	Maman dort une pomme.	d2581f8a			pending			
+fr:b:s2.v4.o3	Maman dort avec un jouet.	f564d025			pending			
+fr:b:s2.v4.o4	Maman dort dans la voiture.	696a07fb			pending			
+fr:b:s2.v4.o5	Maman dort dehors.	b0d22419			pending			
+fr:b:s2.v4.maison	Maman dort à la maison.	11efd678			pending			
+fr:b:s2.v4.o7	Maman dort au lit.	339fe6eb			pending			
+fr:b:s2.v4.o8	Maman dort au pot.	168f1f59			pending			
+fr:b:s2.v4.lune	Maman dort sur la lune.	1bf3e299			pending			
+fr:b:s2.v4.soupe	Maman dort près de la soupe.	308a0b4f			pending			
+fr:b:s2.v4.carotte	Maman dort près de la carotte.	fddc734b			pending			
+fr:b:s2.v4.banane	Maman dort près de la banane.	bbc901fc			pending			
+fr:b:s2.v4.ballon	Maman dort près du ballon.	32364964			pending			
+fr:b:s2.v4.fraise	Maman dort près de la fraise.	a5e8cb89			pending			
+fr:b:s2.v5.o1	Maman va du lait.	ca2077f9			pending			
+fr:b:s2.v5.pomme	Maman va une pomme.	b8336d3c			pending			
+fr:b:s2.v5.o3	Maman va un jouet.	c1a1ce34			pending			
+fr:b:s2.v5.o4	Maman va en voiture.	9bc1d945			pending			
+fr:b:s2.v5.o5	Maman va dehors.	8ef295a3			pending			
+fr:b:s2.v5.maison	Maman va à la maison.	91bcdefe			pending			
+fr:b:s2.v5.o7	Maman va au lit.	060d2461			pending			
+fr:b:s2.v5.o8	Maman va au pot.	ffff7f0b			pending			
+fr:b:s2.v5.lune	Maman va sur la lune.	61d61def			pending			
+fr:b:s2.v5.soupe	Maman va à la soupe.	a47e5473			pending			
+fr:b:s2.v5.carotte	Maman va à la carotte.	89b92767			pending			
+fr:b:s2.v5.banane	Maman va à la banane.	3364cf38			pending			
+fr:b:s2.v5.ballon	Maman va au ballon.	f2b1f68e			pending			
+fr:b:s2.v5.fraise	Maman va à la fraise.	9b9894bd			pending			
+fr:b:s2.v6.o1	Maman joue avec du lait.	a112507c			pending			
+fr:b:s2.v6.pomme	Maman joue avec une pomme.	2681c0f1			pending			
+fr:b:s2.v6.o3	Maman joue avec un jouet.	5dda4113			pending			
+fr:b:s2.v6.o4	Maman joue avec la voiture.	d25c71f6			pending			
+fr:b:s2.v6.o5	Maman joue dehors.	27745643			pending			
+fr:b:s2.v6.maison	Maman joue à la maison.	45f2039e			pending			
+fr:b:s2.v6.o7	Maman joue au lit.	2f4a3701			pending			
+fr:b:s2.v6.o8	Maman joue au pot.	428946ab			pending			
+fr:b:s2.v6.lune	Maman joue avec la lune.	e7dfaf2c			pending			
+fr:b:s2.v6.soupe	Maman joue avec de la soupe.	b2f3f0a1			pending			
+fr:b:s2.v6.carotte	Maman joue avec une carotte.	9c30f8dd			pending			
+fr:b:s2.v6.banane	Maman joue avec une banane.	a2c1e27a			pending			
+fr:b:s2.v6.ballon	Maman joue avec un ballon.	ffe699ee			pending			
+fr:b:s2.v6.fraise	Maman joue avec une fraise.	4c24e707			pending			
+fr:b:s3.v1.o1	Papa veut du lait.	c86e308e			pending			
+fr:b:s3.v1.pomme	Papa veut une pomme.	df6e9553			pending			
+fr:b:s3.v1.o3	Papa veut un jouet.	46701b35			pending			
+fr:b:s3.v1.o4	Papa veut la voiture.	e4192018			pending			
+fr:b:s3.v1.o5	Papa veut dehors.	07a7ff86			pending			
+fr:b:s3.v1.maison	Papa veut à la maison.	9d72a21d			pending			
+fr:b:s3.v1.o7	Papa veut le lit.	9a460823			pending			
+fr:b:s3.v1.o8	Papa veut le pot.	04aeb2c1			pending			
+fr:b:s3.v1.lune	Papa veut la lune.	f5b71e1a			pending			
+fr:b:s3.v1.soupe	Papa veut de la soupe.	635ffaeb			pending			
+fr:b:s3.v1.carotte	Papa veut une carotte.	fbb3307f			pending			
+fr:b:s3.v1.banane	Papa veut une banane.	81b41570			pending			
+fr:b:s3.v1.ballon	Papa veut un ballon.	9dbdc078			pending			
+fr:b:s3.v1.fraise	Papa veut une fraise.	26e1fea5			pending			
+fr:b:s3.v2.o1	Papa mange du lait.	8231e090			pending			
+fr:b:s3.v2.pomme	Papa mange une pomme.	3c9f404d			pending			
+fr:b:s3.v2.o3	Papa mange un jouet.	555e48ef			pending			
+fr:b:s3.v2.o4	Papa mange la voiture.	4cf37822			pending			
+fr:b:s3.v2.o5	Papa mange dehors.	b1dc9570			pending			
+fr:b:s3.v2.maison	Papa mange à la maison.	76d39cfb			pending			
+fr:b:s3.v2.o7	Papa mange le lit.	176097e1			pending			
+fr:b:s3.v2.o8	Papa mange le pot.	1152f28b			pending			
+fr:b:s3.v2.lune	Papa mange la lune.	d4341508			pending			
+fr:b:s3.v2.soupe	Papa mange de la soupe.	cca89a55			pending			
+fr:b:s3.v2.carotte	Papa mange une carotte.	efce0e09			pending			
+fr:b:s3.v2.banane	Papa mange une banane.	f652fef6			pending			
+fr:b:s3.v2.ballon	Papa mange un ballon.	9baa9282			pending			
+fr:b:s3.v2.fraise	Papa mange une fraise.	b40f17ab			pending			
+fr:b:s3.v3.o1	Papa boit du lait.	55e1ef60			pending			
+fr:b:s3.v3.pomme	Papa boit une pomme.	a8601c5d			pending			
+fr:b:s3.v3.o3	Papa boit un jouet.	c040587f			pending			
+fr:b:s3.v3.o4	Papa boit la voiture.	85a2dd12			pending			
+fr:b:s3.v3.o5	Papa boit dehors.	2124b160			pending			
+fr:b:s3.v3.maison	Papa boit à la maison.	f8fcb26b			pending			
+fr:b:s3.v3.o7	Papa boit le lit.	69163df1			pending			
+fr:b:s3.v3.o8	Papa boit le pot.	2335497b			pending			
+fr:b:s3.v3.lune	Papa boit la lune.	4e41a738			pending			
+fr:b:s3.v3.soupe	Papa boit de la soupe.	414a6d45			pending			
+fr:b:s3.v3.carotte	Papa boit une carotte.	d9effa99			pending			
+fr:b:s3.v3.banane	Papa boit une banane.	8b2ec886			pending			
+fr:b:s3.v3.ballon	Papa boit un ballon.	5cc43432			pending			
+fr:b:s3.v3.fraise	Papa boit une fraise.	128219bb			pending			
+fr:b:s3.v4.o1	Papa dort du lait.	c3e7ce7f			pending			
+fr:b:s3.v4.pomme	Papa dort une pomme.	8b55c0b2			pending			
+fr:b:s3.v4.o3	Papa dort avec un jouet.	e2f1249d			pending			
+fr:b:s3.v4.o4	Papa dort dans la voiture.	94fec6a3			pending			
+fr:b:s3.v4.o5	Papa dort dehors.	5b7fe6d1			pending			
+fr:b:s3.v4.maison	Papa dort à la maison.	6b536570			pending			
+fr:b:s3.v4.o7	Papa dort au lit.	1cd33863			pending			
+fr:b:s3.v4.o8	Papa dort au pot.	873be301			pending			
+fr:b:s3.v4.lune	Papa dort sur la lune.	996230d1			pending			
+fr:b:s3.v4.soupe	Papa dort près de la soupe.	cdeb1a77			pending			
+fr:b:s3.v4.carotte	Papa dort près de la carotte.	7ba74c53			pending			
+fr:b:s3.v4.banane	Papa dort près de la banane.	5ad99684			pending			
+fr:b:s3.v4.ballon	Papa dort près du ballon.	e3e0de0c			pending			
+fr:b:s3.v4.fraise	Papa dort près de la fraise.	07b54321			pending			
+fr:b:s3.v5.o1	Papa va du lait.	b6c50791			pending			
+fr:b:s3.v5.pomme	Papa va une pomme.	80e9c1f4			pending			
+fr:b:s3.v5.o3	Papa va un jouet.	803cb9cc			pending			
+fr:b:s3.v5.o4	Papa va en voiture.	5c856dfd			pending			
+fr:b:s3.v5.o5	Papa va dehors.	b8d3cf2b			pending			
+fr:b:s3.v5.maison	Papa va à la maison.	523738a6			pending			
+fr:b:s3.v5.o7	Papa va au lit.	d8c30409			pending			
+fr:b:s3.v5.o8	Papa va au pot.	88610be3			pending			
+fr:b:s3.v5.lune	Papa va sur la lune.	38abcbb7			pending			
+fr:b:s3.v5.soupe	Papa va à la soupe.	d96ed43b			pending			
+fr:b:s3.v5.carotte	Papa va à la carotte.	577c298f			pending			
+fr:b:s3.v5.banane	Papa va à la banane.	eaa9a700			pending			
+fr:b:s3.v5.ballon	Papa va au ballon.	f7d77b06			pending			
+fr:b:s3.v5.fraise	Papa va à la fraise.	40bc81b5			pending			
+fr:b:s3.v6.o1	Papa joue avec du lait.	406c4ac4			pending			
+fr:b:s3.v6.pomme	Papa joue avec une pomme.	186fc259			pending			
+fr:b:s3.v6.o3	Papa joue avec un jouet.	252c61bb			pending			
+fr:b:s3.v6.o4	Papa joue avec la voiture.	7dc8983e			pending			
+fr:b:s3.v6.o5	Papa joue dehors.	8c7093eb			pending			
+fr:b:s3.v6.maison	Papa joue à la maison.	c7091766			pending			
+fr:b:s3.v6.o7	Papa joue au lit.	a7914849			pending			
+fr:b:s3.v6.o8	Papa joue au pot.	72f66e23			pending			
+fr:b:s3.v6.lune	Papa joue avec la lune.	0da4ea44			pending			
+fr:b:s3.v6.soupe	Papa joue avec de la soupe.	7cf11dc9			pending			
+fr:b:s3.v6.carotte	Papa joue avec une carotte.	ce842b85			pending			
+fr:b:s3.v6.banane	Papa joue avec une banane.	544bdc22			pending			
+fr:b:s3.v6.ballon	Papa joue avec un ballon.	4b0dd646			pending			
+fr:b:s3.v6.fraise	Papa joue avec une fraise.	89f379ff			pending			
+fr:b:s4.v1.o1	Mamie veut du lait.	525b4f73			pending			
+fr:b:s4.v1.pomme	Mamie veut une pomme.	3056b09e			pending			
+fr:b:s4.v1.o3	Mamie veut un jouet.	b761c156			pending			
+fr:b:s4.v1.o4	Mamie veut la voiture.	cd85d4df			pending			
+fr:b:s4.v1.o5	Mamie veut dehors.	f5687985			pending			
+fr:b:s4.v1.maison	Mamie veut à la maison.	0f413ab4			pending			
+fr:b:s4.v1.o7	Mamie veut le lit.	fcc76f34			pending			
+fr:b:s4.v1.o8	Mamie veut le pot.	43101072			pending			
+fr:b:s4.v1.lune	Mamie veut la lune.	cced6a07			pending			
+fr:b:s4.v1.soupe	Mamie veut de la soupe.	634a5402			pending			
+fr:b:s4.v1.carotte	Mamie veut une carotte.	f3cd4f3a			pending			
+fr:b:s4.v1.banane	Mamie veut une banane.	1ecae793			pending			
+fr:b:s4.v1.ballon	Mamie veut un ballon.	c0a92b1d			pending			
+fr:b:s4.v1.fraise	Mamie veut une fraise.	d034423a			pending			
+fr:b:s4.v2.o1	Mamie mange du lait.	ecd01843			pending			
+fr:b:s4.v2.pomme	Mamie mange une pomme.	d488916e			pending			
+fr:b:s4.v2.o3	Mamie mange un jouet.	fafaa7e6			pending			
+fr:b:s4.v2.o4	Mamie mange la voiture.	becb758f			pending			
+fr:b:s4.v2.o5	Mamie mange dehors.	024190b5			pending			
+fr:b:s4.v2.maison	Mamie mange à la maison.	fd02dca4			pending			
+fr:b:s4.v2.o7	Mamie mange le lit.	7469a104			pending			
+fr:b:s4.v2.o8	Mamie mange le pot.	f80b2862			pending			
+fr:b:s4.v2.lune	Mamie mange la lune.	f6c98177			pending			
+fr:b:s4.v2.soupe	Mamie mange de la soupe.	e39296f2			pending			
+fr:b:s4.v2.carotte	Mamie mange une carotte.	a9775a4a			pending			
+fr:b:s4.v2.banane	Mamie mange une banane.	5e1770e3			pending			
+fr:b:s4.v2.ballon	Mamie mange un ballon.	78ae554d			pending			
+fr:b:s4.v2.fraise	Mamie mange une fraise.	18a0a28a			pending			
+fr:b:s4.v3.o1	Mamie boit du lait.	b99773b5			pending			
+fr:b:s4.v3.pomme	Mamie boit une pomme.	3e150990			pending			
+fr:b:s4.v3.o3	Mamie boit un jouet.	83d8fb78			pending			
+fr:b:s4.v3.o4	Mamie boit la voiture.	4513d229			pending			
+fr:b:s4.v3.o5	Mamie boit dehors.	4b612faf			pending			
+fr:b:s4.v3.maison	Mamie boit à la maison.	3d64567a			pending			
+fr:b:s4.v3.o7	Mamie boit le lit.	8263d25a			pending			
+fr:b:s4.v3.o8	Mamie boit le pot.	9ab5a83c			pending			
+fr:b:s4.v3.lune	Mamie boit la lune.	d8d3399d			pending			
+fr:b:s4.v3.soupe	Mamie boit de la soupe.	d8b98acc			pending			
+fr:b:s4.v3.carotte	Mamie boit une carotte.	b7084ffc			pending			
+fr:b:s4.v3.banane	Mamie boit une banane.	faca1761			pending			
+fr:b:s4.v3.ballon	Mamie boit un ballon.	63d6a247			pending			
+fr:b:s4.v3.fraise	Mamie boit une fraise.	3fdbce70			pending			
+fr:b:s4.v4.o1	Mamie dort du lait.	4f8c3f66			pending			
+fr:b:s4.v4.pomme	Mamie dort une pomme.	65fc4d4b			pending			
+fr:b:s4.v4.o3	Mamie dort avec un jouet.	40c59380			pending			
+fr:b:s4.v4.o4	Mamie dort dans la voiture.	a4c38992			pending			
+fr:b:s4.v4.o5	Mamie dort dehors.	818cff4e			pending			
+fr:b:s4.v4.maison	Mamie dort à la maison.	f26b6dc5			pending			
+fr:b:s4.v4.o7	Mamie dort au lit.	502a2ab0			pending			
+fr:b:s4.v4.o8	Mamie dort au pot.	2205010e			pending			
+fr:b:s4.v4.lune	Mamie dort sur la lune.	2d136734			pending			
+fr:b:s4.v4.soupe	Mamie dort près de la soupe.	fafa6318			pending			
+fr:b:s4.v4.carotte	Mamie dort près de la carotte.	462ec3fc			pending			
+fr:b:s4.v4.banane	Mamie dort près de la banane.	8de25361			pending			
+fr:b:s4.v4.ballon	Mamie dort près du ballon.	d458adbf			pending			
+fr:b:s4.v4.fraise	Mamie dort près de la fraise.	d2f40a70			pending			
+fr:b:s4.v5.o1	Mamie va du lait.	e85eee48			pending			
+fr:b:s4.v5.pomme	Mamie va une pomme.	49606965			pending			
+fr:b:s4.v5.o3	Mamie va un jouet.	eb8f0de7			pending			
+fr:b:s4.v5.o4	Mamie va en voiture.	99c4d562			pending			
+fr:b:s4.v5.o5	Mamie va dehors.	0322be18			pending			
+fr:b:s4.v5.maison	Mamie va à la maison.	c1f03cc3			pending			
+fr:b:s4.v5.o7	Mamie va au lit.	80810e6e			pending			
+fr:b:s4.v5.o8	Mamie va au pot.	7a5fe160			pending			
+fr:b:s4.v5.lune	Mamie va sur la lune.	61bdc61a			pending			
+fr:b:s4.v5.soupe	Mamie va à la soupe.	b5cc7930			pending			
+fr:b:s4.v5.carotte	Mamie va à la carotte.	bcdc5dd4			pending			
+fr:b:s4.v5.banane	Mamie va à la banane.	308acfd9			pending			
+fr:b:s4.v5.ballon	Mamie va au ballon.	6ed3dc57			pending			
+fr:b:s4.v5.fraise	Mamie va à la fraise.	5ba5b158			pending			
+fr:b:s4.v6.o1	Mamie joue avec du lait.	de8e2c57			pending			
+fr:b:s4.v6.pomme	Mamie joue avec une pomme.	f19dc82a			pending			
+fr:b:s4.v6.o3	Mamie joue avec un jouet.	c8966552			pending			
+fr:b:s4.v6.o4	Mamie joue avec la voiture.	898067ab			pending			
+fr:b:s4.v6.o5	Mamie joue dehors.	2ee5c604			pending			
+fr:b:s4.v6.maison	Mamie joue à la maison.	72cbf74f			pending			
+fr:b:s4.v6.o7	Mamie joue au lit.	84da357a			pending			
+fr:b:s4.v6.o8	Mamie joue au pot.	1d2cd4dc			pending			
+fr:b:s4.v6.lune	Mamie joue avec la lune.	f7aa98f3			pending			
+fr:b:s4.v6.soupe	Mamie joue avec de la soupe.	916305d6			pending			
+fr:b:s4.v6.carotte	Mamie joue avec une carotte.	c0188906			pending			
+fr:b:s4.v6.banane	Mamie joue avec une banane.	419a4fcf			pending			
+fr:b:s4.v6.ballon	Mamie joue avec un ballon.	e06e5231			pending			
+fr:b:s4.v6.fraise	Mamie joue avec une fraise.	d5a2519e			pending			
+fr:b:s5.v1.o1	Toutou veut du lait.	390c73aa			pending			
+fr:b:s5.v1.pomme	Toutou veut une pomme.	68f18347			pending			
+fr:b:s5.v1.o3	Toutou veut un jouet.	595a51b9			pending			
+fr:b:s5.v1.o4	Toutou veut la voiture.	a0bd5c6c			pending			
+fr:b:s5.v1.o5	Toutou veut dehors.	282b4c32			pending			
+fr:b:s5.v1.maison	Toutou veut à la maison.	daac6709			pending			
+fr:b:s5.v1.o7	Toutou veut le lit.	414f6ab7			pending			
+fr:b:s5.v1.o8	Toutou veut le pot.	dd746b85			pending			
+fr:b:s5.v1.lune	Toutou veut la lune.	b046e6be			pending			
+fr:b:s5.v1.soupe	Toutou veut de la soupe.	114f57d7			pending			
+fr:b:s5.v1.carotte	Toutou veut une carotte.	bccf84f3			pending			
+fr:b:s5.v1.banane	Toutou veut une banane.	d9329924			pending			
+fr:b:s5.v1.ballon	Toutou veut un ballon.	2824d694			pending			
+fr:b:s5.v1.fraise	Toutou veut une fraise.	9f5afac1			pending			
+fr:b:s5.v2.o1	Toutou mange du lait.	289dd7f4			pending			
+fr:b:s5.v2.pomme	Toutou mange une pomme.	efef7ec9			pending			
+fr:b:s5.v2.o3	Toutou mange un jouet.	6463532b			pending			
+fr:b:s5.v2.o4	Toutou mange la voiture.	a676a98e			pending			
+fr:b:s5.v2.o5	Toutou mange dehors.	6e5d3fa4			pending			
+fr:b:s5.v2.maison	Toutou mange à la maison.	3cdbf66f			pending			
+fr:b:s5.v2.o7	Toutou mange le lit.	0b234f7d			pending			
+fr:b:s5.v2.o8	Toutou mange le pot.	45b99cc7			pending			
+fr:b:s5.v2.lune	Toutou mange la lune.	d27dd7d4			pending			
+fr:b:s5.v2.soupe	Toutou mange de la soupe.	cafc0d99			pending			
+fr:b:s5.v2.carotte	Toutou mange une carotte.	92d01935			pending			
+fr:b:s5.v2.banane	Toutou mange une banane.	d8bc5252			pending			
+fr:b:s5.v2.ballon	Toutou mange un ballon.	98d130d6			pending			
+fr:b:s5.v2.fraise	Toutou mange une fraise.	07e466ef			pending			
+fr:b:s5.v3.o1	Toutou boit du lait.	3b8093bc			pending			
+fr:b:s5.v3.pomme	Toutou boit une pomme.	3eba4a31			pending			
+fr:b:s5.v3.o3	Toutou boit un jouet.	d1da7b53			pending			
+fr:b:s5.v3.o4	Toutou boit la voiture.	eb4db036			pending			
+fr:b:s5.v3.o5	Toutou boit dehors.	86e4083c			pending			
+fr:b:s5.v3.maison	Toutou boit à la maison.	c04dc007			pending			
+fr:b:s5.v3.o7	Toutou boit le lit.	253891e5			pending			
+fr:b:s5.v3.o8	Toutou boit le pot.	539e58df			pending			
+fr:b:s5.v3.lune	Toutou boit la lune.	727cbd6c			pending			
+fr:b:s5.v3.soupe	Toutou boit de la soupe.	a5714a61			pending			
+fr:b:s5.v3.carotte	Toutou boit une carotte.	22bf9f1d			pending			
+fr:b:s5.v3.banane	Toutou boit une banane.	6440baba			pending			
+fr:b:s5.v3.ballon	Toutou boit un ballon.	58ce0e2e			pending			
+fr:b:s5.v3.fraise	Toutou boit une fraise.	12de6c47			pending			
+fr:b:s5.v4.o1	Toutou dort du lait.	988b4303			pending			
+fr:b:s5.v4.pomme	Toutou dort une pomme.	50e6262e			pending			
+fr:b:s5.v4.o3	Toutou dort avec un jouet.	121793a1			pending			
+fr:b:s5.v4.o4	Toutou dort dans la voiture.	5679c047			pending			
+fr:b:s5.v4.o5	Toutou dort dehors.	d989d8f5			pending			
+fr:b:s5.v4.maison	Toutou dort à la maison.	9eb4d4e4			pending			
+fr:b:s5.v4.o7	Toutou dort au lit.	57dbf157			pending			
+fr:b:s5.v4.o8	Toutou dort au pot.	f400f225			pending			
+fr:b:s5.v4.lune	Toutou dort sur la lune.	5c358c75			pending			
+fr:b:s5.v4.soupe	Toutou dort près de la soupe.	f75e8743			pending			
+fr:b:s5.v4.carotte	Toutou dort près de la carotte.	c75bb137			pending			
+fr:b:s5.v4.banane	Toutou dort près de la banane.	05152108			pending			
+fr:b:s5.v4.ballon	Toutou dort près du ballon.	7279f3d8			pending			
+fr:b:s5.v4.fraise	Toutou dort près de la fraise.	c40b710d			pending			
+fr:b:s5.v5.o1	Toutou va du lait.	bedf5be5			pending			
+fr:b:s5.v5.pomme	Toutou va une pomme.	0b6aca40			pending			
+fr:b:s5.v5.o3	Toutou va un jouet.	fc567be8			pending			
+fr:b:s5.v5.o4	Toutou va en voiture.	23cfe501			pending			
+fr:b:s5.v5.o5	Toutou va dehors.	a293eb7f			pending			
+fr:b:s5.v5.maison	Toutou va à la maison.	0738c80a			pending			
+fr:b:s5.v5.o7	Toutou va au lit.	ea125e6d			pending			
+fr:b:s5.v5.o8	Toutou va au pot.	647bfad7			pending			
+fr:b:s5.v5.lune	Toutou va sur la lune.	92f27c8b			pending			
+fr:b:s5.v5.soupe	Toutou va à la soupe.	73a6f0c7			pending			
+fr:b:s5.v5.carotte	Toutou va à la carotte.	3d6b2763			pending			
+fr:b:s5.v5.banane	Toutou va à la banane.	5e25f4d4			pending			
+fr:b:s5.v5.ballon	Toutou va au ballon.	86528522			pending			
+fr:b:s5.v5.fraise	Toutou va à la fraise.	176de2b1			pending			
+fr:b:s5.v6.o1	Toutou joue avec du lait.	961ca420			pending			
+fr:b:s5.v6.pomme	Toutou joue avec une pomme.	b5a54b1d			pending			
+fr:b:s5.v6.o3	Toutou joue avec un jouet.	b9c7323f			pending			
+fr:b:s5.v6.o4	Toutou joue avec la voiture.	74718bd2			pending			
+fr:b:s5.v6.o5	Toutou joue dehors.	620413cf			pending			
+fr:b:s5.v6.maison	Toutou joue à la maison.	0e3f5d1a			pending			
+fr:b:s5.v6.o7	Toutou joue au lit.	8eafd47d			pending			
+fr:b:s5.v6.o8	Toutou joue au pot.	c94621c7			pending			
+fr:b:s5.v6.lune	Toutou joue avec la lune.	f705cdf8			pending			
+fr:b:s5.v6.soupe	Toutou joue avec de la soupe.	e2403185			pending			
+fr:b:s5.v6.carotte	Toutou joue avec une carotte.	92991a59			pending			
+fr:b:s5.v6.banane	Toutou joue avec une banane.	c95deb46			pending			
+fr:b:s5.v6.ballon	Toutou joue avec un ballon.	c150fbf2			pending			
+fr:b:s5.v6.fraise	Toutou joue avec une fraise.	fab9437b			pending			
+fr:b:poule.v1.o1	La poule veut du lait.	4e05ad4e			pending			
+fr:b:poule.v1.pomme	La poule veut une pomme.	a59f3d13			pending			
+fr:b:poule.v1.o3	La poule veut un jouet.	06f407f5			pending			
+fr:b:poule.v1.o4	La poule veut la voiture.	51e3bad8			pending			
+fr:b:poule.v1.o5	La poule veut dehors.	2fb2bbc6			pending			
+fr:b:poule.v1.maison	La poule veut à la maison.	56a0095d			pending			
+fr:b:poule.v1.o7	La poule veut le lit.	d068dfe3			pending			
+fr:b:poule.v1.o8	La poule veut le pot.	3ad18a81			pending			
+fr:b:poule.v1.lune	La poule veut la lune.	9715b8da			pending			
+fr:b:poule.v1.soupe	La poule veut de la soupe.	6441752b			pending			
+fr:b:poule.v1.carotte	La poule veut une carotte.	21d26e3f			pending			
+fr:b:poule.v1.banane	La poule veut une banane.	070bdf30			pending			
+fr:b:poule.v1.ballon	La poule veut un ballon.	98618f38			pending			
+fr:b:poule.v1.fraise	La poule veut une fraise.	12f65765			pending			
+fr:b:poule.v2.o1	La poule mange du lait.	715e0f50			pending			
+fr:b:poule.v2.pomme	La poule mange une pomme.	84decd0d			pending			
+fr:b:poule.v2.o3	La poule mange un jouet.	495d97af			pending			
+fr:b:poule.v2.o4	La poule mange la voiture.	084c28e2			pending			
+fr:b:poule.v2.o5	La poule mange dehors.	61d772b0			pending			
+fr:b:poule.v2.maison	La poule mange à la maison.	2c381b3b			pending			
+fr:b:poule.v2.o7	La poule mange le lit.	49b8d0a1			pending			
+fr:b:poule.v2.o8	La poule mange le pot.	43ab2b4b			pending			
+fr:b:poule.v2.lune	La poule mange la lune.	199e17c8			pending			
+fr:b:poule.v2.soupe	La poule mange de la soupe.	b905bf95			pending			
+fr:b:poule.v2.carotte	La poule mange une carotte.	029bb2c9			pending			
+fr:b:poule.v2.banane	La poule mange une banane.	cc5302b6			pending			
+fr:b:poule.v2.ballon	La poule mange un ballon.	77d0bf42			pending			
+fr:b:poule.v2.fraise	La poule mange une fraise.	e007146b			pending			
+fr:b:poule.v3.o1	La poule boit du lait.	b1b9f220			pending			
+fr:b:poule.v3.pomme	La poule boit une pomme.	9c56491d			pending			
+fr:b:poule.v3.o3	La poule boit un jouet.	3268fc3f			pending			
+fr:b:poule.v3.o4	La poule boit la voiture.	9d1165d2			pending			
+fr:b:poule.v3.o5	La poule boit dehors.	779abba0			pending			
+fr:b:poule.v3.maison	La poule boit à la maison.	9c25deab			pending			
+fr:b:poule.v3.o7	La poule boit le lit.	95a14eb1			pending			
+fr:b:poule.v3.o8	La poule boit le pot.	523ac33b			pending			
+fr:b:poule.v3.lune	La poule boit la lune.	12a31bf8			pending			
+fr:b:poule.v3.soupe	La poule boit de la soupe.	d5e45f85			pending			
+fr:b:poule.v3.carotte	La poule boit une carotte.	863d4859			pending			
+fr:b:poule.v3.banane	La poule boit une banane.	f1fdc546			pending			
+fr:b:poule.v3.ballon	La poule boit un ballon.	a801f9f2			pending			
+fr:b:poule.v3.fraise	La poule boit une fraise.	23591d7b			pending			
+fr:b:poule.v4.o1	La poule dort du lait.	46735c3f			pending			
+fr:b:poule.v4.pomme	La poule dort une pomme.	d795cd72			pending			
+fr:b:poule.v4.o3	La poule dort avec un jouet.	660988dd			pending			
+fr:b:poule.v4.o4	La poule dort dans la voiture.	e3bcbce3			pending			
+fr:b:poule.v4.o5	La poule dort dehors.	a93b8411			pending			
+fr:b:poule.v4.maison	La poule dort à la maison.	d3a7afb0			pending			
+fr:b:poule.v4.o7	La poule dort au lit.	8401dc23			pending			
+fr:b:poule.v4.o8	La poule dort au pot.	ee6a86c1			pending			
+fr:b:poule.v4.lune	La poule dort sur la lune.	50a04611			pending			
+fr:b:poule.v4.soupe	La poule dort près de la soupe.	4586e537			pending			
+fr:b:poule.v4.carotte	La poule dort près de la carotte.	3c444213			pending			
+fr:b:poule.v4.banane	La poule dort près de la banane.	92dbe344			pending			
+fr:b:poule.v4.ballon	La poule dort près du ballon.	341ece4c			pending			
+fr:b:poule.v4.fraise	La poule dort près de la fraise.	aefc3de1			pending			
+fr:b:poule.v5.o1	La poule va du lait.	7fb10a51			pending			
+fr:b:poule.v5.pomme	La poule va une pomme.	12ff2eb4			pending			
+fr:b:poule.v5.o3	La poule va un jouet.	6577208c			pending			
+fr:b:poule.v5.o4	La poule va en voiture.	1139a3bd			pending			
+fr:b:poule.v5.o5	La poule va dehors.	ac4a376b			pending			
+fr:b:poule.v5.maison	La poule va à la maison.	8238f0e6			pending			
+fr:b:poule.v5.o7	La poule va au lit.	c76aebc9			pending			
+fr:b:poule.v5.o8	La poule va au pot.	92d011a3			pending			
+fr:b:poule.v5.lune	La poule va sur la lune.	0c85d1f7			pending			
+fr:b:poule.v5.soupe	La poule va à la soupe.	92a8aa7b			pending			
+fr:b:poule.v5.carotte	La poule va à la carotte.	816663cf			pending			
+fr:b:poule.v5.banane	La poule va à la banane.	fee44140			pending			
+fr:b:poule.v5.ballon	La poule va au ballon.	496411c6			pending			
+fr:b:poule.v5.fraise	La poule va à la fraise.	470551f5			pending			
+fr:b:poule.v6.o1	La poule joue avec du lait.	e28b8804			pending			
+fr:b:poule.v6.pomme	La poule joue avec une pomme.	ef4cb899			pending			
+fr:b:poule.v6.o3	La poule joue avec un jouet.	5273b2fb			pending			
+fr:b:poule.v6.o4	La poule joue avec la voiture.	68bfc97e			pending			
+fr:b:poule.v6.o5	La poule joue dehors.	0c19c02b			pending			
+fr:b:poule.v6.maison	La poule joue à la maison.	5d54cba6			pending			
+fr:b:poule.v6.o7	La poule joue au lit.	2c08f509			pending			
+fr:b:poule.v6.o8	La poule joue au pot.	dba6fce3			pending			
+fr:b:poule.v6.lune	La poule joue avec la lune.	ac68e584			pending			
+fr:b:poule.v6.soupe	La poule joue avec de la soupe.	a061d689			pending			
+fr:b:poule.v6.carotte	La poule joue avec une carotte.	443a06c5			pending			
+fr:b:poule.v6.banane	La poule joue avec une banane.	16721462			pending			
+fr:b:poule.v6.ballon	La poule joue avec un ballon.	8e042c86			pending			
+fr:b:poule.v6.fraise	La poule joue avec une fraise.	75d29a3f			pending			
+fr:b:tortue.v1.o1	La tortue veut du lait.	045c7efc			pending			
+fr:b:tortue.v1.pomme	La tortue veut une pomme.	9717d371			pending			
+fr:b:tortue.v1.o3	La tortue veut un jouet.	2ba17493			pending			
+fr:b:tortue.v1.o4	La tortue veut la voiture.	8e9b9176			pending			
+fr:b:tortue.v1.o5	La tortue veut dehors.	55e55ffc			pending			
+fr:b:tortue.v1.maison	La tortue veut à la maison.	20c195c7			pending			
+fr:b:tortue.v1.o7	La tortue veut le lit.	7196b325			pending			
+fr:b:tortue.v1.o8	La tortue veut le pot.	a276e31f			pending			
+fr:b:tortue.v1.lune	La tortue veut la lune.	4b29ddac			pending			
+fr:b:tortue.v1.soupe	La tortue veut de la soupe.	8a528721			pending			
+fr:b:tortue.v1.carotte	La tortue veut une carotte.	738f8f5d			pending			
+fr:b:tortue.v1.banane	La tortue veut une banane.	5f0101fa			pending			
+fr:b:tortue.v1.ballon	La tortue veut un ballon.	707cac6e			pending			
+fr:b:tortue.v1.fraise	La tortue veut une fraise.	08640687			pending			
+fr:b:tortue.v2.o1	La tortue mange du lait.	3ef16bae			pending			
+fr:b:tortue.v2.pomme	La tortue mange une pomme.	3fee1ef3			pending			
+fr:b:tortue.v2.o3	La tortue mange un jouet.	9833d9d5			pending			
+fr:b:tortue.v2.o4	La tortue mange la voiture.	15be0cb8			pending			
+fr:b:tortue.v2.o5	La tortue mange dehors.	659e0126			pending			
+fr:b:tortue.v2.maison	La tortue mange à la maison.	5ab9e33d			pending			
+fr:b:tortue.v2.o7	La tortue mange le lit.	a24410c3			pending			
+fr:b:tortue.v2.o8	La tortue mange le pot.	8cad84e1			pending			
+fr:b:tortue.v2.lune	La tortue mange la lune.	bce20cba			pending			
+fr:b:tortue.v2.soupe	La tortue mange de la soupe.	0949230b			pending			
+fr:b:tortue.v2.carotte	La tortue mange une carotte.	746f199f			pending			
+fr:b:tortue.v2.banane	La tortue mange une banane.	a1f52990			pending			
+fr:b:tortue.v2.ballon	La tortue mange un ballon.	87662c18			pending			
+fr:b:tortue.v2.fraise	La tortue mange une fraise.	add59445			pending			
+fr:b:tortue.v3.o1	La tortue boit du lait.	ab889242			pending			
+fr:b:tortue.v3.pomme	La tortue boit une pomme.	de7d291f			pending			
+fr:b:tortue.v3.o3	La tortue boit un jouet.	7e1c5d11			pending			
+fr:b:tortue.v3.o4	La tortue boit la voiture.	fcaee564			pending			
+fr:b:tortue.v3.o5	La tortue boit dehors.	01a2127a			pending			
+fr:b:tortue.v3.maison	La tortue boit à la maison.	b55e1c11			pending			
+fr:b:tortue.v3.o7	La tortue boit le lit.	a99f492f			pending			
+fr:b:tortue.v3.o8	La tortue boit le pot.	d9e4e02d			pending			
+fr:b:tortue.v3.lune	La tortue boit la lune.	7181dc46			pending			
+fr:b:tortue.v3.soupe	La tortue boit de la soupe.	a0af2fef			pending			
+fr:b:tortue.v3.carotte	La tortue boit une carotte.	8ba7b24b			pending			
+fr:b:tortue.v3.banane	La tortue boit une banane.	f69426fc			pending			
+fr:b:tortue.v3.ballon	La tortue boit un ballon.	717bc99c			pending			
+fr:b:tortue.v3.fraise	La tortue boit une fraise.	e0b3f089			pending			
+fr:b:tortue.v4.o1	La tortue dort du lait.	23265a79			pending			
+fr:b:tortue.v4.pomme	La tortue dort une pomme.	ce8e53bc			pending			
+fr:b:tortue.v4.o3	La tortue dort avec un jouet.	4f011ff3			pending			
+fr:b:tortue.v4.o4	La tortue dort dans la voiture.	325f8799			pending			
+fr:b:tortue.v4.o5	La tortue dort dehors.	8bacb923			pending			
+fr:b:tortue.v4.maison	La tortue dort à la maison.	684e9a7e			pending			
+fr:b:tortue.v4.o7	La tortue dort au lit.	02c747e1			pending			
+fr:b:tortue.v4.o8	La tortue dort au pot.	fcb9a28b			pending			
+fr:b:tortue.v4.lune	La tortue dort sur la lune.	abf7a86f			pending			
+fr:b:tortue.v4.soupe	La tortue dort près de la soupe.	b0d6a4cd			pending			
+fr:b:tortue.v4.carotte	La tortue dort près de la carotte.	9f4c870d			pending			
+fr:b:tortue.v4.banane	La tortue dort près de la banane.	e7451caa			pending			
+fr:b:tortue.v4.ballon	La tortue dort près du ballon.	0ddca8fe			pending			
+fr:b:tortue.v4.fraise	La tortue dort près de la fraise.	ef1d08b7			pending			
+fr:b:tortue.v5.o1	La tortue va du lait.	5da51757			pending			
+fr:b:tortue.v5.pomme	La tortue va une pomme.	d4022b2a			pending			
+fr:b:tortue.v5.o3	La tortue va un jouet.	d9aa5652			pending			
+fr:b:tortue.v5.o4	La tortue va en voiture.	f878304f			pending			
+fr:b:tortue.v5.o5	La tortue va dehors.	9d166f39			pending			
+fr:b:tortue.v5.maison	La tortue va à la maison.	81285298			pending			
+fr:b:tortue.v5.o7	La tortue va au lit.	4980d60b			pending			
+fr:b:tortue.v5.o8	La tortue va au pot.	aee9adf9			pending			
+fr:b:tortue.v5.lune	La tortue va sur la lune.	d9d446b9			pending			
+fr:b:tortue.v5.soupe	La tortue va à la soupe.	e3c2d155			pending			
+fr:b:tortue.v5.carotte	La tortue va à la carotte.	51240155			pending			
+fr:b:tortue.v5.banane	La tortue va à la banane.	f4e7d472			pending			
+fr:b:tortue.v5.ballon	La tortue va au ballon.	2cbc25f0			pending			
+fr:b:tortue.v5.fraise	La tortue va à la fraise.	ce17f00f			pending			
+fr:b:tortue.v6.o1	La tortue joue avec du lait.	58895c62			pending			
+fr:b:tortue.v6.pomme	La tortue joue avec une pomme.	cefb0dbf			pending			
+fr:b:tortue.v6.o3	La tortue joue avec un jouet.	519516b1			pending			
+fr:b:tortue.v6.o4	La tortue joue avec la voiture.	6e0edb04			pending			
+fr:b:tortue.v6.o5	La tortue joue dehors.	c2dd3f65			pending			
+fr:b:tortue.v6.maison	La tortue joue à la maison.	1692b194			pending			
+fr:b:tortue.v6.o7	La tortue joue au lit.	301274c7			pending			
+fr:b:tortue.v6.o8	La tortue joue au pot.	112058b5			pending			
+fr:b:tortue.v6.lune	La tortue joue avec la lune.	a0a417e6			pending			
+fr:b:tortue.v6.soupe	La tortue joue avec de la soupe.	9045ca0f			pending			
+fr:b:tortue.v6.carotte	La tortue joue avec une carotte.	ebd56a6b			pending			
+fr:b:tortue.v6.banane	La tortue joue avec une banane.	6e00a81c			pending			
+fr:b:tortue.v6.ballon	La tortue joue avec un ballon.	34d9423c			pending			
+fr:b:tortue.v6.fraise	La tortue joue avec une fraise.	01e45029			pending			
+fr:b:canard.v1.o1	Le canard veut du lait.	3027a652			pending			
+fr:b:canard.v1.pomme	Le canard veut une pomme.	7a5a4faf			pending			
+fr:b:canard.v1.o3	Le canard veut un jouet.	6e5e7161			pending			
+fr:b:canard.v1.o4	Le canard veut la voiture.	8bfc3754			pending			
+fr:b:canard.v1.o5	Le canard veut dehors.	e98d8faa			pending			
+fr:b:canard.v1.maison	Le canard veut à la maison.	8450e281			pending			
+fr:b:canard.v1.o7	Le canard veut le lit.	7f034b3f			pending			
+fr:b:canard.v1.o8	Le canard veut le pot.	678b6add			pending			
+fr:b:canard.v1.lune	Le canard veut la lune.	859ab676			pending			
+fr:b:canard.v1.soupe	Le canard veut de la soupe.	556a8f1f			pending			
+fr:b:canard.v1.carotte	Le canard veut une carotte.	d417b35b			pending			
+fr:b:canard.v1.banane	Le canard veut une banane.	4fdb36cc			pending			
+fr:b:canard.v1.ballon	Le canard veut un ballon.	3ff5a6cc			pending			
+fr:b:canard.v1.fraise	Le canard veut une fraise.	1ddf1e19			pending			
+fr:b:canard.v2.o1	Le canard mange du lait.	89e0e24c			pending			
+fr:b:canard.v2.pomme	Le canard mange une pomme.	73172641			pending			
+fr:b:canard.v2.o3	Le canard mange un jouet.	4cd5b963			pending			
+fr:b:canard.v2.o4	Le canard mange la voiture.	79b6faa6			pending			
+fr:b:canard.v2.o5	Le canard mange dehors.	6e9aa12c			pending			
+fr:b:canard.v2.maison	Le canard mange à la maison.	966984f7			pending			
+fr:b:canard.v2.o7	Le canard mange le lit.	ce6aa9f5			pending			
+fr:b:canard.v2.o8	Le canard mange le pot.	50dae10f			pending			
+fr:b:canard.v2.lune	Le canard mange la lune.	4c24abdc			pending			
+fr:b:canard.v2.soupe	Le canard mange de la soupe.	df6cae11			pending			
+fr:b:canard.v2.carotte	Le canard mange une carotte.	9cacba2d			pending			
+fr:b:canard.v2.banane	Le canard mange une banane.	a59890ca			pending			
+fr:b:canard.v2.ballon	Le canard mange un ballon.	823ebade			pending			
+fr:b:canard.v2.fraise	Le canard mange une fraise.	14249157			pending			
+fr:b:canard.v3.o1	Le canard boit du lait.	275ac6c4			pending			
+fr:b:canard.v3.pomme	Le canard boit une pomme.	6f589e59			pending			
+fr:b:canard.v3.o3	Le canard boit un jouet.	ae9995bb			pending			
+fr:b:canard.v3.o4	Le canard boit la voiture.	4e5aec3e			pending			
+fr:b:canard.v3.o5	Le canard boit dehors.	79240694			pending			
+fr:b:canard.v3.maison	Le canard boit à la maison.	5d7deb9f			pending			
+fr:b:canard.v3.o7	Le canard boit le lit.	4150f3cd			pending			
+fr:b:canard.v3.o8	Le canard boit le pot.	bbba9037			pending			
+fr:b:canard.v3.lune	Le canard boit la lune.	f4936644			pending			
+fr:b:canard.v3.soupe	Le canard boit de la soupe.	d34b59c9			pending			
+fr:b:canard.v3.carotte	Le canard boit une carotte.	24de6785			pending			
+fr:b:canard.v3.banane	Le canard boit une banane.	24de3022			pending			
+fr:b:canard.v3.ballon	Le canard boit un ballon.	a1f6b246			pending			
+fr:b:canard.v3.fraise	Le canard boit une fraise.	5a85cdff			pending			
+fr:b:canard.v4.o1	Le canard dort du lait.	3f5a265b			pending			
+fr:b:canard.v4.pomme	Le canard dort une pomme.	f61c1ac6			pending			
+fr:b:canard.v4.o3	Le canard dort avec un jouet.	1fa2dd89			pending			
+fr:b:canard.v4.o4	Le canard dort dans la voiture.	b391f2ff			pending			
+fr:b:canard.v4.o5	Le canard dort dehors.	498f7d1d			pending			
+fr:b:canard.v4.maison	Le canard dort à la maison.	88993dcc			pending			
+fr:b:canard.v4.o7	Le canard dort au lit.	7c9b455f			pending			
+fr:b:canard.v4.o8	Le canard dort au pot.	e5242e7d			pending			
+fr:b:canard.v4.lune	Le canard dort sur la lune.	dfdfc19d			pending			
+fr:b:canard.v4.soupe	Le canard dort près de la soupe.	cd46339b			pending			
+fr:b:canard.v4.carotte	Le canard dort près de la carotte.	b5f5fa6f			pending			
+fr:b:canard.v4.banane	Le canard dort près de la banane.	22669e60			pending			
+fr:b:canard.v4.ballon	Le canard dort près du ballon.	14b5a1f0			pending			
+fr:b:canard.v4.fraise	Le canard dort près de la fraise.	a778ce15			pending			
+fr:b:canard.v5.o1	Le canard va du lait.	dfe6b7cd			pending			
+fr:b:canard.v5.pomme	Le canard va une pomme.	b2c37208			pending			
+fr:b:canard.v5.o3	Le canard va un jouet.	9294a650			pending			
+fr:b:canard.v5.o4	Le canard va en voiture.	18cae3a9			pending			
+fr:b:canard.v5.o5	Le canard va dehors.	bc0b0df7			pending			
+fr:b:canard.v5.maison	Le canard va à la maison.	5cd136a2			pending			
+fr:b:canard.v5.o7	Le canard va au lit.	db372b45			pending			
+fr:b:canard.v5.o8	Le canard va au pot.	8c1824bf			pending			
+fr:b:canard.v5.lune	Le canard va sur la lune.	d48e9203			pending			
+fr:b:canard.v5.soupe	Le canard va à la soupe.	bdae0ddf			pending			
+fr:b:canard.v5.carotte	Le canard va à la carotte.	744148db			pending			
+fr:b:canard.v5.banane	Le canard va à la banane.	eebebb4c			pending			
+fr:b:canard.v5.ballon	Le canard va au ballon.	54d137ca			pending			
+fr:b:canard.v5.fraise	Le canard va à la fraise.	bcc2a299			pending			
+fr:b:canard.v6.o1	Le canard joue avec du lait.	c35a2098			pending			
+fr:b:canard.v6.pomme	Le canard joue avec une pomme.	0d94dbb5			pending			
+fr:b:canard.v6.o3	Le canard joue avec un jouet.	5123c8b7			pending			
+fr:b:canard.v6.o4	Le canard joue avec la voiture.	62f25cea			pending			
+fr:b:canard.v6.o5	Le canard joue dehors.	df0e6007			pending			
+fr:b:canard.v6.maison	Le canard joue à la maison.	029ed9b2			pending			
+fr:b:canard.v6.o7	Le canard joue au lit.	a5cd3355			pending			
+fr:b:canard.v6.o8	Le canard joue au pot.	283d6a6f			pending			
+fr:b:canard.v6.lune	Le canard joue avec la lune.	53461880			pending			
+fr:b:canard.v6.soupe	Le canard joue avec de la soupe.	fc86851d			pending			
+fr:b:canard.v6.carotte	Le canard joue avec une carotte.	d32006f1			pending			
+fr:b:canard.v6.banane	Le canard joue avec une banane.	7b35da1e			pending			
+fr:b:canard.v6.ballon	Le canard joue avec un ballon.	dcd7515a			pending			
+fr:b:canard.v6.fraise	Le canard joue avec une fraise.	612e68e3			pending			
+fr:b:lapin.v1.o1	Le lapin veut du lait.	5df3d78b			pending			
+fr:b:lapin.v1.pomme	Le lapin veut une pomme.	fa186336			pending			
+fr:b:lapin.v1.o3	Le lapin veut un jouet.	3ddd5dee			pending			
+fr:b:lapin.v1.o4	Le lapin veut la voiture.	4ac7b3d7			pending			
+fr:b:lapin.v1.o5	Le lapin veut dehors.	feab64ed			pending			
+fr:b:lapin.v1.maison	Le lapin veut à la maison.	da24471c			pending			
+fr:b:lapin.v1.o7	Le lapin veut le lit.	4902f06c			pending			
+fr:b:lapin.v1.o8	Le lapin veut le pot.	e4cb251a			pending			
+fr:b:lapin.v1.lune	Le lapin veut la lune.	fa75de0f			pending			
+fr:b:lapin.v1.soupe	Le lapin veut de la soupe.	7e4bee1a			pending			
+fr:b:lapin.v1.carotte	Le lapin veut une carotte.	7d158692			pending			
+fr:b:lapin.v1.banane	Le lapin veut une banane.	fbe133eb			pending			
+fr:b:lapin.v1.ballon	Le lapin veut un ballon.	62cd5685			pending			
+fr:b:lapin.v1.fraise	Le lapin veut une fraise.	629a5722			pending			
+fr:b:lapin.v2.o1	Le lapin mange du lait.	1c3797cb			pending			
+fr:b:lapin.v2.pomme	Le lapin mange une pomme.	0aa7dd76			pending			
+fr:b:lapin.v2.o3	Le lapin mange un jouet.	8a360d2e			pending			
+fr:b:lapin.v2.o4	Le lapin mange la voiture.	45d4f717			pending			
+fr:b:lapin.v2.o5	Le lapin mange dehors.	aad06bad			pending			
+fr:b:lapin.v2.maison	Le lapin mange à la maison.	a20de1dc			pending			
+fr:b:lapin.v2.o7	Le lapin mange le lit.	1c9887ac			pending			
+fr:b:lapin.v2.o8	Le lapin mange le pot.	badb255a			pending			
+fr:b:lapin.v2.lune	Le lapin mange la lune.	0aa4664f			pending			
+fr:b:lapin.v2.soupe	Le lapin mange de la soupe.	06730eda			pending			
+fr:b:lapin.v2.carotte	Le lapin mange une carotte.	682a1ad2			pending			
+fr:b:lapin.v2.banane	Le lapin mange une banane.	22c88a2b			pending			
+fr:b:lapin.v2.ballon	Le lapin mange un ballon.	a7731bc5			pending			
+fr:b:lapin.v2.fraise	Le lapin mange une fraise.	8981ad62			pending			
+fr:b:lapin.v3.o1	Le lapin boit du lait.	f7f1e1cd			pending			
+fr:b:lapin.v3.pomme	Le lapin boit une pomme.	355bac08			pending			
+fr:b:lapin.v3.o3	Le lapin boit un jouet.	6c27c450			pending			
+fr:b:lapin.v3.o4	Le lapin boit la voiture.	9370a441			pending			
+fr:b:lapin.v3.o5	Le lapin boit dehors.	d9f57bf7			pending			
+fr:b:lapin.v3.maison	Le lapin boit à la maison.	ece500a2			pending			
+fr:b:lapin.v3.o7	Le lapin boit le lit.	ae1900d2			pending			
+fr:b:lapin.v3.o8	Le lapin boit le pot.	172d6e64			pending			
+fr:b:lapin.v3.lune	Le lapin boit la lune.	5d9ce365			pending			
+fr:b:lapin.v3.soupe	Le lapin boit de la soupe.	d6f3c9c4			pending			
+fr:b:lapin.v3.carotte	Le lapin boit une carotte.	55c358f4			pending			
+fr:b:lapin.v3.banane	Le lapin boit une banane.	0e9df7f9			pending			
+fr:b:lapin.v3.ballon	Le lapin boit un ballon.	14202aef			pending			
+fr:b:lapin.v3.fraise	Le lapin boit une fraise.	47fa8bf8			pending			
+fr:b:lapin.v4.o1	Le lapin dort du lait.	fe39886e			pending			
+fr:b:lapin.v4.pomme	Le lapin dort une pomme.	9abcccb3			pending			
+fr:b:lapin.v4.o3	Le lapin dort avec un jouet.	3f232f18			pending			
+fr:b:lapin.v4.o4	Le lapin dort dans la voiture.	9d42917a			pending			
+fr:b:lapin.v4.o5	Le lapin dort dehors.	5d40cc66			pending			
+fr:b:lapin.v4.maison	Le lapin dort à la maison.	c1071c7d			pending			
+fr:b:lapin.v4.o7	Le lapin dort au lit.	9fa29688			pending			
+fr:b:lapin.v4.o8	Le lapin dort au pot.	04d11af6			pending			
+fr:b:lapin.v4.lune	Le lapin dort sur la lune.	d247e6cc			pending			
+fr:b:lapin.v4.soupe	Le lapin dort près de la soupe.	5d6ac7e0			pending			
+fr:b:lapin.v4.carotte	Le lapin dort près de la carotte.	bc320784			pending			
+fr:b:lapin.v4.banane	Le lapin dort près de la banane.	86eaf6c9			pending			
+fr:b:lapin.v4.ballon	Le lapin dort près du ballon.	9edf4987			pending			
+fr:b:lapin.v4.fraise	Le lapin dort près de la fraise.	fce0a008			pending			
+fr:b:lapin.v5.o1	Le lapin va du lait.	867577c0			pending			
+fr:b:lapin.v5.pomme	Le lapin va une pomme.	ae25363d			pending			
+fr:b:lapin.v5.o3	Le lapin va un jouet.	143cd15f			pending			
+fr:b:lapin.v5.o4	Le lapin va en voiture.	e9679dda			pending			
+fr:b:lapin.v5.o5	Le lapin va dehors.	4e7f4240			pending			
+fr:b:lapin.v5.maison	Le lapin va à la maison.	b2ca474b			pending			
+fr:b:lapin.v5.o7	Le lapin va au lit.	3990b1d6			pending			
+fr:b:lapin.v5.o8	Le lapin va au pot.	9da16db8			pending			
+fr:b:lapin.v5.lune	Le lapin va sur la lune.	bb4ab022			pending			
+fr:b:lapin.v5.soupe	Le lapin va à la soupe.	7d7221d8			pending			
+fr:b:lapin.v5.carotte	Le lapin va à la carotte.	e004c3bc			pending			
+fr:b:lapin.v5.banane	Le lapin va à la banane.	8c901721			pending			
+fr:b:lapin.v5.ballon	Le lapin va au ballon.	bbefab8f			pending			
+fr:b:lapin.v5.fraise	Le lapin va à la fraise.	927c2130			pending			
+fr:b:lapin.v6.o1	Le lapin joue avec du lait.	d99e66df			pending			
+fr:b:lapin.v6.pomme	Le lapin joue avec une pomme.	9c353892			pending			
+fr:b:lapin.v6.o3	Le lapin joue avec un jouet.	5430b05a			pending			
+fr:b:lapin.v6.o4	Le lapin joue avec la voiture.	30367033			pending			
+fr:b:lapin.v6.o5	Le lapin joue dehors.	b2c5e76c			pending			
+fr:b:lapin.v6.maison	Le lapin joue à la maison.	ffa65e37			pending			
+fr:b:lapin.v6.o7	Le lapin joue au lit.	4d8e9f42			pending			
+fr:b:lapin.v6.o8	Le lapin joue au pot.	7e072274			pending			
+fr:b:lapin.v6.lune	Le lapin joue avec la lune.	159fa68b			pending			
+fr:b:lapin.v6.soupe	Le lapin joue avec de la soupe.	8e70f0fe			pending			
+fr:b:lapin.v6.carotte	Le lapin joue avec une carotte.	4019b50e			pending			
+fr:b:lapin.v6.banane	Le lapin joue avec une banane.	d5734097			pending			
+fr:b:lapin.v6.ballon	Le lapin joue avec un ballon.	2c89fe09			pending			
+fr:b:lapin.v6.fraise	Le lapin joue avec une fraise.	16819636			pending			
+fr:b:vache.v1.o1	La vache veut du lait.	6b9cf06c			pending			
+fr:b:vache.v1.pomme	La vache veut une pomme.	7914ace1			pending			
+fr:b:vache.v1.o3	La vache veut un jouet.	da6c8f83			pending			
+fr:b:vache.v1.o4	La vache veut la voiture.	bfed8f46			pending			
+fr:b:vache.v1.o5	La vache veut dehors.	20f3064c			pending			
+fr:b:vache.v1.maison	La vache veut à la maison.	afd49c97			pending			
+fr:b:vache.v1.o7	La vache veut le lit.	fe496f95			pending			
+fr:b:vache.v1.o8	La vache veut le pot.	676cf1af			pending			
+fr:b:vache.v1.lune	La vache veut la lune.	198a897c			pending			
+fr:b:vache.v1.soupe	La vache veut de la soupe.	c4f26eb1			pending			
+fr:b:vache.v1.carotte	La vache veut une carotte.	27bb924d			pending			
+fr:b:vache.v1.banane	La vache veut une banane.	f536f2ea			pending			
+fr:b:vache.v1.ballon	La vache veut un ballon.	5ffe1f7e			pending			
+fr:b:vache.v1.fraise	La vache veut une fraise.	b748fdf7			pending			
+fr:b:vache.v2.o1	La vache mange du lait.	385945de			pending			
+fr:b:vache.v2.pomme	La vache mange une pomme.	c690a9e3			pending			
+fr:b:vache.v2.o3	La vache mange un jouet.	0fb824c5			pending			
+fr:b:vache.v2.o4	La vache mange la voiture.	2c38ca48			pending			
+fr:b:vache.v2.o5	La vache mange dehors.	d1a5d576			pending			
+fr:b:vache.v2.maison	La vache mange à la maison.	d671458d			pending			
+fr:b:vache.v2.o7	La vache mange le lit.	22f6b533			pending			
+fr:b:vache.v2.o8	La vache mange le pot.	52490c71			pending			
+fr:b:vache.v2.lune	La vache mange la lune.	38b1f18a			pending			
+fr:b:vache.v2.soupe	La vache mange de la soupe.	1c92ab5b			pending			
+fr:b:vache.v2.carotte	La vache mange une carotte.	230ad34f			pending			
+fr:b:vache.v2.banane	La vache mange une banane.	fd11c3c0			pending			
+fr:b:vache.v2.ballon	La vache mange un ballon.	38631b68			pending			
+fr:b:vache.v2.fraise	La vache mange une fraise.	4532d475			pending			
+fr:b:vache.v3.o1	La vache boit du lait.	ae259bb2			pending			
+fr:b:vache.v3.pomme	La vache boit une pomme.	0d2b8f0f			pending			
+fr:b:vache.v3.o3	La vache boit un jouet.	bbb609c1			pending			
+fr:b:vache.v3.o4	La vache boit la voiture.	0ff550b4			pending			
+fr:b:vache.v3.o5	La vache boit dehors.	a74a8c8a			pending			
+fr:b:vache.v3.maison	La vache boit à la maison.	52e18b61			pending			
+fr:b:vache.v3.o7	La vache boit le lit.	2373931f			pending			
+fr:b:vache.v3.o8	La vache boit le pot.	8bfc7c3d			pending			
+fr:b:vache.v3.lune	La vache boit la lune.	0398abd6			pending			
+fr:b:vache.v3.soupe	La vache boit de la soupe.	8e09ddff			pending			
+fr:b:vache.v3.carotte	La vache boit une carotte.	b6d7163b			pending			
+fr:b:vache.v3.banane	La vache boit une banane.	3a7e572c			pending			
+fr:b:vache.v3.ballon	La vache boit un ballon.	f855f32c			pending			
+fr:b:vache.v3.fraise	La vache boit une fraise.	dc4ba7f9			pending			
+fr:b:vache.v4.o1	La vache dort du lait.	23853189			pending			
+fr:b:vache.v4.pomme	La vache dort une pomme.	2221a6cc			pending			
+fr:b:vache.v4.o3	La vache dort avec un jouet.	f38dd7c3			pending			
+fr:b:vache.v4.o4	La vache dort dans la voiture.	971a5589			pending			
+fr:b:vache.v4.o5	La vache dort dehors.	c79b9bd3			pending			
+fr:b:vache.v4.maison	La vache dort à la maison.	ede1f6ae			pending			
+fr:b:vache.v4.o7	La vache dort au lit.	99894191			pending			
+fr:b:vache.v4.o8	La vache dort au pot.	53a84d1b			pending			
+fr:b:vache.v4.lune	La vache dort sur la lune.	4bc9c83f			pending			
+fr:b:vache.v4.soupe	La vache dort près de la soupe.	4aac753d			pending			
+fr:b:vache.v4.carotte	La vache dort près de la carotte.	01068abd			pending			
+fr:b:vache.v4.banane	La vache dort près de la banane.	de0a2eda			pending			
+fr:b:vache.v4.ballon	La vache dort près du ballon.	a55d92ee			pending			
+fr:b:vache.v4.fraise	La vache dort près de la fraise.	85355fe7			pending			
+fr:b:vache.v5.o1	La vache va du lait.	b74ecd47			pending			
+fr:b:vache.v5.pomme	La vache va une pomme.	d4c4c95a			pending			
+fr:b:vache.v5.o3	La vache va un jouet.	ec8c1382			pending			
+fr:b:vache.v5.o4	La vache va en voiture.	323db8df			pending			
+fr:b:vache.v5.o5	La vache va dehors.	412dd749			pending			
+fr:b:vache.v5.maison	La vache va à la maison.	811e4fa8			pending			
+fr:b:vache.v5.o7	La vache va au lit.	366ab09b			pending			
+fr:b:vache.v5.o8	La vache va au pot.	ed638fa9			pending			
+fr:b:vache.v5.lune	La vache va sur la lune.	966ccf69			pending			
+fr:b:vache.v5.soupe	La vache va à la soupe.	94181d85			pending			
+fr:b:vache.v5.carotte	La vache va à la carotte.	c12f7a85			pending			
+fr:b:vache.v5.banane	La vache va à la banane.	e700b122			pending			
+fr:b:vache.v5.ballon	La vache va au ballon.	869057c0			pending			
+fr:b:vache.v5.fraise	La vache va à la fraise.	1ca84eff			pending			
+fr:b:vache.v6.o1	La vache joue avec du lait.	41490e52			pending			
+fr:b:vache.v6.pomme	La vache joue avec une pomme.	3c9df7af			pending			
+fr:b:vache.v6.o3	La vache joue avec un jouet.	65f52961			pending			
+fr:b:vache.v6.o4	La vache joue avec la voiture.	5c7daf54			pending			
+fr:b:vache.v6.o5	La vache joue dehors.	b04c70b5			pending			
+fr:b:vache.v6.maison	La vache joue à la maison.	b36b7ca4			pending			
+fr:b:vache.v6.o7	La vache joue au lit.	4a3f5597			pending			
+fr:b:vache.v6.o8	La vache joue au pot.	e8debf65			pending			
+fr:b:vache.v6.lune	La vache joue avec la lune.	96bc1e76			pending			
+fr:b:vache.v6.soupe	La vache joue avec de la soupe.	913a771f			pending			
+fr:b:vache.v6.carotte	La vache joue avec une carotte.	0fe79b5b			pending			
+fr:b:vache.v6.banane	La vache joue avec une banane.	205caecc			pending			
+fr:b:vache.v6.ballon	La vache joue avec un ballon.	02394ecc			pending			
+fr:b:vache.v6.fraise	La vache joue avec une fraise.	ee609619			pending			
+fr:b:zebre.v1.o1	Le zèbre veut du lait.	e9b33f28			pending			
+fr:b:zebre.v1.pomme	Le zèbre veut une pomme.	996deac5			pending			
+fr:b:zebre.v1.o3	Le zèbre veut un jouet.	c8a516c7			pending			
+fr:b:zebre.v1.o4	Le zèbre veut la voiture.	c549959a			pending			
+fr:b:zebre.v1.o5	Le zèbre veut dehors.	4e9634f8			pending			
+fr:b:zebre.v1.maison	Le zèbre veut à la maison.	4a6fd123			pending			
+fr:b:zebre.v1.o7	Le zèbre veut le lit.	53e80d39			pending			
+fr:b:zebre.v1.o8	Le zèbre veut le pot.	57908533			pending			
+fr:b:zebre.v1.lune	Le zèbre veut la lune.	66aa6a30			pending			
+fr:b:zebre.v1.soupe	Le zèbre veut de la soupe.	794fa04d			pending			
+fr:b:zebre.v1.carotte	Le zèbre veut une carotte.	7b01dac1			pending			
+fr:b:zebre.v1.banane	Le zèbre veut une banane.	7ba0336e			pending			
+fr:b:zebre.v1.ballon	Le zèbre veut un ballon.	899e2b0a			pending			
+fr:b:zebre.v1.fraise	Le zèbre veut une fraise.	7bba8fb3			pending			
+fr:b:zebre.v2.o1	Le zèbre mange du lait.	be143232			pending			
+fr:b:zebre.v2.pomme	Le zèbre mange une pomme.	76c0498f			pending			
+fr:b:zebre.v2.o3	Le zèbre mange un jouet.	504cf541			pending			
+fr:b:zebre.v2.o4	Le zèbre mange la voiture.	c516e834			pending			
+fr:b:zebre.v2.o5	Le zèbre mange dehors.	e2b9ac0a			pending			
+fr:b:zebre.v2.maison	Le zèbre mange à la maison.	83333ae1			pending			
+fr:b:zebre.v2.o7	Le zèbre mange le lit.	5ee2b29f			pending			
+fr:b:zebre.v2.o8	Le zèbre mange le pot.	c76b9bbd			pending			
+fr:b:zebre.v2.lune	Le zèbre mange la lune.	13874256			pending			
+fr:b:zebre.v2.soupe	Le zèbre mange de la soupe.	31eb5c7f			pending			
+fr:b:zebre.v2.carotte	Le zèbre mange une carotte.	5ab894bb			pending			
+fr:b:zebre.v2.banane	Le zèbre mange une banane.	ef9feeac			pending			
+fr:b:zebre.v2.ballon	Le zèbre mange un ballon.	61eaadac			pending			
+fr:b:zebre.v2.fraise	Le zèbre mange une fraise.	916d3f79			pending			
+fr:b:zebre.v3.o1	Le zèbre boit du lait.	14c9462e			pending			
+fr:b:zebre.v3.pomme	Le zèbre boit une pomme.	8897bd73			pending			
+fr:b:zebre.v3.o3	Le zèbre boit un jouet.	bb00d155			pending			
+fr:b:zebre.v3.o4	Le zèbre boit la voiture.	f8c29038			pending			
+fr:b:zebre.v3.o5	Le zèbre boit dehors.	db594ca6			pending			
+fr:b:zebre.v3.maison	Le zèbre boit à la maison.	c74516bd			pending			
+fr:b:zebre.v3.o7	Le zèbre boit le lit.	17ff5c43			pending			
+fr:b:zebre.v3.o8	Le zèbre boit le pot.	0268d061			pending			
+fr:b:zebre.v3.lune	Le zèbre boit la lune.	92b9e73a			pending			
+fr:b:zebre.v3.soupe	Le zèbre boit de la soupe.	e964258b			pending			
+fr:b:zebre.v3.carotte	Le zèbre boit une carotte.	548a1c1f			pending			
+fr:b:zebre.v3.banane	Le zèbre boit une banane.	84f9ad10			pending			
+fr:b:zebre.v3.ballon	Le zèbre boit un ballon.	d00fca98			pending			
+fr:b:zebre.v3.fraise	Le zèbre boit une fraise.	90da17c5			pending			
+fr:b:zebre.v4.o1	Le zèbre dort du lait.	2499878d			pending			
+fr:b:zebre.v4.pomme	Le zèbre dort une pomme.	adf5a3c8			pending			
+fr:b:zebre.v4.o3	Le zèbre dort avec un jouet.	f127e3c7			pending			
+fr:b:zebre.v4.o4	Le zèbre dort dans la voiture.	9597fd7d			pending			
+fr:b:zebre.v4.o5	Le zèbre dort dehors.	2c9a1b37			pending			
+fr:b:zebre.v4.maison	Le zèbre dort à la maison.	a9f791e2			pending			
+fr:b:zebre.v4.o7	Le zèbre dort au lit.	9f6a1a05			pending			
+fr:b:zebre.v4.o8	Le zèbre dort au pot.	504b137f			pending			
+fr:b:zebre.v4.lune	Le zèbre dort sur la lune.	6af14743			pending			
+fr:b:zebre.v4.soupe	Le zèbre dort près de la soupe.	f1156929			pending			
+fr:b:zebre.v4.carotte	Le zèbre dort près de la carotte.	bf39c261			pending			
+fr:b:zebre.v4.banane	Le zèbre dort près de la banane.	94bfcb8e			pending			
+fr:b:zebre.v4.ballon	Le zèbre dort près du ballon.	d78692da			pending			
+fr:b:zebre.v4.fraise	Le zèbre dort près de la fraise.	cc8d5453			pending			
+fr:b:zebre.v5.o1	Le zèbre va du lait.	63f077eb			pending			
+fr:b:zebre.v5.pomme	Le zèbre va une pomme.	7953be16			pending			
+fr:b:zebre.v5.o3	Le zèbre va un jouet.	99ab39ce			pending			
+fr:b:zebre.v5.o4	Le zèbre va en voiture.	53295983			pending			
+fr:b:zebre.v5.o5	Le zèbre va dehors.	8e2d6fcd			pending			
+fr:b:zebre.v5.maison	Le zèbre va à la maison.	5ea85ffc			pending			
+fr:b:zebre.v5.o7	Le zèbre va au lit.	29dfba0f			pending			
+fr:b:zebre.v5.o8	Le zèbre va au pot.	40d89c0d			pending			
+fr:b:zebre.v5.lune	Le zèbre va sur la lune.	da46faed			pending			
+fr:b:zebre.v5.soupe	Le zèbre va à la soupe.	bebaa4f1			pending			
+fr:b:zebre.v5.carotte	Le zèbre va à la carotte.	488caf69			pending			
+fr:b:zebre.v5.banane	Le zèbre va à la banane.	638dccd6			pending			
+fr:b:zebre.v5.ballon	Le zèbre va au ballon.	44ae3b0c			pending			
+fr:b:zebre.v5.fraise	Le zèbre va à la fraise.	4892720b			pending			
+fr:b:zebre.v6.o1	Le zèbre joue avec du lait.	2c84a01e			pending			
+fr:b:zebre.v6.pomme	Le zèbre joue avec une pomme.	c1b2d723			pending			
+fr:b:zebre.v6.o3	Le zèbre joue avec un jouet.	71c8e405			pending			
+fr:b:zebre.v6.o4	Le zèbre joue avec la voiture.	94d7f088			pending			
+fr:b:zebre.v6.o5	Le zèbre joue dehors.	b8ccf0f9			pending			
+fr:b:zebre.v6.maison	Le zèbre joue à la maison.	983b5558			pending			
+fr:b:zebre.v6.o7	Le zèbre joue au lit.	1193764b			pending			
+fr:b:zebre.v6.o8	Le zèbre joue au pot.	7481e539			pending			
+fr:b:zebre.v6.lune	Le zèbre joue avec la lune.	40b080ca			pending			
+fr:b:zebre.v6.soupe	Le zèbre joue avec de la soupe.	f98e2d1b			pending			
+fr:b:zebre.v6.carotte	Le zèbre joue avec une carotte.	2834148f			pending			
+fr:b:zebre.v6.banane	Le zèbre joue avec une banane.	5870f000			pending			
+fr:b:zebre.v6.ballon	Le zèbre joue avec un ballon.	814524a8			pending			
+fr:b:zebre.v6.fraise	Le zèbre joue avec une fraise.	ae83cab5			pending			
+fr:b:pet-🦁.v1.o1	Le lion veut du lait.	8e36c347			pending			
+fr:b:pet-🦁.v1.pomme	Le lion veut une pomme.	7124af5a			pending			
+fr:b:pet-🦁.v1.o3	Le lion veut un jouet.	3bb45582			pending			
+fr:b:pet-🦁.v1.o4	Le lion veut la voiture.	be7890fb			pending			
+fr:b:pet-🦁.v1.o5	Le lion veut dehors.	e4f7c949			pending			
+fr:b:pet-🦁.v1.maison	Le lion veut à la maison.	240fa5a8			pending			
+fr:b:pet-🦁.v1.o7	Le lion veut le lit.	637b1f90			pending			
+fr:b:pet-🦁.v1.o8	Le lion veut le pot.	b5552c6e			pending			
+fr:b:pet-🦁.v1.lune	Le lion veut la lune.	c4cfdc43			pending			
+fr:b:pet-🦁.v1.soupe	Le lion veut de la soupe.	f64bc5a6			pending			
+fr:b:pet-🦁.v1.carotte	Le lion veut une carotte.	73048a36			pending			
+fr:b:pet-🦁.v1.banane	Le lion veut une banane.	f9b497ff			pending			
+fr:b:pet-🦁.v1.ballon	Le lion veut un ballon.	78fb5b01			pending			
+fr:b:pet-🦁.v1.fraise	Le lion veut une fraise.	a1cf56ce			pending			
+fr:b:pet-🦁.v2.o1	Le lion mange du lait.	04add2bf			pending			
+fr:b:pet-🦁.v2.pomme	Le lion mange une pomme.	a70967f2			pending			
+fr:b:pet-🦁.v2.o3	Le lion mange un jouet.	7a0098ba			pending			
+fr:b:pet-🦁.v2.o4	Le lion mange la voiture.	1110ae13			pending			
+fr:b:pet-🦁.v2.o5	Le lion mange dehors.	141b4391			pending			
+fr:b:pet-🦁.v2.maison	Le lion mange à la maison.	c3233f30			pending			
+fr:b:pet-🦁.v2.o7	Le lion mange le lit.	484137a8			pending			
+fr:b:pet-🦁.v2.o8	Le lion mange le pot.	2d6ef296			pending			
+fr:b:pet-🦁.v2.lune	Le lion mange la lune.	eced59eb			pending			
+fr:b:pet-🦁.v2.soupe	Le lion mange de la soupe.	d3b71dde			pending			
+fr:b:pet-🦁.v2.carotte	Le lion mange une carotte.	7864b76e			pending			
+fr:b:pet-🦁.v2.banane	Le lion mange une banane.	02b6a477			pending			
+fr:b:pet-🦁.v2.ballon	Le lion mange un ballon.	a79870e9			pending			
+fr:b:pet-🦁.v2.fraise	Le lion mange une fraise.	bc534316			pending			
+fr:b:pet-🦁.v3.o1	Le lion boit du lait.	2c76dee9			pending			
+fr:b:pet-🦁.v3.pomme	Le lion boit une pomme.	0ee0b1ac			pending			
+fr:b:pet-🦁.v3.o3	Le lion boit un jouet.	8f2c2be4			pending			
+fr:b:pet-🦁.v3.o4	Le lion boit la voiture.	b9f62bb5			pending			
+fr:b:pet-🦁.v3.o5	Le lion boit dehors.	ea7d1533			pending			
+fr:b:pet-🦁.v3.maison	Le lion boit à la maison.	5ef0880e			pending			
+fr:b:pet-🦁.v3.o7	Le lion boit le lit.	06ac0f76			pending			
+fr:b:pet-🦁.v3.o8	Le lion boit le pot.	eabc01d8			pending			
+fr:b:pet-🦁.v3.lune	Le lion boit la lune.	b438f029			pending			
+fr:b:pet-🦁.v3.soupe	Le lion boit de la soupe.	2315deb0			pending			
+fr:b:pet-🦁.v3.carotte	Le lion boit une carotte.	62fc13d8			pending			
+fr:b:pet-🦁.v3.banane	Le lion boit une banane.	3c485d1d			pending			
+fr:b:pet-🦁.v3.ballon	Le lion boit un ballon.	b30a5d0b			pending			
+fr:b:pet-🦁.v3.fraise	Le lion boit une fraise.	8282db94			pending			
+fr:b:pet-🦁.v4.o1	Le lion dort du lait.	473d28f2			pending			
+fr:b:pet-🦁.v4.pomme	Le lion dort une pomme.	5179d24f			pending			
+fr:b:pet-🦁.v4.o3	Le lion dort avec un jouet.	ed5da72c			pending			
+fr:b:pet-🦁.v4.o4	Le lion dort dans la voiture.	d68b098e			pending			
+fr:b:pet-🦁.v4.o5	Le lion dort dehors.	ecf5ce4a			pending			
+fr:b:pet-🦁.v4.maison	Le lion dort à la maison.	1999cf21			pending			
+fr:b:pet-🦁.v4.o7	Le lion dort au lit.	b1253c7c			pending			
+fr:b:pet-🦁.v4.o8	Le lion dort au pot.	c804294a			pending			
+fr:b:pet-🦁.v4.lune	Le lion dort sur la lune.	8f884a60			pending			
+fr:b:pet-🦁.v4.soupe	Le lion dort près de la soupe.	3c8c983c			pending			
+fr:b:pet-🦁.v4.carotte	Le lion dort près de la carotte.	0d498318			pending			
+fr:b:pet-🦁.v4.banane	Le lion dort près de la banane.	46c4ed5d			pending			
+fr:b:pet-🦁.v4.ballon	Le lion dort près du ballon.	da6f1023			pending			
+fr:b:pet-🦁.v4.fraise	Le lion dort près de la fraise.	b97897d4			pending			
+fr:b:pet-🦁.v5.o1	Le lion va du lait.	e429fe24			pending			
+fr:b:pet-🦁.v5.pomme	Le lion va une pomme.	cdcb1139			pending			
+fr:b:pet-🦁.v5.o3	Le lion va un jouet.	6048659b			pending			
+fr:b:pet-🦁.v5.o4	Le lion va en voiture.	aed569fe			pending			
+fr:b:pet-🦁.v5.o5	Le lion va dehors.	c9ee5874			pending			
+fr:b:pet-🦁.v5.maison	Le lion va à la maison.	204c2dff			pending			
+fr:b:pet-🦁.v5.o7	Le lion va au lit.	d790e1ea			pending			
+fr:b:pet-🦁.v5.o8	Le lion va au pot.	f28a366c			pending			
+fr:b:pet-🦁.v5.lune	Le lion va sur la lune.	3ad95c26			pending			
+fr:b:pet-🦁.v5.soupe	Le lion va à la soupe.	badef034			pending			
+fr:b:pet-🦁.v5.carotte	Le lion va à la carotte.	41c635f0			pending			
+fr:b:pet-🦁.v5.banane	Le lion va à la banane.	04d6ff95			pending			
+fr:b:pet-🦁.v5.ballon	Le lion va au ballon.	b330ea7b			pending			
+fr:b:pet-🦁.v5.fraise	Le lion va à la fraise.	31cd959c			pending			
+fr:b:pet-🦁.v6.o1	Le lion joue avec du lait.	88c0012b			pending			
+fr:b:pet-🦁.v6.pomme	Le lion joue avec une pomme.	a1dc3756			pending			
+fr:b:pet-🦁.v6.o3	Le lion joue avec un jouet.	a88cc50e			pending			
+fr:b:pet-🦁.v6.o4	Le lion joue avec la voiture.	e86eb6f7			pending			
+fr:b:pet-🦁.v6.o5	Le lion joue dehors.	220c8150			pending			
+fr:b:pet-🦁.v6.maison	Le lion joue à la maison.	7c54e6db			pending			
+fr:b:pet-🦁.v6.o7	Le lion joue au lit.	1717cf26			pending			
+fr:b:pet-🦁.v6.o8	Le lion joue au pot.	0011d2e8			pending			
+fr:b:pet-🦁.v6.lune	Le lion joue avec la lune.	a542d12f			pending			
+fr:b:pet-🦁.v6.soupe	Le lion joue avec de la soupe.	5e2bb53a			pending			
+fr:b:pet-🦁.v6.carotte	Le lion joue avec une carotte.	1fe149b2			pending			
+fr:b:pet-🦁.v6.banane	Le lion joue avec une banane.	7528870b			pending			
+fr:b:pet-🦁.v6.ballon	Le lion joue avec un ballon.	dfeeef25			pending			
+fr:b:pet-🦁.v6.fraise	Le lion joue avec une fraise.	dbe1aa42			pending			
+fr:b:pet-🐯.v1.o1	Le tigre veut du lait.	8f3d4d24			pending			
+fr:b:pet-🐯.v1.pomme	Le tigre veut une pomme.	ca5c7839			pending			
+fr:b:pet-🐯.v1.o3	Le tigre veut un jouet.	afadc29b			pending			
+fr:b:pet-🐯.v1.o4	Le tigre veut la voiture.	d8d1f09e			pending			
+fr:b:pet-🐯.v1.o5	Le tigre veut dehors.	a39b2d74			pending			
+fr:b:pet-🐯.v1.maison	Le tigre veut à la maison.	d1056cff			pending			
+fr:b:pet-🐯.v1.o7	Le tigre veut le lit.	3f8909ad			pending			
+fr:b:pet-🐯.v1.o8	Le tigre veut le pot.	b7783d17			pending			
+fr:b:pet-🐯.v1.lune	Le tigre veut la lune.	16ea26a4			pending			
+fr:b:pet-🐯.v1.soupe	Le tigre veut de la soupe.	9f8ca8a9			pending			
+fr:b:pet-🐯.v1.carotte	Le tigre veut une carotte.	4ac117e5			pending			
+fr:b:pet-🐯.v1.banane	Le tigre veut une banane.	dc012602			pending			
+fr:b:pet-🐯.v1.ballon	Le tigre veut un ballon.	83f134a6			pending			
+fr:b:pet-🐯.v1.fraise	Le tigre veut une fraise.	e79ff35f			pending			
+fr:b:pet-🐯.v2.o1	Le tigre mange du lait.	4fbe7fc6			pending			
+fr:b:pet-🐯.v2.pomme	Le tigre mange une pomme.	05cc372b			pending			
+fr:b:pet-🐯.v2.o3	Le tigre mange un jouet.	c05b884d			pending			
+fr:b:pet-🐯.v2.o4	Le tigre mange la voiture.	4ab53550			pending			
+fr:b:pet-🐯.v2.o5	Le tigre mange dehors.	fa649b2e			pending			
+fr:b:pet-🐯.v2.maison	Le tigre mange à la maison.	0e1dd225			pending			
+fr:b:pet-🐯.v2.o7	Le tigre mange le lit.	2344737b			pending			
+fr:b:pet-🐯.v2.o8	Le tigre mange le pot.	da3d5289			pending			
+fr:b:pet-🐯.v2.lune	Le tigre mange la lune.	962b34e2			pending			
+fr:b:pet-🐯.v2.soupe	Le tigre mange de la soupe.	25ee8523			pending			
+fr:b:pet-🐯.v2.carotte	Le tigre mange une carotte.	d24376b7			pending			
+fr:b:pet-🐯.v2.banane	Le tigre mange une banane.	09dfb588			pending			
+fr:b:pet-🐯.v2.ballon	Le tigre mange un ballon.	c2755220			pending			
+fr:b:pet-🐯.v2.fraise	Le tigre mange une fraise.	c8d6058d			pending			
+fr:b:pet-🐯.v3.o1	Le tigre boit du lait.	72ff55ca			pending			
+fr:b:pet-🐯.v3.pomme	Le tigre boit une pomme.	d5967567			pending			
+fr:b:pet-🐯.v3.o3	Le tigre boit un jouet.	720e3859			pending			
+fr:b:pet-🐯.v3.o4	Le tigre boit la voiture.	1461d38c			pending			
+fr:b:pet-🐯.v3.o5	Le tigre boit dehors.	5a279dd2			pending			
+fr:b:pet-🐯.v3.maison	Le tigre boit à la maison.	c9af6429			pending			
+fr:b:pet-🐯.v3.o7	Le tigre boit le lit.	59ff0757			pending			
+fr:b:pet-🐯.v3.o8	Le tigre boit le pot.	f6240825			pending			
+fr:b:pet-🐯.v3.lune	Le tigre boit la lune.	97f6d2de			pending			
+fr:b:pet-🐯.v3.soupe	Le tigre boit de la soupe.	a648ebf7			pending			
+fr:b:pet-🐯.v3.carotte	Le tigre boit une carotte.	cdf57e13			pending			
+fr:b:pet-🐯.v3.banane	Le tigre boit une banane.	6d1b3744			pending			
+fr:b:pet-🐯.v3.ballon	Le tigre boit un ballon.	ea1c14b4			pending			
+fr:b:pet-🐯.v3.fraise	Le tigre boit une fraise.	893b91e1			pending			
+fr:b:pet-🐯.v4.o1	Le tigre dort du lait.	2f5ed1f1			pending			
+fr:b:pet-🐯.v4.pomme	Le tigre dort une pomme.	54b851d4			pending			
+fr:b:pet-🐯.v4.o3	Le tigre dort avec un jouet.	24f00edb			pending			
+fr:b:pet-🐯.v4.o4	Le tigre dort dans la voiture.	538a0031			pending			
+fr:b:pet-🐯.v4.o5	Le tigre dort dehors.	22eb140b			pending			
+fr:b:pet-🐯.v4.maison	Le tigre dort à la maison.	7a41a106			pending			
+fr:b:pet-🐯.v4.o7	Le tigre dort au lit.	167d60e9			pending			
+fr:b:pet-🐯.v4.o8	Le tigre dort au pot.	df681dc3			pending			
+fr:b:pet-🐯.v4.lune	Le tigre dort sur la lune.	a7d1fc17			pending			
+fr:b:pet-🐯.v4.soupe	Le tigre dort près de la soupe.	8574ed45			pending			
+fr:b:pet-🐯.v4.carotte	Le tigre dort près de la carotte.	3af3d945			pending			
+fr:b:pet-🐯.v4.banane	Le tigre dort près de la banane.	9ade87e2			pending			
+fr:b:pet-🐯.v4.ballon	Le tigre dort près du ballon.	232a80d6			pending			
+fr:b:pet-🐯.v4.fraise	Le tigre dort près de la fraise.	fa3f0dbf			pending			
+fr:b:pet-🐯.v5.o1	Le tigre va du lait.	4d6b97ff			pending			
+fr:b:pet-🐯.v5.pomme	Le tigre va une pomme.	536a6632			pending			
+fr:b:pet-🐯.v5.o3	Le tigre va un jouet.	7a49b8fa			pending			
+fr:b:pet-🐯.v5.o4	Le tigre va en voiture.	98563bf7			pending			
+fr:b:pet-🐯.v5.o5	Le tigre va dehors.	e9d0e751			pending			
+fr:b:pet-🐯.v5.maison	Le tigre va à la maison.	113a15f0			pending			
+fr:b:pet-🐯.v5.o7	Le tigre va au lit.	ab2438e3			pending			
+fr:b:pet-🐯.v5.o8	Le tigre va au pot.	158ce381			pending			
+fr:b:pet-🐯.v5.lune	Le tigre va sur la lune.	cbb91251			pending			
+fr:b:pet-🐯.v5.soupe	Le tigre va à la soupe.	dc43ed8d			pending			
+fr:b:pet-🐯.v5.carotte	Le tigre va à la carotte.	4dc82dcd			pending			
+fr:b:pet-🐯.v5.banane	Le tigre va à la banane.	9a27196a			pending			
+fr:b:pet-🐯.v5.ballon	Le tigre va au ballon.	7249d658			pending			
+fr:b:pet-🐯.v5.fraise	Le tigre va à la fraise.	5c392477			pending			
+fr:b:pet-🐯.v6.o1	Le tigre joue avec du lait.	651b6d7a			pending			
+fr:b:pet-🐯.v6.pomme	Le tigre joue avec une pomme.	b5be57d7			pending			
+fr:b:pet-🐯.v6.o3	Le tigre joue avec un jouet.	70162509			pending			
+fr:b:pet-🐯.v6.o4	Le tigre joue avec la voiture.	2d48e45c			pending			
+fr:b:pet-🐯.v6.o5	Le tigre joue dehors.	f14fbb9d			pending			
+fr:b:pet-🐯.v6.maison	Le tigre joue à la maison.	f34e8a4c			pending			
+fr:b:pet-🐯.v6.o7	Le tigre joue au lit.	245b83df			pending			
+fr:b:pet-🐯.v6.o8	Le tigre joue au pot.	8ce46cfd			pending			
+fr:b:pet-🐯.v6.lune	Le tigre joue avec la lune.	521a2aae			pending			
+fr:b:pet-🐯.v6.soupe	Le tigre joue avec de la soupe.	ff7601c7			pending			
+fr:b:pet-🐯.v6.carotte	Le tigre joue avec une carotte.	3135e303			pending			
+fr:b:pet-🐯.v6.banane	Le tigre joue avec une banane.	cbb5ae74			pending			
+fr:b:pet-🐯.v6.ballon	Le tigre joue avec un ballon.	3795fa84			pending			
+fr:b:pet-🐯.v6.fraise	Le tigre joue avec une fraise.	af04d9d1			pending			
+fr:b:pet-🐘.v1.o1	L'éléphant veut du lait.	29c0c132			pending			
+fr:b:pet-🐘.v1.pomme	L'éléphant veut une pomme.	faacf08f			pending			
+fr:b:pet-🐘.v1.o3	L'éléphant veut un jouet.	d0f21241			pending			
+fr:b:pet-🐘.v1.o4	L'éléphant veut la voiture.	72a1cd34			pending			
+fr:b:pet-🐘.v1.o5	L'éléphant veut dehors.	0e30410a			pending			
+fr:b:pet-🐘.v1.maison	L'éléphant veut à la maison.	b4d9b9e1			pending			
+fr:b:pet-🐘.v1.o7	L'éléphant veut le lit.	8a59479f			pending			
+fr:b:pet-🐘.v1.o8	L'éléphant veut le pot.	f2e230bd			pending			
+fr:b:pet-🐘.v1.lune	L'éléphant veut la lune.	7f33d156			pending			
+fr:b:pet-🐘.v1.soupe	L'éléphant veut de la soupe.	6391db7f			pending			
+fr:b:pet-🐘.v1.carotte	L'éléphant veut une carotte.	8c5f13bb			pending			
+fr:b:pet-🐘.v1.banane	L'éléphant veut une banane.	9d2ad3ac			pending			
+fr:b:pet-🐘.v1.ballon	L'éléphant veut un ballon.	e5d754ac			pending			
+fr:b:pet-🐘.v1.fraise	L'éléphant veut une fraise.	3ef82479			pending			
+fr:b:pet-🐘.v2.o1	L'éléphant mange du lait.	19c123ac			pending			
+fr:b:pet-🐘.v2.pomme	L'éléphant mange une pomme.	5f8f5e21			pending			
+fr:b:pet-🐘.v2.o3	L'éléphant mange un jouet.	be9d2dc3			pending			
+fr:b:pet-🐘.v2.o4	L'éléphant mange la voiture.	35fbdd86			pending			
+fr:b:pet-🐘.v2.o5	L'éléphant mange dehors.	ff9c9e0c			pending			
+fr:b:pet-🐘.v2.maison	L'éléphant mange à la maison.	95dc0a57			pending			
+fr:b:pet-🐘.v2.o7	L'éléphant mange le lit.	331151d5			pending			
+fr:b:pet-🐘.v2.o8	L'éléphant mange le pot.	b58188ef			pending			
+fr:b:pet-🐘.v2.lune	L'éléphant mange la lune.	5e7e8cbc			pending			
+fr:b:pet-🐘.v2.soupe	L'éléphant mange de la soupe.	788ff071			pending			
+fr:b:pet-🐘.v2.carotte	L'éléphant mange une carotte.	d4fa9a8d			pending			
+fr:b:pet-🐘.v2.banane	L'éléphant mange une banane.	06d8eb2a			pending			
+fr:b:pet-🐘.v2.ballon	L'éléphant mange un ballon.	ad4b46be			pending			
+fr:b:pet-🐘.v2.fraise	L'éléphant mange une fraise.	0eb0d737			pending			
+fr:b:pet-🐘.v3.o1	L'éléphant boit du lait.	f8624424			pending			
+fr:b:pet-🐘.v3.pomme	L'éléphant boit une pomme.	763bc739			pending			
+fr:b:pet-🐘.v3.o3	L'éléphant boit un jouet.	34de979b			pending			
+fr:b:pet-🐘.v3.o4	L'éléphant boit la voiture.	695b4d9e			pending			
+fr:b:pet-🐘.v3.o5	L'éléphant boit dehors.	a298ba74			pending			
+fr:b:pet-🐘.v3.maison	L'éléphant boit à la maison.	5942d3ff			pending			
+fr:b:pet-🐘.v3.o7	L'éléphant boit le lit.	3e8696ad			pending			
+fr:b:pet-🐘.v3.o8	L'éléphant boit le pot.	b675ca17			pending			
+fr:b:pet-🐘.v3.lune	L'éléphant boit la lune.	800f1da4			pending			
+fr:b:pet-🐘.v3.soupe	L'éléphant boit de la soupe.	27ca0fa9			pending			
+fr:b:pet-🐘.v3.carotte	L'éléphant boit une carotte.	d2fe7ee5			pending			
+fr:b:pet-🐘.v3.banane	L'éléphant boit une banane.	6c8a8302			pending			
+fr:b:pet-🐘.v3.ballon	L'éléphant boit un ballon.	2fd083a6			pending			
+fr:b:pet-🐘.v3.fraise	L'éléphant boit une fraise.	7829505f			pending			
+fr:b:pet-🐘.v4.o1	L'éléphant dort du lait.	0dc1fa3b			pending			
+fr:b:pet-🐘.v4.pomme	L'éléphant dort une pomme.	52004126			pending			
+fr:b:pet-🐘.v4.o3	L'éléphant dort avec un jouet.	49d013e9			pending			
+fr:b:pet-🐘.v4.o4	L'éléphant dort dans la voiture.	31de4b5f			pending			
+fr:b:pet-🐘.v4.o5	L'éléphant dort dehors.	247acb7d			pending			
+fr:b:pet-🐘.v4.maison	L'éléphant dort à la maison.	88fd50ac			pending			
+fr:b:pet-🐘.v4.o7	L'éléphant dort au lit.	b065223f			pending			
+fr:b:pet-🐘.v4.o8	L'éléphant dort au pot.	98ed41dd			pending			
+fr:b:pet-🐘.v4.lune	L'éléphant dort sur la lune.	6242c2fd			pending			
+fr:b:pet-🐘.v4.soupe	L'éléphant dort près de la soupe.	ae8c477b			pending			
+fr:b:pet-🐘.v4.carotte	L'éléphant dort près de la carotte.	a493c8cf			pending			
+fr:b:pet-🐘.v4.banane	L'éléphant dort près de la banane.	e6346840			pending			
+fr:b:pet-🐘.v4.ballon	L'éléphant dort près du ballon.	c904c550			pending			
+fr:b:pet-🐘.v4.fraise	L'éléphant dort près de la fraise.	2e5578f5			pending			
+fr:b:pet-🐘.v5.o1	L'éléphant va du lait.	f4468cad			pending			
+fr:b:pet-🐘.v5.pomme	L'éléphant va une pomme.	296602e8			pending			
+fr:b:pet-🐘.v5.o3	L'éléphant va un jouet.	184777b0			pending			
+fr:b:pet-🐘.v5.o4	L'éléphant va en voiture.	5af8ca09			pending			
+fr:b:pet-🐘.v5.o5	L'éléphant va dehors.	72dd6057			pending			
+fr:b:pet-🐘.v5.maison	L'éléphant va à la maison.	200a0482			pending			
+fr:b:pet-🐘.v5.o7	L'éléphant va au lit.	2518e725			pending			
+fr:b:pet-🐘.v5.o8	L'éléphant va au pot.	55f9171f			pending			
+fr:b:pet-🐘.v5.lune	L'éléphant va sur la lune.	14132663			pending			
+fr:b:pet-🐘.v5.soupe	L'éléphant va à la soupe.	21cf8d3f			pending			
+fr:b:pet-🐘.v5.carotte	L'éléphant va à la carotte.	2359093b			pending			
+fr:b:pet-🐘.v5.banane	L'éléphant va à la banane.	85b8782c			pending			
+fr:b:pet-🐘.v5.ballon	L'éléphant va au ballon.	299da32a			pending			
+fr:b:pet-🐘.v5.fraise	L'éléphant va à la fraise.	2785c8f9			pending			
+fr:b:pet-🐘.v6.o1	L'éléphant joue avec du lait.	c05e6a78			pending			
+fr:b:pet-🐘.v6.pomme	L'éléphant joue avec une pomme.	8190b495			pending			
+fr:b:pet-🐘.v6.o3	L'éléphant joue avec un jouet.	b1f87d97			pending			
+fr:b:pet-🐘.v6.o4	L'éléphant joue avec la voiture.	9488124a			pending			
+fr:b:pet-🐘.v6.o5	L'éléphant joue dehors.	3931dae7			pending			
+fr:b:pet-🐘.v6.maison	L'éléphant joue à la maison.	8eca7a12			pending			
+fr:b:pet-🐘.v6.o7	L'éléphant joue au lit.	948bf035			pending			
+fr:b:pet-🐘.v6.o8	L'éléphant joue au pot.	0029db4f			pending			
+fr:b:pet-🐘.v6.lune	L'éléphant joue avec la lune.	35ba98e0			pending			
+fr:b:pet-🐘.v6.soupe	L'éléphant joue avec de la soupe.	6d24e27d			pending			
+fr:b:pet-🐘.v6.carotte	L'éléphant joue avec une carotte.	f31ce951			pending			
+fr:b:pet-🐘.v6.banane	L'éléphant joue avec une banane.	6ec5ecfe			pending			
+fr:b:pet-🐘.v6.ballon	L'éléphant joue avec un ballon.	cfe88b3a			pending			
+fr:b:pet-🐘.v6.fraise	L'éléphant joue avec une fraise.	e7f436c3			pending			
+fr:b:pet-🦊.v1.o1	Le renard veut du lait.	7cd05423			pending			
+fr:b:pet-🦊.v1.pomme	Le renard veut une pomme.	a717904e			pending			
+fr:b:pet-🦊.v1.o3	Le renard veut un jouet.	46a7db46			pending			
+fr:b:pet-🦊.v1.o4	Le renard veut la voiture.	86026d6f			pending			
+fr:b:pet-🦊.v1.o5	Le renard veut dehors.	72713295			pending			
+fr:b:pet-🦊.v1.maison	Le renard veut à la maison.	a2ee0f04			pending			
+fr:b:pet-🦊.v1.o7	Le renard veut le lit.	0c261764			pending			
+fr:b:pet-🦊.v1.o8	Le renard veut le pot.	1242d142			pending			
+fr:b:pet-🦊.v1.lune	Le renard veut la lune.	b520fbd7			pending			
+fr:b:pet-🦊.v1.soupe	Le renard veut de la soupe.	62b829d2			pending			
+fr:b:pet-🦊.v1.carotte	Le renard veut une carotte.	29f3a32a			pending			
+fr:b:pet-🦊.v1.banane	Le renard veut une banane.	5be591c3			pending			
+fr:b:pet-🦊.v1.ballon	Le renard veut un ballon.	c851a82d			pending			
+fr:b:pet-🦊.v1.fraise	Le renard veut une fraise.	ecad60ea			pending			
+fr:b:pet-🦊.v2.o1	Le renard mange du lait.	ceae1973			pending			
+fr:b:pet-🦊.v2.pomme	Le renard mange une pomme.	368f8a9e			pending			
+fr:b:pet-🦊.v2.o3	Le renard mange un jouet.	6db5bf56			pending			
+fr:b:pet-🦊.v2.o4	Le renard mange la voiture.	990502df			pending			
+fr:b:pet-🦊.v2.o5	Le renard mange dehors.	5130c785			pending			
+fr:b:pet-🦊.v2.maison	Le renard mange à la maison.	6876a4b4			pending			
+fr:b:pet-🦊.v2.o7	Le renard mange le lit.	588fbd34			pending			
+fr:b:pet-🦊.v2.o8	Le renard mange le pot.	9ed85e72			pending			
+fr:b:pet-🦊.v2.lune	Le renard mange la lune.	49403407			pending			
+fr:b:pet-🦊.v2.soupe	Le renard mange de la soupe.	bc7fbe02			pending			
+fr:b:pet-🦊.v2.carotte	Le renard mange une carotte.	4d02b93a			pending			
+fr:b:pet-🦊.v2.banane	Le renard mange une banane.	ea4a1593			pending			
+fr:b:pet-🦊.v2.ballon	Le renard mange un ballon.	c6e2051d			pending			
+fr:b:pet-🦊.v2.fraise	Le renard mange une fraise.	9bb3703a			pending			
+fr:b:pet-🦊.v3.o1	Le renard boit du lait.	889b9b65			pending			
+fr:b:pet-🦊.v3.pomme	Le renard boit une pomme.	fee3d5c0			pending			
+fr:b:pet-🦊.v3.o3	Le renard boit un jouet.	0fae7268			pending			
+fr:b:pet-🦊.v3.o4	Le renard boit la voiture.	bfeff7b9			pending			
+fr:b:pet-🦊.v3.o5	Le renard boit dehors.	fa6c5dff			pending			
+fr:b:pet-🦊.v3.maison	Le renard boit à la maison.	1de94e8a			pending			
+fr:b:pet-🦊.v3.o7	Le renard boit le lit.	798a2aca			pending			
+fr:b:pet-🦊.v3.o8	Le renard boit le pot.	94837f4c			pending			
+fr:b:pet-🦊.v3.lune	Le renard boit la lune.	d6eca4ed			pending			
+fr:b:pet-🦊.v3.soupe	Le renard boit de la soupe.	4d21061c			pending			
+fr:b:pet-🦊.v3.carotte	Le renard boit une carotte.	b52386ec			pending			
+fr:b:pet-🦊.v3.banane	Le renard boit une banane.	f3c41f11			pending			
+fr:b:pet-🦊.v3.ballon	Le renard boit un ballon.	ae3bc597			pending			
+fr:b:pet-🦊.v3.fraise	Le renard boit une fraise.	05b1f6a0			pending			
+fr:b:pet-🦊.v4.o1	Le renard dort du lait.	c47c3bf6			pending			
+fr:b:pet-🦊.v4.pomme	Le renard dort une pomme.	41b7951b			pending			
+fr:b:pet-🦊.v4.o3	Le renard dort avec un jouet.	bd808490			pending			
+fr:b:pet-🦊.v4.o4	Le renard dort dans la voiture.	fef54382			pending			
+fr:b:pet-🦊.v4.o5	Le renard dort dehors.	d6e8c73e			pending			
+fr:b:pet-🦊.v4.maison	Le renard dort à la maison.	04c61035			pending			
+fr:b:pet-🦊.v4.o7	Le renard dort au lit.	fce7e0e0			pending			
+fr:b:pet-🦊.v4.o8	Le renard dort au pot.	1131315e			pending			
+fr:b:pet-🦊.v4.lune	Le renard dort sur la lune.	ffa2fe44			pending			
+fr:b:pet-🦊.v4.soupe	Le renard dort près de la soupe.	eb9427c8			pending			
+fr:b:pet-🦊.v4.carotte	Le renard dort près de la carotte.	48bb422c			pending			
+fr:b:pet-🦊.v4.banane	Le renard dort près de la banane.	39f4c051			pending			
+fr:b:pet-🦊.v4.ballon	Le renard dort près du ballon.	2abc392f			pending			
+fr:b:pet-🦊.v4.fraise	Le renard dort près de la fraise.	091715e0			pending			
+fr:b:pet-🦊.v5.o1	Le renard va du lait.	a4e66e78			pending			
+fr:b:pet-🦊.v5.pomme	Le renard va une pomme.	17425895			pending			
+fr:b:pet-🦊.v5.o3	Le renard va un jouet.	7416c997			pending			
+fr:b:pet-🦊.v5.o4	Le renard va en voiture.	106fe072			pending			
+fr:b:pet-🦊.v5.o5	Le renard va dehors.	ab2bcce8			pending			
+fr:b:pet-🦊.v5.maison	Le renard va à la maison.	a301fa53			pending			
+fr:b:pet-🦊.v5.o7	Le renard va au lit.	458a957e			pending			
+fr:b:pet-🦊.v5.o8	Le renard va au pot.	02108250			pending			
+fr:b:pet-🦊.v5.lune	Le renard va sur la lune.	658b17ca			pending			
+fr:b:pet-🦊.v5.soupe	Le renard va à la soupe.	dc34e520			pending			
+fr:b:pet-🦊.v5.carotte	Le renard va à la carotte.	e251bcc4			pending			
+fr:b:pet-🦊.v5.banane	Le renard va à la banane.	f5b7b809			pending			
+fr:b:pet-🦊.v5.ballon	Le renard va au ballon.	bfbbb3e7			pending			
+fr:b:pet-🦊.v5.fraise	Le renard va à la fraise.	000e8848			pending			
+fr:b:pet-🦊.v6.o1	Le renard joue avec du lait.	e5512347			pending			
+fr:b:pet-🦊.v6.pomme	Le renard joue avec une pomme.	7cb60f5a			pending			
+fr:b:pet-🦊.v6.o3	Le renard joue avec un jouet.	5a397582			pending			
+fr:b:pet-🦊.v6.o4	Le renard joue avec la voiture.	f452b0fb			pending			
+fr:b:pet-🦊.v6.o5	Le renard joue dehors.	674f80d4			pending			
+fr:b:pet-🦊.v6.maison	Le renard joue à la maison.	d5e030df			pending			
+fr:b:pet-🦊.v6.o7	Le renard joue au lit.	a1255b4a			pending			
+fr:b:pet-🦊.v6.o8	Le renard joue au pot.	bc1eafcc			pending			
+fr:b:pet-🦊.v6.lune	Le renard joue avec la lune.	1bea3c43			pending			
+fr:b:pet-🦊.v6.soupe	Le renard joue avec de la soupe.	bcac25a6			pending			
+fr:b:pet-🦊.v6.carotte	Le renard joue avec une carotte.	3964ea36			pending			
+fr:b:pet-🦊.v6.banane	Le renard joue avec une banane.	2f8eb7ff			pending			
+fr:b:pet-🦊.v6.ballon	Le renard joue avec un ballon.	848cbb01			pending			
+fr:b:pet-🦊.v6.fraise	Le renard joue avec une fraise.	d7a976ce			pending			
+fr:b:pet-🐱.v1.o1	Le chat veut du lait.	69ebff5f			pending			
+fr:b:pet-🐱.v1.pomme	Le chat veut une pomme.	f7b5c512			pending			
+fr:b:pet-🐱.v1.o3	Le chat veut un jouet.	fe57c1da			pending			
+fr:b:pet-🐱.v1.o4	Le chat veut la voiture.	bb939db3			pending			
+fr:b:pet-🐱.v1.o5	Le chat veut dehors.	230c28b1			pending			
+fr:b:pet-🐱.v1.maison	Le chat veut à la maison.	d238dad0			pending			
+fr:b:pet-🐱.v1.o7	Le chat veut le lit.	169cdb48			pending			
+fr:b:pet-🐱.v1.o8	Le chat veut le pot.	97927db6			pending			
+fr:b:pet-🐱.v1.lune	Le chat veut la lune.	a5ed3f0b			pending			
+fr:b:pet-🐱.v1.soupe	Le chat veut de la soupe.	721f917e			pending			
+fr:b:pet-🐱.v1.carotte	Le chat veut une carotte.	23c8558e			pending			
+fr:b:pet-🐱.v1.banane	Le chat veut une banane.	60d06e17			pending			
+fr:b:pet-🐱.v1.ballon	Le chat veut un ballon.	880a8a89			pending			
+fr:b:pet-🐱.v1.fraise	Le chat veut une fraise.	a1dec3b6			pending			
+fr:b:pet-🐱.v2.o1	Le chat mange du lait.	4dc8fc07			pending			
+fr:b:pet-🐱.v2.pomme	Le chat mange une pomme.	489edf1a			pending			
+fr:b:pet-🐱.v2.o3	Le chat mange un jouet.	3a85c342			pending			
+fr:b:pet-🐱.v2.o4	Le chat mange la voiture.	8b65f3bb			pending			
+fr:b:pet-🐱.v2.o5	Le chat mange dehors.	9cac0a89			pending			
+fr:b:pet-🐱.v2.maison	Le chat mange à la maison.	90ee7ce8			pending			
+fr:b:pet-🐱.v2.o7	Le chat mange le lit.	8ae03b50			pending			
+fr:b:pet-🐱.v2.o8	Le chat mange le pot.	da3fdf2e			pending			
+fr:b:pet-🐱.v2.lune	Le chat mange la lune.	a3847503			pending			
+fr:b:pet-🐱.v2.soupe	Le chat mange de la soupe.	38f145e6			pending			
+fr:b:pet-🐱.v2.carotte	Le chat mange une carotte.	a6a6d4f6			pending			
+fr:b:pet-🐱.v2.banane	Le chat mange une banane.	12e147bf			pending			
+fr:b:pet-🐱.v2.ballon	Le chat mange un ballon.	1e7cccc1			pending			
+fr:b:pet-🐱.v2.fraise	Le chat mange une fraise.	9865b68e			pending			
+fr:b:pet-🐱.v3.o1	Le chat boit du lait.	544f0541			pending			
+fr:b:pet-🐱.v3.pomme	Le chat boit une pomme.	2a094b64			pending			
+fr:b:pet-🐱.v3.o3	Le chat boit un jouet.	ade45d7c			pending			
+fr:b:pet-🐱.v3.o4	Le chat boit la voiture.	86dc3bcd			pending			
+fr:b:pet-🐱.v3.o5	Le chat boit dehors.	a26faefb			pending			
+fr:b:pet-🐱.v3.maison	Le chat boit à la maison.	e68edc76			pending			
+fr:b:pet-🐱.v3.o7	Le chat boit le lit.	d7d67ace			pending			
+fr:b:pet-🐱.v3.o8	Le chat boit le pot.	6b013940			pending			
+fr:b:pet-🐱.v3.lune	Le chat boit la lune.	64e8c451			pending			
+fr:b:pet-🐱.v3.soupe	Le chat boit de la soupe.	f3318ac8			pending			
+fr:b:pet-🐱.v3.carotte	Le chat boit une carotte.	699113d0			pending			
+fr:b:pet-🐱.v3.banane	Le chat boit une banane.	d9e93175			pending			
+fr:b:pet-🐱.v3.ballon	Le chat boit un ballon.	8f714953			pending			
+fr:b:pet-🐱.v3.fraise	Le chat boit une fraise.	bc19547c			pending			
+fr:b:pet-🐱.v4.o1	Le chat dort du lait.	d28ac83a			pending			
+fr:b:pet-🐱.v4.pomme	Le chat dort une pomme.	97dc0c97			pending			
+fr:b:pet-🐱.v4.o3	Le chat dort avec un jouet.	306a9124			pending			
+fr:b:pet-🐱.v4.o4	Le chat dort dans la voiture.	539a41f6			pending			
+fr:b:pet-🐱.v4.o5	Le chat dort dehors.	b65ce722			pending			
+fr:b:pet-🐱.v4.maison	Le chat dort à la maison.	53370db9			pending			
+fr:b:pet-🐱.v4.o7	Le chat dort au lit.	687c7b34			pending			
+fr:b:pet-🐱.v4.o8	Le chat dort au pot.	aec51c72			pending			
+fr:b:pet-🐱.v4.lune	Le chat dort sur la lune.	60b65018			pending			
+fr:b:pet-🐱.v4.soupe	Le chat dort près de la soupe.	c6cfdba4			pending			
+fr:b:pet-🐱.v4.carotte	Le chat dort près de la carotte.	31150320			pending			
+fr:b:pet-🐱.v4.banane	Le chat dort près de la banane.	ae7186c5			pending			
+fr:b:pet-🐱.v4.ballon	Le chat dort près du ballon.	869e290b			pending			
+fr:b:pet-🐱.v4.fraise	Le chat dort près de la fraise.	ec7a78cc			pending			
+fr:b:pet-🐱.v5.o1	Le chat va du lait.	024ab4fc			pending			
+fr:b:pet-🐱.v5.pomme	Le chat va une pomme.	af87f971			pending			
+fr:b:pet-🐱.v5.o3	Le chat va un jouet.	e9a07693			pending			
+fr:b:pet-🐱.v5.o4	Le chat va en voiture.	9b574676			pending			
+fr:b:pet-🐱.v5.o5	Le chat va dehors.	437811fc			pending			
+fr:b:pet-🐱.v5.maison	Le chat va à la maison.	e4dd2bc7			pending			
+fr:b:pet-🐱.v5.o7	Le chat va au lit.	da173952			pending			
+fr:b:pet-🐱.v5.o8	Le chat va au pot.	432ba6e4			pending			
+fr:b:pet-🐱.v5.lune	Le chat va sur la lune.	9a53bdae			pending			
+fr:b:pet-🐱.v5.soupe	Le chat va à la soupe.	ba3fa4fc			pending			
+fr:b:pet-🐱.v5.carotte	Le chat va à la carotte.	6c8dc7d8			pending			
+fr:b:pet-🐱.v5.banane	Le chat va à la banane.	6b50591d			pending			
+fr:b:pet-🐱.v5.ballon	Le chat va au ballon.	93c98693			pending			
+fr:b:pet-🐱.v5.fraise	Le chat va à la fraise.	b18ad794			pending			
+fr:b:pet-🐱.v6.o1	Le chat joue avec du lait.	ffafd1d3			pending			
+fr:b:pet-🐱.v6.pomme	Le chat joue avec une pomme.	ad085cfe			pending			
+fr:b:pet-🐱.v6.o3	Le chat joue avec un jouet.	428e24b6			pending			
+fr:b:pet-🐱.v6.o4	Le chat joue avec la voiture.	19c8573f			pending			
+fr:b:pet-🐱.v6.o5	Le chat joue dehors.	d99d9818			pending			
+fr:b:pet-🐱.v6.maison	Le chat joue à la maison.	69fa4ac3			pending			
+fr:b:pet-🐱.v6.o7	Le chat joue au lit.	56fbe86e			pending			
+fr:b:pet-🐱.v6.o8	Le chat joue au pot.	50dabb60			pending			
+fr:b:pet-🐱.v6.lune	Le chat joue avec la lune.	2189af67			pending			
+fr:b:pet-🐱.v6.soupe	Le chat joue avec de la soupe.	91a9ade2			pending			
+fr:b:pet-🐱.v6.carotte	Le chat joue avec une carotte.	ba6f361a			pending			
+fr:b:pet-🐱.v6.banane	Le chat joue avec une banane.	eff3bdf3			pending			
+fr:b:pet-🐱.v6.ballon	Le chat joue avec un ballon.	4b56aefd			pending			
+fr:b:pet-🐱.v6.fraise	Le chat joue avec une fraise.	7ec6c89a			pending			
+fr:b:pet-🐬.v1.o1	Le dauphin veut du lait.	f32fa310			pending			
+fr:b:pet-🐬.v1.pomme	Le dauphin veut une pomme.	086506cd			pending			
+fr:b:pet-🐬.v1.o3	Le dauphin veut un jouet.	b4d7786f			pending			
+fr:b:pet-🐬.v1.o4	Le dauphin veut la voiture.	954af3a2			pending			
+fr:b:pet-🐬.v1.o5	Le dauphin veut dehors.	892b58f0			pending			
+fr:b:pet-🐬.v1.maison	Le dauphin veut à la maison.	4c1ad67b			pending			
+fr:b:pet-🐬.v1.o7	Le dauphin veut le lit.	eeaf5b61			pending			
+fr:b:pet-🐬.v1.o8	Le dauphin veut le pot.	e8a1b60b			pending			
+fr:b:pet-🐬.v1.lune	Le dauphin veut la lune.	4531d788			pending			
+fr:b:pet-🐬.v1.soupe	Le dauphin veut de la soupe.	2e6004d5			pending			
+fr:b:pet-🐬.v1.carotte	Le dauphin veut une carotte.	51857889			pending			
+fr:b:pet-🐬.v1.banane	Le dauphin veut une banane.	3eaa7a76			pending			
+fr:b:pet-🐬.v1.ballon	Le dauphin veut un ballon.	67705902			pending			
+fr:b:pet-🐬.v1.fraise	Le dauphin veut une fraise.	fc66932b			pending			
+fr:b:pet-🐬.v2.o1	Le dauphin mange du lait.	6225446a			pending			
+fr:b:pet-🐬.v2.pomme	Le dauphin mange une pomme.	abcbef07			pending			
+fr:b:pet-🐬.v2.o3	Le dauphin mange un jouet.	6b490379			pending			
+fr:b:pet-🐬.v2.o4	Le dauphin mange la voiture.	6e10ab2c			pending			
+fr:b:pet-🐬.v2.o5	Le dauphin mange dehors.	c3019872			pending			
+fr:b:pet-🐬.v2.maison	Le dauphin mange à la maison.	8fce6249			pending			
+fr:b:pet-🐬.v2.o7	Le dauphin mange le lit.	2fc99877			pending			
+fr:b:pet-🐬.v2.o8	Le dauphin mange le pot.	cbee9945			pending			
+fr:b:pet-🐬.v2.lune	Le dauphin mange la lune.	ad20a67e			pending			
+fr:b:pet-🐬.v2.soupe	Le dauphin mange de la soupe.	b0894917			pending			
+fr:b:pet-🐬.v2.carotte	Le dauphin mange une carotte.	7b1abeb3			pending			
+fr:b:pet-🐬.v2.banane	Le dauphin mange une banane.	ff4bd0e4			pending			
+fr:b:pet-🐬.v2.ballon	Le dauphin mange un ballon.	f7f08b54			pending			
+fr:b:pet-🐬.v2.fraise	Le dauphin mange une fraise.	1e2c6f81			pending			
+fr:b:pet-🐬.v3.o1	Le dauphin boit du lait.	70b89c36			pending			
+fr:b:pet-🐬.v3.pomme	Le dauphin boit une pomme.	0d5a395b			pending			
+fr:b:pet-🐬.v3.o3	Le dauphin boit un jouet.	e182b83d			pending			
+fr:b:pet-🐬.v3.o4	Le dauphin boit la voiture.	b2b26660			pending			
+fr:b:pet-🐬.v3.o5	Le dauphin boit dehors.	4f55befe			pending			
+fr:b:pet-🐬.v3.maison	Le dauphin boit à la maison.	3cd39ef5			pending			
+fr:b:pet-🐬.v3.o7	Le dauphin boit le lit.	a41d3d2b			pending			
+fr:b:pet-🐬.v3.o8	Le dauphin boit le pot.	8986de99			pending			
+fr:b:pet-🐬.v3.lune	Le dauphin boit la lune.	2198b3b2			pending			
+fr:b:pet-🐬.v3.soupe	Le dauphin boit de la soupe.	590e5333			pending			
+fr:b:pet-🐬.v3.carotte	Le dauphin boit une carotte.	de899227			pending			
+fr:b:pet-🐬.v3.banane	Le dauphin boit une banane.	73e0c6f8			pending			
+fr:b:pet-🐬.v3.ballon	Le dauphin boit un ballon.	63cd25b0			pending			
+fr:b:pet-🐬.v3.fraise	Le dauphin boit une fraise.	320c857d			pending			
+fr:b:pet-🐬.v4.o1	Le dauphin dort du lait.	b5a939e5			pending			
+fr:b:pet-🐬.v4.pomme	Le dauphin dort une pomme.	3402d840			pending			
+fr:b:pet-🐬.v4.o3	Le dauphin dort avec un jouet.	296ab24f			pending			
+fr:b:pet-🐬.v4.o4	Le dauphin dort dans la voiture.	86e9d4f5			pending			
+fr:b:pet-🐬.v4.o5	Le dauphin dort dehors.	f5c5557f			pending			
+fr:b:pet-🐬.v4.maison	Le dauphin dort à la maison.	4042860a			pending			
+fr:b:pet-🐬.v4.o7	Le dauphin dort au lit.	3d43c86d			pending			
+fr:b:pet-🐬.v4.o8	Le dauphin dort au pot.	b7ad64d7			pending			
+fr:b:pet-🐬.v4.lune	Le dauphin dort sur la lune.	cbfc3a8b			pending			
+fr:b:pet-🐬.v4.soupe	Le dauphin dort près de la soupe.	28f41d81			pending			
+fr:b:pet-🐬.v4.carotte	Le dauphin dort près de la carotte.	629a48b9			pending			
+fr:b:pet-🐬.v4.banane	Le dauphin dort près de la banane.	6759f026			pending			
+fr:b:pet-🐬.v4.ballon	Le dauphin dort près du ballon.	642ae492			pending			
+fr:b:pet-🐬.v4.fraise	Le dauphin dort près de la fraise.	1dac965b			pending			
+fr:b:pet-🐬.v5.o1	Le dauphin va du lait.	fd858d33			pending			
+fr:b:pet-🐬.v5.pomme	Le dauphin va une pomme.	eb1efc5e			pending			
+fr:b:pet-🐬.v5.o3	Le dauphin va un jouet.	58e87016			pending			
+fr:b:pet-🐬.v5.o4	Le dauphin va en voiture.	c211e48b			pending			
+fr:b:pet-🐬.v5.o5	Le dauphin va dehors.	74907dc5			pending			
+fr:b:pet-🐬.v5.maison	Le dauphin va à la maison.	c90fd4f4			pending			
+fr:b:pet-🐬.v5.o7	Le dauphin va au lit.	3a381527			pending			
+fr:b:pet-🐬.v5.o8	Le dauphin va au pot.	9b46c295			pending			
+fr:b:pet-🐬.v5.lune	Le dauphin va sur la lune.	d4aa4ba5			pending			
+fr:b:pet-🐬.v5.soupe	Le dauphin va à la soupe.	2a9f2b89			pending			
+fr:b:pet-🐬.v5.carotte	Le dauphin va à la carotte.	5a176c41			pending			
+fr:b:pet-🐬.v5.banane	Le dauphin va à la banane.	72554bee			pending			
+fr:b:pet-🐬.v5.ballon	Le dauphin va au ballon.	d69bea54			pending			
+fr:b:pet-🐬.v5.fraise	Le dauphin va à la fraise.	726fa833			pending			
+fr:b:pet-🐬.v6.o1	Le dauphin joue avec du lait.	b65ea7b6			pending			
+fr:b:pet-🐬.v6.pomme	Le dauphin joue avec une pomme.	d6eff0db			pending			
+fr:b:pet-🐬.v6.o3	Le dauphin joue avec un jouet.	05e6d2bd			pending			
+fr:b:pet-🐬.v6.o4	Le dauphin joue avec la voiture.	896244e0			pending			
+fr:b:pet-🐬.v6.o5	Le dauphin joue dehors.	6c2c2f71			pending			
+fr:b:pet-🐬.v6.maison	Le dauphin joue à la maison.	3f1b0b90			pending			
+fr:b:pet-🐬.v6.o7	Le dauphin joue au lit.	9d06c483			pending			
+fr:b:pet-🐬.v6.o8	Le dauphin joue au pot.	877038a1			pending			
+fr:b:pet-🐬.v6.lune	Le dauphin joue avec la lune.	673ebf32			pending			
+fr:b:pet-🐬.v6.soupe	Le dauphin joue avec de la soupe.	cfe996b3			pending			
+fr:b:pet-🐬.v6.carotte	Le dauphin joue avec une carotte.	5564d5a7			pending			
+fr:b:pet-🐬.v6.banane	Le dauphin joue avec une banane.	4a90a578			pending			
+fr:b:pet-🐬.v6.ballon	Le dauphin joue avec un ballon.	2d62dd30			pending			
+fr:b:pet-🐬.v6.fraise	Le dauphin joue avec une fraise.	08bc63fd			pending			
+fr:p:🦁.v3.o1	Le lion boit du lait.	2c76dee9			pending			
+fr:p:🦁.v2.pomme	Le lion mange une pomme.	a70967f2			pending			
+fr:p:🦁.v6.o4	Le lion joue avec la voiture.	e86eb6f7			pending			
+fr:p:🦁.v2.soupe	Le lion mange de la soupe.	d3b71dde			pending			
+fr:p:🦁.v2.carotte	Le lion mange une carotte.	7864b76e			pending			
+fr:p:🦁.v2.banane	Le lion mange une banane.	02b6a477			pending			
+fr:p:🦁.v6.ballon	Le lion joue avec un ballon.	dfeeef25			pending			
+fr:p:🦁.v2.fraise	Le lion mange une fraise.	bc534316			pending			
+fr:p:🦁.v2.-	Le lion mange.	bbf45aa6			pending			
+fr:p:🦁.v3.-	Le lion boit.	47bae6b0			pending			
+fr:p:🦁.v6.-	Le lion joue.	fc9e68b9			pending			
+fr:p:🐯.v3.o1	Le tigre boit du lait.	72ff55ca			pending			
+fr:p:🐯.v2.pomme	Le tigre mange une pomme.	05cc372b			pending			
+fr:p:🐯.v6.o4	Le tigre joue avec la voiture.	2d48e45c			pending			
+fr:p:🐯.v2.soupe	Le tigre mange de la soupe.	25ee8523			pending			
+fr:p:🐯.v2.carotte	Le tigre mange une carotte.	d24376b7			pending			
+fr:p:🐯.v2.banane	Le tigre mange une banane.	09dfb588			pending			
+fr:p:🐯.v6.ballon	Le tigre joue avec un ballon.	3795fa84			pending			
+fr:p:🐯.v2.fraise	Le tigre mange une fraise.	c8d6058d			pending			
+fr:p:🐯.v2.-	Le tigre mange.	45f9b00f			pending			
+fr:p:🐯.v3.-	Le tigre boit.	33207593			pending			
+fr:p:🐯.v6.-	Le tigre joue.	483a1d22			pending			
+fr:p:🐘.v3.o1	L'éléphant boit du lait.	f8624424			pending			
+fr:p:🐘.v2.pomme	L'éléphant mange une pomme.	5f8f5e21			pending			
+fr:p:🐘.v6.o4	L'éléphant joue avec la voiture.	9488124a			pending			
+fr:p:🐘.v2.soupe	L'éléphant mange de la soupe.	788ff071			pending			
+fr:p:🐘.v2.carotte	L'éléphant mange une carotte.	d4fa9a8d			pending			
+fr:p:🐘.v2.banane	L'éléphant mange une banane.	06d8eb2a			pending			
+fr:p:🐘.v6.ballon	L'éléphant joue avec un ballon.	cfe88b3a			pending			
+fr:p:🐘.v2.fraise	L'éléphant mange une fraise.	0eb0d737			pending			
+fr:p:🐘.v2.-	L'éléphant mange.	b3a480c5			pending			
+fr:p:🐘.v3.-	L'éléphant boit.	08722f5d			pending			
+fr:p:🐘.v6.-	L'éléphant joue.	a7292974			pending			
+fr:p:🦊.v3.o1	Le renard boit du lait.	889b9b65			pending			
+fr:p:🦊.v2.pomme	Le renard mange une pomme.	368f8a9e			pending			
+fr:p:🦊.v6.o4	Le renard joue avec la voiture.	f452b0fb			pending			
+fr:p:🦊.v2.soupe	Le renard mange de la soupe.	bc7fbe02			pending			
+fr:p:🦊.v2.carotte	Le renard mange une carotte.	4d02b93a			pending			
+fr:p:🦊.v2.banane	Le renard mange une banane.	ea4a1593			pending			
+fr:p:🦊.v6.ballon	Le renard joue avec un ballon.	848cbb01			pending			
+fr:p:🦊.v2.fraise	Le renard mange une fraise.	9bb3703a			pending			
+fr:p:🦊.v2.-	Le renard mange.	1225a0ba			pending			
+fr:p:🦊.v3.-	Le renard boit.	cf980d5c			pending			
+fr:p:🦊.v6.-	Le renard joue.	f90e1fbd			pending			
+fr:p:🐱.v3.o1	Le chat boit du lait.	544f0541			pending			
+fr:p:🐱.v2.pomme	Le chat mange une pomme.	489edf1a			pending			
+fr:p:🐱.v6.o4	Le chat joue avec la voiture.	19c8573f			pending			
+fr:p:🐱.v2.soupe	Le chat mange de la soupe.	38f145e6			pending			
+fr:p:🐱.v2.carotte	Le chat mange une carotte.	a6a6d4f6			pending			
+fr:p:🐱.v2.banane	Le chat mange une banane.	12e147bf			pending			
+fr:p:🐱.v6.ballon	Le chat joue avec un ballon.	4b56aefd			pending			
+fr:p:🐱.v2.fraise	Le chat mange une fraise.	9865b68e			pending			
+fr:p:🐱.v2.-	Le chat mange.	7ef5d5ae			pending			
+fr:p:🐱.v3.-	Le chat boit.	83ea4988			pending			
+fr:p:🐱.v6.-	Le chat joue.	973fd7f1			pending			
+fr:p:🐬.v3.o1	Le dauphin boit du lait.	70b89c36			pending			
+fr:p:🐬.v2.pomme	Le dauphin mange une pomme.	abcbef07			pending			
+fr:p:🐬.v6.o4	Le dauphin joue avec la voiture.	896244e0			pending			
+fr:p:🐬.v2.soupe	Le dauphin mange de la soupe.	b0894917			pending			
+fr:p:🐬.v2.carotte	Le dauphin mange une carotte.	7b1abeb3			pending			
+fr:p:🐬.v2.banane	Le dauphin mange une banane.	ff4bd0e4			pending			
+fr:p:🐬.v6.ballon	Le dauphin joue avec un ballon.	2d62dd30			pending			
+fr:p:🐬.v2.fraise	Le dauphin mange une fraise.	1e2c6f81			pending			
+fr:p:🐬.v2.-	Le dauphin mange.	018516b3			pending			
+fr:p:🐬.v3.-	Le dauphin boit.	ca2f987f			pending			
+fr:p:🐬.v6.-	Le dauphin joue.	b104b406			pending			

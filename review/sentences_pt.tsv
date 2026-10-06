@@ -1,0 +1,2005 @@
+id	text	hash	llm	llm_note	human	human_note	reviewer	date
+pt:b:s1.v1.o1	Eu quero leite.	b52c17a6			pending			
+pt:b:s1.v1.o2	Eu quero uma maçã.	fe352cae			pending			
+pt:b:s1.v1.o3	Eu quero um brinquedo.	3ea5b59e			pending			
+pt:b:s1.v1.o4	Eu quero o carro.	66273725			pending			
+pt:b:s1.v1.o5	Eu quero fora.	a9d5afc5			pending			
+pt:b:s1.v1.casa	Eu quero casa.	090e151b			pending			
+pt:b:s1.v1.cama	Eu quero a cama.	c7501206			pending			
+pt:b:s1.v1.o8	Eu quero o peniquinho.	511e8bd0			pending			
+pt:b:s1.v1.lua	Eu quero a lua.	c03d9b6a			pending			
+pt:b:s1.v1.uva	Eu quero uva.	68db1847			pending			
+pt:b:s1.v1.tomate	Eu quero tomate.	073d65d3			pending			
+pt:b:s1.v1.sopa	Eu quero sopa.	8c6d2c60			pending			
+pt:b:s1.v1.bola	Eu quero a bola.	1c15debc			pending			
+pt:b:s1.v1.pipoca	Eu quero pipoca.	4e3eac09			pending			
+pt:b:s1.v1.escola	Eu quero a escola.	2ca5273b			pending			
+pt:b:s1.v1.morango	Eu quero morango.	78e2cb18			pending			
+pt:b:s1.v2.o1	Eu como leite.	a23ca32c			pending			
+pt:b:s1.v2.o2	Eu como uma maçã.	3cac9ef0			pending			
+pt:b:s1.v2.o3	Eu como um brinquedo.	a4dd5408			pending			
+pt:b:s1.v2.o4	Eu como o carro.	cf63e5bf			pending			
+pt:b:s1.v2.o5	Eu como fora.	adcca373			pending			
+pt:b:s1.v2.casa	Eu como casa.	678ee205			pending			
+pt:b:s1.v2.cama	Eu como a cama.	7836e44c			pending			
+pt:b:s1.v2.o8	Eu como o peniquinho.	9d7935aa			pending			
+pt:b:s1.v2.lua	Eu como a lua.	34b93288			pending			
+pt:b:s1.v2.uva	Eu como uva.	8ece35c9			pending			
+pt:b:s1.v2.tomate	Eu como tomate.	dde83081			pending			
+pt:b:s1.v2.sopa	Eu como sopa.	041aba2a			pending			
+pt:b:s1.v2.bola	Eu como a bola.	a6334bf6			pending			
+pt:b:s1.v2.pipoca	Eu como pipoca.	b32b6f03			pending			
+pt:b:s1.v2.escola	Eu como a escola.	eb9b9e51			pending			
+pt:b:s1.v2.morango	Eu como morango.	8d9a545a			pending			
+pt:b:s1.v3.o1	Eu bebo leite.	ae7250b4			pending			
+pt:b:s1.v3.o2	Eu bebo uma maçã.	0f0339a8			pending			
+pt:b:s1.v3.o3	Eu bebo um brinquedo.	0158e940			pending			
+pt:b:s1.v3.o4	Eu bebo o carro.	fb3dc2c7			pending			
+pt:b:s1.v3.o5	Eu bebo fora.	15e2bc7b			pending			
+pt:b:s1.v3.casa	Eu bebo casa.	fe322fdd			pending			
+pt:b:s1.v3.cama	Eu bebo a cama.	eaf26a74			pending			
+pt:b:s1.v3.o8	Eu bebo o peniquinho.	3c762452			pending			
+pt:b:s1.v3.lua	Eu bebo a lua.	a5632ec0			pending			
+pt:b:s1.v3.uva	Eu bebo uva.	7e0acf11			pending			
+pt:b:s1.v3.tomate	Eu bebo tomate.	79d5c939			pending			
+pt:b:s1.v3.sopa	Eu bebo sopa.	785985f2			pending			
+pt:b:s1.v3.bola	Eu bebo a bola.	fc4658ce			pending			
+pt:b:s1.v3.pipoca	Eu bebo pipoca.	83626a7b			pending			
+pt:b:s1.v3.escola	Eu bebo a escola.	67b7d569			pending			
+pt:b:s1.v3.morango	Eu bebo morango.	35cd82c2			pending			
+pt:b:s1.v4.o1	Eu durmo leite.	424cbd1d			pending			
+pt:b:s1.v4.o2	Eu durmo uma maçã.	2de07b03			pending			
+pt:b:s1.v4.o3	Eu durmo com um brinquedo.	33ae450e			pending			
+pt:b:s1.v4.o4	Eu durmo no carro.	03828b8c			pending			
+pt:b:s1.v4.o5	Eu durmo lá fora.	e03f76bf			pending			
+pt:b:s1.v4.casa	Eu durmo em casa.	5c099fac			pending			
+pt:b:s1.v4.cama	Eu durmo na cama.	c19aab0d			pending			
+pt:b:s1.v4.o8	Eu durmo no peniquinho.	af4e4e5f			pending			
+pt:b:s1.v4.lua	Eu durmo na lua.	67b17bff			pending			
+pt:b:s1.v4.uva	Eu durmo na uva.	fc8c0bdb			pending			
+pt:b:s1.v4.tomate	Eu durmo no tomate.	a33d44f5			pending			
+pt:b:s1.v4.sopa	Eu durmo na sopa.	130f4e04			pending			
+pt:b:s1.v4.bola	Eu durmo na bola.	2461918f			pending			
+pt:b:s1.v4.pipoca	Eu durmo na pipoca.	eb1c12dd			pending			
+pt:b:s1.v4.escola	Eu durmo na escola.	8131ddb8			pending			
+pt:b:s1.v4.morango	Eu durmo no morango.	404eb296			pending			
+pt:b:s1.v5.o1	Eu vou leite.	7ddd8746			pending			
+pt:b:s1.v5.o2	Eu vou uma maçã.	a4742ece			pending			
+pt:b:s1.v5.o3	Eu vou um brinquedo.	c2e9efbe			pending			
+pt:b:s1.v5.o4	Eu vou de carro.	94df84b9			pending			
+pt:b:s1.v5.o5	Eu vou para fora.	771a32d1			pending			
+pt:b:s1.v5.casa	Eu vou para casa.	124be7a7			pending			
+pt:b:s1.v5.cama	Eu vou para a cama.	ac04007a			pending			
+pt:b:s1.v5.o8	Eu vou no peniquinho.	5dce31b4			pending			
+pt:b:s1.v5.lua	Eu vou para a lua.	174868ee			pending			
+pt:b:s1.v5.uva	Eu vou para a uva.	b845d262			pending			
+pt:b:s1.v5.tomate	Eu vou para o tomate.	15ac6f92			pending			
+pt:b:s1.v5.sopa	Eu vou para a sopa.	69f796fb			pending			
+pt:b:s1.v5.bola	Eu vou para a bola.	4c629268			pending			
+pt:b:s1.v5.pipoca	Eu vou para a pipoca.	2a1ed31a			pending			
+pt:b:s1.v5.escola	Eu vou para a escola.	0ea3c7af			pending			
+pt:b:s1.v5.morango	Eu vou para o morango.	53e7915f			pending			
+pt:b:s1.v6.o1	Eu brinco com leite.	811bb996			pending			
+pt:b:s1.v6.o2	Eu brinco com uma maçã.	456b28fe			pending			
+pt:b:s1.v6.o3	Eu brinco com um brinquedo.	4081988e			pending			
+pt:b:s1.v6.o4	Eu brinco com o carro.	bcd086b5			pending			
+pt:b:s1.v6.o5	Eu brinco lá fora.	484aba3f			pending			
+pt:b:s1.v6.casa	Eu brinco em casa.	1971de2c			pending			
+pt:b:s1.v6.cama	Eu brinco na cama.	7f02e98d			pending			
+pt:b:s1.v6.o8	Eu brinco no peniquinho.	3e8098df			pending			
+pt:b:s1.v6.lua	Eu brinco com a lua.	e24b87da			pending			
+pt:b:s1.v6.uva	Eu brinco com uva.	321a2957			pending			
+pt:b:s1.v6.tomate	Eu brinco com tomate.	b6055f03			pending			
+pt:b:s1.v6.sopa	Eu brinco com sopa.	fae8fb50			pending			
+pt:b:s1.v6.bola	Eu brinco com a bola.	a8ccc2ec			pending			
+pt:b:s1.v6.pipoca	Eu brinco com pipoca.	6f861379			pending			
+pt:b:s1.v6.escola	Eu brinco com a escola.	1889b60b			pending			
+pt:b:s1.v6.morango	Eu brinco com morango.	c9d906c8			pending			
+pt:b:s2.v1.o1	Mamãe quer leite.	1283b558			pending			
+pt:b:s2.v1.o2	Mamãe quer uma maçã.	d8605904			pending			
+pt:b:s2.v1.o3	Mamãe quer um brinquedo.	c54679c4			pending			
+pt:b:s2.v1.o4	Mamãe quer o carro.	b9cf821b			pending			
+pt:b:s2.v1.o5	Mamãe quer fora.	9a195f87			pending			
+pt:b:s2.v1.casa	Mamãe quer casa.	af6f1ff9			pending			
+pt:b:s2.v1.cama	Mamãe quer a cama.	c86c3078			pending			
+pt:b:s2.v1.o8	Mamãe quer o peniquinho.	f759717e			pending			
+pt:b:s2.v1.lua	Mamãe quer a lua.	a43f30b4			pending			
+pt:b:s2.v1.uva	Mamãe quer uva.	3b60c3f5			pending			
+pt:b:s2.v1.tomate	Mamãe quer tomate.	b75724ed			pending			
+pt:b:s2.v1.sopa	Mamãe quer sopa.	549d28f6			pending			
+pt:b:s2.v1.bola	Mamãe quer a bola.	c099418a			pending			
+pt:b:s2.v1.pipoca	Mamãe quer pipoca.	16d2e67f			pending			
+pt:b:s2.v1.escola	Mamãe quer a escola.	be7c409d			pending			
+pt:b:s2.v1.morango	Mamãe quer morango.	5808ae5e			pending			
+pt:b:s2.v2.o1	Mamãe come leite.	e9d6f2fb			pending			
+pt:b:s2.v2.o2	Mamãe come uma maçã.	a77b402d			pending			
+pt:b:s2.v2.o3	Mamãe come um brinquedo.	0d1b52b1			pending			
+pt:b:s2.v2.o4	Mamãe come o carro.	273af114			pending			
+pt:b:s2.v2.o5	Mamãe come fora.	8c9a170a			pending			
+pt:b:s2.v2.casa	Mamãe come casa.	60ca05ec			pending			
+pt:b:s2.v2.cama	Mamãe come a cama.	b8959bf5			pending			
+pt:b:s2.v2.o8	Mamãe come o peniquinho.	7f299da7			pending			
+pt:b:s2.v2.lua	Mamãe come a lua.	94d26577			pending			
+pt:b:s2.v2.uva	Mamãe come uva.	1bafe922			pending			
+pt:b:s2.v2.tomate	Mamãe come tomate.	dbd7793c			pending			
+pt:b:s2.v2.sopa	Mamãe come sopa.	ab369bbb			pending			
+pt:b:s2.v2.bola	Mamãe come a bola.	33832fc7			pending			
+pt:b:s2.v2.pipoca	Mamãe come pipoca.	1fcb4bda			pending			
+pt:b:s2.v2.escola	Mamãe come a escola.	ac3baf70			pending			
+pt:b:s2.v2.morango	Mamãe come morango.	e6df220d			pending			
+pt:b:s2.v3.o1	Mamãe bebe leite.	d2642acf			pending			
+pt:b:s2.v3.o2	Mamãe bebe uma maçã.	8281e2e9			pending			
+pt:b:s2.v3.o3	Mamãe bebe um brinquedo.	747da6f5			pending			
+pt:b:s2.v3.o4	Mamãe bebe o carro.	dbb17948			pending			
+pt:b:s2.v3.o5	Mamãe bebe fora.	a056c676			pending			
+pt:b:s2.v3.casa	Mamãe bebe casa.	8b284168			pending			
+pt:b:s2.v3.cama	Mamãe bebe a cama.	9fcdf199			pending			
+pt:b:s2.v3.o8	Mamãe bebe o peniquinho.	ae4d3cc3			pending			
+pt:b:s2.v3.lua	Mamãe bebe a lua.	7575148b			pending			
+pt:b:s2.v3.uva	Mamãe bebe uva.	5b9edbe6			pending			
+pt:b:s2.v3.tomate	Mamãe bebe tomate.	b2eabb60			pending			
+pt:b:s2.v3.sopa	Mamãe bebe sopa.	fddf983f			pending			
+pt:b:s2.v3.bola	Mamãe bebe a bola.	098096e3			pending			
+pt:b:s2.v3.pipoca	Mamãe bebe pipoca.	dac4190e			pending			
+pt:b:s2.v3.escola	Mamãe bebe a escola.	68e27f24			pending			
+pt:b:s2.v3.morango	Mamãe bebe morango.	6ec08889			pending			
+pt:b:s2.v4.o1	Mamãe dorme leite.	c1c67a8e			pending			
+pt:b:s2.v4.o2	Mamãe dorme uma maçã.	aae72126			pending			
+pt:b:s2.v4.o3	Mamãe dorme com um brinquedo.	291d6123			pending			
+pt:b:s2.v4.o4	Mamãe dorme no carro.	5e148229			pending			
+pt:b:s2.v4.o5	Mamãe dorme lá fora.	52168e24			pending			
+pt:b:s2.v4.casa	Mamãe dorme em casa.	80a0893f			pending			
+pt:b:s2.v4.cama	Mamãe dorme na cama.	2c1ab19a			pending			
+pt:b:s2.v4.o8	Mamãe dorme no peniquinho.	d7d2289c			pending			
+pt:b:s2.v4.lua	Mamãe dorme na lua.	a2463b8e			pending			
+pt:b:s2.v4.uva	Mamãe dorme na uva.	5c905a02			pending			
+pt:b:s2.v4.tomate	Mamãe dorme no tomate.	8c652b32			pending			
+pt:b:s2.v4.sopa	Mamãe dorme na sopa.	50c0c99b			pending			
+pt:b:s2.v4.bola	Mamãe dorme na bola.	7b31f408			pending			
+pt:b:s2.v4.pipoca	Mamãe dorme na pipoca.	aec958ba			pending			
+pt:b:s2.v4.escola	Mamãe dorme na escola.	565d2e4f			pending			
+pt:b:s2.v4.morango	Mamãe dorme no morango.	e293a8ff			pending			
+pt:b:s2.v5.o1	Mamãe vai leite.	e2d04913			pending			
+pt:b:s2.v5.o2	Mamãe vai uma maçã.	6d3640d5			pending			
+pt:b:s2.v5.o3	Mamãe vai um brinquedo.	d6f3a839			pending			
+pt:b:s2.v5.o4	Mamãe vai de carro.	fcac4d02			pending			
+pt:b:s2.v5.o5	Mamãe vai para fora.	193072b8			pending			
+pt:b:s2.v5.casa	Mamãe vai para casa.	5db9f546			pending			
+pt:b:s2.v5.cama	Mamãe vai para a cama.	4bb12ecb			pending			
+pt:b:s2.v5.o8	Mamãe vai no peniquinho.	e3b84d51			pending			
+pt:b:s2.v5.lua	Mamãe vai para a lua.	a6b1868d			pending			
+pt:b:s2.v5.uva	Mamãe vai para a uva.	4d679eb5			pending			
+pt:b:s2.v5.tomate	Mamãe vai para o tomate.	168b6cef			pending			
+pt:b:s2.v5.sopa	Mamãe vai para a sopa.	76a4b9b6			pending			
+pt:b:s2.v5.bola	Mamãe vai para a bola.	6b6087d1			pending			
+pt:b:s2.v5.pipoca	Mamãe vai para a pipoca.	2521b53f			pending			
+pt:b:s2.v5.escola	Mamãe vai para a escola.	f04a171e			pending			
+pt:b:s2.v5.morango	Mamãe vai para o morango.	62ebfc2c			pending			
+pt:b:s2.v6.o1	Mamãe brinca com leite.	e113c635			pending			
+pt:b:s2.v6.o2	Mamãe brinca com uma maçã.	453544ab			pending			
+pt:b:s2.v6.o3	Mamãe brinca com um brinquedo.	9219c917			pending			
+pt:b:s2.v6.o4	Mamãe brinca com o carro.	55ddb69a			pending			
+pt:b:s2.v6.o5	Mamãe brinca lá fora.	f0daec40			pending			
+pt:b:s2.v6.casa	Mamãe brinca em casa.	bc4d3013			pending			
+pt:b:s2.v6.cama	Mamãe brinca na cama.	b1bd116e			pending			
+pt:b:s2.v6.o8	Mamãe brinca no peniquinho.	1b1774b8			pending			
+pt:b:s2.v6.lua	Mamãe brinca com a lua.	362fef31			pending			
+pt:b:s2.v6.uva	Mamãe brinca com uva.	1af55688			pending			
+pt:b:s2.v6.tomate	Mamãe brinca com tomate.	f39b2706			pending			
+pt:b:s2.v6.sopa	Mamãe brinca com sopa.	6c7dce39			pending			
+pt:b:s2.v6.bola	Mamãe brinca com a bola.	1f81e24d			pending			
+pt:b:s2.v6.pipoca	Mamãe brinca com pipoca.	a16793f8			pending			
+pt:b:s2.v6.escola	Mamãe brinca com a escola.	9b220702			pending			
+pt:b:s2.v6.morango	Mamãe brinca com morango.	97e982ab			pending			
+pt:b:s3.v1.o1	Papai quer leite.	80b626e2			pending			
+pt:b:s3.v1.o2	Papai quer uma maçã.	e60ba202			pending			
+pt:b:s3.v1.o3	Papai quer um brinquedo.	96e85a0a			pending			
+pt:b:s3.v1.o4	Papai quer o carro.	d953bc01			pending			
+pt:b:s3.v1.o5	Papai quer fora.	59fa66a9			pending			
+pt:b:s3.v1.casa	Papai quer casa.	4e1dcacf			pending			
+pt:b:s3.v1.cama	Papai quer a cama.	a96a3172			pending			
+pt:b:s3.v1.o8	Papai quer o peniquinho.	c2d3f514			pending			
+pt:b:s3.v1.lua	Papai quer a lua.	c0a88ad6			pending			
+pt:b:s3.v1.uva	Papai quer uva.	cc172723			pending			
+pt:b:s3.v1.tomate	Papai quer tomate.	45ec94ff			pending			
+pt:b:s3.v1.sopa	Papai quer sopa.	4f9fcecc			pending			
+pt:b:s3.v1.bola	Papai quer a bola.	cbfbeb30			pending			
+pt:b:s3.v1.pipoca	Papai quer pipoca.	79542695			pending			
+pt:b:s3.v1.escola	Papai quer a escola.	4bb81617			pending			
+pt:b:s3.v1.morango	Papai quer morango.	52d1393c			pending			
+pt:b:s3.v2.o1	Papai come leite.	7c149081			pending			
+pt:b:s3.v2.o2	Papai come uma maçã.	f71ed9df			pending			
+pt:b:s3.v2.o3	Papai come um brinquedo.	adea5f53			pending			
+pt:b:s3.v2.o4	Papai come o carro.	a56889d6			pending			
+pt:b:s3.v2.o5	Papai come fora.	2cf53dc8			pending			
+pt:b:s3.v2.casa	Papai come casa.	47ba1856			pending			
+pt:b:s3.v2.cama	Papai come a cama.	4798703b			pending			
+pt:b:s3.v2.o8	Papai come o peniquinho.	75bf8b71			pending			
+pt:b:s3.v2.lua	Papai come a lua.	0c81e0bd			pending			
+pt:b:s3.v2.uva	Papai come uva.	943499f4			pending			
+pt:b:s3.v2.tomate	Papai come tomate.	a3266302			pending			
+pt:b:s3.v2.sopa	Papai come sopa.	79caa365			pending			
+pt:b:s3.v2.bola	Papai come a bola.	0762ae81			pending			
+pt:b:s3.v2.pipoca	Papai come pipoca.	7f756314			pending			
+pt:b:s3.v2.escola	Papai come a escola.	b24853ee			pending			
+pt:b:s3.v2.morango	Papai come morango.	7831e74f			pending			
+pt:b:s3.v3.o1	Papai bebe leite.	5e7046cd			pending			
+pt:b:s3.v3.o2	Papai bebe uma maçã.	1545f9d3			pending			
+pt:b:s3.v3.o3	Papai bebe um brinquedo.	b28e8eff			pending			
+pt:b:s3.v3.o4	Papai bebe o carro.	e7ba96b2			pending			
+pt:b:s3.v3.o5	Papai bebe fora.	5ff4234c			pending			
+pt:b:s3.v3.casa	Papai bebe casa.	7a1ed76a			pending			
+pt:b:s3.v3.cama	Papai bebe a cama.	a77152e7			pending			
+pt:b:s3.v3.o8	Papai bebe o peniquinho.	834dc355			pending			
+pt:b:s3.v3.lua	Papai bebe a lua.	6a2c1c99			pending			
+pt:b:s3.v3.uva	Papai bebe uva.	249ce580			pending			
+pt:b:s3.v3.tomate	Papai bebe tomate.	b886452e			pending			
+pt:b:s3.v3.sopa	Papai bebe sopa.	be8195b1			pending			
+pt:b:s3.v3.bola	Papai bebe a bola.	4e996bb5			pending			
+pt:b:s3.v3.pipoca	Papai bebe pipoca.	9050a0a0			pending			
+pt:b:s3.v3.escola	Papai bebe a escola.	1de9c4aa			pending			
+pt:b:s3.v3.morango	Papai bebe morango.	664b95c3			pending			
+pt:b:s3.v4.o1	Papai dorme leite.	cef3fa40			pending			
+pt:b:s3.v4.o2	Papai dorme uma maçã.	dff687dc			pending			
+pt:b:s3.v4.o3	Papai dorme com um brinquedo.	7b88d301			pending			
+pt:b:s3.v4.o4	Papai dorme no carro.	03f11df7			pending			
+pt:b:s3.v4.o5	Papai dorme lá fora.	0319bb9a			pending			
+pt:b:s3.v4.casa	Papai dorme em casa.	0aeb02c1			pending			
+pt:b:s3.v4.cama	Papai dorme na cama.	3c380184			pending			
+pt:b:s3.v4.o8	Papai dorme no peniquinho.	a6fe10c2			pending			
+pt:b:s3.v4.lua	Papai dorme na lua.	51db4dd0			pending			
+pt:b:s3.v4.uva	Papai dorme na uva.	f215c4e8			pending			
+pt:b:s3.v4.tomate	Papai dorme no tomate.	51049708			pending			
+pt:b:s3.v4.sopa	Papai dorme na sopa.	b48bf419			pending			
+pt:b:s3.v4.bola	Papai dorme na bola.	cd6322de			pending			
+pt:b:s3.v4.pipoca	Papai dorme na pipoca.	0aefdc58			pending			
+pt:b:s3.v4.escola	Papai dorme na escola.	f0cbbc59			pending			
+pt:b:s3.v4.morango	Papai dorme no morango.	8955e1c1			pending			
+pt:b:s3.v5.o1	Papai vai leite.	e9ab1371			pending			
+pt:b:s3.v5.o2	Papai vai uma maçã.	73f55faf			pending			
+pt:b:s3.v5.o3	Papai vai um brinquedo.	0c6a0d03			pending			
+pt:b:s3.v5.o4	Papai vai de carro.	49769774			pending			
+pt:b:s3.v5.o5	Papai vai para fora.	ddc2ccde			pending			
+pt:b:s3.v5.casa	Papai vai para casa.	b6c735c0			pending			
+pt:b:s3.v5.cama	Papai vai para a cama.	19272c41			pending			
+pt:b:s3.v5.o8	Papai vai no peniquinho.	2cf9a97b			pending			
+pt:b:s3.v5.lua	Papai vai para a lua.	c603e3a3			pending			
+pt:b:s3.v5.uva	Papai vai para a uva.	b4bf76bf			pending			
+pt:b:s3.v5.tomate	Papai vai para o tomate.	877ad711			pending			
+pt:b:s3.v5.sopa	Papai vai para a sopa.	d03d95b8			pending			
+pt:b:s3.v5.bola	Papai vai para a bola.	91eabb5b			pending			
+pt:b:s3.v5.pipoca	Papai vai para a pipoca.	b004cdf1			pending			
+pt:b:s3.v5.escola	Papai vai para a escola.	c325a31c			pending			
+pt:b:s3.v5.morango	Papai vai para o morango.	3d0deaaa			pending			
+pt:b:s3.v6.o1	Papai brinca com leite.	f7c17cab			pending			
+pt:b:s3.v6.o2	Papai brinca com uma maçã.	da25f8fd			pending			
+pt:b:s3.v6.o3	Papai brinca com um brinquedo.	917038e1			pending			
+pt:b:s3.v6.o4	Papai brinca com o carro.	5c3651a4			pending			
+pt:b:s3.v6.o5	Papai brinca lá fora.	cc0e3e7a			pending			
+pt:b:s3.v6.casa	Papai brinca em casa.	a93d4a21			pending			
+pt:b:s3.v6.cama	Papai brinca na cama.	46facce4			pending			
+pt:b:s3.v6.o8	Papai brinca no peniquinho.	01b30ba2			pending			
+pt:b:s3.v6.lua	Papai brinca com a lua.	aff3c1e7			pending			
+pt:b:s3.v6.uva	Papai brinca com uva.	755e0bb2			pending			
+pt:b:s3.v6.tomate	Papai brinca com tomate.	a75a3f6c			pending			
+pt:b:s3.v6.sopa	Papai brinca com sopa.	0a6fb2ab			pending			
+pt:b:s3.v6.bola	Papai brinca com a bola.	2bd42637			pending			
+pt:b:s3.v6.pipoca	Papai brinca com pipoca.	49e402ca			pending			
+pt:b:s3.v6.escola	Papai brinca com a escola.	ef106f80			pending			
+pt:b:s3.v6.morango	Papai brinca com morango.	7cbcaffd			pending			
+pt:b:s4.v1.o1	Vovó quer leite.	af3b232b			pending			
+pt:b:s4.v1.o2	Vovó quer uma maçã.	58078c7d			pending			
+pt:b:s4.v1.o3	Vovó quer um brinquedo.	760c7861			pending			
+pt:b:s4.v1.o4	Vovó quer o carro.	e3749c24			pending			
+pt:b:s4.v1.o5	Vovó quer fora.	c3de625a			pending			
+pt:b:s4.v1.casa	Vovó quer casa.	ae8671fc			pending			
+pt:b:s4.v1.cama	Vovó quer a cama.	1ab8d0e5			pending			
+pt:b:s4.v1.o8	Vovó quer o peniquinho.	00e41ab7			pending			
+pt:b:s4.v1.lua	Vovó quer a lua.	676d6867			pending			
+pt:b:s4.v1.uva	Vovó quer uva.	9f34ae32			pending			
+pt:b:s4.v1.tomate	Vovó quer tomate.	fbdb5aec			pending			
+pt:b:s4.v1.sopa	Vovó quer sopa.	6751822b			pending			
+pt:b:s4.v1.bola	Vovó quer a bola.	805541b7			pending			
+pt:b:s4.v1.pipoca	Vovó quer pipoca.	9e651e4a			pending			
+pt:b:s4.v1.escola	Vovó quer a escola.	561fb700			pending			
+pt:b:s4.v1.morango	Vovó quer morango.	03fafa7d			pending			
+pt:b:s4.v2.o1	Vovó come leite.	b66adecc			pending			
+pt:b:s4.v2.o2	Vovó come uma maçã.	60337510			pending			
+pt:b:s4.v2.o3	Vovó come um brinquedo.	5f76f2a8			pending			
+pt:b:s4.v2.o4	Vovó come o carro.	69268a5f			pending			
+pt:b:s4.v2.o5	Vovó come fora.	a59a1393			pending			
+pt:b:s4.v2.casa	Vovó come casa.	0921c3a5			pending			
+pt:b:s4.v2.cama	Vovó come a cama.	1cff25ec			pending			
+pt:b:s4.v2.o8	Vovó come o peniquinho.	3b35a6ca			pending			
+pt:b:s4.v2.lua	Vovó come a lua.	ad2119a8			pending			
+pt:b:s4.v2.uva	Vovó come uva.	06a5ba69			pending			
+pt:b:s4.v2.tomate	Vovó come tomate.	0761e521			pending			
+pt:b:s4.v2.sopa	Vovó come sopa.	f96dc14a			pending			
+pt:b:s4.v2.bola	Vovó come a bola.	e4477916			pending			
+pt:b:s4.v2.pipoca	Vovó come pipoca.	9d7f76a3			pending			
+pt:b:s4.v2.escola	Vovó come a escola.	2efd23f1			pending			
+pt:b:s4.v2.morango	Vovó come morango.	539c09fa			pending			
+pt:b:s4.v3.o1	Vovó bebe leite.	7b6ea504			pending			
+pt:b:s4.v3.o2	Vovó bebe uma maçã.	f6241d58			pending			
+pt:b:s4.v3.o3	Vovó bebe um brinquedo.	422f8390			pending			
+pt:b:s4.v3.o4	Vovó bebe o carro.	078360b7			pending			
+pt:b:s4.v3.o5	Vovó bebe fora.	cca8242b			pending			
+pt:b:s4.v3.casa	Vovó bebe casa.	9020800d			pending			
+pt:b:s4.v3.cama	Vovó bebe a cama.	720c6844			pending			
+pt:b:s4.v3.o8	Vovó bebe o peniquinho.	8d05fc82			pending			
+pt:b:s4.v3.lua	Vovó bebe a lua.	31c14d90			pending			
+pt:b:s4.v3.uva	Vovó bebe uva.	544cbd41			pending			
+pt:b:s4.v3.tomate	Vovó bebe tomate.	12f228c9			pending			
+pt:b:s4.v3.sopa	Vovó bebe sopa.	d96f5782			pending			
+pt:b:s4.v3.bola	Vovó bebe a bola.	ec653d9e			pending			
+pt:b:s4.v3.pipoca	Vovó bebe pipoca.	8730444b			pending			
+pt:b:s4.v3.escola	Vovó bebe a escola.	ef8c0819			pending			
+pt:b:s4.v3.morango	Vovó bebe morango.	aee95452			pending			
+pt:b:s4.v4.o1	Vovó dorme leite.	f28c6f8b			pending			
+pt:b:s4.v4.o2	Vovó dorme uma maçã.	01369cdd			pending			
+pt:b:s4.v4.o3	Vovó dorme com um brinquedo.	0c48c0b8			pending			
+pt:b:s4.v4.o4	Vovó dorme no carro.	e693f4ce			pending			
+pt:b:s4.v4.o5	Vovó dorme lá fora.	41b2ca31			pending			
+pt:b:s4.v4.casa	Vovó dorme em casa.	2bb60a52			pending			
+pt:b:s4.v4.cama	Vovó dorme na cama.	45f61693			pending			
+pt:b:s4.v4.o8	Vovó dorme no peniquinho.	3fd786e9			pending			
+pt:b:s4.v4.lua	Vovó dorme na lua.	2a785265			pending			
+pt:b:s4.v4.uva	Vovó dorme na uva.	54a28f1d			pending			
+pt:b:s4.v4.tomate	Vovó dorme no tomate.	cf264597			pending			
+pt:b:s4.v4.sopa	Vovó dorme na sopa.	ffdc37be			pending			
+pt:b:s4.v4.bola	Vovó dorme na bola.	d4601ec9			pending			
+pt:b:s4.v4.pipoca	Vovó dorme na pipoca.	7a77dbd7			pending			
+pt:b:s4.v4.escola	Vovó dorme na escola.	5692ea96			pending			
+pt:b:s4.v4.morango	Vovó dorme no morango.	359dd864			pending			
+pt:b:s4.v5.o1	Vovó vai leite.	a828f0f6			pending			
+pt:b:s4.v5.o2	Vovó vai uma maçã.	f4bcf65e			pending			
+pt:b:s4.v5.o3	Vovó vai um brinquedo.	0710d36e			pending			
+pt:b:s4.v5.o4	Vovó vai de carro.	502d40e9			pending			
+pt:b:s4.v5.o5	Vovó vai para fora.	530d3b01			pending			
+pt:b:s4.v5.casa	Vovó vai para casa.	f371b8d7			pending			
+pt:b:s4.v5.cama	Vovó vai para a cama.	410459ca			pending			
+pt:b:s4.v5.o8	Vovó vai no peniquinho.	ddf2a764			pending			
+pt:b:s4.v5.lua	Vovó vai para a lua.	ab97ce3e			pending			
+pt:b:s4.v5.uva	Vovó vai para a uva.	66543ad2			pending			
+pt:b:s4.v5.tomate	Vovó vai para o tomate.	1d6b2a22			pending			
+pt:b:s4.v5.sopa	Vovó vai para a sopa.	d22bd74b			pending			
+pt:b:s4.v5.bola	Vovó vai para a bola.	9075c778			pending			
+pt:b:s4.v5.pipoca	Vovó vai para a pipoca.	6144996a			pending			
+pt:b:s4.v5.escola	Vovó vai para a escola.	df31bd1f			pending			
+pt:b:s4.v5.morango	Vovó vai para o morango.	ed60846f			pending			
+pt:b:s4.v6.o1	Vovó brinca com leite.	6dca1a2a			pending			
+pt:b:s4.v6.o2	Vovó brinca com uma maçã.	8af427ba			pending			
+pt:b:s4.v6.o3	Vovó brinca com um brinquedo.	87e669c2			pending			
+pt:b:s4.v6.o4	Vovó brinca com o carro.	a2d2f3c9			pending			
+pt:b:s4.v6.o5	Vovó brinca lá fora.	8910c4cb			pending			
+pt:b:s4.v6.casa	Vovó brinca em casa.	e4c9b590			pending			
+pt:b:s4.v6.cama	Vovó brinca na cama.	f12c6c21			pending			
+pt:b:s4.v6.o8	Vovó brinca no peniquinho.	8ea3520b			pending			
+pt:b:s4.v6.lua	Vovó brinca com a lua.	f2fa74ae			pending			
+pt:b:s4.v6.uva	Vovó brinca com uva.	0272e26b			pending			
+pt:b:s4.v6.tomate	Vovó brinca com tomate.	fee19117			pending			
+pt:b:s4.v6.sopa	Vovó brinca com sopa.	ce9429b4			pending			
+pt:b:s4.v6.bola	Vovó brinca com a bola.	cd9b9128			pending			
+pt:b:s4.v6.pipoca	Vovó brinca com pipoca.	4c5c724d			pending			
+pt:b:s4.v6.escola	Vovó brinca com a escola.	2a829e6f			pending			
+pt:b:s4.v6.morango	Vovó brinca com morango.	d975b2e4			pending			
+pt:b:s5.v1.o1	Cachorrinho quer leite.	85e6839f			pending			
+pt:b:s5.v1.o2	Cachorrinho quer uma maçã.	aac22dd9			pending			
+pt:b:s5.v1.o3	Cachorrinho quer um brinquedo.	f1fed645			pending			
+pt:b:s5.v1.o4	Cachorrinho quer o carro.	0c8f5778			pending			
+pt:b:s5.v1.o5	Cachorrinho quer fora.	b58fece6			pending			
+pt:b:s5.v1.casa	Cachorrinho quer casa.	8714b2d8			pending			
+pt:b:s5.v1.cama	Cachorrinho quer a cama.	41149fe9			pending			
+pt:b:s5.v1.o8	Cachorrinho quer o peniquinho.	e23ff6b3			pending			
+pt:b:s5.v1.lua	Cachorrinho quer a lua.	04a9161b			pending			
+pt:b:s5.v1.uva	Cachorrinho quer uva.	225bb116			pending			
+pt:b:s5.v1.tomate	Cachorrinho quer tomate.	5bf90c70			pending			
+pt:b:s5.v1.sopa	Cachorrinho quer sopa.	e8c91e4f			pending			
+pt:b:s5.v1.bola	Cachorrinho quer a bola.	01df2e73			pending			
+pt:b:s5.v1.pipoca	Cachorrinho quer pipoca.	be30a71e			pending			
+pt:b:s5.v1.escola	Cachorrinho quer a escola.	ea9c8d14			pending			
+pt:b:s5.v1.morango	Cachorrinho quer morango.	a359c859			pending			
+pt:b:s5.v2.o1	Cachorrinho come leite.	8b869b58			pending			
+pt:b:s5.v2.o2	Cachorrinho come uma maçã.	f70bbb04			pending			
+pt:b:s5.v2.o3	Cachorrinho come um brinquedo.	d3c5fbc4			pending			
+pt:b:s5.v2.o4	Cachorrinho come o carro.	899bd81b			pending			
+pt:b:s5.v2.o5	Cachorrinho come fora.	cbf2a187			pending			
+pt:b:s5.v2.casa	Cachorrinho come casa.	e14861f9			pending			
+pt:b:s5.v2.cama	Cachorrinho come a cama.	47fc4278			pending			
+pt:b:s5.v2.o8	Cachorrinho come o peniquinho.	05d8f37e			pending			
+pt:b:s5.v2.lua	Cachorrinho come a lua.	1d4216b4			pending			
+pt:b:s5.v2.uva	Cachorrinho come uva.	5773b9f5			pending			
+pt:b:s5.v2.tomate	Cachorrinho come tomate.	36e736ed			pending			
+pt:b:s5.v2.sopa	Cachorrinho come sopa.	86766af6			pending			
+pt:b:s5.v2.bola	Cachorrinho come a bola.	4029538a			pending			
+pt:b:s5.v2.pipoca	Cachorrinho come pipoca.	9662f87f			pending			
+pt:b:s5.v2.escola	Cachorrinho come a escola.	dd27a29d			pending			
+pt:b:s5.v2.morango	Cachorrinho come morango.	27d5045e			pending			
+pt:b:s5.v3.o1	Cachorrinho bebe leite.	fbebe948			pending			
+pt:b:s5.v3.o2	Cachorrinho bebe uma maçã.	a89ac214			pending			
+pt:b:s5.v3.o3	Cachorrinho bebe um brinquedo.	ef02b934			pending			
+pt:b:s5.v3.o4	Cachorrinho bebe o carro.	5a4f42ab			pending			
+pt:b:s5.v3.o5	Cachorrinho bebe fora.	e47a3197			pending			
+pt:b:s5.v3.casa	Cachorrinho bebe casa.	b931bc89			pending			
+pt:b:s5.v3.cama	Cachorrinho bebe a cama.	985d55e8			pending			
+pt:b:s5.v3.o8	Cachorrinho bebe o peniquinho.	439519ce			pending			
+pt:b:s5.v3.lua	Cachorrinho bebe a lua.	8e588564			pending			
+pt:b:s5.v3.uva	Cachorrinho bebe uva.	edbf6345			pending			
+pt:b:s5.v3.tomate	Cachorrinho bebe tomate.	5f0fa55d			pending			
+pt:b:s5.v3.sopa	Cachorrinho bebe sopa.	94c3a566			pending			
+pt:b:s5.v3.bola	Cachorrinho bebe a bola.	0db69c3a			pending			
+pt:b:s5.v3.pipoca	Cachorrinho bebe pipoca.	7c3544af			pending			
+pt:b:s5.v3.escola	Cachorrinho bebe a escola.	fb8026ad			pending			
+pt:b:s5.v3.morango	Cachorrinho bebe morango.	fee3b0ce			pending			
+pt:b:s5.v4.o1	Cachorrinho dorme leite.	f004d567			pending			
+pt:b:s5.v4.o2	Cachorrinho dorme uma maçã.	bb831a11			pending			
+pt:b:s5.v4.o3	Cachorrinho dorme com um brinquedo.	c2e9d494			pending			
+pt:b:s5.v4.o4	Cachorrinho dorme no carro.	23d4a69a			pending			
+pt:b:s5.v4.o5	Cachorrinho dorme lá fora.	ccdb8195			pending			
+pt:b:s5.v4.casa	Cachorrinho dorme em casa.	0fd2ce2e			pending			
+pt:b:s5.v4.cama	Cachorrinho dorme na cama.	d5fe4b6f			pending			
+pt:b:s5.v4.o8	Cachorrinho dorme no peniquinho.	0cac39bd			pending			
+pt:b:s5.v4.lua	Cachorrinho dorme na lua.	c4315f31			pending			
+pt:b:s5.v4.uva	Cachorrinho dorme na uva.	a21b1959			pending			
+pt:b:s5.v4.tomate	Cachorrinho dorme no tomate.	201a19db			pending			
+pt:b:s5.v4.sopa	Cachorrinho dorme na sopa.	71315c1a			pending			
+pt:b:s5.v4.bola	Cachorrinho dorme na bola.	abc5324d			pending			
+pt:b:s5.v4.pipoca	Cachorrinho dorme na pipoca.	b280d273			pending			
+pt:b:s5.v4.escola	Cachorrinho dorme na escola.	d6ddd702			pending			
+pt:b:s5.v4.morango	Cachorrinho dorme no morango.	de2acb70			pending			
+pt:b:s5.v5.o1	Cachorrinho vai leite.	836b29ba			pending			
+pt:b:s5.v5.o2	Cachorrinho vai uma maçã.	aa48fe2a			pending			
+pt:b:s5.v5.o3	Cachorrinho vai um brinquedo.	381c0092			pending			
+pt:b:s5.v5.o4	Cachorrinho vai de carro.	4fc07e2d			pending			
+pt:b:s5.v5.o5	Cachorrinho vai para fora.	3b8c6c25			pending			
+pt:b:s5.v5.casa	Cachorrinho vai para casa.	87d2757b			pending			
+pt:b:s5.v5.cama	Cachorrinho vai para a cama.	b3b3ffe6			pending			
+pt:b:s5.v5.o8	Cachorrinho vai no peniquinho.	3cd937b0			pending			
+pt:b:s5.v5.lua	Cachorrinho vai para a lua.	42e7c1ca			pending			
+pt:b:s5.v5.uva	Cachorrinho vai para a uva.	ee177dee			pending			
+pt:b:s5.v5.tomate	Cachorrinho vai para o tomate.	a1a51c76			pending			
+pt:b:s5.v5.sopa	Cachorrinho vai para a sopa.	a312fb87			pending			
+pt:b:s5.v5.bola	Cachorrinho vai para a bola.	6f2de11c			pending			
+pt:b:s5.v5.pipoca	Cachorrinho vai para a pipoca.	5a65a726			pending			
+pt:b:s5.v5.escola	Cachorrinho vai para a escola.	3583ad1b			pending			
+pt:b:s5.v5.morango	Cachorrinho vai para o morango.	0bd2ab1b			pending			
+pt:b:s5.v6.o1	Cachorrinho brinca com leite.	fded4b96			pending			
+pt:b:s5.v6.o2	Cachorrinho brinca com uma maçã.	8be6eefe			pending			
+pt:b:s5.v6.o3	Cachorrinho brinca com um brinquedo.	6c73be8e			pending			
+pt:b:s5.v6.o4	Cachorrinho brinca com o carro.	f25968b5			pending			
+pt:b:s5.v6.o5	Cachorrinho brinca lá fora.	76297c3f			pending			
+pt:b:s5.v6.casa	Cachorrinho brinca em casa.	4750a02c			pending			
+pt:b:s5.v6.cama	Cachorrinho brinca na cama.	ace1ab8d			pending			
+pt:b:s5.v6.o8	Cachorrinho brinca no peniquinho.	33594adf			pending			
+pt:b:s5.v6.lua	Cachorrinho brinca com a lua.	5f1d19da			pending			
+pt:b:s5.v6.uva	Cachorrinho brinca com uva.	5ff8eb57			pending			
+pt:b:s5.v6.tomate	Cachorrinho brinca com tomate.	33ee3503			pending			
+pt:b:s5.v6.sopa	Cachorrinho brinca com sopa.	30946150			pending			
+pt:b:s5.v6.bola	Cachorrinho brinca com a bola.	26b598ec			pending			
+pt:b:s5.v6.pipoca	Cachorrinho brinca com pipoca.	ed6ee979			pending			
+pt:b:s5.v6.escola	Cachorrinho brinca com a escola.	5f057c0b			pending			
+pt:b:s5.v6.morango	Cachorrinho brinca com morango.	ff61e8c8			pending			
+pt:b:leao.v1.o1	Leão quer leite.	13403e32			pending			
+pt:b:leao.v1.o2	Leão quer uma maçã.	94582c72			pending			
+pt:b:leao.v1.o3	Leão quer um brinquedo.	48e021da			pending			
+pt:b:leao.v1.o4	Leão quer o carro.	72afbc71			pending			
+pt:b:leao.v1.o5	Leão quer fora.	58748499			pending			
+pt:b:leao.v1.casa	Leão quer casa.	866d887f			pending			
+pt:b:leao.v1.cama	Leão quer a cama.	054ad782			pending			
+pt:b:leao.v1.o8	Leão quer o peniquinho.	96364c04			pending			
+pt:b:leao.v1.lua	Leão quer a lua.	aeda8d66			pending			
+pt:b:leao.v1.uva	Leão quer uva.	9c2b3f53			pending			
+pt:b:leao.v1.tomate	Leão quer tomate.	db85750f			pending			
+pt:b:leao.v1.sopa	Leão quer sopa.	b101f85c			pending			
+pt:b:leao.v1.bola	Leão quer a bola.	e8216500			pending			
+pt:b:leao.v1.pipoca	Leão quer pipoca.	83b6ae25			pending			
+pt:b:leao.v1.escola	Leão quer a escola.	69bd2b07			pending			
+pt:b:leao.v1.morango	Leão quer morango.	0508d1cc			pending			
+pt:b:leao.v2.o1	Leão come leite.	da253e71			pending			
+pt:b:leao.v2.o2	Leão come uma maçã.	f5d0f8af			pending			
+pt:b:leao.v2.o3	Leão come um brinquedo.	02a63603			pending			
+pt:b:leao.v2.o4	Leão come o carro.	00b490a6			pending			
+pt:b:leao.v2.o5	Leão come fora.	0c7175d8			pending			
+pt:b:leao.v2.casa	Leão come casa.	53756166			pending			
+pt:b:leao.v2.cama	Leão come a cama.	1279b7eb			pending			
+pt:b:leao.v2.o8	Leão come o peniquinho.	7dea5041			pending			
+pt:b:leao.v2.lua	Leão come a lua.	dcbd21ad			pending			
+pt:b:leao.v2.uva	Leão come uva.	a66f4a84			pending			
+pt:b:leao.v2.tomate	Leão come tomate.	f82ca8f2			pending			
+pt:b:leao.v2.sopa	Leão come sopa.	202377d5			pending			
+pt:b:leao.v2.bola	Leão come a bola.	b229da71			pending			
+pt:b:leao.v2.pipoca	Leão come pipoca.	d92aa4c4			pending			
+pt:b:leao.v2.escola	Leão come a escola.	1b84963e			pending			
+pt:b:leao.v2.morango	Leão come morango.	5b80afbf			pending			
+pt:b:leao.v3.o1	Leão bebe leite.	74e8fa7d			pending			
+pt:b:leao.v3.o2	Leão bebe uma maçã.	ee4ac063			pending			
+pt:b:leao.v3.o3	Leão bebe um brinquedo.	5155e9ef			pending			
+pt:b:leao.v3.o4	Leão bebe o carro.	e756a942			pending			
+pt:b:leao.v3.o5	Leão bebe fora.	fed5759c			pending			
+pt:b:leao.v3.casa	Leão bebe casa.	98ff603a			pending			
+pt:b:leao.v3.cama	Leão bebe a cama.	78eff1d7			pending			
+pt:b:leao.v3.o8	Leão bebe o peniquinho.	6fc46365			pending			
+pt:b:leao.v3.lua	Leão bebe a lua.	0b241c49			pending			
+pt:b:leao.v3.uva	Leão bebe uva.	86f9c7d0			pending			
+pt:b:leao.v3.tomate	Leão bebe tomate.	4388e7de			pending			
+pt:b:leao.v3.sopa	Leão bebe sopa.	9c11ace1			pending			
+pt:b:leao.v3.bola	Leão bebe a bola.	4e5bb765			pending			
+pt:b:leao.v3.pipoca	Leão bebe pipoca.	09cc0b10			pending			
+pt:b:leao.v3.escola	Leão bebe a escola.	a46f7cfa			pending			
+pt:b:leao.v3.morango	Leão bebe morango.	1af727f3			pending			
+pt:b:leao.v4.o1	Leão dorme leite.	bfd351b0			pending			
+pt:b:leao.v4.o2	Leão dorme uma maçã.	729fd06c			pending			
+pt:b:leao.v4.o3	Leão dorme com um brinquedo.	710b1571			pending			
+pt:b:leao.v4.o4	Leão dorme no carro.	3b0fe327			pending			
+pt:b:leao.v4.o5	Leão dorme lá fora.	b07e7e4a			pending			
+pt:b:leao.v4.casa	Leão dorme em casa.	77f9dfb1			pending			
+pt:b:leao.v4.cama	Leão dorme na cama.	c7d707d4			pending			
+pt:b:leao.v4.o8	Leão dorme no peniquinho.	a8a5cf32			pending			
+pt:b:leao.v4.lua	Leão dorme na lua.	e41d8b20			pending			
+pt:b:leao.v4.uva	Leão dorme na uva.	0606bb58			pending			
+pt:b:leao.v4.tomate	Leão dorme no tomate.	2b88c2d8			pending			
+pt:b:leao.v4.sopa	Leão dorme na sopa.	66813629			pending			
+pt:b:leao.v4.bola	Leão dorme na bola.	07e4702e			pending			
+pt:b:leao.v4.pipoca	Leão dorme na pipoca.	463a3628			pending			
+pt:b:leao.v4.escola	Leão dorme na escola.	94f65949			pending			
+pt:b:leao.v4.morango	Leão dorme no morango.	6046ad51			pending			
+pt:b:leao.v5.o1	Leão vai leite.	f35fb8a1			pending			
+pt:b:leao.v5.o2	Leão vai uma maçã.	ff2c3a7f			pending			
+pt:b:leao.v5.o3	Leão vai um brinquedo.	e54ac3f3			pending			
+pt:b:leao.v5.o4	Leão vai de carro.	499e2fa4			pending			
+pt:b:leao.v5.o5	Leão vai para fora.	0331680e			pending			
+pt:b:leao.v5.casa	Leão vai para casa.	3a164ff0			pending			
+pt:b:leao.v5.cama	Leão vai para a cama.	0b6d0651			pending			
+pt:b:leao.v5.o8	Leão vai no peniquinho.	1b48c76b			pending			
+pt:b:leao.v5.lua	Leão vai para a lua.	19245d33			pending			
+pt:b:leao.v5.uva	Leão vai para a uva.	c80ca12f			pending			
+pt:b:leao.v5.tomate	Leão vai para o tomate.	6eccd3a1			pending			
+pt:b:leao.v5.sopa	Leão vai para a sopa.	c6abe108			pending			
+pt:b:leao.v5.bola	Leão vai para a bola.	3d982fab			pending			
+pt:b:leao.v5.pipoca	Leão vai para a pipoca.	e36d2781			pending			
+pt:b:leao.v5.escola	Leão vai para a escola.	8cdcf54c			pending			
+pt:b:leao.v5.morango	Leão vai para o morango.	a0f17d7a			pending			
+pt:b:leao.v6.o1	Leão brinca com leite.	d1fa827b			pending			
+pt:b:leao.v6.o2	Leão brinca com uma maçã.	9003e8ad			pending			
+pt:b:leao.v6.o3	Leão brinca com um brinquedo.	150b0531			pending			
+pt:b:leao.v6.o4	Leão brinca com o carro.	6f33cc94			pending			
+pt:b:leao.v6.o5	Leão brinca lá fora.	724a0b8a			pending			
+pt:b:leao.v6.casa	Leão brinca em casa.	66047df1			pending			
+pt:b:leao.v6.cama	Leão brinca na cama.	0b3ea114			pending			
+pt:b:leao.v6.o8	Leão brinca no peniquinho.	b5575a72			pending			
+pt:b:leao.v6.lua	Leão brinca com a lua.	7cf5f4f7			pending			
+pt:b:leao.v6.uva	Leão brinca com uva.	014a0ca2			pending			
+pt:b:leao.v6.tomate	Leão brinca com tomate.	cbd25fbc			pending			
+pt:b:leao.v6.sopa	Leão brinca com sopa.	9cdc7e3b			pending			
+pt:b:leao.v6.bola	Leão brinca com a bola.	237e1647			pending			
+pt:b:leao.v6.pipoca	Leão brinca com pipoca.	0fc6325a			pending			
+pt:b:leao.v6.escola	Leão brinca com a escola.	78fd39f0			pending			
+pt:b:leao.v6.morango	Leão brinca com morango.	2ed7fd8d			pending			
+pt:b:pato.v1.o1	Pato quer leite.	6dbfb0ed			pending			
+pt:b:pato.v1.o2	Pato quer uma maçã.	16fc09f3			pending			
+pt:b:pato.v1.o3	Pato quer um brinquedo.	9cd1bc1f			pending			
+pt:b:pato.v1.o4	Pato quer o carro.	e82882d2			pending			
+pt:b:pato.v1.o5	Pato quer fora.	6f6df8ec			pending			
+pt:b:pato.v1.casa	Pato quer casa.	519e128a			pending			
+pt:b:pato.v1.cama	Pato quer a cama.	20389387			pending			
+pt:b:pato.v1.o8	Pato quer o peniquinho.	1833f575			pending			
+pt:b:pato.v1.lua	Pato quer a lua.	e02e0839			pending			
+pt:b:pato.v1.uva	Pato quer uva.	ab261da0			pending			
+pt:b:pato.v1.tomate	Pato quer tomate.	314d85ce			pending			
+pt:b:pato.v1.sopa	Pato quer sopa.	69c1bfd1			pending			
+pt:b:pato.v1.bola	Pato quer a bola.	f61a2655			pending			
+pt:b:pato.v1.pipoca	Pato quer pipoca.	c5c25bc0			pending			
+pt:b:pato.v1.escola	Pato quer a escola.	a9b6e1ca			pending			
+pt:b:pato.v1.morango	Pato quer morango.	66b981e3			pending			
+pt:b:pato.v2.o1	Pato come leite.	34b93812			pending			
+pt:b:pato.v2.o2	Pato come uma maçã.	322bf9d2			pending			
+pt:b:pato.v2.o3	Pato come um brinquedo.	582be93a			pending			
+pt:b:pato.v2.o4	Pato come o carro.	a049bb51			pending			
+pt:b:pato.v2.o5	Pato come fora.	ca476379			pending			
+pt:b:pato.v2.casa	Pato come casa.	f5c5fe5f			pending			
+pt:b:pato.v2.cama	Pato come a cama.	b9badfe2			pending			
+pt:b:pato.v2.o8	Pato come o peniquinho.	ef01dd64			pending			
+pt:b:pato.v2.lua	Pato come a lua.	a8eeb6c6			pending			
+pt:b:pato.v2.uva	Pato come uva.	ba8bb133			pending			
+pt:b:pato.v2.tomate	Pato come tomate.	93aa806f			pending			
+pt:b:pato.v2.sopa	Pato come sopa.	22d4d73c			pending			
+pt:b:pato.v2.bola	Pato come a bola.	f05325e0			pending			
+pt:b:pato.v2.pipoca	Pato come pipoca.	6322b305			pending			
+pt:b:pato.v2.escola	Pato come a escola.	7e6e3c67			pending			
+pt:b:pato.v2.morango	Pato come morango.	dad7aeac			pending			
+pt:b:pato.v3.o1	Pato bebe leite.	828ab2aa			pending			
+pt:b:pato.v3.o2	Pato bebe uma maçã.	63d4a13a			pending			
+pt:b:pato.v3.o3	Pato bebe um brinquedo.	ba09ef42			pending			
+pt:b:pato.v3.o4	Pato bebe o carro.	1f7e8049			pending			
+pt:b:pato.v3.o5	Pato bebe fora.	253ec891			pending			
+pt:b:pato.v3.casa	Pato bebe casa.	ecaf8e67			pending			
+pt:b:pato.v3.cama	Pato bebe a cama.	29b396ba			pending			
+pt:b:pato.v3.o8	Pato bebe o peniquinho.	0f27eebc			pending			
+pt:b:pato.v3.lua	Pato bebe a lua.	07bb0d2e			pending			
+pt:b:pato.v3.uva	Pato bebe uva.	5a86a6eb			pending			
+pt:b:pato.v3.tomate	Pato bebe tomate.	2a11a297			pending			
+pt:b:pato.v3.sopa	Pato bebe sopa.	f5b27f34			pending			
+pt:b:pato.v3.bola	Pato bebe a bola.	f8cba2a8			pending			
+pt:b:pato.v3.pipoca	Pato bebe pipoca.	778c83cd			pending			
+pt:b:pato.v3.escola	Pato bebe a escola.	ec90cbef			pending			
+pt:b:pato.v3.morango	Pato bebe morango.	56213f64			pending			
+pt:b:pato.v4.o1	Pato dorme leite.	bf0fa8ad			pending			
+pt:b:pato.v4.o2	Pato dorme uma maçã.	271bb433			pending			
+pt:b:pato.v4.o3	Pato dorme com um brinquedo.	beb9d99e			pending			
+pt:b:pato.v4.o4	Pato dorme no carro.	34097bdc			pending			
+pt:b:pato.v4.o5	Pato dorme lá fora.	ef81c10f			pending			
+pt:b:pato.v4.casa	Pato dorme em casa.	7a624f3c			pending			
+pt:b:pato.v4.cama	Pato dorme na cama.	59a820bd			pending			
+pt:b:pato.v4.o8	Pato dorme no peniquinho.	e08ab96f			pending			
+pt:b:pato.v4.lua	Pato dorme na lua.	cd557caf			pending			
+pt:b:pato.v4.uva	Pato dorme na uva.	a2035bab			pending			
+pt:b:pato.v4.tomate	Pato dorme no tomate.	6a588ae5			pending			
+pt:b:pato.v4.sopa	Pato dorme na sopa.	40403df4			pending			
+pt:b:pato.v4.bola	Pato dorme na bola.	d4c3c03f			pending			
+pt:b:pato.v4.pipoca	Pato dorme na pipoca.	79f2c88d			pending			
+pt:b:pato.v4.escola	Pato dorme na escola.	26c6da08			pending			
+pt:b:pato.v4.morango	Pato dorme no morango.	8ab4a246			pending			
+pt:b:pato.v5.o1	Pato vai leite.	34a1f8fc			pending			
+pt:b:pato.v5.o2	Pato vai uma maçã.	2d325f20			pending			
+pt:b:pato.v5.o3	Pato vai um brinquedo.	5dde9798			pending			
+pt:b:pato.v5.o4	Pato vai de carro.	e21a32fb			pending			
+pt:b:pato.v5.o5	Pato vai para fora.	b1d4e3f7			pending			
+pt:b:pato.v5.casa	Pato vai para casa.	868c6ee9			pending			
+pt:b:pato.v5.cama	Pato vai para a cama.	394e1dc8			pending			
+pt:b:pato.v5.o8	Pato vai no peniquinho.	7bfc77f6			pending			
+pt:b:pato.v5.lua	Pato vai para a lua.	21b90a44			pending			
+pt:b:pato.v5.uva	Pato vai para a uva.	f761b7ec			pending			
+pt:b:pato.v5.tomate	Pato vai para o tomate.	c9676504			pending			
+pt:b:pato.v5.sopa	Pato vai para a sopa.	c15b9a3d			pending			
+pt:b:pato.v5.bola	Pato vai para a bola.	47f4e29a			pending			
+pt:b:pato.v5.pipoca	Pato vai para a pipoca.	eb10d15c			pending			
+pt:b:pato.v5.escola	Pato vai para a escola.	b33fae8d			pending			
+pt:b:pato.v5.morango	Pato vai para o morango.	b971bf45			pending			
+pt:b:pato.v6.o1	Pato brinca com leite.	f1482e80			pending			
+pt:b:pato.v6.o2	Pato brinca com uma maçã.	04885d9c			pending			
+pt:b:pato.v6.o3	Pato brinca com um brinquedo.	44f2ccfc			pending			
+pt:b:pato.v6.o4	Pato brinca com o carro.	3f3b51c3			pending			
+pt:b:pato.v6.o5	Pato brinca lá fora.	f3646dad			pending			
+pt:b:pato.v6.casa	Pato brinca em casa.	54813036			pending			
+pt:b:pato.v6.cama	Pato brinca na cama.	783ee287			pending			
+pt:b:pato.v6.o8	Pato brinca no peniquinho.	078fcc75			pending			
+pt:b:pato.v6.lua	Pato brinca com a lua.	720c9e2c			pending			
+pt:b:pato.v6.uva	Pato brinca com uva.	b90d80bd			pending			
+pt:b:pato.v6.tomate	Pato brinca com tomate.	099a86c5			pending			
+pt:b:pato.v6.sopa	Pato brinca com sopa.	f2f9c6de			pending			
+pt:b:pato.v6.bola	Pato brinca com a bola.	0a0108c2			pending			
+pt:b:pato.v6.pipoca	Pato brinca com pipoca.	d8c77677			pending			
+pt:b:pato.v6.escola	Pato brinca com a escola.	c890e875			pending			
+pt:b:pato.v6.morango	Pato brinca com morango.	cb916fa6			pending			
+pt:b:menina.v1.o1	A menina quer leite.	eef5ce14			pending			
+pt:b:menina.v1.o2	A menina quer uma maçã.	77041b88			pending			
+pt:b:menina.v1.o3	A menina quer um brinquedo.	062db2a0			pending			
+pt:b:menina.v1.o4	A menina quer o carro.	b3abd127			pending			
+pt:b:menina.v1.o5	A menina quer fora.	ad0d4b5b			pending			
+pt:b:menina.v1.casa	A menina quer casa.	5ae94e3d			pending			
+pt:b:menina.v1.cama	A menina quer a cama.	417821d4			pending			
+pt:b:menina.v1.o8	A menina quer o peniquinho.	086e1932			pending			
+pt:b:menina.v1.lua	A menina quer a lua.	2b904920			pending			
+pt:b:menina.v1.uva	A menina quer uva.	c342d0f1			pending			
+pt:b:menina.v1.tomate	A menina quer tomate.	c35e7599			pending			
+pt:b:menina.v1.sopa	A menina quer sopa.	d510a452			pending			
+pt:b:menina.v1.bola	A menina quer a bola.	81858a2e			pending			
+pt:b:menina.v1.pipoca	A menina quer pipoca.	339d985b			pending			
+pt:b:menina.v1.escola	A menina quer a escola.	726e0349			pending			
+pt:b:menina.v1.morango	A menina quer morango.	ee3b9122			pending			
+pt:b:menina.v2.o1	A menina come leite.	a4ee460f			pending			
+pt:b:menina.v2.o2	A menina come uma maçã.	34ad4ea9			pending			
+pt:b:menina.v2.o3	A menina come um brinquedo.	c1360eb5			pending			
+pt:b:menina.v2.o4	A menina come o carro.	c84ffb08			pending			
+pt:b:menina.v2.o5	A menina come fora.	3ffa2db6			pending			
+pt:b:menina.v2.casa	A menina come casa.	117ef3a8			pending			
+pt:b:menina.v2.cama	A menina come a cama.	62692e59			pending			
+pt:b:menina.v2.o8	A menina come o peniquinho.	964efa83			pending			
+pt:b:menina.v2.lua	A menina come a lua.	b149f14b			pending			
+pt:b:menina.v2.uva	A menina come uva.	15fa9626			pending			
+pt:b:menina.v2.tomate	A menina come tomate.	e60dbaa0			pending			
+pt:b:menina.v2.sopa	A menina come sopa.	57f7397f			pending			
+pt:b:menina.v2.bola	A menina come a bola.	fad54da3			pending			
+pt:b:menina.v2.pipoca	A menina come pipoca.	32f7d14e			pending			
+pt:b:menina.v2.escola	A menina come a escola.	ba6b0fe4			pending			
+pt:b:menina.v2.morango	A menina come morango.	5d3578c9			pending			
+pt:b:menina.v3.o1	A menina bebe leite.	e60ba86b			pending			
+pt:b:menina.v3.o2	A menina bebe uma maçã.	ed2dc23d			pending			
+pt:b:menina.v3.o3	A menina bebe um brinquedo.	657c2421			pending			
+pt:b:menina.v3.o4	A menina bebe o carro.	638fa7e4			pending			
+pt:b:menina.v3.o5	A menina bebe fora.	8d94a39a			pending			
+pt:b:menina.v3.casa	A menina bebe casa.	4e780b3c			pending			
+pt:b:menina.v3.cama	A menina bebe a cama.	e80611a5			pending			
+pt:b:menina.v3.o8	A menina bebe o peniquinho.	575be177			pending			
+pt:b:menina.v3.lua	A menina bebe a lua.	0b2e8427			pending			
+pt:b:menina.v3.uva	A menina bebe uva.	ace3f972			pending			
+pt:b:menina.v3.tomate	A menina bebe tomate.	dad7e32c			pending			
+pt:b:menina.v3.sopa	A menina bebe sopa.	1a35776b			pending			
+pt:b:menina.v3.bola	A menina bebe a bola.	3455cd77			pending			
+pt:b:menina.v3.pipoca	A menina bebe pipoca.	6ce9b38a			pending			
+pt:b:menina.v3.escola	A menina bebe a escola.	209700c0			pending			
+pt:b:menina.v3.morango	A menina bebe morango.	882102bd			pending			
+pt:b:menina.v4.o1	A menina dorme leite.	cf87c302			pending			
+pt:b:menina.v4.o2	A menina dorme uma maçã.	2ececca2			pending			
+pt:b:menina.v4.o3	A menina dorme com um brinquedo.	28a6f057			pending			
+pt:b:menina.v4.o4	A menina dorme no carro.	27120f8d			pending			
+pt:b:menina.v4.o5	A menina dorme lá fora.	b3b64d00			pending			
+pt:b:menina.v4.casa	A menina dorme em casa.	636172d3			pending			
+pt:b:menina.v4.cama	A menina dorme na cama.	d735482e			pending			
+pt:b:menina.v4.o8	A menina dorme no peniquinho.	3d2bc678			pending			
+pt:b:menina.v4.lua	A menina dorme na lua.	93655b42			pending			
+pt:b:menina.v4.uva	A menina dorme na uva.	cee1fd76			pending			
+pt:b:menina.v4.tomate	A menina dorme no tomate.	48eaa09e			pending			
+pt:b:menina.v4.sopa	A menina dorme na sopa.	1db9552f			pending			
+pt:b:menina.v4.bola	A menina dorme na bola.	5e9a1274			pending			
+pt:b:menina.v4.pipoca	A menina dorme na pipoca.	0700c67e			pending			
+pt:b:menina.v4.escola	A menina dorme na escola.	b7b4f3d3			pending			
+pt:b:menina.v4.morango	A menina dorme no morango.	6ef1e5b3			pending			
+pt:b:menina.v5.o1	A menina vai leite.	b91c6dff			pending			
+pt:b:menina.v5.o2	A menina vai uma maçã.	52e095b9			pending			
+pt:b:menina.v5.o3	A menina vai um brinquedo.	e4ea9125			pending			
+pt:b:menina.v5.o4	A menina vai de carro.	fc57269e			pending			
+pt:b:menina.v5.o5	A menina vai para fora.	1945aa84			pending			
+pt:b:menina.v5.casa	A menina vai para casa.	62da1312			pending			
+pt:b:menina.v5.cama	A menina vai para a cama.	f18098df			pending			
+pt:b:menina.v5.o8	A menina vai no peniquinho.	3e39a8b5			pending			
+pt:b:menina.v5.lua	A menina vai para a lua.	8dee3121			pending			
+pt:b:menina.v5.uva	A menina vai para a uva.	6b659d29			pending			
+pt:b:menina.v5.tomate	A menina vai para o tomate.	f47bc60b			pending			
+pt:b:menina.v5.sopa	A menina vai para a sopa.	80fbfb0a			pending			
+pt:b:menina.v5.bola	A menina vai para a bola.	4abaae3d			pending			
+pt:b:menina.v5.pipoca	A menina vai para a pipoca.	f84c7e63			pending			
+pt:b:menina.v5.escola	A menina vai para a escola.	4abfdb52			pending			
+pt:b:menina.v5.morango	A menina vai para o morango.	a85808e0			pending			
+pt:b:menina.v6.o1	A menina brinca com leite.	0ef6b7d9			pending			
+pt:b:menina.v6.o2	A menina brinca com uma maçã.	70f43a07			pending			
+pt:b:menina.v6.o3	A menina brinca com um brinquedo.	06cc325b			pending			
+pt:b:menina.v6.o4	A menina brinca com o carro.	761ecf8e			pending			
+pt:b:menina.v6.o5	A menina brinca lá fora.	3b3770cc			pending			
+pt:b:menina.v6.casa	A menina brinca em casa.	847306f7			pending			
+pt:b:menina.v6.cama	A menina brinca na cama.	b376bee2			pending			
+pt:b:menina.v6.o8	A menina brinca no peniquinho.	25e6c464			pending			
+pt:b:menina.v6.lua	A menina brinca com a lua.	7f54b525			pending			
+pt:b:menina.v6.uva	A menina brinca com uva.	a956c06c			pending			
+pt:b:menina.v6.tomate	A menina brinca com tomate.	d98f8d2a			pending			
+pt:b:menina.v6.sopa	A menina brinca com sopa.	6617fbbd			pending			
+pt:b:menina.v6.bola	A menina brinca com a bola.	13401289			pending			
+pt:b:menina.v6.pipoca	A menina brinca com pipoca.	05cbcedc			pending			
+pt:b:menina.v6.escola	A menina brinca com a escola.	cffaf356			pending			
+pt:b:menina.v6.morango	A menina brinca com morango.	6a880c67			pending			
+pt:b:sapo.v1.o1	Sapo quer leite.	e6030252			pending			
+pt:b:sapo.v1.o2	Sapo quer uma maçã.	e5a5a092			pending			
+pt:b:sapo.v1.o3	Sapo quer um brinquedo.	d63791fa			pending			
+pt:b:sapo.v1.o4	Sapo quer o carro.	7900ff11			pending			
+pt:b:sapo.v1.o5	Sapo quer fora.	b832a5b9			pending			
+pt:b:sapo.v1.casa	Sapo quer casa.	2bb76f9f			pending			
+pt:b:sapo.v1.cama	Sapo quer a cama.	10de62a2			pending			
+pt:b:sapo.v1.o8	Sapo quer o peniquinho.	58280624			pending			
+pt:b:sapo.v1.lua	Sapo quer a lua.	addc6286			pending			
+pt:b:sapo.v1.uva	Sapo quer uva.	621c2e73			pending			
+pt:b:sapo.v1.tomate	Sapo quer tomate.	d6a452af			pending			
+pt:b:sapo.v1.sopa	Sapo quer sopa.	10c0197c			pending			
+pt:b:sapo.v1.bola	Sapo quer a bola.	8a8805a0			pending			
+pt:b:sapo.v1.pipoca	Sapo quer pipoca.	54ccbb45			pending			
+pt:b:sapo.v1.escola	Sapo quer a escola.	ea622227			pending			
+pt:b:sapo.v1.morango	Sapo quer morango.	485540ec			pending			
+pt:b:sapo.v2.o1	Sapo come leite.	0238bb91			pending			
+pt:b:sapo.v2.o2	Sapo come uma maçã.	dd39b04f			pending			
+pt:b:sapo.v2.o3	Sapo come um brinquedo.	96084823			pending			
+pt:b:sapo.v2.o4	Sapo come o carro.	5ea46ac6			pending			
+pt:b:sapo.v2.o5	Sapo come fora.	06c029f8			pending			
+pt:b:sapo.v2.casa	Sapo come casa.	08384f86			pending			
+pt:b:sapo.v2.cama	Sapo come a cama.	b424128b			pending			
+pt:b:sapo.v2.o8	Sapo come o peniquinho.	de1b63e1			pending			
+pt:b:sapo.v2.lua	Sapo come a lua.	71c1354d			pending			
+pt:b:sapo.v2.uva	Sapo come uva.	98bb8ea4			pending			
+pt:b:sapo.v2.tomate	Sapo come tomate.	429bf612			pending			
+pt:b:sapo.v2.sopa	Sapo come sopa.	6e325175			pending			
+pt:b:sapo.v2.bola	Sapo come a bola.	ba86b691			pending			
+pt:b:sapo.v2.pipoca	Sapo come pipoca.	a3992864			pending			
+pt:b:sapo.v2.escola	Sapo come a escola.	5adc26de			pending			
+pt:b:sapo.v2.morango	Sapo come morango.	90f84cdf			pending			
+pt:b:sapo.v3.o1	Sapo bebe leite.	ae6a101d			pending			
+pt:b:sapo.v3.o2	Sapo bebe uma maçã.	ed80cc03			pending			
+pt:b:sapo.v3.o3	Sapo bebe um brinquedo.	9d15e58f			pending			
+pt:b:sapo.v3.o4	Sapo bebe o carro.	90b409e2			pending			
+pt:b:sapo.v3.o5	Sapo bebe fora.	80872fbc			pending			
+pt:b:sapo.v3.casa	Sapo bebe casa.	c96b5dda			pending			
+pt:b:sapo.v3.cama	Sapo bebe a cama.	b7dcd4f7			pending			
+pt:b:sapo.v3.o8	Sapo bebe o peniquinho.	f0e3d685			pending			
+pt:b:sapo.v3.lua	Sapo bebe a lua.	ff196be9			pending			
+pt:b:sapo.v3.uva	Sapo bebe uva.	4e85f970			pending			
+pt:b:sapo.v3.tomate	Sapo bebe tomate.	9bc27ffe			pending			
+pt:b:sapo.v3.sopa	Sapo bebe sopa.	0476b201			pending			
+pt:b:sapo.v3.bola	Sapo bebe a bola.	d2d46085			pending			
+pt:b:sapo.v3.pipoca	Sapo bebe pipoca.	8e44b430			pending			
+pt:b:sapo.v3.escola	Sapo bebe a escola.	4c27e59a			pending			
+pt:b:sapo.v3.morango	Sapo bebe morango.	0c5ab793			pending			
+pt:b:sapo.v4.o1	Sapo dorme leite.	bf2a0e50			pending			
+pt:b:sapo.v4.o2	Sapo dorme uma maçã.	5a083e8c			pending			
+pt:b:sapo.v4.o3	Sapo dorme com um brinquedo.	a1714811			pending			
+pt:b:sapo.v4.o4	Sapo dorme no carro.	8562ab47			pending			
+pt:b:sapo.v4.o5	Sapo dorme lá fora.	ef9e316a			pending			
+pt:b:sapo.v4.casa	Sapo dorme em casa.	63f430d1			pending			
+pt:b:sapo.v4.cama	Sapo dorme na cama.	8b0d2ff4			pending			
+pt:b:sapo.v4.o8	Sapo dorme no peniquinho.	5e8ebdd2			pending			
+pt:b:sapo.v4.lua	Sapo dorme na lua.	8c0ec340			pending			
+pt:b:sapo.v4.uva	Sapo dorme na uva.	474571f8			pending			
+pt:b:sapo.v4.tomate	Sapo dorme no tomate.	44d71c78			pending			
+pt:b:sapo.v4.sopa	Sapo dorme na sopa.	fafde449			pending			
+pt:b:sapo.v4.bola	Sapo dorme na bola.	9c611e4e			pending			
+pt:b:sapo.v4.pipoca	Sapo dorme na pipoca.	d69835c8			pending			
+pt:b:sapo.v4.escola	Sapo dorme na escola.	5fd1d6e9			pending			
+pt:b:sapo.v4.morango	Sapo dorme no morango.	ebe22771			pending			
+pt:b:sapo.v5.o1	Sapo vai leite.	1364d2c1			pending			
+pt:b:sapo.v5.o2	Sapo vai uma maçã.	eaf6869f			pending			
+pt:b:sapo.v5.o3	Sapo vai um brinquedo.	cedb6813			pending			
+pt:b:sapo.v5.o4	Sapo vai de carro.	002a58c4			pending			
+pt:b:sapo.v5.o5	Sapo vai para fora.	40988c2e			pending			
+pt:b:sapo.v5.casa	Sapo vai para casa.	b1f27790			pending			
+pt:b:sapo.v5.cama	Sapo vai para a cama.	fe97e571			pending			
+pt:b:sapo.v5.o8	Sapo vai no peniquinho.	2604388b			pending			
+pt:b:sapo.v5.lua	Sapo vai para a lua.	4eddf553			pending			
+pt:b:sapo.v5.uva	Sapo vai para a uva.	0040a24f			pending			
+pt:b:sapo.v5.tomate	Sapo vai para o tomate.	334f62c1			pending			
+pt:b:sapo.v5.sopa	Sapo vai para a sopa.	a08a0b28			pending			
+pt:b:sapo.v5.bola	Sapo vai para a bola.	19f0c2cb			pending			
+pt:b:sapo.v5.pipoca	Sapo vai para a pipoca.	db1a79a1			pending			
+pt:b:sapo.v5.escola	Sapo vai para a escola.	68c3296c			pending			
+pt:b:sapo.v5.morango	Sapo vai para o morango.	57b8ed9a			pending			
+pt:b:sapo.v6.o1	Sapo brinca com leite.	4eab799b			pending			
+pt:b:sapo.v6.o2	Sapo brinca com uma maçã.	9c304f4d			pending			
+pt:b:sapo.v6.o3	Sapo brinca com um brinquedo.	4c26bc51			pending			
+pt:b:sapo.v6.o4	Sapo brinca com o carro.	da96edb4			pending			
+pt:b:sapo.v6.o5	Sapo brinca lá fora.	48b0b32a			pending			
+pt:b:sapo.v6.casa	Sapo brinca em casa.	ba8c4991			pending			
+pt:b:sapo.v6.cama	Sapo brinca na cama.	0e1e74b4			pending			
+pt:b:sapo.v6.o8	Sapo brinca no peniquinho.	dac23892			pending			
+pt:b:sapo.v6.lua	Sapo brinca com a lua.	12d75d17			pending			
+pt:b:sapo.v6.uva	Sapo brinca com uva.	c8558442			pending			
+pt:b:sapo.v6.tomate	Sapo brinca com tomate.	cc5fc4dc			pending			
+pt:b:sapo.v6.sopa	Sapo brinca com sopa.	52ac35db			pending			
+pt:b:sapo.v6.bola	Sapo brinca com a bola.	f4176767			pending			
+pt:b:sapo.v6.pipoca	Sapo brinca com pipoca.	0e1bc3fa			pending			
+pt:b:sapo.v6.escola	Sapo brinca com a escola.	c8259890			pending			
+pt:b:sapo.v6.morango	Sapo brinca com morango.	6f8ca12d			pending			
+pt:b:vaca.v1.o1	Vaca quer leite.	8fb68c3e			pending			
+pt:b:vaca.v1.o2	Vaca quer uma maçã.	897e5f76			pending			
+pt:b:vaca.v1.o3	Vaca quer um brinquedo.	5adffc66			pending			
+pt:b:vaca.v1.o4	Vaca quer o carro.	396e80dd			pending			
+pt:b:vaca.v1.o5	Vaca quer fora.	63de26fd			pending			
+pt:b:vaca.v1.casa	Vaca quer casa.	28a3c3e3			pending			
+pt:b:vaca.v1.cama	Vaca quer a cama.	4b5c725e			pending			
+pt:b:vaca.v1.o8	Vaca quer o peniquinho.	77412648			pending			
+pt:b:vaca.v1.lua	Vaca quer a lua.	110544f2			pending			
+pt:b:vaca.v1.uva	Vaca quer uva.	423d90df			pending			
+pt:b:vaca.v1.tomate	Vaca quer tomate.	3de06ddb			pending			
+pt:b:vaca.v1.sopa	Vaca quer sopa.	41814058			pending			
+pt:b:vaca.v1.bola	Vaca quer a bola.	95a13b64			pending			
+pt:b:vaca.v1.pipoca	Vaca quer pipoca.	9f6a5591			pending			
+pt:b:vaca.v1.escola	Vaca quer a escola.	4c3c27e3			pending			
+pt:b:vaca.v1.morango	Vaca quer morango.	bd610770			pending			
+pt:b:vaca.v2.o1	Vaca come leite.	6af6ea55			pending			
+pt:b:vaca.v2.o2	Vaca come uma maçã.	6daf684b			pending			
+pt:b:vaca.v2.o3	Vaca come um brinquedo.	890799b7			pending			
+pt:b:vaca.v2.o4	Vaca come o carro.	b38af0ba			pending			
+pt:b:vaca.v2.o5	Vaca come fora.	51225314			pending			
+pt:b:vaca.v2.casa	Vaca come casa.	307ce262			pending			
+pt:b:vaca.v2.cama	Vaca come a cama.	28a30d8f			pending			
+pt:b:vaca.v2.o8	Vaca come o peniquinho.	afed525d			pending			
+pt:b:vaca.v2.lua	Vaca come a lua.	98ca86d1			pending			
+pt:b:vaca.v2.uva	Vaca come uva.	bf3937a8			pending			
+pt:b:vaca.v2.tomate	Vaca come tomate.	287b3226			pending			
+pt:b:vaca.v2.sopa	Vaca come sopa.	35dd52d9			pending			
+pt:b:vaca.v2.bola	Vaca come a bola.	7e6abded			pending			
+pt:b:vaca.v2.pipoca	Vaca come pipoca.	0e4ab418			pending			
+pt:b:vaca.v2.escola	Vaca come a escola.	ff133522			pending			
+pt:b:vaca.v2.morango	Vaca come morango.	212460cb			pending			
+pt:b:vaca.v3.o1	Vaca bebe leite.	a848bd19			pending			
+pt:b:vaca.v3.o2	Vaca bebe uma maçã.	b1054ac7			pending			
+pt:b:vaca.v3.o3	Vaca bebe um brinquedo.	435d261b			pending			
+pt:b:vaca.v3.o4	Vaca bebe o carro.	01c5e24e			pending			
+pt:b:vaca.v3.o5	Vaca bebe fora.	9939b720			pending			
+pt:b:vaca.v3.casa	Vaca bebe casa.	135e85de			pending			
+pt:b:vaca.v3.cama	Vaca bebe a cama.	3a46e313			pending			
+pt:b:vaca.v3.o8	Vaca bebe o peniquinho.	be3def69			pending			
+pt:b:vaca.v3.lua	Vaca bebe a lua.	abb623e5			pending			
+pt:b:vaca.v3.uva	Vaca bebe uva.	fb60f1ac			pending			
+pt:b:vaca.v3.tomate	Vaca bebe tomate.	6144256a			pending			
+pt:b:vaca.v3.sopa	Vaca bebe sopa.	ddd8aafd			pending			
+pt:b:vaca.v3.bola	Vaca bebe a bola.	c8b0eb49			pending			
+pt:b:vaca.v3.pipoca	Vaca bebe pipoca.	f477111c			pending			
+pt:b:vaca.v3.escola	Vaca bebe a escola.	a62bcb16			pending			
+pt:b:vaca.v3.morango	Vaca bebe morango.	8c7c75a7			pending			
+pt:b:vaca.v4.o1	Vaca dorme leite.	85eaa9e4			pending			
+pt:b:vaca.v4.o2	Vaca dorme uma maçã.	1c5c40b8			pending			
+pt:b:vaca.v4.o3	Vaca dorme com um brinquedo.	e0e07505			pending			
+pt:b:vaca.v4.o4	Vaca dorme no carro.	6bdf763b			pending			
+pt:b:vaca.v4.o5	Vaca dorme lá fora.	50e82f56			pending			
+pt:b:vaca.v4.casa	Vaca dorme em casa.	8f630e75			pending			
+pt:b:vaca.v4.cama	Vaca dorme na cama.	1f1f3798			pending			
+pt:b:vaca.v4.o8	Vaca dorme no peniquinho.	5af2551e			pending			
+pt:b:vaca.v4.lua	Vaca dorme na lua.	bedb4d54			pending			
+pt:b:vaca.v4.uva	Vaca dorme na uva.	2e9c5fdc			pending			
+pt:b:vaca.v4.tomate	Vaca dorme no tomate.	60321954			pending			
+pt:b:vaca.v4.sopa	Vaca dorme na sopa.	58fa37cd			pending			
+pt:b:vaca.v4.bola	Vaca dorme na bola.	974d122a			pending			
+pt:b:vaca.v4.pipoca	Vaca dorme na pipoca.	bfb7baec			pending			
+pt:b:vaca.v4.escola	Vaca dorme na escola.	2fb17b3d			pending			
+pt:b:vaca.v4.morango	Vaca dorme no morango.	39e98d95			pending			
+pt:b:vaca.v5.o1	Vaca vai leite.	70c4827d			pending			
+pt:b:vaca.v5.o2	Vaca vai uma maçã.	67b39863			pending			
+pt:b:vaca.v5.o3	Vaca vai um brinquedo.	4e7441ef			pending			
+pt:b:vaca.v5.o4	Vaca vai de carro.	b73e67b0			pending			
+pt:b:vaca.v5.o5	Vaca vai para fora.	c0a5fefa			pending			
+pt:b:vaca.v5.casa	Vaca vai para casa.	018a301c			pending			
+pt:b:vaca.v5.cama	Vaca vai para a cama.	732d1985			pending			
+pt:b:vaca.v5.o8	Vaca vai no peniquinho.	014873bf			pending			
+pt:b:vaca.v5.lua	Vaca vai para a lua.	baa0ab07			pending			
+pt:b:vaca.v5.uva	Vaca vai para a uva.	6082a653			pending			
+pt:b:vaca.v5.tomate	Vaca vai para o tomate.	527954cd			pending			
+pt:b:vaca.v5.sopa	Vaca vai para a sopa.	c6991d5c			pending			
+pt:b:vaca.v5.bola	Vaca vai para a bola.	58ca53d7			pending			
+pt:b:vaca.v5.pipoca	Vaca vai para a pipoca.	b056db25			pending			
+pt:b:vaca.v5.escola	Vaca vai para a escola.	c0574e20			pending			
+pt:b:vaca.v5.morango	Vaca vai para o morango.	b28800be			pending			
+pt:b:vaca.v6.o1	Vaca brinca com leite.	1bc2dfff			pending			
+pt:b:vaca.v6.o2	Vaca brinca com uma maçã.	0759fbb9			pending			
+pt:b:vaca.v6.o3	Vaca brinca com um brinquedo.	49145725			pending			
+pt:b:vaca.v6.o4	Vaca brinca com o carro.	eb0e1858			pending			
+pt:b:vaca.v6.o5	Vaca brinca lá fora.	7e0c26f6			pending			
+pt:b:vaca.v6.casa	Vaca brinca em casa.	153f4315			pending			
+pt:b:vaca.v6.cama	Vaca brinca na cama.	161f8538			pending			
+pt:b:vaca.v6.o8	Vaca brinca no peniquinho.	dc261e3e			pending			
+pt:b:vaca.v6.lua	Vaca brinca com a lua.	e011387b			pending			
+pt:b:vaca.v6.uva	Vaca brinca com uva.	269f2076			pending			
+pt:b:vaca.v6.tomate	Vaca brinca com tomate.	507b5b50			pending			
+pt:b:vaca.v6.sopa	Vaca brinca com sopa.	3c776e2f			pending			
+pt:b:vaca.v6.bola	Vaca brinca com a bola.	86cce6d3			pending			
+pt:b:vaca.v6.pipoca	Vaca brinca com pipoca.	6ce3077e			pending			
+pt:b:vaca.v6.escola	Vaca brinca com a escola.	2124b5f4			pending			
+pt:b:vaca.v6.morango	Vaca brinca com morango.	581fa139			pending			
+pt:b:macaco.v1.o1	Macaco quer leite.	b2cd97e3			pending			
+pt:b:macaco.v1.o2	Macaco quer uma maçã.	5b6caa45			pending			
+pt:b:macaco.v1.o3	Macaco quer um brinquedo.	ecbf4a89			pending			
+pt:b:macaco.v1.o4	Macaco quer o carro.	5a40591c			pending			
+pt:b:macaco.v1.o5	Macaco quer fora.	de3e8b32			pending			
+pt:b:macaco.v1.casa	Macaco quer casa.	b2c99b64			pending			
+pt:b:macaco.v1.cama	Macaco quer a cama.	86dd2efd			pending			
+pt:b:macaco.v1.o8	Macaco quer o peniquinho.	37b9d3af			pending			
+pt:b:macaco.v1.lua	Macaco quer a lua.	b33ee6ef			pending			
+pt:b:macaco.v1.uva	Macaco quer uva.	fb15476a			pending			
+pt:b:macaco.v1.tomate	Macaco quer tomate.	6b95d174			pending			
+pt:b:macaco.v1.sopa	Macaco quer sopa.	de5bc843			pending			
+pt:b:macaco.v1.bola	Macaco quer a bola.	0473377f			pending			
+pt:b:macaco.v1.pipoca	Macaco quer pipoca.	e9883cb2			pending			
+pt:b:macaco.v1.escola	Macaco quer a escola.	b2f8aa48			pending			
+pt:b:macaco.v1.morango	Macaco quer morango.	b4bc06b5			pending			
+pt:b:macaco.v2.o1	Macaco come leite.	5c756a64			pending			
+pt:b:macaco.v2.o2	Macaco come uma maçã.	d7c9da38			pending			
+pt:b:macaco.v2.o3	Macaco come um brinquedo.	d69b30f0			pending			
+pt:b:macaco.v2.o4	Macaco come o carro.	3530eb17			pending			
+pt:b:macaco.v2.o5	Macaco come fora.	feb0b88b			pending			
+pt:b:macaco.v2.casa	Macaco come casa.	bfaeab6d			pending			
+pt:b:macaco.v2.cama	Macaco come a cama.	105d7624			pending			
+pt:b:macaco.v2.o8	Macaco come o peniquinho.	acc8c2e2			pending			
+pt:b:macaco.v2.lua	Macaco come a lua.	02501ff0			pending			
+pt:b:macaco.v2.uva	Macaco come uva.	31681321			pending			
+pt:b:macaco.v2.tomate	Macaco come tomate.	2c4be8a9			pending			
+pt:b:macaco.v2.sopa	Macaco come sopa.	5f381162			pending			
+pt:b:macaco.v2.bola	Macaco come a bola.	5bfcd17e			pending			
+pt:b:macaco.v2.pipoca	Macaco come pipoca.	6164572b			pending			
+pt:b:macaco.v2.escola	Macaco come a escola.	8f1f53f9			pending			
+pt:b:macaco.v2.morango	Macaco come morango.	b377e3b2			pending			
+pt:b:macaco.v3.o1	Macaco bebe leite.	ff5bf99c			pending			
+pt:b:macaco.v3.o2	Macaco bebe uma maçã.	c9dc9840			pending			
+pt:b:macaco.v3.o3	Macaco bebe um brinquedo.	8c747038			pending			
+pt:b:macaco.v3.o4	Macaco bebe o carro.	9e2e788f			pending			
+pt:b:macaco.v3.o5	Macaco bebe fora.	b6fbfc43			pending			
+pt:b:macaco.v3.casa	Macaco bebe casa.	f0bf0455			pending			
+pt:b:macaco.v3.cama	Macaco bebe a cama.	c387f8fc			pending			
+pt:b:macaco.v3.o8	Macaco bebe o peniquinho.	b27e807a			pending			
+pt:b:macaco.v3.lua	Macaco bebe a lua.	03a19f78			pending			
+pt:b:macaco.v3.uva	Macaco bebe uva.	17b42c19			pending			
+pt:b:macaco.v3.tomate	Macaco bebe tomate.	1c29ed71			pending			
+pt:b:macaco.v3.sopa	Macaco bebe sopa.	526714da			pending			
+pt:b:macaco.v3.bola	Macaco bebe a bola.	cf804a66			pending			
+pt:b:macaco.v3.pipoca	Macaco bebe pipoca.	11abf333			pending			
+pt:b:macaco.v3.escola	Macaco bebe a escola.	f10d07a1			pending			
+pt:b:macaco.v3.morango	Macaco bebe morango.	309d790a			pending			
+pt:b:macaco.v4.o1	Macaco dorme leite.	d2bd9693			pending			
+pt:b:macaco.v4.o2	Macaco dorme uma maçã.	61b39355			pending			
+pt:b:macaco.v4.o3	Macaco dorme com um brinquedo.	453ece70			pending			
+pt:b:macaco.v4.o4	Macaco dorme no carro.	08679836			pending			
+pt:b:macaco.v4.o5	Macaco dorme lá fora.	b899b899			pending			
+pt:b:macaco.v4.casa	Macaco dorme em casa.	7576328a			pending			
+pt:b:macaco.v4.cama	Macaco dorme na cama.	a5d77f9b			pending			
+pt:b:macaco.v4.o8	Macaco dorme no peniquinho.	be91cad1			pending			
+pt:b:macaco.v4.lua	Macaco dorme na lua.	9b46799d			pending			
+pt:b:macaco.v4.uva	Macaco dorme na uva.	db1cfaa5			pending			
+pt:b:macaco.v4.tomate	Macaco dorme no tomate.	64042e7f			pending			
+pt:b:macaco.v4.sopa	Macaco dorme na sopa.	dc9eed46			pending			
+pt:b:macaco.v4.bola	Macaco dorme na bola.	0169a561			pending			
+pt:b:macaco.v4.pipoca	Macaco dorme na pipoca.	85c4b50f			pending			
+pt:b:macaco.v4.escola	Macaco dorme na escola.	f7b79dce			pending			
+pt:b:macaco.v4.morango	Macaco dorme no morango.	31f7ddbc			pending			
+pt:b:macaco.v5.o1	Macaco vai leite.	b4777c8e			pending			
+pt:b:macaco.v5.o2	Macaco vai uma maçã.	5528b726			pending			
+pt:b:macaco.v5.o3	Macaco vai um brinquedo.	6f9f11b6			pending			
+pt:b:macaco.v5.o4	Macaco vai de carro.	1ada1c21			pending			
+pt:b:macaco.v5.o5	Macaco vai para fora.	6e2f2569			pending			
+pt:b:macaco.v5.casa	Macaco vai para casa.	33990f8f			pending			
+pt:b:macaco.v5.cama	Macaco vai para a cama.	a2d4acb2			pending			
+pt:b:macaco.v5.o8	Macaco vai no peniquinho.	92616a9c			pending			
+pt:b:macaco.v5.lua	Macaco vai para a lua.	ce90ac16			pending			
+pt:b:macaco.v5.uva	Macaco vai para a uva.	d9e29aba			pending			
+pt:b:macaco.v5.tomate	Macaco vai para o tomate.	451d614a			pending			
+pt:b:macaco.v5.sopa	Macaco vai para a sopa.	777bb533			pending			
+pt:b:macaco.v5.bola	Macaco vai para a bola.	c5666670			pending			
+pt:b:macaco.v5.pipoca	Macaco vai para a pipoca.	268a6f22			pending			
+pt:b:macaco.v5.escola	Macaco vai para a escola.	d68d6457			pending			
+pt:b:macaco.v5.morango	Macaco vai para o morango.	73859c87			pending			
+pt:b:macaco.v6.o1	Macaco brinca com leite.	80852402			pending			
+pt:b:macaco.v6.o2	Macaco brinca com uma maçã.	59dd37a2			pending			
+pt:b:macaco.v6.o3	Macaco brinca com um brinquedo.	2d83092a			pending			
+pt:b:macaco.v6.o4	Macaco brinca com o carro.	cb559921			pending			
+pt:b:macaco.v6.o5	Macaco brinca lá fora.	b17d4463			pending			
+pt:b:macaco.v6.casa	Macaco brinca em casa.	b8670b18			pending			
+pt:b:macaco.v6.cama	Macaco brinca na cama.	b8aa7ef9			pending			
+pt:b:macaco.v6.o8	Macaco brinca no peniquinho.	8ccfa3a3			pending			
+pt:b:macaco.v6.lua	Macaco brinca com a lua.	141b6976			pending			
+pt:b:macaco.v6.uva	Macaco brinca com uva.	5fb09dc3			pending			
+pt:b:macaco.v6.tomate	Macaco brinca com tomate.	d787751f			pending			
+pt:b:macaco.v6.sopa	Macaco brinca com sopa.	70e93c6c			pending			
+pt:b:macaco.v6.bola	Macaco brinca com a bola.	decee950			pending			
+pt:b:macaco.v6.pipoca	Macaco brinca com pipoca.	deaff5b5			pending			
+pt:b:macaco.v6.escola	Macaco brinca com a escola.	efe044b7			pending			
+pt:b:macaco.v6.morango	Macaco brinca com morango.	c3f4b95c			pending			
+pt:b:gato.v1.o1	Gato quer leite.	0590e05a			pending			
+pt:b:gato.v1.o2	Gato quer uma maçã.	04029a4a			pending			
+pt:b:gato.v1.o3	Gato quer um brinquedo.	7b6566b2			pending			
+pt:b:gato.v1.o4	Gato quer o carro.	07e07399			pending			
+pt:b:gato.v1.o5	Gato quer fora.	f6f2f5a1			pending			
+pt:b:gato.v1.casa	Gato quer casa.	cf507af7			pending			
+pt:b:gato.v1.cama	Gato quer a cama.	1f3b3cea			pending			
+pt:b:gato.v1.o8	Gato quer o peniquinho.	dbe47f0c			pending			
+pt:b:gato.v1.lua	Gato quer a lua.	52a89bde			pending			
+pt:b:gato.v1.uva	Gato quer uva.	2af4e6fb			pending			
+pt:b:gato.v1.tomate	Gato quer tomate.	f43f5507			pending			
+pt:b:gato.v1.sopa	Gato quer sopa.	2d21b924			pending			
+pt:b:gato.v1.bola	Gato quer a bola.	d55f2c18			pending			
+pt:b:gato.v1.pipoca	Gato quer pipoca.	8fa0257d			pending			
+pt:b:gato.v1.escola	Gato quer a escola.	fe3a4a3f			pending			
+pt:b:gato.v1.morango	Gato quer morango.	b3d20894			pending			
+pt:b:gato.v2.o1	Gato come leite.	0cf12eb9			pending			
+pt:b:gato.v2.o2	Gato come uma maçã.	dea5b2e7			pending			
+pt:b:gato.v2.o3	Gato come um brinquedo.	386b523b			pending			
+pt:b:gato.v2.o4	Gato come o carro.	24ce5cee			pending			
+pt:b:gato.v2.o5	Gato come fora.	8b1de540			pending			
+pt:b:gato.v2.casa	Gato come casa.	0542b3fe			pending			
+pt:b:gato.v2.cama	Gato come a cama.	f12e23b3			pending			
+pt:b:gato.v2.o8	Gato come o peniquinho.	8e1bc109			pending			
+pt:b:gato.v2.lua	Gato come a lua.	55ea5b85			pending			
+pt:b:gato.v2.uva	Gato come uva.	c8495f4c			pending			
+pt:b:gato.v2.tomate	Gato come tomate.	0ca9f78a			pending			
+pt:b:gato.v2.sopa	Gato come sopa.	eb83f71d			pending			
+pt:b:gato.v2.bola	Gato come a bola.	0211cb69			pending			
+pt:b:gato.v2.pipoca	Gato come pipoca.	1f99843c			pending			
+pt:b:gato.v2.escola	Gato come a escola.	6f941ab6			pending			
+pt:b:gato.v2.morango	Gato come morango.	035268c7			pending			
+pt:b:gato.v3.o1	Gato bebe leite.	e9052fc5			pending			
+pt:b:gato.v3.o2	Gato bebe uma maçã.	031e099b			pending			
+pt:b:gato.v3.o3	Gato bebe um brinquedo.	19f734a7			pending			
+pt:b:gato.v3.o4	Gato bebe o carro.	a727e50a			pending			
+pt:b:gato.v3.o5	Gato bebe fora.	c9c33424			pending			
+pt:b:gato.v3.casa	Gato bebe casa.	421116b2			pending			
+pt:b:gato.v3.cama	Gato bebe a cama.	64f841ff			pending			
+pt:b:gato.v3.o8	Gato bebe o peniquinho.	730d246d			pending			
+pt:b:gato.v3.lua	Gato bebe a lua.	efcc8441			pending			
+pt:b:gato.v3.uva	Gato bebe uva.	edf50df8			pending			
+pt:b:gato.v3.tomate	Gato bebe tomate.	19b9ecd6			pending			
+pt:b:gato.v3.sopa	Gato bebe sopa.	61707849			pending			
+pt:b:gato.v3.bola	Gato bebe a bola.	4ea980dd			pending			
+pt:b:gato.v3.pipoca	Gato bebe pipoca.	9e1ee9c8			pending			
+pt:b:gato.v3.escola	Gato bebe a escola.	9c2107f2			pending			
+pt:b:gato.v3.morango	Gato bebe morango.	b314077b			pending			
+pt:b:gato.v4.o1	Gato dorme leite.	5a880428			pending			
+pt:b:gato.v4.o2	Gato dorme uma maçã.	f11de174			pending			
+pt:b:gato.v4.o3	Gato dorme com um brinquedo.	6eb36dd9			pending			
+pt:b:gato.v4.o4	Gato dorme no carro.	5b5cbe1f			pending			
+pt:b:gato.v4.o5	Gato dorme lá fora.	76ddce62			pending			
+pt:b:gato.v4.casa	Gato dorme em casa.	ef587759			pending			
+pt:b:gato.v4.cama	Gato dorme na cama.	df623aac			pending			
+pt:b:gato.v4.o8	Gato dorme no peniquinho.	833bbf8a			pending			
+pt:b:gato.v4.lua	Gato dorme na lua.	aeef2868			pending			
+pt:b:gato.v4.uva	Gato dorme na uva.	a2398a90			pending			
+pt:b:gato.v4.tomate	Gato dorme no tomate.	4d090150			pending			
+pt:b:gato.v4.sopa	Gato dorme na sopa.	fd22afa1			pending			
+pt:b:gato.v4.bola	Gato dorme na bola.	a924f6d6			pending			
+pt:b:gato.v4.pipoca	Gato dorme na pipoca.	08793ad0			pending			
+pt:b:gato.v4.escola	Gato dorme na escola.	1367afb1			pending			
+pt:b:gato.v4.morango	Gato dorme no morango.	eb1bf339			pending			
+pt:b:gato.v5.o1	Gato vai leite.	850a3669			pending			
+pt:b:gato.v5.o2	Gato vai uma maçã.	7bbbfab7			pending			
+pt:b:gato.v5.o3	Gato vai um brinquedo.	bcb0482b			pending			
+pt:b:gato.v5.o4	Gato vai de carro.	73e5484c			pending			
+pt:b:gato.v5.o5	Gato vai para fora.	7ec8ec66			pending			
+pt:b:gato.v5.casa	Gato vai para casa.	504db258			pending			
+pt:b:gato.v5.cama	Gato vai para a cama.	f2386b69			pending			
+pt:b:gato.v5.o8	Gato vai no peniquinho.	d4c57a73			pending			
+pt:b:gato.v5.lua	Gato vai para a lua.	49634c9b			pending			
+pt:b:gato.v5.uva	Gato vai para a uva.	8dba5e47			pending			
+pt:b:gato.v5.tomate	Gato vai para o tomate.	33b28bb9			pending			
+pt:b:gato.v5.sopa	Gato vai para a sopa.	97e85e60			pending			
+pt:b:gato.v5.bola	Gato vai para a bola.	b302f9f3			pending			
+pt:b:gato.v5.pipoca	Gato vai para a pipoca.	1d9a2e09			pending			
+pt:b:gato.v5.escola	Gato vai para a escola.	38460494			pending			
+pt:b:gato.v5.morango	Gato vai para o morango.	4c53b242			pending			
+pt:b:gato.v6.o1	Gato brinca com leite.	aa12a823			pending			
+pt:b:gato.v6.o2	Gato brinca com uma maçã.	d5249b05			pending			
+pt:b:gato.v6.o3	Gato brinca com um brinquedo.	1588c649			pending			
+pt:b:gato.v6.o4	Gato brinca com o carro.	5f3d61dc			pending			
+pt:b:gato.v6.o5	Gato brinca lá fora.	6c6bb012			pending			
+pt:b:gato.v6.casa	Gato brinca em casa.	92d9aec9			pending			
+pt:b:gato.v6.cama	Gato brinca na cama.	582d933c			pending			
+pt:b:gato.v6.o8	Gato brinca no peniquinho.	68b722ba			pending			
+pt:b:gato.v6.lua	Gato brinca com a lua.	99f172af			pending			
+pt:b:gato.v6.uva	Gato brinca com uva.	de16ecaa			pending			
+pt:b:gato.v6.tomate	Gato brinca com tomate.	2a6e9fb4			pending			
+pt:b:gato.v6.sopa	Gato brinca com sopa.	7b302083			pending			
+pt:b:gato.v6.bola	Gato brinca com a bola.	ee48023f			pending			
+pt:b:gato.v6.pipoca	Gato brinca com pipoca.	3dc48bf2			pending			
+pt:b:gato.v6.escola	Gato brinca com a escola.	2979ec08			pending			
+pt:b:gato.v6.morango	Gato brinca com morango.	0c8dacf5			pending			
+pt:b:jacare.v1.o1	Jacaré quer leite.	8f012c6f			pending			
+pt:b:jacare.v1.o2	Jacaré quer uma maçã.	6e4bf889			pending			
+pt:b:jacare.v1.o3	Jacaré quer um brinquedo.	9d808915			pending			
+pt:b:jacare.v1.o4	Jacaré quer o carro.	96bece68			pending			
+pt:b:jacare.v1.o5	Jacaré quer fora.	bea1f716			pending			
+pt:b:jacare.v1.casa	Jacaré quer casa.	7faeca08			pending			
+pt:b:jacare.v1.cama	Jacaré quer a cama.	fe2972b9			pending			
+pt:b:jacare.v1.o8	Jacaré quer o peniquinho.	ee48c263			pending			
+pt:b:jacare.v1.lua	Jacaré quer a lua.	322e5a2b			pending			
+pt:b:jacare.v1.uva	Jacaré quer uva.	ed909686			pending			
+pt:b:jacare.v1.tomate	Jacaré quer tomate.	ff96f500			pending			
+pt:b:jacare.v1.sopa	Jacaré quer sopa.	d69f02df			pending			
+pt:b:jacare.v1.bola	Jacaré quer a bola.	6a568103			pending			
+pt:b:jacare.v1.pipoca	Jacaré quer pipoca.	ceb815ae			pending			
+pt:b:jacare.v1.escola	Jacaré quer a escola.	39957fc4			pending			
+pt:b:jacare.v1.morango	Jacaré quer morango.	81dedaa9			pending			
+pt:b:jacare.v2.o1	Jacaré come leite.	c65175c8			pending			
+pt:b:jacare.v2.o2	Jacaré come uma maçã.	4c5f8994			pending			
+pt:b:jacare.v2.o3	Jacaré come um brinquedo.	85917ab4			pending			
+pt:b:jacare.v2.o4	Jacaré come o carro.	dbeae32b			pending			
+pt:b:jacare.v2.o5	Jacaré come fora.	87484317			pending			
+pt:b:jacare.v2.casa	Jacaré come casa.	5bffce09			pending			
+pt:b:jacare.v2.cama	Jacaré come a cama.	b6398368			pending			
+pt:b:jacare.v2.o8	Jacaré come o peniquinho.	da23db4e			pending			
+pt:b:jacare.v2.lua	Jacaré come a lua.	58be11e4			pending			
+pt:b:jacare.v2.uva	Jacaré come uva.	6729fbc5			pending			
+pt:b:jacare.v2.tomate	Jacaré come tomate.	7cebd2dd			pending			
+pt:b:jacare.v2.sopa	Jacaré come sopa.	3791b6e6			pending			
+pt:b:jacare.v2.bola	Jacaré come a bola.	2b92c9ba			pending			
+pt:b:jacare.v2.pipoca	Jacaré come pipoca.	9a11722f			pending			
+pt:b:jacare.v2.escola	Jacaré come a escola.	837dd02d			pending			
+pt:b:jacare.v2.morango	Jacaré come morango.	807f514e			pending			
+pt:b:jacare.v3.o1	Jacaré bebe leite.	4fee2378			pending			
+pt:b:jacare.v3.o2	Jacaré bebe uma maçã.	95cc5da4			pending			
+pt:b:jacare.v3.o3	Jacaré bebe um brinquedo.	7618fa64			pending			
+pt:b:jacare.v3.o4	Jacaré bebe o carro.	37bc823b			pending			
+pt:b:jacare.v3.o5	Jacaré bebe fora.	e39741a7			pending			
+pt:b:jacare.v3.casa	Jacaré bebe casa.	76736299			pending			
+pt:b:jacare.v3.cama	Jacaré bebe a cama.	95257b98			pending			
+pt:b:jacare.v3.o8	Jacaré bebe o peniquinho.	c6a6791e			pending			
+pt:b:jacare.v3.lua	Jacaré bebe a lua.	4eb67954			pending			
+pt:b:jacare.v3.uva	Jacaré bebe uva.	fcdbaf15			pending			
+pt:b:jacare.v3.tomate	Jacaré bebe tomate.	dc82d20d			pending			
+pt:b:jacare.v3.sopa	Jacaré bebe sopa.	9ba0a216			pending			
+pt:b:jacare.v3.bola	Jacaré bebe a bola.	0d53562a			pending			
+pt:b:jacare.v3.pipoca	Jacaré bebe pipoca.	77e1989f			pending			
+pt:b:jacare.v3.escola	Jacaré bebe a escola.	1cab5f3d			pending			
+pt:b:jacare.v3.morango	Jacaré bebe morango.	92e603fe			pending			
+pt:b:jacare.v4.o1	Jacaré dorme leite.	af8cae17			pending			
+pt:b:jacare.v4.o2	Jacaré dorme uma maçã.	6c9fd6a1			pending			
+pt:b:jacare.v4.o3	Jacaré dorme com um brinquedo.	2b6c49c4			pending			
+pt:b:jacare.v4.o4	Jacaré dorme no carro.	8be2c84a			pending			
+pt:b:jacare.v4.o5	Jacaré dorme lá fora.	5bb4d345			pending			
+pt:b:jacare.v4.casa	Jacaré dorme em casa.	25cea59e			pending			
+pt:b:jacare.v4.cama	Jacaré dorme na cama.	43fa883f			pending			
+pt:b:jacare.v4.o8	Jacaré dorme no peniquinho.	ebfe6ead			pending			
+pt:b:jacare.v4.lua	Jacaré dorme na lua.	1fd6d681			pending			
+pt:b:jacare.v4.uva	Jacaré dorme na uva.	7fc97509			pending			
+pt:b:jacare.v4.tomate	Jacaré dorme no tomate.	9be83d6b			pending			
+pt:b:jacare.v4.sopa	Jacaré dorme na sopa.	b7aecc6a			pending			
+pt:b:jacare.v4.bola	Jacaré dorme na bola.	03e71f1d			pending			
+pt:b:jacare.v4.pipoca	Jacaré dorme na pipoca.	f1c9a943			pending			
+pt:b:jacare.v4.escola	Jacaré dorme na escola.	9a34ff32			pending			
+pt:b:jacare.v4.morango	Jacaré dorme no morango.	d4a351c0			pending			
+pt:b:jacare.v5.o1	Jacaré vai leite.	5bbd156a			pending			
+pt:b:jacare.v5.o2	Jacaré vai uma maçã.	02971d7a			pending			
+pt:b:jacare.v5.o3	Jacaré vai um brinquedo.	178f2882			pending			
+pt:b:jacare.v5.o4	Jacaré vai de carro.	6d1a4b1d			pending			
+pt:b:jacare.v5.o5	Jacaré vai para fora.	7b2fdd95			pending			
+pt:b:jacare.v5.casa	Jacaré vai para casa.	9e8d06ab			pending			
+pt:b:jacare.v5.cama	Jacaré vai para a cama.	f949d776			pending			
+pt:b:jacare.v5.o8	Jacaré vai no peniquinho.	abf08ce0			pending			
+pt:b:jacare.v5.lua	Jacaré vai para a lua.	c02fb05a			pending			
+pt:b:jacare.v5.uva	Jacaré vai para a uva.	2819b85e			pending			
+pt:b:jacare.v5.tomate	Jacaré vai para o tomate.	53f58786			pending			
+pt:b:jacare.v5.sopa	Jacaré vai para a sopa.	e84b5f17			pending			
+pt:b:jacare.v5.bola	Jacaré vai para a bola.	76f8846c			pending			
+pt:b:jacare.v5.pipoca	Jacaré vai para a pipoca.	4ca9e3b6			pending			
+pt:b:jacare.v5.escola	Jacaré vai para a escola.	05b3138b			pending			
+pt:b:jacare.v5.morango	Jacaré vai para o morango.	c62f6c2b			pending			
+pt:b:jacare.v6.o1	Jacaré brinca com leite.	236cefa6			pending			
+pt:b:jacare.v6.o2	Jacaré brinca com uma maçã.	b23c74ae			pending			
+pt:b:jacare.v6.o3	Jacaré brinca com um brinquedo.	5dd97d9e			pending			
+pt:b:jacare.v6.o4	Jacaré brinca com o carro.	35afcf25			pending			
+pt:b:jacare.v6.o5	Jacaré brinca lá fora.	5c2c8d0f			pending			
+pt:b:jacare.v6.casa	Jacaré brinca em casa.	e70d1b3c			pending			
+pt:b:jacare.v6.cama	Jacaré brinca na cama.	c652ecbd			pending			
+pt:b:jacare.v6.o8	Jacaré brinca no peniquinho.	197f256f			pending			
+pt:b:jacare.v6.lua	Jacaré brinca com a lua.	2e7e736a			pending			
+pt:b:jacare.v6.uva	Jacaré brinca com uva.	268a3047			pending			
+pt:b:jacare.v6.tomate	Jacaré brinca com tomate.	97516dd3			pending			
+pt:b:jacare.v6.sopa	Jacaré brinca com sopa.	270ff460			pending			
+pt:b:jacare.v6.bola	Jacaré brinca com a bola.	ac29e6bc			pending			
+pt:b:jacare.v6.pipoca	Jacaré brinca com pipoca.	de52b409			pending			
+pt:b:jacare.v6.escola	Jacaré brinca com a escola.	e0ac6f3b			pending			
+pt:b:jacare.v6.morango	Jacaré brinca com morango.	486b6318			pending			
+pt:b:pet-🐵.v1.o1	O macaco quer leite.	e4cdfa9c			pending			
+pt:b:pet-🐵.v1.o2	O macaco quer uma maçã.	9ef5e340			pending			
+pt:b:pet-🐵.v1.o3	O macaco quer um brinquedo.	d0976b38			pending			
+pt:b:pet-🐵.v1.o4	O macaco quer o carro.	106ae18f			pending			
+pt:b:pet-🐵.v1.o5	O macaco quer fora.	87469743			pending			
+pt:b:pet-🐵.v1.casa	O macaco quer casa.	c1099f55			pending			
+pt:b:pet-🐵.v1.cama	O macaco quer a cama.	f5ff8bfc			pending			
+pt:b:pet-🐵.v1.o8	O macaco quer o peniquinho.	f6a17b7a			pending			
+pt:b:pet-🐵.v1.lua	O macaco quer a lua.	e913a078			pending			
+pt:b:pet-🐵.v1.uva	O macaco quer uva.	7a0c0519			pending			
+pt:b:pet-🐵.v1.tomate	O macaco quer tomate.	4ea18071			pending			
+pt:b:pet-🐵.v1.sopa	O macaco quer sopa.	22b1afda			pending			
+pt:b:pet-🐵.v1.bola	O macaco quer a bola.	01f7dd66			pending			
+pt:b:pet-🐵.v1.pipoca	O macaco quer pipoca.	44238633			pending			
+pt:b:pet-🐵.v1.escola	O macaco quer a escola.	c62652a1			pending			
+pt:b:pet-🐵.v1.morango	O macaco quer morango.	a2d9e20a			pending			
+pt:b:pet-🐵.v2.o1	O macaco come leite.	dd830017			pending			
+pt:b:pet-🐵.v2.o2	O macaco come uma maçã.	cb1fdca1			pending			
+pt:b:pet-🐵.v2.o3	O macaco come um brinquedo.	6f41196d			pending			
+pt:b:pet-🐵.v2.o4	O macaco come o carro.	6a589e50			pending			
+pt:b:pet-🐵.v2.o5	O macaco come fora.	191c9e1e			pending			
+pt:b:pet-🐵.v2.casa	O macaco come casa.	37accd00			pending			
+pt:b:pet-🐵.v2.cama	O macaco come a cama.	fe4eed01			pending			
+pt:b:pet-🐵.v2.o8	O macaco come o peniquinho.	746b0d6b			pending			
+pt:b:pet-🐵.v2.lua	O macaco come a lua.	e01bad63			pending			
+pt:b:pet-🐵.v2.uva	O macaco come uva.	1b6859ce			pending			
+pt:b:pet-🐵.v2.tomate	O macaco come tomate.	aeb29278			pending			
+pt:b:pet-🐵.v2.sopa	O macaco come sopa.	53d0f267			pending			
+pt:b:pet-🐵.v2.bola	O macaco come a bola.	77127c1b			pending			
+pt:b:pet-🐵.v2.pipoca	O macaco come pipoca.	17a74686			pending			
+pt:b:pet-🐵.v2.escola	O macaco come a escola.	41f89bdc			pending			
+pt:b:pet-🐵.v2.morango	O macaco come morango.	905ce971			pending			
+pt:b:pet-🐵.v3.o1	O macaco bebe leite.	e46a3113			pending			
+pt:b:pet-🐵.v3.o2	O macaco bebe uma maçã.	f28538d5			pending			
+pt:b:pet-🐵.v3.o3	O macaco bebe um brinquedo.	c03a2039			pending			
+pt:b:pet-🐵.v3.o4	O macaco bebe o carro.	5d5399ac			pending			
+pt:b:pet-🐵.v3.o5	O macaco bebe fora.	64512dc2			pending			
+pt:b:pet-🐵.v3.casa	O macaco bebe casa.	0f1795f4			pending			
+pt:b:pet-🐵.v3.cama	O macaco bebe a cama.	4d22ccad			pending			
+pt:b:pet-🐵.v3.o8	O macaco bebe o peniquinho.	30e85bff			pending			
+pt:b:pet-🐵.v3.lua	O macaco bebe a lua.	a711ee9f			pending			
+pt:b:pet-🐵.v3.uva	O macaco bebe uva.	1e52eeba			pending			
+pt:b:pet-🐵.v3.tomate	O macaco bebe tomate.	69197c24			pending			
+pt:b:pet-🐵.v3.sopa	O macaco bebe sopa.	344ff133			pending			
+pt:b:pet-🐵.v3.bola	O macaco bebe a bola.	c936682f			pending			
+pt:b:pet-🐵.v3.pipoca	O macaco bebe pipoca.	362f0b22			pending			
+pt:b:pet-🐵.v3.escola	O macaco bebe a escola.	6b5543d8			pending			
+pt:b:pet-🐵.v3.morango	O macaco bebe morango.	e65e3365			pending			
+pt:b:pet-🐵.v4.o1	O macaco dorme leite.	bfd9317a			pending			
+pt:b:pet-🐵.v4.o2	O macaco dorme uma maçã.	8130366a			pending			
+pt:b:pet-🐵.v4.o3	O macaco dorme com um brinquedo.	73e070ff			pending			
+pt:b:pet-🐵.v4.o4	O macaco dorme no carro.	489821c5			pending			
+pt:b:pet-🐵.v4.o5	O macaco dorme lá fora.	bd3b8bb8			pending			
+pt:b:pet-🐵.v4.casa	O macaco dorme em casa.	106d69db			pending			
+pt:b:pet-🐵.v4.cama	O macaco dorme na cama.	a973eba6			pending			
+pt:b:pet-🐵.v4.o8	O macaco dorme no peniquinho.	4b612af0			pending			
+pt:b:pet-🐵.v4.lua	O macaco dorme na lua.	0b07fd8a			pending			
+pt:b:pet-🐵.v4.uva	O macaco dorme na uva.	9a709bae			pending			
+pt:b:pet-🐵.v4.tomate	O macaco dorme no tomate.	5de26036			pending			
+pt:b:pet-🐵.v4.sopa	O macaco dorme na sopa.	6f0e3f47			pending			
+pt:b:pet-🐵.v4.bola	O macaco dorme na bola.	51fb70dc			pending			
+pt:b:pet-🐵.v4.pipoca	O macaco dorme na pipoca.	2be26ee6			pending			
+pt:b:pet-🐵.v4.escola	O macaco dorme na escola.	5fb8b1db			pending			
+pt:b:pet-🐵.v4.morango	O macaco dorme no morango.	3b6939db			pending			
+pt:b:pet-🐵.v5.o1	O macaco vai leite.	47c20667			pending			
+pt:b:pet-🐵.v5.o2	O macaco vai uma maçã.	bf337511			pending			
+pt:b:pet-🐵.v5.o3	O macaco vai um brinquedo.	f229aafd			pending			
+pt:b:pet-🐵.v5.o4	O macaco vai de carro.	eeb7ef86			pending			
+pt:b:pet-🐵.v5.o5	O macaco vai para fora.	19e2339c			pending			
+pt:b:pet-🐵.v5.casa	O macaco vai para casa.	b40c1e3a			pending			
+pt:b:pet-🐵.v5.cama	O macaco vai para a cama.	1fb5dfd7			pending			
+pt:b:pet-🐵.v5.o8	O macaco vai no peniquinho.	223e8abd			pending			
+pt:b:pet-🐵.v5.lua	O macaco vai para a lua.	a0333649			pending			
+pt:b:pet-🐵.v5.uva	O macaco vai para a uva.	1642d441			pending			
+pt:b:pet-🐵.v5.tomate	O macaco vai para o tomate.	18c730e3			pending			
+pt:b:pet-🐵.v5.sopa	O macaco vai para a sopa.	2fd58c82			pending			
+pt:b:pet-🐵.v5.bola	O macaco vai para a bola.	f521a565			pending			
+pt:b:pet-🐵.v5.pipoca	O macaco vai para a pipoca.	165e014b			pending			
+pt:b:pet-🐵.v5.escola	O macaco vai para a escola.	3b0a1afa			pending			
+pt:b:pet-🐵.v5.morango	O macaco vai para o morango.	47aa1a28			pending			
+pt:b:pet-🐵.v6.o1	O macaco brinca com leite.	0348f2c1			pending			
+pt:b:pet-🐵.v6.o2	O macaco brinca com uma maçã.	752be69f			pending			
+pt:b:pet-🐵.v6.o3	O macaco brinca com um brinquedo.	9f06c813			pending			
+pt:b:pet-🐵.v6.o4	O macaco brinca com o carro.	73267c96			pending			
+pt:b:pet-🐵.v6.o5	O macaco brinca lá fora.	26960d14			pending			
+pt:b:pet-🐵.v6.casa	O macaco brinca em casa.	084291af			pending			
+pt:b:pet-🐵.v6.cama	O macaco brinca na cama.	596f692a			pending			
+pt:b:pet-🐵.v6.o8	O macaco brinca no peniquinho.	40488a4c			pending			
+pt:b:pet-🐵.v6.lua	O macaco brinca com a lua.	1158e77d			pending			
+pt:b:pet-🐵.v6.uva	O macaco brinca com uva.	5d17ef34			pending			
+pt:b:pet-🐵.v6.tomate	O macaco brinca com tomate.	7f2efe42			pending			
+pt:b:pet-🐵.v6.sopa	O macaco brinca com sopa.	ca2d91a5			pending			
+pt:b:pet-🐵.v6.bola	O macaco brinca com a bola.	671f8341			pending			
+pt:b:pet-🐵.v6.pipoca	O macaco brinca com pipoca.	6c300c54			pending			
+pt:b:pet-🐵.v6.escola	O macaco brinca com a escola.	0ac439ae			pending			
+pt:b:pet-🐵.v6.morango	O macaco brinca com morango.	0c22168f			pending			
+pt:b:pet-🦆.v1.o1	O pato quer leite.	716f36c2			pending			
+pt:b:pet-🦆.v1.o2	O pato quer uma maçã.	aecca8e2			pending			
+pt:b:pet-🦆.v1.o3	O pato quer um brinquedo.	f3e1226a			pending			
+pt:b:pet-🦆.v1.o4	O pato quer o carro.	8fa27161			pending			
+pt:b:pet-🦆.v1.o5	O pato quer fora.	7afd9409			pending			
+pt:b:pet-🦆.v1.casa	O pato quer casa.	40677e2f			pending			
+pt:b:pet-🦆.v1.cama	O pato quer a cama.	ffc430d2			pending			
+pt:b:pet-🦆.v1.o8	O pato quer o peniquinho.	402991f4			pending			
+pt:b:pet-🦆.v1.lua	O pato quer a lua.	58a95db6			pending			
+pt:b:pet-🦆.v1.uva	O pato quer uva.	a7905683			pending			
+pt:b:pet-🦆.v1.tomate	O pato quer tomate.	8575fadf			pending			
+pt:b:pet-🦆.v1.sopa	O pato quer sopa.	6e28932c			pending			
+pt:b:pet-🦆.v1.bola	O pato quer a bola.	09093590			pending			
+pt:b:pet-🦆.v1.pipoca	O pato quer pipoca.	25f47475			pending			
+pt:b:pet-🦆.v1.escola	O pato quer a escola.	c0fb8cf7			pending			
+pt:b:pet-🦆.v1.morango	O pato quer morango.	b605761c			pending			
+pt:b:pet-🦆.v2.o1	O pato come leite.	1b2d75e1			pending			
+pt:b:pet-🦆.v2.o2	O pato come uma maçã.	a1d66b3f			pending			
+pt:b:pet-🦆.v2.o3	O pato come um brinquedo.	aa214db3			pending			
+pt:b:pet-🦆.v2.o4	O pato come o carro.	e267d5b6			pending			
+pt:b:pet-🦆.v2.o5	O pato come fora.	98368da8			pending			
+pt:b:pet-🦆.v2.casa	O pato come casa.	df3a7936			pending			
+pt:b:pet-🦆.v2.cama	O pato come a cama.	ae52bc1b			pending			
+pt:b:pet-🦆.v2.o8	O pato come o peniquinho.	fc4f2351			pending			
+pt:b:pet-🦆.v2.lua	O pato come a lua.	d7f61b1d			pending			
+pt:b:pet-🦆.v2.uva	O pato come uva.	4eaf8ed4			pending			
+pt:b:pet-🦆.v2.tomate	O pato come tomate.	50a3c962			pending			
+pt:b:pet-🦆.v2.sopa	O pato come sopa.	a81c86c5			pending			
+pt:b:pet-🦆.v2.bola	O pato come a bola.	09e4e1e1			pending			
+pt:b:pet-🦆.v2.pipoca	O pato come pipoca.	966721f4			pending			
+pt:b:pet-🦆.v2.escola	O pato come a escola.	a6186e4e			pending			
+pt:b:pet-🦆.v2.morango	O pato come morango.	5f9c51af			pending			
+pt:b:pet-🦆.v3.o1	O pato bebe leite.	0ac0322d			pending			
+pt:b:pet-🦆.v3.o2	O pato bebe uma maçã.	362630b3			pending			
+pt:b:pet-🦆.v3.o3	O pato bebe um brinquedo.	0e6f8ddf			pending			
+pt:b:pet-🦆.v3.o4	O pato bebe o carro.	6e30ae92			pending			
+pt:b:pet-🦆.v3.o5	O pato bebe fora.	3ae2bd2c			pending			
+pt:b:pet-🦆.v3.casa	O pato bebe casa.	d78710ca			pending			
+pt:b:pet-🦆.v3.cama	O pato bebe a cama.	b6fd8047			pending			
+pt:b:pet-🦆.v3.o8	O pato bebe o peniquinho.	a7f4de35			pending			
+pt:b:pet-🦆.v3.lua	O pato bebe a lua.	16984bf9			pending			
+pt:b:pet-🦆.v3.uva	O pato bebe uva.	387522e0			pending			
+pt:b:pet-🦆.v3.tomate	O pato bebe tomate.	8763d60e			pending			
+pt:b:pet-🦆.v3.sopa	O pato bebe sopa.	1be9cf11			pending			
+pt:b:pet-🦆.v3.bola	O pato bebe a bola.	5e259915			pending			
+pt:b:pet-🦆.v3.pipoca	O pato bebe pipoca.	f21fc400			pending			
+pt:b:pet-🦆.v3.escola	O pato bebe a escola.	be7c018a			pending			
+pt:b:pet-🦆.v3.morango	O pato bebe morango.	035e2323			pending			
+pt:b:pet-🦆.v4.o1	O pato dorme leite.	027eb5a0			pending			
+pt:b:pet-🦆.v4.o2	O pato dorme uma maçã.	b9076abc			pending			
+pt:b:pet-🦆.v4.o3	O pato dorme com um brinquedo.	2dd87a61			pending			
+pt:b:pet-🦆.v4.o4	O pato dorme no carro.	145d0457			pending			
+pt:b:pet-🦆.v4.o5	O pato dorme lá fora.	b7f651fa			pending			
+pt:b:pet-🦆.v4.casa	O pato dorme em casa.	3fc862a1			pending			
+pt:b:pet-🦆.v4.cama	O pato dorme na cama.	dd85e564			pending			
+pt:b:pet-🦆.v4.o8	O pato dorme no peniquinho.	c6216022			pending			
+pt:b:pet-🦆.v4.lua	O pato dorme na lua.	690c9030			pending			
+pt:b:pet-🦆.v4.uva	O pato dorme na uva.	0bc17048			pending			
+pt:b:pet-🦆.v4.tomate	O pato dorme no tomate.	66aa3ee8			pending			
+pt:b:pet-🦆.v4.sopa	O pato dorme na sopa.	3f078bf9			pending			
+pt:b:pet-🦆.v4.bola	O pato dorme na bola.	57debabe			pending			
+pt:b:pet-🦆.v4.pipoca	O pato dorme na pipoca.	61ba8bb8			pending			
+pt:b:pet-🦆.v4.escola	O pato dorme na escola.	ca55e639			pending			
+pt:b:pet-🦆.v4.morango	O pato dorme no morango.	980cd321			pending			
+pt:b:pet-🦆.v5.o1	O pato vai leite.	4760cbd1			pending			
+pt:b:pet-🦆.v5.o2	O pato vai uma maçã.	7bb9ac0f			pending			
+pt:b:pet-🦆.v5.o3	O pato vai um brinquedo.	19c77be3			pending			
+pt:b:pet-🦆.v5.o4	O pato vai de carro.	b06d1ad4			pending			
+pt:b:pet-🦆.v5.o5	O pato vai para fora.	ac73483e			pending			
+pt:b:pet-🦆.v5.casa	O pato vai para casa.	4b0440a0			pending			
+pt:b:pet-🦆.v5.cama	O pato vai para a cama.	900a27a1			pending			
+pt:b:pet-🦆.v5.o8	O pato vai no peniquinho.	5d38fedb			pending			
+pt:b:pet-🦆.v5.lua	O pato vai para a lua.	9ab6cd03			pending			
+pt:b:pet-🦆.v5.uva	O pato vai para a uva.	8972601f			pending			
+pt:b:pet-🦆.v5.tomate	O pato vai para o tomate.	e25dfaf1			pending			
+pt:b:pet-🦆.v5.sopa	O pato vai para a sopa.	98664d98			pending			
+pt:b:pet-🦆.v5.bola	O pato vai para a bola.	08cdb6bb			pending			
+pt:b:pet-🦆.v5.pipoca	O pato vai para a pipoca.	1647ddd1			pending			
+pt:b:pet-🦆.v5.escola	O pato vai para a escola.	26ee49fc			pending			
+pt:b:pet-🦆.v5.morango	O pato vai para o morango.	b48eb98a			pending			
+pt:b:pet-🦆.v6.o1	O pato brinca com leite.	7415198b			pending			
+pt:b:pet-🦆.v6.o2	O pato brinca com uma maçã.	3f1e6add			pending			
+pt:b:pet-🦆.v6.o3	O pato brinca com um brinquedo.	23ae06c1			pending			
+pt:b:pet-🦆.v6.o4	O pato brinca com o carro.	c0bde104			pending			
+pt:b:pet-🦆.v6.o5	O pato brinca lá fora.	f22b52da			pending			
+pt:b:pet-🦆.v6.casa	O pato brinca em casa.	4cdf2c01			pending			
+pt:b:pet-🦆.v6.cama	O pato brinca na cama.	6e5af5c4			pending			
+pt:b:pet-🦆.v6.o8	O pato brinca no peniquinho.	bb741e02			pending			
+pt:b:pet-🦆.v6.lua	O pato brinca com a lua.	d8a37d47			pending			
+pt:b:pet-🦆.v6.uva	O pato brinca com uva.	455cd592			pending			
+pt:b:pet-🦆.v6.tomate	O pato brinca com tomate.	fef9cf4c			pending			
+pt:b:pet-🦆.v6.sopa	O pato brinca com sopa.	7f3b2e0b			pending			
+pt:b:pet-🦆.v6.bola	O pato brinca com a bola.	d5fe1a17			pending			
+pt:b:pet-🦆.v6.pipoca	O pato brinca com pipoca.	f5454b2a			pending			
+pt:b:pet-🦆.v6.escola	O pato brinca com a escola.	a0dd3560			pending			
+pt:b:pet-🦆.v6.morango	O pato brinca com morango.	b831045d			pending			
+pt:b:pet-🐮.v1.o1	A vaca quer leite.	89346ecf			pending			
+pt:b:pet-🐮.v1.o2	A vaca quer uma maçã.	c911cee9			pending			
+pt:b:pet-🐮.v1.o3	A vaca quer um brinquedo.	1f2052f5			pending			
+pt:b:pet-🐮.v1.o4	A vaca quer o carro.	9f855d48			pending			
+pt:b:pet-🐮.v1.o5	A vaca quer fora.	127ff276			pending			
+pt:b:pet-🐮.v1.casa	A vaca quer casa.	fd516d68			pending			
+pt:b:pet-🐮.v1.cama	A vaca quer a cama.	69a8fd99			pending			
+pt:b:pet-🐮.v1.o8	A vaca quer o peniquinho.	58efe8c3			pending			
+pt:b:pet-🐮.v1.lua	A vaca quer a lua.	2c45588b			pending			
+pt:b:pet-🐮.v1.uva	A vaca quer uva.	3a3c7fe6			pending			
+pt:b:pet-🐮.v1.tomate	A vaca quer tomate.	7cc5c760			pending			
+pt:b:pet-🐮.v1.sopa	A vaca quer sopa.	7008c43f			pending			
+pt:b:pet-🐮.v1.bola	A vaca quer a bola.	d35ba2e3			pending			
+pt:b:pet-🐮.v1.pipoca	A vaca quer pipoca.	a49f250e			pending			
+pt:b:pet-🐮.v1.escola	A vaca quer a escola.	af726b24			pending			
+pt:b:pet-🐮.v1.morango	A vaca quer morango.	32946c89			pending			
+pt:b:pet-🐮.v2.o1	A vaca come leite.	05dfba28			pending			
+pt:b:pet-🐮.v2.o2	A vaca come uma maçã.	fc123374			pending			
+pt:b:pet-🐮.v2.o3	A vaca come um brinquedo.	82612d14			pending			
+pt:b:pet-🐮.v2.o4	A vaca come o carro.	9931a68b			pending			
+pt:b:pet-🐮.v2.o5	A vaca come fora.	bdc7aa77			pending			
+pt:b:pet-🐮.v2.casa	A vaca come casa.	927f3569			pending			
+pt:b:pet-🐮.v2.cama	A vaca come a cama.	5f7a8848			pending			
+pt:b:pet-🐮.v2.o8	A vaca come o peniquinho.	0a070aae			pending			
+pt:b:pet-🐮.v2.lua	A vaca come a lua.	70e785c4			pending			
+pt:b:pet-🐮.v2.uva	A vaca come uva.	1c431325			pending			
+pt:b:pet-🐮.v2.tomate	A vaca come tomate.	ed3696bd			pending			
+pt:b:pet-🐮.v2.sopa	A vaca come sopa.	eb977ec6			pending			
+pt:b:pet-🐮.v2.bola	A vaca come a bola.	6e214d1a			pending			
+pt:b:pet-🐮.v2.pipoca	A vaca come pipoca.	420f628f			pending			
+pt:b:pet-🐮.v2.escola	A vaca come a escola.	5b385d0d			pending			
+pt:b:pet-🐮.v2.morango	A vaca come morango.	3b8e412e			pending			
+pt:b:pet-🐮.v3.o1	A vaca bebe leite.	6c14fed8			pending			
+pt:b:pet-🐮.v3.o2	A vaca bebe uma maçã.	cc27ad84			pending			
+pt:b:pet-🐮.v3.o3	A vaca bebe um brinquedo.	34a38a44			pending			
+pt:b:pet-🐮.v3.o4	A vaca bebe o carro.	466da79b			pending			
+pt:b:pet-🐮.v3.o5	A vaca bebe fora.	b696e007			pending			
+pt:b:pet-🐮.v3.casa	A vaca bebe casa.	cbeca079			pending			
+pt:b:pet-🐮.v3.cama	A vaca bebe a cama.	4822e4f8			pending			
+pt:b:pet-🐮.v3.o8	A vaca bebe o peniquinho.	66b681fe			pending			
+pt:b:pet-🐮.v3.lua	A vaca bebe a lua.	fdd07a34			pending			
+pt:b:pet-🐮.v3.uva	A vaca bebe uva.	9f7f9175			pending			
+pt:b:pet-🐮.v3.tomate	A vaca bebe tomate.	370dd96d			pending			
+pt:b:pet-🐮.v3.sopa	A vaca bebe sopa.	711aa976			pending			
+pt:b:pet-🐮.v3.bola	A vaca bebe a bola.	404ff60a			pending			
+pt:b:pet-🐮.v3.pipoca	A vaca bebe pipoca.	96899aff			pending			
+pt:b:pet-🐮.v3.escola	A vaca bebe a escola.	9b71491d			pending			
+pt:b:pet-🐮.v3.morango	A vaca bebe morango.	e4a6d3de			pending			
+pt:b:pet-🐮.v4.o1	A vaca dorme leite.	af7afaf7			pending			
+pt:b:pet-🐮.v4.o2	A vaca dorme uma maçã.	70853781			pending			
+pt:b:pet-🐮.v4.o3	A vaca dorme com um brinquedo.	8e0e98a4			pending			
+pt:b:pet-🐮.v4.o4	A vaca dorme no carro.	3ecfebaa			pending			
+pt:b:pet-🐮.v4.o5	A vaca dorme lá fora.	482abaa5			pending			
+pt:b:pet-🐮.v4.casa	A vaca dorme em casa.	3a6c5f7e			pending			
+pt:b:pet-🐮.v4.cama	A vaca dorme na cama.	b06fa61f			pending			
+pt:b:pet-🐮.v4.o8	A vaca dorme no peniquinho.	a844c50d			pending			
+pt:b:pet-🐮.v4.lua	A vaca dorme na lua.	947c2261			pending			
+pt:b:pet-🐮.v4.uva	A vaca dorme na uva.	5b214269			pending			
+pt:b:pet-🐮.v4.tomate	A vaca dorme no tomate.	7e4cfd4b			pending			
+pt:b:pet-🐮.v4.sopa	A vaca dorme na sopa.	f7e4d94a			pending			
+pt:b:pet-🐮.v4.bola	A vaca dorme na bola.	ede29d7d			pending			
+pt:b:pet-🐮.v4.pipoca	A vaca dorme na pipoca.	edc84ea3			pending			
+pt:b:pet-🐮.v4.escola	A vaca dorme na escola.	93b93b92			pending			
+pt:b:pet-🐮.v4.morango	A vaca dorme no morango.	2cc49820			pending			
+pt:b:pet-🐮.v5.o1	A vaca vai leite.	e7e6f6ca			pending			
+pt:b:pet-🐮.v5.o2	A vaca vai uma maçã.	553b0cda			pending			
+pt:b:pet-🐮.v5.o3	A vaca vai um brinquedo.	90f7cde2			pending			
+pt:b:pet-🐮.v5.o4	A vaca vai de carro.	68dea07d			pending			
+pt:b:pet-🐮.v5.o5	A vaca vai para fora.	c59dcbf5			pending			
+pt:b:pet-🐮.v5.casa	A vaca vai para casa.	7bee1a8b			pending			
+pt:b:pet-🐮.v5.cama	A vaca vai para a cama.	cb3ea8d6			pending			
+pt:b:pet-🐮.v5.o8	A vaca vai no peniquinho.	5c4b51c0			pending			
+pt:b:pet-🐮.v5.lua	A vaca vai para a lua.	dd872c3a			pending			
+pt:b:pet-🐮.v5.uva	A vaca vai para a uva.	47eb9d3e			pending			
+pt:b:pet-🐮.v5.tomate	A vaca vai para o tomate.	c3c3ea66			pending			
+pt:b:pet-🐮.v5.sopa	A vaca vai para a sopa.	74b46a77			pending			
+pt:b:pet-🐮.v5.bola	A vaca vai para a bola.	48ed55cc			pending			
+pt:b:pet-🐮.v5.pipoca	A vaca vai para a pipoca.	aa18f616			pending			
+pt:b:pet-🐮.v5.escola	A vaca vai para a escola.	0ce451eb			pending			
+pt:b:pet-🐮.v5.morango	A vaca vai para o morango.	18ecff0b			pending			
+pt:b:pet-🐮.v6.o1	A vaca brinca com leite.	5086bf86			pending			
+pt:b:pet-🐮.v6.o2	A vaca brinca com uma maçã.	83c6168e			pending			
+pt:b:pet-🐮.v6.o3	A vaca brinca com um brinquedo.	0d9a867e			pending			
+pt:b:pet-🐮.v6.o4	A vaca brinca com o carro.	771c6d05			pending			
+pt:b:pet-🐮.v6.o5	A vaca brinca lá fora.	2936e9ef			pending			
+pt:b:pet-🐮.v6.casa	A vaca brinca em casa.	85c0399c			pending			
+pt:b:pet-🐮.v6.cama	A vaca brinca na cama.	e505419d			pending			
+pt:b:pet-🐮.v6.o8	A vaca brinca no peniquinho.	205a024f			pending			
+pt:b:pet-🐮.v6.lua	A vaca brinca com a lua.	af1e4dca			pending			
+pt:b:pet-🐮.v6.uva	A vaca brinca com uva.	338d3da7			pending			
+pt:b:pet-🐮.v6.tomate	A vaca brinca com tomate.	a1417033			pending			
+pt:b:pet-🐮.v6.sopa	A vaca brinca com sopa.	eddf7a40			pending			
+pt:b:pet-🐮.v6.bola	A vaca brinca com a bola.	c90c451c			pending			
+pt:b:pet-🐮.v6.pipoca	A vaca brinca com pipoca.	d3ec85e9			pending			
+pt:b:pet-🐮.v6.escola	A vaca brinca com a escola.	d562b11b			pending			
+pt:b:pet-🐮.v6.morango	A vaca brinca com morango.	7a130df8			pending			
+pt:b:pet-🐘.v1.o1	O elefante quer leite.	afcb0b76			pending			
+pt:b:pet-🐘.v1.o2	O elefante quer uma maçã.	6f9485de			pending			
+pt:b:pet-🐘.v1.o3	O elefante quer um brinquedo.	9106ceee			pending			
+pt:b:pet-🐘.v1.o4	O elefante quer o carro.	02bb1215			pending			
+pt:b:pet-🐘.v1.o5	O elefante quer fora.	e336adf5			pending			
+pt:b:pet-🐘.v1.casa	O elefante quer casa.	9986fc8b			pending			
+pt:b:pet-🐘.v1.cama	O elefante quer a cama.	8ea75ad6			pending			
+pt:b:pet-🐘.v1.o8	O elefante quer o peniquinho.	1f618ec0			pending			
+pt:b:pet-🐘.v1.lua	O elefante quer a lua.	7532f23a			pending			
+pt:b:pet-🐘.v1.uva	O elefante quer uva.	dd4992b7			pending			
+pt:b:pet-🐘.v1.tomate	O elefante quer tomate.	7dc84f63			pending			
+pt:b:pet-🐘.v1.sopa	O elefante quer sopa.	690f3330			pending			
+pt:b:pet-🐘.v1.bola	O elefante quer a bola.	0c5607cc			pending			
+pt:b:pet-🐘.v1.pipoca	O elefante quer pipoca.	374903d9			pending			
+pt:b:pet-🐘.v1.escola	O elefante quer a escola.	7ba953eb			pending			
+pt:b:pet-🐘.v1.morango	O elefante quer morango.	c86d1da8			pending			
+pt:b:pet-🐘.v2.o1	O elefante come leite.	ecb3c80d			pending			
+pt:b:pet-🐘.v2.o2	O elefante come uma maçã.	b9a2f493			pending			
+pt:b:pet-🐘.v2.o3	O elefante come um brinquedo.	fca285bf			pending			
+pt:b:pet-🐘.v2.o4	O elefante come o carro.	d213e972			pending			
+pt:b:pet-🐘.v2.o5	O elefante come fora.	f1ad328c			pending			
+pt:b:pet-🐘.v2.casa	O elefante come casa.	3a9160aa			pending			
+pt:b:pet-🐘.v2.cama	O elefante come a cama.	79f3eda7			pending			
+pt:b:pet-🐘.v2.o8	O elefante come o peniquinho.	082cc815			pending			
+pt:b:pet-🐘.v2.lua	O elefante come a lua.	1d5a0559			pending			
+pt:b:pet-🐘.v2.uva	O elefante come uva.	76efccc0			pending			
+pt:b:pet-🐘.v2.tomate	O elefante come tomate.	33cdd26e			pending			
+pt:b:pet-🐘.v2.sopa	O elefante come sopa.	6c01c2f1			pending			
+pt:b:pet-🐘.v2.bola	O elefante come a bola.	211c0675			pending			
+pt:b:pet-🐘.v2.pipoca	O elefante come pipoca.	ef8b34e0			pending			
+pt:b:pet-🐘.v2.escola	O elefante come a escola.	19349c6a			pending			
+pt:b:pet-🐘.v2.morango	O elefante come morango.	d278db03			pending			
+pt:b:pet-🐘.v3.o1	O elefante bebe leite.	93da77d1			pending			
+pt:b:pet-🐘.v3.o2	O elefante bebe uma maçã.	7ea3100f			pending			
+pt:b:pet-🐘.v3.o3	O elefante bebe um brinquedo.	eae31fe3			pending			
+pt:b:pet-🐘.v3.o4	O elefante bebe o carro.	336e3986			pending			
+pt:b:pet-🐘.v3.o5	O elefante bebe fora.	76e8b338			pending			
+pt:b:pet-🐘.v3.casa	O elefante bebe casa.	bb7235c6			pending			
+pt:b:pet-🐘.v3.cama	O elefante bebe a cama.	0c00a34b			pending			
+pt:b:pet-🐘.v3.o8	O elefante bebe o peniquinho.	b3256fa1			pending			
+pt:b:pet-🐘.v3.lua	O elefante bebe a lua.	afbf100d			pending			
+pt:b:pet-🐘.v3.uva	O elefante bebe uva.	a64075e4			pending			
+pt:b:pet-🐘.v3.tomate	O elefante bebe tomate.	9bbb9b52			pending			
+pt:b:pet-🐘.v3.sopa	O elefante bebe sopa.	dbe071b5			pending			
+pt:b:pet-🐘.v3.bola	O elefante bebe a bola.	2baffc51			pending			
+pt:b:pet-🐘.v3.pipoca	O elefante bebe pipoca.	ab6903a4			pending			
+pt:b:pet-🐘.v3.escola	O elefante bebe a escola.	9765df9e			pending			
+pt:b:pet-🐘.v3.morango	O elefante bebe morango.	6431881f			pending			
+pt:b:pet-🐘.v4.o1	O elefante dorme leite.	bbbb6e2c			pending			
+pt:b:pet-🐘.v4.o2	O elefante dorme uma maçã.	bec317f0			pending			
+pt:b:pet-🐘.v4.o3	O elefante dorme com um brinquedo.	d80488bd			pending			
+pt:b:pet-🐘.v4.o4	O elefante dorme no carro.	11042923			pending			
+pt:b:pet-🐘.v4.o5	O elefante dorme lá fora.	3e4b02fe			pending			
+pt:b:pet-🐘.v4.casa	O elefante dorme em casa.	c49883ad			pending			
+pt:b:pet-🐘.v4.cama	O elefante dorme na cama.	6249c280			pending			
+pt:b:pet-🐘.v4.o8	O elefante dorme no peniquinho.	50eb98e6			pending			
+pt:b:pet-🐘.v4.lua	O elefante dorme na lua.	ac7f2f0c			pending			
+pt:b:pet-🐘.v4.uva	O elefante dorme na uva.	034eade4			pending			
+pt:b:pet-🐘.v4.tomate	O elefante dorme no tomate.	1da0be3c			pending			
+pt:b:pet-🐘.v4.sopa	O elefante dorme na sopa.	594299b5			pending			
+pt:b:pet-🐘.v4.bola	O elefante dorme na bola.	ad97e922			pending			
+pt:b:pet-🐘.v4.pipoca	O elefante dorme na pipoca.	2fbb6ba4			pending			
+pt:b:pet-🐘.v4.escola	O elefante dorme na escola.	fd195455			pending			
+pt:b:pet-🐘.v4.morango	O elefante dorme no morango.	76b6c10d			pending			
+pt:b:pet-🐘.v5.o1	O elefante vai leite.	a5a87295			pending			
+pt:b:pet-🐘.v5.o2	O elefante vai uma maçã.	9a0d600b			pending			
+pt:b:pet-🐘.v5.o3	O elefante vai um brinquedo.	fdbb4c77			pending			
+pt:b:pet-🐘.v5.o4	O elefante vai de carro.	11d9efa8			pending			
+pt:b:pet-🐘.v5.o5	O elefante vai para fora.	9bb61c22			pending			
+pt:b:pet-🐘.v5.casa	O elefante vai para casa.	70412c54			pending			
+pt:b:pet-🐘.v5.cama	O elefante vai para a cama.	3422de8d			pending			
+pt:b:pet-🐘.v5.o8	O elefante vai no peniquinho.	fb196e37			pending			
+pt:b:pet-🐘.v5.lua	O elefante vai para a lua.	cfd6aa7f			pending			
+pt:b:pet-🐘.v5.uva	O elefante vai para a uva.	64b13a5b			pending			
+pt:b:pet-🐘.v5.tomate	O elefante vai para o tomate.	eca56475			pending			
+pt:b:pet-🐘.v5.sopa	O elefante vai para a sopa.	85978184			pending			
+pt:b:pet-🐘.v5.bola	O elefante vai para a bola.	96e9c50f			pending			
+pt:b:pet-🐘.v5.pipoca	O elefante vai para a pipoca.	3484325d			pending			
+pt:b:pet-🐘.v5.escola	O elefante vai para a escola.	ca99fd38			pending			
+pt:b:pet-🐘.v5.morango	O elefante vai para o morango.	4f384916			pending			
+pt:b:pet-🐘.v6.o1	O elefante brinca com leite.	165f6eb7			pending			
+pt:b:pet-🐘.v6.o2	O elefante brinca com uma maçã.	cfd8a3c1			pending			
+pt:b:pet-🐘.v6.o3	O elefante brinca com um brinquedo.	27c4188d			pending			
+pt:b:pet-🐘.v6.o4	O elefante brinca com o carro.	3545fd70			pending			
+pt:b:pet-🐘.v6.o5	O elefante brinca lá fora.	38018a8e			pending			
+pt:b:pet-🐘.v6.casa	O elefante brinca em casa.	ebd0663d			pending			
+pt:b:pet-🐘.v6.cama	O elefante brinca na cama.	a99854f0			pending			
+pt:b:pet-🐘.v6.o8	O elefante brinca no peniquinho.	62880336			pending			
+pt:b:pet-🐘.v6.lua	O elefante brinca com a lua.	d36c5603			pending			
+pt:b:pet-🐘.v6.uva	O elefante brinca com uva.	a9ca656e			pending			
+pt:b:pet-🐘.v6.tomate	O elefante brinca com tomate.	03b94598			pending			
+pt:b:pet-🐘.v6.sopa	O elefante brinca com sopa.	9db56a07			pending			
+pt:b:pet-🐘.v6.bola	O elefante brinca com a bola.	4e9461bb			pending			
+pt:b:pet-🐘.v6.pipoca	O elefante brinca com pipoca.	6cadf9a6			pending			
+pt:b:pet-🐘.v6.escola	O elefante brinca com a escola.	c8e86cfc			pending			
+pt:b:pet-🐘.v6.morango	O elefante brinca com morango.	76279111			pending			
+pt:b:pet-🦁.v1.o1	O leão quer leite.	7c8b1a15			pending			
+pt:b:pet-🦁.v1.o2	O leão quer uma maçã.	9d653e8b			pending			
+pt:b:pet-🦁.v1.o3	O leão quer um brinquedo.	bfa786f7			pending			
+pt:b:pet-🦁.v1.o4	O leão quer o carro.	22e656fa			pending			
+pt:b:pet-🦁.v1.o5	O leão quer fora.	d54fadd4			pending			
+pt:b:pet-🦁.v1.casa	O leão quer casa.	8ae59522			pending			
+pt:b:pet-🦁.v1.cama	O leão quer a cama.	94e458cf			pending			
+pt:b:pet-🦁.v1.o8	O leão quer o peniquinho.	c023379d			pending			
+pt:b:pet-🦁.v1.lua	O leão quer a lua.	fe029811			pending			
+pt:b:pet-🦁.v1.uva	O leão quer uva.	769d3f68			pending			
+pt:b:pet-🦁.v1.tomate	O leão quer tomate.	69c080e6			pending			
+pt:b:pet-🦁.v1.sopa	O leão quer sopa.	d5d1cb99			pending			
+pt:b:pet-🦁.v1.bola	O leão quer a bola.	d15f542d			pending			
+pt:b:pet-🦁.v1.pipoca	O leão quer pipoca.	a8483fd8			pending			
+pt:b:pet-🦁.v1.escola	O leão quer a escola.	f961a762			pending			
+pt:b:pet-🦁.v1.morango	O leão quer morango.	e58dea8b			pending			
+pt:b:pet-🦁.v2.o1	O leão come leite.	a1e0d21a			pending			
+pt:b:pet-🦁.v2.o2	O leão come uma maçã.	42bac58a			pending			
+pt:b:pet-🦁.v2.o3	O leão come um brinquedo.	afd3daf2			pending			
+pt:b:pet-🦁.v2.o4	O leão come o carro.	41864bd9			pending			
+pt:b:pet-🦁.v2.o5	O leão come fora.	53255961			pending			
+pt:b:pet-🦁.v2.casa	O leão come casa.	2dfd47b7			pending			
+pt:b:pet-🦁.v2.cama	O leão come a cama.	ae09512a			pending			
+pt:b:pet-🦁.v2.o8	O leão come o peniquinho.	10d3324c			pending			
+pt:b:pet-🦁.v2.lua	O leão come a lua.	9dcf151e			pending			
+pt:b:pet-🦁.v2.uva	O leão come uva.	5224c9bb			pending			
+pt:b:pet-🦁.v2.tomate	O leão come tomate.	58116cc7			pending			
+pt:b:pet-🦁.v2.sopa	O leão come sopa.	89541ce4			pending			
+pt:b:pet-🦁.v2.bola	O leão come a bola.	7d79f558			pending			
+pt:b:pet-🦁.v2.pipoca	O leão come pipoca.	e07fe13d			pending			
+pt:b:pet-🦁.v2.escola	O leão come a escola.	3c362f7f			pending			
+pt:b:pet-🦁.v2.morango	O leão come morango.	dc161854			pending			
+pt:b:pet-🦁.v3.o1	O leão bebe leite.	593460b2			pending			
+pt:b:pet-🦁.v3.o2	O leão bebe uma maçã.	e1c4e5f2			pending			
+pt:b:pet-🦁.v3.o3	O leão bebe um brinquedo.	1023f55a			pending			
+pt:b:pet-🦁.v3.o4	O leão bebe o carro.	c142e2f1			pending			
+pt:b:pet-🦁.v3.o5	O leão bebe fora.	126f6819			pending			
+pt:b:pet-🦁.v3.casa	O leão bebe casa.	40686bff			pending			
+pt:b:pet-🦁.v3.cama	O leão bebe a cama.	a49d2702			pending			
+pt:b:pet-🦁.v3.o8	O leão bebe o peniquinho.	5d7a1f84			pending			
+pt:b:pet-🦁.v3.lua	O leão bebe a lua.	f4ceafe6			pending			
+pt:b:pet-🦁.v3.uva	O leão bebe uva.	fd80fdd3			pending			
+pt:b:pet-🦁.v3.tomate	O leão bebe tomate.	7ad7c48f			pending			
+pt:b:pet-🦁.v3.sopa	O leão bebe sopa.	6afcdbdc			pending			
+pt:b:pet-🦁.v3.bola	O leão bebe a bola.	8773b480			pending			
+pt:b:pet-🦁.v3.pipoca	O leão bebe pipoca.	2308fda5			pending			
+pt:b:pet-🦁.v3.escola	O leão bebe a escola.	9b62c687			pending			
+pt:b:pet-🦁.v3.morango	O leão bebe morango.	539bf84c			pending			
+pt:b:pet-🦁.v4.o1	O leão dorme leite.	5c38c5a5			pending			
+pt:b:pet-🦁.v4.o2	O leão dorme uma maçã.	dc3a367b			pending			
+pt:b:pet-🦁.v4.o3	O leão dorme com um brinquedo.	08518926			pending			
+pt:b:pet-🦁.v4.o4	O leão dorme no carro.	5f38a334			pending			
+pt:b:pet-🦁.v4.o5	O leão dorme lá fora.	b74511a7			pending			
+pt:b:pet-🦁.v4.casa	O leão dorme em casa.	01569ee4			pending			
+pt:b:pet-🦁.v4.cama	O leão dorme na cama.	3bfccc95			pending			
+pt:b:pet-🦁.v4.o8	O leão dorme no peniquinho.	e3476547			pending			
+pt:b:pet-🦁.v4.lua	O leão dorme na lua.	cc3db697			pending			
+pt:b:pet-🦁.v4.uva	O leão dorme na uva.	4aa11bc3			pending			
+pt:b:pet-🦁.v4.tomate	O leão dorme no tomate.	375514dd			pending			
+pt:b:pet-🦁.v4.sopa	O leão dorme na sopa.	497f966c			pending			
+pt:b:pet-🦁.v4.bola	O leão dorme na bola.	50364be7			pending			
+pt:b:pet-🦁.v4.pipoca	O leão dorme na pipoca.	0f3edfb5			pending			
+pt:b:pet-🦁.v4.escola	O leão dorme na escola.	12b65110			pending			
+pt:b:pet-🦁.v4.morango	O leão dorme no morango.	f432374e			pending			
+pt:b:pet-🦁.v5.o1	O leão vai leite.	7d6ccfe4			pending			
+pt:b:pet-🦁.v5.o2	O leão vai uma maçã.	c40f62b8			pending			
+pt:b:pet-🦁.v5.o3	O leão vai um brinquedo.	c525b570			pending			
+pt:b:pet-🦁.v5.o4	O leão vai de carro.	8dbbd3a3			pending			
+pt:b:pet-🦁.v5.o5	O leão vai para fora.	90cafd2f			pending			
+pt:b:pet-🦁.v5.casa	O leão vai para casa.	0eef56b1			pending			
+pt:b:pet-🦁.v5.cama	O leão vai para a cama.	514a48c0			pending			
+pt:b:pet-🦁.v5.o8	O leão vai no peniquinho.	f4d33b1e			pending			
+pt:b:pet-🦁.v5.lua	O leão vai para a lua.	147a414c			pending			
+pt:b:pet-🦁.v5.uva	O leão vai para a uva.	51fd0b24			pending			
+pt:b:pet-🦁.v5.tomate	O leão vai para o tomate.	93bb017c			pending			
+pt:b:pet-🦁.v5.sopa	O leão vai para a sopa.	90494ef5			pending			
+pt:b:pet-🦁.v5.bola	O leão vai para a bola.	b5e52462			pending			
+pt:b:pet-🦁.v5.pipoca	O leão vai para a pipoca.	8ed621e4			pending			
+pt:b:pet-🦁.v5.escola	O leão vai para a escola.	f1978b95			pending			
+pt:b:pet-🦁.v5.morango	O leão vai para o morango.	f989a74d			pending			
+pt:b:pet-🦁.v6.o1	O leão brinca com leite.	255f74c8			pending			
+pt:b:pet-🦁.v6.o2	O leão brinca com uma maçã.	08c63e94			pending			
+pt:b:pet-🦁.v6.o3	O leão brinca com um brinquedo.	6aee7fb4			pending			
+pt:b:pet-🦁.v6.o4	O leão brinca com o carro.	822e7a2b			pending			
+pt:b:pet-🦁.v6.o5	O leão brinca lá fora.	6a3818b5			pending			
+pt:b:pet-🦁.v6.casa	O leão brinca em casa.	a97bf54e			pending			
+pt:b:pet-🦁.v6.cama	O leão brinca na cama.	c9faf20f			pending			
+pt:b:pet-🦁.v6.o8	O leão brinca no peniquinho.	4a6212dd			pending			
+pt:b:pet-🦁.v6.lua	O leão brinca com a lua.	b7cc10e4			pending			
+pt:b:pet-🦁.v6.uva	O leão brinca com uva.	955222c5			pending			
+pt:b:pet-🦁.v6.tomate	O leão brinca com tomate.	1ff43fdd			pending			
+pt:b:pet-🦁.v6.sopa	O leão brinca com sopa.	e0c71be6			pending			
+pt:b:pet-🦁.v6.bola	O leão brinca com a bola.	ce9b36ba			pending			
+pt:b:pet-🦁.v6.pipoca	O leão brinca com pipoca.	3d19df2f			pending			
+pt:b:pet-🦁.v6.escola	O leão brinca com a escola.	3fe4852d			pending			
+pt:b:pet-🦁.v6.morango	O leão brinca com morango.	26c2e84e			pending			
+pt:b:pet-🐯.v1.o1	O tigre quer leite.	a10689f5			pending			
+pt:b:pet-🐯.v1.o2	O tigre quer uma maçã.	dfb7e3eb			pending			
+pt:b:pet-🐯.v1.o3	O tigre quer um brinquedo.	4be94257			pending			
+pt:b:pet-🐯.v1.o4	O tigre quer o carro.	bd29e3da			pending			
+pt:b:pet-🐯.v1.o5	O tigre quer fora.	187f42b4			pending			
+pt:b:pet-🐯.v1.casa	O tigre quer casa.	11268702			pending			
+pt:b:pet-🐯.v1.cama	O tigre quer a cama.	a6eff4af			pending			
+pt:b:pet-🐯.v1.o8	O tigre quer o peniquinho.	fb1fc8fd			pending			
+pt:b:pet-🐯.v1.lua	O tigre quer a lua.	763fc071			pending			
+pt:b:pet-🐯.v1.uva	O tigre quer uva.	472a6448			pending			
+pt:b:pet-🐯.v1.tomate	O tigre quer tomate.	2313dfc6			pending			
+pt:b:pet-🐯.v1.sopa	O tigre quer sopa.	c53fa7f9			pending			
+pt:b:pet-🐯.v1.bola	O tigre quer a bola.	7f31448d			pending			
+pt:b:pet-🐯.v1.pipoca	O tigre quer pipoca.	641607b8			pending			
+pt:b:pet-🐯.v1.escola	O tigre quer a escola.	4d0b6642			pending			
+pt:b:pet-🐯.v1.morango	O tigre quer morango.	d487326b			pending			
+pt:b:pet-🐯.v2.o1	O tigre come leite.	55c5227a			pending			
+pt:b:pet-🐯.v2.o2	O tigre come uma maçã.	ecd2d16a			pending			
+pt:b:pet-🐯.v2.o3	O tigre come um brinquedo.	13d961d2			pending			
+pt:b:pet-🐯.v2.o4	O tigre come o carro.	e92f25b9			pending			
+pt:b:pet-🐯.v2.o5	O tigre come fora.	6cf43441			pending			
+pt:b:pet-🐯.v2.casa	O tigre come casa.	c5528317			pending			
+pt:b:pet-🐯.v2.cama	O tigre come a cama.	c8f0a78a			pending			
+pt:b:pet-🐯.v2.o8	O tigre come o peniquinho.	7691de2c			pending			
+pt:b:pet-🐯.v2.lua	O tigre come a lua.	5d5117fe			pending			
+pt:b:pet-🐯.v2.uva	O tigre come uva.	228b9d1b			pending			
+pt:b:pet-🐯.v2.tomate	O tigre come tomate.	5868f9a7			pending			
+pt:b:pet-🐯.v2.sopa	O tigre come sopa.	2323c144			pending			
+pt:b:pet-🐯.v2.bola	O tigre come a bola.	ff156038			pending			
+pt:b:pet-🐯.v2.pipoca	O tigre come pipoca.	b45e421d			pending			
+pt:b:pet-🐯.v2.escola	O tigre come a escola.	9d8880df			pending			
+pt:b:pet-🐯.v2.morango	O tigre come morango.	2e6e3934			pending			
+pt:b:pet-🐯.v3.o1	O tigre bebe leite.	c1119312			pending			
+pt:b:pet-🐯.v3.o2	O tigre bebe uma maçã.	d9afa2d2			pending			
+pt:b:pet-🐯.v3.o3	O tigre bebe um brinquedo.	ea81223a			pending			
+pt:b:pet-🐯.v3.o4	O tigre bebe o carro.	01e50e51			pending			
+pt:b:pet-🐯.v3.o5	O tigre bebe fora.	aff27c79			pending			
+pt:b:pet-🐯.v3.casa	O tigre bebe casa.	db71175f			pending			
+pt:b:pet-🐯.v3.cama	O tigre bebe a cama.	a8d220e2			pending			
+pt:b:pet-🐯.v3.o8	O tigre bebe o peniquinho.	81571664			pending			
+pt:b:pet-🐯.v3.lua	O tigre bebe a lua.	354711c6			pending			
+pt:b:pet-🐯.v3.uva	O tigre bebe uva.	77c7d433			pending			
+pt:b:pet-🐯.v3.tomate	O tigre bebe tomate.	82c1c16f			pending			
+pt:b:pet-🐯.v3.sopa	O tigre bebe sopa.	087ff03c			pending			
+pt:b:pet-🐯.v3.bola	O tigre bebe a bola.	df6a66e0			pending			
+pt:b:pet-🐯.v3.pipoca	O tigre bebe pipoca.	5239f405			pending			
+pt:b:pet-🐯.v3.escola	O tigre bebe a escola.	25f1e567			pending			
+pt:b:pet-🐯.v3.morango	O tigre bebe morango.	3c7301ac			pending			
+pt:b:pet-🐯.v4.o1	O tigre dorme leite.	8acebe05			pending			
+pt:b:pet-🐯.v4.o2	O tigre dorme uma maçã.	7da8475b			pending			
+pt:b:pet-🐯.v4.o3	O tigre dorme com um brinquedo.	12f5b106			pending			
+pt:b:pet-🐯.v4.o4	O tigre dorme no carro.	cc707994			pending			
+pt:b:pet-🐯.v4.o5	O tigre dorme lá fora.	5806f187			pending			
+pt:b:pet-🐯.v4.casa	O tigre dorme em casa.	7996eb44			pending			
+pt:b:pet-🐯.v4.cama	O tigre dorme na cama.	a6414175			pending			
+pt:b:pet-🐯.v4.o8	O tigre dorme no peniquinho.	3b4c1727			pending			
+pt:b:pet-🐯.v4.lua	O tigre dorme na lua.	6db599f7			pending			
+pt:b:pet-🐯.v4.uva	O tigre dorme na uva.	6c19c8a3			pending			
+pt:b:pet-🐯.v4.tomate	O tigre dorme no tomate.	e386203d			pending			
+pt:b:pet-🐯.v4.sopa	O tigre dorme na sopa.	b3c40b4c			pending			
+pt:b:pet-🐯.v4.bola	O tigre dorme na bola.	212ed547			pending			
+pt:b:pet-🐯.v4.pipoca	O tigre dorme na pipoca.	4a05f715			pending			
+pt:b:pet-🐯.v4.escola	O tigre dorme na escola.	3f8190f0			pending			
+pt:b:pet-🐯.v4.morango	O tigre dorme no morango.	7ac3b5ae			pending			
+pt:b:pet-🐯.v5.o1	O tigre vai leite.	15f95fc4			pending			
+pt:b:pet-🐯.v5.o2	O tigre vai uma maçã.	8e44c398			pending			
+pt:b:pet-🐯.v5.o3	O tigre vai um brinquedo.	768d31d0			pending			
+pt:b:pet-🐯.v5.o4	O tigre vai de carro.	47794183			pending			
+pt:b:pet-🐯.v5.o5	O tigre vai para fora.	13878b0f			pending			
+pt:b:pet-🐯.v5.casa	O tigre vai para casa.	bdeaf591			pending			
+pt:b:pet-🐯.v5.cama	O tigre vai para a cama.	cb3a8c20			pending			
+pt:b:pet-🐯.v5.o8	O tigre vai no peniquinho.	5fde8d7e			pending			
+pt:b:pet-🐯.v5.lua	O tigre vai para a lua.	a9588c2c			pending			
+pt:b:pet-🐯.v5.uva	O tigre vai para a uva.	e955bf04			pending			
+pt:b:pet-🐯.v5.tomate	O tigre vai para o tomate.	5f55dadc			pending			
+pt:b:pet-🐯.v5.sopa	O tigre vai para a sopa.	f0ecdd55			pending			
+pt:b:pet-🐯.v5.bola	O tigre vai para a bola.	1688b2c2			pending			
+pt:b:pet-🐯.v5.pipoca	O tigre vai para a pipoca.	41244644			pending			
+pt:b:pet-🐯.v5.escola	O tigre vai para a escola.	e739a275			pending			
+pt:b:pet-🐯.v5.morango	O tigre vai para o morango.	c8f1432d			pending			
+pt:b:pet-🐯.v6.o1	O tigre brinca com leite.	35cb69a8			pending			
+pt:b:pet-🐯.v6.o2	O tigre brinca com uma maçã.	630dfff4			pending			
+pt:b:pet-🐯.v6.o3	O tigre brinca com um brinquedo.	77083f94			pending			
+pt:b:pet-🐯.v6.o4	O tigre brinca com o carro.	f17fa20b			pending			
+pt:b:pet-🐯.v6.o5	O tigre brinca lá fora.	eca62a95			pending			
+pt:b:pet-🐯.v6.casa	O tigre brinca em casa.	2f9d772e			pending			
+pt:b:pet-🐯.v6.cama	O tigre brinca na cama.	f5c8f46f			pending			
+pt:b:pet-🐯.v6.o8	O tigre brinca no peniquinho.	9ed99abd			pending			
+pt:b:pet-🐯.v6.lua	O tigre brinca com a lua.	a0d33544			pending			
+pt:b:pet-🐯.v6.uva	O tigre brinca com uva.	992056a5			pending			
+pt:b:pet-🐯.v6.tomate	O tigre brinca com tomate.	dd3bdd3d			pending			
+pt:b:pet-🐯.v6.sopa	O tigre brinca com sopa.	fbe8c146			pending			
+pt:b:pet-🐯.v6.bola	O tigre brinca com a bola.	5e26939a			pending			
+pt:b:pet-🐯.v6.pipoca	O tigre brinca com pipoca.	3214a90f			pending			
+pt:b:pet-🐯.v6.escola	O tigre brinca com a escola.	ddfb478d			pending			
+pt:b:pet-🐯.v6.morango	O tigre brinca com morango.	93dc3cae			pending			
+pt:b:pet-🐭.v1.o1	O rato quer leite.	afe91e44			pending			
+pt:b:pet-🐭.v1.o2	O rato quer uma maçã.	59e2c718			pending			
+pt:b:pet-🐭.v1.o3	O rato quer um brinquedo.	cd92f950			pending			
+pt:b:pet-🐭.v1.o4	O rato quer o carro.	a5758f77			pending			
+pt:b:pet-🐭.v1.o5	O rato quer fora.	7879916b			pending			
+pt:b:pet-🐭.v1.casa	O rato quer casa.	65b6954d			pending			
+pt:b:pet-🐭.v1.cama	O rato quer a cama.	df8eba04			pending			
+pt:b:pet-🐭.v1.o8	O rato quer o peniquinho.	74db0542			pending			
+pt:b:pet-🐭.v1.lua	O rato quer a lua.	2e5f0350			pending			
+pt:b:pet-🐭.v1.uva	O rato quer uva.	3456fb81			pending			
+pt:b:pet-🐭.v1.tomate	O rato quer tomate.	ab707709			pending			
+pt:b:pet-🐭.v1.sopa	O rato quer sopa.	8540c4c2			pending			
+pt:b:pet-🐭.v1.bola	O rato quer a bola.	70b9db5e			pending			
+pt:b:pet-🐭.v1.pipoca	O rato quer pipoca.	87d0a88b			pending			
+pt:b:pet-🐭.v1.escola	O rato quer a escola.	b44a68d9			pending			
+pt:b:pet-🐭.v1.morango	O rato quer morango.	e6ceae92			pending			
+pt:b:pet-🐭.v2.o1	O rato come leite.	cd2a795f			pending			
+pt:b:pet-🐭.v2.o2	O rato come uma maçã.	595bb219			pending			
+pt:b:pet-🐭.v2.o3	O rato come um brinquedo.	4df8a585			pending			
+pt:b:pet-🐭.v2.o4	O rato come o carro.	0ea535b8			pending			
+pt:b:pet-🐭.v2.o5	O rato come fora.	a1f752a6			pending			
+pt:b:pet-🐭.v2.casa	O rato come casa.	737c1898			pending			
+pt:b:pet-🐭.v2.cama	O rato come a cama.	d8983b29			pending			
+pt:b:pet-🐭.v2.o8	O rato come o peniquinho.	09a371f3			pending			
+pt:b:pet-🐭.v2.lua	O rato come a lua.	1410485b			pending			
+pt:b:pet-🐭.v2.uva	O rato come uva.	fcfe15d6			pending			
+pt:b:pet-🐭.v2.tomate	O rato come tomate.	f4bfbc30			pending			
+pt:b:pet-🐭.v2.sopa	O rato come sopa.	016f950f			pending			
+pt:b:pet-🐭.v2.bola	O rato come a bola.	82907db3			pending			
+pt:b:pet-🐭.v2.pipoca	O rato come pipoca.	27f801de			pending			
+pt:b:pet-🐭.v2.escola	O rato come a escola.	46282454			pending			
+pt:b:pet-🐭.v2.morango	O rato come morango.	3abaa319			pending			
+pt:b:pet-🐭.v3.o1	O rato bebe leite.	cc6a0cfb			pending			
+pt:b:pet-🐭.v3.o2	O rato bebe uma maçã.	3fc1de2d			pending			
+pt:b:pet-🐭.v3.o3	O rato bebe um brinquedo.	b2add0b1			pending			
+pt:b:pet-🐭.v3.o4	O rato bebe o carro.	63f49b14			pending			
+pt:b:pet-🐭.v3.o5	O rato bebe fora.	a692d50a			pending			
+pt:b:pet-🐭.v3.casa	O rato bebe casa.	7ac2c3ec			pending			
+pt:b:pet-🐭.v3.cama	O rato bebe a cama.	662789f5			pending			
+pt:b:pet-🐭.v3.o8	O rato bebe o peniquinho.	24bc1ba7			pending			
+pt:b:pet-🐭.v3.lua	O rato bebe a lua.	77657f77			pending			
+pt:b:pet-🐭.v3.uva	O rato bebe uva.	afc2f322			pending			
+pt:b:pet-🐭.v3.tomate	O rato bebe tomate.	8969673c			pending			
+pt:b:pet-🐭.v3.sopa	O rato bebe sopa.	c52f59bb			pending			
+pt:b:pet-🐭.v3.bola	O rato bebe a bola.	e1151dc7			pending			
+pt:b:pet-🐭.v3.pipoca	O rato bebe pipoca.	cd5d39da			pending			
+pt:b:pet-🐭.v3.escola	O rato bebe a escola.	44824d70			pending			
+pt:b:pet-🐭.v3.morango	O rato bebe morango.	2398cc0d			pending			
+pt:b:pet-🐭.v4.o1	O rato dorme leite.	5cc37052			pending			
+pt:b:pet-🐭.v4.o2	O rato dorme uma maçã.	10efda92			pending			
+pt:b:pet-🐭.v4.o3	O rato dorme com um brinquedo.	82abdde7			pending			
+pt:b:pet-🐭.v4.o4	O rato dorme no carro.	c103ff1d			pending			
+pt:b:pet-🐭.v4.o5	O rato dorme lá fora.	d5ae3d90			pending			
+pt:b:pet-🐭.v4.casa	O rato dorme em casa.	fc88a9e3			pending			
+pt:b:pet-🐭.v4.cama	O rato dorme na cama.	b095cd9e			pending			
+pt:b:pet-🐭.v4.o8	O rato dorme no peniquinho.	25eafe88			pending			
+pt:b:pet-🐭.v4.lua	O rato dorme na lua.	0b487032			pending			
+pt:b:pet-🐭.v4.uva	O rato dorme na uva.	c6538dc6			pending			
+pt:b:pet-🐭.v4.tomate	O rato dorme no tomate.	5e39814e			pending			
+pt:b:pet-🐭.v4.sopa	O rato dorme na sopa.	52c7711f			pending			
+pt:b:pet-🐭.v4.bola	O rato dorme na bola.	fada96a4			pending			
+pt:b:pet-🐭.v4.pipoca	O rato dorme na pipoca.	403355ee			pending			
+pt:b:pet-🐭.v4.escola	O rato dorme na escola.	2a0e2c23			pending			
+pt:b:pet-🐭.v4.morango	O rato dorme no morango.	9e366c63			pending			
+pt:b:pet-🐭.v5.o1	O rato vai leite.	66cfc74f			pending			
+pt:b:pet-🐭.v5.o2	O rato vai uma maçã.	bbaf1e69			pending			
+pt:b:pet-🐭.v5.o3	O rato vai um brinquedo.	9cbe1875			pending			
+pt:b:pet-🐭.v5.o4	O rato vai de carro.	1721abee			pending			
+pt:b:pet-🐭.v5.o5	O rato vai para fora.	a4c5de14			pending			
+pt:b:pet-🐭.v5.casa	O rato vai para casa.	84206d62			pending			
+pt:b:pet-🐭.v5.cama	O rato vai para a cama.	7cf5108f			pending			
+pt:b:pet-🐭.v5.o8	O rato vai no peniquinho.	ca534745			pending			
+pt:b:pet-🐭.v5.lua	O rato vai para a lua.	433e57d1			pending			
+pt:b:pet-🐭.v5.uva	O rato vai para a uva.	212811f9			pending			
+pt:b:pet-🐭.v5.tomate	O rato vai para o tomate.	c5daa6fb			pending			
+pt:b:pet-🐭.v5.sopa	O rato vai para a sopa.	d29c5b3a			pending			
+pt:b:pet-🐭.v5.bola	O rato vai para a bola.	d2bcc0ed			pending			
+pt:b:pet-🐭.v5.pipoca	O rato vai para a pipoca.	2a0b6e93			pending			
+pt:b:pet-🐭.v5.escola	O rato vai para a escola.	b0247022			pending			
+pt:b:pet-🐭.v5.morango	O rato vai para o morango.	574b3610			pending			
+pt:b:pet-🐭.v6.o1	O rato brinca com leite.	84283309			pending			
+pt:b:pet-🐭.v6.o2	O rato brinca com uma maçã.	129eeed7			pending			
+pt:b:pet-🐭.v6.o3	O rato brinca com um brinquedo.	e91e94cb			pending			
+pt:b:pet-🐭.v6.o4	O rato brinca com o carro.	47312bde			pending			
+pt:b:pet-🐭.v6.o5	O rato brinca lá fora.	4d5a9b3c			pending			
+pt:b:pet-🐭.v6.casa	O rato brinca em casa.	c6396727			pending			
+pt:b:pet-🐭.v6.cama	O rato brinca na cama.	f6946a32			pending			
+pt:b:pet-🐭.v6.o8	O rato brinca no peniquinho.	424248d4			pending			
+pt:b:pet-🐭.v6.lua	O rato brinca com a lua.	f4863055			pending			
+pt:b:pet-🐭.v6.uva	O rato brinca com uva.	c5e238fc			pending			
+pt:b:pet-🐭.v6.tomate	O rato brinca com tomate.	aaf27dda			pending			
+pt:b:pet-🐭.v6.sopa	O rato brinca com sopa.	dbef69ed			pending			
+pt:b:pet-🐭.v6.bola	O rato brinca com a bola.	40514b39			pending			
+pt:b:pet-🐭.v6.pipoca	O rato brinca com pipoca.	ea7bec8c			pending			
+pt:b:pet-🐭.v6.escola	O rato brinca com a escola.	da03ad66			pending			
+pt:b:pet-🐭.v6.morango	O rato brinca com morango.	61fd3517			pending			
+pt:p:🐵.v3.o1	O macaco bebe leite.	e46a3113			pending			
+pt:p:🐵.v2.o2	O macaco come uma maçã.	cb1fdca1			pending			
+pt:p:🐵.v6.o4	O macaco brinca com o carro.	73267c96			pending			
+pt:p:🐵.v2.uva	O macaco come uva.	1b6859ce			pending			
+pt:p:🐵.v2.tomate	O macaco come tomate.	aeb29278			pending			
+pt:p:🐵.v2.sopa	O macaco come sopa.	53d0f267			pending			
+pt:p:🐵.v6.bola	O macaco brinca com a bola.	671f8341			pending			
+pt:p:🐵.v2.pipoca	O macaco come pipoca.	17a74686			pending			
+pt:p:🐵.v2.morango	O macaco come morango.	905ce971			pending			
+pt:p:🐵.v2.-	O macaco come.	3c722e54			pending			
+pt:p:🐵.v3.-	O macaco bebe.	a7236470			pending			
+pt:p:🐵.v6.-	O macaco brinca.	a3340981			pending			
+pt:p:🦆.v3.o1	O pato bebe leite.	0ac0322d			pending			
+pt:p:🦆.v2.o2	O pato come uma maçã.	a1d66b3f			pending			
+pt:p:🦆.v6.o4	O pato brinca com o carro.	c0bde104			pending			
+pt:p:🦆.v2.uva	O pato come uva.	4eaf8ed4			pending			
+pt:p:🦆.v2.tomate	O pato come tomate.	50a3c962			pending			
+pt:p:🦆.v2.sopa	O pato come sopa.	a81c86c5			pending			
+pt:p:🦆.v6.bola	O pato brinca com a bola.	d5fe1a17			pending			
+pt:p:🦆.v2.pipoca	O pato come pipoca.	966721f4			pending			
+pt:p:🦆.v2.morango	O pato come morango.	5f9c51af			pending			
+pt:p:🦆.v2.-	O pato come.	a57370ee			pending			
+pt:p:🦆.v3.-	O pato bebe.	aec2aa8a			pending			
+pt:p:🦆.v6.-	O pato brinca.	1cdc8203			pending			
+pt:p:🐮.v3.o1	A vaca bebe leite.	6c14fed8			pending			
+pt:p:🐮.v2.o2	A vaca come uma maçã.	fc123374			pending			
+pt:p:🐮.v6.o4	A vaca brinca com o carro.	771c6d05			pending			
+pt:p:🐮.v2.uva	A vaca come uva.	1c431325			pending			
+pt:p:🐮.v2.tomate	A vaca come tomate.	ed3696bd			pending			
+pt:p:🐮.v2.sopa	A vaca come sopa.	eb977ec6			pending			
+pt:p:🐮.v6.bola	A vaca brinca com a bola.	c90c451c			pending			
+pt:p:🐮.v2.pipoca	A vaca come pipoca.	420f628f			pending			
+pt:p:🐮.v2.morango	A vaca come morango.	3b8e412e			pending			
+pt:p:🐮.v2.-	A vaca come.	109ff4ab			pending			
+pt:p:🐮.v3.-	A vaca bebe.	6468e47b			pending			
+pt:p:🐮.v6.-	A vaca brinca.	fc12d4ea			pending			
+pt:p:🐘.v3.o1	O elefante bebe leite.	93da77d1			pending			
+pt:p:🐘.v2.o2	O elefante come uma maçã.	b9a2f493			pending			
+pt:p:🐘.v6.o4	O elefante brinca com o carro.	3545fd70			pending			
+pt:p:🐘.v2.uva	O elefante come uva.	76efccc0			pending			
+pt:p:🐘.v2.tomate	O elefante come tomate.	33cdd26e			pending			
+pt:p:🐘.v2.sopa	O elefante come sopa.	6c01c2f1			pending			
+pt:p:🐘.v6.bola	O elefante brinca com a bola.	4e9461bb			pending			
+pt:p:🐘.v2.pipoca	O elefante come pipoca.	ef8b34e0			pending			
+pt:p:🐘.v2.morango	O elefante come morango.	d278db03			pending			
+pt:p:🐘.v2.-	O elefante come.	a8db4bea			pending			
+pt:p:🐘.v3.-	O elefante bebe.	d367e6fe			pending			
+pt:p:🐘.v6.-	O elefante brinca.	32b2510f			pending			
+pt:p:🦁.v3.o1	O leão bebe leite.	593460b2			pending			
+pt:p:🦁.v2.o2	O leão come uma maçã.	42bac58a			pending			
+pt:p:🦁.v6.o4	O leão brinca com o carro.	822e7a2b			pending			
+pt:p:🦁.v2.uva	O leão come uva.	5224c9bb			pending			
+pt:p:🦁.v2.tomate	O leão come tomate.	58116cc7			pending			
+pt:p:🦁.v2.sopa	O leão come sopa.	89541ce4			pending			
+pt:p:🦁.v6.bola	O leão brinca com a bola.	ce9b36ba			pending			
+pt:p:🦁.v2.pipoca	O leão come pipoca.	e07fe13d			pending			
+pt:p:🦁.v2.morango	O leão come morango.	dc161854			pending			
+pt:p:🦁.v2.-	O leão come.	d735e6bd			pending			
+pt:p:🦁.v3.-	O leão bebe.	812247f5			pending			
+pt:p:🦁.v6.-	O leão brinca.	942633a4			pending			
+pt:p:🐯.v3.o1	O tigre bebe leite.	c1119312			pending			
+pt:p:🐯.v2.o2	O tigre come uma maçã.	ecd2d16a			pending			
+pt:p:🐯.v6.o4	O tigre brinca com o carro.	f17fa20b			pending			
+pt:p:🐯.v2.uva	O tigre come uva.	228b9d1b			pending			
+pt:p:🐯.v2.tomate	O tigre come tomate.	5868f9a7			pending			
+pt:p:🐯.v2.sopa	O tigre come sopa.	2323c144			pending			
+pt:p:🐯.v6.bola	O tigre brinca com a bola.	5e26939a			pending			
+pt:p:🐯.v2.pipoca	O tigre come pipoca.	b45e421d			pending			
+pt:p:🐯.v2.morango	O tigre come morango.	2e6e3934			pending			
+pt:p:🐯.v2.-	O tigre come.	e423189d			pending			
+pt:p:🐯.v3.-	O tigre bebe.	0e104355			pending			
+pt:p:🐯.v6.-	O tigre brinca.	1ba54a04			pending			
+pt:p:🐭.v3.o1	O rato bebe leite.	cc6a0cfb			pending			
+pt:p:🐭.v2.o2	O rato come uma maçã.	595bb219			pending			
+pt:p:🐭.v6.o4	O rato brinca com o carro.	47312bde			pending			
+pt:p:🐭.v2.uva	O rato come uva.	fcfe15d6			pending			
+pt:p:🐭.v2.tomate	O rato come tomate.	f4bfbc30			pending			
+pt:p:🐭.v2.sopa	O rato come sopa.	016f950f			pending			
+pt:p:🐭.v6.bola	O rato brinca com a bola.	40514b39			pending			
+pt:p:🐭.v2.pipoca	O rato come pipoca.	27f801de			pending			
+pt:p:🐭.v2.morango	O rato come morango.	3abaa319			pending			
+pt:p:🐭.v2.-	O rato come.	dae1c6dc			pending			
+pt:p:🐭.v3.-	O rato bebe.	25e17b98			pending			
+pt:p:🐭.v6.-	O rato brinca.	ec3e17a9			pending			

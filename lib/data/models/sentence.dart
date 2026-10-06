@@ -162,3 +162,41 @@ class ComposedSentence {
       .whereType<String>()
       .join(joiner);
 }
+
+/// Pravidla skládání vět — jediné místo, které rozhoduje, co se smí
+/// nabídnout (Skládej větu, věta po novém slově, svět zvířátka).
+/// Plán: `docs/PLAN_VETY_KVALITA.md`.
+class SentenceRules {
+  /// Smí se tahle (i neúplná) kombinace nabídnout? Zatím vše (pravidla
+  /// smysluplnosti přijdou s daty ve fázi 2).
+  static bool allows(
+    SentenceCategories data, {
+    SentencePart? subject,
+    SentencePart? verb,
+    SentencePart? object,
+  }) =>
+      true;
+
+  /// Kde věta potichu použije základní tvar místo výslovného: sloveso
+  /// bez tvaru pro osobu podmětu, předmět bez tvaru pro rámec slovesa.
+  /// (4. pád smí chybět jen tehdy, když je stejný jako základní tvar —
+  /// to stroj nepozná, proto se hlásí zvlášť jako `acc?`.)
+  static List<String> fallbacks(
+      SentencePart subject, SentencePart verb, SentencePart? object) {
+    final out = <String>[];
+    final person = subject.person;
+    if (person != null &&
+        verb.forms != null &&
+        !verb.forms!.containsKey(person) &&
+        person != Person.firstSg) {
+      out.add('verb:$person');
+    }
+    final frame = verb.frame;
+    if (object != null && frame != null) {
+      final has = object.forms?.containsKey(frame) ?? false;
+      if (!has) out.add(frame == Frame.acc ? 'acc?' : 'object:$frame');
+    }
+    return out;
+  }
+}
+
