@@ -166,4 +166,79 @@ void main() {
     expect(ProgressService.instance.petStats(pack.id).gifts, 0);
     await settle(tester, const Duration(seconds: 3));
   });
+
+  Future<void> dragTo(WidgetTester tester, String gift, Finder target) async {
+    final g = await tester
+        .startGesture(tester.getCenter(find.byKey(ValueKey('gift-$gift'))));
+    await tester.pump(const Duration(milliseconds: 50));
+    await g.moveTo(tester.getCenter(target));
+    await tester.pump(const Duration(milliseconds: 50));
+    await g.up();
+    await tester.pump();
+  }
+
+  testWidgets(
+      'misky: jablko do misky → myš k ní dojde a sní ho; mléko do misky '
+      's jídlem nepatří, do misky s vodou ano', (tester) async {
+    await setUpProfile();
+    await pumpPet(tester);
+    final resident = find.byKey(const ValueKey('pet-resident'));
+    final food = find.byKey(const ValueKey('pet-bowl-food'));
+    final water = find.byKey(const ValueKey('pet-bowl-water'));
+    final home = tester.getCenter(resident).dx;
+
+    // Mléko do misky s jídlem: miska ho setřese, nic se nestane.
+    await dragTo(tester, 'mleko', food);
+    expect(find.byKey(const ValueKey('bowl-content-food')), findsNothing);
+    expect(ProgressService.instance.petStats(pack.id).gifts, 0);
+    await settle(tester, const Duration(milliseconds: 600));
+
+    // Jablko do misky s jídlem: miska je plná, myš k ní jde.
+    await dragTo(tester, 'o2', food);
+    expect(find.byKey(const ValueKey('bowl-content-food')), findsOneWidget);
+    expect(tester.widget<EmojiArt>(resident).action, isNull);
+    await settle(tester, const Duration(milliseconds: 900));
+    expect(tester.getCenter(resident).dx, lessThan(home - 20));
+    expect(tester.widget<EmojiArt>(resident).action, StickerAction.eat);
+    expect(findText('Myš jí jablko.'), findsOneWidget);
+    expect(ProgressService.instance.petStats(pack.id).gifts, 1);
+    // Dojedla: miska prázdná, myš zpátky doma.
+    await settle(tester, const Duration(seconds: 4));
+    expect(find.byKey(const ValueKey('bowl-content-food')), findsNothing);
+    expect(tester.widget<EmojiArt>(resident).action, isNull);
+    expect((tester.getCenter(resident).dx - home).abs(), lessThan(2));
+
+    // Mléko do misky s vodou → pije, jde na druhou stranu.
+    await dragTo(tester, 'mleko', water);
+    await settle(tester, const Duration(milliseconds: 900));
+    expect(tester.getCenter(resident).dx, greaterThan(home + 20));
+    expect(tester.widget<EmojiArt>(resident).action, StickerAction.drink);
+    expect(findText('Myš pije mléko.'), findsOneWidget);
+    // Ťuknutí na prázdnou misku nic nerozbije (řekne „miska").
+    await settle(tester, const Duration(seconds: 4));
+    await tester.tap(food);
+    await settle(tester, const Duration(seconds: 1));
+  });
+
+  testWidgets('misky v noci: zůstane plná, zvířátko spí; věc misky nemá',
+      (tester) async {
+    WorldClockService.instance.debugNowOverride =
+        () => DateTime(2026, 6, 1, 23);
+    await setUpProfile();
+    await pumpPet(tester);
+    await dragTo(tester, 'o2', find.byKey(const ValueKey('pet-bowl-food')));
+    await settle(tester, const Duration(seconds: 2));
+    expect(find.byKey(const ValueKey('bowl-content-food')), findsOneWidget);
+    expect(find.byKey(const ValueKey('pet-shh')), findsOneWidget);
+    expect(ProgressService.instance.petStats(pack.id).gifts, 0);
+
+    // Banán (věc) nejí ani nepije → misky ve scéně nejsou.
+    final banana = pack.units.indexWhere((u) => u.reward.emoji == '🍌');
+    await tester.pumpWidget(const SizedBox());
+    await tester.pumpWidget(
+        localizedApp(home: PetScreen(pack: pack, unitIndex: banana)));
+    await settle(tester, const Duration(milliseconds: 600));
+    expect(find.byKey(const ValueKey('pet-bowl-food')), findsNothing);
+    await settle(tester, const Duration(seconds: 2));
+  });
 }

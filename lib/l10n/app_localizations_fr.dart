@@ -463,4 +463,10 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get settingPetRounds => 'Cadeaux aux animaux : d\'abord écrire le mot';
+
+  @override
+  String get petBowlFood => 'gamelle';
+
+  @override
+  String get petBowlWater => 'eau';
 }

@@ -79,6 +79,11 @@ převzetí osvědčených smyček, ne technickou integraci.
   slovo z batohu, splněné přání = větší radost. Rodič může psaní vypnout
   (dárky se pak jen dávají). Odznaky Hostitel, Mazlík, Splněné přání,
   Kamarád všech.
+- **Misky** (v2.14): jídlo jde přetáhnout do misky s jídlem, pití do misky
+  s vodou — miska se naplní, zvířátko k ní dojde a sní / vypije to (stejná
+  věta jako u dárku). Co do misky nepatří, miska setřese a dárek zůstane
+  v tácku. Ťuknutí na prázdnou misku řekne její slovo, na plnou pošle
+  zvířátko jíst. V noci zůstane miska plná. Věci (🍌) misky nemají.
 - Motivace sbíráním, ne soutěžením.
 
 ## 5. Content pack model (JSON)

@@ -140,5 +140,7 @@
   "badgeWishMakerHow": "10 wishes granted",
   "badgeFriendOfAll": "Friend of all",
   "badgeFriendOfAllHow": "Every animal got a gift",
-  "settingPetRounds": "Gifts for animals: write the word first"
+  "settingPetRounds": "Gifts for animals: write the word first",
+  "petBowlFood": "bowl",
+  "petBowlWater": "water"
 }

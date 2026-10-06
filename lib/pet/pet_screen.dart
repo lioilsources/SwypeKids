@@ -15,6 +15,7 @@ import '../services/session_service.dart';
 import '../services/tts_service.dart';
 import '../ui/app_font.dart';
 import '../ui/emoji_art.dart';
+import '../ui/l10n.dart';
 import '../ui/sticker_kind.dart';
 import '../widgets/badge_chip.dart';
 import '../world/world_clock.dart';
@@ -39,6 +40,9 @@ class PetScreen extends StatefulWidget {
   State<PetScreen> createState() => _PetScreenState();
 }
 
+/// Kde obyvatel stojí: doma uprostřed, nebo u jedné z misek.
+enum _Spot { home, food, water }
+
 class _PetScreenState extends State<PetScreen> {
   ContentPack get _pack => widget.pack;
   Unit get _unit => _pack.units[widget.unitIndex];
@@ -52,6 +56,13 @@ class _PetScreenState extends State<PetScreen> {
   StickerAction? _action;
   String? _pose;
   Gift? _eating;
+
+  // Misky: dárek čeká v misce, zvířátko k ní dojde a sní / vypije ho.
+  final Map<_Spot, Gift> _bowls = {};
+  final Map<_Spot, int> _wrong = {_Spot.food: 0, _Spot.water: 0};
+  _Spot _at = _Spot.home;
+  _Spot? _eatingFrom;
+  Timer? _walkTimer;
   Timer? _actionTimer;
   int _poke = 0; // reakce na akci (trigger EmojiArt)
 
@@ -122,6 +133,7 @@ class _PetScreenState extends State<PetScreen> {
     _actionTimer?.cancel();
     _badgeTimer?.cancel();
     _wishTimer?.cancel();
+    _walkTimer?.cancel();
     super.dispose();
   }
 
@@ -139,8 +151,74 @@ class _PetScreenState extends State<PetScreen> {
         _action = null;
         _pose = null;
         _eating = null;
+        _eatingFrom = null;
+        _at = _Spot.home; // od misky zpátky domů
       });
+      // Druhá miska je taky plná → jde k ní.
+      final next = _bowls.keys.firstOrNull;
+      if (next != null) _goEat(next);
     });
+  }
+
+  // ── Misky ──────────────────────────────────────────────────────────────
+
+  static bool _fits(_Spot spot, Gift g) => switch (spot) {
+        _Spot.food => g.kind == StickerKind.food,
+        _Spot.water => g.kind == StickerKind.drink,
+        _Spot.home => false,
+      };
+
+  /// Dárek přistál v misce. Co do ní nepatří (pití do jídla, hračka),
+  /// miska „setřese" a dárek zůstane v tácku — nic se nepokazí.
+  void _fillBowl(_Spot spot, Gift gift) {
+    if (!_fits(spot, gift)) {
+      AudioService.instance.play(Sfx.error, volume: 0.5);
+      setState(() => _wrong[spot] = _wrong[spot]! + 1);
+      return;
+    }
+    AudioService.instance.play(Sfx.tap);
+    setState(() => _bowls[spot] = gift);
+    if (_asleep) {
+      // V noci miska zůstane plná, zvířátko spí dál.
+      setState(() => _shh = true);
+      return;
+    }
+    _goEat(spot);
+  }
+
+  /// Zvířátko dojde k plné misce a pustí se do ní.
+  void _goEat(_Spot spot) {
+    if (_asleep || _action != null || _at != _Spot.home) return;
+    if (!_bowls.containsKey(spot)) return;
+    setState(() => _at = spot);
+    _walkTimer?.cancel();
+    _walkTimer = Timer(const Duration(milliseconds: 750), () {
+      if (!mounted) return;
+      final gift = _bowls.remove(spot);
+      if (gift == null) {
+        setState(() => _at = _Spot.home);
+        return;
+      }
+      _eatingFrom = spot;
+      _give(gift);
+    });
+  }
+
+  /// Ťuknutí na misku: plná = zvířátko se jde najíst; prázdná řekne
+  /// své slovo (miska / voda) a poskočí.
+  void _tapBowl(_Spot spot) {
+    if (_bowls.containsKey(spot)) {
+      if (_asleep) {
+        setState(() => _shh = true);
+      } else {
+        _goEat(spot);
+      }
+      return;
+    }
+    AudioService.instance.play(Sfx.tap);
+    TtsService.speak(
+        spot == _Spot.food ? context.l.petBowlFood : context.l.petBowlWater,
+        _language);
   }
 
   // ── Gesta na obyvateli ─────────────────────────────────────────────────
@@ -390,17 +468,19 @@ class _PetScreenState extends State<PetScreen> {
       return Stack(
         clipBehavior: Clip.none,
         children: [
-          // Miska s jídlem a s vodou u nohou (póza spánku má vlastní polštář).
-          Positioned(
-            left: box.maxWidth / 2 - size * 1.25,
-            top: ground + size * 0.05,
-            child: _prop('bowl-food', size * 0.45),
-          ),
-          Positioned(
-            left: box.maxWidth / 2 + size * 0.8,
-            top: ground + size * 0.05,
-            child: _prop('bowl-water', size * 0.45),
-          ),
+          // Misky u nohou — jen u toho, kdo jí a pije (věc misky nemá).
+          if (_residentEats) ...[
+            Positioned(
+              left: box.maxWidth / 2 - size * 1.3,
+              top: ground + size * 0.02,
+              child: _bowl(_Spot.food, 'bowl-food', size * 0.5),
+            ),
+            Positioned(
+              left: box.maxWidth / 2 + size * 0.8,
+              top: ground + size * 0.02,
+              child: _bowl(_Spot.water, 'bowl-water', size * 0.5),
+            ),
+          ],
           // Tajná nálepka biotopu bydlí s ním.
           if (secretOwned)
             Positioned(
@@ -418,16 +498,24 @@ class _PetScreenState extends State<PetScreen> {
             ),
           // Obyvatel.
           AnimatedPositioned(
-            duration: _lift == null
-                ? const Duration(milliseconds: 500)
-                : Duration.zero,
-            curve: Curves.elasticOut,
-            left: box.maxWidth / 2 - size * 0.6 + lift.dx,
+            duration: _lift != null
+                ? Duration.zero
+                : Duration(milliseconds: _at == _Spot.home ? 500 : 700),
+            curve: _at == _Spot.home ? Curves.elasticOut : Curves.easeInOut,
+            left: box.maxWidth / 2 -
+                size * 0.6 +
+                lift.dx +
+                // K misce dojde, nestoupne si do ní.
+                switch (_at) {
+                  _Spot.food => -size * 0.5,
+                  _Spot.water => size * 0.5,
+                  _Spot.home => 0.0,
+                },
             top: ground - size * 0.9 + lift.dy,
             child: GuideAvoid(weight: 4, child: _residentWidget(size, night)),
           ),
           // Dárek u pusy, dokud ho jí / hraje si s ním.
-          if (_eating case final g?)
+          if (_eating case final g? when _eatingFrom == null)
             Positioned(
               left: box.maxWidth / 2 + size * 0.35,
               top: ground - size * 0.2,
@@ -478,6 +566,70 @@ class _PetScreenState extends State<PetScreen> {
         ],
       );
     });
+  }
+
+  /// Miska: cíl pro dárek z tácku; plná ukazuje, co v ní je (a při jídle
+  /// to ubývá), špatný dárek setřese.
+  Widget _bowl(_Spot spot, String name, double size) {
+    final full = _bowls[spot];
+    final eatingHere = _eatingFrom == spot ? _eating : null;
+    return GuideAvoid(
+      child: DragTarget<Gift>(
+        key: ValueKey('pet-bowl-${spot.name}'),
+        onWillAcceptWithDetails: (_) => true,
+        onAcceptWithDetails: (d) => _fillBowl(spot, d.data),
+        builder: (context, candidates, _) => GestureDetector(
+          behavior: HitTestBehavior.opaque,
+          onTap: () => _tapBowl(spot),
+          child: TweenAnimationBuilder<double>(
+            // Špatný dárek: miska se zavrtí „sem ne".
+            key: ValueKey('bowl-${spot.name}-${_wrong[spot]}'),
+            tween: Tween(begin: _wrong[spot]! > 0 ? 1.0 : 0.0, end: 0),
+            duration: const Duration(milliseconds: 500),
+            builder: (context, t, child) => Transform.rotate(
+              angle: 0.25 * sin(t * pi * 5) * t,
+              child: child,
+            ),
+            child: AnimatedScale(
+              scale: candidates.isNotEmpty ? 1.2 : 1,
+              duration: const Duration(milliseconds: 150),
+              child: SizedBox(
+                width: size,
+                height: size,
+                child: Stack(
+                  clipBehavior: Clip.none,
+                  alignment: Alignment.center,
+                  children: [
+                    _prop(name, size),
+                    if (full != null)
+                      Positioned(
+                        top: -size * 0.28,
+                        child: EmojiArt(full.emoji,
+                            key: ValueKey('bowl-content-${spot.name}'),
+                            size: size * 0.6,
+                            reaction: StickerReaction.none),
+                      )
+                    else if (eatingHere != null)
+                      Positioned(
+                        top: -size * 0.28,
+                        child: TweenAnimationBuilder<double>(
+                          tween: Tween(begin: 1, end: 0),
+                          duration: const Duration(milliseconds: 2200),
+                          builder: (context, t, child) =>
+                              Transform.scale(scale: t, child: child),
+                          child: EmojiArt(eatingHere.emoji,
+                              size: size * 0.6,
+                              reaction: StickerReaction.none),
+                        ),
+                      ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
   }
 
   Widget _prop(String name, double size) => Image.asset(
