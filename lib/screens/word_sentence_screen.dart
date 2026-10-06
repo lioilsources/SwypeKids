@@ -54,6 +54,7 @@ class _WordSentenceScreenState extends State<WordSentenceScreen> {
         verb: _picked[_Slot.verb],
         object: _picked[_Slot.object],
         joiner: _data.joiner,
+        verbLast: _data.order == 'sov',
       );
 
   List<SentencePart> _category(_Slot slot) => switch (slot) {

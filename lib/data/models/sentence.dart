@@ -80,11 +80,16 @@ class SentenceCategories {
   // Joiner between parts: '' for ZH/JA, ' ' otherwise.
   final String joiner;
 
+  /// Pořadí slov: `svo` (podmět–sloveso–předmět) nebo `sov` (japonština:
+  /// sloveso na konci).
+  final String order;
+
   const SentenceCategories({
     required this.subjects,
     required this.verbs,
     required this.objects,
     this.joiner = ' ',
+    this.order = 'svo',
   });
 
   static const empty = SentenceCategories(subjects: [], verbs: [], objects: []);
@@ -101,6 +106,7 @@ class SentenceCategories {
       verbs: parts('verbs'),
       objects: parts('objects'),
       joiner: json['joiner'] as String? ?? ' ',
+      order: json['order'] as String? ?? 'svo',
     );
   }
 }
@@ -113,11 +119,15 @@ class ComposedSentence {
   final SentencePart? object;
   final String joiner;
 
+  /// Sloveso na konci (japonština), viz [SentenceCategories.order].
+  final bool verbLast;
+
   const ComposedSentence({
     this.subject,
     this.verb,
     this.object,
     this.joiner = ' ',
+    this.verbLast = false,
   });
 
   String? get subjectText => subject?.text;
@@ -143,7 +153,9 @@ class ComposedSentence {
   String get emojis =>
       [subject?.emoji, verb?.emoji, object?.emoji].whereType<String>().join(' ');
 
-  String get text => [subjectText, verbText, objectText]
+  String get text => (verbLast
+          ? [subjectText, objectText, verbText]
+          : [subjectText, verbText, objectText])
       .whereType<String>()
       .join(joiner);
 }

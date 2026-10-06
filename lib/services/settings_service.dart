@@ -82,7 +82,7 @@ class SettingsService extends ChangeNotifier {
     _sessionLimitMin = _prefs!.getInt(_kSessionLimit) ?? 0;
     _dyslexiaFont = _prefs!.getBool(_kDyslexiaFont) ?? false;
     _guidePositions.clear();
-    for (final place in const ['game', 'map']) {
+    for (final place in const ['game', 'map', 'pet']) {
       final o = _parseOffset(_prefs!.getString(_guideKey(place)));
       if (o != null) _guidePositions[place] = o;
     }

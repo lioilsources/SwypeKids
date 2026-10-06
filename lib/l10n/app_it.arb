@@ -233,5 +233,6 @@
   "retry": "Riprova",
   "vocativeLabel": "Vocativo in ceco",
   "vocativeHint": "es. Lauro",
-  "guideTitle": "La tua guida"
+  "guideTitle": "La tua guida",
+  "petPlay": "Giochiamo"
 }

@@ -429,4 +429,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get guideTitle => 'きみのなかま';
+
+  @override
+  String get petPlay => 'あそぼう';
 }

@@ -432,4 +432,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get guideTitle => 'Seu guia';
+
+  @override
+  String get petPlay => 'Vamos brincar';
 }

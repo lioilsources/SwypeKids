@@ -20,12 +20,16 @@ class UnitCompleteScreen extends StatelessWidget {
   /// Odznaky získané touto jednotkou (oslava je ukáže pod hvězdami).
   final List<GameBadge> newBadges;
 
+  /// Svět nového zvířátka (tlačítko „Pojď si hrát"); `null` = jen mapa.
+  final Widget Function()? playWith;
+
   const UnitCompleteScreen({
     super.key,
     required this.reward,
     required this.stars,
     this.heroTag,
     this.newBadges = const [],
+    this.playWith,
   });
 
   @override
@@ -102,6 +106,30 @@ class UnitCompleteScreen extends StatelessWidget {
                 ),
               ],
               const SizedBox(height: 32),
+              // Rovnou za novým zvířátkem do jeho světa.
+              if (playWith != null) ...[
+                ElevatedButton(
+                  key: const ValueKey('play-with-pet'),
+                  onPressed: () => Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(builder: (_) => playWith!())),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFFFFD200),
+                    foregroundColor: const Color(0xFF3A2E1F),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 40, vertical: 16),
+                    shape: const StadiumBorder(),
+                    textStyle: TextStyle(
+                      fontFamily: kDisplayFont,
+                      fontFamilyFallback: kFontFallback,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w800,
+                    ),
+                    elevation: 8,
+                  ),
+                  child: Text('🏡 ${context.l.petPlay}'),
+                ),
+                const SizedBox(height: 14),
+              ],
               ElevatedButton(
                 onPressed: () => Navigator.of(context).pop(),
                 style: ElevatedButton.styleFrom(

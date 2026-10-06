@@ -43,7 +43,8 @@
       "reward": {
         "emoji": "🍎",
         "name": "M",
-        "label": "mela"
+        "label": "mela",
+        "subject": "La mela"
       },
       "scene": {
         "biome": "meadow"
@@ -88,7 +89,8 @@
       "reward": {
         "emoji": "🏝️",
         "name": "I",
-        "label": "isola"
+        "label": "isola",
+        "subject": "L'isola"
       },
       "scene": {
         "biome": "forest"
@@ -150,7 +152,8 @@
       "reward": {
         "emoji": "🍕",
         "name": "P",
-        "label": "pizza"
+        "label": "pizza",
+        "subject": "La pizza"
       },
       "scene": {
         "biome": "pond"
@@ -215,7 +218,8 @@
       "reward": {
         "emoji": "👃",
         "name": "N",
-        "label": "naso"
+        "label": "naso",
+        "subject": "Il naso"
       },
       "scene": {
         "biome": "garden"
@@ -283,7 +287,8 @@
       "reward": {
         "emoji": "🐻",
         "name": "O",
-        "label": "orso"
+        "label": "orso",
+        "subject": "L'orso"
       },
       "scene": {
         "biome": "farm"
@@ -318,7 +323,8 @@
       "reward": {
         "emoji": "🐝",
         "name": "A",
-        "label": "ape"
+        "label": "ape",
+        "subject": "L'ape"
       },
       "scene": {
         "biome": "city"
@@ -487,7 +493,8 @@
       "reward": {
         "emoji": "🐯",
         "name": "T",
-        "label": "tigre"
+        "label": "tigre",
+        "subject": "La tigre"
       },
       "scene": {
         "biome": "mountains"
@@ -609,7 +616,8 @@
       "reward": {
         "emoji": "☀️",
         "name": "S",
-        "label": "sole"
+        "label": "sole",
+        "subject": "Il sole"
       },
       "scene": {
         "biome": "beach"
@@ -828,7 +836,8 @@
       "reward": {
         "emoji": "🏠",
         "name": "C",
-        "label": "casa"
+        "label": "casa",
+        "subject": "La casa"
       },
       "scene": {
         "biome": "orchard"
@@ -1065,7 +1074,8 @@
       "reward": {
         "emoji": "🍌",
         "name": "B",
-        "label": "banana"
+        "label": "banana",
+        "subject": "La banana"
       },
       "scene": {
         "biome": "snow"
@@ -1292,7 +1302,8 @@
       "reward": {
         "emoji": "🐱",
         "name": "G",
-        "label": "gatto"
+        "label": "gatto",
+        "subject": "Il gatto"
       },
       "scene": {
         "biome": "jungle"
@@ -1529,7 +1540,8 @@
       "reward": {
         "emoji": "🌸",
         "name": "F",
-        "label": "fiore"
+        "label": "fiore",
+        "subject": "Il fiore"
       },
       "scene": {
         "biome": "sky"
@@ -1770,7 +1782,8 @@
       "reward": {
         "emoji": "🦓",
         "name": "Z",
-        "label": "zebra"
+        "label": "zebra",
+        "subject": "La zebra"
       },
       "scene": {
         "biome": "meadow"
@@ -1999,7 +2012,8 @@
       "reward": {
         "emoji": "🎲",
         "name": "D",
-        "label": "dado"
+        "label": "dado",
+        "subject": "Il dado"
       },
       "scene": {
         "biome": "forest"

@@ -233,5 +233,6 @@
   "retry": "Réessayer",
   "vocativeLabel": "Vocatif en tchèque",
   "vocativeHint": "p. ex. Lauro",
-  "guideTitle": "Ton guide"
+  "guideTitle": "Ton guide",
+  "petPlay": "On joue"
 }

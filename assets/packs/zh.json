@@ -43,7 +43,8 @@
       "reward": {
         "emoji": "🐴",
         "name": "M",
-        "label": "马"
+        "label": "马",
+        "subject": "马"
       },
       "scene": {
         "biome": "meadow"
@@ -90,7 +91,8 @@
       "reward": {
         "emoji": "👨",
         "name": "B",
-        "label": "爸爸"
+        "label": "爸爸",
+        "subject": "爸爸"
       },
       "scene": {
         "biome": "forest"
@@ -155,7 +157,8 @@
       "reward": {
         "emoji": "1️⃣",
         "name": "I",
-        "label": "一"
+        "label": "一",
+        "subject": "一"
       },
       "scene": {
         "biome": "pond"
@@ -223,7 +226,8 @@
       "reward": {
         "emoji": "🍎",
         "name": "P",
-        "label": "苹果"
+        "label": "苹果",
+        "subject": "苹果"
       },
       "scene": {
         "biome": "garden"
@@ -294,7 +298,8 @@
       "reward": {
         "emoji": "🐮",
         "name": "N",
-        "label": "牛"
+        "label": "牛",
+        "subject": "牛"
       },
       "scene": {
         "biome": "farm"
@@ -351,7 +356,8 @@
       "reward": {
         "emoji": "❤️",
         "name": "A",
-        "label": "爱"
+        "label": "爱",
+        "subject": "爱"
       },
       "scene": {
         "biome": "city"
@@ -488,7 +494,8 @@
       "reward": {
         "emoji": "🌸",
         "name": "H",
-        "label": "花"
+        "label": "花",
+        "subject": "花"
       },
       "scene": {
         "biome": "mountains"
@@ -637,7 +644,8 @@
       "reward": {
         "emoji": "🐘",
         "name": "D",
-        "label": "大象"
+        "label": "大象",
+        "subject": "大象"
       },
       "scene": {
         "biome": "beach"
@@ -818,7 +826,8 @@
       "reward": {
         "emoji": "🐶",
         "name": "G",
-        "label": "狗"
+        "label": "狗",
+        "subject": "狗"
       },
       "scene": {
         "biome": "orchard"
@@ -1040,7 +1049,8 @@
       "reward": {
         "emoji": "🐯",
         "name": "L",
-        "label": "老虎"
+        "label": "老虎",
+        "subject": "老虎"
       },
       "scene": {
         "biome": "snow"
@@ -1276,7 +1286,8 @@
       "reward": {
         "emoji": "🌙",
         "name": "Y",
-        "label": "月亮"
+        "label": "月亮",
+        "subject": "月亮"
       },
       "scene": {
         "biome": "jungle"

@@ -43,7 +43,8 @@
       "reward": {
         "emoji": "🐵",
         "name": "M",
-        "label": "macaco"
+        "label": "macaco",
+        "subject": "O macaco"
       },
       "scene": {
         "biome": "meadow"
@@ -88,7 +89,8 @@
       "reward": {
         "emoji": "🏝️",
         "name": "I",
-        "label": "ilha"
+        "label": "ilha",
+        "subject": "A ilha"
       },
       "scene": {
         "biome": "forest"
@@ -135,7 +137,8 @@
       "reward": {
         "emoji": "🦆",
         "name": "P",
-        "label": "pato"
+        "label": "pato",
+        "subject": "O pato"
       },
       "scene": {
         "biome": "pond"
@@ -200,7 +203,8 @@
       "reward": {
         "emoji": "🐮",
         "name": "V",
-        "label": "vaca"
+        "label": "vaca",
+        "subject": "A vaca"
       },
       "scene": {
         "biome": "garden"
@@ -271,7 +275,8 @@
       "reward": {
         "emoji": "🐘",
         "name": "E",
-        "label": "elefante"
+        "label": "elefante",
+        "subject": "O elefante"
       },
       "scene": {
         "biome": "farm"
@@ -326,7 +331,8 @@
       "reward": {
         "emoji": "🦁",
         "name": "L",
-        "label": "leão"
+        "label": "leão",
+        "subject": "O leão"
       },
       "scene": {
         "biome": "city"
@@ -487,7 +493,8 @@
       "reward": {
         "emoji": "🐯",
         "name": "T",
-        "label": "tigre"
+        "label": "tigre",
+        "subject": "O tigre"
       },
       "scene": {
         "biome": "mountains"
@@ -684,7 +691,8 @@
       "reward": {
         "emoji": "☀️",
         "name": "S",
-        "label": "sol"
+        "label": "sol",
+        "subject": "O sol"
       },
       "scene": {
         "biome": "beach"
@@ -896,7 +904,8 @@
       "reward": {
         "emoji": "🍌",
         "name": "B",
-        "label": "banana"
+        "label": "banana",
+        "subject": "A banana"
       },
       "scene": {
         "biome": "orchard"
@@ -1126,7 +1135,8 @@
       "reward": {
         "emoji": "🍍",
         "name": "A",
-        "label": "abacaxi"
+        "label": "abacaxi",
+        "subject": "O abacaxi"
       },
       "scene": {
         "biome": "snow"
@@ -1328,7 +1338,8 @@
       "reward": {
         "emoji": "🐭",
         "name": "R",
-        "label": "rato"
+        "label": "rato",
+        "subject": "O rato"
       },
       "scene": {
         "biome": "jungle"
@@ -1561,7 +1572,8 @@
       "reward": {
         "emoji": "🍇",
         "name": "U",
-        "label": "uva"
+        "label": "uva",
+        "subject": "A uva"
       },
       "scene": {
         "biome": "sky"
@@ -1797,7 +1809,8 @@
       "reward": {
         "emoji": "🎲",
         "name": "D",
-        "label": "dado"
+        "label": "dado",
+        "subject": "O dado"
       },
       "scene": {
         "biome": "meadow"

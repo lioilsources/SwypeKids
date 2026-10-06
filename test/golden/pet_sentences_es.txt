@@ -1,0 +1,70 @@
+🐵 + 🥛 → El mono bebe leche.
+🐵 + 🍎 → El mono come una manzana.
+🐵 + 🚗 → El mono juega con el coche.
+🐵 + 🍌 → El mono come.
+🐵 + 💧 → El mono bebe.
+🏝️ + 🥛 → ✨
+🏝️ + 🍎 → ✨
+🏝️ + 🚗 → La isla juega con el coche.
+🏝️ + 🍌 → ✨
+🏝️ + 💧 → ✨
+🐶 + 🥛 → El perro bebe leche.
+🐶 + 🍎 → El perro come una manzana.
+🐶 + 🚗 → El perro juega con el coche.
+🐶 + 🍌 → El perro come.
+🐶 + 💧 → El perro bebe.
+🐍 + 🥛 → La serpiente bebe leche.
+🐍 + 🍎 → La serpiente come una manzana.
+🐍 + 🚗 → La serpiente juega con el coche.
+🐍 + 🍌 → La serpiente come.
+🐍 + 💧 → La serpiente bebe.
+🦁 + 🥛 → El león bebe leche.
+🦁 + 🍎 → El león come una manzana.
+🦁 + 🚗 → El león juega con el coche.
+🦁 + 🍌 → El león come.
+🦁 + 💧 → El león bebe.
+🌳 + 🥛 → ✨
+🌳 + 🍎 → ✨
+🌳 + 🚗 → El árbol juega con el coche.
+🌳 + 🍌 → ✨
+🌳 + 💧 → ✨
+🐘 + 🥛 → El elefante bebe leche.
+🐘 + 🍎 → El elefante come una manzana.
+🐘 + 🚗 → El elefante juega con el coche.
+🐘 + 🍌 → El elefante come.
+🐘 + 💧 → El elefante bebe.
+🍇 + 🥛 → ✨
+🍇 + 🍎 → ✨
+🍇 + 🚗 → La uva juega con el coche.
+🍇 + 🍌 → ✨
+🍇 + 💧 → ✨
+🏠 + 🥛 → ✨
+🏠 + 🍎 → ✨
+🏠 + 🚗 → La casa juega con el coche.
+🏠 + 🍌 → ✨
+🏠 + 💧 → ✨
+🐳 + 🥛 → La ballena bebe leche.
+🐳 + 🍎 → La ballena come una manzana.
+🐳 + 🚗 → La ballena juega con el coche.
+🐳 + 🍌 → La ballena come.
+🐳 + 💧 → La ballena bebe.
+🐻 + 🥛 → El oso bebe leche.
+🐻 + 🍎 → El oso come una manzana.
+🐻 + 🚗 → El oso juega con el coche.
+🐻 + 🍌 → El oso come.
+🐻 + 💧 → El oso bebe.
+🐮 + 🥛 → La vaca bebe leche.
+🐮 + 🍎 → La vaca come una manzana.
+🐮 + 🚗 → La vaca juega con el coche.
+🐮 + 🍌 → La vaca come.
+🐮 + 💧 → La vaca bebe.
+🐱 + 🥛 → El gato bebe leche.
+🐱 + 🍎 → El gato come una manzana.
+🐱 + 🚗 → El gato juega con el coche.
+🐱 + 🍌 → El gato come.
+🐱 + 💧 → El gato bebe.
+🦕 + 🥛 → El dinosaurio bebe leche.
+🦕 + 🍎 → El dinosaurio come una manzana.
+🦕 + 🚗 → El dinosaurio juega con el coche.
+🦕 + 🍌 → El dinosaurio come.
+🦕 + 💧 → El dinosaurio bebe.

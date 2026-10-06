@@ -1,0 +1,70 @@
+🐭 + 🥛 → Die Maus trinkt Milch.
+🐭 + 🍎 → Die Maus isst einen Apfel.
+🐭 + 🚗 → Die Maus spielt mit dem Auto.
+🐭 + 🍌 → Die Maus isst.
+🐭 + 💧 → Die Maus trinkt.
+🦔 + 🥛 → Der Igel trinkt Milch.
+🦔 + 🍎 → Der Igel isst einen Apfel.
+🦔 + 🚗 → Der Igel spielt mit dem Auto.
+🦔 + 🍌 → Der Igel isst.
+🦔 + 💧 → Der Igel trinkt.
+🦁 + 🥛 → Der Löwe trinkt Milch.
+🦁 + 🍎 → Der Löwe isst einen Apfel.
+🦁 + 🚗 → Der Löwe spielt mit dem Auto.
+🦁 + 🍌 → Der Löwe isst.
+🦁 + 💧 → Der Löwe trinkt.
+🍊 + 🥛 → ✨
+🍊 + 🍎 → ✨
+🍊 + 🚗 → Die Orange spielt mit dem Auto.
+🍊 + 🍌 → ✨
+🍊 + 💧 → ✨
+🐧 + 🥛 → Der Pinguin trinkt Milch.
+🐧 + 🍎 → Der Pinguin isst einen Apfel.
+🐧 + 🚗 → Der Pinguin spielt mit dem Auto.
+🐧 + 🍌 → Der Pinguin isst.
+🐧 + 💧 → Der Pinguin trinkt.
+🍎 + 🥛 → ✨
+🍎 + 🍎 → ✨
+🍎 + 🚗 → Der Apfel spielt mit dem Auto.
+🍎 + 🍌 → ✨
+🍎 + 💧 → ✨
+🐯 + 🥛 → Der Tiger trinkt Milch.
+🐯 + 🍎 → Der Tiger isst einen Apfel.
+🐯 + 🚗 → Der Tiger spielt mit dem Auto.
+🐯 + 🍌 → Der Tiger isst.
+🐯 + 💧 → Der Tiger trinkt.
+👃 + 🥛 → ✨
+👃 + 🍎 → ✨
+👃 + 🚗 → Die Nase spielt mit dem Auto.
+👃 + 🍌 → ✨
+👃 + 💧 → ✨
+🍌 + 🥛 → ✨
+🍌 + 🍎 → ✨
+🍌 + 🚗 → Die Banane spielt mit dem Auto.
+🍌 + 🍌 → ✨
+🍌 + 💧 → ✨
+🏠 + 🥛 → ✨
+🏠 + 🍎 → ✨
+🏠 + 🚗 → Das Haus spielt mit dem Auto.
+🏠 + 🍌 → ✨
+🏠 + 💧 → ✨
+🐱 + 🥛 → Die Katze trinkt Milch.
+🐱 + 🍎 → Die Katze isst einen Apfel.
+🐱 + 🚗 → Die Katze spielt mit dem Auto.
+🐱 + 🍌 → Die Katze isst.
+🐱 + 💧 → Die Katze trinkt.
+🐸 + 🥛 → Der Frosch trinkt Milch.
+🐸 + 🍎 → Der Frosch isst einen Apfel.
+🐸 + 🚗 → Der Frosch spielt mit dem Auto.
+🐸 + 🍌 → Der Frosch isst.
+🐸 + 💧 → Der Frosch trinkt.
+🦒 + 🥛 → Die Giraffe trinkt Milch.
+🦒 + 🍎 → Die Giraffe isst einen Apfel.
+🦒 + 🚗 → Die Giraffe spielt mit dem Auto.
+🦒 + 🍌 → Die Giraffe isst.
+🦒 + 💧 → Die Giraffe trinkt.
+🐉 + 🥛 → Der Drache trinkt Milch.
+🐉 + 🍎 → Der Drache isst einen Apfel.
+🐉 + 🚗 → Der Drache spielt mit dem Auto.
+🐉 + 🍌 → Der Drache isst.
+🐉 + 💧 → Der Drache trinkt.

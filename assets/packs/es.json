@@ -43,7 +43,8 @@
       "reward": {
         "emoji": "🐵",
         "name": "M",
-        "label": "mono"
+        "label": "mono",
+        "subject": "El mono"
       },
       "scene": {
         "biome": "meadow"
@@ -88,7 +89,8 @@
       "reward": {
         "emoji": "🏝️",
         "name": "I",
-        "label": "isla"
+        "label": "isla",
+        "subject": "La isla"
       },
       "scene": {
         "biome": "forest"
@@ -150,7 +152,8 @@
       "reward": {
         "emoji": "🐶",
         "name": "P",
-        "label": "perro"
+        "label": "perro",
+        "subject": "El perro"
       },
       "scene": {
         "biome": "pond"
@@ -215,7 +218,8 @@
       "reward": {
         "emoji": "🐍",
         "name": "S",
-        "label": "serpiente"
+        "label": "serpiente",
+        "subject": "La serpiente"
       },
       "scene": {
         "biome": "garden"
@@ -304,7 +308,8 @@
       "reward": {
         "emoji": "🦁",
         "name": "L",
-        "label": "león"
+        "label": "león",
+        "subject": "El león"
       },
       "scene": {
         "biome": "farm"
@@ -339,7 +344,8 @@
       "reward": {
         "emoji": "🌳",
         "name": "A",
-        "label": "árbol"
+        "label": "árbol",
+        "subject": "El árbol"
       },
       "scene": {
         "biome": "city"
@@ -489,7 +495,8 @@
       "reward": {
         "emoji": "🐘",
         "name": "E",
-        "label": "elefante"
+        "label": "elefante",
+        "subject": "El elefante"
       },
       "scene": {
         "biome": "mountains"
@@ -616,7 +623,8 @@
       "reward": {
         "emoji": "🍇",
         "name": "U",
-        "label": "uva"
+        "label": "uva",
+        "subject": "La uva"
       },
       "scene": {
         "biome": "beach"
@@ -820,7 +828,8 @@
       "reward": {
         "emoji": "🏠",
         "name": "C",
-        "label": "casa"
+        "label": "casa",
+        "subject": "La casa"
       },
       "scene": {
         "biome": "orchard"
@@ -1066,7 +1075,8 @@
       "reward": {
         "emoji": "🐳",
         "name": "B",
-        "label": "ballena"
+        "label": "ballena",
+        "subject": "La ballena"
       },
       "scene": {
         "biome": "snow"
@@ -1329,7 +1339,8 @@
       "reward": {
         "emoji": "🐻",
         "name": "O",
-        "label": "oso"
+        "label": "oso",
+        "subject": "El oso"
       },
       "scene": {
         "biome": "jungle"
@@ -1564,7 +1575,8 @@
       "reward": {
         "emoji": "🐮",
         "name": "V",
-        "label": "vaca"
+        "label": "vaca",
+        "subject": "La vaca"
       },
       "scene": {
         "biome": "sky"
@@ -1804,7 +1816,8 @@
       "reward": {
         "emoji": "🐱",
         "name": "G",
-        "label": "gato"
+        "label": "gato",
+        "subject": "El gato"
       },
       "scene": {
         "biome": "meadow"
@@ -2047,7 +2060,8 @@
       "reward": {
         "emoji": "🦕",
         "name": "D",
-        "label": "dinosaurio"
+        "label": "dinosaurio",
+        "subject": "El dinosaurio"
       },
       "scene": {
         "biome": "forest"

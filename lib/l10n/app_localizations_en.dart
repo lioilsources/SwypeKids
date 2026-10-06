@@ -433,4 +433,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get guideTitle => 'Your guide';
+
+  @override
+  String get petPlay => 'Let\'s play';
 }

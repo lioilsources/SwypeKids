@@ -234,5 +234,6 @@
   "retry": "Zkusit znovu",
   "vocativeLabel": "Oslovení v češtině (5. pád)",
   "vocativeHint": "např. Lauro",
-  "guideTitle": "Tvůj průvodce"
+  "guideTitle": "Tvůj průvodce",
+  "petPlay": "Pojď si hrát"
 }

@@ -130,5 +130,6 @@
   "retry": "Try again",
   "vocativeLabel": "Czech form of address (vocative)",
   "vocativeHint": "e.g. Lauro",
-  "guideTitle": "Your guide"
+  "guideTitle": "Your guide",
+  "petPlay": "Let's play"
 }

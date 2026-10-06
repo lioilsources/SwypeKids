@@ -7,7 +7,8 @@ import 'sticker_kind.dart';
 
 /// Krátká reakce nálepky na dotyk nebo na akci (≤ 600 ms).
 enum StickerReaction {
-  /// Podle druhu nálepky: zvířátko = srdíčka, jídlo = zmáčknutí, jinak
+  /// Podle druhu nálepky: zvířátko a člověk = srdíčka, jídlo = zmáčknutí,
+  /// pití = kývnutí, jinak
   /// poskok / zavrtění / kývnutí / zachvění / otočka (podle emoji).
   auto,
   none,
@@ -54,6 +55,10 @@ class EmojiArt extends StatefulWidget {
   /// Smyčka akce (svět zvířátka); `null` = jen dýchání.
   final StickerAction? action;
 
+  /// Póza nálepky (`eat`, `happy`, `sleep`), když pro ni existuje obrázek
+  /// (`assets/emoji/<cp>-<pose>.webp`); jinak základní nálepka.
+  final String? pose;
+
   const EmojiArt(
     this.emoji, {
     super.key,
@@ -63,6 +68,7 @@ class EmojiArt extends StatefulWidget {
     this.onTap,
     this.trigger,
     this.action,
+    this.pose,
   });
 
   /// Klíč assetu: kódové body hex bez variačního selektoru FE0F.
@@ -73,16 +79,19 @@ class EmojiArt extends StatefulWidget {
 
   static bool hasArt(String emoji) => kEmojiArt.contains(keyFor(emoji));
 
+  static bool hasPose(String emoji, String pose) =>
+      kEmojiArt.contains('${keyFor(emoji)}-$pose');
+
   static String assetFor(String emoji) => 'assets/emoji/${keyFor(emoji)}.webp';
 
   /// Jaká reakce se pro [emoji] použije při [StickerReaction.auto].
   static StickerReaction resolve(String emoji, StickerReaction r) {
     if (r != StickerReaction.auto) return r;
     return switch (StickerKind.of(emoji)) {
-      StickerKind.animal => StickerReaction.hearts,
+      StickerKind.animal || StickerKind.person => StickerReaction.hearts,
       StickerKind.food => StickerReaction.squash,
       StickerKind.drink => StickerReaction.nod,
-      StickerKind.other => const [
+      StickerKind.toy || StickerKind.other => const [
           StickerReaction.bounce,
           StickerReaction.wiggle,
           StickerReaction.nod,
@@ -182,10 +191,15 @@ class EmojiArtState extends State<EmojiArt> with TickerProviderStateMixin {
     final art = EmojiArt.hasArt(emoji);
     // Obrázek zabere zhruba výšku řádku emoji, ať se rozložení nehne.
     final box = size * 1.2;
+    final pose = widget.pose;
+    final key = pose != null && EmojiArt.hasPose(emoji, pose)
+        ? '${EmojiArt.keyFor(emoji)}-$pose'
+        : EmojiArt.keyFor(emoji);
     final Widget face = art
         ? Image.asset(
-            EmojiArt.assetFor(emoji),
-            key: ValueKey('emoji-art-${EmojiArt.keyFor(emoji)}'),
+            'assets/emoji/$key.webp',
+            key: ValueKey('emoji-art-$key'),
+            gaplessPlayback: true,
             width: box,
             height: box,
             filterQuality: FilterQuality.medium,
