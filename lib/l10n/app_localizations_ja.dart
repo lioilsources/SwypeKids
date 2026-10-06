@@ -432,4 +432,31 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get petPlay => 'あそぼう';
+
+  @override
+  String get badgeHost => 'おもてなし';
+
+  @override
+  String get badgeHostHow => 'どうぶつに10こプレゼント';
+
+  @override
+  String get badgeCuddler => 'なでなで';
+
+  @override
+  String get badgeCuddlerHow => 'どうぶつを5ひきなでた';
+
+  @override
+  String get badgeWishMaker => 'ねがいがかなった';
+
+  @override
+  String get badgeWishMakerHow => '10このねがいをかなえた';
+
+  @override
+  String get badgeFriendOfAll => 'みんなのともだち';
+
+  @override
+  String get badgeFriendOfAllHow => 'どのどうぶつもプレゼントをもらった';
+
+  @override
+  String get settingPetRounds => 'どうぶつへのプレゼント：さきにことばをかく';
 }

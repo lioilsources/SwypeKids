@@ -234,5 +234,14 @@
   "vocativeLabel": "Vocativo in ceco",
   "vocativeHint": "es. Lauro",
   "guideTitle": "La tua guida",
-  "petPlay": "Giochiamo"
+  "petPlay": "Giochiamo",
+  "badgeHost": "Padrone di casa",
+  "badgeHostHow": "10 regali agli animali",
+  "badgeCuddler": "Coccolone",
+  "badgeCuddlerHow": "Accarezzati 5 animali",
+  "badgeWishMaker": "Desiderio esaudito",
+  "badgeWishMakerHow": "10 desideri esauditi",
+  "badgeFriendOfAll": "Amico di tutti",
+  "badgeFriendOfAllHow": "Ogni animale ha ricevuto un regalo",
+  "settingPetRounds": "Regali agli animali: prima scrivere la parola"
 }

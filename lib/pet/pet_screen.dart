@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:math';
 
 import 'package:flutter/material.dart';
 
@@ -17,7 +18,10 @@ import '../ui/emoji_art.dart';
 import '../ui/sticker_kind.dart';
 import '../widgets/badge_chip.dart';
 import '../world/world_clock.dart';
+import '../screens/game_screen.dart';
+import '../services/settings_service.dart';
 import 'gift.dart';
+import 'wish.dart';
 
 /// Svět zvířátka (Zvěřinec → řádek jednotky): obyvatel = nálepka jednotky
 /// (+ tajná nálepka biotopu, když ji dítě našlo) v jejím biotopu. Dítě ho
@@ -53,7 +57,6 @@ class _PetScreenState extends State<PetScreen> {
 
   // Hlazení: dráha prstu po těle; šimrání: rychlá ťuknutí.
   double _stroke = 0;
-  DateTime? _strokeStart;
   final List<DateTime> _quickTaps = [];
 
   // Zvednutí dlouhým stiskem.
@@ -65,6 +68,12 @@ class _PetScreenState extends State<PetScreen> {
   List<GameBadge> _newBadges = const [];
   Timer? _badgeTimer;
   bool _shh = false; // dárek v noci: „pšt"
+
+  // Přání: obrázek slova v bublině, přednostně slabé slovo z batohu.
+  Gift? _wish;
+  String? _lastWish;
+  static final _rng = Random();
+  Timer? _wishTimer;
 
   // Průvodce (stejný jako na mapě a ve hře).
   MascotMood _mood = MascotMood.wave;
@@ -84,12 +93,35 @@ class _PetScreenState extends State<PetScreen> {
         TtsService.speak(_resident.label, _language);
       }
     });
+    _scheduleWish(const Duration(milliseconds: 1500), always: true);
+  }
+
+  /// Za chvíli si zvířátko možná něco přeje (po dárku napůl náhodně).
+  void _scheduleWish(Duration after, {bool always = false}) {
+    _wishTimer?.cancel();
+    _wishTimer = Timer(after, () {
+      if (!mounted || _asleep || _wish != null) return;
+      if (!always && _rng.nextBool()) return;
+      final w = PetLearning.pickWish(_pack, _tray, last: _lastWish, rng: _rng);
+      if (w == null) return;
+      setState(() => _wish = w);
+    });
+  }
+
+  void _showBadges(List<GameBadge> badges) {
+    if (badges.isEmpty) return;
+    setState(() => _newBadges = badges);
+    _badgeTimer?.cancel();
+    _badgeTimer = Timer(const Duration(seconds: 3), () {
+      if (mounted) setState(() => _newBadges = const []);
+    });
   }
 
   @override
   void dispose() {
     _actionTimer?.cancel();
     _badgeTimer?.cancel();
+    _wishTimer?.cancel();
     super.dispose();
   }
 
@@ -135,33 +167,40 @@ class _PetScreenState extends State<PetScreen> {
     }
   }
 
-  void _onStrokeStart(DragStartDetails _) {
-    _stroke = 0;
-    _strokeStart = DateTime.now();
-  }
+  void _onStrokeStart(DragStartDetails _) => _stroke = 0;
 
-  /// Hlazení = aspoň 60 px po těle za aspoň 300 ms.
+  /// Hlazení = prst ujede po těle aspoň 80 px (jednou za tah).
   void _onStroke(DragUpdateDetails d) {
+    final before = _stroke;
     _stroke += d.delta.distance;
-    final start = _strokeStart;
-    if (start == null || _asleep) return;
-    if (_stroke > 60 &&
-        DateTime.now().difference(start) > const Duration(milliseconds: 300) &&
-        _action != StickerAction.happy) {
-      AudioService.instance.play(Sfx.babble, volume: 0.5);
-      _play(StickerAction.happy, 'happy', const Duration(milliseconds: 1600));
-      setState(() => _poke++);
-    }
+    if (_asleep || before >= 80 || _stroke < 80) return;
+    AudioService.instance.play(Sfx.babble, volume: 0.5);
+    _play(StickerAction.happy, 'happy', const Duration(milliseconds: 1600));
+    setState(() => _poke++);
+    ProgressService.instance.recordPetting(_pack.id, _resident.emoji);
+    _showBadges(AchievementService.instance.check(const PetAction(), _pack));
   }
 
   // ── Dárek ──────────────────────────────────────────────────────────────
 
-  void _give(Gift gift) {
+  /// Dárek přistál na zvířátku. [written] = dítě slovo předtím napsalo
+  /// (mini-kolo) → větší radost.
+  void _give(Gift gift, {bool written = false}) {
     if (_asleep) {
       setState(() => _shh = true);
       return;
     }
-    AudioService.instance.play(Sfx.tap);
+    final isWish = _wish?.id == gift.id;
+    AudioService.instance
+        .play(isWish || written ? Sfx.success : Sfx.tap);
+    if (isWish) {
+      _lastWish = gift.id;
+      setState(() => _wish = null);
+    }
+    ProgressService.instance
+        .recordGift(_pack.id, _resident.emoji, wish: isWish);
+    _showBadges(AchievementService.instance.check(const PetAction(), _pack));
+    _scheduleWish(const Duration(seconds: 4));
     final kind = gift.kind;
     final eats = _residentEats;
     final (action, pose) = switch (kind) {
@@ -170,7 +209,9 @@ class _PetScreenState extends State<PetScreen> {
       StickerKind.food || StickerKind.drink => (null, null),
       _ => (StickerAction.play, 'happy'),
     };
-    _play(action, pose, const Duration(milliseconds: 2400), eating: gift);
+    _play(action ?? (isWish ? StickerAction.happy : null), pose,
+        Duration(milliseconds: isWish || written ? 3200 : 2400),
+        eating: gift);
     setState(() => _poke++);
     final sentence = PetSentence.compose(_pack, _resident, gift);
     setState(() {
@@ -198,22 +239,30 @@ class _PetScreenState extends State<PetScreen> {
     ProgressService.instance
         .addToBook(_pack.id, PetSentence.sentenceText(s, _language), s.emojis);
     AudioService.instance.play(Sfx.sticker);
-    final badges =
-        AchievementService.instance.check(const ProgressChanged(), _pack);
-    setState(() {
-      _saved = true;
-      _newBadges = badges;
-    });
-    _badgeTimer?.cancel();
-    _badgeTimer = Timer(const Duration(seconds: 3), () {
-      if (mounted) setState(() => _newBadges = const []);
-    });
+    setState(() => _saved = true);
+    _showBadges(
+        AchievementService.instance.check(const ProgressChanged(), _pack));
   }
 
-  /// Ťuknutí na dárek v tácku: slovo nahlas (učí se i tady).
-  void _sayGift(Gift g) {
+  /// Ťuknutí na dárek v tácku: slovo nahlas; u naučeného slova (a když
+  /// to rodič nevypnul) nejdřív mini-kolo — napsané slovo dárek „oživí"
+  /// a sám doletí ke zvířátku. Zpět = nic se neděje, dárek jde dál dát
+  /// i přetažením.
+  Future<void> _tapGift(Gift g) async {
     final text = g.lesson?.display ?? g.object?.text ?? '';
     if (text.isNotEmpty) TtsService.speak(text, _language);
+    if (g.lesson == null || !SettingsService.instance.petRounds || _asleep) {
+      return;
+    }
+    final stars = await Navigator.of(context).push<int>(MaterialPageRoute(
+      builder: (_) => GameScreen(
+        pack: _pack,
+        unitIndex: widget.unitIndex,
+        practice: PetLearning.roundUnit(_pack, g),
+      ),
+    ));
+    if (!mounted || stars == null || stars <= 0) return;
+    _give(g, written: true);
   }
 
   // ── Stavba ─────────────────────────────────────────────────────────────
@@ -256,6 +305,9 @@ class _PetScreenState extends State<PetScreen> {
                 child: SafeArea(
                   child: DraggableGuide(
                     place: 'pet',
+                    // Objevila se věta / přání → podívat se, jestli
+                    // průvodce nezakrývá 🔊 ⭐ nebo bublinu.
+                    layoutToken: Object.hash(_sentence?.text, _wish?.id, _shh),
                     mood: _mood,
                     replay: _taps,
                     onTickle: () => setState(() {
@@ -393,6 +445,27 @@ class _PetScreenState extends State<PetScreen> {
                     action: g.kind == StickerKind.toy
                         ? StickerAction.play
                         : StickerAction.eat),
+              ),
+            ),
+          // Přání: bublina s obrázkem slova nad zvířátkem.
+          if (_wish case final w? when !night)
+            Positioned(
+              left: box.maxWidth / 2 + size * 0.25,
+              top: ground - size * 1.35,
+              child: GestureDetector(
+                onTap: () => TtsService.speak(
+                    w.lesson?.display ?? w.object?.text ?? '', _language),
+                child: _bubble(
+                  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      const Text('💭', style: TextStyle(fontSize: 22)),
+                      const SizedBox(width: 4),
+                      EmojiArt(w.emoji, size: 32),
+                    ],
+                  ),
+                  key: const ValueKey('pet-wish'),
+                ),
               ),
             ),
           if (_shh)
@@ -542,7 +615,7 @@ class _PetScreenState extends State<PetScreen> {
                     child: EmojiArt(g.emoji, size: 44, animate: false),
                   ),
                   child: EmojiArt(g.emoji,
-                      size: 44, onTap: () => _sayGift(g)),
+                      size: 44, onTap: () => _tapGift(g)),
                 ),
               ),
           ],

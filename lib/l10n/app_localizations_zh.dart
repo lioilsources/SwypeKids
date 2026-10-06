@@ -432,4 +432,31 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get petPlay => '一起玩';
+
+  @override
+  String get badgeHost => '小主人';
+
+  @override
+  String get badgeHostHow => '给小动物10份礼物';
+
+  @override
+  String get badgeCuddler => '抱抱';
+
+  @override
+  String get badgeCuddlerHow => '摸过5只小动物';
+
+  @override
+  String get badgeWishMaker => '愿望成真';
+
+  @override
+  String get badgeWishMakerHow => '实现10个愿望';
+
+  @override
+  String get badgeFriendOfAll => '大家的朋友';
+
+  @override
+  String get badgeFriendOfAllHow => '每只小动物都收到礼物';
+
+  @override
+  String get settingPetRounds => '给小动物送礼物：先写出这个词';
 }

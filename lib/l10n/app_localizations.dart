@@ -903,6 +903,60 @@ abstract class AppLocalizations {
   /// In cs, this message translates to:
   /// **'Pojď si hrát'**
   String get petPlay;
+
+  /// No description provided for @badgeHost.
+  ///
+  /// In cs, this message translates to:
+  /// **'Hostitel'**
+  String get badgeHost;
+
+  /// No description provided for @badgeHostHow.
+  ///
+  /// In cs, this message translates to:
+  /// **'10 dárků zvířátkům'**
+  String get badgeHostHow;
+
+  /// No description provided for @badgeCuddler.
+  ///
+  /// In cs, this message translates to:
+  /// **'Mazlík'**
+  String get badgeCuddler;
+
+  /// No description provided for @badgeCuddlerHow.
+  ///
+  /// In cs, this message translates to:
+  /// **'Pohladil(a) 5 zvířátek'**
+  String get badgeCuddlerHow;
+
+  /// No description provided for @badgeWishMaker.
+  ///
+  /// In cs, this message translates to:
+  /// **'Splněné přání'**
+  String get badgeWishMaker;
+
+  /// No description provided for @badgeWishMakerHow.
+  ///
+  /// In cs, this message translates to:
+  /// **'10 splněných přání'**
+  String get badgeWishMakerHow;
+
+  /// No description provided for @badgeFriendOfAll.
+  ///
+  /// In cs, this message translates to:
+  /// **'Kamarád všech'**
+  String get badgeFriendOfAll;
+
+  /// No description provided for @badgeFriendOfAllHow.
+  ///
+  /// In cs, this message translates to:
+  /// **'Každé zvířátko dostalo dárek'**
+  String get badgeFriendOfAllHow;
+
+  /// No description provided for @settingPetRounds.
+  ///
+  /// In cs, this message translates to:
+  /// **'Dárky zvířátkům: nejdřív napsat slovo'**
+  String get settingPetRounds;
 }
 
 class _AppLocalizationsDelegate

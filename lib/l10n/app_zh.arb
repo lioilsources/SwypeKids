@@ -234,5 +234,14 @@
   "vocativeLabel": "捷克语称呼（呼格）",
   "vocativeHint": "例如 Lauro",
   "guideTitle": "你的小伙伴",
-  "petPlay": "一起玩"
+  "petPlay": "一起玩",
+  "badgeHost": "小主人",
+  "badgeHostHow": "给小动物10份礼物",
+  "badgeCuddler": "抱抱",
+  "badgeCuddlerHow": "摸过5只小动物",
+  "badgeWishMaker": "愿望成真",
+  "badgeWishMakerHow": "实现10个愿望",
+  "badgeFriendOfAll": "大家的朋友",
+  "badgeFriendOfAllHow": "每只小动物都收到礼物",
+  "settingPetRounds": "给小动物送礼物：先写出这个词"
 }

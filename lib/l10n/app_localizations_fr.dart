@@ -436,4 +436,31 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get petPlay => 'On joue';
+
+  @override
+  String get badgeHost => 'Hôte';
+
+  @override
+  String get badgeHostHow => '10 cadeaux aux animaux';
+
+  @override
+  String get badgeCuddler => 'Câlin';
+
+  @override
+  String get badgeCuddlerHow => '5 animaux caressés';
+
+  @override
+  String get badgeWishMaker => 'Vœu exaucé';
+
+  @override
+  String get badgeWishMakerHow => '10 vœux exaucés';
+
+  @override
+  String get badgeFriendOfAll => 'Ami de tous';
+
+  @override
+  String get badgeFriendOfAllHow => 'Chaque animal a reçu un cadeau';
+
+  @override
+  String get settingPetRounds => 'Cadeaux aux animaux : d\'abord écrire le mot';
 }

@@ -38,6 +38,10 @@ extension GameBadgeL10n on GameBadge {
         GameBadge.listener => l.badgeListener,
         GameBadge.persistent => l.badgePersistent,
         GameBadge.expedition => l.badgeExpedition,
+        GameBadge.host => l.badgeHost,
+        GameBadge.cuddler => l.badgeCuddler,
+        GameBadge.wishMaker => l.badgeWishMaker,
+        GameBadge.friendOfAll => l.badgeFriendOfAll,
       };
 
   String condition(AppLocalizations l) => switch (this) {
@@ -56,6 +60,10 @@ extension GameBadgeL10n on GameBadge {
         GameBadge.listener => l.badgeListenerHow,
         GameBadge.persistent => l.badgePersistentHow,
         GameBadge.expedition => l.badgeExpeditionHow,
+        GameBadge.host => l.badgeHostHow,
+        GameBadge.cuddler => l.badgeCuddlerHow,
+        GameBadge.wishMaker => l.badgeWishMakerHow,
+        GameBadge.friendOfAll => l.badgeFriendOfAllHow,
       };
 }
 

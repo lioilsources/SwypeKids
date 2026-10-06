@@ -131,5 +131,14 @@
   "vocativeLabel": "Czech form of address (vocative)",
   "vocativeHint": "e.g. Lauro",
   "guideTitle": "Your guide",
-  "petPlay": "Let's play"
+  "petPlay": "Let's play",
+  "badgeHost": "Host",
+  "badgeHostHow": "10 gifts for animals",
+  "badgeCuddler": "Cuddler",
+  "badgeCuddlerHow": "Stroked 5 animals",
+  "badgeWishMaker": "Wish come true",
+  "badgeWishMakerHow": "10 wishes granted",
+  "badgeFriendOfAll": "Friend of all",
+  "badgeFriendOfAllHow": "Every animal got a gift",
+  "settingPetRounds": "Gifts for animals: write the word first"
 }

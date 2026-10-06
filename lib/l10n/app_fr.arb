@@ -234,5 +234,14 @@
   "vocativeLabel": "Vocatif en tchèque",
   "vocativeHint": "p. ex. Lauro",
   "guideTitle": "Ton guide",
-  "petPlay": "On joue"
+  "petPlay": "On joue",
+  "badgeHost": "Hôte",
+  "badgeHostHow": "10 cadeaux aux animaux",
+  "badgeCuddler": "Câlin",
+  "badgeCuddlerHow": "5 animaux caressés",
+  "badgeWishMaker": "Vœu exaucé",
+  "badgeWishMakerHow": "10 vœux exaucés",
+  "badgeFriendOfAll": "Ami de tous",
+  "badgeFriendOfAllHow": "Chaque animal a reçu un cadeau",
+  "settingPetRounds": "Cadeaux aux animaux : d'abord écrire le mot"
 }

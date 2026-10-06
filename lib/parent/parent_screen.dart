@@ -393,6 +393,12 @@ class _ParentSettingsState extends State<ParentSettings> {
             SettingsService.instance.leftHanded,
             (v) => SettingsService.instance.leftHanded = v),
         toggle(
+            'pet-rounds-toggle',
+            '✏️',
+            context.l.settingPetRounds,
+            SettingsService.instance.petRounds,
+            (v) => SettingsService.instance.petRounds = v),
+        toggle(
             'dyslexia-font-toggle',
             '🔤',
             context.l.settingDyslexiaFont,

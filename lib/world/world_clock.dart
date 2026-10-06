@@ -72,9 +72,13 @@ class WorldClockService extends ChangeNotifier {
 
   static const _kSeasonKey = 'sk.settings.season';
 
-  DateTime now() => _now();
-  DayPhase get phase => phaseAt(_now());
-  Season get calendarSeason => seasonAt(_now());
+  /// Testy: pevný čas místo hodin (den/noc nezávisle na tom, kdy běží).
+  @visibleForTesting
+  DateTime Function()? debugNowOverride;
+
+  DateTime now() => (debugNowOverride ?? _now)();
+  DayPhase get phase => phaseAt(now());
+  Season get calendarSeason => seasonAt(now());
   Season get season => _seasonOverride ?? calendarSeason;
   WorldTheme get theme => WorldTheme.of(phase, season);
 
