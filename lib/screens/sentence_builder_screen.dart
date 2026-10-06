@@ -12,6 +12,7 @@ import '../widgets/language_picker.dart';
 import '../ui/app_font.dart';
 import '../ui/l10n.dart';
 import '../ui/emoji_art.dart';
+import '../pet/gift.dart';
 
 class SentenceBuilderScreen extends StatefulWidget {
   final Language language;
@@ -34,7 +35,20 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
   ContentPack? _pack;
   bool _saved = false; // aktuální věta už je v Mé knížce
 
-  SentenceCategories get _data => _pack?.sentence ?? SentenceCategories.empty;
+  /// Data builderu + zvířátka Zvěřince jako podměty (odemkne je nálepka).
+  /// Spočítá se jednou na pack — výběr dlaždic se porovnává identitou.
+  SentenceCategories _data = SentenceCategories.empty;
+
+  static SentenceCategories _withPets(ContentPack pack) {
+    final s = pack.sentence;
+    return SentenceCategories(
+      subjects: [...s.subjects, ...PetSentence.stickerSubjects(pack)],
+      verbs: s.verbs,
+      objects: s.objects,
+      joiner: s.joiner,
+      order: s.order,
+    );
+  }
 
   @override
   void initState() {
@@ -51,6 +65,7 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
         _verb = null;
         _object = null;
         _pack = null;
+        _data = SentenceCategories.empty;
       });
       _loadPack();
     }
@@ -59,14 +74,24 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
   Future<void> _loadPack() async {
     final pack = await PackService.instance.load(widget.language);
     if (mounted && pack.language == widget.language) {
-      setState(() => _pack = pack);
+      setState(() {
+        _pack = pack;
+        _data = _withPets(pack);
+      });
     }
   }
 
   /// Dlaždice je k dispozici: základní, nebo už je slovo v batohu.
-  bool _isUnlocked(SentencePart p) =>
-      p.unlockedBy == TileUnlock.always ||
-      (_pack != null && ProgressService.instance.hasWord(_pack!.id, p.id));
+  bool _isUnlocked(SentencePart p) {
+    final pack = _pack;
+    return switch (p.unlockedBy) {
+      TileUnlock.always => true,
+      TileUnlock.vocab =>
+        pack != null && ProgressService.instance.hasWord(pack.id, p.id),
+      TileUnlock.sticker => pack != null &&
+          ProgressService.instance.collectibles(pack.id).contains(p.emoji),
+    };
+  }
 
   bool _isNew(SentencePart p) =>
       p.unlockedBy == TileUnlock.vocab &&

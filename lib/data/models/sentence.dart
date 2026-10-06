@@ -25,6 +25,9 @@ enum TileUnlock {
 
   /// Až dítě slovo swypne ve hře (slovo je v batohu, `lesson.vocab == id`).
   vocab,
+
+  /// Až má dítě nálepku `emoji` ve Zvěřinci (zvířátko jako podmět).
+  sticker,
 }
 
 class SentencePart {
