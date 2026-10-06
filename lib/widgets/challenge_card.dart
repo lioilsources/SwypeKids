@@ -48,6 +48,9 @@ class ChallengeCard extends StatelessWidget {
   /// Přehrát zadání znovu (jen poslechové kolo).
   final VoidCallback? onReplayAudio;
 
+  /// Ťuknutí na obrázek slova (nálepka zareaguje vždy; tohle navíc).
+  final VoidCallback? onHintTap;
+
   /// Per-jazyková emoji mnemotechnika kláves (PackService.keyEmojiFor).
   final String Function(String letter) emojiFor;
 
@@ -60,6 +63,7 @@ class ChallengeCard extends StatelessWidget {
     required this.emojiFor,
     this.mode = CardMode.full,
     this.onReplayAudio,
+    this.onHintTap,
   });
 
   bool get _hideAll =>
@@ -119,7 +123,7 @@ class ChallengeCard extends StatelessWidget {
           Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              EmojiArt(lesson.hint, size: 40),
+              EmojiArt(lesson.hint, size: 40, onTap: onHintTap),
               if (onReplayAudio != null) ...[
                 const SizedBox(width: 14),
                 GestureDetector(
@@ -187,7 +191,9 @@ class ChallengeCard extends StatelessWidget {
                           miss
                               ? '❌'
                               : (hidden && !hit ? '❓' : emojiFor(ch)),
-                          size: hit ? 20 : 16),
+                          size: hit ? 20 : 16,
+                          // Trefené písmeno: obrázek nad ním zareaguje.
+                          trigger: hit ? 'hit-$i' : null),
                     ),
                     const SizedBox(height: 3),
                     // Políčko s písmenkem

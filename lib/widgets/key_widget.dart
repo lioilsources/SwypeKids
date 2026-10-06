@@ -121,7 +121,9 @@ class _KeyWidgetState extends State<KeyWidget>
               child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                EmojiArt(emoji, size: 18 * scale),
+                // Obrázek poskočí, když písmeno přibude do swype.
+                EmojiArt(emoji,
+                    size: 18 * scale, trigger: inPath ? letter : null),
                 const SizedBox(height: 1),
                 // Baculaté písmo z CuteKidFonts; OpenDyslexic (rodičovské
                 // nastavení) má přednost a zůstává jako plochý text.

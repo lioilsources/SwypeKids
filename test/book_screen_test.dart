@@ -33,7 +33,10 @@ void main() {
     await pumpBook(tester);
 
     expect(findText('Máma jí kolo'), findsOneWidget);
-    expect(findText('👩 🍽️ 🚲'), findsOneWidget);
+    // Řádek obrázků = nálepky, každá zvlášť.
+    for (final e in ['👩', '🍽️', '🚲']) {
+      expect(findText(e), findsWidgets);
+    }
     final newest = tester.getTopLeft(findText('Já chci les')).dy;
     final older = tester.getTopLeft(findText('Máma jí kolo')).dy;
     expect(newest, lessThan(older));
