@@ -1,5 +1,11 @@
 # Changelog
 
+## [06/10/2026] — v2.15.0
+- Věty dávají smysl: ve Skládej větu jdou složit jen kombinace, které se k sobě hodí — jíst jde jídlo, chodit se dá na místo, hrát si s hračkou
+- Dlaždice, které se k vybranému slovesu nehodí, zešednou
+- Věci ve světě zvířátka mají vlastní věty: „Oko se dívá na kolo.“, „Auto veze banán.“, nebo dárek pojmenují („To je jablko.“)
+- Opravené tvary ve všech 9 jazycích; do 8 jazyků přibyla voda
+
 ## [06/10/2026] — v2.14.1
 - Čeština: „Myš si hraje s kolem.“ (zvratné „si“ na správném místě)
 - Věci ve světě zvířátka (oko, banán) už nedostávají nesmyslné věty
