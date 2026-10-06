@@ -29,7 +29,7 @@ enum StickerKind {
   static Set<String> _set(String all) =>
       {for (final r in all.runes) String.fromCharCode(r)};
 
-  static final Set<String> _animal = _set('🐀🐂🐉🐊🐋🐌🐍🐑🐓🐔🐕🐘🐙🐛🐝🐟🐢🐤🐦🐧🐨🐬🐭🐮🐯🐰🐱🐳🐴🐵🐶🐷🐸🐺🐻🐼🐿🦀🦁🦅🦆🦇🦉🦊🦋🦍🦑🦒🦓🦔🦕🦘🦛🦞🦢🕊🐄🐒🐞🐣🦜🧸');
+  static final Set<String> _animal = _set('🐀🐂🐉🐊🐋🐌🐍🐑🐓🐔🐕🐘🐙🐛🐝🐟🐢🐤🐦🐧🐨🐬🐭🐮🐯🐰🐱🐳🐴🐵🐶🐷🐸🐺🐻🐼🐿🦀🦁🦅🦆🦇🦉🦊🦋🦍🦑🦒🦓🦔🦕🦘🦛🦞🦢🕊🐄🐒🐞🐣🦜');
 
   static final Set<String> _food = _set('🍅🍇🍈🍉🍊🍋🍌🍍🍎🍐🍑🍓🍕🍖🍙🍚🍝🍞🍟🍠🍦🍩🍪🍫🍬🍲🍿🎂🥑🥒🥔🥕🥗🥚🥜🥟🥣🥧🥫🥬🧀🧅🌭🍄🦴🧂🍽🍴');
 

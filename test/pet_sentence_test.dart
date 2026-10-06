@@ -1,50 +1,69 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:swype_kids/data/lessons.dart';
+import 'package:swype_kids/data/models/content_pack.dart';
 import 'package:swype_kids/data/models/sentence.dart';
 import 'package:swype_kids/pet/gift.dart';
 import 'helpers.dart';
 
-/// Pravidla vět ve světě zvířátka. Úplný seznam vět všech jazyků a stav
-/// jejich kontroly hlídá `test/sentence_corpus_test.dart`
-/// (`review/sentences_<lang>.tsv`).
+/// Pravidla vět ve světě zvířátka a ve Skládej větu. Úplný seznam vět
+/// všech jazyků a stav jejich kontroly hlídá
+/// `test/sentence_corpus_test.dart` (`review/sentences_<lang>.tsv`).
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
-  test('japonština: sloveso na konci', () async {
+
+  Gift giftOf(ContentPack pack, String id) {
+    final o = pack.sentence.objects.firstWhere((o) => o.id == id);
+    return Gift(id: o.id, emoji: o.emoji, object: o);
+  }
+
+  CollectibleReward rewardOf(ContentPack pack, String emoji) =>
+      pack.units.firstWhere((u) => u.reward.emoji == emoji).reward;
+
+  test('japonština: sloveso na konci, „ほしい" bere が', () async {
     final pack = await seedPack(Language.ja);
-    final cat = pack.units.firstWhere((u) => u.reward.emoji == '🐱').reward;
-    final apple = pack.sentence.objects.firstWhere((o) => o.emoji == '🍎');
-    final s = PetSentence.compose(
-        pack, cat, Gift(id: apple.id, emoji: '🍎', object: apple))!;
-    expect(PetSentence.sentenceText(s, Language.ja), 'ねこはりんごをたべます。');
+    final cat = rewardOf(pack, '🐱');
+    expect(PetSentence.line(pack, cat, giftOf(pack, 'o2'))!.text,
+        'ねこはりんごをたべます。');
+    final d = pack.sentence;
+    expect(
+        ComposedSentence(
+          subject: d.subjects.first,
+          verb: d.verbs.firstWhere((v) => v.id == 'v1'),
+          object: d.objects.firstWhere((o) => o.id == 'o2'),
+          joiner: d.joiner,
+          verbLast: true,
+        ).text,
+        'わたしはりんごがほしいです');
   });
 
-  test('čeština: myš jí jablko, pije mléko, si hraje; věc větu nemá', () async {
+  test('čeština: zvíře jí / pije / si hraje; předmět jen s tvarem', () async {
     final pack = await seedPack(Language.cs);
     final mouse = pack.units.first.reward;
-    final apple = pack.sentence.objects.firstWhere((o) => o.emoji == '🍎');
-    String? say(reward, Gift g) {
-      final s = PetSentence.compose(pack, reward, g);
-      return s == null ? null : PetSentence.sentenceText(s, Language.cs);
-    }
-
-    expect(say(mouse, Gift(id: apple.id, emoji: '🍎', object: apple)),
-        'Myš jí jablko.');
-    expect(say(mouse, const Gift(id: 'x', emoji: '💧')), 'Myš pije.');
-    // Věc nejí, nepije ani si nehraje: dárek jí jen zajiskří, bez věty.
-    final banana = pack.units.firstWhere((u) => u.reward.emoji == '🍌').reward;
-    expect(say(banana, Gift(id: apple.id, emoji: '🍎', object: apple)), isNull);
-    final toy = pack.sentence.objects.firstWhere((o) => o.emoji == '🧸');
-    final toyGift = Gift(id: toy.id, emoji: '🧸', object: toy);
-    expect(say(banana, toyGift), isNull);
+    String? say(CollectibleReward r, Gift g) =>
+        PetSentence.line(pack, r, g)?.text;
+    expect(say(mouse, giftOf(pack, 'o2')), 'Myš jí jablko.');
+    expect(say(mouse, giftOf(pack, 'mleko')), 'Myš pije mléko.');
     // Zvratné „si" stojí na druhém místě: „Myš si hraje", ne „hraje si".
-    expect(say(mouse, toyGift), 'Myš si hraje s hračkou.');
-    final bike = pack.sentence.objects.firstWhere((o) => o.id == 'kolo');
-    expect(say(mouse, Gift(id: 'kolo', emoji: '🚲', object: bike)),
-        'Myš si hraje s kolem.');
+    expect(say(mouse, giftOf(pack, 'hracka')), 'Myš si hraje s hračkou.');
+    expect(say(mouse, giftOf(pack, 'kolo')), 'Myš si hraje s kolem.');
+    // Dárek, který builder nezná → věta bez předmětu, nikdy špatný tvar.
+    expect(say(mouse, const Gift(id: 'x', emoji: '💧')), 'Myš pije.');
     // Ema (člověk) jí jako zvířátko.
-    final ema = pack.units.firstWhere((u) => u.reward.emoji == '👧').reward;
-    expect(say(ema, Gift(id: apple.id, emoji: '🍎', object: apple)),
-        'Ema jí jablko.');
+    expect(say(rewardOf(pack, '👧'), giftOf(pack, 'o2')), 'Ema jí jablko.');
+  });
+
+  test('čeština: věc má vlastní sloveso, nebo dárek jen pojmenuje', () async {
+    final pack = await seedPack(Language.cs);
+    String? say(String emoji, Gift g) =>
+        PetSentence.line(pack, rewardOf(pack, emoji), g)?.text;
+    // Oko se dívá, auto veze, ucho slyší jen to, co je slyšet.
+    expect(say('👁️', giftOf(pack, 'kolo')), 'Oko se dívá na kolo.');
+    expect(say('🚗', giftOf(pack, 'banan')), 'Auto veze banán.');
+    expect(say('👂', giftOf(pack, 'vlak')), 'Ucho slyší vlak.');
+    expect(say('👂', giftOf(pack, 'o2')), 'To je jablko.');
+    // Banán vlastní sloveso nemá → pojmenuje dárek; žádné „Banán hraje…".
+    expect(say('🍌', giftOf(pack, 'hracka')), 'To je hračka.');
+    expect(say('🍌', const Gift(id: 'x', emoji: '🍪')), isNull);
   });
 
   test('Skládej větu: „Já si hraju s autem", „Máma si hraje s autem"', () async {
@@ -60,5 +79,29 @@ void main() {
     expect(play.text, 'hraju si'); // nápis na dlaždici
     expect(say('s1'), 'Já si hraju s autem');
     expect(say('mama'), 'Máma si hraje s autem');
+  });
+
+  test('pravidla: nesmysly ani věty bez tvaru nejdou složit', () async {
+    final pack = await seedPack(Language.cs);
+    final d = pack.sentence;
+    SentencePart v(String id) => d.verbs.firstWhere((x) => x.id == id);
+    SentencePart o(String id) => d.objects.firstWhere((x) => x.id == id);
+    bool ok(String verb, String object) =>
+        SentenceRules.objectFits(v(verb), o(object));
+    expect(ok('v2', 'o2'), isTrue); // jí jablko
+    expect(ok('v2', 'o8'), isFalse); // jí nočník
+    expect(ok('v3', 'o2'), isFalse); // pije jablko
+    expect(ok('v5', 'o8'), isTrue); // jde na nočník
+    expect(ok('v4', 'o8'), isFalse); // spí na nočníku
+    expect(ok('v6', 'kolo'), isTrue); // hraje si s kolem
+    expect(ok('v1', 'o5'), isFalse); // chce „venek"
+    expect(ok('v1', 'nos'), isFalse); // chce nos
+    final en = (await seedPack(Language.en)).sentence;
+    bool okEn(String verb, String object) => SentenceRules.objectFits(
+        en.verbs.firstWhere((x) => x.id == verb),
+        en.objects.firstWhere((x) => x.id == object));
+    expect(okEn('v4', 'o1'), isFalse); // „sleeps milk"
+    expect(okEn('v5', 'o3'), isFalse); // „goes a toy"
+    expect(okEn('v5', 'o7'), isTrue); // goes to bed
   });
 }

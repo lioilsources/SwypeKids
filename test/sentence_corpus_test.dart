@@ -43,9 +43,12 @@ void main() {
         }
       }
 
-      final fallback = corpus.where((s) => s.fallbacks
-          .any((f) => f != 'acc?')); // tichý základní tvar (třída B)
+      final fallback = corpus.where((s) => s.fallbacks.isNotEmpty);
       final blocked = rows.where((r) => r.blocked);
+      // Brána: věta označená strojem (a nepřehlasovaná člověkem) nebo
+      // člověkem jako chybná / nesmyslná nesmí být v appce.
+      expect([for (final r in blocked) '${r.id}: ${r.text}'], isEmpty,
+          reason: 'opravit data nebo pravidla, pak UPDATE_SENTENCES=1');
       final llmOk = rows.where((r) => r.llm == 'ok').length;
       final humanOk = rows.where((r) => r.human == 'ok').length;
       status.add('| ${lang.name} | ${corpus.length} | ${fallback.length} | '

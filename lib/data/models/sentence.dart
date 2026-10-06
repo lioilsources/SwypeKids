@@ -49,6 +49,16 @@ class SentencePart {
   // For subjects only: grammatical person used to select verb form.
   final String? person;
 
+  /// Podmět: druh (`person`, `animal`, `thing`) — kdo může co dělat.
+  final String? kind;
+
+  /// Předmět: štítky (`food`, `drink`, `toy`, `vehicle`, `place`, `thing`…).
+  final List<String> tags;
+
+  /// Sloveso: jaké druhy podmětu a štítky předmětu bere (prázdné = vše).
+  final List<String> subjectKinds;
+  final List<String> objectTags;
+
   const SentencePart({
     required this.id,
     required this.emoji,
@@ -58,6 +68,10 @@ class SentencePart {
     this.forms,
     this.frame,
     this.person,
+    this.kind,
+    this.tags = const [],
+    this.subjectKinds = const [],
+    this.objectTags = const [],
   });
 
   String formFor(String key) => forms?[key] ?? text;
@@ -73,6 +87,10 @@ class SentencePart {
         forms: (json['forms'] as Map?)?.cast<String, String>(),
         frame: json['frame'] as String?,
         person: json['person'] as String?,
+        kind: json['kind'] as String?,
+        tags: ((json['tags'] as List?) ?? const []).cast<String>(),
+        subjectKinds: ((json['subject'] as List?) ?? const []).cast<String>(),
+        objectTags: ((json['object'] as List?) ?? const []).cast<String>(),
       );
 }
 
@@ -87,12 +105,17 @@ class SentenceCategories {
   /// sloveso na konci).
   final String order;
 
+  /// Pojmenovací věta s `{nom}` („To je {nom}.") — vždy správně; pro věci
+  /// ve světě zvířátka, které nemají vlastní sloveso.
+  final String? naming;
+
   const SentenceCategories({
     required this.subjects,
     required this.verbs,
     required this.objects,
     this.joiner = ' ',
     this.order = 'svo',
+    this.naming,
   });
 
   static const empty = SentenceCategories(subjects: [], verbs: [], objects: []);
@@ -110,6 +133,7 @@ class SentenceCategories {
       objects: parts('objects'),
       joiner: json['joiner'] as String? ?? ' ',
       order: json['order'] as String? ?? 'svo',
+      naming: json['naming'] as String?,
     );
   }
 }
@@ -166,21 +190,54 @@ class ComposedSentence {
 /// Pravidla skládání vět — jediné místo, které rozhoduje, co se smí
 /// nabídnout (Skládej větu, věta po novém slově, svět zvířátka).
 /// Plán: `docs/PLAN_VETY_KVALITA.md`.
+///
+/// Věta je platná, když
+/// - sloveso bere druh podmětu (`subject` slovesa × `kind` podmětu),
+/// - sloveso bere štítek předmětu (`object` slovesa × `tags` předmětu),
+/// - předmět má **výslovný** tvar pro rámec slovesa (žádný tichý základní
+///   tvar: bez tvaru se kombinace nenabídne),
+/// - sloveso má tvar pro osobu podmětu (1. osoba = nápis na dlaždici).
 class SentenceRules {
-  /// Smí se tahle (i neúplná) kombinace nabídnout? Zatím vše (pravidla
-  /// smysluplnosti přijdou s daty ve fázi 2).
+  /// Smí se tahle (i neúplná) kombinace nabídnout? Chybějící části se
+  /// nekontrolují — „Máma + jí" je v pořádku, dokud není vybraný předmět.
   static bool allows(
     SentenceCategories data, {
     SentencePart? subject,
     SentencePart? verb,
     SentencePart? object,
-  }) =>
-      true;
+  }) {
+    if (subject != null && verb != null && !subjectFits(subject, verb)) {
+      return false;
+    }
+    if (verb != null && object != null && !objectFits(verb, object)) {
+      return false;
+    }
+    return true;
+  }
 
-  /// Kde věta potichu použije základní tvar místo výslovného: sloveso
-  /// bez tvaru pro osobu podmětu, předmět bez tvaru pro rámec slovesa.
-  /// (4. pád smí chybět jen tehdy, když je stejný jako základní tvar —
-  /// to stroj nepozná, proto se hlásí zvlášť jako `acc?`.)
+  static bool subjectFits(SentencePart subject, SentencePart verb) {
+    if (verb.subjectKinds.isNotEmpty &&
+        !verb.subjectKinds.contains(subject.kind)) {
+      return false;
+    }
+    final person = subject.person;
+    return person == null ||
+        verb.forms == null ||
+        person == Person.firstSg ||
+        verb.forms!.containsKey(person);
+  }
+
+  static bool objectFits(SentencePart verb, SentencePart object) {
+    if (verb.objectTags.isNotEmpty &&
+        !object.tags.any(verb.objectTags.contains)) {
+      return false;
+    }
+    final frame = verb.frame;
+    return frame == null || (object.forms?.containsKey(frame) ?? false);
+  }
+
+  /// Kde by věta potichu použila základní tvar místo výslovného — po
+  /// zavedení pravidel musí být u každé nabízené věty prázdné.
   static List<String> fallbacks(
       SentencePart subject, SentencePart verb, SentencePart? object) {
     final out = <String>[];
@@ -192,11 +249,19 @@ class SentenceRules {
       out.add('verb:$person');
     }
     final frame = verb.frame;
-    if (object != null && frame != null) {
-      final has = object.forms?.containsKey(frame) ?? false;
-      if (!has) out.add(frame == Frame.acc ? 'acc?' : 'object:$frame');
+    if (object != null &&
+        frame != null &&
+        !(object.forms?.containsKey(frame) ?? false)) {
+      out.add('object:$frame');
     }
     return out;
   }
-}
 
+  /// Pojmenovací věta pro předmět („To je jablko."), když má 1. pád.
+  static String? naming(SentenceCategories data, SentencePart object) {
+    final template = data.naming;
+    final nom = object.forms?['nom'];
+    if (template == null || nom == null) return null;
+    return template.replaceAll('{nom}', nom);
+  }
+}

@@ -8,7 +8,6 @@ import '../characters/draggable_guide.dart';
 import '../characters/mascot.dart';
 import '../data/lessons.dart';
 import '../data/models/content_pack.dart';
-import '../data/models/sentence.dart';
 import '../services/achievement_service.dart';
 import '../services/progress_service.dart';
 import '../services/session_service.dart';
@@ -74,7 +73,7 @@ class _PetScreenState extends State<PetScreen> {
   Offset? _lift;
 
   // Věta po dárku.
-  ComposedSentence? _sentence;
+  PetLine? _sentence;
   bool _saved = false;
   List<GameBadge> _newBadges = const [];
   Timer? _badgeTimer;
@@ -94,7 +93,7 @@ class _PetScreenState extends State<PetScreen> {
       WorldClockService.instance.theme.isNight ||
       SessionService.instance.limitReached;
 
-  bool get _residentEats => StickerKind.of(_resident.emoji).eats;
+  bool get _residentEats => PetSentence.eats(_resident);
 
   @override
   void initState() {
@@ -291,7 +290,7 @@ class _PetScreenState extends State<PetScreen> {
         Duration(milliseconds: isWish || written ? 3200 : 2400),
         eating: gift);
     setState(() => _poke++);
-    final sentence = PetSentence.compose(_pack, _resident, gift);
+    final sentence = PetSentence.line(_pack, _resident, gift);
     setState(() {
       _sentence = sentence;
       _saved = false;
@@ -307,15 +306,14 @@ class _PetScreenState extends State<PetScreen> {
   void _say() {
     final s = _sentence;
     if (s == null) return;
-    TtsService.speak(PetSentence.sentenceText(s, _language), _language);
+    TtsService.speak(s.text, _language);
   }
 
   /// ⭐ = věta do Mé knížky (jednou); odznaky za knížku platí i tady.
   void _save() {
     final s = _sentence;
     if (s == null || _saved) return;
-    ProgressService.instance
-        .addToBook(_pack.id, PetSentence.sentenceText(s, _language), s.emojis);
+    ProgressService.instance.addToBook(_pack.id, s.text, s.emojiRow);
     AudioService.instance.play(Sfx.sticker);
     setState(() => _saved = true);
     _showBadges(
@@ -698,16 +696,15 @@ class _PetScreenState extends State<PetScreen> {
                   Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      for (final p in [s.subject, s.verb, s.object])
-                        if (p != null)
-                          Padding(
-                            padding: const EdgeInsets.only(right: 4),
-                            child: EmojiArt(p.emoji, size: 22),
-                          ),
+                      for (final e in s.emojis)
+                        Padding(
+                          padding: const EdgeInsets.only(right: 4),
+                          child: EmojiArt(e, size: 22),
+                        ),
                       const SizedBox(width: 6),
                       Flexible(
                         child: Text(
-                          PetSentence.sentenceText(s, _language),
+                          s.text,
                           key: const ValueKey('pet-sentence'),
                           style: TextStyle(
                             fontFamily: kFont,

@@ -221,7 +221,11 @@ void main() {
         verbs: [SentencePart(id: 'v1', emoji: '🍽️', text: 'jím', frame: 'acc')],
         objects: [
           SentencePart(
-              id: 'ma', emoji: '🐭', text: 'ma', unlockedBy: TileUnlock.vocab),
+              id: 'ma',
+              emoji: '🐭',
+              text: 'ma',
+              unlockedBy: TileUnlock.vocab,
+              forms: {'acc': 'ma'}), // výslovný tvar — bez něj věta není
         ],
       ),
     );

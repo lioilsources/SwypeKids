@@ -85,24 +85,32 @@ class SentenceCorpus {
     final seen = <String>{};
     for (final u in pack.units) {
       for (final g in gifts) {
-        final c = PetSentence.compose(pack, u.reward, g);
-        if (c == null) continue;
-        final id = '$lang:p:${u.reward.emoji}.${c.verb?.id}.'
-            '${c.object?.id ?? '-'}';
+        final line = PetSentence.line(pack, u.reward, g);
+        // Pojmenovací věty jsou stejné pro všechny obyvatele → zvlášť níž.
+        if (line == null || line.key.startsWith('naming.')) continue;
+        final id = '$lang:p:${u.reward.emoji}.${line.key}';
         if (!seen.add(id)) continue;
         out.add(CorpusSentence(
           id: id,
           source: 'pet',
-          emojis: c.emojis,
-          text: PetSentence.sentenceText(c, pack.language),
-          parts: 'reward:${u.reward.emoji}|${c.verb?.id}:'
-              '${c.subject?.person ?? '-'}|${c.object?.id ?? '-'}:'
-              '${c.object == null ? '-' : c.verb?.frame ?? '-'}',
-          fallbacks: c.subject == null || c.verb == null
-              ? const []
-              : SentenceRules.fallbacks(c.subject!, c.verb!, c.object),
+          emojis: line.emojiRow,
+          text: line.text,
+          parts: 'reward:${u.reward.emoji}|${line.key}',
         ));
       }
+    }
+
+    // ── Pojmenovací věty („To je jablko.") ─────────────────────────────
+    for (final o in d.objects) {
+      final text = SentenceRules.naming(d, o);
+      if (text == null) continue;
+      out.add(CorpusSentence(
+        id: '$lang:n:${o.id}',
+        source: 'naming',
+        emojis: o.emoji,
+        text: text,
+        parts: 'naming|${o.id}:nom',
+      ));
     }
     return out;
   }

@@ -1,6 +1,13 @@
 # Plán: věty, které jsou správně a dávají smysl — ve všech jazycích
 
-Stav: zadání k implementaci (6. 10. 2026, od v2.14.0). Určeno jako zadání
+Stav (6. 10. 2026): fáze 0 (v2.14.1), fáze 1 a 2 (v2.15.0) hotové —
+korpus, pravidla a výslovné tvary ve všech 9 packech; z 1 200–2 100 vět na
+jazyk (68–100 s tichým základním tvarem) zbylo 470–800 a žádný tichý tvar.
+Odchylky: nástroje běží přes `flutter test` (datový model používá Flutter),
+`deny`/`allow` zatím nebylo potřeba (stačí nedat předmětu tvar), stav
+kontroly je i snímkem korpusu (T6). Aktuální čísla: `review/STATUS.md`.
+
+Původně: zadání k implementaci (6. 10. 2026, od v2.14.0). Určeno jako zadání
 po fázích; každá fáze je samostatný PR + release.
 
 Podnět: ve světě zvířátka vznikly věty „Myš hraje s kolem." (gramaticky

@@ -3,1580 +3,684 @@ de:b:s1.v1.o1	Ich will Milch.	c43b158a			pending
 de:b:s1.v1.o2	Ich will einen Apfel.	146ce138			pending			
 de:b:s1.v1.o3	Ich will ein Spielzeug.	3ac7c97f			pending			
 de:b:s1.v1.o4	Ich will das Auto.	c28a40f2			pending			
-de:b:s1.v1.o5	Ich will raus.	6ab5cd9c			pending			
-de:b:s1.v1.o6	Ich will heim.	4975029c			pending			
-de:b:s1.v1.o7	Ich will das Bett.	32277ef4			pending			
-de:b:s1.v1.o8	Ich will das Töpfchen.	b71b8b63			pending			
 de:b:s1.v1.ball	Ich will den Ball.	44de0f8f			pending			
 de:b:s1.v1.brot	Ich will Brot.	cb2b70ee			pending			
 de:b:s1.v1.keks	Ich will einen Keks.	89664182			pending			
 de:b:s1.v1.banane	Ich will eine Banane.	ac0d757d			pending			
 de:b:s1.v1.melone	Ich will eine Melone.	450af274			pending			
-de:b:s1.v2.o1	Ich esse Milch.	74019f8e			pending			
+de:b:s1.v1.o9	Ich will Wasser.	c9e34374			pending			
 de:b:s1.v2.o2	Ich esse einen Apfel.	4e245394			pending			
-de:b:s1.v2.o3	Ich esse ein Spielzeug.	d43f610b			pending			
-de:b:s1.v2.o4	Ich esse das Auto.	4b88111e			pending			
-de:b:s1.v2.o5	Ich esse raus.	a375e850			pending			
-de:b:s1.v2.o6	Ich esse heim.	df5b09a8			pending			
-de:b:s1.v2.o7	Ich esse das Bett.	ed8c6dc0			pending			
-de:b:s1.v2.o8	Ich esse das Töpfchen.	39d138af			pending			
-de:b:s1.v2.ball	Ich esse den Ball.	69bfd0c3			pending			
 de:b:s1.v2.brot	Ich esse Brot.	ef35677a			pending			
 de:b:s1.v2.keks	Ich esse einen Keks.	d54038d6			pending			
 de:b:s1.v2.banane	Ich esse eine Banane.	6db01a01			pending			
 de:b:s1.v2.melone	Ich esse eine Melone.	50b4fd40			pending			
 de:b:s1.v3.o1	Ich trinke Milch.	79b10639			pending			
-de:b:s1.v3.o2	Ich trinke einen Apfel.	82844ca7			pending			
-de:b:s1.v3.o3	Ich trinke ein Spielzeug.	35c3a884			pending			
-de:b:s1.v3.o4	Ich trinke das Auto.	daeb513b			pending			
-de:b:s1.v3.o5	Ich trinke raus.	0f2c3011			pending			
-de:b:s1.v3.o6	Ich trinke heim.	a66180c5			pending			
-de:b:s1.v3.o7	Ich trinke das Bett.	d1e412a5			pending			
-de:b:s1.v3.o8	Ich trinke das Töpfchen.	286d1d42			pending			
-de:b:s1.v3.ball	Ich trinke den Ball.	862b0232			pending			
-de:b:s1.v3.brot	Ich trinke Brot.	7d6ac5af			pending			
-de:b:s1.v3.keks	Ich trinke einen Keks.	ce885983			pending			
-de:b:s1.v3.banane	Ich trinke eine Banane.	e890e04e			pending			
-de:b:s1.v3.melone	Ich trinke eine Melone.	4e25a127			pending			
-de:b:s1.v4.o1	Ich schlafe Milch.	edd9600c			pending			
-de:b:s1.v4.o2	Ich schlafe einen Apfel.	c5434782			pending			
-de:b:s1.v4.o3	Ich schlafe beim Spielzeug.	d9c60fde			pending			
+de:b:s1.v3.o9	Ich trinke Wasser.	90e7853d			pending			
 de:b:s1.v4.o4	Ich schlafe im Auto.	bf074b70			pending			
 de:b:s1.v4.o5	Ich schlafe draußen.	10778b49			pending			
 de:b:s1.v4.o6	Ich schlafe zu Hause.	48da9218			pending			
 de:b:s1.v4.o7	Ich schlafe im Bett.	7da1c81a			pending			
-de:b:s1.v4.o8	Ich schlafe auf dem Töpfchen.	b72b877b			pending			
-de:b:s1.v4.ball	Ich schlafe beim Ball.	249f503f			pending			
-de:b:s1.v4.brot	Ich schlafe beim Brot.	3b2ec951			pending			
-de:b:s1.v4.keks	Ich schlafe beim Keks.	70bb88e2			pending			
-de:b:s1.v4.banane	Ich schlafe bei der Banane.	4b47d2a9			pending			
-de:b:s1.v4.melone	Ich schlafe bei der Melone.	f1320ee8			pending			
-de:b:s1.v5.o1	Ich gehe Milch.	cc0d8633			pending			
-de:b:s1.v5.o2	Ich gehe einen Apfel.	45dd7009			pending			
-de:b:s1.v5.o3	Ich gehe ein Spielzeug.	1b09a102			pending			
 de:b:s1.v5.o4	Ich gehe ins Auto.	5e336dd1			pending			
 de:b:s1.v5.o5	Ich gehe raus.	d2cebc63			pending			
 de:b:s1.v5.o6	Ich gehe heim.	b468b237			pending			
 de:b:s1.v5.o7	Ich gehe ins Bett.	e2c3f00b			pending			
 de:b:s1.v5.o8	Ich gehe aufs Töpfchen.	97c337e1			pending			
-de:b:s1.v5.ball	Ich gehe zum Ball.	1d2a2503			pending			
-de:b:s1.v5.brot	Ich gehe zum Brot.	13ca9635			pending			
-de:b:s1.v5.keks	Ich gehe zum Keks.	6d50b6fe			pending			
-de:b:s1.v5.banane	Ich gehe zur Banane.	0dee6d92			pending			
-de:b:s1.v5.melone	Ich gehe zur Melone.	cba32a93			pending			
-de:b:s1.v6.o1	Ich spiele mit Milch.	ee27fb96			pending			
-de:b:s1.v6.o2	Ich spiele mit einem Apfel.	84437423			pending			
 de:b:s1.v6.o3	Ich spiele mit einem Spielzeug.	b0bb5b11			pending			
 de:b:s1.v6.o4	Ich spiele mit dem Auto.	cba54840			pending			
-de:b:s1.v6.o5	Ich spiele draußen.	0ea21b79			pending			
-de:b:s1.v6.o6	Ich spiele zu Hause.	6ae4d6c8			pending			
-de:b:s1.v6.o7	Ich spiele im Bett.	a1fd996a			pending			
-de:b:s1.v6.o8	Ich spiele auf dem Töpfchen.	df03572b			pending			
 de:b:s1.v6.ball	Ich spiele mit dem Ball.	eb4ba3c6			pending			
-de:b:s1.v6.brot	Ich spiele mit Brot.	fe1b2a82			pending			
-de:b:s1.v6.keks	Ich spiele mit einem Keks.	70ed03f7			pending			
-de:b:s1.v6.banane	Ich spiele mit einer Banane.	ea7596e7			pending			
-de:b:s1.v6.melone	Ich spiele mit einer Melone.	8b82430a			pending			
 de:b:s2.v1.o1	Mama will Milch.	9efae7b8			pending			
 de:b:s2.v1.o2	Mama will einen Apfel.	0cc6b886			pending			
 de:b:s2.v1.o3	Mama will ein Spielzeug.	dd363729			pending			
 de:b:s2.v1.o4	Mama will das Auto.	acc34290			pending			
-de:b:s2.v1.o5	Mama will raus.	2e8f0da2			pending			
-de:b:s2.v1.o6	Mama will heim.	2c65d29a			pending			
-de:b:s2.v1.o7	Mama will das Bett.	bf1de4ba			pending			
-de:b:s2.v1.o8	Mama will das Töpfchen.	ced3ea4d			pending			
 de:b:s2.v1.ball	Mama will den Ball.	baf44b3d			pending			
 de:b:s2.v1.brot	Mama will Brot.	3e7ce6f0			pending			
 de:b:s2.v1.keks	Mama will einen Keks.	73287764			pending			
 de:b:s2.v1.banane	Mama will eine Banane.	6e51f78f			pending			
 de:b:s2.v1.melone	Mama will eine Melone.	dec0d792			pending			
-de:b:s2.v2.o1	Mama isst Milch.	0de09fed			pending			
+de:b:s2.v1.o9	Mama will Wasser.	7c82b90a			pending			
 de:b:s2.v2.o2	Mama isst einen Apfel.	29100d93			pending			
-de:b:s2.v2.o3	Mama isst ein Spielzeug.	291cf210			pending			
-de:b:s2.v2.o4	Mama isst das Auto.	56f7fd47			pending			
-de:b:s2.v2.o5	Mama isst raus.	91f47ff5			pending			
-de:b:s2.v2.o6	Mama isst heim.	6273ea41			pending			
-de:b:s2.v2.o7	Mama isst das Bett.	9fdf87e1			pending			
-de:b:s2.v2.o8	Mama isst das Töpfchen.	9a349ffe			pending			
-de:b:s2.v2.ball	Mama isst den Ball.	e4f7c676			pending			
 de:b:s2.v2.brot	Mama isst Brot.	8a535cdb			pending			
 de:b:s2.v2.keks	Mama isst einen Keks.	5b3efc47			pending			
 de:b:s2.v2.banane	Mama isst eine Banane.	3ed669c2			pending			
 de:b:s2.v2.melone	Mama isst eine Melone.	2a796243			pending			
 de:b:s2.v3.o1	Mama trinkt Milch.	c5aabe16			pending			
-de:b:s2.v3.o2	Mama trinkt einen Apfel.	0df99e7c			pending			
-de:b:s2.v3.o3	Mama trinkt ein Spielzeug.	50d3a1a3			pending			
-de:b:s2.v3.o4	Mama trinkt das Auto.	eaa26546			pending			
-de:b:s2.v3.o5	Mama trinkt raus.	2ed3c368			pending			
-de:b:s2.v3.o6	Mama trinkt heim.	ca528fd0			pending			
-de:b:s2.v3.o7	Mama trinkt das Bett.	874ad9d8			pending			
-de:b:s2.v3.o8	Mama trinkt das Töpfchen.	62ea4b47			pending			
-de:b:s2.v3.ball	Mama trinkt den Ball.	09b0228b			pending			
-de:b:s2.v3.brot	Mama trinkt Brot.	3bf0ee02			pending			
-de:b:s2.v3.keks	Mama trinkt einen Keks.	6403903e			pending			
-de:b:s2.v3.banane	Mama trinkt eine Banane.	d6183c49			pending			
-de:b:s2.v3.melone	Mama trinkt eine Melone.	3de7a008			pending			
-de:b:s2.v4.o1	Mama schläft Milch.	39634bee			pending			
-de:b:s2.v4.o2	Mama schläft einen Apfel.	e8dcc674			pending			
-de:b:s2.v4.o3	Mama schläft beim Spielzeug.	98414a80			pending			
+de:b:s2.v3.o9	Mama trinkt Wasser.	417b9368			pending			
 de:b:s2.v4.o4	Mama schläft im Auto.	c51c36aa			pending			
 de:b:s2.v4.o5	Mama schläft draußen.	587c7943			pending			
 de:b:s2.v4.o6	Mama schläft zu Hause.	1cc1f8ca			pending			
 de:b:s2.v4.o7	Mama schläft im Bett.	694a0b3c			pending			
-de:b:s2.v4.o8	Mama schläft auf dem Töpfchen.	034f8e59			pending			
-de:b:s2.v4.ball	Mama schläft beim Ball.	a4910eed			pending			
-de:b:s2.v4.brot	Mama schläft beim Brot.	f1cb2a77			pending			
-de:b:s2.v4.keks	Mama schläft beim Keks.	c523b6f8			pending			
-de:b:s2.v4.banane	Mama schläft bei der Banane.	aa54a267			pending			
-de:b:s2.v4.melone	Mama schläft bei der Melone.	4b614e8a			pending			
-de:b:s2.v5.o1	Mama geht Milch.	5f43af20			pending			
-de:b:s2.v5.o2	Mama geht einen Apfel.	b7ae094e			pending			
-de:b:s2.v5.o3	Mama geht ein Spielzeug.	e226cca1			pending			
 de:b:s2.v5.o4	Mama geht ins Auto.	031aa1d0			pending			
 de:b:s2.v5.o5	Mama geht raus.	650f03fa			pending			
 de:b:s2.v5.o6	Mama geht heim.	c0050b02			pending			
 de:b:s2.v5.o7	Mama geht ins Bett.	28679ffa			pending			
 de:b:s2.v5.o8	Mama geht aufs Töpfchen.	32b086d6			pending			
-de:b:s2.v5.ball	Mama geht zum Ball.	90dbe4ce			pending			
-de:b:s2.v5.brot	Mama geht zum Brot.	9fce2850			pending			
-de:b:s2.v5.keks	Mama geht zum Keks.	4c3a3b27			pending			
-de:b:s2.v5.banane	Mama geht zur Banane.	d7fe0d57			pending			
-de:b:s2.v5.melone	Mama geht zur Melone.	9d279dba			pending			
-de:b:s2.v6.o1	Mama spielt mit Milch.	9c69ce59			pending			
-de:b:s2.v6.o2	Mama spielt mit einem Apfel.	a73d16d0			pending			
 de:b:s2.v6.o3	Mama spielt mit einem Spielzeug.	af4d4fd6			pending			
 de:b:s2.v6.o4	Mama spielt mit dem Auto.	816667e9			pending			
-de:b:s2.v6.o5	Mama spielt draußen.	5ed0c02e			pending			
-de:b:s2.v6.o6	Mama spielt zu Hause.	6828caf5			pending			
-de:b:s2.v6.o7	Mama spielt im Bett.	fdb3d9ed			pending			
-de:b:s2.v6.o8	Mama spielt auf dem Töpfchen.	607543c6			pending			
 de:b:s2.v6.ball	Mama spielt mit dem Ball.	0f0749b7			pending			
-de:b:s2.v6.brot	Mama spielt mit Brot.	022fc8cf			pending			
-de:b:s2.v6.keks	Mama spielt mit einem Keks.	a30f70fa			pending			
-de:b:s2.v6.banane	Mama spielt mit einer Banane.	07fbdd76			pending			
-de:b:s2.v6.melone	Mama spielt mit einer Melone.	e37c21cf			pending			
 de:b:s3.v1.o1	Papa will Milch.	f63d1c6c			pending			
 de:b:s3.v1.o2	Papa will einen Apfel.	d7c13762			pending			
 de:b:s3.v1.o3	Papa will ein Spielzeug.	662a7aa5			pending			
 de:b:s3.v1.o4	Papa will das Auto.	2d1d8bdc			pending			
-de:b:s3.v1.o5	Papa will raus.	e8bb89e6			pending			
-de:b:s3.v1.o6	Papa will heim.	59677f36			pending			
-de:b:s3.v1.o7	Papa will das Bett.	eae15ee6			pending			
-de:b:s3.v1.o8	Papa will das Töpfchen.	f52d7379			pending			
 de:b:s3.v1.ball	Papa will den Ball.	85c515d1			pending			
 de:b:s3.v1.brot	Papa will Brot.	e82d9f6c			pending			
 de:b:s3.v1.keks	Papa will einen Keks.	c6194968			pending			
 de:b:s3.v1.banane	Papa will eine Banane.	ea1e8513			pending			
 de:b:s3.v1.melone	Papa will eine Melone.	ac2d4b5e			pending			
-de:b:s3.v2.o1	Papa isst Milch.	9e650801			pending			
+de:b:s3.v1.o9	Papa will Wasser.	76190fc6			pending			
 de:b:s3.v2.o2	Papa isst einen Apfel.	139779cf			pending			
-de:b:s3.v2.o3	Papa isst ein Spielzeug.	08d41b7c			pending			
-de:b:s3.v2.o4	Papa isst das Auto.	7c96f983			pending			
-de:b:s3.v2.o5	Papa isst raus.	e004d9c9			pending			
-de:b:s3.v2.o6	Papa isst heim.	bd9199ed			pending			
-de:b:s3.v2.o7	Papa isst das Bett.	d642f4fd			pending			
-de:b:s3.v2.o8	Papa isst das Töpfchen.	c917a03a			pending			
-de:b:s3.v2.ball	Papa isst den Ball.	605576da			pending			
 de:b:s3.v2.brot	Papa isst Brot.	471685f7			pending			
 de:b:s3.v2.keks	Papa isst einen Keks.	e3aaaf8b			pending			
 de:b:s3.v2.banane	Papa isst eine Banane.	a7a68856			pending			
 de:b:s3.v2.melone	Papa isst eine Melone.	c141a52f			pending			
 de:b:s3.v3.o1	Papa trinkt Milch.	bf805e5a			pending			
-de:b:s3.v3.o2	Papa trinkt einen Apfel.	db843ae8			pending			
-de:b:s3.v3.o3	Papa trinkt ein Spielzeug.	5a9a654f			pending			
-de:b:s3.v3.o4	Papa trinkt das Auto.	ee942582			pending			
-de:b:s3.v3.o5	Papa trinkt raus.	fdb934ac			pending			
-de:b:s3.v3.o6	Papa trinkt heim.	bd68facc			pending			
-de:b:s3.v3.o7	Papa trinkt das Bett.	37a05004			pending			
-de:b:s3.v3.o8	Papa trinkt das Töpfchen.	48094f93			pending			
-de:b:s3.v3.ball	Papa trinkt den Ball.	e9f54dff			pending			
-de:b:s3.v3.brot	Papa trinkt Brot.	1da57c9e			pending			
-de:b:s3.v3.keks	Papa trinkt einen Keks.	809d3052			pending			
-de:b:s3.v3.banane	Papa trinkt eine Banane.	279c574d			pending			
-de:b:s3.v3.melone	Papa trinkt eine Melone.	5cf6d604			pending			
-de:b:s3.v4.o1	Papa schläft Milch.	8935fca2			pending			
-de:b:s3.v4.o2	Papa schläft einen Apfel.	9db71f50			pending			
-de:b:s3.v4.o3	Papa schläft beim Spielzeug.	511ebff4			pending			
+de:b:s3.v3.o9	Papa trinkt Wasser.	363eae64			pending			
 de:b:s3.v4.o4	Papa schläft im Auto.	d867fc0e			pending			
 de:b:s3.v4.o5	Papa schläft draußen.	64de818f			pending			
 de:b:s3.v4.o6	Papa schläft zu Hause.	0d0fa7ee			pending			
 de:b:s3.v4.o7	Papa schläft im Bett.	a9033670			pending			
-de:b:s3.v4.o8	Papa schläft auf dem Töpfchen.	2a784905			pending			
-de:b:s3.v4.ball	Papa schläft beim Ball.	5a58a4d1			pending			
-de:b:s3.v4.brot	Papa schläft beim Brot.	002a69eb			pending			
-de:b:s3.v4.keks	Papa schläft beim Keks.	d74bbf74			pending			
-de:b:s3.v4.banane	Papa schläft bei der Banane.	f814e5c3			pending			
-de:b:s3.v4.melone	Papa schläft bei der Melone.	a09f7a8e			pending			
-de:b:s3.v5.o1	Papa geht Milch.	fbc6d544			pending			
-de:b:s3.v5.o2	Papa geht einen Apfel.	d582297a			pending			
-de:b:s3.v5.o3	Papa geht ein Spielzeug.	9c6bab4d			pending			
 de:b:s3.v5.o4	Papa geht ins Auto.	559a906c			pending			
 de:b:s3.v5.o5	Papa geht raus.	f2a1d12e			pending			
 de:b:s3.v5.o6	Papa geht heim.	ce72538e			pending			
 de:b:s3.v5.o7	Papa geht ins Bett.	9692c176			pending			
 de:b:s3.v5.o8	Papa geht aufs Töpfchen.	a394a922			pending			
-de:b:s3.v5.ball	Papa geht zum Ball.	00c5ba6a			pending			
-de:b:s3.v5.brot	Papa geht zum Brot.	4876848c			pending			
-de:b:s3.v5.keks	Papa geht zum Keks.	c52cffbb			pending			
-de:b:s3.v5.banane	Papa geht zur Banane.	21a7cb13			pending			
-de:b:s3.v5.melone	Papa geht zur Melone.	e3b6915e			pending			
-de:b:s3.v6.o1	Papa spielt mit Milch.	2650098d			pending			
-de:b:s3.v6.o2	Papa spielt mit einem Apfel.	d319504c			pending			
 de:b:s3.v6.o3	Papa spielt mit einem Spielzeug.	7f55bdb2			pending			
 de:b:s3.v6.o4	Papa spielt mit dem Auto.	d0a986b5			pending			
-de:b:s3.v6.o5	Papa spielt draußen.	30a1390a			pending			
-de:b:s3.v6.o6	Papa spielt zu Hause.	35af79a9			pending			
-de:b:s3.v6.o7	Papa spielt im Bett.	32ba3a61			pending			
-de:b:s3.v6.o8	Papa spielt auf dem Töpfchen.	47085192			pending			
 de:b:s3.v6.ball	Papa spielt mit dem Ball.	02f53b5b			pending			
-de:b:s3.v6.brot	Papa spielt mit Brot.	a5ca417b			pending			
-de:b:s3.v6.keks	Papa spielt mit einem Keks.	bb34c6ee			pending			
-de:b:s3.v6.banane	Papa spielt mit einer Banane.	23715a82			pending			
-de:b:s3.v6.melone	Papa spielt mit einer Melone.	fe9c6003			pending			
 de:b:s4.v1.o1	Oma will Milch.	d4f537a1			pending			
 de:b:s4.v1.o2	Oma will einen Apfel.	34e6d96f			pending			
 de:b:s4.v1.o3	Oma will ein Spielzeug.	299e131c			pending			
 de:b:s4.v1.o4	Oma will das Auto.	5f2569a3			pending			
-de:b:s4.v1.o5	Oma will raus.	3c5b0e29			pending			
-de:b:s4.v1.o6	Oma will heim.	19e7ce4d			pending			
-de:b:s4.v1.o7	Oma will das Bett.	5497b99d			pending			
-de:b:s4.v1.o8	Oma will das Töpfchen.	c1ac545a			pending			
 de:b:s4.v1.ball	Oma will den Ball.	5dcbde7a			pending			
 de:b:s4.v1.brot	Oma will Brot.	42891217			pending			
 de:b:s4.v1.keks	Oma will einen Keks.	b5df262b			pending			
 de:b:s4.v1.banane	Oma will eine Banane.	451aeef6			pending			
 de:b:s4.v1.melone	Oma will eine Melone.	209b334f			pending			
-de:b:s4.v2.o1	Oma isst Milch.	340b9148			pending			
+de:b:s4.v1.o9	Oma will Wasser.	a5f880b5			pending			
 de:b:s4.v2.o2	Oma isst einen Apfel.	2d2c2136			pending			
-de:b:s4.v2.o3	Oma isst ein Spielzeug.	ea7481f9			pending			
-de:b:s4.v2.o4	Oma isst das Auto.	53095360			pending			
-de:b:s4.v2.o5	Oma isst raus.	3b2f11f2			pending			
-de:b:s4.v2.o6	Oma isst heim.	7e61680a			pending			
-de:b:s4.v2.o7	Oma isst das Bett.	1127088a			pending			
-de:b:s4.v2.o8	Oma isst das Töpfchen.	b04f967d			pending			
-de:b:s4.v2.ball	Oma isst den Ball.	5a75b6ad			pending			
 de:b:s4.v2.brot	Oma isst Brot.	6f5f4ca0			pending			
 de:b:s4.v2.keks	Oma isst einen Keks.	67ff4734			pending			
 de:b:s4.v2.banane	Oma isst eine Banane.	0d80115f			pending			
 de:b:s4.v2.melone	Oma isst eine Melone.	d2b84c62			pending			
 de:b:s4.v3.o1	Oma trinkt Milch.	ced7ac33			pending			
-de:b:s4.v3.o2	Oma trinkt einen Apfel.	a5266609			pending			
-de:b:s4.v3.o3	Oma trinkt ein Spielzeug.	e1328702			pending			
-de:b:s4.v3.o4	Oma trinkt das Auto.	cd938b55			pending			
-de:b:s4.v3.o5	Oma trinkt raus.	5d4bbe63			pending			
-de:b:s4.v3.o6	Oma trinkt heim.	3ee5b437			pending			
-de:b:s4.v3.o7	Oma trinkt das Bett.	efc4f88f			pending			
-de:b:s4.v3.o8	Oma trinkt das Töpfchen.	317ce898			pending			
-de:b:s4.v3.ball	Oma trinkt den Ball.	93a0f994			pending			
-de:b:s4.v3.brot	Oma trinkt Brot.	edf883bd			pending			
-de:b:s4.v3.keks	Oma trinkt einen Keks.	e0f73f99			pending			
-de:b:s4.v3.banane	Oma trinkt eine Banane.	e4dd341c			pending			
-de:b:s4.v3.melone	Oma trinkt eine Melone.	b8083151			pending			
-de:b:s4.v4.o1	Oma schläft Milch.	78eae685			pending			
-de:b:s4.v4.o2	Oma schläft einen Apfel.	0104940b			pending			
-de:b:s4.v4.o3	Oma schläft beim Spielzeug.	fa052f99			pending			
+de:b:s4.v3.o9	Oma trinkt Wasser.	f9d5cc57			pending			
 de:b:s4.v4.o4	Oma schläft im Auto.	5d9368dd			pending			
 de:b:s4.v4.o5	Oma schläft draußen.	c0631808			pending			
 de:b:s4.v4.o6	Oma schläft zu Hause.	25236ecf			pending			
 de:b:s4.v4.o7	Oma schläft im Bett.	84541147			pending			
-de:b:s4.v4.o8	Oma schläft auf dem Töpfchen.	5391a5b4			pending			
-de:b:s4.v4.ball	Oma schläft beim Ball.	7e7b8026			pending			
-de:b:s4.v4.brot	Oma schläft beim Brot.	a8909bf8			pending			
-de:b:s4.v4.keks	Oma schläft beim Keks.	bfb3229f			pending			
-de:b:s4.v4.banane	Oma schläft bei der Banane.	b2650f22			pending			
-de:b:s4.v4.melone	Oma schläft bei der Melone.	c810d823			pending			
-de:b:s4.v5.o1	Oma geht Milch.	28b78d79			pending			
-de:b:s4.v5.o2	Oma geht einen Apfel.	63bb6e67			pending			
-de:b:s4.v5.o3	Oma geht ein Spielzeug.	a4c75044			pending			
 de:b:s4.v5.o4	Oma geht ins Auto.	a0915fd3			pending			
 de:b:s4.v5.o5	Oma geht raus.	dc19ee51			pending			
 de:b:s4.v5.o6	Oma geht heim.	9f8e5005			pending			
 de:b:s4.v5.o7	Oma geht ins Bett.	0220894d			pending			
 de:b:s4.v5.o8	Oma geht aufs Töpfchen.	ac5c10b3			pending			
-de:b:s4.v5.ball	Oma geht zum Ball.	6b1efab1			pending			
-de:b:s4.v5.brot	Oma geht zum Brot.	136b28cb			pending			
-de:b:s4.v5.keks	Oma geht zum Keks.	68114bd4			pending			
-de:b:s4.v5.banane	Oma geht zur Banane.	08ded83c			pending			
-de:b:s4.v5.melone	Oma geht zur Melone.	035261f1			pending			
-de:b:s4.v6.o1	Oma spielt mit Milch.	48ec7240			pending			
-de:b:s4.v6.o2	Oma spielt mit einem Apfel.	c4431ee1			pending			
 de:b:s4.v6.o3	Oma spielt mit einem Spielzeug.	fd9bf507			pending			
 de:b:s4.v6.o4	Oma spielt mit dem Auto.	90d68746			pending			
-de:b:s4.v6.o5	Oma spielt draußen.	a6410d9b			pending			
-de:b:s4.v6.o6	Oma spielt zu Hause.	bf4a5e72			pending			
-de:b:s4.v6.o7	Oma spielt im Bett.	f41010f4			pending			
-de:b:s4.v6.o8	Oma spielt auf dem Töpfchen.	4cd617f1			pending			
 de:b:s4.v6.ball	Oma spielt mit dem Ball.	09131b44			pending			
-de:b:s4.v6.brot	Oma spielt mit Brot.	a35c26b8			pending			
-de:b:s4.v6.keks	Oma spielt mit einem Keks.	16f78151			pending			
-de:b:s4.v6.banane	Oma spielt mit einer Banane.	08e67975			pending			
-de:b:s4.v6.melone	Oma spielt mit einer Melone.	114c680c			pending			
 de:b:s5.v1.o1	Wauwau will Milch.	c87cae6e			pending			
 de:b:s5.v1.o2	Wauwau will einen Apfel.	4b1714f4			pending			
 de:b:s5.v1.o3	Wauwau will ein Spielzeug.	62629deb			pending			
 de:b:s5.v1.o4	Wauwau will das Auto.	c0e0ff7e			pending			
-de:b:s5.v1.o5	Wauwau will raus.	649bc770			pending			
-de:b:s5.v1.o6	Wauwau will heim.	a080e8c8			pending			
-de:b:s5.v1.o7	Wauwau will das Bett.	119f9fa0			pending			
-de:b:s5.v1.o8	Wauwau will das Töpfchen.	013b220f			pending			
 de:b:s5.v1.ball	Wauwau will den Ball.	b67ae7a3			pending			
 de:b:s5.v1.brot	Wauwau will Brot.	38a5525a			pending			
 de:b:s5.v1.keks	Wauwau will einen Keks.	045425b6			pending			
 de:b:s5.v1.banane	Wauwau will eine Banane.	9f8a40e1			pending			
 de:b:s5.v1.melone	Wauwau will eine Melone.	cadb2e20			pending			
-de:b:s5.v2.o1	Wauwau isst Milch.	49028fd7			pending			
+de:b:s5.v1.o9	Wauwau will Wasser.	7a78a7d0			pending			
 de:b:s5.v2.o2	Wauwau isst einen Apfel.	fbed1575			pending			
-de:b:s5.v2.o3	Wauwau isst ein Spielzeug.	ffd8944e			pending			
-de:b:s5.v2.o4	Wauwau isst das Auto.	de6f3e21			pending			
-de:b:s5.v2.o5	Wauwau isst raus.	f7a0cb07			pending			
-de:b:s5.v2.o6	Wauwau isst heim.	022be2e3			pending			
-de:b:s5.v2.o7	Wauwau isst das Bett.	c98fa59b			pending			
-de:b:s5.v2.o8	Wauwau isst das Töpfchen.	7467d954			pending			
-de:b:s5.v2.ball	Wauwau isst den Ball.	edd5a7d8			pending			
 de:b:s5.v2.brot	Wauwau isst Brot.	4ad201b9			pending			
 de:b:s5.v2.keks	Wauwau isst einen Keks.	286a51cd			pending			
 de:b:s5.v2.banane	Wauwau isst eine Banane.	4f56b500			pending			
 de:b:s5.v2.melone	Wauwau isst eine Melone.	f79d021d			pending			
 de:b:s5.v3.o1	Wauwau trinkt Milch.	5625f824			pending			
-de:b:s5.v3.o2	Wauwau trinkt einen Apfel.	f01e50da			pending			
-de:b:s5.v3.o3	Wauwau trinkt ein Spielzeug.	41cfd0ad			pending			
-de:b:s5.v3.o4	Wauwau trinkt das Auto.	dca98014			pending			
-de:b:s5.v3.o5	Wauwau trinkt raus.	9848b14e			pending			
-de:b:s5.v3.o6	Wauwau trinkt heim.	f4186a2e			pending			
-de:b:s5.v3.o7	Wauwau trinkt das Bett.	824b6cce			pending			
-de:b:s5.v3.o8	Wauwau trinkt das Töpfchen.	a379c701			pending			
-de:b:s5.v3.ball	Wauwau trinkt den Ball.	31c818e9			pending			
-de:b:s5.v3.brot	Wauwau trinkt Brot.	fc082c04			pending			
-de:b:s5.v3.keks	Wauwau trinkt einen Keks.	70833680			pending			
-de:b:s5.v3.banane	Wauwau trinkt eine Banane.	f7fc79ab			pending			
-de:b:s5.v3.melone	Wauwau trinkt eine Melone.	5b85f8b6			pending			
-de:b:s5.v4.o1	Wauwau schläft Milch.	dfd43e40			pending			
-de:b:s5.v4.o2	Wauwau schläft einen Apfel.	b5e06dee			pending			
-de:b:s5.v4.o3	Wauwau schläft beim Spielzeug.	32201062			pending			
+de:b:s5.v3.o9	Wauwau trinkt Wasser.	9104632e			pending			
 de:b:s5.v4.o4	Wauwau schläft im Auto.	1f40ab84			pending			
 de:b:s5.v4.o5	Wauwau schläft draußen.	860a0095			pending			
 de:b:s5.v4.o6	Wauwau schläft zu Hause.	005718bc			pending			
 de:b:s5.v4.o7	Wauwau schläft im Bett.	c465d0be			pending			
-de:b:s5.v4.o8	Wauwau schläft auf dem Töpfchen.	4a993ae7			pending			
-de:b:s5.v4.ball	Wauwau schläft beim Ball.	53a8a023			pending			
-de:b:s5.v4.brot	Wauwau schläft beim Brot.	3376c555			pending			
-de:b:s5.v4.keks	Wauwau schläft beim Keks.	a6499b1e			pending			
-de:b:s5.v4.banane	Wauwau schläft bei der Banane.	4e6c2595			pending			
-de:b:s5.v4.melone	Wauwau schläft bei der Melone.	72df0d2c			pending			
-de:b:s5.v5.o1	Wauwau geht Milch.	4903cdc6			pending			
-de:b:s5.v5.o2	Wauwau geht einen Apfel.	13e4564c			pending			
-de:b:s5.v5.o3	Wauwau geht ein Spielzeug.	92d7d313			pending			
 de:b:s5.v5.o4	Wauwau geht ins Auto.	ff0aa5b2			pending			
 de:b:s5.v5.o5	Wauwau geht raus.	97cea818			pending			
 de:b:s5.v5.o6	Wauwau geht heim.	f06c4c60			pending			
 de:b:s5.v5.o7	Wauwau geht ins Bett.	857a2fb4			pending			
 de:b:s5.v5.o8	Wauwau geht aufs Töpfchen.	dc050478			pending			
-de:b:s5.v5.ball	Wauwau geht zum Ball.	bf9ffbbc			pending			
-de:b:s5.v5.brot	Wauwau geht zum Brot.	6d93bffe			pending			
-de:b:s5.v5.keks	Wauwau geht zum Keks.	aefde18d			pending			
-de:b:s5.v5.banane	Wauwau geht zur Banane.	faa4cfb9			pending			
-de:b:s5.v5.melone	Wauwau geht zur Melone.	f52394f8			pending			
-de:b:s5.v6.o1	Wauwau spielt mit Milch.	ab6a2ac7			pending			
-de:b:s5.v6.o2	Wauwau spielt mit einem Apfel.	e5bb6652			pending			
 de:b:s5.v6.o3	Wauwau spielt mit einem Spielzeug.	45a46000			pending			
 de:b:s5.v6.o4	Wauwau spielt mit dem Auto.	4d64c813			pending			
-de:b:s5.v6.o5	Wauwau spielt draußen.	6849a544			pending			
-de:b:s5.v6.o6	Wauwau spielt zu Hause.	88365b43			pending			
-de:b:s5.v6.o7	Wauwau spielt im Bett.	187f7f6b			pending			
-de:b:s5.v6.o8	Wauwau spielt auf dem Töpfchen.	fa8ee490			pending			
 de:b:s5.v6.ball	Wauwau spielt mit dem Ball.	ddd17529			pending			
-de:b:s5.v6.brot	Wauwau spielt mit Brot.	bed25989			pending			
-de:b:s5.v6.keks	Wauwau spielt mit einem Keks.	bb287378			pending			
-de:b:s5.v6.banane	Wauwau spielt mit einer Banane.	bc728fe8			pending			
-de:b:s5.v6.melone	Wauwau spielt mit einer Melone.	65ed7b25			pending			
 de:b:maus.v1.o1	Die Maus will Milch.	6859a55c			pending			
 de:b:maus.v1.o2	Die Maus will einen Apfel.	7f094db2			pending			
 de:b:maus.v1.o3	Die Maus will ein Spielzeug.	da476755			pending			
 de:b:maus.v1.o4	Die Maus will das Auto.	0c238a4c			pending			
-de:b:maus.v1.o5	Die Maus will raus.	c4dec416			pending			
-de:b:maus.v1.o6	Die Maus will heim.	c0b58886			pending			
-de:b:maus.v1.o7	Die Maus will das Bett.	078ff556			pending			
-de:b:maus.v1.o8	Die Maus will das Töpfchen.	74c39949			pending			
 de:b:maus.v1.ball	Die Maus will den Ball.	5b06ce21			pending			
 de:b:maus.v1.brot	Die Maus will Brot.	b5f1ac7c			pending			
 de:b:maus.v1.keks	Die Maus will einen Keks.	9fc2aa58			pending			
 de:b:maus.v1.banane	Die Maus will eine Banane.	4c23f483			pending			
 de:b:maus.v1.melone	Die Maus will eine Melone.	d8e76b4e			pending			
-de:b:maus.v2.o1	Die Maus isst Milch.	e8b95eb1			pending			
+de:b:maus.v1.o9	Die Maus will Wasser.	9c9ca0d6			pending			
 de:b:maus.v2.o2	Die Maus isst einen Apfel.	9411e89f			pending			
-de:b:maus.v2.o3	Die Maus isst ein Spielzeug.	2ef71cac			pending			
-de:b:maus.v2.o4	Die Maus isst das Auto.	06b945b3			pending			
-de:b:maus.v2.o5	Die Maus isst raus.	f6b211b9			pending			
-de:b:maus.v2.o6	Die Maus isst heim.	b6818a3d			pending			
-de:b:maus.v2.o7	Die Maus isst das Bett.	22bca92d			pending			
-de:b:maus.v2.o8	Die Maus isst das Töpfchen.	0292390a			pending			
-de:b:maus.v2.ball	Die Maus isst den Ball.	492e76aa			pending			
 de:b:maus.v2.brot	Die Maus isst Brot.	b1f22907			pending			
 de:b:maus.v2.keks	Die Maus isst einen Keks.	4f34013b			pending			
 de:b:maus.v2.banane	Die Maus isst eine Banane.	987a3b06			pending			
 de:b:maus.v2.melone	Die Maus isst eine Melone.	18d2909f			pending			
 de:b:maus.v3.o1	Die Maus trinkt Milch.	6d438d4a			pending			
-de:b:maus.v3.o2	Die Maus trinkt einen Apfel.	b4053178			pending			
-de:b:maus.v3.o3	Die Maus trinkt ein Spielzeug.	6a8f0ebf			pending			
-de:b:maus.v3.o4	Die Maus trinkt das Auto.	7e56e932			pending			
-de:b:maus.v3.o5	Die Maus trinkt raus.	54f2cd5c			pending			
-de:b:maus.v3.o6	Die Maus trinkt heim.	1a654d5c			pending			
-de:b:maus.v3.o7	Die Maus trinkt das Bett.	04c67334			pending			
-de:b:maus.v3.o8	Die Maus trinkt das Töpfchen.	7b2898a3			pending			
-de:b:maus.v3.ball	Die Maus trinkt den Ball.	6f5467cf			pending			
-de:b:maus.v3.brot	Die Maus trinkt Brot.	b56870ae			pending			
-de:b:maus.v3.keks	Die Maus trinkt einen Keks.	1d2bf9c2			pending			
-de:b:maus.v3.banane	Die Maus trinkt eine Banane.	1e1714bd			pending			
-de:b:maus.v3.melone	Die Maus trinkt eine Melone.	399176b4			pending			
-de:b:maus.v4.o1	Die Maus schläft Milch.	18405bd2			pending			
-de:b:maus.v4.o2	Die Maus schläft einen Apfel.	d56e5960			pending			
-de:b:maus.v4.o3	Die Maus schläft beim Spielzeug.	71737a04			pending			
+de:b:maus.v3.o9	Die Maus trinkt Wasser.	87addd34			pending			
 de:b:maus.v4.o4	Die Maus schläft im Auto.	7be98fbe			pending			
 de:b:maus.v4.o5	Die Maus schläft draußen.	a9b29d9f			pending			
 de:b:maus.v4.o6	Die Maus schläft zu Hause.	f9a640be			pending			
 de:b:maus.v4.o7	Die Maus schläft im Bett.	b35b7ae0			pending			
-de:b:maus.v4.o8	Die Maus schläft auf dem Töpfchen.	0f22d315			pending			
-de:b:maus.v4.ball	Die Maus schläft beim Ball.	6bd3a6c1			pending			
-de:b:maus.v4.brot	Die Maus schläft beim Brot.	5913315b			pending			
-de:b:maus.v4.keks	Die Maus schläft beim Keks.	d71482c4			pending			
-de:b:maus.v4.banane	Die Maus schläft bei der Banane.	2e697df3			pending			
-de:b:maus.v4.melone	Die Maus schläft bei der Melone.	4de12abe			pending			
-de:b:maus.v5.o1	Die Maus geht Milch.	09cff274			pending			
-de:b:maus.v5.o2	Die Maus geht einen Apfel.	1e2989ca			pending			
-de:b:maus.v5.o3	Die Maus geht ein Spielzeug.	de80757d			pending			
 de:b:maus.v5.o4	Die Maus geht ins Auto.	3f3183dc			pending			
 de:b:maus.v5.o5	Die Maus geht raus.	e251a79e			pending			
 de:b:maus.v5.o6	Die Maus geht heim.	b5e5071e			pending			
 de:b:maus.v5.o7	Die Maus geht ins Bett.	fcf556e6			pending			
 de:b:maus.v5.o8	Die Maus geht aufs Töpfchen.	9eaeb572			pending			
-de:b:maus.v5.ball	Die Maus geht zum Ball.	535b997a			pending			
-de:b:maus.v5.brot	Die Maus geht zum Brot.	dfa727dc			pending			
-de:b:maus.v5.keks	Die Maus geht zum Keks.	54f928ab			pending			
-de:b:maus.v5.banane	Die Maus geht zur Banane.	e248c003			pending			
-de:b:maus.v5.melone	Die Maus geht zur Melone.	6f0c36ce			pending			
-de:b:maus.v6.o1	Die Maus spielt mit Milch.	0ab5ccdd			pending			
-de:b:maus.v6.o2	Die Maus spielt mit einem Apfel.	521890fc			pending			
 de:b:maus.v6.o3	Die Maus spielt mit einem Spielzeug.	10d54302			pending			
 de:b:maus.v6.o4	Die Maus spielt mit dem Auto.	c09e1725			pending			
-de:b:maus.v6.o5	Die Maus spielt draußen.	f9afdfda			pending			
-de:b:maus.v6.o6	Die Maus spielt zu Hause.	546b3f39			pending			
-de:b:maus.v6.o7	Die Maus spielt im Bett.	d6c57a11			pending			
-de:b:maus.v6.o8	Die Maus spielt auf dem Töpfchen.	e9240822			pending			
 de:b:maus.v6.ball	Die Maus spielt mit dem Ball.	a909064b			pending			
-de:b:maus.v6.brot	Die Maus spielt mit Brot.	4c8525ab			pending			
-de:b:maus.v6.keks	Die Maus spielt mit einem Keks.	212a63be			pending			
-de:b:maus.v6.banane	Die Maus spielt mit einer Banane.	ad064f52			pending			
-de:b:maus.v6.melone	Die Maus spielt mit einer Melone.	6840a353			pending			
 de:b:hase.v1.o1	Der Hase will Milch.	eaf171ea			pending			
 de:b:hase.v1.o2	Der Hase will einen Apfel.	7a229a98			pending			
 de:b:hase.v1.o3	Der Hase will ein Spielzeug.	a66977df			pending			
 de:b:hase.v1.o4	Der Hase will das Auto.	fe8253d2			pending			
-de:b:hase.v1.o5	Der Hase will raus.	4184a43c			pending			
-de:b:hase.v1.o6	Der Hase will heim.	06f7243c			pending			
-de:b:hase.v1.o7	Der Hase will das Bett.	04f11454			pending			
-de:b:hase.v1.o8	Der Hase will das Töpfchen.	6473d9c3			pending			
 de:b:hase.v1.ball	Der Hase will den Ball.	47c20a6f			pending			
 de:b:hase.v1.brot	Der Hase will Brot.	006519ce			pending			
 de:b:hase.v1.keks	Der Hase will einen Keks.	a9b3d562			pending			
 de:b:hase.v1.banane	Der Hase will eine Banane.	50749d5d			pending			
 de:b:hase.v1.melone	Der Hase will eine Melone.	e6f7b154			pending			
-de:b:hase.v2.o1	Der Hase isst Milch.	2ea43693			pending			
+de:b:hase.v1.o9	Der Hase will Wasser.	bf2f2bd4			pending			
 de:b:hase.v2.o2	Der Hase isst einen Apfel.	4df2bbe9			pending			
-de:b:hase.v2.o3	Der Hase isst ein Spielzeug.	138a7e62			pending			
-de:b:hase.v2.o4	Der Hase isst das Auto.	55acfc35			pending			
-de:b:hase.v2.o5	Der Hase isst raus.	35d0bc03			pending			
-de:b:hase.v2.o6	Der Hase isst heim.	c1302357			pending			
-de:b:hase.v2.o7	Der Hase isst das Bett.	fa599bef			pending			
-de:b:hase.v2.o8	Der Hase isst das Töpfchen.	756192f8			pending			
-de:b:hase.v2.ball	Der Hase isst den Ball.	8c865574			pending			
 de:b:hase.v2.brot	Der Hase isst Brot.	11d8209d			pending			
 de:b:hase.v2.keks	Der Hase isst einen Keks.	8ffdf4f9			pending			
 de:b:hase.v2.banane	Der Hase isst eine Banane.	aff7d27c			pending			
 de:b:hase.v2.melone	Der Hase isst eine Melone.	ad2ba031			pending			
 de:b:hase.v3.o1	Der Hase trinkt Milch.	e7650420			pending			
-de:b:hase.v3.o2	Der Hase trinkt einen Apfel.	821cb64e			pending			
-de:b:hase.v3.o3	Der Hase trinkt ein Spielzeug.	01fdc1a1			pending			
-de:b:hase.v3.o4	Der Hase trinkt das Auto.	b2015198			pending			
-de:b:hase.v3.o5	Der Hase trinkt raus.	77d17afa			pending			
-de:b:hase.v3.o6	Der Hase trinkt heim.	d2c78202			pending			
-de:b:hase.v3.o7	Der Hase trinkt das Bett.	55c8a7d2			pending			
-de:b:hase.v3.o8	Der Hase trinkt das Töpfchen.	c6238ee5			pending			
-de:b:hase.v3.ball	Der Hase trinkt den Ball.	12340f85			pending			
-de:b:hase.v3.brot	Der Hase trinkt Brot.	5f20c698			pending			
-de:b:hase.v3.keks	Der Hase trinkt einen Keks.	c4c8608c			pending			
-de:b:hase.v3.banane	Der Hase trinkt eine Banane.	50f125b7			pending			
-de:b:hase.v3.melone	Der Hase trinkt eine Melone.	01c6189a			pending			
-de:b:hase.v4.o1	Der Hase schläft Milch.	a1f84a4c			pending			
-de:b:hase.v4.o2	Der Hase schläft einen Apfel.	04b81c42			pending			
-de:b:hase.v4.o3	Der Hase schläft beim Spielzeug.	0668f39e			pending			
+de:b:hase.v3.o9	Der Hase trinkt Wasser.	94fe2542			pending			
 de:b:hase.v4.o4	Der Hase schläft im Auto.	b78ccc30			pending			
 de:b:hase.v4.o5	Der Hase schläft draußen.	1953a689			pending			
 de:b:hase.v4.o6	Der Hase schläft zu Hause.	9cf9b1d8			pending			
 de:b:hase.v4.o7	Der Hase schläft im Bett.	3315ebda			pending			
-de:b:hase.v4.o8	Der Hase schläft auf dem Töpfchen.	bef3b3bb			pending			
-de:b:hase.v4.ball	Der Hase schläft beim Ball.	c9f2beff			pending			
-de:b:hase.v4.brot	Der Hase schläft beim Brot.	c4bb1a11			pending			
-de:b:hase.v4.keks	Der Hase schläft beim Keks.	fcc242a2			pending			
-de:b:hase.v4.banane	Der Hase schläft bei der Banane.	3f263de9			pending			
-de:b:hase.v4.melone	Der Hase schläft bei der Melone.	cbc3c528			pending			
-de:b:hase.v5.o1	Der Hase geht Milch.	76a79d92			pending			
-de:b:hase.v5.o2	Der Hase geht einen Apfel.	c14c71a0			pending			
-de:b:hase.v5.o3	Der Hase geht ein Spielzeug.	a90d9cd7			pending			
 de:b:hase.v5.o4	Der Hase geht ins Auto.	fd60faf6			pending			
 de:b:hase.v5.o5	Der Hase geht raus.	08fd9154			pending			
 de:b:hase.v5.o6	Der Hase geht heim.	7782a544			pending			
 de:b:hase.v5.o7	Der Hase geht ins Bett.	ed4e6088			pending			
 de:b:hase.v5.o8	Der Hase geht aufs Töpfchen.	54a4fddc			pending			
-de:b:hase.v5.ball	Der Hase geht zum Ball.	5e4f5de0			pending			
-de:b:hase.v5.brot	Der Hase geht zum Brot.	cc42bd62			pending			
-de:b:hase.v5.keks	Der Hase geht zum Keks.	0aa51509			pending			
-de:b:hase.v5.banane	Der Hase geht zur Banane.	a0c18fbd			pending			
-de:b:hase.v5.melone	Der Hase geht zur Melone.	bc3bf1b4			pending			
-de:b:hase.v6.o1	Der Hase spielt mit Milch.	21516e83			pending			
-de:b:hase.v6.o2	Der Hase spielt mit einem Apfel.	20852f86			pending			
 de:b:hase.v6.o3	Der Hase spielt mit einem Spielzeug.	6ffd8f24			pending			
 de:b:hase.v6.o4	Der Hase spielt mit dem Auto.	970c1077			pending			
-de:b:hase.v6.o5	Der Hase spielt draußen.	5bc60848			pending			
-de:b:hase.v6.o6	Der Hase spielt zu Hause.	4adfe88f			pending			
-de:b:hase.v6.o7	Der Hase spielt im Bett.	59d24407			pending			
-de:b:hase.v6.o8	Der Hase spielt auf dem Töpfchen.	8d7821f4			pending			
 de:b:hase.v6.ball	Der Hase spielt mit dem Ball.	d1d88825			pending			
-de:b:hase.v6.brot	Der Hase spielt mit Brot.	8668ef6d			pending			
-de:b:hase.v6.keks	Der Hase spielt mit einem Keks.	83168464			pending			
-de:b:hase.v6.banane	Der Hase spielt mit einer Banane.	d422d7cc			pending			
-de:b:hase.v6.melone	Der Hase spielt mit einer Melone.	1a17cbc1			pending			
 de:b:kuh.v1.o1	Die Kuh will Milch.	49b85f9c			pending			
 de:b:kuh.v1.o2	Die Kuh will einen Apfel.	bc2c7472			pending			
 de:b:kuh.v1.o3	Die Kuh will ein Spielzeug.	9be50615			pending			
 de:b:kuh.v1.o4	Die Kuh will das Auto.	ce94ef0c			pending			
-de:b:kuh.v1.o5	Die Kuh will raus.	a1b1bf56			pending			
-de:b:kuh.v1.o6	Die Kuh will heim.	9b0e1ac6			pending			
-de:b:kuh.v1.o7	Die Kuh will das Bett.	e34e0f16			pending			
-de:b:kuh.v1.o8	Die Kuh will das Töpfchen.	5533e309			pending			
 de:b:kuh.v1.ball	Die Kuh will den Ball.	36c4e7e1			pending			
 de:b:kuh.v1.brot	Die Kuh will Brot.	4d38e1bc			pending			
 de:b:kuh.v1.keks	Die Kuh will einen Keks.	bb8fcc18			pending			
 de:b:kuh.v1.banane	Die Kuh will eine Banane.	3b873f43			pending			
 de:b:kuh.v1.melone	Die Kuh will eine Melone.	e411d40e			pending			
-de:b:kuh.v2.o1	Die Kuh isst Milch.	a5075ff1			pending			
+de:b:kuh.v1.o9	Die Kuh will Wasser.	21479516			pending			
 de:b:kuh.v2.o2	Die Kuh isst einen Apfel.	6159b75f			pending			
-de:b:kuh.v2.o3	Die Kuh isst ein Spielzeug.	0e8ced6c			pending			
-de:b:kuh.v2.o4	Die Kuh isst das Auto.	c5358673			pending			
-de:b:kuh.v2.o5	Die Kuh isst raus.	354109f9			pending			
-de:b:kuh.v2.o6	Die Kuh isst heim.	1ed52a7d			pending			
-de:b:kuh.v2.o7	Die Kuh isst das Bett.	e138e9ed			pending			
-de:b:kuh.v2.o8	Die Kuh isst das Töpfchen.	1b481cca			pending			
-de:b:kuh.v2.ball	Die Kuh isst den Ball.	b5bfef6a			pending			
 de:b:kuh.v2.brot	Die Kuh isst Brot.	09cdd647			pending			
 de:b:kuh.v2.keks	Die Kuh isst einen Keks.	e999f8fb			pending			
 de:b:kuh.v2.banane	Die Kuh isst eine Banane.	930adfc6			pending			
 de:b:kuh.v2.melone	Die Kuh isst eine Melone.	d097b35f			pending			
 de:b:kuh.v3.o1	Die Kuh trinkt Milch.	209aee8a			pending			
-de:b:kuh.v3.o2	Die Kuh trinkt einen Apfel.	7505f238			pending			
-de:b:kuh.v3.o3	Die Kuh trinkt ein Spielzeug.	eda9c27f			pending			
-de:b:kuh.v3.o4	Die Kuh trinkt das Auto.	cd59d3f2			pending			
-de:b:kuh.v3.o5	Die Kuh trinkt raus.	0a62309c			pending			
-de:b:kuh.v3.o6	Die Kuh trinkt heim.	e921659c			pending			
-de:b:kuh.v3.o7	Die Kuh trinkt das Bett.	3cf711f4			pending			
-de:b:kuh.v3.o8	Die Kuh trinkt das Töpfchen.	c8114e63			pending			
-de:b:kuh.v3.ball	Die Kuh trinkt den Ball.	4fada28f			pending			
-de:b:kuh.v3.brot	Die Kuh trinkt Brot.	6ad7d3ee			pending			
-de:b:kuh.v3.keks	Die Kuh trinkt einen Keks.	0a978c82			pending			
-de:b:kuh.v3.banane	Die Kuh trinkt eine Banane.	0ca6867d			pending			
-de:b:kuh.v3.melone	Die Kuh trinkt eine Melone.	a5a40374			pending			
-de:b:kuh.v4.o1	Die Kuh schläft Milch.	2ee46112			pending			
-de:b:kuh.v4.o2	Die Kuh schläft einen Apfel.	7e871920			pending			
-de:b:kuh.v4.o3	Die Kuh schläft beim Spielzeug.	95a0ddc4			pending			
+de:b:kuh.v3.o9	Die Kuh trinkt Wasser.	34c5de74			pending			
 de:b:kuh.v4.o4	Die Kuh schläft im Auto.	1a08e87e			pending			
 de:b:kuh.v4.o5	Die Kuh schläft draußen.	4654c6df			pending			
 de:b:kuh.v4.o6	Die Kuh schläft zu Hause.	13634c7e			pending			
 de:b:kuh.v4.o7	Die Kuh schläft im Bett.	6ac788a0			pending			
-de:b:kuh.v4.o8	Die Kuh schläft auf dem Töpfchen.	094a3955			pending			
-de:b:kuh.v4.ball	Die Kuh schläft beim Ball.	02f8a281			pending			
-de:b:kuh.v4.brot	Die Kuh schläft beim Brot.	f0382d1b			pending			
-de:b:kuh.v4.keks	Die Kuh schläft beim Keks.	b63fad84			pending			
-de:b:kuh.v4.banane	Die Kuh schläft bei der Banane.	fdf0db33			pending			
-de:b:kuh.v4.melone	Die Kuh schläft bei der Melone.	3ffed7fe			pending			
-de:b:kuh.v5.o1	Die Kuh geht Milch.	86f846b4			pending			
-de:b:kuh.v5.o2	Die Kuh geht einen Apfel.	805ada8a			pending			
-de:b:kuh.v5.o3	Die Kuh geht ein Spielzeug.	9d7a823d			pending			
 de:b:kuh.v5.o4	Die Kuh geht ins Auto.	8b28299c			pending			
 de:b:kuh.v5.o5	Die Kuh geht raus.	bcaa39de			pending			
 de:b:kuh.v5.o6	Die Kuh geht heim.	76f0e45e			pending			
 de:b:kuh.v5.o7	Die Kuh geht ins Bett.	72b0a4a6			pending			
 de:b:kuh.v5.o8	Die Kuh geht aufs Töpfchen.	f67a2132			pending			
-de:b:kuh.v5.ball	Die Kuh geht zum Ball.	6439c33a			pending			
-de:b:kuh.v5.brot	Die Kuh geht zum Brot.	f2ffba9c			pending			
-de:b:kuh.v5.keks	Die Kuh geht zum Keks.	4f05066b			pending			
-de:b:kuh.v5.banane	Die Kuh geht zur Banane.	1f28e1c3			pending			
-de:b:kuh.v5.melone	Die Kuh geht zur Melone.	c7b3768e			pending			
-de:b:kuh.v6.o1	Die Kuh spielt mit Milch.	02556f9d			pending			
-de:b:kuh.v6.o2	Die Kuh spielt mit einem Apfel.	9b27ac3c			pending			
 de:b:kuh.v6.o3	Die Kuh spielt mit einem Spielzeug.	68606842			pending			
 de:b:kuh.v6.o4	Die Kuh spielt mit dem Auto.	39247965			pending			
-de:b:kuh.v6.o5	Die Kuh spielt draußen.	6daf321a			pending			
-de:b:kuh.v6.o6	Die Kuh spielt zu Hause.	87be97f9			pending			
-de:b:kuh.v6.o7	Die Kuh spielt im Bett.	3c2aebd1			pending			
-de:b:kuh.v6.o8	Die Kuh spielt auf dem Töpfchen.	9f985362			pending			
 de:b:kuh.v6.ball	Die Kuh spielt mit dem Ball.	64a0c58b			pending			
-de:b:kuh.v6.brot	Die Kuh spielt mit Brot.	3d20606b			pending			
-de:b:kuh.v6.keks	Die Kuh spielt mit einem Keks.	cc040cfe			pending			
-de:b:kuh.v6.banane	Die Kuh spielt mit einer Banane.	0878b392			pending			
-de:b:kuh.v6.melone	Die Kuh spielt mit einer Melone.	c62d7093			pending			
 de:b:fisch.v1.o1	Der Fisch will Milch.	04ab6d64			pending			
 de:b:fisch.v1.o2	Der Fisch will einen Apfel.	7881159a			pending			
 de:b:fisch.v1.o3	Der Fisch will ein Spielzeug.	1e368f6d			pending			
 de:b:fisch.v1.o4	Der Fisch will das Auto.	9ccb4bd4			pending			
-de:b:fisch.v1.o5	Der Fisch will raus.	e93c788e			pending			
-de:b:fisch.v1.o6	Der Fisch will heim.	450c316e			pending			
-de:b:fisch.v1.o7	Der Fisch will das Bett.	18a8908e			pending			
-de:b:fisch.v1.o8	Der Fisch will das Töpfchen.	a81c5fc1			pending			
 de:b:fisch.v1.ball	Der Fisch will den Ball.	c5aad3a9			pending			
 de:b:fisch.v1.brot	Der Fisch will Brot.	4a818a44			pending			
 de:b:fisch.v1.keks	Der Fisch will einen Keks.	39550f40			pending			
 de:b:fisch.v1.banane	Der Fisch will eine Banane.	f39b366b			pending			
 de:b:fisch.v1.melone	Der Fisch will eine Melone.	17ff0876			pending			
-de:b:fisch.v2.o1	Der Fisch isst Milch.	c37737b9			pending			
+de:b:fisch.v1.o9	Der Fisch will Wasser.	23bcac6e			pending			
 de:b:fisch.v2.o2	Der Fisch isst einen Apfel.	ed8cf227			pending			
-de:b:fisch.v2.o3	Der Fisch isst ein Spielzeug.	862e8a04			pending			
-de:b:fisch.v2.o4	Der Fisch isst das Auto.	859851bb			pending			
-de:b:fisch.v2.o5	Der Fisch isst raus.	09522891			pending			
-de:b:fisch.v2.o6	Der Fisch isst heim.	a0877945			pending			
-de:b:fisch.v2.o7	Der Fisch isst das Bett.	7c911325			pending			
-de:b:fisch.v2.o8	Der Fisch isst das Töpfchen.	c5aa84c2			pending			
-de:b:fisch.v2.ball	Der Fisch isst den Ball.	30d802b2			pending			
 de:b:fisch.v2.brot	Der Fisch isst Brot.	7790be2f			pending			
 de:b:fisch.v2.keks	Der Fisch isst einen Keks.	42ba8e03			pending			
 de:b:fisch.v2.banane	Der Fisch isst eine Banane.	539985ce			pending			
 de:b:fisch.v2.melone	Der Fisch isst eine Melone.	b92e46a7			pending			
 de:b:fisch.v3.o1	Der Fisch trinkt Milch.	39859b32			pending			
-de:b:fisch.v3.o2	Der Fisch trinkt einen Apfel.	2b34da40			pending			
-de:b:fisch.v3.o3	Der Fisch trinkt ein Spielzeug.	85c87af7			pending			
-de:b:fisch.v3.o4	Der Fisch trinkt das Auto.	92fbfd7a			pending			
-de:b:fisch.v3.o5	Der Fisch trinkt raus.	5ecc2b34			pending			
-de:b:fisch.v3.o6	Der Fisch trinkt heim.	4d5075a4			pending			
-de:b:fisch.v3.o7	Der Fisch trinkt das Bett.	5dbae58c			pending			
-de:b:fisch.v3.o8	Der Fisch trinkt das Töpfchen.	7007b93b			pending			
-de:b:fisch.v3.ball	Der Fisch trinkt den Ball.	b67302d7			pending			
-de:b:fisch.v3.brot	Der Fisch trinkt Brot.	c3ebe716			pending			
-de:b:fisch.v3.keks	Der Fisch trinkt einen Keks.	621b180a			pending			
-de:b:fisch.v3.banane	Der Fisch trinkt eine Banane.	11414585			pending			
-de:b:fisch.v3.melone	Der Fisch trinkt eine Melone.	e9e635dc			pending			
-de:b:fisch.v4.o1	Der Fisch schläft Milch.	be4ddbfa			pending			
-de:b:fisch.v4.o2	Der Fisch schläft einen Apfel.	811f0308			pending			
-de:b:fisch.v4.o3	Der Fisch schläft beim Spielzeug.	99d6d8ac			pending			
+de:b:fisch.v3.o9	Der Fisch trinkt Wasser.	1833fdac			pending			
 de:b:fisch.v4.o4	Der Fisch schläft im Auto.	70a3af56			pending			
 de:b:fisch.v4.o5	Der Fisch schläft draußen.	7f043847			pending			
 de:b:fisch.v4.o6	Der Fisch schläft zu Hause.	2bed6e76			pending			
 de:b:fisch.v4.o7	Der Fisch schläft im Bett.	0a568668			pending			
-de:b:fisch.v4.o8	Der Fisch schläft auf dem Töpfchen.	e1af0b3d			pending			
-de:b:fisch.v4.ball	Der Fisch schläft beim Ball.	7a591da9			pending			
-de:b:fisch.v4.brot	Der Fisch schläft beim Brot.	6508a193			pending			
-de:b:fisch.v4.keks	Der Fisch schläft beim Keks.	4da47bac			pending			
-de:b:fisch.v4.banane	Der Fisch schläft bei der Banane.	46099efb			pending			
-de:b:fisch.v4.melone	Der Fisch schläft bei der Melone.	03b58506			pending			
-de:b:fisch.v5.o1	Der Fisch geht Milch.	38bb877c			pending			
-de:b:fisch.v5.o2	Der Fisch geht einen Apfel.	1ecc0552			pending			
-de:b:fisch.v5.o3	Der Fisch geht ein Spielzeug.	fe79a9f5			pending			
 de:b:fisch.v5.o4	Der Fisch geht ins Auto.	f010ec64			pending			
 de:b:fisch.v5.o5	Der Fisch geht raus.	ba1dfff6			pending			
 de:b:fisch.v5.o6	Der Fisch geht heim.	35f3fae6			pending			
 de:b:fisch.v5.o7	Der Fisch geht ins Bett.	04bee81e			pending			
 de:b:fisch.v5.o8	Der Fisch geht aufs Töpfchen.	f15e285a			pending			
-de:b:fisch.v5.ball	Der Fisch geht zum Ball.	0300c812			pending			
-de:b:fisch.v5.brot	Der Fisch geht zum Brot.	2f409b04			pending			
-de:b:fisch.v5.keks	Der Fisch geht zum Keks.	ebcc4803			pending			
-de:b:fisch.v5.banane	Der Fisch geht zur Banane.	2411a2eb			pending			
-de:b:fisch.v5.melone	Der Fisch geht zur Melone.	487574f6			pending			
-de:b:fisch.v6.o1	Der Fisch spielt mit Milch.	523e3415			pending			
-de:b:fisch.v6.o2	Der Fisch spielt mit einem Apfel.	cbd11874			pending			
 de:b:fisch.v6.o3	Der Fisch spielt mit einem Spielzeug.	13206e7a			pending			
 de:b:fisch.v6.o4	Der Fisch spielt mit dem Auto.	139c2f6d			pending			
-de:b:fisch.v6.o5	Der Fisch spielt draußen.	56448072			pending			
-de:b:fisch.v6.o6	Der Fisch spielt zu Hause.	dfe4a941			pending			
-de:b:fisch.v6.o7	Der Fisch spielt im Bett.	6f687e49			pending			
-de:b:fisch.v6.o8	Der Fisch spielt auf dem Töpfchen.	d1bc931a			pending			
 de:b:fisch.v6.ball	Der Fisch spielt mit dem Ball.	df49fb83			pending			
-de:b:fisch.v6.brot	Der Fisch spielt mit Brot.	0a9f51e3			pending			
-de:b:fisch.v6.keks	Der Fisch spielt mit einem Keks.	ffe24436			pending			
-de:b:fisch.v6.banane	Der Fisch spielt mit einer Banane.	267d88fa			pending			
-de:b:fisch.v6.melone	Der Fisch spielt mit einer Melone.	c37994db			pending			
 de:b:zebra.v1.o1	Das Zebra will Milch.	28a8008a			pending			
 de:b:zebra.v1.o2	Das Zebra will einen Apfel.	e01a7438			pending			
 de:b:zebra.v1.o3	Das Zebra will ein Spielzeug.	a307147f			pending			
 de:b:zebra.v1.o4	Das Zebra will das Auto.	78c419f2			pending			
-de:b:zebra.v1.o5	Das Zebra will raus.	5b14169c			pending			
-de:b:zebra.v1.o6	Das Zebra will heim.	39d34b9c			pending			
-de:b:zebra.v1.o7	Das Zebra will das Bett.	e86157f4			pending			
-de:b:zebra.v1.o8	Das Zebra will das Töpfchen.	5959f463			pending			
 de:b:zebra.v1.ball	Das Zebra will den Ball.	fb17e88f			pending			
 de:b:zebra.v1.brot	Das Zebra will Brot.	bb89b9ee			pending			
 de:b:zebra.v1.keks	Das Zebra will einen Keks.	8a8a4282			pending			
 de:b:zebra.v1.banane	Das Zebra will eine Banane.	77bb087d			pending			
 de:b:zebra.v1.melone	Das Zebra will eine Melone.	10b88574			pending			
-de:b:zebra.v2.o1	Das Zebra isst Milch.	c7b81ab3			pending			
+de:b:zebra.v1.o9	Das Zebra will Wasser.	e1593474			pending			
 de:b:zebra.v2.o2	Das Zebra isst einen Apfel.	f28f6089			pending			
-de:b:zebra.v2.o3	Das Zebra isst ein Spielzeug.	9da24582			pending			
-de:b:zebra.v2.o4	Das Zebra isst das Auto.	eb976ad5			pending			
-de:b:zebra.v2.o5	Das Zebra isst raus.	8088a5e3			pending			
-de:b:zebra.v2.o6	Das Zebra isst heim.	62229bb7			pending			
-de:b:zebra.v2.o7	Das Zebra isst das Bett.	0dc8d80f			pending			
-de:b:zebra.v2.o8	Das Zebra isst das Töpfchen.	2c601f18			pending			
-de:b:zebra.v2.ball	Das Zebra isst den Ball.	b1a4d914			pending			
 de:b:zebra.v2.brot	Das Zebra isst Brot.	11356b3d			pending			
 de:b:zebra.v2.keks	Das Zebra isst einen Keks.	c810eb19			pending			
 de:b:zebra.v2.banane	Das Zebra isst eine Banane.	32462e9c			pending			
 de:b:zebra.v2.melone	Das Zebra isst eine Melone.	05712bd1			pending			
 de:b:zebra.v3.o1	Das Zebra trinkt Milch.	a4a10440			pending			
-de:b:zebra.v3.o2	Das Zebra trinkt einen Apfel.	721703ee			pending			
-de:b:zebra.v3.o3	Das Zebra trinkt ein Spielzeug.	0a5f3ec1			pending			
-de:b:zebra.v3.o4	Das Zebra trinkt das Auto.	9c9832b8			pending			
-de:b:zebra.v3.o5	Das Zebra trinkt raus.	36f81a5a			pending			
-de:b:zebra.v3.o6	Das Zebra trinkt heim.	11ed57e2			pending			
-de:b:zebra.v3.o7	Das Zebra trinkt das Bett.	bde45672			pending			
-de:b:zebra.v3.o8	Das Zebra trinkt das Töpfchen.	9c225685			pending			
-de:b:zebra.v3.ball	Das Zebra trinkt den Ball.	fa5087a5			pending			
-de:b:zebra.v3.brot	Das Zebra trinkt Brot.	18788cb8			pending			
-de:b:zebra.v3.keks	Das Zebra trinkt einen Keks.	94bfcc2c			pending			
-de:b:zebra.v3.banane	Das Zebra trinkt eine Banane.	1f4acb57			pending			
-de:b:zebra.v3.melone	Das Zebra trinkt eine Melone.	e4745bba			pending			
-de:b:zebra.v4.o1	Das Zebra schläft Milch.	3d4c116c			pending			
-de:b:zebra.v4.o2	Das Zebra schläft einen Apfel.	bcb08462			pending			
-de:b:zebra.v4.o3	Das Zebra schläft beim Spielzeug.	297a843e			pending			
+de:b:zebra.v3.o9	Das Zebra trinkt Wasser.	927507e2			pending			
 de:b:zebra.v4.o4	Das Zebra schläft im Auto.	72b9ec50			pending			
 de:b:zebra.v4.o5	Das Zebra schläft draußen.	31e345a9			pending			
 de:b:zebra.v4.o6	Das Zebra schläft zu Hause.	cfb80678			pending			
 de:b:zebra.v4.o7	Das Zebra schläft im Bett.	9806ea7a			pending			
-de:b:zebra.v4.o8	Das Zebra schläft auf dem Töpfchen.	f163fbdb			pending			
-de:b:zebra.v4.ball	Das Zebra schläft beim Ball.	32547e1f			pending			
-de:b:zebra.v4.brot	Das Zebra schläft beim Brot.	c66a57b1			pending			
-de:b:zebra.v4.keks	Das Zebra schläft beim Keks.	fe718042			pending			
-de:b:zebra.v4.banane	Das Zebra schläft bei der Banane.	53015909			pending			
-de:b:zebra.v4.melone	Das Zebra schläft bei der Melone.	22f2d2c8			pending			
-de:b:zebra.v5.o1	Das Zebra geht Milch.	b053dcb2			pending			
-de:b:zebra.v5.o2	Das Zebra geht einen Apfel.	7a850fc0			pending			
-de:b:zebra.v5.o3	Das Zebra geht ein Spielzeug.	b22d6c77			pending			
 de:b:zebra.v5.o4	Das Zebra geht ins Auto.	e4daa916			pending			
 de:b:zebra.v5.o5	Das Zebra geht raus.	8113d3b4			pending			
 de:b:zebra.v5.o6	Das Zebra geht heim.	6f981e24			pending			
 de:b:zebra.v5.o7	Das Zebra geht ins Bett.	9a549e28			pending			
 de:b:zebra.v5.o8	Das Zebra geht aufs Töpfchen.	63fc6afc			pending			
-de:b:zebra.v5.ball	Das Zebra geht zum Ball.	63b41780			pending			
-de:b:zebra.v5.brot	Das Zebra geht zum Brot.	51a84082			pending			
-de:b:zebra.v5.keks	Das Zebra geht zum Keks.	e3cabda9			pending			
-de:b:zebra.v5.banane	Das Zebra geht zur Banane.	31d1d3dd			pending			
-de:b:zebra.v5.melone	Das Zebra geht zur Melone.	c854e7d4			pending			
-de:b:zebra.v6.o1	Das Zebra spielt mit Milch.	81db0c23			pending			
-de:b:zebra.v6.o2	Das Zebra spielt mit einem Apfel.	39f27e26			pending			
 de:b:zebra.v6.o3	Das Zebra spielt mit einem Spielzeug.	2c061e44			pending			
 de:b:zebra.v6.o4	Das Zebra spielt mit dem Auto.	ec8d3117			pending			
-de:b:zebra.v6.o5	Das Zebra spielt draußen.	19cf56e8			pending			
-de:b:zebra.v6.o6	Das Zebra spielt zu Hause.	e6eb502f			pending			
-de:b:zebra.v6.o7	Das Zebra spielt im Bett.	7cf327a7			pending			
-de:b:zebra.v6.o8	Das Zebra spielt auf dem Töpfchen.	db720194			pending			
 de:b:zebra.v6.ball	Das Zebra spielt mit dem Ball.	ba4b3b45			pending			
-de:b:zebra.v6.brot	Das Zebra spielt mit Brot.	e3d3590d			pending			
-de:b:zebra.v6.keks	Das Zebra spielt mit einem Keks.	a961e304			pending			
-de:b:zebra.v6.banane	Das Zebra spielt mit einer Banane.	3534ef6c			pending			
-de:b:zebra.v6.melone	Das Zebra spielt mit einer Melone.	7b29e361			pending			
 de:b:pet-🐭.v1.o1	Die Maus will Milch.	6859a55c			pending			
 de:b:pet-🐭.v1.o2	Die Maus will einen Apfel.	7f094db2			pending			
 de:b:pet-🐭.v1.o3	Die Maus will ein Spielzeug.	da476755			pending			
 de:b:pet-🐭.v1.o4	Die Maus will das Auto.	0c238a4c			pending			
-de:b:pet-🐭.v1.o5	Die Maus will raus.	c4dec416			pending			
-de:b:pet-🐭.v1.o6	Die Maus will heim.	c0b58886			pending			
-de:b:pet-🐭.v1.o7	Die Maus will das Bett.	078ff556			pending			
-de:b:pet-🐭.v1.o8	Die Maus will das Töpfchen.	74c39949			pending			
 de:b:pet-🐭.v1.ball	Die Maus will den Ball.	5b06ce21			pending			
 de:b:pet-🐭.v1.brot	Die Maus will Brot.	b5f1ac7c			pending			
 de:b:pet-🐭.v1.keks	Die Maus will einen Keks.	9fc2aa58			pending			
 de:b:pet-🐭.v1.banane	Die Maus will eine Banane.	4c23f483			pending			
 de:b:pet-🐭.v1.melone	Die Maus will eine Melone.	d8e76b4e			pending			
-de:b:pet-🐭.v2.o1	Die Maus isst Milch.	e8b95eb1			pending			
+de:b:pet-🐭.v1.o9	Die Maus will Wasser.	9c9ca0d6			pending			
 de:b:pet-🐭.v2.o2	Die Maus isst einen Apfel.	9411e89f			pending			
-de:b:pet-🐭.v2.o3	Die Maus isst ein Spielzeug.	2ef71cac			pending			
-de:b:pet-🐭.v2.o4	Die Maus isst das Auto.	06b945b3			pending			
-de:b:pet-🐭.v2.o5	Die Maus isst raus.	f6b211b9			pending			
-de:b:pet-🐭.v2.o6	Die Maus isst heim.	b6818a3d			pending			
-de:b:pet-🐭.v2.o7	Die Maus isst das Bett.	22bca92d			pending			
-de:b:pet-🐭.v2.o8	Die Maus isst das Töpfchen.	0292390a			pending			
-de:b:pet-🐭.v2.ball	Die Maus isst den Ball.	492e76aa			pending			
 de:b:pet-🐭.v2.brot	Die Maus isst Brot.	b1f22907			pending			
 de:b:pet-🐭.v2.keks	Die Maus isst einen Keks.	4f34013b			pending			
 de:b:pet-🐭.v2.banane	Die Maus isst eine Banane.	987a3b06			pending			
 de:b:pet-🐭.v2.melone	Die Maus isst eine Melone.	18d2909f			pending			
 de:b:pet-🐭.v3.o1	Die Maus trinkt Milch.	6d438d4a			pending			
-de:b:pet-🐭.v3.o2	Die Maus trinkt einen Apfel.	b4053178			pending			
-de:b:pet-🐭.v3.o3	Die Maus trinkt ein Spielzeug.	6a8f0ebf			pending			
-de:b:pet-🐭.v3.o4	Die Maus trinkt das Auto.	7e56e932			pending			
-de:b:pet-🐭.v3.o5	Die Maus trinkt raus.	54f2cd5c			pending			
-de:b:pet-🐭.v3.o6	Die Maus trinkt heim.	1a654d5c			pending			
-de:b:pet-🐭.v3.o7	Die Maus trinkt das Bett.	04c67334			pending			
-de:b:pet-🐭.v3.o8	Die Maus trinkt das Töpfchen.	7b2898a3			pending			
-de:b:pet-🐭.v3.ball	Die Maus trinkt den Ball.	6f5467cf			pending			
-de:b:pet-🐭.v3.brot	Die Maus trinkt Brot.	b56870ae			pending			
-de:b:pet-🐭.v3.keks	Die Maus trinkt einen Keks.	1d2bf9c2			pending			
-de:b:pet-🐭.v3.banane	Die Maus trinkt eine Banane.	1e1714bd			pending			
-de:b:pet-🐭.v3.melone	Die Maus trinkt eine Melone.	399176b4			pending			
-de:b:pet-🐭.v4.o1	Die Maus schläft Milch.	18405bd2			pending			
-de:b:pet-🐭.v4.o2	Die Maus schläft einen Apfel.	d56e5960			pending			
-de:b:pet-🐭.v4.o3	Die Maus schläft beim Spielzeug.	71737a04			pending			
+de:b:pet-🐭.v3.o9	Die Maus trinkt Wasser.	87addd34			pending			
 de:b:pet-🐭.v4.o4	Die Maus schläft im Auto.	7be98fbe			pending			
 de:b:pet-🐭.v4.o5	Die Maus schläft draußen.	a9b29d9f			pending			
 de:b:pet-🐭.v4.o6	Die Maus schläft zu Hause.	f9a640be			pending			
 de:b:pet-🐭.v4.o7	Die Maus schläft im Bett.	b35b7ae0			pending			
-de:b:pet-🐭.v4.o8	Die Maus schläft auf dem Töpfchen.	0f22d315			pending			
-de:b:pet-🐭.v4.ball	Die Maus schläft beim Ball.	6bd3a6c1			pending			
-de:b:pet-🐭.v4.brot	Die Maus schläft beim Brot.	5913315b			pending			
-de:b:pet-🐭.v4.keks	Die Maus schläft beim Keks.	d71482c4			pending			
-de:b:pet-🐭.v4.banane	Die Maus schläft bei der Banane.	2e697df3			pending			
-de:b:pet-🐭.v4.melone	Die Maus schläft bei der Melone.	4de12abe			pending			
-de:b:pet-🐭.v5.o1	Die Maus geht Milch.	09cff274			pending			
-de:b:pet-🐭.v5.o2	Die Maus geht einen Apfel.	1e2989ca			pending			
-de:b:pet-🐭.v5.o3	Die Maus geht ein Spielzeug.	de80757d			pending			
 de:b:pet-🐭.v5.o4	Die Maus geht ins Auto.	3f3183dc			pending			
 de:b:pet-🐭.v5.o5	Die Maus geht raus.	e251a79e			pending			
 de:b:pet-🐭.v5.o6	Die Maus geht heim.	b5e5071e			pending			
 de:b:pet-🐭.v5.o7	Die Maus geht ins Bett.	fcf556e6			pending			
 de:b:pet-🐭.v5.o8	Die Maus geht aufs Töpfchen.	9eaeb572			pending			
-de:b:pet-🐭.v5.ball	Die Maus geht zum Ball.	535b997a			pending			
-de:b:pet-🐭.v5.brot	Die Maus geht zum Brot.	dfa727dc			pending			
-de:b:pet-🐭.v5.keks	Die Maus geht zum Keks.	54f928ab			pending			
-de:b:pet-🐭.v5.banane	Die Maus geht zur Banane.	e248c003			pending			
-de:b:pet-🐭.v5.melone	Die Maus geht zur Melone.	6f0c36ce			pending			
-de:b:pet-🐭.v6.o1	Die Maus spielt mit Milch.	0ab5ccdd			pending			
-de:b:pet-🐭.v6.o2	Die Maus spielt mit einem Apfel.	521890fc			pending			
 de:b:pet-🐭.v6.o3	Die Maus spielt mit einem Spielzeug.	10d54302			pending			
 de:b:pet-🐭.v6.o4	Die Maus spielt mit dem Auto.	c09e1725			pending			
-de:b:pet-🐭.v6.o5	Die Maus spielt draußen.	f9afdfda			pending			
-de:b:pet-🐭.v6.o6	Die Maus spielt zu Hause.	546b3f39			pending			
-de:b:pet-🐭.v6.o7	Die Maus spielt im Bett.	d6c57a11			pending			
-de:b:pet-🐭.v6.o8	Die Maus spielt auf dem Töpfchen.	e9240822			pending			
 de:b:pet-🐭.v6.ball	Die Maus spielt mit dem Ball.	a909064b			pending			
-de:b:pet-🐭.v6.brot	Die Maus spielt mit Brot.	4c8525ab			pending			
-de:b:pet-🐭.v6.keks	Die Maus spielt mit einem Keks.	212a63be			pending			
-de:b:pet-🐭.v6.banane	Die Maus spielt mit einer Banane.	ad064f52			pending			
-de:b:pet-🐭.v6.melone	Die Maus spielt mit einer Melone.	6840a353			pending			
 de:b:pet-🦔.v1.o1	Der Igel will Milch.	39f48c0c			pending			
 de:b:pet-🦔.v1.o2	Der Igel will einen Apfel.	9f251382			pending			
 de:b:pet-🦔.v1.o3	Der Igel will ein Spielzeug.	25b78145			pending			
 de:b:pet-🦔.v1.o4	Der Igel will das Auto.	e91ae07c			pending			
-de:b:pet-🦔.v1.o5	Der Igel will raus.	90d39fc6			pending			
-de:b:pet-🦔.v1.o6	Der Igel will heim.	68321696			pending			
-de:b:pet-🦔.v1.o7	Der Igel will das Bett.	402c3206			pending			
-de:b:pet-🦔.v1.o8	Der Igel will das Töpfchen.	b057c699			pending			
 de:b:pet-🦔.v1.ball	Der Igel will den Ball.	af0cc1f1			pending			
 de:b:pet-🦔.v1.brot	Der Igel will Brot.	ab9d978c			pending			
 de:b:pet-🦔.v1.keks	Der Igel will einen Keks.	cc027988			pending			
 de:b:pet-🦔.v1.banane	Der Igel will eine Banane.	375cb4b3			pending			
 de:b:pet-🦔.v1.melone	Der Igel will eine Melone.	796ab17e			pending			
-de:b:pet-🦔.v2.o1	Der Igel isst Milch.	05556921			pending			
+de:b:pet-🦔.v1.o9	Der Igel will Wasser.	4618bbe6			pending			
 de:b:pet-🦔.v2.o2	Der Igel isst einen Apfel.	81b97eef			pending			
-de:b:pet-🦔.v2.o3	Der Igel isst ein Spielzeug.	59e2f49c			pending			
-de:b:pet-🦔.v2.o4	Der Igel isst das Auto.	46f06a23			pending			
-de:b:pet-🦔.v2.o5	Der Igel isst raus.	bdbf06a9			pending			
-de:b:pet-🦔.v2.o6	Der Igel isst heim.	9b4bc6cd			pending			
-de:b:pet-🦔.v2.o7	Der Igel isst das Bett.	3c62ba1d			pending			
-de:b:pet-🦔.v2.o8	Der Igel isst das Töpfchen.	92a5fdda			pending			
-de:b:pet-🦔.v2.ball	Der Igel isst den Ball.	4596defa			pending			
 de:b:pet-🦔.v2.brot	Der Igel isst Brot.	c3ed0a97			pending			
 de:b:pet-🦔.v2.keks	Der Igel isst einen Keks.	875f5aab			pending			
 de:b:pet-🦔.v2.banane	Der Igel isst eine Banane.	91ed9476			pending			
 de:b:pet-🦔.v2.melone	Der Igel isst eine Melone.	6d6dd8cf			pending			
 de:b:pet-🦔.v3.o1	Der Igel trinkt Milch.	ef33347a			pending			
-de:b:pet-🦔.v3.o2	Der Igel trinkt einen Apfel.	bb159788			pending			
-de:b:pet-🦔.v3.o3	Der Igel trinkt ein Spielzeug.	003a4c6f			pending			
-de:b:pet-🦔.v3.o4	Der Igel trinkt das Auto.	9ca7f8a2			pending			
-de:b:pet-🦔.v3.o5	Der Igel trinkt raus.	8130338c			pending			
-de:b:pet-🦔.v3.o6	Der Igel trinkt heim.	be665a2c			pending			
-de:b:pet-🦔.v3.o7	Der Igel trinkt das Bett.	e339ba24			pending			
-de:b:pet-🦔.v3.o8	Der Igel trinkt das Töpfchen.	fbd96a33			pending			
-de:b:pet-🦔.v3.ball	Der Igel trinkt den Ball.	289e219f			pending			
-de:b:pet-🦔.v3.brot	Der Igel trinkt Brot.	7f86843e			pending			
-de:b:pet-🦔.v3.keks	Der Igel trinkt einen Keks.	c62d6c72			pending			
-de:b:pet-🦔.v3.banane	Der Igel trinkt eine Banane.	57df7ced			pending			
-de:b:pet-🦔.v3.melone	Der Igel trinkt eine Melone.	9df48424			pending			
-de:b:pet-🦔.v4.o1	Der Igel schläft Milch.	d9942a42			pending			
-de:b:pet-🦔.v4.o2	Der Igel schläft einen Apfel.	f41aaef0			pending			
-de:b:pet-🦔.v4.o3	Der Igel schläft beim Spielzeug.	f30e0994			pending			
+de:b:pet-🦔.v3.o9	Der Igel trinkt Wasser.	95f3db84			pending			
 de:b:pet-🦔.v4.o4	Der Igel schläft im Auto.	ed3137ae			pending			
 de:b:pet-🦔.v4.o5	Der Igel schläft draußen.	9efe0d2f			pending			
 de:b:pet-🦔.v4.o6	Der Igel schläft zu Hause.	8383d10e			pending			
 de:b:pet-🦔.v4.o7	Der Igel schläft im Bett.	24808690			pending			
-de:b:pet-🦔.v4.o8	Der Igel schläft auf dem Töpfchen.	9a716da5			pending			
-de:b:pet-🦔.v4.ball	Der Igel schläft beim Ball.	fbb73171			pending			
-de:b:pet-🦔.v4.brot	Der Igel schläft beim Brot.	a188f68b			pending			
-de:b:pet-🦔.v4.keks	Der Igel schläft beim Keks.	f8a98294			pending			
-de:b:pet-🦔.v4.banane	Der Igel schläft bei der Banane.	391efde3			pending			
-de:b:pet-🦔.v4.melone	Der Igel schläft bei der Melone.	485c142e			pending			
-de:b:pet-🦔.v5.o1	Der Igel geht Milch.	a9d8df64			pending			
-de:b:pet-🦔.v5.o2	Der Igel geht einen Apfel.	d4b2f79a			pending			
-de:b:pet-🦔.v5.o3	Der Igel geht ein Spielzeug.	7860416d			pending			
 de:b:pet-🦔.v5.o4	Der Igel geht ins Auto.	f2ac418c			pending			
 de:b:pet-🦔.v5.o5	Der Igel geht raus.	76087e8e			pending			
 de:b:pet-🦔.v5.o6	Der Igel geht heim.	d1d8376e			pending			
 de:b:pet-🦔.v5.o7	Der Igel geht ins Bett.	07656196			pending			
 de:b:pet-🦔.v5.o8	Der Igel geht aufs Töpfchen.	19a642c2			pending			
-de:b:pet-🦔.v5.ball	Der Igel geht zum Ball.	feb4c78a			pending			
-de:b:pet-🦔.v5.brot	Der Igel geht zum Brot.	c3ebf22c			pending			
-de:b:pet-🦔.v5.keks	Der Igel geht zum Keks.	c0a1a3db			pending			
-de:b:pet-🦔.v5.banane	Der Igel geht zur Banane.	c6fa18b3			pending			
-de:b:pet-🦔.v5.melone	Der Igel geht zur Melone.	0908157e			pending			
-de:b:pet-🦔.v6.o1	Der Igel spielt mit Milch.	f5e6432d			pending			
-de:b:pet-🦔.v6.o2	Der Igel spielt mit einem Apfel.	82809dec			pending			
 de:b:pet-🦔.v6.o3	Der Igel spielt mit einem Spielzeug.	734bb552			pending			
 de:b:pet-🦔.v6.o4	Der Igel spielt mit dem Auto.	a7837ad5			pending			
-de:b:pet-🦔.v6.o5	Der Igel spielt draußen.	a68f422a			pending			
-de:b:pet-🦔.v6.o6	Der Igel spielt zu Hause.	f61fb449			pending			
-de:b:pet-🦔.v6.o7	Der Igel spielt im Bett.	c7d3a601			pending			
-de:b:pet-🦔.v6.o8	Der Igel spielt auf dem Töpfchen.	ac4b8732			pending			
 de:b:pet-🦔.v6.ball	Der Igel spielt mit dem Ball.	d754c67b			pending			
-de:b:pet-🦔.v6.brot	Der Igel spielt mit Brot.	7a8da51b			pending			
-de:b:pet-🦔.v6.keks	Der Igel spielt mit einem Keks.	07544a0e			pending			
-de:b:pet-🦔.v6.banane	Der Igel spielt mit einer Banane.	a44d5d22			pending			
-de:b:pet-🦔.v6.melone	Der Igel spielt mit einer Melone.	b9f92623			pending			
 de:b:pet-🦁.v1.o1	Der Löwe will Milch.	58662eef			pending			
 de:b:pet-🦁.v1.o2	Der Löwe will einen Apfel.	f7fb59ad			pending			
 de:b:pet-🦁.v1.o3	Der Löwe will ein Spielzeug.	081228f6			pending			
 de:b:pet-🦁.v1.o4	Der Löwe will das Auto.	d5cefb39			pending			
-de:b:pet-🦁.v1.o5	Der Löwe will raus.	a55f3f0f			pending			
-de:b:pet-🦁.v1.o6	Der Löwe will heim.	2f37eadb			pending			
-de:b:pet-🦁.v1.o7	Der Löwe will das Bett.	edf24723			pending			
-de:b:pet-🦁.v1.o8	Der Löwe will das Töpfchen.	c443cbbc			pending			
 de:b:pet-🦁.v1.ball	Der Löwe will den Ball.	9990e670			pending			
 de:b:pet-🦁.v1.brot	Der Löwe will Brot.	c43dd851			pending			
 de:b:pet-🦁.v1.keks	Der Löwe will einen Keks.	535c0f45			pending			
 de:b:pet-🦁.v1.banane	Der Löwe will eine Banane.	283286b8			pending			
 de:b:pet-🦁.v1.melone	Der Löwe will eine Melone.	f5dd1fb5			pending			
-de:b:pet-🦁.v2.o1	Der Löwe isst Milch.	071b37fa			pending			
+de:b:pet-🦁.v1.o9	Der Löwe will Wasser.	9f615ecb			pending			
 de:b:pet-🦁.v2.o2	Der Löwe isst einen Apfel.	00a17f08			pending			
-de:b:pet-🦁.v2.o3	Der Löwe isst ein Spielzeug.	01ef3fef			pending			
-de:b:pet-🦁.v2.o4	Der Löwe isst das Auto.	fd137f22			pending			
-de:b:pet-🦁.v2.o5	Der Löwe isst raus.	3d98520c			pending			
-de:b:pet-🦁.v2.o6	Der Löwe isst heim.	7ace78ac			pending			
-de:b:pet-🦁.v2.o7	Der Löwe isst das Bett.	43a540a4			pending			
-de:b:pet-🦁.v2.o8	Der Löwe isst das Töpfchen.	5875f9b3			pending			
-de:b:pet-🦁.v2.ball	Der Löwe isst den Ball.	8909a81f			pending			
 de:b:pet-🦁.v2.brot	Der Löwe isst Brot.	3beea2be			pending			
 de:b:pet-🦁.v2.keks	Der Löwe isst einen Keks.	9d6096f2			pending			
 de:b:pet-🦁.v2.banane	Der Löwe isst eine Banane.	9d6b646d			pending			
 de:b:pet-🦁.v2.melone	Der Löwe isst eine Melone.	e3806ba4			pending			
 de:b:pet-🦁.v3.o1	Der Löwe trinkt Milch.	df42ed51			pending			
-de:b:pet-🦁.v3.o2	Der Löwe trinkt einen Apfel.	db5e313f			pending			
-de:b:pet-🦁.v3.o3	Der Löwe trinkt ein Spielzeug.	8679e2cc			pending			
-de:b:pet-🦁.v3.o4	Der Löwe trinkt das Auto.	c3e5c853			pending			
-de:b:pet-🦁.v3.o5	Der Löwe trinkt raus.	70f31a99			pending			
-de:b:pet-🦁.v3.o6	Der Löwe trinkt heim.	dd00da9d			pending			
-de:b:pet-🦁.v3.o7	Der Löwe trinkt das Bett.	2574f1cd			pending			
-de:b:pet-🦁.v3.o8	Der Löwe trinkt das Töpfchen.	00d39f2a			pending			
-de:b:pet-🦁.v3.ball	Der Löwe trinkt den Ball.	f9fbf74a			pending			
-de:b:pet-🦁.v3.brot	Der Löwe trinkt Brot.	a6638f27			pending			
-de:b:pet-🦁.v3.keks	Der Löwe trinkt einen Keks.	1f2e79db			pending			
-de:b:pet-🦁.v3.banane	Der Löwe trinkt eine Banane.	8d354fa6			pending			
-de:b:pet-🦁.v3.melone	Der Löwe trinkt eine Melone.	904eb2bf			pending			
-de:b:pet-🦁.v4.o1	Der Löwe schläft Milch.	64c49a07			pending			
-de:b:pet-🦁.v4.o2	Der Löwe schläft einen Apfel.	bc924785			pending			
-de:b:pet-🦁.v4.o3	Der Löwe schläft beim Spielzeug.	aa324a3b			pending			
+de:b:pet-🦁.v3.o9	Der Löwe trinkt Wasser.	6de65485			pending			
 de:b:pet-🦁.v4.o4	Der Löwe schläft im Auto.	a2f9821f			pending			
 de:b:pet-🦁.v4.o5	Der Löwe schläft draußen.	963a63d2			pending			
 de:b:pet-🦁.v4.o6	Der Löwe schläft zu Hause.	d40fc8a1			pending			
 de:b:pet-🦁.v4.o7	Der Löwe schläft im Bett.	26a9ec29			pending			
-de:b:pet-🦁.v4.o8	Der Löwe schläft auf dem Töpfchen.	5abcdafa			pending			
-de:b:pet-🦁.v4.ball	Der Löwe schläft beim Ball.	7c44f8cc			pending			
-de:b:pet-🦁.v4.brot	Der Löwe schläft beim Brot.	d1686ace			pending			
-de:b:pet-🦁.v4.keks	Der Löwe schläft beim Keks.	d2ff3d3d			pending			
-de:b:pet-🦁.v4.banane	Der Löwe schläft bei der Banane.	a5746220			pending			
-de:b:pet-🦁.v4.melone	Der Löwe schläft bei der Melone.	f502723d			pending			
-de:b:pet-🦁.v5.o1	Der Löwe geht Milch.	80b607bf			pending			
-de:b:pet-🦁.v5.o2	Der Löwe geht einen Apfel.	1b4d9b9d			pending			
-de:b:pet-🦁.v5.o3	Der Löwe geht ein Spielzeug.	b9ceec06			pending			
 de:b:pet-🦁.v5.o4	Der Löwe geht ins Auto.	31eca105			pending			
 de:b:pet-🦁.v5.o5	Der Löwe geht raus.	a1e14d1f			pending			
 de:b:pet-🦁.v5.o6	Der Löwe geht heim.	6f3a84cb			pending			
 de:b:pet-🦁.v5.o7	Der Löwe geht ins Bett.	2763c8bf			pending			
 de:b:pet-🦁.v5.o8	Der Löwe geht aufs Töpfchen.	b78f4b05			pending			
-de:b:pet-🦁.v5.ball	Der Löwe geht zum Ball.	20bec827			pending			
-de:b:pet-🦁.v5.brot	Der Löwe geht zum Brot.	b4fbb129			pending			
-de:b:pet-🦁.v5.keks	Der Löwe geht zum Keks.	0762c36a			pending			
-de:b:pet-🦁.v5.banane	Der Löwe geht zur Banane.	5c2237a6			pending			
-de:b:pet-🦁.v5.melone	Der Löwe geht zur Melone.	5f3b9abf			pending			
-de:b:pet-🦁.v6.o1	Der Löwe spielt mit Milch.	e08c477e			pending			
-de:b:pet-🦁.v6.o2	Der Löwe spielt mit einem Apfel.	c07f5c6b			pending			
 de:b:pet-🦁.v6.o3	Der Löwe spielt mit einem Spielzeug.	971e5339			pending			
 de:b:pet-🦁.v6.o4	Der Löwe spielt mit dem Auto.	4af932f8			pending			
-de:b:pet-🦁.v6.o5	Der Löwe spielt draußen.	7beef601			pending			
-de:b:pet-🦁.v6.o6	Der Löwe spielt zu Hause.	68d28f20			pending			
-de:b:pet-🦁.v6.o7	Der Löwe spielt im Bett.	1f210c92			pending			
-de:b:pet-🦁.v6.o8	Der Löwe spielt auf dem Töpfchen.	6d5c56d3			pending			
 de:b:pet-🦁.v6.ball	Der Löwe spielt mit dem Ball.	bded278e			pending			
-de:b:pet-🦁.v6.brot	Der Löwe spielt mit Brot.	02283bca			pending			
-de:b:pet-🦁.v6.keks	Der Löwe spielt mit einem Keks.	c12b883f			pending			
-de:b:pet-🦁.v6.banane	Der Löwe spielt mit einer Banane.	e6bcf4ff			pending			
-de:b:pet-🦁.v6.melone	Der Löwe spielt mit einer Melone.	63ef0102			pending			
 de:b:pet-🐧.v1.o1	Der Pinguin will Milch.	d9e5c455			pending			
 de:b:pet-🐧.v1.o2	Der Pinguin will einen Apfel.	522dec7b			pending			
 de:b:pet-🐧.v1.o3	Der Pinguin will ein Spielzeug.	c2e51168			pending			
 de:b:pet-🐧.v1.o4	Der Pinguin will das Auto.	813ddd6f			pending			
-de:b:pet-🐧.v1.o5	Der Pinguin will raus.	1993d46d			pending			
-de:b:pet-🐧.v1.o6	Der Pinguin will heim.	92f545c9			pending			
-de:b:pet-🐧.v1.o7	Der Pinguin will das Bett.	c745af79			pending			
-de:b:pet-🐧.v1.o8	Der Pinguin will das Töpfchen.	61447cf6			pending			
 de:b:pet-🐧.v1.ball	Der Pinguin will den Ball.	1f366afe			pending			
 de:b:pet-🐧.v1.brot	Der Pinguin will Brot.	722afd23			pending			
 de:b:pet-🐧.v1.keks	Der Pinguin will einen Keks.	adbeca2f			pending			
 de:b:pet-🐧.v1.banane	Der Pinguin will eine Banane.	2cef08ca			pending			
 de:b:pet-🐧.v1.melone	Der Pinguin will eine Melone.	8dca2bab			pending			
-de:b:pet-🐧.v2.o1	Der Pinguin isst Milch.	7695ad0c			pending			
+de:b:pet-🐧.v1.o9	Der Pinguin will Wasser.	a5523bb1			pending			
 de:b:pet-🐧.v2.o2	Der Pinguin isst einen Apfel.	03b52c82			pending			
-de:b:pet-🐧.v2.o3	Der Pinguin isst ein Spielzeug.	42bbc245			pending			
-de:b:pet-🐧.v2.o4	Der Pinguin isst das Auto.	fc628b7c			pending			
-de:b:pet-🐧.v2.o5	Der Pinguin isst raus.	2f269ac6			pending			
-de:b:pet-🐧.v2.o6	Der Pinguin isst heim.	06851196			pending			
-de:b:pet-🐧.v2.o7	Der Pinguin isst das Bett.	5373dd06			pending			
-de:b:pet-🐧.v2.o8	Der Pinguin isst das Töpfchen.	ff2f2199			pending			
-de:b:pet-🐧.v2.ball	Der Pinguin isst den Ball.	c2546cf1			pending			
 de:b:pet-🐧.v2.brot	Der Pinguin isst Brot.	49f0928c			pending			
 de:b:pet-🐧.v2.keks	Der Pinguin isst einen Keks.	31e59c88			pending			
 de:b:pet-🐧.v2.banane	Der Pinguin isst eine Banane.	9beccdb3			pending			
 de:b:pet-🐧.v2.melone	Der Pinguin isst eine Melone.	ddfaca7e			pending			
 de:b:pet-🐧.v3.o1	Der Pinguin trinkt Milch.	505d6d27			pending			
-de:b:pet-🐧.v3.o2	Der Pinguin trinkt einen Apfel.	f645ad25			pending			
-de:b:pet-🐧.v3.o3	Der Pinguin trinkt ein Spielzeug.	d038aa1e			pending			
-de:b:pet-🐧.v3.o4	Der Pinguin trinkt das Auto.	366a4031			pending			
-de:b:pet-🐧.v3.o5	Der Pinguin trinkt raus.	bd7c5817			pending			
-de:b:pet-🐧.v3.o6	Der Pinguin trinkt heim.	ec644913			pending			
-de:b:pet-🐧.v3.o7	Der Pinguin trinkt das Bett.	113550eb			pending			
-de:b:pet-🐧.v3.o8	Der Pinguin trinkt das Töpfchen.	efe92604			pending			
-de:b:pet-🐧.v3.ball	Der Pinguin trinkt den Ball.	b272edc8			pending			
-de:b:pet-🐧.v3.brot	Der Pinguin trinkt Brot.	0e3c4069			pending			
-de:b:pet-🐧.v3.keks	Der Pinguin trinkt einen Keks.	a179bc1d			pending			
-de:b:pet-🐧.v3.banane	Der Pinguin trinkt eine Banane.	918c9a50			pending			
-de:b:pet-🐧.v3.melone	Der Pinguin trinkt eine Melone.	2b30c0ad			pending			
-de:b:pet-🐧.v4.o1	Der Pinguin schläft Milch.	604f5069			pending			
-de:b:pet-🐧.v4.o2	Der Pinguin schläft einen Apfel.	d3481937			pending			
-de:b:pet-🐧.v4.o3	Der Pinguin schläft beim Spielzeug.	d6273fad			pending			
+de:b:pet-🐧.v3.o9	Der Pinguin trinkt Wasser.	c601b1b3			pending			
 de:b:pet-🐧.v4.o4	Der Pinguin schläft im Auto.	e0464d11			pending			
 de:b:pet-🐧.v4.o5	Der Pinguin schläft draußen.	ff28c0a4			pending			
 de:b:pet-🐧.v4.o6	Der Pinguin schläft zu Hause.	3fc38323			pending			
 de:b:pet-🐧.v4.o7	Der Pinguin schläft im Bett.	21c5724b			pending			
-de:b:pet-🐧.v4.o8	Der Pinguin schläft auf dem Töpfchen.	27c4eef0			pending			
-de:b:pet-🐧.v4.ball	Der Pinguin schläft beim Ball.	ebfcb9ea			pending			
-de:b:pet-🐧.v4.brot	Der Pinguin schläft beim Brot.	33ad840c			pending			
-de:b:pet-🐧.v4.keks	Der Pinguin schläft beim Keks.	b063ff3b			pending			
-de:b:pet-🐧.v4.banane	Der Pinguin schläft bei der Banane.	9326f27e			pending			
-de:b:pet-🐧.v4.melone	Der Pinguin schläft bei der Melone.	15b4ecd7			pending			
-de:b:pet-🐧.v5.o1	Der Pinguin geht Milch.	f2be871d			pending			
-de:b:pet-🐧.v5.o2	Der Pinguin geht einen Apfel.	ba3fe8e3			pending			
-de:b:pet-🐧.v5.o3	Der Pinguin geht ein Spielzeug.	b496c080			pending			
 de:b:pet-🐧.v5.o4	Der Pinguin geht ins Auto.	bf14c90f			pending			
 de:b:pet-🐧.v5.o5	Der Pinguin geht raus.	e6904ce5			pending			
 de:b:pet-🐧.v5.o6	Der Pinguin geht heim.	25ba2311			pending			
 de:b:pet-🐧.v5.o7	Der Pinguin geht ins Bett.	851d6499			pending			
 de:b:pet-🐧.v5.o8	Der Pinguin geht aufs Töpfchen.	4667afcf			pending			
-de:b:pet-🐧.v5.ball	Der Pinguin geht zum Ball.	e097f66d			pending			
-de:b:pet-🐧.v5.brot	Der Pinguin geht zum Brot.	2dd211f7			pending			
-de:b:pet-🐧.v5.keks	Der Pinguin geht zum Keks.	012a9e78			pending			
-de:b:pet-🐧.v5.banane	Der Pinguin geht zur Banane.	d1d432e8			pending			
-de:b:pet-🐧.v5.melone	Der Pinguin geht zur Melone.	7b4f1e25			pending			
-de:b:pet-🐧.v6.o1	Der Pinguin spielt mit Milch.	336a97d4			pending			
-de:b:pet-🐧.v6.o2	Der Pinguin spielt mit einem Apfel.	cf748b7d			pending			
 de:b:pet-🐧.v6.o3	Der Pinguin spielt mit einem Spielzeug.	4a643873			pending			
 de:b:pet-🐧.v6.o4	Der Pinguin spielt mit dem Auto.	0f234a22			pending			
-de:b:pet-🐧.v6.o5	Der Pinguin spielt draußen.	902c5c27			pending			
-de:b:pet-🐧.v6.o6	Der Pinguin spielt zu Hause.	bffe1356			pending			
-de:b:pet-🐧.v6.o7	Der Pinguin spielt im Bett.	c858f248			pending			
-de:b:pet-🐧.v6.o8	Der Pinguin spielt auf dem Töpfchen.	a47b289d			pending			
 de:b:pet-🐧.v6.ball	Der Pinguin spielt mit dem Ball.	4beef838			pending			
-de:b:pet-🐧.v6.brot	Der Pinguin spielt mit Brot.	2e1d6414			pending			
-de:b:pet-🐧.v6.keks	Der Pinguin spielt mit einem Keks.	ff2892f5			pending			
-de:b:pet-🐧.v6.banane	Der Pinguin spielt mit einer Banane.	9271b1d1			pending			
-de:b:pet-🐧.v6.melone	Der Pinguin spielt mit einer Melone.	4eb02810			pending			
 de:b:pet-🐯.v1.o1	Der Tiger will Milch.	31e91992			pending			
 de:b:pet-🐯.v1.o2	Der Tiger will einen Apfel.	3ea20da0			pending			
 de:b:pet-🐯.v1.o3	Der Tiger will ein Spielzeug.	158298d7			pending			
 de:b:pet-🐯.v1.o4	Der Tiger will das Auto.	3455a15a			pending			
-de:b:pet-🐯.v1.o5	Der Tiger will raus.	5e93a554			pending			
-de:b:pet-🐯.v1.o6	Der Tiger will heim.	cd18b944			pending			
-de:b:pet-🐯.v1.o7	Der Tiger will das Bett.	18613e6c			pending			
-de:b:pet-🐯.v1.o8	Der Tiger will das Töpfchen.	e179149b			pending			
 de:b:pet-🐯.v1.ball	Der Tiger will den Ball.	f1189237			pending			
 de:b:pet-🐯.v1.brot	Der Tiger will Brot.	783c7df6			pending			
 de:b:pet-🐯.v1.keks	Der Tiger will einen Keks.	3c11fdea			pending			
 de:b:pet-🐯.v1.banane	Der Tiger will eine Banane.	90cd5065			pending			
 de:b:pet-🐯.v1.melone	Der Tiger will eine Melone.	90b93a3c			pending			
-de:b:pet-🐯.v2.o1	Der Tiger isst Milch.	12edc73b			pending			
+de:b:pet-🐯.v1.o9	Der Tiger will Wasser.	a14fcb0c			pending			
 de:b:pet-🐯.v2.o2	Der Tiger isst einen Apfel.	85ec8111			pending			
-de:b:pet-🐯.v2.o3	Der Tiger isst ein Spielzeug.	751d035a			pending			
-de:b:pet-🐯.v2.o4	Der Tiger isst das Auto.	fc1bcd7d			pending			
-de:b:pet-🐯.v2.o5	Der Tiger isst raus.	729f96bb			pending			
-de:b:pet-🐯.v2.o6	Der Tiger isst heim.	a82dc93f			pending			
-de:b:pet-🐯.v2.o7	Der Tiger isst das Bett.	898ef767			pending			
-de:b:pet-🐯.v2.o8	Der Tiger isst das Töpfchen.	73446470			pending			
-de:b:pet-🐯.v2.ball	Der Tiger isst den Ball.	1987981c			pending			
 de:b:pet-🐯.v2.brot	Der Tiger isst Brot.	ac37c885			pending			
 de:b:pet-🐯.v2.keks	Der Tiger isst einen Keks.	59834ca1			pending			
 de:b:pet-🐯.v2.banane	Der Tiger isst eine Banane.	0ac864a4			pending			
 de:b:pet-🐯.v2.melone	Der Tiger isst eine Melone.	d6e944b9			pending			
 de:b:pet-🐯.v3.o1	Der Tiger trinkt Milch.	31a13028			pending			
-de:b:pet-🐯.v3.o2	Der Tiger trinkt einen Apfel.	c6f12516			pending			
-de:b:pet-🐯.v3.o3	Der Tiger trinkt ein Spielzeug.	5aa22a59			pending			
-de:b:pet-🐯.v3.o4	Der Tiger trinkt das Auto.	725c1dc0			pending			
-de:b:pet-🐯.v3.o5	Der Tiger trinkt raus.	adaaea12			pending			
-de:b:pet-🐯.v3.o6	Der Tiger trinkt heim.	f0dd402a			pending			
-de:b:pet-🐯.v3.o7	Der Tiger trinkt das Bett.	843b8b6a			pending			
-de:b:pet-🐯.v3.o8	Der Tiger trinkt das Töpfchen.	9c134ddd			pending			
-de:b:pet-🐯.v3.ball	Der Tiger trinkt den Ball.	5003d90d			pending			
-de:b:pet-🐯.v3.brot	Der Tiger trinkt Brot.	6a239d80			pending			
-de:b:pet-🐯.v3.keks	Der Tiger trinkt einen Keks.	e791d894			pending			
-de:b:pet-🐯.v3.banane	Der Tiger trinkt eine Banane.	9a214abf			pending			
-de:b:pet-🐯.v3.melone	Der Tiger trinkt eine Melone.	7285fcc2			pending			
-de:b:pet-🐯.v4.o1	Der Tiger schläft Milch.	f9081814			pending			
-de:b:pet-🐯.v4.o2	Der Tiger schläft einen Apfel.	66b4a56a			pending			
-de:b:pet-🐯.v4.o3	Der Tiger schläft beim Spielzeug.	150b0aa6			pending			
+de:b:pet-🐯.v3.o9	Der Tiger trinkt Wasser.	84432d9a			pending			
 de:b:pet-🐯.v4.o4	Der Tiger schläft im Auto.	69c0c2c8			pending			
 de:b:pet-🐯.v4.o5	Der Tiger schläft draußen.	02e4ab91			pending			
 de:b:pet-🐯.v4.o6	Der Tiger schläft zu Hause.	2262de70			pending			
 de:b:pet-🐯.v4.o7	Der Tiger schläft im Bett.	f418c7c2			pending			
-de:b:pet-🐯.v4.o8	Der Tiger schläft auf dem Töpfchen.	a4c14223			pending			
-de:b:pet-🐯.v4.ball	Der Tiger schläft beim Ball.	a1b6b347			pending			
-de:b:pet-🐯.v4.brot	Der Tiger schläft beim Brot.	1ca6e749			pending			
-de:b:pet-🐯.v4.keks	Der Tiger schläft beim Keks.	0ad44e0a			pending			
-de:b:pet-🐯.v4.banane	Der Tiger schläft bei der Banane.	64482f71			pending			
-de:b:pet-🐯.v4.melone	Der Tiger schläft bei der Melone.	47cd9f30			pending			
-de:b:pet-🐯.v5.o1	Der Tiger geht Milch.	441a92fa			pending			
-de:b:pet-🐯.v5.o2	Der Tiger geht einen Apfel.	ecce0208			pending			
-de:b:pet-🐯.v5.o3	Der Tiger geht ein Spielzeug.	1c9efaef			pending			
 de:b:pet-🐯.v5.o4	Der Tiger geht ins Auto.	d863a15e			pending			
 de:b:pet-🐯.v5.o5	Der Tiger geht raus.	74606b0c			pending			
 de:b:pet-🐯.v5.o6	Der Tiger geht heim.	b19691ac			pending			
 de:b:pet-🐯.v5.o7	Der Tiger geht ins Bett.	8fd4c300			pending			
 de:b:pet-🐯.v5.o8	Der Tiger geht aufs Töpfchen.	8cc01b04			pending			
-de:b:pet-🐯.v5.ball	Der Tiger geht zum Ball.	9fb46598			pending			
-de:b:pet-🐯.v5.brot	Der Tiger geht zum Brot.	572a354a			pending			
-de:b:pet-🐯.v5.keks	Der Tiger geht zum Keks.	c6d03461			pending			
-de:b:pet-🐯.v5.banane	Der Tiger geht zur Banane.	2e2a6f85			pending			
-de:b:pet-🐯.v5.melone	Der Tiger geht zur Melone.	06cf5fdc			pending			
-de:b:pet-🐯.v6.o1	Der Tiger spielt mit Milch.	a5e176db			pending			
-de:b:pet-🐯.v6.o2	Der Tiger spielt mit einem Apfel.	97cc2abe			pending			
 de:b:pet-🐯.v6.o3	Der Tiger spielt mit einem Spielzeug.	ec29a09c			pending			
 de:b:pet-🐯.v6.o4	Der Tiger spielt mit dem Auto.	0b6162ff			pending			
-de:b:pet-🐯.v6.o5	Der Tiger spielt draußen.	6805b640			pending			
-de:b:pet-🐯.v6.o6	Der Tiger spielt zu Hause.	84e239f7			pending			
-de:b:pet-🐯.v6.o7	Der Tiger spielt im Bett.	59144a5f			pending			
-de:b:pet-🐯.v6.o8	Der Tiger spielt auf dem Töpfchen.	29c19b6c			pending			
 de:b:pet-🐯.v6.ball	Der Tiger spielt mit dem Ball.	7a80781d			pending			
-de:b:pet-🐯.v6.brot	Der Tiger spielt mit Brot.	2faf1025			pending			
-de:b:pet-🐯.v6.keks	Der Tiger spielt mit einem Keks.	37102b5c			pending			
-de:b:pet-🐯.v6.banane	Der Tiger spielt mit einer Banane.	bc0e8b94			pending			
-de:b:pet-🐯.v6.melone	Der Tiger spielt mit einer Melone.	b7b7a169			pending			
 de:b:pet-🐱.v1.o1	Die Katze will Milch.	f283fb49			pending			
 de:b:pet-🐱.v1.o2	Die Katze will einen Apfel.	3b0a1397			pending			
 de:b:pet-🐱.v1.o3	Die Katze will ein Spielzeug.	af132554			pending			
 de:b:pet-🐱.v1.o4	Die Katze will das Auto.	9f593d8b			pending			
-de:b:pet-🐱.v1.o5	Die Katze will raus.	3c450861			pending			
-de:b:pet-🐱.v1.o6	Die Katze will heim.	165b8135			pending			
-de:b:pet-🐱.v1.o7	Die Katze will das Bett.	58a966f5			pending			
-de:b:pet-🐱.v1.o8	Die Katze will das Töpfchen.	27714f32			pending			
 de:b:pet-🐱.v1.ball	Die Katze will den Ball.	9b341962			pending			
 de:b:pet-🐱.v1.brot	Die Katze will Brot.	a742571f			pending			
 de:b:pet-🐱.v1.keks	Die Katze will einen Keks.	d4100c13			pending			
 de:b:pet-🐱.v1.banane	Die Katze will eine Banane.	9548fe9e			pending			
 de:b:pet-🐱.v1.melone	Die Katze will eine Melone.	aea87b77			pending			
-de:b:pet-🐱.v2.o1	Die Katze isst Milch.	d819b070			pending			
+de:b:pet-🐱.v1.o9	Die Katze will Wasser.	f9c6276d			pending			
 de:b:pet-🐱.v2.o2	Die Katze isst einen Apfel.	c58a60fe			pending			
-de:b:pet-🐱.v2.o3	Die Katze isst ein Spielzeug.	839391b1			pending			
-de:b:pet-🐱.v2.o4	Die Katze isst das Auto.	50233de8			pending			
-de:b:pet-🐱.v2.o5	Die Katze isst raus.	4e2c998a			pending			
-de:b:pet-🐱.v2.o6	Die Katze isst heim.	083762f2			pending			
-de:b:pet-🐱.v2.o7	Die Katze isst das Bett.	5a7a7962			pending			
-de:b:pet-🐱.v2.o8	Die Katze isst das Töpfchen.	35ccce15			pending			
-de:b:pet-🐱.v2.ball	Die Katze isst den Ball.	6eb5d1f5			pending			
 de:b:pet-🐱.v2.brot	Die Katze isst Brot.	b4f22508			pending			
 de:b:pet-🐱.v2.keks	Die Katze isst einen Keks.	411f369c			pending			
 de:b:pet-🐱.v2.banane	Die Katze isst eine Banane.	e71042c7			pending			
 de:b:pet-🐱.v2.melone	Die Katze isst eine Melone.	592959ea			pending			
 de:b:pet-🐱.v3.o1	Die Katze trinkt Milch.	8f4e4dbb			pending			
-de:b:pet-🐱.v3.o2	Die Katze trinkt einen Apfel.	4a14d391			pending			
-de:b:pet-🐱.v3.o3	Die Katze trinkt ein Spielzeug.	c5f7d9da			pending			
-de:b:pet-🐱.v3.o4	Die Katze trinkt das Auto.	c16eb4fd			pending			
-de:b:pet-🐱.v3.o5	Die Katze trinkt raus.	dacb063b			pending			
-de:b:pet-🐱.v3.o6	Die Katze trinkt heim.	105938bf			pending			
-de:b:pet-🐱.v3.o7	Die Katze trinkt das Bett.	4ee1dee7			pending			
-de:b:pet-🐱.v3.o8	Die Katze trinkt das Töpfchen.	201d64f0			pending			
-de:b:pet-🐱.v3.ball	Die Katze trinkt den Ball.	deda7f9c			pending			
-de:b:pet-🐱.v3.brot	Die Katze trinkt Brot.	14633805			pending			
-de:b:pet-🐱.v3.keks	Die Katze trinkt einen Keks.	99d74021			pending			
-de:b:pet-🐱.v3.banane	Die Katze trinkt eine Banane.	cef0b724			pending			
-de:b:pet-🐱.v3.melone	Die Katze trinkt eine Melone.	9b119739			pending			
-de:b:pet-🐱.v4.o1	Die Katze schläft Milch.	29147d0d			pending			
-de:b:pet-🐱.v4.o2	Die Katze schläft einen Apfel.	0bf90db3			pending			
-de:b:pet-🐱.v4.o3	Die Katze schläft beim Spielzeug.	2c5591a1			pending			
+de:b:pet-🐱.v3.o9	Die Katze trinkt Wasser.	9905caaf			pending			
 de:b:pet-🐱.v4.o4	Die Katze schläft im Auto.	4994e435			pending			
 de:b:pet-🐱.v4.o5	Die Katze schläft draußen.	17018130			pending			
 de:b:pet-🐱.v4.o6	Die Katze schläft zu Hause.	032f8927			pending			
 de:b:pet-🐱.v4.o7	Die Katze schläft im Bett.	ee4183ef			pending			
-de:b:pet-🐱.v4.o8	Die Katze schläft auf dem Töpfchen.	78891f1c			pending			
-de:b:pet-🐱.v4.ball	Die Katze schläft beim Ball.	2997e22e			pending			
-de:b:pet-🐱.v4.brot	Die Katze schläft beim Brot.	360fbcb0			pending			
-de:b:pet-🐱.v4.keks	Die Katze schläft beim Keks.	7bc94e07			pending			
-de:b:pet-🐱.v4.banane	Die Katze schläft bei der Banane.	45a75f4a			pending			
-de:b:pet-🐱.v4.melone	Die Katze schläft bei der Melone.	a682822b			pending			
-de:b:pet-🐱.v5.o1	Die Katze geht Milch.	97597f21			pending			
-de:b:pet-🐱.v5.o2	Die Katze geht einen Apfel.	c6ece4ef			pending			
-de:b:pet-🐱.v5.o3	Die Katze geht ein Spielzeug.	0693ca9c			pending			
 de:b:pet-🐱.v5.o4	Die Katze geht ins Auto.	5785c35b			pending			
 de:b:pet-🐱.v5.o5	Die Katze geht raus.	a41058a9			pending			
 de:b:pet-🐱.v5.o6	Die Katze geht heim.	819d18cd			pending			
 de:b:pet-🐱.v5.o7	Die Katze geht ins Bett.	4e7e84c5			pending			
 de:b:pet-🐱.v5.o8	Die Katze geht aufs Töpfchen.	3a83217b			pending			
-de:b:pet-🐱.v5.ball	Die Katze geht zum Ball.	bcdef869			pending			
-de:b:pet-🐱.v5.brot	Die Katze geht zum Brot.	a5141353			pending			
-de:b:pet-🐱.v5.keks	Die Katze geht zum Keks.	902a566c			pending			
-de:b:pet-🐱.v5.banane	Die Katze geht zur Banane.	7f636624			pending			
-de:b:pet-🐱.v5.melone	Die Katze geht zur Melone.	4b844639			pending			
-de:b:pet-🐱.v6.o1	Die Katze spielt mit Milch.	13724cf8			pending			
-de:b:pet-🐱.v6.o2	Die Katze spielt mit einem Apfel.	384a8739			pending			
 de:b:pet-🐱.v6.o3	Die Katze spielt mit einem Spielzeug.	46a1965f			pending			
 de:b:pet-🐱.v6.o4	Die Katze spielt mit dem Auto.	bf4e8cce			pending			
-de:b:pet-🐱.v6.o5	Die Katze spielt draußen.	8a2435f3			pending			
-de:b:pet-🐱.v6.o6	Die Katze spielt zu Hause.	aa99d73a			pending			
-de:b:pet-🐱.v6.o7	Die Katze spielt im Bett.	e918664c			pending			
-de:b:pet-🐱.v6.o8	Die Katze spielt auf dem Töpfchen.	ef48cf49			pending			
 de:b:pet-🐱.v6.ball	Die Katze spielt mit dem Ball.	bd52921c			pending			
-de:b:pet-🐱.v6.brot	Die Katze spielt mit Brot.	d0e5e030			pending			
-de:b:pet-🐱.v6.keks	Die Katze spielt mit einem Keks.	c694a329			pending			
-de:b:pet-🐱.v6.banane	Die Katze spielt mit einer Banane.	38fff55d			pending			
-de:b:pet-🐱.v6.melone	Die Katze spielt mit einer Melone.	cf830954			pending			
 de:b:pet-🐸.v1.o1	Der Frosch will Milch.	10db8808			pending			
 de:b:pet-🐸.v1.o2	Der Frosch will einen Apfel.	d4bf3076			pending			
 de:b:pet-🐸.v1.o3	Der Frosch will ein Spielzeug.	4d775139			pending			
 de:b:pet-🐸.v1.o4	Der Frosch will das Auto.	b295f4a0			pending			
-de:b:pet-🐸.v1.o5	Der Frosch will raus.	e36accb2			pending			
-de:b:pet-🐸.v1.o6	Der Frosch will heim.	5061caca			pending			
-de:b:pet-🐸.v1.o7	Der Frosch will das Bett.	447498ca			pending			
-de:b:pet-🐸.v1.o8	Der Frosch will das Töpfchen.	d56d29bd			pending			
 de:b:pet-🐸.v1.ball	Der Frosch will den Ball.	38664bed			pending			
 de:b:pet-🐸.v1.brot	Der Frosch will Brot.	fe4e5260			pending			
 de:b:pet-🐸.v1.keks	Der Frosch will einen Keks.	ccd83b74			pending			
 de:b:pet-🐸.v1.banane	Der Frosch will eine Banane.	2e6f569f			pending			
 de:b:pet-🐸.v1.melone	Der Frosch will eine Melone.	06d408a2			pending			
-de:b:pet-🐸.v2.o1	Der Frosch isst Milch.	f8f310bd			pending			
+de:b:pet-🐸.v1.o9	Der Frosch will Wasser.	a7a507fa			pending			
 de:b:pet-🐸.v2.o2	Der Frosch isst einen Apfel.	9016f103			pending			
-de:b:pet-🐸.v2.o3	Der Frosch isst ein Spielzeug.	10a2e920			pending			
-de:b:pet-🐸.v2.o4	Der Frosch isst das Auto.	e1bd5817			pending			
-de:b:pet-🐸.v2.o5	Der Frosch isst raus.	4a1eaf45			pending			
-de:b:pet-🐸.v2.o6	Der Frosch isst heim.	0bc3b7f1			pending			
-de:b:pet-🐸.v2.o7	Der Frosch isst das Bett.	d667f5b1			pending			
-de:b:pet-🐸.v2.o8	Der Frosch isst das Töpfchen.	4877a12e			pending			
-de:b:pet-🐸.v2.ball	Der Frosch isst den Ball.	ab191e66			pending			
 de:b:pet-🐸.v2.brot	Der Frosch isst Brot.	8e24be0b			pending			
 de:b:pet-🐸.v2.keks	Der Frosch isst einen Keks.	58f1d4d7			pending			
 de:b:pet-🐸.v2.banane	Der Frosch isst eine Banane.	0b899dd2			pending			
 de:b:pet-🐸.v2.melone	Der Frosch isst eine Melone.	c6c3f1d3			pending			
 de:b:pet-🐸.v3.o1	Der Frosch trinkt Milch.	77958ae6			pending			
-de:b:pet-🐸.v3.o2	Der Frosch trinkt einen Apfel.	0624d86c			pending			
-de:b:pet-🐸.v3.o3	Der Frosch trinkt ein Spielzeug.	60f9d0b3			pending			
-de:b:pet-🐸.v3.o4	Der Frosch trinkt das Auto.	4ec442d6			pending			
-de:b:pet-🐸.v3.o5	Der Frosch trinkt raus.	adb9f6f8			pending			
-de:b:pet-🐸.v3.o6	Der Frosch trinkt heim.	579d57c0			pending			
-de:b:pet-🐸.v3.o7	Der Frosch trinkt das Bett.	e87719e8			pending			
-de:b:pet-🐸.v3.o8	Der Frosch trinkt das Töpfchen.	883e2d77			pending			
-de:b:pet-🐸.v3.ball	Der Frosch trinkt den Ball.	1adc4fbb			pending			
-de:b:pet-🐸.v3.brot	Der Frosch trinkt Brot.	4b3a20f2			pending			
-de:b:pet-🐸.v3.keks	Der Frosch trinkt einen Keks.	814db58e			pending			
-de:b:pet-🐸.v3.banane	Der Frosch trinkt eine Banane.	acaaef19			pending			
-de:b:pet-🐸.v3.melone	Der Frosch trinkt eine Melone.	d130f1d8			pending			
-de:b:pet-🐸.v4.o1	Der Frosch schläft Milch.	836c7a7e			pending			
-de:b:pet-🐸.v4.o2	Der Frosch schläft einen Apfel.	f2bc56e4			pending			
-de:b:pet-🐸.v4.o3	Der Frosch schläft beim Spielzeug.	9f6fb1b0			pending			
+de:b:pet-🐸.v3.o9	Der Frosch trinkt Wasser.	10da0958			pending			
 de:b:pet-🐸.v4.o4	Der Frosch schläft im Auto.	f823477a			pending			
 de:b:pet-🐸.v4.o5	Der Frosch schläft draußen.	55541eb3			pending			
 de:b:pet-🐸.v4.o6	Der Frosch schläft zu Hause.	e98f947a			pending			
 de:b:pet-🐸.v4.o7	Der Frosch schläft im Bett.	c2e22f8c			pending			
-de:b:pet-🐸.v4.o8	Der Frosch schläft auf dem Töpfchen.	f2e20609			pending			
-de:b:pet-🐸.v4.ball	Der Frosch schläft beim Ball.	ef61e73d			pending			
-de:b:pet-🐸.v4.brot	Der Frosch schläft beim Brot.	34e96987			pending			
-de:b:pet-🐸.v4.keks	Der Frosch schläft beim Keks.	0814e068			pending			
-de:b:pet-🐸.v4.banane	Der Frosch schläft bei der Banane.	0f81f6b7			pending			
-de:b:pet-🐸.v4.melone	Der Frosch schläft bei der Melone.	c056e99a			pending			
-de:b:pet-🐸.v5.o1	Der Frosch geht Milch.	bf55dcb0			pending			
-de:b:pet-🐸.v5.o2	Der Frosch geht einen Apfel.	f3e0ecbe			pending			
-de:b:pet-🐸.v5.o3	Der Frosch geht ein Spielzeug.	7b1f7d71			pending			
 de:b:pet-🐸.v5.o4	Der Frosch geht ins Auto.	9e5a19e0			pending			
 de:b:pet-🐸.v5.o5	Der Frosch geht raus.	e6960fca			pending			
 de:b:pet-🐸.v5.o6	Der Frosch geht heim.	bc67f732			pending			
 de:b:pet-🐸.v5.o7	Der Frosch geht ins Bett.	5c77cf0a			pending			
 de:b:pet-🐸.v5.o8	Der Frosch geht aufs Töpfchen.	cc441846			pending			
-de:b:pet-🐸.v5.ball	Der Frosch geht zum Ball.	c814977e			pending			
-de:b:pet-🐸.v5.brot	Der Frosch geht zum Brot.	8f991580			pending			
-de:b:pet-🐸.v5.keks	Der Frosch geht zum Keks.	3c323df7			pending			
-de:b:pet-🐸.v5.banane	Der Frosch geht zur Banane.	bb7e60e7			pending			
-de:b:pet-🐸.v5.melone	Der Frosch geht zur Melone.	5c8b0d0a			pending			
-de:b:pet-🐸.v6.o1	Der Frosch spielt mit Milch.	e7db3e89			pending			
-de:b:pet-🐸.v6.o2	Der Frosch spielt mit einem Apfel.	e4496f60			pending			
 de:b:pet-🐸.v6.o3	Der Frosch spielt mit einem Spielzeug.	ffe934c6			pending			
 de:b:pet-🐸.v6.o4	Der Frosch spielt mit dem Auto.	947da7b9			pending			
-de:b:pet-🐸.v6.o5	Der Frosch spielt draußen.	117f77de			pending			
-de:b:pet-🐸.v6.o6	Der Frosch spielt zu Hause.	7326c925			pending			
-de:b:pet-🐸.v6.o7	Der Frosch spielt im Bett.	50ee1c7d			pending			
-de:b:pet-🐸.v6.o8	Der Frosch spielt auf dem Töpfchen.	d8b4a476			pending			
 de:b:pet-🐸.v6.ball	Der Frosch spielt mit dem Ball.	d2e2f787			pending			
-de:b:pet-🐸.v6.brot	Der Frosch spielt mit Brot.	61800b5f			pending			
-de:b:pet-🐸.v6.keks	Der Frosch spielt mit einem Keks.	cf6063aa			pending			
-de:b:pet-🐸.v6.banane	Der Frosch spielt mit einer Banane.	e8a33de6			pending			
-de:b:pet-🐸.v6.melone	Der Frosch spielt mit einer Melone.	d26febff			pending			
 de:b:pet-🦒.v1.o1	Die Giraffe will Milch.	e6963a00			pending			
 de:b:pet-🦒.v1.o2	Die Giraffe will einen Apfel.	8c1c192e			pending			
 de:b:pet-🦒.v1.o3	Die Giraffe will ein Spielzeug.	8bcd3c01			pending			
 de:b:pet-🦒.v1.o4	Die Giraffe will das Auto.	a510e3f8			pending			
-de:b:pet-🦒.v1.o5	Die Giraffe will raus.	6088281a			pending			
-de:b:pet-🦒.v1.o6	Die Giraffe will heim.	3df7cea2			pending			
-de:b:pet-🦒.v1.o7	Die Giraffe will das Bett.	834baab2			pending			
-de:b:pet-🦒.v1.o8	Die Giraffe will das Töpfchen.	374861c5			pending			
 de:b:pet-🦒.v1.ball	Die Giraffe will den Ball.	9699f1e5			pending			
 de:b:pet-🦒.v1.brot	Die Giraffe will Brot.	42089a78			pending			
 de:b:pet-🦒.v1.keks	Die Giraffe will einen Keks.	756bcf6c			pending			
 de:b:pet-🦒.v1.banane	Die Giraffe will eine Banane.	29ed7297			pending			
 de:b:pet-🦒.v1.melone	Die Giraffe will eine Melone.	7688b9fa			pending			
-de:b:pet-🦒.v2.o1	Die Giraffe isst Milch.	85b90bb5			pending			
+de:b:pet-🦒.v1.o9	Die Giraffe will Wasser.	c473b3a2			pending			
 de:b:pet-🦒.v2.o2	Die Giraffe isst einen Apfel.	d591f5db			pending			
-de:b:pet-🦒.v2.o3	Die Giraffe isst ein Spielzeug.	888721c8			pending			
-de:b:pet-🦒.v2.o4	Die Giraffe isst das Auto.	cd1f894f			pending			
-de:b:pet-🦒.v2.o5	Die Giraffe isst raus.	418c4c8d			pending			
-de:b:pet-🦒.v2.o6	Die Giraffe isst heim.	baedbde9			pending			
-de:b:pet-🦒.v2.o7	Die Giraffe isst das Bett.	bcecccd9			pending			
-de:b:pet-🦒.v2.o8	Die Giraffe isst das Töpfchen.	b416abd6			pending			
-de:b:pet-🦒.v2.ball	Die Giraffe isst den Ball.	be9fb45e			pending			
 de:b:pet-🦒.v2.brot	Die Giraffe isst Brot.	788d7e03			pending			
 de:b:pet-🦒.v2.keks	Die Giraffe isst einen Keks.	108c3f0f			pending			
 de:b:pet-🦒.v2.banane	Die Giraffe isst eine Banane.	ad13e0aa			pending			
 de:b:pet-🦒.v2.melone	Die Giraffe isst eine Melone.	8bb7f98b			pending			
 de:b:pet-🦒.v3.o1	Die Giraffe trinkt Milch.	9368001e			pending			
-de:b:pet-🦒.v3.o2	Die Giraffe trinkt einen Apfel.	f5733284			pending			
-de:b:pet-🦒.v3.o3	Die Giraffe trinkt ein Spielzeug.	120461db			pending			
-de:b:pet-🦒.v3.o4	Die Giraffe trinkt das Auto.	d4ddf26e			pending			
-de:b:pet-🦒.v3.o5	Die Giraffe trinkt raus.	9b60b6a0			pending			
-de:b:pet-🦒.v3.o6	Die Giraffe trinkt heim.	99cd9e58			pending			
-de:b:pet-🦒.v3.o7	Die Giraffe trinkt das Bett.	0c2d4150			pending			
-de:b:pet-🦒.v3.o8	Die Giraffe trinkt das Töpfchen.	7b31be1f			pending			
-de:b:pet-🦒.v3.ball	Die Giraffe trinkt den Ball.	a1ee1db3			pending			
-de:b:pet-🦒.v3.brot	Die Giraffe trinkt Brot.	c94051ea			pending			
-de:b:pet-🦒.v3.keks	Die Giraffe trinkt einen Keks.	8d999fa6			pending			
-de:b:pet-🦒.v3.banane	Die Giraffe trinkt eine Banane.	2e49f1d1			pending			
-de:b:pet-🦒.v3.melone	Die Giraffe trinkt eine Melone.	ea886810			pending			
-de:b:pet-🦒.v4.o1	Die Giraffe schläft Milch.	5d9f74b6			pending			
-de:b:pet-🦒.v4.o2	Die Giraffe schläft einen Apfel.	fd950b1c			pending			
-de:b:pet-🦒.v4.o3	Die Giraffe schläft beim Spielzeug.	f6b062e8			pending			
+de:b:pet-🦒.v3.o9	Die Giraffe trinkt Wasser.	7abb7ca0			pending			
 de:b:pet-🦒.v4.o4	Die Giraffe schläft im Auto.	129d7942			pending			
 de:b:pet-🦒.v4.o5	Die Giraffe schläft draußen.	1c5afb4b			pending			
 de:b:pet-🦒.v4.o6	Die Giraffe schläft zu Hause.	b8822ea2			pending			
 de:b:pet-🦒.v4.o7	Die Giraffe schläft im Bett.	3fe285c4			pending			
-de:b:pet-🦒.v4.o8	Die Giraffe schläft auf dem Töpfchen.	19c56761			pending			
-de:b:pet-🦒.v4.ball	Die Giraffe schläft beim Ball.	a1f72255			pending			
-de:b:pet-🦒.v4.brot	Die Giraffe schläft beim Brot.	aa537f0f			pending			
-de:b:pet-🦒.v4.keks	Die Giraffe schläft beim Keks.	73444dc0			pending			
-de:b:pet-🦒.v4.banane	Die Giraffe schläft bei der Banane.	050387ef			pending			
-de:b:pet-🦒.v4.melone	Die Giraffe schläft bei der Melone.	7a68ec72			pending			
-de:b:pet-🦒.v5.o1	Die Giraffe geht Milch.	7b9ece48			pending			
-de:b:pet-🦒.v5.o2	Die Giraffe geht einen Apfel.	1c3d7636			pending			
-de:b:pet-🦒.v5.o3	Die Giraffe geht ein Spielzeug.	e5125ef9			pending			
 de:b:pet-🦒.v5.o4	Die Giraffe geht ins Auto.	fa4b4df8			pending			
 de:b:pet-🦒.v5.o5	Die Giraffe geht raus.	d98900f2			pending			
 de:b:pet-🦒.v5.o6	Die Giraffe geht heim.	1cbb570a			pending			
 de:b:pet-🦒.v5.o7	Die Giraffe geht ins Bett.	d88614b2			pending			
 de:b:pet-🦒.v5.o8	Die Giraffe geht aufs Töpfchen.	f7a5a37e			pending			
-de:b:pet-🦒.v5.ball	Die Giraffe geht zum Ball.	a0c58a26			pending			
-de:b:pet-🦒.v5.brot	Die Giraffe geht zum Brot.	cadaa5f8			pending			
-de:b:pet-🦒.v5.keks	Die Giraffe geht zum Keks.	e1fd2c9f			pending			
-de:b:pet-🦒.v5.banane	Die Giraffe geht zur Banane.	2a5e5e5f			pending			
-de:b:pet-🦒.v5.melone	Die Giraffe geht zur Melone.	ef969962			pending			
-de:b:pet-🦒.v6.o1	Die Giraffe spielt mit Milch.	6a8211b1			pending			
-de:b:pet-🦒.v6.o2	Die Giraffe spielt mit einem Apfel.	d5c4fda8			pending			
 de:b:pet-🦒.v6.o3	Die Giraffe spielt mit einem Spielzeug.	d8f99cce			pending			
 de:b:pet-🦒.v6.o4	Die Giraffe spielt mit dem Auto.	3fc370f1			pending			
-de:b:pet-🦒.v6.o5	Die Giraffe spielt draußen.	af783cc6			pending			
-de:b:pet-🦒.v6.o6	Die Giraffe spielt zu Hause.	169aaefd			pending			
-de:b:pet-🦒.v6.o7	Die Giraffe spielt im Bett.	5ced0605			pending			
-de:b:pet-🦒.v6.o8	Die Giraffe spielt auf dem Töpfchen.	5a8f3b5e			pending			
 de:b:pet-🦒.v6.ball	Die Giraffe spielt mit dem Ball.	5ab4580f			pending			
-de:b:pet-🦒.v6.brot	Die Giraffe spielt mit Brot.	aa028a07			pending			
-de:b:pet-🦒.v6.keks	Die Giraffe spielt mit einem Keks.	e1018b12			pending			
-de:b:pet-🦒.v6.banane	Die Giraffe spielt mit einer Banane.	824b499e			pending			
-de:b:pet-🦒.v6.melone	Die Giraffe spielt mit einer Melone.	9baac677			pending			
 de:b:pet-🐉.v1.o1	Der Drache will Milch.	8301e41c			pending			
 de:b:pet-🐉.v1.o2	Der Drache will einen Apfel.	6205d4f2			pending			
 de:b:pet-🐉.v1.o3	Der Drache will ein Spielzeug.	fb0a9a95			pending			
 de:b:pet-🐉.v1.o4	Der Drache will das Auto.	09c4408c			pending			
-de:b:pet-🐉.v1.o5	Der Drache will raus.	1666f8d6			pending			
-de:b:pet-🐉.v1.o6	Der Drache will heim.	0fc35446			pending			
-de:b:pet-🐉.v1.o7	Der Drache will das Bett.	1e7d6096			pending			
-de:b:pet-🐉.v1.o8	Der Drache will das Töpfchen.	8907ab89			pending			
 de:b:pet-🐉.v1.ball	Der Drache will den Ball.	71f43961			pending			
 de:b:pet-🐉.v1.brot	Der Drache will Brot.	c1ee1b3c			pending			
 de:b:pet-🐉.v1.keks	Der Drache will einen Keks.	31cf3998			pending			
 de:b:pet-🐉.v1.banane	Der Drache will eine Banane.	e1609fc3			pending			
 de:b:pet-🐉.v1.melone	Der Drache will eine Melone.	89eb348e			pending			
-de:b:pet-🐉.v2.o1	Der Drache isst Milch.	de50e471			pending			
+de:b:pet-🐉.v1.o9	Der Drache will Wasser.	d0032a96			pending			
 de:b:pet-🐉.v2.o2	Der Drache isst einen Apfel.	073317df			pending			
-de:b:pet-🐉.v2.o3	Der Drache isst ein Spielzeug.	6db281ec			pending			
-de:b:pet-🐉.v2.o4	Der Drache isst das Auto.	0064d7f3			pending			
-de:b:pet-🐉.v2.o5	Der Drache isst raus.	a9f64379			pending			
-de:b:pet-🐉.v2.o6	Der Drache isst heim.	938a63fd			pending			
-de:b:pet-🐉.v2.o7	Der Drache isst das Bett.	1c683b6d			pending			
-de:b:pet-🐉.v2.o8	Der Drache isst das Töpfchen.	11da274a			pending			
-de:b:pet-🐉.v2.ball	Der Drache isst den Ball.	f0ef40ea			pending			
 de:b:pet-🐉.v2.brot	Der Drache isst Brot.	7e830fc7			pending			
 de:b:pet-🐉.v2.keks	Der Drache isst einen Keks.	5fd9667b			pending			
 de:b:pet-🐉.v2.banane	Der Drache isst eine Banane.	38e44046			pending			
 de:b:pet-🐉.v2.melone	Der Drache isst eine Melone.	767113df			pending			
 de:b:pet-🐉.v3.o1	Der Drache trinkt Milch.	b1e7470a			pending			
-de:b:pet-🐉.v3.o2	Der Drache trinkt einen Apfel.	d42b86b8			pending			
-de:b:pet-🐉.v3.o3	Der Drache trinkt ein Spielzeug.	05d8aaff			pending			
-de:b:pet-🐉.v3.o4	Der Drache trinkt das Auto.	43994172			pending			
-de:b:pet-🐉.v3.o5	Der Drache trinkt raus.	b91dc61c			pending			
-de:b:pet-🐉.v3.o6	Der Drache trinkt heim.	97dcfb1c			pending			
-de:b:pet-🐉.v3.o7	Der Drache trinkt das Bett.	b3367f74			pending			
-de:b:pet-🐉.v3.o8	Der Drache trinkt das Töpfchen.	aedaf2e3			pending			
-de:b:pet-🐉.v3.ball	Der Drache trinkt den Ball.	c5ed100f			pending			
-de:b:pet-🐉.v3.brot	Der Drache trinkt Brot.	1993696e			pending			
-de:b:pet-🐉.v3.keks	Der Drache trinkt einen Keks.	9fca7602			pending			
-de:b:pet-🐉.v3.banane	Der Drache trinkt eine Banane.	6bcc1afd			pending			
-de:b:pet-🐉.v3.melone	Der Drache trinkt eine Melone.	04c997f4			pending			
-de:b:pet-🐉.v4.o1	Der Drache schläft Milch.	e2552992			pending			
-de:b:pet-🐉.v4.o2	Der Drache schläft einen Apfel.	6b2d9da0			pending			
-de:b:pet-🐉.v4.o3	Der Drache schläft beim Spielzeug.	640f2f44			pending			
+de:b:pet-🐉.v3.o9	Der Drache trinkt Wasser.	6ff52ff4			pending			
 de:b:pet-🐉.v4.o4	Der Drache schläft im Auto.	03d824fe			pending			
 de:b:pet-🐉.v4.o5	Der Drache schläft draußen.	03e4f25f			pending			
 de:b:pet-🐉.v4.o6	Der Drache schläft zu Hause.	a49f89fe			pending			
 de:b:pet-🐉.v4.o7	Der Drache schläft im Bett.	5496c520			pending			
-de:b:pet-🐉.v4.o8	Der Drache schläft auf dem Töpfchen.	890185d5			pending			
-de:b:pet-🐉.v4.ball	Der Drache schläft beim Ball.	24cd7301			pending			
-de:b:pet-🐉.v4.brot	Der Drache schläft beim Brot.	120cfd9b			pending			
-de:b:pet-🐉.v4.keks	Der Drache schläft beim Keks.	d8147e04			pending			
-de:b:pet-🐉.v4.banane	Der Drache schläft bei der Banane.	cc5f2cb3			pending			
-de:b:pet-🐉.v4.melone	Der Drache schläft bei der Melone.	0e6d297e			pending			
-de:b:pet-🐉.v5.o1	Der Drache geht Milch.	c041cb34			pending			
-de:b:pet-🐉.v5.o2	Der Drache geht einen Apfel.	26343b0a			pending			
-de:b:pet-🐉.v5.o3	Der Drache geht ein Spielzeug.	fca016bd			pending			
 de:b:pet-🐉.v5.o4	Der Drache geht ins Auto.	c6577b1c			pending			
 de:b:pet-🐉.v5.o5	Der Drache geht raus.	315f735e			pending			
 de:b:pet-🐉.v5.o6	Der Drache geht heim.	eba61dde			pending			
 de:b:pet-🐉.v5.o7	Der Drache geht ins Bett.	addff626			pending			
 de:b:pet-🐉.v5.o8	Der Drache geht aufs Töpfchen.	f44094b2			pending			
-de:b:pet-🐉.v5.ball	Der Drache geht zum Ball.	9f6914ba			pending			
-de:b:pet-🐉.v5.brot	Der Drache geht zum Brot.	2e2f0c1c			pending			
-de:b:pet-🐉.v5.keks	Der Drache geht zum Keks.	8a3457eb			pending			
-de:b:pet-🐉.v5.banane	Der Drache geht zur Banane.	95684f43			pending			
-de:b:pet-🐉.v5.melone	Der Drache geht zur Melone.	3df2e40e			pending			
-de:b:pet-🐉.v6.o1	Der Drache spielt mit Milch.	a82ed01d			pending			
-de:b:pet-🐉.v6.o2	Der Drache spielt mit einem Apfel.	b23208bc			pending			
 de:b:pet-🐉.v6.o3	Der Drache spielt mit einem Spielzeug.	62d40cc2			pending			
 de:b:pet-🐉.v6.o4	Der Drache spielt mit dem Auto.	814d3ee5			pending			
-de:b:pet-🐉.v6.o5	Der Drache spielt draußen.	eced6d9a			pending			
-de:b:pet-🐉.v6.o6	Der Drache spielt zu Hause.	fdfe0579			pending			
-de:b:pet-🐉.v6.o7	Der Drache spielt im Bett.	e7a83851			pending			
-de:b:pet-🐉.v6.o8	Der Drache spielt auf dem Töpfchen.	0388cfe2			pending			
 de:b:pet-🐉.v6.ball	Der Drache spielt mit dem Ball.	acc98b0b			pending			
-de:b:pet-🐉.v6.brot	Der Drache spielt mit Brot.	b35fcdeb			pending			
-de:b:pet-🐉.v6.keks	Der Drache spielt mit einem Keks.	5ddc0e7e			pending			
-de:b:pet-🐉.v6.banane	Der Drache spielt mit einer Banane.	cdc85112			pending			
-de:b:pet-🐉.v6.melone	Der Drache spielt mit einer Melone.	8b7d0e13			pending			
 de:p:🐭.v3.o1	Die Maus trinkt Milch.	6d438d4a			pending			
 de:p:🐭.v2.o2	Die Maus isst einen Apfel.	9411e89f			pending			
+de:p:🐭.v6.o3	Die Maus spielt mit einem Spielzeug.	10d54302			pending			
 de:p:🐭.v6.o4	Die Maus spielt mit dem Auto.	c09e1725			pending			
 de:p:🐭.v6.ball	Die Maus spielt mit dem Ball.	a909064b			pending			
 de:p:🐭.v2.brot	Die Maus isst Brot.	b1f22907			pending			
 de:p:🐭.v2.keks	Die Maus isst einen Keks.	4f34013b			pending			
 de:p:🐭.v2.banane	Die Maus isst eine Banane.	987a3b06			pending			
 de:p:🐭.v2.melone	Die Maus isst eine Melone.	18d2909f			pending			
+de:p:🐭.v3.o9	Die Maus trinkt Wasser.	87addd34			pending			
 de:p:🐭.v2.-	Die Maus isst.	3f2fb9ee			pending			
 de:p:🐭.v3.-	Die Maus trinkt.	e7d46769			pending			
 de:p:🐭.v6.-	Die Maus spielt.	ac8f46b0			pending			
 de:p:🦔.v3.o1	Der Igel trinkt Milch.	ef33347a			pending			
 de:p:🦔.v2.o2	Der Igel isst einen Apfel.	81b97eef			pending			
+de:p:🦔.v6.o3	Der Igel spielt mit einem Spielzeug.	734bb552			pending			
 de:p:🦔.v6.o4	Der Igel spielt mit dem Auto.	a7837ad5			pending			
 de:p:🦔.v6.ball	Der Igel spielt mit dem Ball.	d754c67b			pending			
 de:p:🦔.v2.brot	Der Igel isst Brot.	c3ed0a97			pending			
 de:p:🦔.v2.keks	Der Igel isst einen Keks.	875f5aab			pending			
 de:p:🦔.v2.banane	Der Igel isst eine Banane.	91ed9476			pending			
 de:p:🦔.v2.melone	Der Igel isst eine Melone.	6d6dd8cf			pending			
+de:p:🦔.v3.o9	Der Igel trinkt Wasser.	95f3db84			pending			
 de:p:🦔.v2.-	Der Igel isst.	323353de			pending			
 de:p:🦔.v3.-	Der Igel trinkt.	5eec7359			pending			
 de:p:🦔.v6.-	Der Igel spielt.	b752dae0			pending			
 de:p:🦁.v3.o1	Der Löwe trinkt Milch.	df42ed51			pending			
 de:p:🦁.v2.o2	Der Löwe isst einen Apfel.	00a17f08			pending			
+de:p:🦁.v6.o3	Der Löwe spielt mit einem Spielzeug.	971e5339			pending			
 de:p:🦁.v6.o4	Der Löwe spielt mit dem Auto.	4af932f8			pending			
 de:p:🦁.v6.ball	Der Löwe spielt mit dem Ball.	bded278e			pending			
 de:p:🦁.v2.brot	Der Löwe isst Brot.	3beea2be			pending			
 de:p:🦁.v2.keks	Der Löwe isst einen Keks.	9d6096f2			pending			
 de:p:🦁.v2.banane	Der Löwe isst eine Banane.	9d6b646d			pending			
 de:p:🦁.v2.melone	Der Löwe isst eine Melone.	e3806ba4			pending			
+de:p:🦁.v3.o9	Der Löwe trinkt Wasser.	6de65485			pending			
 de:p:🦁.v2.-	Der Löwe isst.	99f072d9			pending			
 de:p:🦁.v3.-	Der Löwe trinkt.	c228c84e			pending			
 de:p:🦁.v6.-	Der Löwe spielt.	c2ba7ac7			pending			
 de:p:🐧.v3.o1	Der Pinguin trinkt Milch.	505d6d27			pending			
 de:p:🐧.v2.o2	Der Pinguin isst einen Apfel.	03b52c82			pending			
+de:p:🐧.v6.o3	Der Pinguin spielt mit einem Spielzeug.	4a643873			pending			
 de:p:🐧.v6.o4	Der Pinguin spielt mit dem Auto.	0f234a22			pending			
 de:p:🐧.v6.ball	Der Pinguin spielt mit dem Ball.	4beef838			pending			
 de:p:🐧.v2.brot	Der Pinguin isst Brot.	49f0928c			pending			
 de:p:🐧.v2.keks	Der Pinguin isst einen Keks.	31e59c88			pending			
 de:p:🐧.v2.banane	Der Pinguin isst eine Banane.	9beccdb3			pending			
 de:p:🐧.v2.melone	Der Pinguin isst eine Melone.	ddfaca7e			pending			
+de:p:🐧.v3.o9	Der Pinguin trinkt Wasser.	c601b1b3			pending			
 de:p:🐧.v2.-	Der Pinguin isst.	1af11fcf			pending			
 de:p:🐧.v3.-	Der Pinguin trinkt.	e5d8e028			pending			
 de:p:🐧.v6.-	Der Pinguin spielt.	54ed35f9			pending			
 de:p:🐯.v3.o1	Der Tiger trinkt Milch.	31a13028			pending			
 de:p:🐯.v2.o2	Der Tiger isst einen Apfel.	85ec8111			pending			
+de:p:🐯.v6.o3	Der Tiger spielt mit einem Spielzeug.	ec29a09c			pending			
 de:p:🐯.v6.o4	Der Tiger spielt mit dem Auto.	0b6162ff			pending			
 de:p:🐯.v6.ball	Der Tiger spielt mit dem Ball.	7a80781d			pending			
 de:p:🐯.v2.brot	Der Tiger isst Brot.	ac37c885			pending			
 de:p:🐯.v2.keks	Der Tiger isst einen Keks.	59834ca1			pending			
 de:p:🐯.v2.banane	Der Tiger isst eine Banane.	0ac864a4			pending			
 de:p:🐯.v2.melone	Der Tiger isst eine Melone.	d6e944b9			pending			
+de:p:🐯.v3.o9	Der Tiger trinkt Wasser.	84432d9a			pending			
 de:p:🐯.v2.-	Der Tiger isst.	a9e96d8c			pending			
 de:p:🐯.v3.-	Der Tiger trinkt.	406fb70b			pending			
 de:p:🐯.v6.-	Der Tiger spielt.	2d8f416a			pending			
+de:p:👃.verb.o2	Die Nase riecht einen Apfel.	ca2b2e02			pending			
+de:p:👃.verb.brot	Die Nase riecht Brot.	94e7df0c			pending			
+de:p:👃.verb.keks	Die Nase riecht einen Keks.	1dbe8508			pending			
+de:p:👃.verb.banane	Die Nase riecht eine Banane.	6262cf33			pending			
+de:p:👃.verb.melone	Die Nase riecht eine Melone.	a470cbfe			pending			
 de:p:🐱.v3.o1	Die Katze trinkt Milch.	8f4e4dbb			pending			
 de:p:🐱.v2.o2	Die Katze isst einen Apfel.	c58a60fe			pending			
+de:p:🐱.v6.o3	Die Katze spielt mit einem Spielzeug.	46a1965f			pending			
 de:p:🐱.v6.o4	Die Katze spielt mit dem Auto.	bf4e8cce			pending			
 de:p:🐱.v6.ball	Die Katze spielt mit dem Ball.	bd52921c			pending			
 de:p:🐱.v2.brot	Die Katze isst Brot.	b4f22508			pending			
 de:p:🐱.v2.keks	Die Katze isst einen Keks.	411f369c			pending			
 de:p:🐱.v2.banane	Die Katze isst eine Banane.	e71042c7			pending			
 de:p:🐱.v2.melone	Die Katze isst eine Melone.	592959ea			pending			
+de:p:🐱.v3.o9	Die Katze trinkt Wasser.	9905caaf			pending			
 de:p:🐱.v2.-	Die Katze isst.	0d792333			pending			
 de:p:🐱.v3.-	Die Katze trinkt.	2798c80c			pending			
 de:p:🐱.v6.-	Die Katze spielt.	590d218d			pending			
 de:p:🐸.v3.o1	Der Frosch trinkt Milch.	77958ae6			pending			
 de:p:🐸.v2.o2	Der Frosch isst einen Apfel.	9016f103			pending			
+de:p:🐸.v6.o3	Der Frosch spielt mit einem Spielzeug.	ffe934c6			pending			
 de:p:🐸.v6.o4	Der Frosch spielt mit dem Auto.	947da7b9			pending			
 de:p:🐸.v6.ball	Der Frosch spielt mit dem Ball.	d2e2f787			pending			
 de:p:🐸.v2.brot	Der Frosch isst Brot.	8e24be0b			pending			
 de:p:🐸.v2.keks	Der Frosch isst einen Keks.	58f1d4d7			pending			
 de:p:🐸.v2.banane	Der Frosch isst eine Banane.	0b899dd2			pending			
 de:p:🐸.v2.melone	Der Frosch isst eine Melone.	c6c3f1d3			pending			
+de:p:🐸.v3.o9	Der Frosch trinkt Wasser.	10da0958			pending			
 de:p:🐸.v2.-	Der Frosch isst.	1d2c272a			pending			
 de:p:🐸.v3.-	Der Frosch trinkt.	1e30a6d5			pending			
 de:p:🐸.v6.-	Der Frosch spielt.	5e8b397c			pending			
 de:p:🦒.v3.o1	Die Giraffe trinkt Milch.	9368001e			pending			
 de:p:🦒.v2.o2	Die Giraffe isst einen Apfel.	d591f5db			pending			
+de:p:🦒.v6.o3	Die Giraffe spielt mit einem Spielzeug.	d8f99cce			pending			
 de:p:🦒.v6.o4	Die Giraffe spielt mit dem Auto.	3fc370f1			pending			
 de:p:🦒.v6.ball	Die Giraffe spielt mit dem Ball.	5ab4580f			pending			
 de:p:🦒.v2.brot	Die Giraffe isst Brot.	788d7e03			pending			
 de:p:🦒.v2.keks	Die Giraffe isst einen Keks.	108c3f0f			pending			
 de:p:🦒.v2.banane	Die Giraffe isst eine Banane.	ad13e0aa			pending			
 de:p:🦒.v2.melone	Die Giraffe isst eine Melone.	8bb7f98b			pending			
+de:p:🦒.v3.o9	Die Giraffe trinkt Wasser.	7abb7ca0			pending			
 de:p:🦒.v2.-	Die Giraffe isst.	f1b61622			pending			
 de:p:🦒.v3.-	Die Giraffe trinkt.	1a1da92d			pending			
 de:p:🦒.v6.-	Die Giraffe spielt.	0d88be04			pending			
 de:p:🐉.v3.o1	Der Drache trinkt Milch.	b1e7470a			pending			
 de:p:🐉.v2.o2	Der Drache isst einen Apfel.	073317df			pending			
+de:p:🐉.v6.o3	Der Drache spielt mit einem Spielzeug.	62d40cc2			pending			
 de:p:🐉.v6.o4	Der Drache spielt mit dem Auto.	814d3ee5			pending			
 de:p:🐉.v6.ball	Der Drache spielt mit dem Ball.	acc98b0b			pending			
 de:p:🐉.v2.brot	Der Drache isst Brot.	7e830fc7			pending			
 de:p:🐉.v2.keks	Der Drache isst einen Keks.	5fd9667b			pending			
 de:p:🐉.v2.banane	Der Drache isst eine Banane.	38e44046			pending			
 de:p:🐉.v2.melone	Der Drache isst eine Melone.	767113df			pending			
+de:p:🐉.v3.o9	Der Drache trinkt Wasser.	6ff52ff4			pending			
 de:p:🐉.v2.-	Der Drache isst.	e159942e			pending			
 de:p:🐉.v3.-	Der Drache trinkt.	c43254a9			pending			
 de:p:🐉.v6.-	Der Drache spielt.	ba66f1f0			pending			
+de:n:o1	Das ist Milch.	8a7fd76c			pending			
+de:n:o2	Das ist ein Apfel.	6ebb0bd7			pending			
+de:n:o3	Das ist ein Spielzeug.	212995a5			pending			
+de:n:o4	Das ist das Auto.	476b54dc			pending			
+de:n:o7	Das ist das Bett.	052f27e6			pending			
+de:n:o8	Das ist das Töpfchen.	64cecc79			pending			
+de:n:ball	Das ist der Ball.	d5be64fd			pending			
+de:n:brot	Das ist Brot.	5a40d86c			pending			
+de:n:keks	Das ist ein Keks.	0d5f7353			pending			
+de:n:banane	Das ist eine Banane.	98736813			pending			
+de:n:melone	Das ist eine Melone.	5a822e5e			pending			
+de:n:o9	Das ist Wasser.	db2570c6			pending			
