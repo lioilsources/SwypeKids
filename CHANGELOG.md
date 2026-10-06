@@ -1,5 +1,10 @@
 # Changelog
 
+## [06/10/2026] — v2.13.0
+- Ve světě zvířátka se učí: ťukni na slovo v tácku, napiš ho a dárek sám doletí ke zvířátku
+- Zvířátko si v bublině přeje slovíčko, které ještě moc neumíš — splněné přání ho rozradostní
+- Nové odznaky: Hostitel, Mazlík, Splněné přání, Kamarád všech; rodič může psaní u dárků vypnout
+
 ## [06/10/2026] — v2.12.0
 - Svět zvířátka: ťukni ve Zvěřinci na řádek zvířátka (nebo „Pojď si hrát“ po jednotce) — pohladíš ho, pošimráš, zvedneš a dáš mu dárek z naučených slov
 - Zvířátko jí, pije nebo si hraje a objeví se věta („Myš jí jablko.“) — přečte se nahlas a jde uložit do Mé knížky; v noci spí
