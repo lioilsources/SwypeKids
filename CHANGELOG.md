@@ -1,5 +1,9 @@
 # Changelog
 
+## [06/10/2026] — v2.14.1
+- Čeština: „Myš si hraje s kolem.“ (zvratné „si“ na správném místě)
+- Věci ve světě zvířátka (oko, banán) už nedostávají nesmyslné věty
+
 ## [06/10/2026] — v2.14.0
 - Misky ve světě zvířátka fungují: jídlo do misky s jídlem, pití do misky s vodou — zvířátko k misce dojde a nají se nebo napije
 - Zvířátka ze Zvěřince můžeš použít ve Skládej větu jako toho, kdo něco dělá: „Myš jí jablko.“
