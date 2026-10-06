@@ -1,9 +1,9 @@
 🏠 + 🥛 → ✨
-🏠 + 🚗 → La maison joue avec la voiture.
+🏠 + 🚗 → ✨
 🏠 + 🍌 → ✨
 🏠 + 💧 → ✨
 🍎 + 🥛 → ✨
-🍎 + 🚗 → La pomme joue avec la voiture.
+🍎 + 🚗 → ✨
 🍎 + 🍌 → ✨
 🍎 + 💧 → ✨
 🦁 + 🥛 → Le lion boit du lait.
@@ -15,15 +15,15 @@
 🐯 + 🍌 → Le tigre mange.
 🐯 + 💧 → Le tigre boit.
 🎵 + 🥛 → ✨
-🎵 + 🚗 → La note joue avec la voiture.
+🎵 + 🚗 → ✨
 🎵 + 🍌 → ✨
 🎵 + 💧 → ✨
 ✈️ + 🥛 → ✨
-✈️ + 🚗 → L'avion joue avec la voiture.
+✈️ + 🚗 → ✨
 ✈️ + 🍌 → ✨
 ✈️ + 💧 → ✨
 🍊 + 🥛 → ✨
-🍊 + 🚗 → L'orange joue avec la voiture.
+🍊 + 🚗 → ✨
 🍊 + 🍌 → ✨
 🍊 + 💧 → ✨
 🐘 + 🥛 → L'éléphant boit du lait.
@@ -35,7 +35,7 @@
 🦊 + 🍌 → Le renard mange.
 🦊 + 💧 → Le renard boit.
 🍌 + 🥛 → ✨
-🍌 + 🚗 → La banane joue avec la voiture.
+🍌 + 🚗 → ✨
 🍌 + 🍌 → ✨
 🍌 + 💧 → ✨
 🐱 + 🥛 → Le chat boit du lait.
@@ -43,11 +43,11 @@
 🐱 + 🍌 → Le chat mange.
 🐱 + 💧 → Le chat boit.
 🌸 + 🥛 → ✨
-🌸 + 🚗 → La fleur joue avec la voiture.
+🌸 + 🚗 → ✨
 🌸 + 🍌 → ✨
 🌸 + 💧 → ✨
 🎂 + 🥛 → ✨
-🎂 + 🚗 → La girafe joue avec la voiture.
+🎂 + 🚗 → ✨
 🎂 + 🍌 → ✨
 🎂 + 💧 → ✨
 🐬 + 🥛 → Le dauphin boit du lait.

@@ -1,17 +1,17 @@
 🍎 + 🥛 → ✨
-🍎 + 🚗 → La mela gioca con la macchina.
+🍎 + 🚗 → ✨
 🍎 + 🍌 → ✨
 🍎 + 💧 → ✨
 🏝️ + 🥛 → ✨
-🏝️ + 🚗 → L'isola gioca con la macchina.
+🏝️ + 🚗 → ✨
 🏝️ + 🍌 → ✨
 🏝️ + 💧 → ✨
 🍕 + 🥛 → ✨
-🍕 + 🚗 → La pizza gioca con la macchina.
+🍕 + 🚗 → ✨
 🍕 + 🍌 → ✨
 🍕 + 💧 → ✨
 👃 + 🥛 → ✨
-👃 + 🚗 → Il naso gioca con la macchina.
+👃 + 🚗 → ✨
 👃 + 🍌 → ✨
 👃 + 💧 → ✨
 🐻 + 🥛 → L'orso beve il latte.
@@ -27,15 +27,15 @@
 🐯 + 🍌 → La tigre mangia.
 🐯 + 💧 → La tigre beve.
 ☀️ + 🥛 → ✨
-☀️ + 🚗 → Il sole gioca con la macchina.
+☀️ + 🚗 → ✨
 ☀️ + 🍌 → ✨
 ☀️ + 💧 → ✨
 🏠 + 🥛 → ✨
-🏠 + 🚗 → La casa gioca con la macchina.
+🏠 + 🚗 → ✨
 🏠 + 🍌 → ✨
 🏠 + 💧 → ✨
 🍌 + 🥛 → ✨
-🍌 + 🚗 → La banana gioca con la macchina.
+🍌 + 🚗 → ✨
 🍌 + 🍌 → ✨
 🍌 + 💧 → ✨
 🐱 + 🥛 → Il gatto beve il latte.
@@ -43,7 +43,7 @@
 🐱 + 🍌 → Il gatto mangia.
 🐱 + 💧 → Il gatto beve.
 🌸 + 🥛 → ✨
-🌸 + 🚗 → Il fiore gioca con la macchina.
+🌸 + 🚗 → ✨
 🌸 + 🍌 → ✨
 🌸 + 💧 → ✨
 🦓 + 🥛 → La zebra beve il latte.
@@ -51,6 +51,6 @@
 🦓 + 🍌 → La zebra mangia.
 🦓 + 💧 → La zebra beve.
 🎲 + 🥛 → ✨
-🎲 + 🚗 → Il dado gioca con la macchina.
+🎲 + 🚗 → ✨
 🎲 + 🍌 → ✨
 🎲 + 💧 → ✨

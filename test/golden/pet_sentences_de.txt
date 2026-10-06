@@ -15,7 +15,7 @@
 🦁 + 💧 → Der Löwe trinkt.
 🍊 + 🥛 → ✨
 🍊 + 🍎 → ✨
-🍊 + 🚗 → Die Orange spielt mit dem Auto.
+🍊 + 🚗 → ✨
 🍊 + 🍌 → ✨
 🍊 + 💧 → ✨
 🐧 + 🥛 → Der Pinguin trinkt Milch.
@@ -25,7 +25,7 @@
 🐧 + 💧 → Der Pinguin trinkt.
 🍎 + 🥛 → ✨
 🍎 + 🍎 → ✨
-🍎 + 🚗 → Der Apfel spielt mit dem Auto.
+🍎 + 🚗 → ✨
 🍎 + 🍌 → ✨
 🍎 + 💧 → ✨
 🐯 + 🥛 → Der Tiger trinkt Milch.
@@ -35,17 +35,17 @@
 🐯 + 💧 → Der Tiger trinkt.
 👃 + 🥛 → ✨
 👃 + 🍎 → ✨
-👃 + 🚗 → Die Nase spielt mit dem Auto.
+👃 + 🚗 → ✨
 👃 + 🍌 → ✨
 👃 + 💧 → ✨
 🍌 + 🥛 → ✨
 🍌 + 🍎 → ✨
-🍌 + 🚗 → Die Banane spielt mit dem Auto.
+🍌 + 🚗 → ✨
 🍌 + 🍌 → ✨
 🍌 + 💧 → ✨
 🏠 + 🥛 → ✨
 🏠 + 🍎 → ✨
-🏠 + 🚗 → Das Haus spielt mit dem Auto.
+🏠 + 🚗 → ✨
 🏠 + 🍌 → ✨
 🏠 + 💧 → ✨
 🐱 + 🥛 → Die Katze trinkt Milch.

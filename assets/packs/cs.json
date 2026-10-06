@@ -3001,11 +3001,12 @@
       {
         "id": "v6",
         "emoji": "🎲",
-        "text": "hraju",
+        "text": "hraju si",
         "unlockedBy": "always",
         "frame": "instr",
         "forms": {
-          "3sg": "hraje"
+          "1sg": "si hraju",
+          "3sg": "si hraje"
         }
       }
     ],

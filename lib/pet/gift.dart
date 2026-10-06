@@ -56,12 +56,14 @@ class PetSentence {
   static const drinkVerb = 'v3';
   static const playVerb = 'v6';
 
-  /// Sloveso pro dárek; `null` = věta nebude (věc nejí ani nepije —
-  /// jídlo jen zajiskří).
+  /// Sloveso pro dárek; `null` = věta nebude. Věc (oko, banán) nejí,
+  /// nepije a „nehraje si" — dárek jí jen zajiskří (vlastní slovesa věcí
+  /// přijdou s pravidly, `docs/PLAN_VETY_KVALITA.md` §3.2).
   static String? verbIdFor({required Gift gift, required bool residentEats}) {
+    if (!residentEats) return null;
     return switch (gift.kind) {
-      StickerKind.food => residentEats ? eatVerb : null,
-      StickerKind.drink => residentEats ? drinkVerb : null,
+      StickerKind.food => eatVerb,
+      StickerKind.drink => drinkVerb,
       _ => playVerb,
     };
   }
@@ -101,11 +103,19 @@ class PetSentence {
     if (verbId == null) return null;
     final verb = data.verbs.where((v) => v.id == verbId).firstOrNull;
     final subject = subjectFor(pack, resident);
-    // Hraje si „s autem" jen s hračkou z builderu; jinak věta bez předmětu.
+    // Předmět jen s výslovným tvarem pro rámec slovesa („s autem");
+    // 4. pád smí chybět, když je stejný jako základní tvar. Jinak věta
+    // bez předmětu — nikdy tichý základní tvar („spí mléko").
+    final o = gift.object;
+    final frame = verb?.frame;
+    final fits = o != null &&
+        (frame == null ||
+            frame == Frame.acc ||
+            (o.forms?.containsKey(frame) ?? false));
     return ComposedSentence(
       subject: subject,
       verb: verb,
-      object: gift.object,
+      object: fits ? o : null,
       joiner: data.joiner,
       verbLast: data.order == 'sov',
     );
