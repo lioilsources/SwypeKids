@@ -514,6 +514,9 @@ class _PartTile extends StatelessWidget {
     if (!isNew && onPlay == null) return tile;
     return Stack(
       clipBehavior: Clip.none,
+      // Dlaždice drží plnou šířku sloupce i se značkou „nové" / 🎹
+      // (jinak se smrskne na šířku obsahu).
+      fit: StackFit.passthrough,
       children: [
         tile,
         if (isNew) const Positioned(top: -6, right: -4, child: _NewBadge()),

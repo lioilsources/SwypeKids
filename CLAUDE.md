@@ -16,6 +16,7 @@ flutter build ios
 flutter analyze
 flutter test                                # pack validation + progress tests
 dart run tool/generate_sfx.dart             # regenerate placeholder sfx (assets/audio/) — synthesized, no licences
+tool/store_screenshots.sh <dir>             # real-app screenshots of every section (macOS run, muted) → phone-*.png, desktop-*.png
 ```
 
 ## Architecture

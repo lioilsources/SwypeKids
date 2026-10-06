@@ -38,8 +38,13 @@ class TtsService {
     }
   }
 
+  /// Ticho při snímání obrazovek a v integračních testech (na desktopu by
+  /// jinak hlas opravdu mluvil).
+  @visibleForTesting
+  static bool muted = false;
+
   static Future<void> speak(String text, Language lang) async {
-    if (text.trim().isEmpty) return;
+    if (muted || text.trim().isEmpty) return;
     try {
       await _tts.setLanguage(_localeTags[lang] ?? 'en-US');
       await _tts.setSpeechRate(0.45);
