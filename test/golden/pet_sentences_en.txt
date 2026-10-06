@@ -5,7 +5,7 @@
 🐭 + 💧 → The mouse drinks.
 ☂️ + 🥛 → ✨
 ☂️ + 🍎 → ✨
-☂️ + 🚗 → The umbrella plays with the car.
+☂️ + 🚗 → ✨
 ☂️ + 🍌 → ✨
 ☂️ + 💧 → ✨
 🐯 + 🥛 → The tiger drinks milk.
@@ -15,12 +15,12 @@
 🐯 + 💧 → The tiger drinks.
 🥧 + 🥛 → ✨
 🥧 + 🍎 → ✨
-🥧 + 🚗 → The pie plays with the car.
+🥧 + 🚗 → ✨
 🥧 + 🍌 → ✨
 🥧 + 💧 → ✨
 🍊 + 🥛 → ✨
 🍊 + 🍎 → ✨
-🍊 + 🚗 → The orange plays with the car.
+🍊 + 🚗 → ✨
 🍊 + 🍌 → ✨
 🍊 + 💧 → ✨
 🐱 + 🥛 → The cat drinks milk.
@@ -30,12 +30,12 @@
 🐱 + 💧 → The cat drinks.
 ☀️ + 🥛 → ✨
 ☀️ + 🍎 → ✨
-☀️ + 🚗 → The sun plays with the car.
+☀️ + 🚗 → ✨
 ☀️ + 🍌 → ✨
 ☀️ + 💧 → ✨
 🏠 + 🥛 → ✨
 🏠 + 🍎 → ✨
-🏠 + 🚗 → The house plays with the car.
+🏠 + 🚗 → ✨
 🏠 + 🍌 → ✨
 🏠 + 💧 → ✨
 🐸 + 🥛 → The frog drinks milk.
@@ -50,12 +50,12 @@
 🦁 + 💧 → The lion drinks.
 🍌 + 🥛 → ✨
 🍌 + 🍎 → ✨
-🍌 + 🚗 → The banana plays with the car.
+🍌 + 🚗 → ✨
 🍌 + 🍌 → ✨
 🍌 + 💧 → ✨
 🧃 + 🥛 → ✨
 🧃 + 🍎 → ✨
-🧃 + 🚗 → The juice plays with the car.
+🧃 + 🚗 → ✨
 🧃 + 🍌 → ✨
 🧃 + 💧 → ✨
 🐳 + 🥛 → The whale drinks milk.
@@ -65,11 +65,11 @@
 🐳 + 💧 → The whale drinks.
 🪀 + 🥛 → ✨
 🪀 + 🍎 → ✨
-🪀 + 🚗 → The yo-yo plays with the car.
+🪀 + 🚗 → ✨
 🪀 + 🍌 → ✨
 🪀 + 💧 → ✨
 🎻 + 🥛 → ✨
 🎻 + 🍎 → ✨
-🎻 + 🚗 → The violin plays with the car.
+🎻 + 🚗 → ✨
 🎻 + 🍌 → ✨
 🎻 + 💧 → ✨

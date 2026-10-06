@@ -5,7 +5,7 @@
 🐵 + 💧 → O macaco bebe.
 🏝️ + 🥛 → ✨
 🏝️ + 🍎 → ✨
-🏝️ + 🚗 → A ilha brinca com o carro.
+🏝️ + 🚗 → ✨
 🏝️ + 🍌 → ✨
 🏝️ + 💧 → ✨
 🦆 + 🥛 → O pato bebe leite.
@@ -35,17 +35,17 @@
 🐯 + 💧 → O tigre bebe.
 ☀️ + 🥛 → ✨
 ☀️ + 🍎 → ✨
-☀️ + 🚗 → O sol brinca com o carro.
+☀️ + 🚗 → ✨
 ☀️ + 🍌 → ✨
 ☀️ + 💧 → ✨
 🍌 + 🥛 → ✨
 🍌 + 🍎 → ✨
-🍌 + 🚗 → A banana brinca com o carro.
+🍌 + 🚗 → ✨
 🍌 + 🍌 → ✨
 🍌 + 💧 → ✨
 🍍 + 🥛 → ✨
 🍍 + 🍎 → ✨
-🍍 + 🚗 → O abacaxi brinca com o carro.
+🍍 + 🚗 → ✨
 🍍 + 🍌 → ✨
 🍍 + 💧 → ✨
 🐭 + 🥛 → O rato bebe leite.
@@ -55,11 +55,11 @@
 🐭 + 💧 → O rato bebe.
 🍇 + 🥛 → ✨
 🍇 + 🍎 → ✨
-🍇 + 🚗 → A uva brinca com o carro.
+🍇 + 🚗 → ✨
 🍇 + 🍌 → ✨
 🍇 + 💧 → ✨
 🎲 + 🥛 → ✨
 🎲 + 🍎 → ✨
-🎲 + 🚗 → O dado brinca com o carro.
+🎲 + 🚗 → ✨
 🎲 + 🍌 → ✨
 🎲 + 💧 → ✨
