@@ -1,5 +1,10 @@
 # Changelog
 
+## [07/10/2026] — v2.15.1
+- Tácek dárků ve světě zvířátka jde posouvat do strany (tah nahoru dárek zvedne)
+- Počítadlo Zvěřince počítá jen zvířátka, ne tajné nálepky
+- Dlaždice slov z batohu ve Skládej větu mají správnou šířku
+
 ## [06/10/2026] — v2.15.0
 - Věty dávají smysl: ve Skládej větu jdou složit jen kombinace, které se k sobě hodí — jíst jde jídlo, chodit se dá na místo, hrát si s hračkou
 - Dlaždice, které se k vybranému slovesu nehodí, zešednou
