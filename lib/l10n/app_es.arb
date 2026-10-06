@@ -233,5 +233,6 @@
   "retry": "Reintentar",
   "vocativeLabel": "Vocativo en checo",
   "vocativeHint": "p. ej. Lauro",
-  "guideTitle": "Tu guía"
+  "guideTitle": "Tu guía",
+  "petPlay": "Vamos a jugar"
 }

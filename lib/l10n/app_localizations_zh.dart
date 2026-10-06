@@ -429,4 +429,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get guideTitle => '你的小伙伴';
+
+  @override
+  String get petPlay => '一起玩';
 }

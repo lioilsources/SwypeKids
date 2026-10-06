@@ -433,4 +433,7 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get guideTitle => 'Tvůj průvodce';
+
+  @override
+  String get petPlay => 'Pojď si hrát';
 }

@@ -43,7 +43,8 @@
       "reward": {
         "emoji": "🍊",
         "name": "M",
-        "label": "みかん"
+        "label": "みかん",
+        "subject": "みかんは"
       },
       "scene": {
         "biome": "meadow"
@@ -88,7 +89,8 @@
       "reward": {
         "emoji": "🐼",
         "name": "P",
-        "label": "パンダ"
+        "label": "パンダ",
+        "subject": "パンダは"
       },
       "scene": {
         "biome": "forest"
@@ -135,7 +137,8 @@
       "reward": {
         "emoji": "🐶",
         "name": "I",
-        "label": "いぬ"
+        "label": "いぬ",
+        "subject": "いぬは"
       },
       "scene": {
         "biome": "pond"
@@ -184,7 +187,8 @@
       "reward": {
         "emoji": "🐱",
         "name": "N",
-        "label": "ねこ"
+        "label": "ねこ",
+        "subject": "ねこは"
       },
       "scene": {
         "biome": "garden"
@@ -255,7 +259,8 @@
       "reward": {
         "emoji": "☂️",
         "name": "K",
-        "label": "かさ"
+        "label": "かさ",
+        "subject": "かさは"
       },
       "scene": {
         "biome": "farm"
@@ -427,7 +432,8 @@
       "reward": {
         "emoji": "🐟",
         "name": "S",
-        "label": "さかな"
+        "label": "さかな",
+        "subject": "さかなは"
       },
       "scene": {
         "biome": "city"
@@ -615,7 +621,8 @@
       "reward": {
         "emoji": "🐙",
         "name": "T",
-        "label": "たこ"
+        "label": "たこ",
+        "subject": "たこは"
       },
       "scene": {
         "biome": "mountains"
@@ -820,7 +827,8 @@
       "reward": {
         "emoji": "🍙",
         "name": "O",
-        "label": "おにぎり"
+        "label": "おにぎり",
+        "subject": "おにぎりは"
       },
       "scene": {
         "biome": "beach"
@@ -1018,6 +1026,7 @@
   ],
   "sentence": {
     "joiner": "",
+    "order": "sov",
     "subjects": [
       {
         "id": "s1",

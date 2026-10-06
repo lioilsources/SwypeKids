@@ -11,6 +11,7 @@ import '../world/world_clock.dart';
 import '../ui/app_font.dart';
 import '../ui/l10n.dart';
 import '../ui/emoji_art.dart';
+import '../pet/pet_screen.dart';
 
 /// Zvěřinec — nálepkové album sběratelských odměn aktuálního jazyka.
 /// Nezískané nálepky jsou šedé ❓.
@@ -176,7 +177,8 @@ class _IslandPiece extends StatelessWidget {
     final secret = progress.collectibles(pack.id).contains(biome.secret);
     final unlocked = progress.isUnitUnlocked(pack, pack.units.indexOf(unit));
 
-    return BiomeBand(
+    // Získané zvířátko: ťuknutí na řádek otevře jeho svět (hra s ním).
+    final band = BiomeBand(
       biome: biome,
       theme: world,
       locked: !unlocked,
@@ -220,6 +222,19 @@ class _IslandPiece extends StatelessWidget {
           ],
         ),
       ),
+    );
+    if (!has) return band;
+    return GestureDetector(
+      key: ValueKey('island-${unit.id}'),
+      behavior: HitTestBehavior.opaque,
+      onTap: () {
+        AudioService.instance.play(Sfx.tap);
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (_) =>
+              PetScreen(pack: pack, unitIndex: pack.units.indexOf(unit)),
+        ));
+      },
+      child: band,
     );
   }
 }

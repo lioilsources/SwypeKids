@@ -128,6 +128,7 @@ class _SentenceBuilderScreenState extends State<SentenceBuilderScreen> {
         verb: _verb,
         object: _object,
         joiner: _data.joiner,
+        verbLast: _data.order == 'sov',
       );
 
   bool get _hasAny => !_sentence.isEmpty;

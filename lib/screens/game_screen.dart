@@ -23,6 +23,7 @@ import 'win_screen.dart';
 import '../ui/app_font.dart';
 import '../ui/l10n.dart';
 import '../ui/emoji_art.dart';
+import '../pet/pet_screen.dart';
 
 /// reviewMix → konkrétní lekce: nejslabší dříve naučené slovo, jehož písmena
 /// jsou mezi `unlocked`. Id a `unlocked` zůstávají z reviewMix lekce (postup
@@ -341,6 +342,8 @@ class _GameScreenState extends State<GameScreen>
           stars: _sessionStars,
           heroTag: stickerHeroTag(widget.pack.id, widget.unitIndex),
           newBadges: unitBadges,
+          playWith: () =>
+              PetScreen(pack: widget.pack, unitIndex: widget.unitIndex),
         ),
       ));
     }

@@ -55,6 +55,7 @@ flutter:
     - assets/characters/giraffe/
     - assets/characters/cheetah/
     - assets/emoji/
+    - assets/pet/
     - assets/audio/
     - assets/audio/sfx/
     - assets/audio/ambient/

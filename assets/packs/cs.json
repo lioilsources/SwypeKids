@@ -43,7 +43,8 @@
       "reward": {
         "emoji": "🐭",
         "name": "M",
-        "label": "myš"
+        "label": "myš",
+        "subject": "Myš"
       },
       "scene": {
         "biome": "meadow"
@@ -88,7 +89,8 @@
       "reward": {
         "emoji": "🐯",
         "name": "T",
-        "label": "tygr"
+        "label": "tygr",
+        "subject": "Tygr"
       },
       "scene": {
         "biome": "forest"
@@ -150,7 +152,8 @@
       "reward": {
         "emoji": "🍌",
         "name": "B",
-        "label": "banán"
+        "label": "banán",
+        "subject": "Banán"
       },
       "scene": {
         "biome": "pond"
@@ -231,7 +234,8 @@
       "reward": {
         "emoji": "👧",
         "name": "E",
-        "label": "Ema"
+        "label": "Ema",
+        "subject": "Ema"
       },
       "scene": {
         "biome": "garden"
@@ -320,7 +324,8 @@
       "reward": {
         "emoji": "👁️",
         "name": "O",
-        "label": "oko"
+        "label": "oko",
+        "subject": "Oko"
       },
       "scene": {
         "biome": "farm"
@@ -397,7 +402,8 @@
       "reward": {
         "emoji": "🚗",
         "name": "A",
-        "label": "auto"
+        "label": "auto",
+        "subject": "Auto"
       },
       "scene": {
         "biome": "city"
@@ -519,7 +525,8 @@
       "reward": {
         "emoji": "☀️",
         "name": "S",
-        "label": "slunce"
+        "label": "slunce",
+        "subject": "Slunce"
       },
       "scene": {
         "biome": "mountains"
@@ -657,7 +664,8 @@
       "reward": {
         "emoji": "🌈",
         "name": "I",
-        "label": "duha"
+        "label": "duha",
+        "subject": "Duha"
       },
       "scene": {
         "biome": "beach"
@@ -796,7 +804,8 @@
       "reward": {
         "emoji": "🐺",
         "name": "V",
-        "label": "vlk"
+        "label": "vlk",
+        "subject": "Vlk"
       },
       "scene": {
         "biome": "orchard"
@@ -944,7 +953,8 @@
       "reward": {
         "emoji": "🐟",
         "name": "R",
-        "label": "ryba"
+        "label": "ryba",
+        "subject": "Ryba"
       },
       "scene": {
         "biome": "snow"
@@ -1130,7 +1140,8 @@
       "reward": {
         "emoji": "🦓",
         "name": "Z",
-        "label": "zebra"
+        "label": "zebra",
+        "subject": "Zebra"
       },
       "scene": {
         "biome": "jungle"
@@ -1321,7 +1332,8 @@
       "reward": {
         "emoji": "🐱",
         "name": "K",
-        "label": "kočka"
+        "label": "kočka",
+        "subject": "Kočka"
       },
       "scene": {
         "biome": "sky"
@@ -1514,7 +1526,8 @@
       "reward": {
         "emoji": "🦁",
         "name": "L",
-        "label": "lev"
+        "label": "lev",
+        "subject": "Lev"
       },
       "scene": {
         "biome": "meadow"
@@ -1815,7 +1828,8 @@
       "reward": {
         "emoji": "🐍",
         "name": "H",
-        "label": "had"
+        "label": "had",
+        "subject": "Had"
       },
       "scene": {
         "biome": "forest"
@@ -2055,7 +2069,8 @@
       "reward": {
         "emoji": "🪁",
         "name": "Y",
-        "label": "drak"
+        "label": "drak",
+        "subject": "Drak"
       },
       "scene": {
         "biome": "pond"
@@ -2305,7 +2320,8 @@
       "reward": {
         "emoji": "⚽",
         "name": "F",
-        "label": "fotbal"
+        "label": "fotbal",
+        "subject": "Fotbal"
       },
       "scene": {
         "biome": "garden"
@@ -2602,7 +2618,8 @@
       "reward": {
         "emoji": "👂",
         "name": "U",
-        "label": "ucho"
+        "label": "ucho",
+        "subject": "Ucho"
       },
       "scene": {
         "biome": "farm"

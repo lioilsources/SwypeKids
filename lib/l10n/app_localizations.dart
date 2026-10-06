@@ -897,6 +897,12 @@ abstract class AppLocalizations {
   /// In cs, this message translates to:
   /// **'Tvůj průvodce'**
   String get guideTitle;
+
+  /// No description provided for @petPlay.
+  ///
+  /// In cs, this message translates to:
+  /// **'Pojď si hrát'**
+  String get petPlay;
 }
 
 class _AppLocalizationsDelegate

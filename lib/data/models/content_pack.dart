@@ -9,19 +9,26 @@ class CollectibleReward {
   final String name; // písmeno klávesy, ze které nálepka pochází
   final String label; // jméno nálepky v jazyce packu (Zvěřinec ho řekne nahlas)
 
-  const CollectibleReward({required this.emoji, this.name = '', this.label = ''});
+  /// Jak nálepka stojí jako podmět věty ve světě zvířátka („Die Maus",
+  /// „ねこは"); prázdné = [label] s velkým písmenem.
+  final String subject;
+
+  const CollectibleReward(
+      {required this.emoji, this.name = '', this.label = '', this.subject = ''});
 
   factory CollectibleReward.fromJson(Map<String, dynamic> json) =>
       CollectibleReward(
         emoji: json['emoji'] as String,
         name: json['name'] as String? ?? '',
         label: json['label'] as String? ?? '',
+        subject: json['subject'] as String? ?? '',
       );
 
   Map<String, dynamic> toJson() => {
         'emoji': emoji,
         if (name.isNotEmpty) 'name': name,
         if (label.isNotEmpty) 'label': label,
+        if (subject.isNotEmpty) 'subject': subject,
       };
 }
 

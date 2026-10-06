@@ -233,5 +233,6 @@
   "retry": "重试",
   "vocativeLabel": "捷克语称呼（呼格）",
   "vocativeHint": "例如 Lauro",
-  "guideTitle": "你的小伙伴"
+  "guideTitle": "你的小伙伴",
+  "petPlay": "一起玩"
 }

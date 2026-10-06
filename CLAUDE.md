@@ -43,6 +43,9 @@ lib/
 │   └── models/
 │       ├── content_pack.dart # ContentPack / Unit / CollectibleReward + fromJson
 │       └── sentence.dart     # Sentence builder tiles (pack.sentence), TileUnlock
+├── pet/
+│   ├── pet_screen.dart      # Svět zvířátka (Zvěřinec row / unit complete): resident in its biome, stroke/tickle/lift, gifts from the tray → eat/drink/play + sentence → Má knížka; asleep at night/limit
+│   └── gift.dart            # Gift tray (word bag food/drink/toys + always builder objects) and PetSentence (reward.subject + v2/v3/v6 + object forms; SOV for ja)
 ├── screens/
 │   ├── onboarding_screen.dart # First start without reading: flag → avatar → name, TTS guide phrases per language
 │   ├── home_shell.dart      # Drawer shell, view switching (map/sentence/collection/book)
@@ -109,6 +112,7 @@ iOS, Android, macOS, Linux (check pubspec for active platforms).
 - Parent corner (drawer 👪 → `ParentGate` → `ParentScreen`): sound/music/ambient toggles and season override live here, not in the child's drawer; letter status = mean word strength per letter (≥ 4 mastered)
 - Guides: each profile picks its guide in the profile sheet (drawer → avatar); `ProfileService.guide` notifies, `Mascot` follows it. The guide behaves the same everywhere — use `DraggableGuide` on any new screen with the guide and wrap tap targets the guide must not cover in `GuideAvoid`
 - Profiles: `ProgressService.init(profile: id)` loads one child's progress (keys namespaced per profile, profile 1 unprefixed so old installs need no migration); switching rebuilds HomeShell screens via a keyed IndexedStack. Settings (sound, season) stay global
+- Pet world (`docs/PLAN_ZVERINEC_HRA.md`): `reward.subject` = the sticker as a sentence subject (article/particle included: „Die Maus", „ねこは"); gifts are only food/drink/toys (`StickerKind.giftable`); a sentence uses an object only when `sentence.objects` has it (cases), otherwise subject + verb — never ungrammatical; `sentence.order: "sov"` puts the verb last (ja). Pet sentences for every pack are snapshotted in `test/golden/pet_sentences_<lang>.txt` (`UPDATE_PET_SENTENCES=1` to regenerate) for native-speaker review. Stickers react to touch everywhere (`EmojiArt.reaction`, via `Listener` — never steals the parent's tap); poses `assets/emoji/<cp>-<eat|happy|sleep>.webp`
 - Badges (`GameBadge`, 14 from roadmap P4) are global across languages; `AchievementService.check` is called on LessonDone / UnitDone (game), SessionStart (map open) — never add streak-style pressure
 - Word strength 0–5 per target (`ProgressService.recordAttempt`); map offers “Procvičování” (5 weakest learned) via `GameScreen(practice: …)`, which never writes lesson completion or stickers
 - Never add lessons to an existing unit (it would re-lock later units for kids who finished it); add new units, or change an existing lesson's type (id + progress stay)

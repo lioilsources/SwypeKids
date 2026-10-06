@@ -67,6 +67,12 @@ převzetí osvědčených smyček, ne technickou integraci.
 - **Tajné nálepky**: každý biotop má jednu (`Biome.secret`, např. louka 🐞,
   rybník 🐢). Na mapě je v odemčené jednotce nenápadné ✨ bez textu — vyžaduje
   průzkum, ne výkon; ťuknutí ji dá do Zvěřince (čip „✨ 🐞") a ✨ zmizí.
+- **Svět zvířátka** (v2.12): ťuknutí na řádek získané nálepky (nebo „🏡 Pojď
+  si hrát" po jednotce) otevře její biotop. Hlazení, šimrání (3× ťuk),
+  zvednutí (dlouhý stisk); dárky z tácku (jídlo, pití, hračky z batohu slov)
+  → zvířátko jí / pije / hraje si a objeví se věta („Myš jí jablko."), ⭐ ji
+  uloží do Mé knížky. V noci a po limitu spí. Plán dalších fází:
+  `docs/PLAN_ZVERINEC_HRA.md`.
 - Motivace sbíráním, ne soutěžením.
 
 ## 5. Content pack model (JSON)
