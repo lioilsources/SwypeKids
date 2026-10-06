@@ -1,5 +1,10 @@
 # Changelog
 
+## [06/10/2026] — v2.12.0
+- Svět zvířátka: ťukni ve Zvěřinci na řádek zvířátka (nebo „Pojď si hrát“ po jednotce) — pohladíš ho, pošimráš, zvedneš a dáš mu dárek z naučených slov
+- Zvířátko jí, pije nebo si hraje a objeví se věta („Myš jí jablko.“) — přečte se nahlas a jde uložit do Mé knížky; v noci spí
+- Japonské věty mají sloveso na konci
+
 ## [06/10/2026] — v2.11.0
 - Obrázky reagují na dotyk všude: zvířátka pošlou srdíčka, jídlo se zmáčkne, věci poskočí, zavrtí se nebo zatočí
 - Obrázek na klávese poskočí, když písmeno přibude do tahu; ťuknutí na obrázek slova ho řekne nahlas
