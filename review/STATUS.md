@@ -10,6 +10,6 @@ Generováno `UPDATE_SENTENCES=1 flutter test test/sentence_corpus_test.dart` —
 | es | 582 | 0 | 582 | 0 | 0 |
 | it | 489 | 0 | 489 | 0 | 0 |
 | fr | 602 | 0 | 602 | 0 | 0 |
-| zh | 371 | 0 | 371 | 0 | 0 |
-| ja | 328 | 0 | 328 | 0 | 0 |
-| pt | 642 | 0 | 642 | 0 | 0 |
+| zh | 845 | 0 | 845 | 0 | 0 |
+| ja | 755 | 0 | 755 | 0 | 0 |
+| pt | 1035 | 0 | 1035 | 0 | 0 |
