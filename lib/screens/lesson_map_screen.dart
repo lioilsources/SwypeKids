@@ -7,6 +7,7 @@ import '../characters/mascot.dart';
 import '../data/lessons.dart';
 import '../data/models/content_pack.dart';
 import '../services/achievement_service.dart';
+import '../services/entitlement_service.dart';
 import '../services/pack_service.dart';
 import '../services/profile_service.dart';
 import '../services/progress_service.dart';
@@ -248,6 +249,9 @@ class LessonMapScreenState extends State<LessonMapScreen> {
   Future<void> _openLesson(int unitIndex, int lessonIndex) async {
     if (_bedtime) return;
     final pack = _pack!;
+    if (!EntitlementService.instance.unlocked(pack, pack.units[unitIndex])) {
+      return;
+    }
     AudioService.instance.play(Sfx.tap);
     AudioService.instance.setAmbient(null); // během kola je ticho (jen hra)
     AudioService.instance.setMusic(false);
@@ -329,9 +333,10 @@ class LessonMapScreenState extends State<LessonMapScreen> {
   @override
   Widget build(BuildContext context) {
     // Svět (obloha, částice, biotopy) se překreslí při změně denní doby
-    // nebo ručního období.
+    // nebo ručního období; mapa i při změně odemčení (rodič v koutku).
     return ListenableBuilder(
-      listenable: WorldClockService.instance,
+      listenable: Listenable.merge(
+          [WorldClockService.instance, EntitlementService.instance]),
       builder: (context, _) {
         final world = WorldClockService.instance.theme;
         return Stack(
@@ -458,6 +463,17 @@ class LessonMapScreenState extends State<LessonMapScreen> {
                         final showPractice = !expedition &&
                             weakest.length >= _practiceMinLearned;
                         final offset = (showPractice || expedition) ? 1 : 0;
+                        // Jen jednotky, které dítě smí hrát; za nimi nejvýš
+                        // jeden další ostrov v mlze (bez obchodu celý pack).
+                        final playable =
+                            EntitlementService.instance.playableUnits(pack);
+                        final fogged = [
+                          for (var u = 0; u < pack.units.length; u++)
+                            if (!playable.contains(u)) u,
+                        ];
+                        final current = playable
+                            .where((u) => !progress.isUnitCompleted(pack, u))
+                            .firstOrNull;
                         return Center(
                           child: ConstrainedBox(
                             constraints: const BoxConstraints(
@@ -475,7 +491,9 @@ class LessonMapScreenState extends State<LessonMapScreen> {
                                               DraggableGuide.sizeFor(
                                                   MediaQuery.sizeOf(context)))
                                           .height),
-                              itemCount: pack.units.length + offset,
+                              itemCount: playable.length +
+                                  offset +
+                                  (fogged.isEmpty ? 0 : 1),
                               itemBuilder: (context, i) {
                                 if (expedition && i == 0) {
                                   final trip =
@@ -493,7 +511,14 @@ class LessonMapScreenState extends State<LessonMapScreen> {
                                     onTap: () => _openPractice(weakest),
                                   );
                                 }
-                                final u = i - offset;
+                                if (i - offset >= playable.length) {
+                                  return _IslandInFog(
+                                    biome: Biome.parse(
+                                        pack.units[fogged.first].biome),
+                                    world: world,
+                                  );
+                                }
+                                final u = playable[i - offset];
                                 return _UnitBlock(
                                   pack: pack,
                                   unitIndex: u,
@@ -501,9 +526,7 @@ class LessonMapScreenState extends State<LessonMapScreen> {
                                   onLessonTap: (l) => _openLesson(u, l),
                                   onSecret: (b) => _findSecret(b),
                                   onSeasonal: _findSeasonal,
-                                  isCurrent:
-                                      progress.firstUncompletedIn(pack)?.unit ==
-                                          u,
+                                  isCurrent: current == u,
                                 );
                               },
                             ),
@@ -795,6 +818,43 @@ class _PracticeCard extends StatelessWidget {
   }
 }
 
+/// Další ostrov za vodou: kousek světa v mlze s loďkou. Dítě na něj
+/// nemůže ťuknout a nic o nákupu tu není — ostrov otevírá rodič v koutku
+/// (`docs/MONETIZATION.md` §1, zásady 1 a 4).
+class _IslandInFog extends StatelessWidget {
+  final Biome biome;
+  final WorldTheme world;
+
+  const _IslandInFog({required this.biome, required this.world});
+
+  @override
+  Widget build(BuildContext context) {
+    return IgnorePointer(
+      key: const ValueKey('island-in-fog'),
+      child: ExcludeSemantics(
+        child: BiomeBand(
+          biome: biome,
+          theme: world,
+          locked: true,
+          child: const SizedBox(
+            height: 132,
+            child: Center(
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  EmojiArt('⛵', size: 30, animate: false),
+                  SizedBox(width: 18),
+                  EmojiArt('🏝️', size: 44, animate: false),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 class _BagChip extends StatelessWidget {
   final int count;
   final VoidCallback? onTap;
@@ -854,7 +914,8 @@ class _UnitBlock extends StatelessWidget {
   Widget build(BuildContext context) {
     final progress = ProgressService.instance;
     final unit = pack.units[unitIndex];
-    final unitUnlocked = progress.isUnitUnlocked(pack, unitIndex);
+    final unitUnlocked =
+        EntitlementService.instance.unitOpen(pack, unitIndex);
     final unitCompleted = progress.isUnitCompleted(pack, unitIndex);
     final hasReward = progress.hasCollectible(pack.id, unit.reward);
     final revealed = progress.isUnitRevealed(pack.id, unit.id);

@@ -469,4 +469,70 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get petBowlWater => 'water';
+
+  @override
+  String get storeIslandA => 'Letter Island';
+
+  @override
+  String get storeIslandB => 'Word Island';
+
+  @override
+  String get storeIslandC => 'Sentence Island';
+
+  @override
+  String storeProductIsland(String island, String language) {
+    return '$island – $language';
+  }
+
+  @override
+  String storeProductIslandDesc(String language) {
+    return 'New units, stickers and pet-world residents. Language: $language.';
+  }
+
+  @override
+  String storeProductLanguage(String language) {
+    return 'Another language – $language';
+  }
+
+  @override
+  String storeProductLanguageDesc(String island, String language) {
+    return '$island in another language: $language.';
+  }
+
+  @override
+  String get storeProductBundle => 'Everything forever';
+
+  @override
+  String get storeProductBundleDesc =>
+      'All islands and languages, including those still to come.';
+
+  @override
+  String get storeProductParent => 'Parent pack';
+
+  @override
+  String get storeProductParentDesc =>
+      'Worksheets, printing My Book, a weekly overview and progress transfer.';
+
+  @override
+  String get storeStateFree => 'free';
+
+  @override
+  String get storeStateOwned => 'owned';
+
+  @override
+  String storeBuy(String price) {
+    return 'Buy for $price';
+  }
+
+  @override
+  String get storeRestore => 'Restore purchases';
+
+  @override
+  String get storeDebugTitle => 'Store (debug)';
+
+  @override
+  String get storeDebugEnable => 'Simulate an enabled store';
+
+  @override
+  String get storeDebugForget => 'Forget purchases';
 }

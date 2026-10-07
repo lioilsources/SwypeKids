@@ -77,6 +77,7 @@ class ProgressService {
       // Globální nastavení (zvuk, období, profily) nejsou postup.
       if (profile == 1 &&
           (key.startsWith('sk.settings.') ||
+              key.startsWith('sk.store.') ||
               key.startsWith('sk.profile') ||
               key.startsWith('sk.p') ||
               key == 'sk.activeProfile')) {

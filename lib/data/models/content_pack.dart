@@ -53,6 +53,10 @@ class CollectibleReward {
       };
 }
 
+/// Pásma (ostrovy) obsahu; jednotka bez `band` patří do prvního.
+const kBands = ['a', 'b', 'c'];
+const kDefaultBand = 'a';
+
 /// Jednotka = 2–6 lekcí se stejnou sadou odemčených písmen, zakončená odměnou.
 class Unit {
   final String id;
@@ -62,6 +66,15 @@ class Unit {
   final List<Lesson> lessons;
   final String biome; // unit.scene.biome — jméno biotopu (viz world/Biome)
 
+  /// Ostrov (pásmo), do kterého jednotka patří: `a` Ostrov písmenek
+  /// (výchozí), `b` Ostrov slov, `c` Ostrov vět. Viz `docs/MONETIZATION.md`.
+  final String band;
+
+  /// Štítek produktu, který jednotku odemyká místo pásma (tematický
+  /// balíček, např. `theme.zima`); prázdné = řídí se pásmem. Produkt
+  /// jazyka (`lang.<id>`) se odvozuje v kódu, do JSON se nepíše.
+  final String product;
+
   const Unit({
     required this.id,
     required this.title,
@@ -69,6 +82,8 @@ class Unit {
     required this.reward,
     required this.lessons,
     this.biome = '',
+    this.band = kDefaultBand,
+    this.product = '',
   });
 
   factory Unit.fromJson(Map<String, dynamic> json) => Unit(
@@ -82,6 +97,8 @@ class Unit {
             Lesson.fromJson((l as Map).cast<String, dynamic>()),
         ],
         biome: ((json['scene'] as Map?)?['biome'] as String?) ?? '',
+        band: json['band'] as String? ?? kDefaultBand,
+        product: json['product'] as String? ?? '',
       );
 
   Map<String, dynamic> toJson() => {
@@ -91,6 +108,8 @@ class Unit {
         'reward': reward.toJson(),
         'lessons': [for (final l in lessons) l.toJson()],
         if (biome.isNotEmpty) 'scene': {'biome': biome},
+        if (band != kDefaultBand) 'band': band,
+        if (product.isNotEmpty) 'product': product,
       };
 }
 

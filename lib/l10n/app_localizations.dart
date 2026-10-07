@@ -969,6 +969,114 @@ abstract class AppLocalizations {
   /// In cs, this message translates to:
   /// **'voda'**
   String get petBowlWater;
+
+  /// No description provided for @storeIslandA.
+  ///
+  /// In cs, this message translates to:
+  /// **'Ostrov písmenek'**
+  String get storeIslandA;
+
+  /// No description provided for @storeIslandB.
+  ///
+  /// In cs, this message translates to:
+  /// **'Ostrov slov'**
+  String get storeIslandB;
+
+  /// No description provided for @storeIslandC.
+  ///
+  /// In cs, this message translates to:
+  /// **'Ostrov vět'**
+  String get storeIslandC;
+
+  /// No description provided for @storeProductIsland.
+  ///
+  /// In cs, this message translates to:
+  /// **'{island} – {language}'**
+  String storeProductIsland(String island, String language);
+
+  /// No description provided for @storeProductIslandDesc.
+  ///
+  /// In cs, this message translates to:
+  /// **'Nové jednotky, nálepky a obyvatelé světa zvířátka. Jazyk: {language}.'**
+  String storeProductIslandDesc(String language);
+
+  /// No description provided for @storeProductLanguage.
+  ///
+  /// In cs, this message translates to:
+  /// **'Další jazyk – {language}'**
+  String storeProductLanguage(String language);
+
+  /// No description provided for @storeProductLanguageDesc.
+  ///
+  /// In cs, this message translates to:
+  /// **'{island} v dalším jazyce: {language}.'**
+  String storeProductLanguageDesc(String island, String language);
+
+  /// No description provided for @storeProductBundle.
+  ///
+  /// In cs, this message translates to:
+  /// **'Vše napořád'**
+  String get storeProductBundle;
+
+  /// No description provided for @storeProductBundleDesc.
+  ///
+  /// In cs, this message translates to:
+  /// **'Všechny ostrovy a jazyky, i ty, které teprve přibudou.'**
+  String get storeProductBundleDesc;
+
+  /// No description provided for @storeProductParent.
+  ///
+  /// In cs, this message translates to:
+  /// **'Balíček pro rodiče'**
+  String get storeProductParent;
+
+  /// No description provided for @storeProductParentDesc.
+  ///
+  /// In cs, this message translates to:
+  /// **'Pracovní listy, tisk Mé knížky, týdenní přehled a přenos postupu.'**
+  String get storeProductParentDesc;
+
+  /// No description provided for @storeStateFree.
+  ///
+  /// In cs, this message translates to:
+  /// **'zdarma'**
+  String get storeStateFree;
+
+  /// No description provided for @storeStateOwned.
+  ///
+  /// In cs, this message translates to:
+  /// **'máte'**
+  String get storeStateOwned;
+
+  /// No description provided for @storeBuy.
+  ///
+  /// In cs, this message translates to:
+  /// **'Koupit za {price}'**
+  String storeBuy(String price);
+
+  /// No description provided for @storeRestore.
+  ///
+  /// In cs, this message translates to:
+  /// **'Obnovit nákupy'**
+  String get storeRestore;
+
+  /// No description provided for @storeDebugTitle.
+  ///
+  /// In cs, this message translates to:
+  /// **'Obchod (ladění)'**
+  String get storeDebugTitle;
+
+  /// No description provided for @storeDebugEnable.
+  ///
+  /// In cs, this message translates to:
+  /// **'Simulovat zapnutý obchod'**
+  String get storeDebugEnable;
+
+  /// No description provided for @storeDebugForget.
+  ///
+  /// In cs, this message translates to:
+  /// **'Zapomenout nákupy'**
+  String get storeDebugForget;
 }
 
 class _AppLocalizationsDelegate

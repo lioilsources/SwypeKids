@@ -8,6 +8,7 @@ import '../data/lessons.dart';
 import '../data/models/content_pack.dart';
 import '../data/models/sentence.dart';
 import '../services/achievement_service.dart';
+import '../services/entitlement_service.dart';
 import '../services/pack_service.dart';
 import '../services/progress_service.dart';
 import '../services/session_service.dart';
@@ -152,6 +153,14 @@ class _GameScreenState extends State<GameScreen>
       _resolved[i] ??= resolveReviewMix(widget.pack, _lessons[i]);
   Language get _language => widget.pack.language;
 
+  /// Zamčený obsah se nespustí, ať se sem dítě dostalo jakkoli: jednotka
+  /// zamčeného ostrova, nebo procvičování s lekcí, kterou dítě nemá
+  /// (naučené lekce se opakovat smí vždy). Obrazovka se beze slova zavře.
+  late final bool _refused = _isPractice
+      ? !_lessons.every(
+          (l) => EntitlementService.instance.lessonPlayable(widget.pack, l))
+      : !EntitlementService.instance.unlocked(widget.pack, _unit);
+
   String _emojiFor(String letter) =>
       PackService.instance.keyEmojiFor(widget.pack, letter);
 
@@ -162,6 +171,12 @@ class _GameScreenState extends State<GameScreen>
       vsync: this,
       duration: const Duration(milliseconds: 600),
     )..repeat(reverse: true);
+    if (_refused) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted) Navigator.of(context).maybePop();
+      });
+      return;
+    }
     _prevUnlocked = _lesson.unlocked;
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.landscapeLeft,
@@ -323,10 +338,12 @@ class _GameScreenState extends State<GameScreen>
       widget.pack,
     );
 
-    final isLastUnit = widget.unitIndex == widget.pack.units.length - 1;
+    // Dohraný je ostrov, když jsou hotové všechny jednotky, které dítě smí
+    // hrát (bez obchodu = celý pack).
+    final playable = EntitlementService.instance.playableUnits(widget.pack);
+    final isLastUnit = playable.isNotEmpty && widget.unitIndex == playable.last;
     final packDone = isLastUnit &&
-        List.generate(widget.pack.units.length, (u) => u)
-            .every((u) => progress.isUnitCompleted(widget.pack, u));
+        playable.every((u) => progress.isUnitCompleted(widget.pack, u));
 
     if (packDone) {
       Navigator.of(context).pushReplacement(MaterialPageRoute(
@@ -351,6 +368,12 @@ class _GameScreenState extends State<GameScreen>
 
   @override
   Widget build(BuildContext context) {
+    if (_refused) {
+      return const Scaffold(
+        key: ValueKey('game-refused'),
+        backgroundColor: Color(0xFF1A1A2E),
+      );
+    }
     final lesson = _lesson;
     final progress = (_idx + 1) / _lessons.length;
     final isWord = lesson.target.length > 2;

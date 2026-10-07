@@ -52,6 +52,7 @@ flutter:
   generate: true
   assets:
     - assets/packs/
+    - assets/store/
     - assets/characters/panda/
     - assets/characters/capybara/
     - assets/characters/giraffe/

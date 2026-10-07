@@ -1,7 +1,8 @@
 # SwypeKids — plán monetizace (v2, říjen 2026)
 
 Stav: **rozhodnuto** (7. 10. 2026, §8). Nahrazuje v3.1 návrh „jedna koupě
-všech jazyků".
+všech jazyků". **Fáze 1 (entitlementy bez obchodu) je hotová a vypnutá**
+(`StoreConfig.enabled = false`, §7, §8.7).
 Implementace je v roadmapě ve v4.0; tento dokument říká **co** prodávat,
 **kde** je hranice zdarma/placené, **za kolik**, a **v jakém pořadí** to
 stavět, aby první placený obsah vyšel spolu s obsahem, který za to stojí.
@@ -68,7 +69,7 @@ v assets (§5), aby šel přidat balíček bez změny kódu.
 |---|---|---|---|---|
 | **Ostrov** (kapitola) | `island.<lang>.b` „Ostrov slov", `island.<lang>.c` „Ostrov vět" | Pásmo B / C daného jazyka (15–20 jednotek, ~80–100 lekcí, nálepky, obyvatelé světa zvířátka, nové předměty do builderu) | 29 Kč | Hlavní produkt. Vzniká s obsahem. |
 | **Jazyk** | `lang.<xx>` | Ostrov písmenek (pásmo A) dalšího jazyka | 29 Kč | Jazyk zařízení je vždy zdarma. Ostrovy B/C toho jazyka jsou samostatné položky. |
-| **Tematický balíček** | `theme.<lang>.<name>` např. `zima`, `dinosauri`, `vesmir`, `na-statku-2` | 3–5 nových jednotek s vlastní slovní zásobou + nálepky + obyvatelé + sezónní tajná nálepka | 29 Kč | Opakovatelný „1 $ produkt": JSON + nálepky z pipeline (`tool/emoji_art`, SPARK) + korektura vět (`docs/SENTENCES_REVIEW.md`). Může přijít s novým průvodcem („kamarád z ostrova"), ale průvodce není nikdy samostatně prodejný. |
+| **Tematický balíček** | `theme.<name>` např. `theme.zima`, `theme.dinosauri`, `theme.vesmir`, `theme.na-statku-2` — **jedna položka pro všechny jazyky** (§8.9) | 3–5 nových jednotek s vlastní slovní zásobou + nálepky + obyvatelé + sezónní tajná nálepka, v každém jazyce, který balíček má | 29 Kč | Opakovatelný „1 $ produkt": JSON + nálepky z pipeline (`tool/emoji_art`, SPARK) + korektura vět (`docs/SENTENCES_REVIEW.md`). Může přijít s novým průvodcem („kamarád z ostrova"), ale průvodce není nikdy samostatně prodejný. |
 | **Hlas průvodce** | `voice.<lang>` | Předem syntetizovaný hlas místo TTS za běhu (fráze z manifestu, jména zvířátek, věty) | 29 Kč | Do katalogu až po ověření licence (§10); asset offline, stejný hlas ve všech jazycích. |
 | **Rodičovský balíček** | `parent.plus` | Pracovní listy PDF z nejslabších písmen dítěte, tisk Mé knížky jako knížky, týdenní přehled PDF, export/import postupu | 29 Kč | Jediný produkt pro rodiče, ne pro dítě. Užitečný i jako argument pro školy. |
 | **Vše napořád** | `all.forever` | Všechny současné **i budoucí** položky výše pro všechny jazyky | 199 Kč / 7,99 $ | Rodinná volba; obchod to nabízí hned vedle balíčků. Apple i Google povolují „včetně budoucího obsahu" u non-consumable. |
@@ -140,11 +141,18 @@ všechen obsah zdarma (zanedbatelný trh, zjednodušuje build).
 **Data.**
 
 - Jednotka dostane `band: "a" | "b" | "c"` (výchozí `a`) a volitelně
-  `product: "theme.cs.zima"`; pack dostane `product: "lang.cs"`.
-  `assets/store/catalog.json`: seznam produktů (id, typ, jazyk, co
-  odemyká, lokalizovaný název/popis přes ARB klíče, pořadí v koutku).
-  `test/pack_loading_test.dart` ověří, že každý produkt v katalogu má
-  obsah a každý `product` v packu je v katalogu.
+  `product: "theme.zima"` (štítek tematického balíčku; taková jednotka se
+  řídí jen jím, ne pásmem). Produkt jazyka se do packu nepíše — odvozuje
+  se v kódu (`lang.<id>`, `StoreCatalog.languageProductId`).
+  `assets/store/catalog.json`: seznam produktů — `id`, `type`
+  (`island | language | theme | voice | parent | bundle`), `order` (pořadí
+  v koutku) a výslovné `unlocks`: `{"all": true}`, nebo `languages` +
+  `bands` (ostrov, jazyk), nebo `tags` (štítky `unit.product`; bez
+  `languages` = ve všech jazycích), nebo `features` (`parent.plus`).
+  Název/popis se skládá z ARB klíčů podle typu (`CatalogProductL10n`).
+  `test/pack_loading_test.dart` ověří unikátní id, výslovné `unlocks`,
+  úplnost pro 9 jazyků a že každý `product` v packu je v katalogu. (Že
+  každý produkt má obsah, půjde ověřit až s pásmem B — fáze 3b.)
 - Pravidlo „nikdy nepřidávat lekce do existující jednotky" platí dál;
   tematický balíček = nové jednotky s vlastním `product`.
 
@@ -197,11 +205,11 @@ neporuší zásada 3 a nikomu nic nezmizí.
 | Fáze | Co | Hotovo znamená |
 |---|---|---|
 | **0 Rozhodnutí** | Potvrdit §2 hranici, §3 katalog, §4 ceny; vytvořit produkty v App Store Connect / Play Console (sandbox); zapnout Family Sharing; vyplnit Kids kategorie dotazník k IAP | Produkty jsou v sandboxu, ceny v Kč/€/$ ručně |
-| **1 Entitlementy bez obchodu** | `band`/`product` v packech, `catalog.json`, `EntitlementService`, `FakeStore`, zámky v `PackService`, mapa s ostrovem v mlze, dětský picker jen odemčené jazyky, grandfathering, testy | `flutter test` zelený; v debug buildu jde přepínačem v koutku simulovat koupi; dítě nikde nevidí cenu |
+| **1 Entitlementy bez obchodu** ✅ hotovo (v kódu, vypnuto) | `band`/`product` v packech, `catalog.json`, `EntitlementService`, `FakeStore`, zámky (`EntitlementService.unlocked` — mapa, `GameScreen`, procvičování), mapa s ostrovem v mlze, dětský picker jen odemčené jazyky, grandfathering, testy | `flutter test` zelený; v debug buildu jde přepínačem v koutku simulovat koupi; dítě nikde nevidí cenu. Všechno je za `StoreConfig.enabled = false` (§8.7) |
 | **2 Obchod** | `in_app_purchase`, `StoreService`, záložka Další ostrovy, obnovení, offline cache, karta „Pro rodiče" na `WinScreen`; PRIVACY.md doplnit odstavec o nákupech (obchod zpracovává platbu, appka nic neposílá) | Sandbox koupě na iOS i Androidu odemkne obsah; TestFlight/interní dráha |
 | **3a Dorovnat Ostrov písmenek** | Pásmo A na ~15 jednotek tam, kde je kratší (ja 8, zh 11, pt 13), aby zdarma část byla všude „celý výsledek"; věty přes `SENTENCES_REVIEW.md` | Každý jazyk má pásmo A ≥ 15 jednotek, korpus vět `llm: ok` |
 | **3b Obsah: Ostrov slov ve všech jazycích** | Pásmo B pro všech 9 jazyků současně (15–20 jednotek, typy `missingLetter`, `syllableJoin`, `reviewMix`, `pictureOnly`), nálepky, obyvatelé, builder předměty, korektura vět; rodilí mluvčí přes nástroje z `tool/sentences/`; playtest cs podle `PLAYTEST.md`. Autorsky: cs a en ručně jako vzor, ostatní jazyky podle stejné kostry jednotek (písmena podle frekvence v jazyce, ne překladem cs) | Vydání s `island.<lang>.b` pro všech 9 jazyků + `lang.*` + `all.forever`; obchod zapnutý ve všech regionech z §9 |
-| **4 Opakovatelné balíčky** | Šablona tematického balíčku (skript: JSON kostra + seznam nálepek k výrobě + korpus vět k revizi), první dva (`zima`, `dinosauri`) pro všechny jazyky; hlas průvodce (§10) až po ověření licence | Nový tematický balíček od nápadu k vydání < 1 týden práce |
+| **4 Opakovatelné balíčky** | Šablona tematického balíčku (skript: JSON kostra + seznam nálepek k výrobě + korpus vět k revizi), první dva (`theme.zima`, `theme.dinosauri`) — každý jako jedna položka katalogu, která odemkne své jednotky ve všech jazycích; hlas průvodce (§10) až po ověření licence | Nový tematický balíček od nápadu k vydání < 1 týden práce |
 | **5 Školy** (až po prvních prodejích) | Flavor „SwypeKids pro školy": jiné bundle id, vše odemčeno, 30 profilů, export CSV, bez IAP; záznam v App Store (Education) a Play for Education; promo kódy pro logopedy | Hromadný nákup přes Apple School Manager funguje |
 
 Fáze 1 a 2 lze stavět hned (bez obsahu). Fáze 3 je kritická cesta:
@@ -223,6 +231,24 @@ prodejů (rozhodnutí §8).
    (§10). Do té doby produkt `voice.<lang>` není v katalogu.
 6. **Ostrov slov pro všechny jazyky současně**, ne jen cs + en (fáze 3b);
    kratší pásma A se nejdřív dorovnají (fáze 3a).
+7. **První vydání v App Store je bez obchodu.** Všech 9 jazyků je zdarma
+   až do konce dnešního obsahu (Ostrov písmenek = pásmo `a`), v appce není
+   žádný obchod. Celý mechanismus proto vychází vypnutý jedním přepínačem
+   v kódu (`StoreConfig.enabled = false`): všechno je odemčené, nikde žádné
+   nákupní UI, chování stejné jako dosud. Zamykání prověřují jen testy a
+   ladicí přepínač v rodičovském koutku (`kDebugMode`, `FakeStore`).
+   Jazyk zdarma (`sk.store.freeLang`) se zapisuje už teď, grandfathering
+   (§6) proběhne až při prvním startu se zapnutým obchodem.
+8. **Katalog je datový.** Každý produkt v `assets/store/catalog.json` má
+   `id`, `type` (`island | language | theme | voice | parent | bundle`) a
+   výslovný popis `unlocks` (jazyky + pásma, štítky jednotek, nebo „vše"),
+   takže produkt může odemknout ostrov jednoho jazyka i obsah napříč
+   jazyky bez změny kódu.
+9. **Tematický balíček = jedna položka pro všechny jazyky; ostrovy a
+   jazyky po jazycích.** Id je `theme.<name>` (ne `theme.<lang>.<name>`):
+   jednotky se štítkem `product: "theme.<name>"` se po koupi odemknou
+   v každém packu, který je má. Ostrovy zůstávají `island.<lang>.b|c`,
+   jazyky `lang.<xx>`, `all.forever` odemyká všechno.
 
 ## 9. Regiony: kde a jak vydávat
 

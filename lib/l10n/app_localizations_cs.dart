@@ -469,4 +469,70 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get petBowlWater => 'voda';
+
+  @override
+  String get storeIslandA => 'Ostrov písmenek';
+
+  @override
+  String get storeIslandB => 'Ostrov slov';
+
+  @override
+  String get storeIslandC => 'Ostrov vět';
+
+  @override
+  String storeProductIsland(String island, String language) {
+    return '$island – $language';
+  }
+
+  @override
+  String storeProductIslandDesc(String language) {
+    return 'Nové jednotky, nálepky a obyvatelé světa zvířátka. Jazyk: $language.';
+  }
+
+  @override
+  String storeProductLanguage(String language) {
+    return 'Další jazyk – $language';
+  }
+
+  @override
+  String storeProductLanguageDesc(String island, String language) {
+    return '$island v dalším jazyce: $language.';
+  }
+
+  @override
+  String get storeProductBundle => 'Vše napořád';
+
+  @override
+  String get storeProductBundleDesc =>
+      'Všechny ostrovy a jazyky, i ty, které teprve přibudou.';
+
+  @override
+  String get storeProductParent => 'Balíček pro rodiče';
+
+  @override
+  String get storeProductParentDesc =>
+      'Pracovní listy, tisk Mé knížky, týdenní přehled a přenos postupu.';
+
+  @override
+  String get storeStateFree => 'zdarma';
+
+  @override
+  String get storeStateOwned => 'máte';
+
+  @override
+  String storeBuy(String price) {
+    return 'Koupit za $price';
+  }
+
+  @override
+  String get storeRestore => 'Obnovit nákupy';
+
+  @override
+  String get storeDebugTitle => 'Obchod (ladění)';
+
+  @override
+  String get storeDebugEnable => 'Simulovat zapnutý obchod';
+
+  @override
+  String get storeDebugForget => 'Zapomenout nákupy';
 }

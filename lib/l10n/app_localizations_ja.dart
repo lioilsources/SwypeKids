@@ -465,4 +465,68 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get petBowlWater => 'みず';
+
+  @override
+  String get storeIslandA => 'もじのしま';
+
+  @override
+  String get storeIslandB => 'ことばのしま';
+
+  @override
+  String get storeIslandC => 'ぶんのしま';
+
+  @override
+  String storeProductIsland(String island, String language) {
+    return '$island – $language';
+  }
+
+  @override
+  String storeProductIslandDesc(String language) {
+    return '新しいユニット、シール、どうぶつの世界のなかま。言語：$language。';
+  }
+
+  @override
+  String storeProductLanguage(String language) {
+    return 'ほかの言語 – $language';
+  }
+
+  @override
+  String storeProductLanguageDesc(String island, String language) {
+    return 'ほかの言語の$island：$language。';
+  }
+
+  @override
+  String get storeProductBundle => 'ずっとぜんぶ';
+
+  @override
+  String get storeProductBundleDesc => 'すべての島と言語。これから増えるものも含みます。';
+
+  @override
+  String get storeProductParent => '保護者パック';
+
+  @override
+  String get storeProductParentDesc => 'ワークシート、「わたしの本」の印刷、週ごとのまとめ、進みぐあいの移行。';
+
+  @override
+  String get storeStateFree => '無料';
+
+  @override
+  String get storeStateOwned => '購入済み';
+
+  @override
+  String storeBuy(String price) {
+    return '$price で購入';
+  }
+
+  @override
+  String get storeRestore => '購入を復元';
+
+  @override
+  String get storeDebugTitle => 'ストア（デバッグ）';
+
+  @override
+  String get storeDebugEnable => 'ストア有効をシミュレート';
+
+  @override
+  String get storeDebugForget => '購入を忘れる';
 }

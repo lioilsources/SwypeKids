@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../audio/audio_service.dart';
 import '../data/lessons.dart';
+import '../services/entitlement_service.dart';
 import '../services/profile_service.dart';
 import '../services/progress_service.dart';
 import '../services/session_service.dart';
@@ -30,7 +31,8 @@ class HomeShell extends StatefulWidget {
 }
 
 class _HomeShellState extends State<HomeShell> with WidgetsBindingObserver {
-  late Language _lang = widget.initialLanguage;
+  late Language _lang =
+      EntitlementService.instance.allowed(widget.initialLanguage);
   AppView _view = AppView.swype;
   final _mapKey = GlobalKey<LessonMapScreenState>();
 
@@ -38,10 +40,24 @@ class _HomeShellState extends State<HomeShell> with WidgetsBindingObserver {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
+    EntitlementService.instance.addListener(_onEntitlements);
+  }
+
+  /// Změna odemčení (rodič v koutku): vlajky a mapa se překreslí; jazyk,
+  /// který dítě hrát nesmí, se vymění za odemčený.
+  void _onEntitlements() {
+    if (!mounted) return;
+    final allowed = EntitlementService.instance.allowed(_lang);
+    if (allowed != _lang) {
+      _setLang(allowed);
+    } else {
+      setState(() {});
+    }
   }
 
   @override
   void dispose() {
+    EntitlementService.instance.removeListener(_onEntitlements);
     WidgetsBinding.instance.removeObserver(this);
     super.dispose();
   }
@@ -71,7 +87,8 @@ class _HomeShellState extends State<HomeShell> with WidgetsBindingObserver {
     await ProgressService.init(profile: id);
     if (!mounted) return;
     setState(() {
-      _lang = ProgressService.instance.selectedLanguage ?? _lang;
+      _lang = EntitlementService.instance
+          .allowed(ProgressService.instance.selectedLanguage ?? _lang);
       _view = AppView.swype;
     });
     AppLanguage.instance.value = _lang;

@@ -465,4 +465,68 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get petBowlWater => '水';
+
+  @override
+  String get storeIslandA => '字母岛';
+
+  @override
+  String get storeIslandB => '词语岛';
+
+  @override
+  String get storeIslandC => '句子岛';
+
+  @override
+  String storeProductIsland(String island, String language) {
+    return '$island – $language';
+  }
+
+  @override
+  String storeProductIslandDesc(String language) {
+    return '新的单元、贴纸和动物世界的居民。语言：$language。';
+  }
+
+  @override
+  String storeProductLanguage(String language) {
+    return '另一种语言 – $language';
+  }
+
+  @override
+  String storeProductLanguageDesc(String island, String language) {
+    return '另一种语言的$island：$language。';
+  }
+
+  @override
+  String get storeProductBundle => '永久全部';
+
+  @override
+  String get storeProductBundleDesc => '所有岛屿和语言，包括以后新增的内容。';
+
+  @override
+  String get storeProductParent => '家长包';
+
+  @override
+  String get storeProductParentDesc => '练习纸、打印“我的书”、每周概览和进度转移。';
+
+  @override
+  String get storeStateFree => '免费';
+
+  @override
+  String get storeStateOwned => '已拥有';
+
+  @override
+  String storeBuy(String price) {
+    return '以 $price 购买';
+  }
+
+  @override
+  String get storeRestore => '恢复购买';
+
+  @override
+  String get storeDebugTitle => '商店（调试）';
+
+  @override
+  String get storeDebugEnable => '模拟已开启的商店';
+
+  @override
+  String get storeDebugForget => '清除购买记录';
 }
