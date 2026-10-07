@@ -1,6 +1,7 @@
 import '../data/lessons.dart';
 import '../data/models/content_pack.dart';
 import '../world/world_clock.dart';
+import 'entitlement_service.dart';
 import 'progress_service.dart';
 
 /// Odznaky (roadmap P4): jednorázové, bez streaku s tlakem. Podmínky jsou
@@ -117,8 +118,15 @@ class AchievementService {
         .where((u) => p.hasCollectible(pack.id, u.reward))
         .length;
     award(GameBadge.explorer, stickers >= 1);
-    award(GameBadge.collectorHalf, stickers * 2 >= pack.units.length);
-    award(GameBadge.collectorAll, stickers >= pack.units.length);
+    // „Všechny" = všechny, ke kterým se dítě může dostat (zamčené ostrovy
+    // se nepočítají; bez obchodu je to celý pack).
+    final store = EntitlementService.instance;
+    final reachable = pack.units
+        .where((u) =>
+            store.unlocked(pack, u) || p.hasCollectible(pack.id, u.reward))
+        .length;
+    award(GameBadge.collectorHalf, stickers * 2 >= reachable);
+    award(GameBadge.collectorAll, stickers >= reachable);
     final words = p.wordBag(pack.id).length;
     for (final e in wordsmithSteps.entries) {
       award(e.key, words >= e.value);

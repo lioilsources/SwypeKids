@@ -4,6 +4,7 @@ import '../data/lessons.dart';
 import '../data/models/content_pack.dart';
 import '../services/achievement_service.dart';
 import '../services/pack_service.dart';
+import '../services/entitlement_service.dart';
 import '../services/progress_service.dart';
 import '../services/tts_service.dart';
 import '../world/biome_band.dart';
@@ -62,6 +63,16 @@ class _CollectionScreenState extends State<CollectionScreen> {
     final owned = pack == null
         ? const <String>[]
         : ProgressService.instance.collectibles(pack.id);
+    // Ostrov ukazuje jen jednotky, ke kterým se dítě může dostat (nebo už
+    // z nich nálepku má) — zamčené ostrovy tu nejsou vůbec.
+    final units = pack == null
+        ? const <Unit>[]
+        : [
+            for (final u in pack.units)
+              if (EntitlementService.instance.unlocked(pack, u) ||
+                  ProgressService.instance.hasCollectible(pack.id, u.reward))
+                u,
+          ];
 
     return Container(
       decoration: const BoxDecoration(
@@ -105,8 +116,8 @@ class _CollectionScreenState extends State<CollectionScreen> {
                         Text(
                           // Jen zvířátka jednotek — tajné nálepky se
                           // do „X ze Y" nepočítají.
-                          '${pack.units.where((u) => owned.contains(u.reward.emoji)).length}'
-                          '/${pack.units.length}',
+                          '${units.where((u) => owned.contains(u.reward.emoji)).length}'
+                          '/${units.length}',
                           style: TextStyle(
                             fontFamily: kFont,
                             fontFamilyFallback: kFontFallback,
@@ -132,10 +143,10 @@ class _CollectionScreenState extends State<CollectionScreen> {
                                 // Ostrov: každá jednotka = kousek světa se
                                 // svým zvířátkem (a tajnou nálepkou, když ji
                                 // dítě našlo).
-                                for (var i = 0; i < pack.units.length; i++)
+                                for (final unit in units)
                                   _IslandPiece(
                                     pack: pack,
-                                    unit: pack.units[i],
+                                    unit: unit,
                                     world: world,
                                     onSay: _say,
                                   ),
@@ -178,7 +189,8 @@ class _IslandPiece extends StatelessWidget {
     final biome = Biome.parse(unit.biome);
     final has = progress.hasCollectible(pack.id, unit.reward);
     final secret = progress.collectibles(pack.id).contains(biome.secret);
-    final unlocked = progress.isUnitUnlocked(pack, pack.units.indexOf(unit));
+    final unlocked = EntitlementService.instance
+        .unitOpen(pack, pack.units.indexOf(unit));
 
     // Získané zvířátko: ťuknutí na řádek otevře jeho svět (hra s ním).
     final band = BiomeBand(

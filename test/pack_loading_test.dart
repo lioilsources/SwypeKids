@@ -1,5 +1,7 @@
 import 'dart:convert';
 
+import 'dart:ui' show Locale;
+
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:swype_kids/data/keyboard_layout.dart';
@@ -7,6 +9,8 @@ import 'package:swype_kids/data/lessons.dart';
 import 'package:swype_kids/data/models/content_pack.dart';
 import 'package:swype_kids/data/models/sentence.dart';
 import 'package:swype_kids/services/pack_service.dart';
+import 'package:swype_kids/store/catalog.dart';
+import 'package:swype_kids/ui/l10n.dart';
 import 'package:swype_kids/world/world_clock.dart';
 
 /// Jazyky s kompletními poznámkami pro rodiče (roadmap v2.3: cs + en).
@@ -154,6 +158,87 @@ void main() {
       }
     });
   }
+
+  test('katalog obchodu: unikátní id, výslovné unlocks, produkty §3 pro '
+      'všech 9 jazyků', () async {
+    final catalog = await StoreCatalog.load();
+    expect(catalog.products, isNotEmpty,
+        reason: '${StoreCatalog.assetPath} se nenačetl (pubspec assets?)');
+
+    final ids = <String>{};
+    for (final p in catalog.products) {
+      expect(ids.add(p.id), isTrue, reason: 'duplicitní produkt ${p.id}');
+      expect(p.unlocks.isEmpty, isFalse,
+          reason: '${p.id}: chybí unlocks (co produkt odemyká)');
+      expect(kBands.toSet().containsAll(p.unlocks.bands), isTrue,
+          reason: '${p.id}: neznámé pásmo ${p.unlocks.bands}');
+      switch (p.type) {
+        case ProductType.island || ProductType.language:
+          // Ostrovy a jazyky se prodávají po jazycích.
+          expect(p.language, isNotNull, reason: '${p.id}: právě jeden jazyk');
+          expect(p.band, isNotNull, reason: '${p.id}: právě jedno pásmo');
+        case ProductType.theme:
+          // Tematický balíček = jedna položka pro všechny jazyky (§8).
+          expect(RegExp(r'^theme\.[a-z0-9-]+$').hasMatch(p.id), isTrue,
+              reason: '${p.id}: id tematického balíčku je theme.<name>');
+          expect(p.unlocks.languages, isEmpty,
+              reason: '${p.id}: tematický balíček není po jazycích');
+          expect(p.unlocks.tags, isNotEmpty);
+        case ProductType.bundle:
+          expect(p.unlocks.all, isTrue);
+        case ProductType.voice:
+          fail('${p.id}: hlas do katalogu až po ověření licence (§10)');
+        case ProductType.parent:
+          expect(p.unlocks.features, isNotEmpty);
+      }
+      // Název a popis existují v každém jazyce UI.
+      for (final lang in Language.values) {
+        final l = lookupAppLocalizations(Locale(lang.name));
+        expect(p.title(l).trim(), isNotEmpty, reason: '${p.id} / ${lang.name}');
+        if (p.type != ProductType.theme) {
+          expect(p.description(l).trim(), isNotEmpty,
+              reason: '${p.id} / ${lang.name}');
+        }
+      }
+    }
+
+    for (final lang in Language.values) {
+      final language = catalog.byId(StoreCatalog.languageProductId(lang));
+      expect(language?.type, ProductType.language, reason: lang.name);
+      expect(language!.unlocks.coversBand(lang, 'a'), isTrue);
+      expect(language.unlocks.coversBand(lang, 'b'), isFalse);
+      for (final band in ['b', 'c']) {
+        final island = catalog.byId(StoreCatalog.islandProductId(lang, band));
+        expect(island?.type, ProductType.island, reason: '${lang.name} $band');
+        expect(island!.unlocks.coversBand(lang, band), isTrue);
+        expect(island.unlocks.coversBand(lang, 'a'), isFalse);
+        expect(
+            Language.values
+                .where((other) => island.unlocks.coversBand(other, band)),
+            [lang],
+            reason: '${island.id} odemyká jen svůj jazyk');
+      }
+    }
+    expect(catalog.byId('all.forever')?.type, ProductType.bundle);
+  });
+
+  test('packy: každé pásmo je známé a každý product je v katalogu', () async {
+    final catalog = await StoreCatalog.load();
+    for (final lang in Language.values) {
+      final raw =
+          await rootBundle.loadString('assets/packs/${lang.name}.json');
+      final pack = ContentPack.fromJson(
+          (jsonDecode(raw) as Map).cast<String, dynamic>());
+      for (final unit in pack.units) {
+        expect(kBands, contains(unit.band),
+            reason: '${unit.id}: neznámé pásmo „${unit.band}“');
+        if (unit.product.isNotEmpty) {
+          expect(catalog.knowsTag(unit.product), isTrue,
+              reason: '${unit.id}: product „${unit.product}“ není v katalogu');
+        }
+      }
+    }
+  });
 
   test('kEmojiByLang pokrývá každý jazyk × všechna písmena klávesnice', () {
     for (final lang in Language.values) {

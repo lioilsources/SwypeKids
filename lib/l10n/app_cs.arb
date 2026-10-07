@@ -246,5 +246,64 @@
   "badgeFriendOfAllHow": "Každé zvířátko dostalo dárek",
   "settingPetRounds": "Dárky zvířátkům: nejdřív napsat slovo",
   "petBowlFood": "miska",
-  "petBowlWater": "voda"
+  "petBowlWater": "voda",
+  "storeIslandA": "Ostrov písmenek",
+  "storeIslandB": "Ostrov slov",
+  "storeIslandC": "Ostrov vět",
+  "storeProductIsland": "{island} – {language}",
+  "@storeProductIsland": {
+    "placeholders": {
+      "island": {
+        "type": "String"
+      },
+      "language": {
+        "type": "String"
+      }
+    }
+  },
+  "storeProductIslandDesc": "Nové jednotky, nálepky a obyvatelé světa zvířátka. Jazyk: {language}.",
+  "@storeProductIslandDesc": {
+    "placeholders": {
+      "language": {
+        "type": "String"
+      }
+    }
+  },
+  "storeProductLanguage": "Další jazyk – {language}",
+  "@storeProductLanguage": {
+    "placeholders": {
+      "language": {
+        "type": "String"
+      }
+    }
+  },
+  "storeProductLanguageDesc": "{island} v dalším jazyce: {language}.",
+  "@storeProductLanguageDesc": {
+    "placeholders": {
+      "island": {
+        "type": "String"
+      },
+      "language": {
+        "type": "String"
+      }
+    }
+  },
+  "storeProductBundle": "Vše napořád",
+  "storeProductBundleDesc": "Všechny ostrovy a jazyky, i ty, které teprve přibudou.",
+  "storeProductParent": "Balíček pro rodiče",
+  "storeProductParentDesc": "Pracovní listy, tisk Mé knížky, týdenní přehled a přenos postupu.",
+  "storeStateFree": "zdarma",
+  "storeStateOwned": "máte",
+  "storeBuy": "Koupit za {price}",
+  "@storeBuy": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "storeRestore": "Obnovit nákupy",
+  "storeDebugTitle": "Obchod (ladění)",
+  "storeDebugEnable": "Simulovat zapnutý obchod",
+  "storeDebugForget": "Zapomenout nákupy"
 }

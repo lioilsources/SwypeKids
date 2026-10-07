@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import '../audio/audio_service.dart';
@@ -15,6 +16,7 @@ import '../world/world_clock.dart';
 import '../ui/app_font.dart';
 import '../ui/l10n.dart';
 import '../ui/emoji_art.dart';
+import 'store_debug_panel.dart';
 
 /// Stav písmene pro mřížku abecedy (roadmap P6).
 enum LetterStatus { unseen, practicing, mastered }
@@ -116,6 +118,12 @@ class _ParentScreenState extends State<ParentScreen> {
                     _Section(
                         title: context.l.sectionSettings,
                         child: const ParentSettings()),
+                    // Obchod je vypnutý (StoreConfig) — žádná záložka. Jen
+                    // v debug buildu přepínač na vyzkoušení zámků.
+                    if (kDebugMode)
+                      _Section(
+                          title: context.l.storeDebugTitle,
+                          child: const StoreDebugPanel()),
                   ],
                 ),
               ),

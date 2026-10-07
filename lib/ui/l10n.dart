@@ -3,6 +3,8 @@ import 'package:flutter/widgets.dart';
 import '../data/lessons.dart';
 import '../l10n/app_localizations.dart';
 import '../services/achievement_service.dart';
+import '../store/catalog.dart';
+import '../widgets/language_picker.dart' show kLanguageName;
 import '../world/world_clock.dart';
 
 export '../l10n/app_localizations.dart';
@@ -64,6 +66,38 @@ extension GameBadgeL10n on GameBadge {
         GameBadge.cuddler => l.badgeCuddlerHow,
         GameBadge.wishMaker => l.badgeWishMakerHow,
         GameBadge.friendOfAll => l.badgeFriendOfAllHow,
+      };
+}
+
+/// Název ostrova (pásma) v jazyce UI.
+String islandName(AppLocalizations l, String band) => switch (band) {
+      'b' => l.storeIslandB,
+      'c' => l.storeIslandC,
+      _ => l.storeIslandA,
+    };
+
+/// Název a popis produktu z katalogu v jazyce UI (jen rodičovský koutek).
+/// Jazyk produktu se píše svým vlastním jménem ([kLanguageName]).
+extension CatalogProductL10n on CatalogProduct {
+  String get _languageName => kLanguageName[language] ?? '';
+
+  String title(AppLocalizations l) => switch (type) {
+        ProductType.island =>
+          l.storeProductIsland(islandName(l, band ?? 'b'), _languageName),
+        ProductType.language => l.storeProductLanguage(_languageName),
+        ProductType.bundle => l.storeProductBundle,
+        ProductType.parent => l.storeProductParent,
+        // Tematické balíčky a hlas zatím v katalogu nejsou (§8).
+        ProductType.theme || ProductType.voice => id,
+      };
+
+  String description(AppLocalizations l) => switch (type) {
+        ProductType.island => l.storeProductIslandDesc(_languageName),
+        ProductType.language =>
+          l.storeProductLanguageDesc(islandName(l, band ?? 'a'), _languageName),
+        ProductType.bundle => l.storeProductBundleDesc,
+        ProductType.parent => l.storeProductParentDesc,
+        ProductType.theme || ProductType.voice => '',
       };
 }
 

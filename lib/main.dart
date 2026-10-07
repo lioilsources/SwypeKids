@@ -4,6 +4,7 @@ import 'audio/audio_service.dart';
 import 'data/lessons.dart';
 import 'screens/home_shell.dart';
 import 'screens/onboarding_screen.dart';
+import 'services/entitlement_service.dart';
 import 'services/profile_service.dart';
 import 'services/progress_service.dart';
 import 'services/session_service.dart';
@@ -17,6 +18,11 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await ProfileService.init();
   await ProgressService.init(profile: ProfileService.instance.activeId);
+  await EntitlementService.instance.load(
+    deviceLanguage:
+        WidgetsBinding.instance.platformDispatcher.locale.languageCode,
+    onboardedLanguage: ProgressService.instance.selectedLanguage,
+  );
   await AudioService.instance.loadSettings();
   await WorldClockService.instance.loadSettings();
   await SettingsService.instance.load();
@@ -46,11 +52,12 @@ Language _detectLanguage() {
   // Uložená volba má přednost; autodetekce jen při prvním startu.
   final saved = ProgressService.instance.selectedLanguage;
   final code = WidgetsBinding.instance.platformDispatcher.locale.languageCode;
-  return saved ??
+  // Se zapnutým obchodem jen jazyk, který má dítě odemčený.
+  return EntitlementService.instance.allowed(saved ??
       Language.values.firstWhere(
         (l) => l.name == code,
         orElse: () => Language.en,
-      );
+      ));
 }
 
 class SwyperKidsApp extends StatelessWidget {

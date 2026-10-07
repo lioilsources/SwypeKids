@@ -199,4 +199,31 @@ void main() {
     expect(ProgressService.instance.isExpeditionDue(t0.add(const Duration(days: 3))),
         isFalse);
   });
+
+  test('smazání prvního profilu smaže jeho postup, ne nastavení ani sourozence',
+      () async {
+    SharedPreferences.setMockInitialValues({
+      'sk.progress.cs': '{"stars":{"u1-l1":3}}',
+      'sk.global': '{}',
+      'sk.selectedLanguage': 'cs',
+      'sk.settings.leftHanded': true,
+      'sk.store.owned': <String>['lang.en'],
+      'sk.profiles': '[]',
+      'sk.activeProfile': 1,
+      'sk.p2.progress.cs': '{"stars":{"u1-l1":2}}',
+    });
+    await ProgressService.wipeProfile(1);
+    final keys = (await SharedPreferences.getInstance()).getKeys();
+    expect(keys, isNot(contains('sk.progress.cs')));
+    expect(keys, isNot(contains('sk.global')));
+    expect(
+        keys,
+        containsAll([
+          'sk.settings.leftHanded',
+          'sk.store.owned',
+          'sk.profiles',
+          'sk.activeProfile',
+          'sk.p2.progress.cs',
+        ]));
+  });
 }

@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import '../audio/audio_service.dart';
 import '../characters/mascot.dart';
 import '../data/lessons.dart';
+import '../services/entitlement_service.dart';
 import '../services/profile_service.dart';
 import '../services/progress_service.dart';
 import '../services/tts_service.dart';
@@ -44,7 +45,8 @@ class OnboardingScreen extends StatefulWidget {
 }
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
-  late Language _lang = widget.initialLanguage;
+  late Language _lang =
+      EntitlementService.instance.allowed(widget.initialLanguage);
   int _step = 0; // 0 jazyk, 1 zvířátko, 2 jméno
   String _avatar = ProfileService.defaultAvatar;
   final _name = TextEditingController();
@@ -99,6 +101,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         ProfileService.instance.complete(avatar: _avatar, name: _name.text);
     await ProgressService.init(profile: profile.id);
     ProgressService.instance.selectedLanguage = _lang;
+    // Zařízení s jazykem, který appka neumí: zdarma je první zvolený jazyk.
+    EntitlementService.instance.claimFreeLanguage(_lang);
     if (mounted) widget.onDone(_lang);
   }
 
@@ -201,7 +205,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           runSpacing: 12,
           alignment: WrapAlignment.center,
           children: [
-            for (final l in Language.values)
+            for (final l in EntitlementService.instance.childLanguages)
               _Choice(
                 key: ValueKey('lang-${l.name}'),
                 emoji: kLanguageFlag[l] ?? '🏳️',

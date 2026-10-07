@@ -469,4 +469,70 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get petBowlWater => 'eau';
+
+  @override
+  String get storeIslandA => 'Île des lettres';
+
+  @override
+  String get storeIslandB => 'Île des mots';
+
+  @override
+  String get storeIslandC => 'Île des phrases';
+
+  @override
+  String storeProductIsland(String island, String language) {
+    return '$island – $language';
+  }
+
+  @override
+  String storeProductIslandDesc(String language) {
+    return 'Nouvelles unités, autocollants et habitants du monde des animaux. Langue : $language.';
+  }
+
+  @override
+  String storeProductLanguage(String language) {
+    return 'Autre langue – $language';
+  }
+
+  @override
+  String storeProductLanguageDesc(String island, String language) {
+    return '$island dans une autre langue : $language.';
+  }
+
+  @override
+  String get storeProductBundle => 'Tout pour toujours';
+
+  @override
+  String get storeProductBundleDesc =>
+      'Toutes les îles et toutes les langues, y compris celles à venir.';
+
+  @override
+  String get storeProductParent => 'Pack parents';
+
+  @override
+  String get storeProductParentDesc =>
+      'Fiches, impression de Mon livre, bilan hebdomadaire et transfert de la progression.';
+
+  @override
+  String get storeStateFree => 'gratuit';
+
+  @override
+  String get storeStateOwned => 'acheté';
+
+  @override
+  String storeBuy(String price) {
+    return 'Acheter pour $price';
+  }
+
+  @override
+  String get storeRestore => 'Restaurer les achats';
+
+  @override
+  String get storeDebugTitle => 'Boutique (débogage)';
+
+  @override
+  String get storeDebugEnable => 'Simuler la boutique activée';
+
+  @override
+  String get storeDebugForget => 'Oublier les achats';
 }
