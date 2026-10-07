@@ -150,6 +150,12 @@ OBJ = {
   'pipoca': F('food', 'pipoca', acc='pipoca'),
   'escola': F('place', 'a escola', dir='para a escola'),
   'morango': F('food', 'morango', acc='morango'),
+  'queijo': F('food', 'queijo', acc='queijo'),
+  'suco': F('drink', 'suco', acc='suco'),
+  'pao': F('food', 'pão', acc='pão'),
+  'praia': F('place', 'a praia', loc='na praia', dir='para a praia'),
+  'bicicleta': F('vehicle', 'a bicicleta', acc='a bicicleta'),
+  'livro': F('thing', 'um livro', acc='um livro'),
  },
  # Čínština: bez pádů; místo po „睡" nese „在…上/里" samo, pořadí zůstává.
  'zh': {
@@ -165,6 +171,12 @@ OBJ = {
   'dangao': F('food', '蛋糕', acc='蛋糕'),
   'mianbao': F('food', '面包', acc='面包'),
   'putao': F('food', '葡萄', acc='葡萄'),
+  'xigua': F('food', '西瓜', acc='西瓜'),
+  'qiqiu': F('toy', '气球', acc='气球', instr='气球'),
+  'caomei': F('food', '草莓', acc='草莓'),
+  'rou': F('food', '肉', acc='肉'),
+  'mifan': F('food', '米饭', acc='米饭'),
+  'xiangjiao': F('food', '香蕉', acc='香蕉'),
  },
  # Japonština: částice jsou součást tvaru; „ほしい" bere が (rámec `ga`).
  'ja': {
@@ -180,6 +192,15 @@ OBJ = {
   'sakana': F('food', 'さかな', ga='さかなが', acc='さかなを'),
   'mikan': F('food', 'みかん', ga='みかんが', acc='みかんを'),
   'momo': F('food', 'もも', ga='ももが', acc='ももを'),
+  'yama': F('place', 'やま', dir='やまへ'),
+  'hon': F('thing', 'ほん', ga='ほんが'),
+  'tamago': F('food', 'たまご', ga='たまごが', acc='たまごを'),
+  'banana': F('food', 'バナナ', ga='バナナが', acc='バナナを'),
+  'ichigo': F('food', 'いちご', ga='いちごが', acc='いちごを'),
+  'pan': F('food', 'パン', ga='パンが', acc='パンを'),
+  'ocha': F('drink', 'おちゃ', ga='おちゃが', acc='おちゃを'),
+  'densha': F('vehicle', 'でんしゃ', ga='でんしゃが', instr='でんしゃで'),
+  'boushi': F('thing', 'ぼうし', ga='ぼうしが'),
  },
 }
 FRAME_OVERRIDE = {'ja': {'v1': 'ga'}, 'zh': {'v6': 'instr'}}
@@ -193,7 +214,8 @@ SUBJECT_TEXT = {
  'it': {'s5': 'Il cucciolo', 'topo': 'Il topo', 'cane': 'Il cane', 'gatto': 'Il gatto',
         'volpe': 'La volpe'},
  'pt': {'s5': 'O cachorrinho', 'leao': 'O leão', 'pato': 'O pato', 'sapo': 'O sapo',
-        'vaca': 'A vaca', 'macaco': 'O macaco', 'gato': 'O gato', 'jacare': 'O jacaré'},
+        'vaca': 'A vaca', 'macaco': 'O macaco', 'gato': 'O gato', 'jacare': 'O jacaré',
+        'peixe': 'O peixe', 'galinha': 'A galinha'},
 }
 NAMING = {'cs': 'To je {nom}.', 'en': 'This is {nom}.', 'de': 'Das ist {nom}.',
           'es': 'Esto es {nom}.', 'it': 'Ecco {nom}.', 'fr': "C'est {nom}.",
