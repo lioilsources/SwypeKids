@@ -1,6 +1,7 @@
 # SwypeKids — plán monetizace (v2, říjen 2026)
 
-Stav: návrh k rozhodnutí. Nahrazuje v3.1 návrh „jedna koupě všech jazyků".
+Stav: **rozhodnuto** (7. 10. 2026, §8). Nahrazuje v3.1 návrh „jedna koupě
+všech jazyků".
 Implementace je v roadmapě ve v4.0; tento dokument říká **co** prodávat,
 **kde** je hranice zdarma/placené, **za kolik**, a **v jakém pořadí** to
 stavět, aby první placený obsah vyšel spolu s obsahem, který za to stojí.
@@ -68,7 +69,7 @@ v assets (§5), aby šel přidat balíček bez změny kódu.
 | **Ostrov** (kapitola) | `island.<lang>.b` „Ostrov slov", `island.<lang>.c` „Ostrov vět" | Pásmo B / C daného jazyka (15–20 jednotek, ~80–100 lekcí, nálepky, obyvatelé světa zvířátka, nové předměty do builderu) | 29 Kč | Hlavní produkt. Vzniká s obsahem. |
 | **Jazyk** | `lang.<xx>` | Ostrov písmenek (pásmo A) dalšího jazyka | 29 Kč | Jazyk zařízení je vždy zdarma. Ostrovy B/C toho jazyka jsou samostatné položky. |
 | **Tematický balíček** | `theme.<lang>.<name>` např. `zima`, `dinosauri`, `vesmir`, `na-statku-2` | 3–5 nových jednotek s vlastní slovní zásobou + nálepky + obyvatelé + sezónní tajná nálepka | 29 Kč | Opakovatelný „1 $ produkt": JSON + nálepky z pipeline (`tool/emoji_art`, SPARK) + korektura vět (`docs/SENTENCES_REVIEW.md`). Může přijít s novým průvodcem („kamarád z ostrova"), ale průvodce není nikdy samostatně prodejný. |
-| **Hlas průvodce** | `voice.<lang>` | Nahraný lidský hlas místo TTS (fráze z manifestu, jména zvířátek, věty) | 29 Kč | Reálný náklad na výrobu; stáhne se jako asset, offline. Nejdřív cs, en. |
+| **Hlas průvodce** | `voice.<lang>` | Předem syntetizovaný hlas místo TTS za běhu (fráze z manifestu, jména zvířátek, věty) | 29 Kč | Do katalogu až po ověření licence (§10); asset offline, stejný hlas ve všech jazycích. |
 | **Rodičovský balíček** | `parent.plus` | Pracovní listy PDF z nejslabších písmen dítěte, tisk Mé knížky jako knížky, týdenní přehled PDF, export/import postupu | 29 Kč | Jediný produkt pro rodiče, ne pro dítě. Užitečný i jako argument pro školy. |
 | **Vše napořád** | `all.forever` | Všechny současné **i budoucí** položky výše pro všechny jazyky | 199 Kč / 7,99 $ | Rodinná volba; obchod to nabízí hned vedle balíčků. Apple i Google povolují „včetně budoucího obsahu" u non-consumable. |
 
@@ -115,7 +116,7 @@ test, zda rodiče platí. Cesta k většímu výnosu nevede přes vyšší ceny
 balíčků, ale přes (a) **školy a logopedy** (§3 školní verze, vyšší cena na
 zařízení, hromadný nákup), (b) **anglofonní trhy** (jazyk zařízení en →
 zdarma angličtina, placené všechno ostatní; trh ~50× větší než ČR),
-(c) více tematických balíčků, které se vyrábí levně.
+(c) více tematických balíčků, které se vyrábí levně. Regiony a pořadí vydání: §9.
 
 **Školní verze.** Apple School Manager a Google Play for Education umí
 hromadně koupit **aplikaci**, ne IAP. Proto samostatný záznam
@@ -198,23 +199,84 @@ neporuší zásada 3 a nikomu nic nezmizí.
 | **0 Rozhodnutí** | Potvrdit §2 hranici, §3 katalog, §4 ceny; vytvořit produkty v App Store Connect / Play Console (sandbox); zapnout Family Sharing; vyplnit Kids kategorie dotazník k IAP | Produkty jsou v sandboxu, ceny v Kč/€/$ ručně |
 | **1 Entitlementy bez obchodu** | `band`/`product` v packech, `catalog.json`, `EntitlementService`, `FakeStore`, zámky v `PackService`, mapa s ostrovem v mlze, dětský picker jen odemčené jazyky, grandfathering, testy | `flutter test` zelený; v debug buildu jde přepínačem v koutku simulovat koupi; dítě nikde nevidí cenu |
 | **2 Obchod** | `in_app_purchase`, `StoreService`, záložka Další ostrovy, obnovení, offline cache, karta „Pro rodiče" na `WinScreen`; PRIVACY.md doplnit odstavec o nákupech (obchod zpracovává platbu, appka nic neposílá) | Sandbox koupě na iOS i Androidu odemkne obsah; TestFlight/interní dráha |
-| **3 Obsah: Ostrov slov cs + en** | Pásmo B pro cs a en (15–20 jednotek, typy `missingLetter`, `syllableJoin`, `reviewMix`, `pictureOnly`), nálepky, obyvatelé, builder předměty, korektura vět podle `SENTENCES_REVIEW.md`; playtest podle `PLAYTEST.md` | Vydání s prvními dvěma placenými položkami `island.cs.b`, `island.en.b` + `lang.*` + `all.forever` |
-| **4 Opakovatelné balíčky** | Šablona tematického balíčku (skript: JSON kostra + seznam nálepek k výrobě + korpus vět k revizi), první dva (`zima`, `dinosauri`) pro cs/en; hlas průvodce cs | Nový tematický balíček od nápadu k vydání < 1 týden práce |
-| **5 Školy** | Flavor „SwypeKids pro školy": jiné bundle id, vše odemčeno, 30 profilů, export CSV, bez IAP; záznam v App Store (Education) a Play for Education; promo kódy pro logopedy | Hromadný nákup přes Apple School Manager funguje |
+| **3a Dorovnat Ostrov písmenek** | Pásmo A na ~15 jednotek tam, kde je kratší (ja 8, zh 11, pt 13), aby zdarma část byla všude „celý výsledek"; věty přes `SENTENCES_REVIEW.md` | Každý jazyk má pásmo A ≥ 15 jednotek, korpus vět `llm: ok` |
+| **3b Obsah: Ostrov slov ve všech jazycích** | Pásmo B pro všech 9 jazyků současně (15–20 jednotek, typy `missingLetter`, `syllableJoin`, `reviewMix`, `pictureOnly`), nálepky, obyvatelé, builder předměty, korektura vět; rodilí mluvčí přes nástroje z `tool/sentences/`; playtest cs podle `PLAYTEST.md`. Autorsky: cs a en ručně jako vzor, ostatní jazyky podle stejné kostry jednotek (písmena podle frekvence v jazyce, ne překladem cs) | Vydání s `island.<lang>.b` pro všech 9 jazyků + `lang.*` + `all.forever`; obchod zapnutý ve všech regionech z §9 |
+| **4 Opakovatelné balíčky** | Šablona tematického balíčku (skript: JSON kostra + seznam nálepek k výrobě + korpus vět k revizi), první dva (`zima`, `dinosauri`) pro všechny jazyky; hlas průvodce (§10) až po ověření licence | Nový tematický balíček od nápadu k vydání < 1 týden práce |
+| **5 Školy** (až po prvních prodejích) | Flavor „SwypeKids pro školy": jiné bundle id, vše odemčeno, 30 profilů, export CSV, bez IAP; záznam v App Store (Education) a Play for Education; promo kódy pro logopedy | Hromadný nákup přes Apple School Manager funguje |
 
 Fáze 1 a 2 lze stavět hned (bez obsahu). Fáze 3 je kritická cesta:
 **nic placeného nevyjde dřív než Ostrov slov.** Do té doby obchod v
 appce není (fáze 2 se nasadí jen s vypnutým katalogem), aby store
-recenze nehodnotily prázdnou nabídku.
+recenze nehodnotily prázdnou nabídku. Fáze 5 se otevře až podle prvních
+prodejů (rozhodnutí §8).
 
-## 8. Otázky k rozhodnutí
+## 8. Rozhodnutí (7. 10. 2026)
 
-- [ ] Hranice: všechno dnešní zdarma, platí se za nové ostrovy (§2) — nebo
-      přece jen uzamknout cs jednotky 13–17 pro nové instalace?
-- [ ] Angličtina pro českou rodinu placená (29 Kč) — ano?
-- [ ] Bundl „Vše napořád" 199 Kč / 7,99 $ včetně budoucího obsahu — ano?
-- [ ] Školní verze jako samostatná appka (§4) — chceme to vůbec řešit v
-      této fázi, nebo až po prvních prodejích?
-- [ ] Hlas průvodce: nahrávat (náklad, koordinace) nebo vynechat?
-- [ ] Pořadí obsahu: cs B a en B současně, nebo cs B první a en B o verzi
-      později?
+1. **Hranice za dnešním obsahem.** Všechno, co dnes je, zůstává zdarma;
+   platí se za nové ostrovy.
+2. **Jazyk zařízení zdarma, ostatní jazyky 29 Kč**, i angličtina pro
+   českou rodinu. Plán regionů podle podporovaných jazyků je v §9; Čína
+   se nevydává.
+3. **Bundl „Vše napořád" 199 Kč / 7,99 $ včetně budoucího obsahu.**
+4. **Školní verze až po prvních prodejích** (fáze 5 je podmíněná).
+5. **Hlas průvodce syntézou**, ne nahrávkou; před výrobou ověřit licenci
+   (§10). Do té doby produkt `voice.<lang>` není v katalogu.
+6. **Ostrov slov pro všechny jazyky současně**, ne jen cs + en (fáze 3b);
+   kratší pásma A se nejdřív dorovnají (fáze 3a).
+
+## 9. Regiony: kde a jak vydávat
+
+Zdarma je vždy jazyk zařízení, takže každý podporovaný jazyk je zároveň
+domácí trh, kde appka startuje bez bariéry. Pořadí vydání se řídí tím, kde
+umíme ověřit kvalitu (rodilí mluvčí, playtest) a velikostí trhu.
+
+| Vlna | Jazyk | Trhy (storefronty) | Co víme | Poznámky k vydání |
+|---|---|---|---|---|
+| 1 | cs | ČR | Domácí trh, playtesty, ~70 % Android | Vzor pro ostatní; Play „Designed for Families", App Store Kids 6–8. Slovensko: cs pack není sk, nevydávat jako sk. |
+| 2 | en | US, UK, IE, CA, AU, NZ (+ en jako druhý jazyk všude) | Největší trh, největší konkurence (Khan Kids zdarma, Endless Alphabet, Teach Your Monster) | Vyhraněná pozice: swype klávesnice + Zvěřinec + bez reklam a předplatného. Play „Teacher Approved" žádost. en-GB varianty slov až ve v4.x. |
+| 2 | de | DE, AT, CH | Vysoká ochota platit za vzdělávání, přísné GDPR-K (plníme) | Store texty de; rodičovský koutek je silný argument. |
+| 3 | es | ES + LatAm (MX, AR, CO, CL, PE) | Velký trh, nižší cenová citlivost v LatAm | V LatAm nastavit nižší lokální úroveň ceny (obchody umí cenu per storefront), ne přepočet z 0,99 $. |
+| 3 | pt | PT, BR | Brazílie = obří Android trh | Nižší lokální cena v BR; pt pack je pt-PT, zkontrolovat slovník pro BR (rodilý mluvčí) před vydáním v BR. |
+| 3 | fr | FR, BE, CH, CA (Québec) | Střední trh, vysoké nároky na jazyk | Québec: francouzská verze listingu je povinná. |
+| 3 | it | IT | Menší trh | Vydat s vlnou 3 bez zvláštní práce. |
+| 4 | ja | JP | iOS silný, ochota platit vysoká; pásmo A má jen 8 jednotek; swype romaji → hiragana je pro JP netypické | Vydat až po fázi 3a a playtestu s japonskou rodinou; jinak hrozí špatné recenze na domácím trhu. |
+| — | zh | **nevydávat v Číně**; zh zůstává v appce | App Store v ČLR vyžaduje místního vydavatele a ICP; Google Play tam není; pack je zjednodušená čínština s pinyinem (ne tradiční znaky pro TW/HK) | zh je k dispozici všude jako `lang.zh` (bilingvní rodiny v zahraničí), nikde není domácím jazykem storefrontu. Čínský storefront v App Store Connect vyřadit. |
+
+Společné pro všechny regiony:
+
+- **Ceny ručně per storefront** v nejnižší úrovni (29 Kč, 0,99 €, 0,99 $,
+  0,99 £, odpovídající JPY), bundl v ekvivalentu 199 Kč / 7,99 $; LatAm a
+  BR o úroveň níž. Nikdy nespoléhat na automatický přepočet.
+- **Store listing ve všech 8 vydávaných jazycích** (`docs/STORE.md` dnes
+  cs + en; doplnit de, es, pt, fr, it, ja) a screenshoty z
+  `tool/store_screenshots.sh` s příslušným jazykem. Privacy policy URL
+  v každém jazyce (přeložit `docs/PRIVACY.md`).
+- **Věkové hodnocení** per region (IARC na Play, Apple dotazník) a Kids
+  kategorie všude, kde existuje.
+- **Family Sharing** zapnuté u všech položek na iOS; na Play v koutku
+  věta o nesdílení IAP.
+- Jazyk zdarma = jazyk zařízení při prvním startu (fallback: jazyk
+  vybraný v onboardingu, když zařízení má nepodporovaný jazyk). Zapsat
+  jednou provždy, aby změna jazyka telefonu neodemykala další jazyk.
+
+## 10. Hlas průvodce: syntéza a licence
+
+Rozhodnuto nenahrávat, ale syntetizovat předem (soubory v assetu
+produktu, offline), ne volat TTS za běhu (to dělá dnešní `flutter_tts`
+zdarma a zůstává). Před výrobou ověřit u zvolené služby (Azure Neural
+TTS, Google Cloud TTS, ElevenLabs, OpenAI TTS…):
+
+- licence dovoluje **komerční redistribuci vygenerovaného audia** jako
+  součást placené aplikace (ne jen „použití v produktu za běhu");
+- žádné omezení na **obsah pro děti** ani požadavek na označení „syntetický
+  hlas" v UI (když je, splnit v koutku);
+- hlas není klonem reálné osoby bez souhlasu; u „preset" hlasů ověřit,
+  že služba drží práva;
+- stejný hlas (nebo rodina hlasů) existuje pro všech 9 jazyků, aby
+  průvodce zněl všude stejně.
+
+Výstup: krátký zápis v tomto dokumentu (služba, hlas, odkaz na podmínky,
+datum) a potom teprve `voice.<lang>` do katalogu. Rozsah: fráze průvodce
+z manifestu, jména nálepek (`reward.label`), věty z korpusu
+(`SentenceCorpus`) — ty se dají generovat skriptem z `review/sentences_<lang>.tsv`,
+takže nový balíček dostane hlas automaticky.
