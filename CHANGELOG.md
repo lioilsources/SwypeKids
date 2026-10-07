@@ -1,5 +1,9 @@
 # Changelog
 
+## [07/10/2026] — v2.16.1
+- Oprava: smazání prvního dětského profilu teď opravdu smaže jeho postup
+- Příprava na placený obsah (zámky ostrovů a jazyků, katalog) — zatím vypnuto, všech 9 jazyků zdarma
+
 ## [07/10/2026] — v2.16.0
 - Ostrov písmenek dorovnán: japonština 15 jednotek (z 8), čínština 15 (z 11), portugalština 15 (z 13)
 - Nové dlaždice vět a obyvatelé Zvěřince v ja, zh, pt
