@@ -1,53 +1,220 @@
-# SwypeKids — monetizace: rozhodnutí (v3.1)
+# SwypeKids — plán monetizace (v2, říjen 2026)
 
-Stav: návrh k potvrzení (říjen 2026). Roadmapa §3 P7 a §7 požaduje
-rozhodnutí nejpozději ve v3.1; implementace je plánovaná na v4.0.
+Stav: návrh k rozhodnutí. Nahrazuje v3.1 návrh „jedna koupě všech jazyků".
+Implementace je v roadmapě ve v4.0; tento dokument říká **co** prodávat,
+**kde** je hranice zdarma/placené, **za kolik**, a **v jakém pořadí** to
+stavět, aby první placený obsah vyšel spolu s obsahem, který za to stojí.
 
-## Zásady, které se nemění
+## 0. Odpověď na otázku jedním odstavcem
 
-1. **Dítě nikdy nevidí nákup.** Žádné IAP, „gemy", energie ani obchod
-   v dětské části. Vše placené je za rodičovskou bránou.
-2. **Žádné reklamy, žádný tracking** (viz `docs/PRIVACY.md`). Platí i pro
-   případnou bezplatnou verzi.
-3. **Nic, co se dítě naučilo, nezmizí.** Postup, nálepky a knížka zůstávají
-   bez ohledu na platbu.
-4. **Offline.** Odemčení se ověřuje obchodem (App Store / Google Play
-   receipt), ne vlastním serverem.
+Ano: **funkční a užitečná appka zdarma, placený obsah od určité kapitoly,
+balíček za ~1 $ (29 Kč)** je správný základ. Dvě úpravy: (1) hranici
+nedávat „od 13. jednotky" uprostřed dnešního obsahu, ale na konec
+dnešního **Ostrova písmenek** (pásmo A) — všechno, co dnes je, zůstane
+zdarma, platí se za **nové ostrovy**; (2) k balíčkům za 1 $ přidat jeden
+**balíček „Vše napořád"** (~199 Kč / 7,99 $), protože samotné dolarové
+balíčky mají strop výnosu, a **školní verzi** jako samostatnou placenou
+appku (školy nemohou hromadně kupovat IAP). Zbytek dokumentu je zdůvodnění
+a plán.
 
-## Doporučení
+## 1. Zásady, které se nemění
 
-**Jednorázová koupě „SwypeKids — všechny jazyky", rodinná.**
+1. **Dítě nikdy nevidí nákup.** Žádná cena, tlačítko „koupit", měna,
+   energie ani obchod v dětské části. Vše placené je za rodičovskou bránou
+   (`ParentGate`, otázka a × b).
+2. **Žádné reklamy, žádný tracking** (`docs/PRIVACY.md`). Nákup se
+   ověřuje obchodem (StoreKit 2 / Play Billing), žádný vlastní server.
+3. **Nic, co dítě mělo, nezmizí.** Postup, nálepky, knížka, a také obsah,
+   který dítě už hrálo před zavedením plateb (grandfathering, §6).
+4. **Žádný tlak na dítě.** Zamčený obsah se dítěti ukáže nejvýš jako
+   „další ostrov v mlze" bez jakékoli akce; cesta k nákupu vede jen přes
+   rodičovský koutek.
+5. **Offline.** Odemčení je uložené lokálně, obchod se ověřuje při startu,
+   když je síť; bez sítě platí poslední známý stav.
 
-| | |
-|---|---|
-| Zdarma | První jazyk (podle zařízení) kompletní: celé pásmo A, builder vět, Zvěřinec, odznaky, rodičovský koutek. Žádný časový limit zkušební verze. |
-| Placené (jednorázově) | Dalších 8 jazyků + budoucí pásma B–C a stahovatelné packy pro všechny jazyky. |
-| Cena | Nižší střední pásmo dětských vzdělávacích appek: orientačně 149–249 Kč / 6–10 €/$ (potvrdit podle konkurence v době vydání). |
-| Rodina | Apple Family Sharing a Google Play Family Library zapnuté — jedna koupě pro sourozence (profily už fungují). |
-| Školy | Apple School Manager / Google Play for Education: stejná aplikace, hromadný nákup, bez zvláštní verze. |
+## 2. Co je zdarma a kde je hranice
 
-Proč ne předplatné: rodiče dětských appek ho špatně snášejí, obsah je
-jednorázový (dítě se naučí číst a odejde) a předplatné by tlačilo na
-„engagement" mechaniky, které roadmapa výslovně odmítá (streaky, tlak).
+**Zdarma = jeden celý výsledek:** dítě se naučí všechna písmena a přečte
+první slova. To je dnešní obsah: Ostrov písmenek (pásmo A, cs 17 jednotek /
+91 lekcí), builder vět, Zvěřinec včetně světa zvířátka, průvodci (všichni 4),
+odznaky, Má knížka, rodičovský koutek, profily sourozenců. Bez časového
+limitu, bez „zkušební verze".
 
-Proč ne reklamy / freemium s měnou: porušuje Kids kategorii a princip
-„dítě nikdy nevidí nákup".
+Zdarma je **jazyk zařízení** (resp. jazyk zvolený v onboardingu při prvním
+startu). Český tablet má zdarma češtinu, německý němčinu. Angličtina jako
+druhý jazyk české rodiny je placená — je to nejčastější a nejsilnější důvod
+ke koupi; nechat ji zdarma by zbylé balíčky skoro vyprázdnilo.
 
-## Co to znamená pro kód (v4.0)
+**Placené = další ostrovy.** Hranice je přirozená: dítě dohraje poslední
+jednotku ostrova (dnes `WinScreen`), na mapě se za vodou objeví další
+ostrov v mlze. Dítě na něj nemůže kliknout; rodič ho otevře v koutku.
 
-- `PackService`: packy mimo první jazyk označené `locked` dokud není
-  entitlement; mapa zamčený jazyk nenabízí dítěti (LanguagePicker ukáže
-  jen odemčené; další jazyky až z rodičovského koutku).
-- Nákup a obnovení nákupů **jen v rodičovském koutku** (za bránou), přes
-  `in_app_purchase` (StoreKit 2 / Play Billing), bez vlastního backendu.
-- Entitlement uložený lokálně (`sk.settings.entitlement`), při startu
-  ověřený proti obchodu, offline fallback = poslední známý stav.
-- Testy: zamčený jazyk není v dětském UI; obnovení nákupu; offline start.
+Proč ne „od 13. jednotky" v dnešním obsahu: (a) existující děti by měly
+zamčené to, co včera hrály; (b) 5 jednotek pásma B je na balíček málo a
+pásmo A by bylo useknuté před „Hlásky a rýmy" a „Slova do vět", které ho
+uzavírají; (c) placené by tak vyšlo dřív než obsah, který platbu
+ospravedlní. Hranice „nové ostrovy" znamená, že **monetizace vychází
+současně s pásmem B** (§7, fáze 3) — to je záměr, ne zpoždění.
 
-## Otázky k potvrzení
+## 3. Katalog: co prodávat
 
-- [ ] Souhlas s modelem „první jazyk zdarma, zbytek jednorázově".
-- [ ] Cena a zda nabídnout i „jen jeden další jazyk" (doporučení: ne,
-  zjednodušit na jeden produkt).
-- [ ] Zda nechat zdarma i angličtinu jako druhý jazyk (argument: nejčastější
-  druhý jazyk rodin v ČR; proti: snižuje důvod ke koupi).
+Všechno jsou **non-consumable** položky (jednorázové, obnovitelné,
+s Family Sharing na iOS). Ceny v nejnižší úrovni obchodu (29 Kč / 0,99 $ /
+0,99 €) kromě bundlu. Produktová ID jsou stabilní řetězce, katalog je JSON
+v assets (§5), aby šel přidat balíček bez změny kódu.
+
+| Typ | ID | Co odemkne | Cena | Poznámka |
+|---|---|---|---|---|
+| **Ostrov** (kapitola) | `island.<lang>.b` „Ostrov slov", `island.<lang>.c` „Ostrov vět" | Pásmo B / C daného jazyka (15–20 jednotek, ~80–100 lekcí, nálepky, obyvatelé světa zvířátka, nové předměty do builderu) | 29 Kč | Hlavní produkt. Vzniká s obsahem. |
+| **Jazyk** | `lang.<xx>` | Ostrov písmenek (pásmo A) dalšího jazyka | 29 Kč | Jazyk zařízení je vždy zdarma. Ostrovy B/C toho jazyka jsou samostatné položky. |
+| **Tematický balíček** | `theme.<lang>.<name>` např. `zima`, `dinosauri`, `vesmir`, `na-statku-2` | 3–5 nových jednotek s vlastní slovní zásobou + nálepky + obyvatelé + sezónní tajná nálepka | 29 Kč | Opakovatelný „1 $ produkt": JSON + nálepky z pipeline (`tool/emoji_art`, SPARK) + korektura vět (`docs/SENTENCES_REVIEW.md`). Může přijít s novým průvodcem („kamarád z ostrova"), ale průvodce není nikdy samostatně prodejný. |
+| **Hlas průvodce** | `voice.<lang>` | Nahraný lidský hlas místo TTS (fráze z manifestu, jména zvířátek, věty) | 29 Kč | Reálný náklad na výrobu; stáhne se jako asset, offline. Nejdřív cs, en. |
+| **Rodičovský balíček** | `parent.plus` | Pracovní listy PDF z nejslabších písmen dítěte, tisk Mé knížky jako knížky, týdenní přehled PDF, export/import postupu | 29 Kč | Jediný produkt pro rodiče, ne pro dítě. Užitečný i jako argument pro školy. |
+| **Vše napořád** | `all.forever` | Všechny současné **i budoucí** položky výše pro všechny jazyky | 199 Kč / 7,99 $ | Rodinná volba; obchod to nabízí hned vedle balíčků. Apple i Google povolují „včetně budoucího obsahu" u non-consumable. |
+
+Co **neprodávat**, i když by se to prodávalo dobře:
+
+- **Průvodce, pózy, nálepky, biomy jako kosmetika.** Je to přesně to, co
+  děti chtějí, a tedy přesně to, co z nákupu dělá tlak na dítě (a co
+  recenzenti Kids kategorie trestají). Kosmetika přichází jen jako součást
+  obsahu.
+- **Další profily dětí.** Sourozenci zdarma jsou prodejní argument, ne
+  produkt.
+- **Odstranění limitu / zrychlení.** Nic, co mění tempo učení.
+- **Předplatné.** Obsah je jednorázový (dítě se naučí číst a odejde),
+  rodiče ho u dětských appek špatně snášejí, a tlačí na „engagement"
+  mechaniky, které roadmapa odmítá.
+- **Dýško / „kup průvodci banán".** V koutku by to šlo, ale výnos je
+  zanedbatelný a plete katalog.
+
+## 4. Cena a realistická očekávání
+
+**Proč 29 Kč / 0,99 $:** psychologická nula, bez rozmýšlení, a hlavně
+rodič ví, že za 29 Kč dostane *konkrétní* věc (ostrov slov v češtině), ne
+„přístup". Po provizi 15 % (Apple Small Business Program i Google do 1 M $
+ročně) zůstane ~0,84 $ / ~25 Kč z balíčku.
+
+**Proč navíc bundl 199 Kč:** při čistě dolarových balíčcích je průměrná
+útrata platícího rodiče ~1–2 balíčky. Bundl zvedá průměr na 5–8 $ u části
+rodin, které chtějí „mít to vyřešené" (dva sourozenci, dva jazyky). Cena
+musí být pod součtem 3–4 položek, které rodina reálně chce (cs B + cs C +
+en A + hlas = 116 Kč), ale výrazně nad jednou — 199 Kč / 7,99 $ sedí a je
+v dolním středu dětských vzdělávacích appek.
+
+**Střízlivá čísla.** Konverze free → platící u dětských vzdělávacích appek
+bez marketingu bývá 2–5 % instalací. Modelový měsíc:
+
+| Instalace/měs. | Platící (3 %) | Útrata/platící | Hrubý výnos | Po provizi |
+|---|---|---|---|---|
+| 500 | 15 | 2,5 $ (mix balíčků a bundlu) | ~38 $ | ~32 $ |
+| 2 000 | 60 | 2,5 $ | ~150 $ | ~128 $ |
+| 10 000 | 300 | 2,5 $ | ~750 $ | ~640 $ |
+
+To není obživa; je to pokrytí nákladů (Apple Developer, SPARK, hlas) a
+test, zda rodiče platí. Cesta k většímu výnosu nevede přes vyšší ceny
+balíčků, ale přes (a) **školy a logopedy** (§3 školní verze, vyšší cena na
+zařízení, hromadný nákup), (b) **anglofonní trhy** (jazyk zařízení en →
+zdarma angličtina, placené všechno ostatní; trh ~50× větší než ČR),
+(c) více tematických balíčků, které se vyrábí levně.
+
+**Školní verze.** Apple School Manager a Google Play for Education umí
+hromadně koupit **aplikaci**, ne IAP. Proto samostatný záznam
+„SwypeKids pro školy" (jiné bundle id, stejný kód, build flavor): placená
+předem (orientačně 249–399 Kč / zařízení, 50 % sleva při 20+ kusech je
+u Apple volbou vývojáře), všechen obsah, až 30 profilů, export třídy CSV,
+bez IAP. Logopedi a speciální pedagogové jsou v ČR reálná nika pro appku
+na swypování slabik; promo kódy (Apple dává 100 na položku a verzi) na
+rozdávání těm, kdo appku doporučují.
+
+**Platformy.** Apple: Family Sharing u non-consumable IAP zapnout (jedna
+koupě pro sourozence na různých zařízeních). Google: Family Library IAP
+**nepodporuje** — sourozenci na jednom zařízení sdílejí přes profily,
+na dvou zařízeních platí dvakrát; v koutku to říct narovinu. Ceny
+nastavit v lokálních měnách ručně (29 Kč, 0,99 €, 0,99 $), ne přepočtem.
+macOS a Linux: macOS přes App Store stejně jako iOS; Linux bez obchodu →
+všechen obsah zdarma (zanedbatelný trh, zjednodušuje build).
+
+## 5. Co to znamená pro kód
+
+**Data.**
+
+- Jednotka dostane `band: "a" | "b" | "c"` (výchozí `a`) a volitelně
+  `product: "theme.cs.zima"`; pack dostane `product: "lang.cs"`.
+  `assets/store/catalog.json`: seznam produktů (id, typ, jazyk, co
+  odemyká, lokalizovaný název/popis přes ARB klíče, pořadí v koutku).
+  `test/pack_loading_test.dart` ověří, že každý produkt v katalogu má
+  obsah a každý `product` v packu je v katalogu.
+- Pravidlo „nikdy nepřidávat lekce do existující jednotky" platí dál;
+  tematický balíček = nové jednotky s vlastním `product`.
+
+**Služby.**
+
+- `EntitlementService` (ChangeNotifier): `owns(productId)`,
+  `unlocked(unit)`, `freeLanguage` (jazyk zařízení/onboardingu, uloženo
+  jednou provždy v `sk.store.freeLang`), `grandfathered` (§6). Stav v
+  `sk.store.owned` (globální, ne per profil). Zdroj pravdy je obchod;
+  lokální cache je fallback pro offline.
+- `StoreService` nad `in_app_purchase` (StoreKit 2 na iOS 15+, Play
+  Billing 6+): načtení produktů, koupě, obnovení, ověření na startu.
+  Za rozhraním, aby testy a Linux build měly `FakeStore` (vše zdarma /
+  skript nákupu).
+- `PackService`: pack jiného než zdarma jazyka se načte, ale jeho
+  jednotky mají `locked` podle entitlementu; `LanguagePicker` v dětské
+  části ukazuje jen jazyky s odemčeným pásmem A (další jazyky přidává
+  rodič v koutku a pak se dítěti objeví vlajka).
+
+**UI.**
+
+- Mapa: za poslední odemčenou jednotkou ostrov v mlze (`BiomeBand` fog
+  už existuje) s loďkou; žádný hit-test pro dítě. Průvodce o něm nemluví.
+- `WinScreen` (dohraný ostrov): oslava pro dítě jako dnes + malá karta
+  „Pro rodiče" s ikonou brány; ťuknutí → `ParentGate` → koutek, záložka
+  „Další ostrovy".
+- Rodičovský koutek, nová záložka **Další ostrovy**: pro aktuální jazyk
+  seznam položek s cenou z obchodu (nikdy natvrdo), stav (zdarma / máte /
+  koupit), „Vše napořád" nahoře, „Obnovit nákupy" dole, věta o Family
+  Sharing / Play omezení. Cizí jazyky pod rozbalením.
+- Nic z toho se nerenderuje v dětském UI mimo loďku a kartu pro rodiče.
+
+**Testy.** Zamčená jednotka není ťuknutelná a `GameScreen` ji odmítne
+spustit; zamčený jazyk není v dětském pickeru; koupě přes `FakeStore`
+odemkne a přežije restart; offline start s cache; grandfathering;
+Linux build = vše odemčené; `app_start_test` bez sítě nespadne.
+Ruční: StoreKit configuration file v Xcode, sandbox tester; Play interní
+dráha s license testery.
+
+## 6. Grandfathering: stávající instalace
+
+Při prvním startu po verzi s obchodem: každý jazyk, ve kterém má
+kterýkoli profil aspoň jednu hvězdu, se zapíše do `sk.store.grandfathered`
+a jeho pásmo A zůstane odemčené navždy (i když to není jazyk zařízení).
+Nové ostrovy B/C jsou pro všechny placené stejně — ty nikdo neměl. Tak se
+neporuší zásada 3 a nikomu nic nezmizí.
+
+## 7. Fáze (pro Opus)
+
+| Fáze | Co | Hotovo znamená |
+|---|---|---|
+| **0 Rozhodnutí** | Potvrdit §2 hranici, §3 katalog, §4 ceny; vytvořit produkty v App Store Connect / Play Console (sandbox); zapnout Family Sharing; vyplnit Kids kategorie dotazník k IAP | Produkty jsou v sandboxu, ceny v Kč/€/$ ručně |
+| **1 Entitlementy bez obchodu** | `band`/`product` v packech, `catalog.json`, `EntitlementService`, `FakeStore`, zámky v `PackService`, mapa s ostrovem v mlze, dětský picker jen odemčené jazyky, grandfathering, testy | `flutter test` zelený; v debug buildu jde přepínačem v koutku simulovat koupi; dítě nikde nevidí cenu |
+| **2 Obchod** | `in_app_purchase`, `StoreService`, záložka Další ostrovy, obnovení, offline cache, karta „Pro rodiče" na `WinScreen`; PRIVACY.md doplnit odstavec o nákupech (obchod zpracovává platbu, appka nic neposílá) | Sandbox koupě na iOS i Androidu odemkne obsah; TestFlight/interní dráha |
+| **3 Obsah: Ostrov slov cs + en** | Pásmo B pro cs a en (15–20 jednotek, typy `missingLetter`, `syllableJoin`, `reviewMix`, `pictureOnly`), nálepky, obyvatelé, builder předměty, korektura vět podle `SENTENCES_REVIEW.md`; playtest podle `PLAYTEST.md` | Vydání s prvními dvěma placenými položkami `island.cs.b`, `island.en.b` + `lang.*` + `all.forever` |
+| **4 Opakovatelné balíčky** | Šablona tematického balíčku (skript: JSON kostra + seznam nálepek k výrobě + korpus vět k revizi), první dva (`zima`, `dinosauri`) pro cs/en; hlas průvodce cs | Nový tematický balíček od nápadu k vydání < 1 týden práce |
+| **5 Školy** | Flavor „SwypeKids pro školy": jiné bundle id, vše odemčeno, 30 profilů, export CSV, bez IAP; záznam v App Store (Education) a Play for Education; promo kódy pro logopedy | Hromadný nákup přes Apple School Manager funguje |
+
+Fáze 1 a 2 lze stavět hned (bez obsahu). Fáze 3 je kritická cesta:
+**nic placeného nevyjde dřív než Ostrov slov.** Do té doby obchod v
+appce není (fáze 2 se nasadí jen s vypnutým katalogem), aby store
+recenze nehodnotily prázdnou nabídku.
+
+## 8. Otázky k rozhodnutí
+
+- [ ] Hranice: všechno dnešní zdarma, platí se za nové ostrovy (§2) — nebo
+      přece jen uzamknout cs jednotky 13–17 pro nové instalace?
+- [ ] Angličtina pro českou rodinu placená (29 Kč) — ano?
+- [ ] Bundl „Vše napořád" 199 Kč / 7,99 $ včetně budoucího obsahu — ano?
+- [ ] Školní verze jako samostatná appka (§4) — chceme to vůbec řešit v
+      této fázi, nebo až po prvních prodejích?
+- [ ] Hlas průvodce: nahrávat (náklad, koordinace) nebo vynechat?
+- [ ] Pořadí obsahu: cs B a en B současně, nebo cs B první a en B o verzi
+      později?
