@@ -1,5 +1,8 @@
 # Changelog
 
+## [07/10/2026] — v2.15.2
+- Plán monetizace v2 (docs/MONETIZATION.md): dnešní obsah a jazyk zařízení zdarma, nové ostrovy za 29 Kč, bundl Vše napořád, regiony, fáze 0–5
+
 ## [07/10/2026] — v2.15.1
 - Tácek dárků ve světě zvířátka jde posouvat do strany (tah nahoru dárek zvedne)
 - Počítadlo Zvěřince počítá jen zvířátka, ne tajné nálepky
