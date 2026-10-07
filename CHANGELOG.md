@@ -1,5 +1,9 @@
 # Changelog
 
+## [07/10/2026] — v2.16.0
+- Ostrov písmenek dorovnán: japonština 15 jednotek (z 8), čínština 15 (z 11), portugalština 15 (z 13)
+- Nové dlaždice vět a obyvatelé Zvěřince v ja, zh, pt
+
 ## [07/10/2026] — v2.15.2
 - Plán monetizace v2 (docs/MONETIZATION.md): dnešní obsah a jazyk zařízení zdarma, nové ostrovy za 29 Kč, bundl Vše napořád, regiony, fáze 0–5
 
