@@ -79,7 +79,8 @@ class ProgressService {
           (key.startsWith('sk.settings.') ||
               key.startsWith('sk.store.') ||
               key.startsWith('sk.profile') ||
-              key.startsWith('sk.p') ||
+              // Klíče sourozenců (sk.p2.…), ne vlastní „sk.progress.…“.
+              RegExp(r'^sk\.p\d+\.').hasMatch(key) ||
               key == 'sk.activeProfile')) {
         continue;
       }
