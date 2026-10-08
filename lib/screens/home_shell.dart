@@ -209,7 +209,7 @@ class _AppDrawer extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.fromLTRB(20, 24, 20, 12),
               child: Text(
-                '🎹 Swype Kids',
+                '🎹 SwypeKids',
                 style: TextStyle(
                   fontFamily: kDisplayFont,
                   fontFamilyFallback: kFontFallback,

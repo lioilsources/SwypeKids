@@ -117,18 +117,18 @@ snímky jsou další krok.
 
 ### Česky (primární jazyk záznamu)
 
-**Název (26/30):** SwypeKids – čtení pro děti
+**Název (30/30):** SwypeKids: Objevuj svět písmen
 
-**Podtitul (25/30):** Písmenka a slabiky prstem
+**Podtitul (29/30):** Čtení, slabiky a slova prstem
 
 **Krátký popis, Google (71/80):** Hra, ve které se děti 5–9 let učí číst přejížděním prstem po obrázcích.
 
 **Promo text, Apple (101/170):** Písmenka, slabiky a první věty prstem po obrázkové klávesnici. Bez reklam, bez nákupů, úplně offline.
 
-**Klíčová slova, Apple (91/100):**
+**Klíčová slova, Apple (93/100):**
 
 ```
-čtení,písmenka,slabiky,škola,slabikář,abeceda,první třída,učení,hra,předškolák,prvňák,slova
+čtení,číst,písmenka,děti,škola,slabikář,abeceda,první třída,učení,hra,předškolák,prvňák,swipe
 ```
 
 **Popis:**
@@ -155,18 +155,18 @@ Pro děti od 5 let, které se chystají do první třídy, i pro prvňáky, kte�
 
 ### English (en-US, en-GB)
 
-**Název (28/30):** SwypeKids – Reading for Kids
+**Název (27/30):** SwypeKids: World of Letters
 
-**Podtitul (28/30):** Letters & syllables by swipe
+**Podtitul (24/30):** Learn to read by swiping
 
 **Krátký popis, Google (68/80):** A game where kids aged 5–9 learn to read by swiping across pictures.
 
 **Promo text, Apple (106/170):** Letters, syllables and first sentences by swiping a picture keyboard. No ads, no purchases, fully offline.
 
-**Klíčová slova, Apple (93/100):**
+**Klíčová slova, Apple (94/100):**
 
 ```
-reading,letters,syllables,phonics,alphabet,first grade,learn,preschool,spelling,words,offline
+reading,kids,syllables,phonics,alphabet,first grade,preschool,spelling,words,swipe,abc,offline
 ```
 
 **Popis:**
@@ -193,18 +193,18 @@ For children from age 5 getting ready for school, and for first-graders who need
 
 ### Deutsch (de-DE)
 
-**Název (28/30):** SwypeKids – Lesen für Kinder
+**Název (30/30):** SwypeKids: Welt der Buchstaben
 
-**Podtitul (27/30):** Buchstaben & Silben wischen
+**Podtitul (26/30):** Lesen lernen durch Wischen
 
 **Krátký popis, Google (79/80):** Ein Spiel, in dem Kinder von 5–9 Jahren durch Wischen über Bilder lesen lernen.
 
 **Promo text, Apple (114/170):** Buchstaben, Silben und erste Sätze per Wisch über eine Bildertastatur. Ohne Werbung, ohne Käufe, komplett offline.
 
-**Klíčová slova, Apple (94/100):**
+**Klíčová slova, Apple (95/100):**
 
 ```
-lesen,buchstaben,silben,alphabet,schule,erste klasse,lernen,vorschule,wörter,fibel,abc,offline
+kinder,silben,alphabet,schule,erste klasse,vorschule,wörter,fibel,abc,swipe,lesenlernen,offline
 ```
 
 **Popis:**
@@ -230,9 +230,9 @@ Für Kinder ab 5 Jahren vor dem Schulstart und für Erstklässler, die in Ruhe u
 
 ### Español (es-ES, es-MX)
 
-**Název (27/30):** SwypeKids – Leer para niños
+**Název (26/30):** SwypeKids: Mundo de letras
 
-**Podtitul (28/30):** Letras y sílabas con el dedo
+**Podtitul (26/30):** Aprende a leer con el dedo
 
 **Krátký popis, Google (78/80):** Un juego en el que los niños de 5 a 9 años aprenden a leer deslizando el dedo.
 
@@ -241,7 +241,7 @@ Für Kinder ab 5 Jahren vor dem Schulstart und für Erstklässler, die in Ruhe u
 **Klíčová slova, Apple (93/100):**
 
 ```
-leer,letras,sílabas,abecedario,colegio,primero,aprender,preescolar,palabras,lectura,silabario
+niños,sílabas,abecedario,colegio,primero,preescolar,palabras,lectura,silabario,swipe,abc,leer
 ```
 
 **Popis:**
@@ -267,18 +267,18 @@ Para niños a partir de 5 años que se preparan para el colegio y para los de pr
 
 ### Português (pt-BR)
 
-**Název (29/30):** SwypeKids – Ler para crianças
+**Název (27/30):** SwypeKids: Mundo das letras
 
-**Podtitul (27/30):** Letras e sílabas com o dedo
+**Podtitul (25/30):** Aprender a ler com o dedo
 
 **Krátký popis, Google (71/80):** Um jogo em que crianças de 5 a 9 anos aprendem a ler deslizando o dedo.
 
 **Promo text, Apple (123/170):** Letras, sílabas e primeiras frases deslizando o dedo num teclado de figuras. Sem anúncios, sem compras, totalmente offline.
 
-**Klíčová slova, Apple (89/100):**
+**Klíčová slova, Apple (88/100):**
 
 ```
-ler,letras,sílabas,alfabeto,escola,alfabetização,aprender,pré-escola,palavras,leitura,abc
+crianças,sílabas,alfabeto,escola,alfabetização,pré-escola,palavras,leitura,abc,swipe,ler
 ```
 
 **Popis:**
@@ -304,18 +304,18 @@ Para crianças a partir de 5 anos que se preparam para a escola e para as do pri
 
 ### Français (fr-FR, fr-CA)
 
-**Název (29/30):** SwypeKids – Lire pour enfants
+**Název (29/30):** SwypeKids : Monde des lettres
 
-**Podtitul (28/30):** Lettres et syllabes au doigt
+**Podtitul (25/30):** Apprendre à lire au doigt
 
 **Krátký popis, Google (74/80):** Un jeu où les enfants de 5 à 9 ans apprennent à lire en glissant le doigt.
 
 **Promo text, Apple (119/170):** Lettres, syllabes et premières phrases en glissant le doigt sur un clavier d’images. Sans pub, sans achats, hors ligne.
 
-**Klíčová slova, Apple (88/100):**
+**Klíčová slova, Apple (84/100):**
 
 ```
-lire,lettres,syllabes,alphabet,école,cp,apprendre,maternelle,mots,lecture,abc,hors ligne
+enfants,syllabes,alphabet,école,cp,maternelle,mots,lecture,abc,swipe,lire,hors ligne
 ```
 
 **Popis:**
@@ -341,18 +341,18 @@ Pour les enfants dès 5 ans qui se préparent à l’école et pour les élèves
 
 ### Italiano (it-IT)
 
-**Název (29/30):** SwypeKids – Leggere per bimbi
+**Název (30/30):** SwypeKids: Mondo delle lettere
 
-**Podtitul (26/30):** Lettere e sillabe col dito
+**Podtitul (25/30):** Impara a leggere col dito
 
 **Krátký popis, Google (79/80):** Un gioco in cui i bambini dai 5 ai 9 anni imparano a leggere scorrendo il dito.
 
 **Promo text, Apple (118/170):** Lettere, sillabe e prime frasi scorrendo il dito su una tastiera di figure. Senza pubblicità, senza acquisti, offline.
 
-**Klíčová slova, Apple (93/100):**
+**Klíčová slova, Apple (90/100):**
 
 ```
-leggere,lettere,sillabe,alfabeto,scuola,prima elementare,imparare,infanzia,parole,lettura,abc
+bambini,sillabe,alfabeto,scuola,prima elementare,infanzia,parole,lettura,abc,swipe,leggere
 ```
 
 **Popis:**

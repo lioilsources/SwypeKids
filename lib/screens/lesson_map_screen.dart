@@ -408,7 +408,7 @@ class LessonMapScreenState extends State<LessonMapScreen> {
                           child: Text(
                             pack.title.isNotEmpty
                                 ? pack.title
-                                : '🎹 Swype Kids',
+                                : '🎹 SwypeKids',
                             overflow: TextOverflow.ellipsis,
                             style: TextStyle(
                               fontFamily: kFont,

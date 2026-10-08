@@ -115,7 +115,7 @@ abstract class AppLocalizations {
   /// No description provided for @appTitle.
   ///
   /// In cs, this message translates to:
-  /// **'Swype Kids'**
+  /// **'SwypeKids'**
   String get appTitle;
 
   /// No description provided for @menuSyllabary.

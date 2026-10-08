@@ -1,4 +1,4 @@
-# Swype Kids 🎹
+# SwypeKids 🎹
 
 Výuková hra pro děti 5–9 let. Učí písmena a slabiky swyp tahem po klávesnici s emoji.
 

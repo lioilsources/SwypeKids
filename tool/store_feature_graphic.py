@@ -57,9 +57,9 @@ def fit(text, size, weight, width):
 
 LEFT, RIGHT = 460, W - 36
 title = fit('SwypeKids', 120, 700, RIGHT - LEFT)
-sub = fit('Čtení prstem po obrázcích', 48, 500, RIGHT - LEFT)
+sub = fit('Objevuj svět písmen', 48, 500, RIGHT - LEFT)
 d.text((LEFT, 60), 'SwypeKids', font=title, fill='#3B2A1A')
-d.text((LEFT + 4, 190), 'Čtení prstem po obrázcích', font=sub, fill='#5A3F22')
+d.text((LEFT + 4, 190), 'Objevuj svět písmen', font=sub, fill='#5A3F22')
 
 out.parent.mkdir(parents=True, exist_ok=True)
 img.save(out)

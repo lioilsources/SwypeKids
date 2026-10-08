@@ -70,7 +70,7 @@ class SwyperKidsApp extends StatelessWidget {
       listenable:
           Listenable.merge([SettingsService.instance, AppLanguage.instance]),
       builder: (context, _) => MaterialApp(
-      title: 'Swype Kids',
+      title: 'SwypeKids',
       locale: AppLanguage.instance.locale,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
