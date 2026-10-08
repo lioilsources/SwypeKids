@@ -1,5 +1,8 @@
 # Changelog
 
+## [08/10/2026] — v2.16.3
+- Zásady soukromí: doplněn kontaktní e-mail správce
+
 ## [08/10/2026] — v2.16.2
 - Podklady pro odeslání do obchodů (docs/STORE.md): texty v 7 jazycích, snímky pro App Store, hlavní obrázek pro Google Play
 
