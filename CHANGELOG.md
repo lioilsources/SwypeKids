@@ -1,5 +1,9 @@
 # Changelog
 
+## [08/10/2026] — v2.16.4
+- Název appky sjednocen na SwypeKids (pod ikonou, v menu, na mapě)
+- Obchod: SwypeKids: Objevuj svět písmen; nové názvy a podtituly v 7 jazycích
+
 ## [08/10/2026] — v2.16.3
 - Zásady soukromí: doplněn kontaktní e-mail správce
 
