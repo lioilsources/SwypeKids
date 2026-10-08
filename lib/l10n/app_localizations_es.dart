@@ -9,7 +9,7 @@ class AppLocalizationsEs extends AppLocalizations {
   AppLocalizationsEs([String locale = 'es']) : super(locale);
 
   @override
-  String get appTitle => 'Swype Kids';
+  String get appTitle => 'SwypeKids';
 
   @override
   String get menuSyllabary => 'Silabario (Swype)';
