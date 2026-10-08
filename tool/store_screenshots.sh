@@ -4,8 +4,9 @@
 #
 #   tool/store_screenshots.sh <cílová složka>
 #
-# Vzniknou soubory phone-NN-<sekce>.png (390×844 @3x) a
-# desktop-NN-<sekce>.png (1280×800 @2x). Trvá asi 2 minuty; na chvíli se
+# Vzniknou soubory phone-NN-<sekce>.png (390×844 @3x),
+# desktop-NN-<sekce>.png (1280×800 @2x) a pro obchody
+# appstore-iphone-NN-… (1320×2868) a appstore-ipad-NN-… (2064×2752). Trvá asi 4 minuty; na chvíli se
 # otevře okno appky.
 set -euo pipefail
 DEST=${1:?Použití: tool/store_screenshots.sh <cílová složka>}

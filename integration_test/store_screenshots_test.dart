@@ -273,6 +273,23 @@ void main() {
       '09-skladej-vetu',
     });
 
+    // App Store: iPhone 6,9" (1320×2868) a iPad 13" (2064×2752), nejvýš 10
+    // snímků na zařízení. Google Play bere tytéž soubory.
+    const store = {
+      '01-mapa',
+      '02-hra',
+      '04-rymy',
+      '05-nalepka',
+      '06-zverinec',
+      '07-svet-zviratka',
+      '09-skladej-vetu',
+      '10-ma-knizka',
+      '11-pruvodci',
+      '12-rodice',
+    };
+    await _run(t, pack, const Size(440, 956), 3, 'appstore-iphone-', only: store);
+    await _run(t, pack, const Size(1032, 1376), 2, 'appstore-ipad-', only: store);
+
     await t.pumpWidget(const SizedBox());
     await _wait(t, 500);
     // ignore: avoid_print
