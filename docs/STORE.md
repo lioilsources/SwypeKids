@@ -21,6 +21,7 @@ na daném trhu dát přečíst rodilému mluvčímu.
 | Podpora (URL) | `https://olin.now/swypekids.html` |
 | Marketing (URL, volitelné) | `https://olin.now/swypekids.html` |
 | Copyright | © 2026 Oldřich Vořechovský |
+| Kontakt (recenze, podpora) | oldrich.vorechovsky.jr@gmail.com |
 | Šifrování | `ITSAppUsesNonExemptEncryption = false` je v Info.plist; žádný dotaz při odeslání |
 
 ### Apple — App Privacy („nutriční štítek“)
@@ -104,8 +105,7 @@ snímky jsou další krok.
 - [x] Texty cs, en, de, es, pt-BR, fr, it
 - [x] Snímky iPhone 6,9" a iPad 13" (čeština)
 - [x] Parental gate před rodičovským koutkem; žádné odkazy ani nákupy
-- [ ] Kontakt v zásadách soukromí (e-mail správce) — doplnit do
-      `docs/PRIVACY.md`, obchody ho u dětských aplikací čekávají
+- [x] Kontakt v zásadách soukromí (e-mail správce v `docs/PRIVACY.md`)
 - [ ] Apple: dotazníky, země, odeslání k recenzi
 - [ ] Google: založení záznamu, dotazníky, uzavřený test / produkce
 - [ ] Playtest podle `docs/PLAYTEST.md` na verzi, která jde do obchodu
