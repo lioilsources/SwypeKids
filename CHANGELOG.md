@@ -1,5 +1,8 @@
 # Changelog
 
+## [08/10/2026] — v2.16.2
+- Podklady pro odeslání do obchodů (docs/STORE.md): texty v 7 jazycích, snímky pro App Store, hlavní obrázek pro Google Play
+
 ## [07/10/2026] — v2.16.1
 - Oprava: smazání prvního dětského profilu teď opravdu smaže jeho postup
 - Příprava na placený obsah (zámky ostrovů a jazyků, katalog) — zatím vypnuto, všech 9 jazyků zdarma
