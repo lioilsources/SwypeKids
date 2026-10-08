@@ -2,8 +2,8 @@
 
 Platí od 1. 10. 2026 · Effective 2026-10-01
 
-Správce / Controller: Oldřich Vořechovský (lioilsources), kontakt: viz
-stránka aplikace v obchodě / see the app's store listing.
+Správce / Controller: Oldřich Vořechovský (lioilsources)
+Kontakt / Contact: oldrich.vorechovsky.jr@gmail.com
 
 ---
 
