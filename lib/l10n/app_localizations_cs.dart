@@ -535,4 +535,10 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get storeDebugForget => 'Zapomenout nákupy';
+
+  @override
+  String get homeLanguageLabel => 'Jazyk rodiny (menu a nápověda)';
+
+  @override
+  String get homeLanguageSame => 'Stejný jako jazyk hry';
 }

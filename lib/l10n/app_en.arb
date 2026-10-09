@@ -160,5 +160,7 @@
   "storeRestore": "Restore purchases",
   "storeDebugTitle": "Store (debug)",
   "storeDebugEnable": "Simulate an enabled store",
-  "storeDebugForget": "Forget purchases"
+  "storeDebugForget": "Forget purchases",
+  "homeLanguageLabel": "Family language (menus and hints)",
+  "homeLanguageSame": "Same as the game language"
 }

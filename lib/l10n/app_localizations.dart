@@ -13,6 +13,9 @@ import 'app_localizations_fr.dart';
 import 'app_localizations_it.dart';
 import 'app_localizations_ja.dart';
 import 'app_localizations_pt.dart';
+import 'app_localizations_ru.dart';
+import 'app_localizations_uk.dart';
+import 'app_localizations_vi.dart';
 import 'app_localizations_zh.dart';
 
 // ignore_for_file: type=lint
@@ -109,6 +112,9 @@ abstract class AppLocalizations {
     Locale('it'),
     Locale('ja'),
     Locale('pt'),
+    Locale('ru'),
+    Locale('uk'),
+    Locale('vi'),
     Locale('zh')
   ];
 
@@ -1077,6 +1083,18 @@ abstract class AppLocalizations {
   /// In cs, this message translates to:
   /// **'Zapomenout nákupy'**
   String get storeDebugForget;
+
+  /// No description provided for @homeLanguageLabel.
+  ///
+  /// In cs, this message translates to:
+  /// **'Jazyk rodiny (menu a nápověda)'**
+  String get homeLanguageLabel;
+
+  /// No description provided for @homeLanguageSame.
+  ///
+  /// In cs, this message translates to:
+  /// **'Stejný jako jazyk hry'**
+  String get homeLanguageSame;
 }
 
 class _AppLocalizationsDelegate
@@ -1098,6 +1116,9 @@ class _AppLocalizationsDelegate
         'it',
         'ja',
         'pt',
+        'ru',
+        'uk',
+        'vi',
         'zh'
       ].contains(locale.languageCode);
 
@@ -1124,6 +1145,12 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
       return AppLocalizationsJa();
     case 'pt':
       return AppLocalizationsPt();
+    case 'ru':
+      return AppLocalizationsRu();
+    case 'uk':
+      return AppLocalizationsUk();
+    case 'vi':
+      return AppLocalizationsVi();
     case 'zh':
       return AppLocalizationsZh();
   }

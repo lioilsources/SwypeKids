@@ -529,4 +529,10 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get storeDebugForget => '購入を忘れる';
+
+  @override
+  String get homeLanguageLabel => 'かぞくのことば（メニューとヒント）';
+
+  @override
+  String get homeLanguageSame => 'ゲームとおなじ';
 }

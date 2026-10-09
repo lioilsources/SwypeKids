@@ -529,4 +529,10 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get storeDebugForget => '清除购买记录';
+
+  @override
+  String get homeLanguageLabel => '家庭语言（菜单和提示）';
+
+  @override
+  String get homeLanguageSame => '与游戏语言相同';
 }

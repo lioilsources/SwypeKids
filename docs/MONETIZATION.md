@@ -250,6 +250,15 @@ prodejů (rozhodnutí §8).
    v každém packu, který je má. Ostrovy zůstávají `island.<lang>.b|c`,
    jazyky `lang.<xx>`, `all.forever` odemyká všechno.
 
+**Doplněno 9. 10. 2026 — jazyk rodiny.** Ukrajinština, ruština a
+vietnamština jsou jazyky rozhraní (menu, nápověda, úvodní průvodce), ne
+jazyky ke čtení: dítě přistěhovalců se učí číst česky a doma rozumějí
+appce. Jazyk rodiny je **zdarma a není v katalogu**. Na zařízení
+v takovém jazyce platí pravidlo z bodu 2 beze změny: zdarma je první
+jazyk zvolený v úvodu (v Česku se nabídne čeština podle regionu
+zařízení). Pro školní appku (fáze 5) je to hlavní argument: třída
+s dětmi cizinců.
+
 ## 9. Regiony: kde a jak vydávat
 
 Zdarma je vždy jazyk zařízení, takže každý podporovaný jazyk je zároveň

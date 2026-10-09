@@ -23,20 +23,27 @@ class ChildProfile {
   /// Průvodce, kterého si dítě vybralo.
   final Guide guide;
 
+  /// Jazyk rodiny: kód jazyka rozhraní (`uk`, `vi`…), když se liší od
+  /// jazyka, ve kterém se dítě učí číst. Prázdné = rozhraní v jazyce hry.
+  final String home;
+
   const ChildProfile({
     required this.id,
     required this.name,
     required this.avatar,
     this.called = '',
     this.guide = Guide.panda,
+    this.home = '',
   });
 
-  ChildProfile copyWith({String? called, Guide? guide}) => ChildProfile(
+  ChildProfile copyWith({String? called, Guide? guide, String? home}) =>
+      ChildProfile(
         id: id,
         name: name,
         avatar: avatar,
         called: called ?? this.called,
         guide: guide ?? this.guide,
+        home: home ?? this.home,
       );
 
   factory ChildProfile.fromJson(Map<String, dynamic> json) => ChildProfile(
@@ -45,6 +52,7 @@ class ChildProfile {
         avatar: json['avatar'] as String? ?? ProfileService.defaultAvatar,
         called: json['called'] as String? ?? '',
         guide: Guide.fromName(json['guide'] as String?),
+        home: json['home'] as String? ?? '',
       );
 
   Map<String, dynamic> toJson() => {
@@ -53,6 +61,7 @@ class ChildProfile {
         'avatar': avatar,
         if (called.isNotEmpty) 'called': called,
         if (guide != Guide.panda) 'guide': guide.name,
+        if (home.isNotEmpty) 'home': home,
       };
 
   /// Jak dítě oslovit v daném jazyce: čeština 5. pádem (ruční tvar má
@@ -101,7 +110,22 @@ class ProfileService {
   /// Průvodce aktivního dítěte; mění se při přepnutí profilu i výběru.
   final ValueNotifier<Guide> guide = ValueNotifier(Guide.panda);
 
-  void _syncGuide() => guide.value = active?.guide ?? Guide.panda;
+  /// Jazyk rodiny aktivního dítěte (prázdné = rozhraní v jazyce hry).
+  final ValueNotifier<String> home = ValueNotifier('');
+
+  void _syncGuide() {
+    guide.value = active?.guide ?? Guide.panda;
+    home.value = active?.home ?? '';
+  }
+
+  /// Rodič nastavil profilu [id] jazyk rodiny; prázdné = jazyk hry.
+  void setHome(int id, String code) {
+    _profiles = [
+      for (final p in _profiles) p.id == id ? p.copyWith(home: code) : p,
+    ];
+    _persist();
+    _syncGuide();
+  }
 
   /// Dítě si v profilu vybralo jiného průvodce.
   void setGuide(int id, Guide g) {
@@ -161,14 +185,20 @@ class ProfileService {
   }
 
   /// Založí nový profil a přepne na něj. Vrací ho (id pro ProgressService).
-  ChildProfile complete({required String avatar, required String name}) {
+  ChildProfile complete({
+    required String avatar,
+    required String name,
+    String home = '',
+  }) {
     final id = _profiles.isEmpty
         ? 1
         : _profiles.map((p) => p.id).reduce((a, b) => a > b ? a : b) + 1;
-    final profile = ChildProfile(id: id, name: name.trim(), avatar: avatar);
+    final profile =
+        ChildProfile(id: id, name: name.trim(), avatar: avatar, home: home);
     _profiles = [..._profiles, profile];
     _activeId = id;
     _persist();
+    _syncGuide();
     return profile;
   }
 

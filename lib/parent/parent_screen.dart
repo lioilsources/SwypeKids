@@ -302,21 +302,21 @@ class _ParentScreenState extends State<ParentScreen> {
         border: Border.all(color: Colors.white.withValues(alpha: 0.1)),
       );
 
-  static final _valueStyle = TextStyle(
+  static TextStyle get _valueStyle => TextStyle(
     fontFamily: kFont,
     fontFamilyFallback: kFontFallback,
     fontSize: 18,
     fontWeight: FontWeight.w900,
     color: Color(0xFFFFD200),
   );
-  static final _labelStyle = TextStyle(
+  static TextStyle get _labelStyle => TextStyle(
     fontFamily: kFont,
     fontFamilyFallback: kFontFallback,
     fontSize: 12,
     fontWeight: FontWeight.w700,
     color: Colors.white.withValues(alpha: 0.55),
   );
-  static final _bodyStyle = TextStyle(
+  static TextStyle get _bodyStyle => TextStyle(
     fontFamily: kFont,
     fontFamilyFallback: kFontFallback,
     fontSize: 14,
@@ -514,9 +514,11 @@ class _ParentSettingsState extends State<ParentSettings> {
                     color: Colors.white)),
             // Jak průvodce dítě česky osloví (5. pád) — předvyplněno podle
             // pravidel, rodič může opravit (Ester, Dagmar…).
-            subtitle: p.name.trim().isEmpty
-                ? null
-                : TextFormField(
+            subtitle: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                if (p.name.trim().isNotEmpty)
+                  TextFormField(
                     key: ValueKey('vocative-${p.id}'),
                     initialValue: p.addressIn(Language.cs),
                     style: const TextStyle(color: Colors.white),
@@ -528,6 +530,38 @@ class _ParentSettingsState extends State<ParentSettings> {
                     onChanged: (v) => ProfileService.instance.setCalled(
                         p.id, v.trim() == czechVocative(p.name) ? '' : v),
                   ),
+                // Jazyk rodiny: menu a nápověda v řeči, které doma rozumějí
+                // (dítě se učí číst česky, rodina mluví ukrajinsky).
+                DropdownButtonFormField<String>(
+                  key: ValueKey('home-${p.id}'),
+                  initialValue: kHomeLanguages.contains(p.home) ? p.home : '',
+                  isExpanded: true,
+                  dropdownColor: const Color(0xFF1A1A2E),
+                  style: TextStyle(
+                      fontFamily: kFont,
+                      fontFamilyFallback: kFontFallback,
+                      color: Colors.white),
+                  decoration: InputDecoration(
+                    labelText: context.l.homeLanguageLabel,
+                    isDense: true,
+                  ),
+                  items: [
+                    DropdownMenuItem(
+                        value: '', child: Text(context.l.homeLanguageSame)),
+                    for (final code in kHomeLanguages)
+                      DropdownMenuItem(
+                        value: code,
+                        child: Text(
+                            '${homeLanguageFlag(code)} ${homeLanguageName(code)}'),
+                      ),
+                  ],
+                  onChanged: (v) {
+                    ProfileService.instance.setHome(p.id, v ?? '');
+                    setState(() {});
+                  },
+                ),
+              ],
+            ),
             trailing: ProfileService.instance.profiles.length > 1
                 ? IconButton(
                     key: ValueKey('delete-profile-${p.id}'),

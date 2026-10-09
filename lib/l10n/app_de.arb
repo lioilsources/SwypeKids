@@ -263,5 +263,7 @@
   "storeRestore": "Käufe wiederherstellen",
   "storeDebugTitle": "Shop (Debug)",
   "storeDebugEnable": "Aktivierten Shop simulieren",
-  "storeDebugForget": "Käufe vergessen"
+  "storeDebugForget": "Käufe vergessen",
+  "homeLanguageLabel": "Familiensprache (Menü und Hinweise)",
+  "homeLanguageSame": "Wie die Spielsprache"
 }
