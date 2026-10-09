@@ -536,4 +536,10 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get storeDebugForget => 'Dimentica gli acquisti';
+
+  @override
+  String get homeLanguageLabel => 'Lingua della famiglia (menu e aiuti)';
+
+  @override
+  String get homeLanguageSame => 'Uguale alla lingua del gioco';
 }

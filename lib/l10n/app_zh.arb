@@ -263,5 +263,7 @@
   "storeRestore": "恢复购买",
   "storeDebugTitle": "商店（调试）",
   "storeDebugEnable": "模拟已开启的商店",
-  "storeDebugForget": "清除购买记录"
+  "storeDebugForget": "清除购买记录",
+  "homeLanguageLabel": "家庭语言（菜单和提示）",
+  "homeLanguageSame": "与游戏语言相同"
 }

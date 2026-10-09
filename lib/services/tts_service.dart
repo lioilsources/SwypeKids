@@ -43,10 +43,27 @@ class TtsService {
   @visibleForTesting
   static bool muted = false;
 
-  static Future<void> speak(String text, Language lang) async {
+  /// Hlasy jazyků rodiny, ve kterých se nečte (úvodní průvodce).
+  static const Map<String, String> _homeTags = {
+    'uk': 'uk-UA',
+    'ru': 'ru-RU',
+    'vi': 'vi-VN',
+  };
+
+  static Future<void> speak(String text, Language lang) =>
+      _speak(text, _localeTags[lang] ?? 'en-US');
+
+  /// Řekne [text] hlasem jazyka rozhraní [code] (`uk`, `cs`…).
+  static Future<void> speakIn(String text, String code) => _speak(
+      text,
+      _homeTags[code] ??
+          _localeTags[Language.values.asNameMap()[code]] ??
+          'en-US');
+
+  static Future<void> _speak(String text, String tag) async {
     if (muted || text.trim().isEmpty) return;
     try {
-      await _tts.setLanguage(_localeTags[lang] ?? 'en-US');
+      await _tts.setLanguage(tag);
       await _tts.setSpeechRate(0.45);
       await _tts.setPitch(1.05);
       await _tts.stop();

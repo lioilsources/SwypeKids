@@ -56,9 +56,25 @@ Language _detectLanguage() {
   return EntitlementService.instance.allowed(saved ??
       Language.values.firstWhere(
         (l) => l.name == code,
-        orElse: () => Language.en,
+        orElse: () => languageOfCountry(
+            WidgetsBinding.instance.platformDispatcher.locale.countryCode),
       ));
 }
+
+/// Zařízení v jazyce, ve kterém se v appce nečte (ukrajinština…): nabídne
+/// se jazyk země, kde rodina žije (region zařízení) — ukrajinské dítě
+/// v Česku začne češtinou. Neznámá země → angličtina.
+Language languageOfCountry(String? country) => switch (country) {
+      'CZ' => Language.cs,
+      'DE' || 'AT' || 'CH' => Language.de,
+      'ES' || 'MX' || 'AR' || 'CO' || 'CL' || 'PE' => Language.es,
+      'IT' => Language.it,
+      'FR' || 'BE' => Language.fr,
+      'BR' || 'PT' => Language.pt,
+      'CN' => Language.zh,
+      'JP' => Language.ja,
+      _ => Language.en,
+    };
 
 class SwyperKidsApp extends StatelessWidget {
   const SwyperKidsApp({super.key});
@@ -68,7 +84,11 @@ class SwyperKidsApp extends StatelessWidget {
     // Změna písma (rodičovský koutek) překreslí celou appku.
     return ListenableBuilder(
       listenable:
-          Listenable.merge([SettingsService.instance, AppLanguage.instance]),
+          Listenable.merge([
+        SettingsService.instance,
+        AppLanguage.instance,
+        ProfileService.instance.home,
+      ]),
       builder: (context, _) => MaterialApp(
       title: 'SwypeKids',
       locale: AppLanguage.instance.locale,

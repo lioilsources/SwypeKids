@@ -263,5 +263,7 @@
   "storeRestore": "Restaurar compras",
   "storeDebugTitle": "Tienda (depuración)",
   "storeDebugEnable": "Simular la tienda activada",
-  "storeDebugForget": "Olvidar compras"
+  "storeDebugForget": "Olvidar compras",
+  "homeLanguageLabel": "Idioma de la familia (menús y ayudas)",
+  "homeLanguageSame": "El mismo que el del juego"
 }

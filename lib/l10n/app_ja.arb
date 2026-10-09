@@ -263,5 +263,7 @@
   "storeRestore": "購入を復元",
   "storeDebugTitle": "ストア（デバッグ）",
   "storeDebugEnable": "ストア有効をシミュレート",
-  "storeDebugForget": "購入を忘れる"
+  "storeDebugForget": "購入を忘れる",
+  "homeLanguageLabel": "かぞくのことば（メニューとヒント）",
+  "homeLanguageSame": "ゲームとおなじ"
 }

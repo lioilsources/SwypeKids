@@ -11,6 +11,7 @@ import '../services/tts_service.dart';
 import '../widgets/language_picker.dart' show kLanguageFlag;
 import '../ui/app_font.dart';
 import '../ui/emoji_art.dart';
+import '../ui/l10n.dart';
 
 /// První minuta (roadmap v3.0): průvodce pozdraví hlasem, dítě vybere jazyk
 /// podle vlajky a zvířátko, rodič může zadat jméno. Vše jde bez čtení —
@@ -40,6 +41,15 @@ class OnboardingScreen extends StatefulWidget {
     Language.ja: ('こんにちは！わたしは{guide}。もじであそぼう。', 'どうぶつをえらんでね。', 'おなまえは？'),
   };
 
+  /// Tytéž fráze v jazycích rodiny, ve kterých se v appce nečte
+  /// ([kHomeOnlyLanguages]): dítě slyší průvodce řečí, které rozumí, a čte
+  /// v jazyce zvolené vlajky.
+  static const homePhrases = <String, (String, String, String)>{
+    'uk': ('Привіт! Я {guide}. Пограймося з літерами.', 'Обери собі тваринку.', 'Як тебе звати?'),
+    'ru': ('Привет! Я {guide}. Давай поиграем с буквами.', 'Выбери себе зверька.', 'Как тебя зовут?'),
+    'vi': ('Xin chào! Mình là {guide}. Cùng chơi với chữ cái nhé.', 'Hãy chọn một con vật.', 'Bạn tên là gì?'),
+  };
+
   @override
   State<OnboardingScreen> createState() => _OnboardingScreenState();
 }
@@ -47,15 +57,28 @@ class OnboardingScreen extends StatefulWidget {
 class _OnboardingScreenState extends State<OnboardingScreen> {
   late Language _lang =
       EntitlementService.instance.allowed(widget.initialLanguage);
+
+  /// Jazyk rodiny (🗣 pod vlajkami); prázdné = stejný jako jazyk hry.
+  /// Sourozenec dědí jazyk rodiny, první dítě jazyk zařízení.
+  late String _home = _initialHome();
   int _step = 0; // 0 jazyk, 1 zvířátko, 2 jméno
   String _avatar = ProfileService.defaultAvatar;
   final _name = TextEditingController();
   MascotMood _mood = MascotMood.wave;
   int _taps = 0;
 
+  static String _initialHome() {
+    final family = ProfileService.instance.home.value;
+    if (family.isNotEmpty) return family;
+    final device =
+        WidgetsBinding.instance.platformDispatcher.locale.languageCode;
+    return kHomeOnlyLanguages.contains(device) ? device : '';
+  }
+
   (String, String, String) get _say {
-    final (hello, pick, name) =
-        OnboardingScreen.phrases[_lang] ?? OnboardingScreen.phrases[Language.en]!;
+    final (hello, pick, name) = OnboardingScreen.homePhrases[_home] ??
+        OnboardingScreen.phrases[_lang] ??
+        OnboardingScreen.phrases[Language.en]!;
     return (hello.replaceAll('{guide}', Mascot.name(_lang)), pick, name);
   }
 
@@ -73,7 +96,21 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   void _speakStep() {
     final (hello, pick, name) = _say;
-    TtsService.speak(switch (_step) { 0 => hello, 1 => pick, _ => name }, _lang);
+    final text = switch (_step) { 0 => hello, 1 => pick, _ => name };
+    if (OnboardingScreen.homePhrases.containsKey(_home)) {
+      TtsService.speakIn(text, _home);
+    } else {
+      TtsService.speak(text, _lang);
+    }
+  }
+
+  void _pickHome(String code) {
+    AudioService.instance.play(Sfx.tap);
+    setState(() {
+      _home = _home == code ? '' : code; // druhé ťuknutí volbu zruší
+      _mood = MascotMood.wave;
+    });
+    _speakStep();
   }
 
   void _pickLanguage(Language l) {
@@ -97,8 +134,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       return;
     }
     // Nový profil (první dítě nebo další sourozenec) → vlastní postup.
-    final profile =
-        ProfileService.instance.complete(avatar: _avatar, name: _name.text);
+    final profile = ProfileService.instance
+        .complete(avatar: _avatar, name: _name.text, home: _home);
     await ProgressService.init(profile: profile.id);
     ProgressService.instance.selectedLanguage = _lang;
     // Zařízení s jazykem, který appka neumí: zdarma je první zvolený jazyk.
@@ -200,19 +237,46 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   }
 
   Widget _languageStep() => Center(
-        child: Wrap(
-          spacing: 12,
-          runSpacing: 12,
-          alignment: WrapAlignment.center,
-          children: [
-            for (final l in EntitlementService.instance.childLanguages)
-              _Choice(
-                key: ValueKey('lang-${l.name}'),
-                emoji: kLanguageFlag[l] ?? '🏳️',
-                selected: l == _lang,
-                onTap: () => _pickLanguage(l),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Wrap(
+                spacing: 12,
+                runSpacing: 12,
+                alignment: WrapAlignment.center,
+                children: [
+                  for (final l in EntitlementService.instance.childLanguages)
+                    _Choice(
+                      key: ValueKey('lang-${l.name}'),
+                      emoji: kLanguageFlag[l] ?? '🏳️',
+                      selected: l == _lang,
+                      onTap: () => _pickLanguage(l),
+                    ),
+                ],
               ),
-          ],
+              const SizedBox(height: 18),
+              // Jazyk rodiny: čím se mluví doma, když se dítě učí číst
+              // jinou řečí. Bez textu — 🗣 a vlajky.
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Text('🗣️', style: TextStyle(fontSize: 26)),
+                  const SizedBox(width: 10),
+                  for (final code in kHomeOnlyLanguages) ...[
+                    _Choice(
+                      key: ValueKey('home-$code'),
+                      emoji: homeLanguageFlag(code),
+                      selected: code == _home,
+                      size: 54,
+                      onTap: () => _pickHome(code),
+                    ),
+                    const SizedBox(width: 8),
+                  ],
+                ],
+              ),
+            ],
+          ),
         ),
       );
 
@@ -276,12 +340,14 @@ class _Choice extends StatelessWidget {
   final String emoji;
   final bool selected;
   final VoidCallback onTap;
+  final double size;
 
   const _Choice({
     super.key,
     required this.emoji,
     required this.selected,
     required this.onTap,
+    this.size = 76,
   });
 
   @override
@@ -290,14 +356,14 @@ class _Choice extends StatelessWidget {
       onTap: onTap,
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 150),
-        width: 76,
-        height: 76,
+        width: size,
+        height: size,
         alignment: Alignment.center,
         decoration: BoxDecoration(
           color: selected
               ? const Color(0xFFFFD200).withValues(alpha: 0.25)
               : Colors.white.withValues(alpha: 0.08),
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(size * 0.26),
           border: Border.all(
             color: selected
                 ? const Color(0xFFFFD200)
@@ -305,7 +371,7 @@ class _Choice extends StatelessWidget {
             width: selected ? 3 : 1,
           ),
         ),
-        child: EmojiArt(emoji, size: 40),
+        child: EmojiArt(emoji, size: size * 0.53),
       ),
     );
   }

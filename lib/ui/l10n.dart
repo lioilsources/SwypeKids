@@ -3,19 +3,54 @@ import 'package:flutter/widgets.dart';
 import '../data/lessons.dart';
 import '../l10n/app_localizations.dart';
 import '../services/achievement_service.dart';
+import '../services/profile_service.dart';
 import '../store/catalog.dart';
-import '../widgets/language_picker.dart' show kLanguageName;
+import '../widgets/language_picker.dart' show kLanguageFlag, kLanguageName;
 import '../world/world_clock.dart';
 
 export '../l10n/app_localizations.dart';
 
+/// Jazyky rozhraní, ve kterých se v appce nečte — jen „jazyk rodiny“
+/// (menu a nápověda) pro děti, které se učí číst v jiném jazyce, než jakým
+/// mluví doma (ukrajinské dítě v české škole).
+const kHomeOnlyLanguages = ['uk', 'ru', 'vi'];
+
+/// Všechny jazyky rozhraní: jazyky packů + [kHomeOnlyLanguages].
+final List<String> kHomeLanguages = [
+  for (final l in Language.values) l.name,
+  ...kHomeOnlyLanguages,
+];
+
+/// Jméno jazyka rozhraní v něm samém (nepřekládá se).
+String homeLanguageName(String code) => switch (code) {
+      'uk' => 'Українська',
+      'ru' => 'Русский',
+      'vi' => 'Tiếng Việt',
+      _ => kLanguageName[Language.values.asNameMap()[code]] ?? code,
+    };
+
+/// Vlajka jazyka rozhraní (zůstává emoji jako ostatní vlajky).
+String homeLanguageFlag(String code) => switch (code) {
+      'uk' => '🇺🇦',
+      'ru' => '🇷🇺',
+      'vi' => '🇻🇳',
+      _ => kLanguageFlag[Language.values.asNameMap()[code]] ?? '🏳️',
+    };
+
 /// Jazyk UI = jazyk packu, který dítě hraje (německé dítě vidí německé
-/// menu). HomeShell ho mění spolu s jazykem; MaterialApp ho poslouchá.
+/// menu), pokud profil nemá vlastní jazyk rodiny ([ProfileService.home]).
+/// HomeShell ho mění spolu s jazykem; MaterialApp poslouchá obojí.
 class AppLanguage extends ValueNotifier<Language> {
   AppLanguage._() : super(Language.en);
   static final AppLanguage instance = AppLanguage._();
 
-  Locale get locale => Locale(value.name);
+  /// Kód jazyka rozhraní (`cs`, `uk`…).
+  String get code {
+    final home = ProfileService.instance.home.value;
+    return kHomeLanguages.contains(home) ? home : value.name;
+  }
+
+  Locale get locale => Locale(code);
 }
 
 extension L10nContext on BuildContext {

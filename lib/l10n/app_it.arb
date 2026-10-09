@@ -263,5 +263,7 @@
   "storeRestore": "Ripristina acquisti",
   "storeDebugTitle": "Negozio (debug)",
   "storeDebugEnable": "Simula il negozio attivo",
-  "storeDebugForget": "Dimentica gli acquisti"
+  "storeDebugForget": "Dimentica gli acquisti",
+  "homeLanguageLabel": "Lingua della famiglia (menu e aiuti)",
+  "homeLanguageSame": "Uguale alla lingua del gioco"
 }

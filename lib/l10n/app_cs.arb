@@ -8,7 +8,13 @@
   "menuParents": "Pro rodiče",
   "practiceTitle": "Procvičování",
   "bedtimeText": "{guide} už spí. Zítra zase!",
-  "@bedtimeText": {"placeholders": {"guide": {"type": "String"}}},
+  "@bedtimeText": {
+    "placeholders": {
+      "guide": {
+        "type": "String"
+      }
+    }
+  },
   "typeListen": "POSLECH",
   "typePicture": "OBRÁZEK",
   "typeGap": "DOPLŇ",
@@ -305,5 +311,7 @@
   "storeRestore": "Obnovit nákupy",
   "storeDebugTitle": "Obchod (ladění)",
   "storeDebugEnable": "Simulovat zapnutý obchod",
-  "storeDebugForget": "Zapomenout nákupy"
+  "storeDebugForget": "Zapomenout nákupy",
+  "homeLanguageLabel": "Jazyk rodiny (menu a nápověda)",
+  "homeLanguageSame": "Stejný jako jazyk hry"
 }
