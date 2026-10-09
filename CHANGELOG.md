@@ -1,5 +1,8 @@
 # Changelog
 
+## [09/10/2026] — v2.17.1
+- Jazykem rodiny může být kterýkoli z 12 jazyků rozhraní: úvod nabízí u 🗣 všechny vlajky (anglická rodina, dítě čte česky)
+
 ## [09/10/2026] — v2.17.0
 - Jazyk rodiny: menu, nápověda, rodičovský koutek a úvodní průvodce ukrajinsky, rusky a vietnamsky — pro děti, které se učí číst česky a doma mluví jinak
 - Jazyk rodiny se volí vlajkou u 🗣 v úvodu nebo u profilu v rodičovském koutku; čte se dál v jazyce zvolené vlajky
