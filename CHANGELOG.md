@@ -1,5 +1,11 @@
 # Changelog
 
+## [09/10/2026] — v2.17.0
+- Jazyk rodiny: menu, nápověda, rodičovský koutek a úvodní průvodce ukrajinsky, rusky a vietnamsky — pro děti, které se učí číst česky a doma mluví jinak
+- Jazyk rodiny se volí vlajkou u 🗣 v úvodu nebo u profilu v rodičovském koutku; čte se dál v jazyce zvolené vlajky
+- Zařízení v jazyce, ve kterém se nečte, nabídne ke čtení jazyk země (v Česku češtinu)
+- Oprava: rodičovský koutek po přepnutí písma nedržel staré písmo ve statistikách
+
 ## [08/10/2026] — v2.16.4
 - Název appky sjednocen na SwypeKids (pod ikonou, v menu, na mapě)
 - Obchod: SwypeKids: Objevuj svět písmen; nové názvy a podtituly v 7 jazycích
