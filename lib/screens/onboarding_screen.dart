@@ -76,7 +76,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   }
 
   (String, String, String) get _say {
+    // Jazyk rodiny má přednost: buď jazyk, ve kterém se jen mluví (uk…),
+    // nebo některý z jazyků hry (anglická rodina, dítě čte česky).
     final (hello, pick, name) = OnboardingScreen.homePhrases[_home] ??
+        OnboardingScreen.phrases[Language.values.asNameMap()[_home]] ??
         OnboardingScreen.phrases[_lang] ??
         OnboardingScreen.phrases[Language.en]!;
     return (hello.replaceAll('{guide}', Mascot.name(_lang)), pick, name);
@@ -97,7 +100,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   void _speakStep() {
     final (hello, pick, name) = _say;
     final text = switch (_step) { 0 => hello, 1 => pick, _ => name };
-    if (OnboardingScreen.homePhrases.containsKey(_home)) {
+    if (kHomeLanguages.contains(_home)) {
       TtsService.speakIn(text, _home);
     } else {
       TtsService.speak(text, _lang);
@@ -257,23 +260,26 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               ),
               const SizedBox(height: 18),
               // Jazyk rodiny: čím se mluví doma, když se dítě učí číst
-              // jinou řečí. Bez textu — 🗣 a vlajky.
-              Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  const Text('🗣️', style: TextStyle(fontSize: 26)),
-                  const SizedBox(width: 10),
-                  for (final code in kHomeOnlyLanguages) ...[
-                    _Choice(
-                      key: ValueKey('home-$code'),
-                      emoji: homeLanguageFlag(code),
-                      selected: code == _home,
-                      size: 54,
-                      onTap: () => _pickHome(code),
-                    ),
-                    const SizedBox(width: 8),
+              // jinou řečí. Bez textu — 🗣 a vlajky všech jazyků rozhraní.
+              const Text('🗣️', style: TextStyle(fontSize: 26)),
+              const SizedBox(height: 8),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: Wrap(
+                  spacing: 8,
+                  runSpacing: 8,
+                  alignment: WrapAlignment.center,
+                  children: [
+                    for (final code in kHomeLanguages)
+                      _Choice(
+                        key: ValueKey('home-$code'),
+                        emoji: homeLanguageFlag(code),
+                        selected: code == _home,
+                        size: 46,
+                        onTap: () => _pickHome(code),
+                      ),
                   ],
-                ],
+                ),
               ),
             ],
           ),

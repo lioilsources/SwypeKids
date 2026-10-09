@@ -100,6 +100,7 @@ void main() {
     await tester.pump();
     expect(find.textContaining('Já jsem Pandička'), findsOneWidget);
 
+    await tester.ensureVisible(find.byKey(const ValueKey('home-uk')));
     await tester.tap(find.byKey(const ValueKey('home-uk')));
     await tester.pump();
     expect(find.textContaining('Я Pandička'), findsOneWidget);
@@ -145,5 +146,28 @@ void main() {
     await tester.pump(const Duration(milliseconds: 300));
     expect(ProfileService.instance.active!.home, 'vi');
     expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('úvod: jazykem rodiny může být i jazyk hry (anglická rodina, '
+      'dítě čte česky)', (tester) async {
+    await tester.pumpWidget(localizedApp(
+      home: OnboardingScreen(initialLanguage: Language.cs, onDone: (_) {}),
+    ));
+    await tester.pump();
+    for (final code in kHomeLanguages) {
+      expect(find.byKey(ValueKey('home-$code')), findsOneWidget, reason: code);
+    }
+    await tester.ensureVisible(find.byKey(const ValueKey('home-en')));
+    await tester.tap(find.byKey(const ValueKey('home-en')));
+    await tester.pump();
+    expect(find.textContaining("I'm Pandička"), findsOneWidget);
+    expect(tester.takeException(), isNull);
+
+    for (var i = 0; i < 3; i++) {
+      await tester.tap(find.byKey(const ValueKey('next')));
+      await tester.pump();
+    }
+    expect(ProgressService.instance.selectedLanguage, Language.cs);
+    expect(AppLanguage.instance.locale, const Locale('en'));
   });
 }
