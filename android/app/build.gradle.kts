@@ -29,7 +29,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.ol1n.SwypeKids"
+        applicationId = "com.ab.SwypeKids"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
