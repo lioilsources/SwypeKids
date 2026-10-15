@@ -9,7 +9,8 @@ na daném trhu dát přečíst rodilému mluvčímu.
 
 | Pole | Hodnota |
 |---|---|
-| Bundle ID / applicationId | `com.ol1n.SwypeKids` |
+| Bundle ID (iOS) | `com.ol1n.SwypeKids` |
+| applicationId (Android) | `com.ab.SwypeKids` |
 | Primární jazyk | čeština |
 | Kategorie | Vzdělávání (Education); sekundární Apple: Hry › Vzdělávací nebo žádná |
 | Apple „Made for Kids“ | ano, věk **6–8** (nevratné po schválení) |
