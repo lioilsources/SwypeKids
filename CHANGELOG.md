@@ -1,5 +1,9 @@
 # Changelog
 
+## [15/10/2026] — v2.17.2
+- Android: nové ID aplikace com.ab.SwypeKids pro Google Play (účet A+B)
+- Obchod: podklady pro Google Play (snímky 1080×1920 a tablet, hlavní obrázek, odpovědi v docs/STORE.md)
+
 ## [09/10/2026] — v2.17.1
 - Jazykem rodiny může být kterýkoli z 12 jazyků rozhraní: úvod nabízí u 🗣 všechny vlajky (anglická rodina, dítě čte česky)
 
