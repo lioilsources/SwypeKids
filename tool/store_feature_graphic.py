@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Hlavní obrázek pro Google Play (1024×500) z průvodce a nálepek.
 
-    python3 tool/store_feature_graphic.py <DynaPuff-Variable.ttf> [výstup.png]
+    python3 tool/store_feature_graphic.py <DynaPuff-Variable.ttf> [výstup.png] [podtitul]
+
+Bez podtitulu česky; anglický záznam: ... build/store/feature-graphic-en.png 'World of Letters'
 
 Font je v balíčku cute_kid_fonts (~/.pub-cache/git/CuteKidFonts-*/fonts/).
 """
@@ -12,6 +14,7 @@ from PIL import Image, ImageDraw, ImageFont
 ROOT = Path(__file__).resolve().parent.parent
 font_path = sys.argv[1]
 out = Path(sys.argv[2] if len(sys.argv) > 2 else ROOT / 'build/store/feature-graphic.png')
+subtitle = sys.argv[3] if len(sys.argv) > 3 else 'Objevuj svět písmen'
 
 W, H = 1024, 500
 img = Image.new('RGB', (W, H), '#FFC650')  # barva ikony
@@ -57,9 +60,9 @@ def fit(text, size, weight, width):
 
 LEFT, RIGHT = 460, W - 36
 title = fit('SwypeKids', 120, 700, RIGHT - LEFT)
-sub = fit('Objevuj svět písmen', 48, 500, RIGHT - LEFT)
+sub = fit(subtitle, 48, 500, RIGHT - LEFT)
 d.text((LEFT, 60), 'SwypeKids', font=title, fill='#3B2A1A')
-d.text((LEFT + 4, 190), 'Objevuj svět písmen', font=sub, fill='#5A3F22')
+d.text((LEFT + 4, 190), subtitle, font=sub, fill='#5A3F22')
 
 out.parent.mkdir(parents=True, exist_ok=True)
 img.save(out)

@@ -15,7 +15,8 @@ na daném trhu dát přečíst rodilému mluvčímu.
 | Kategorie | Vzdělávání (Education); sekundární Apple: Hry › Vzdělávací nebo žádná |
 | Apple „Made for Kids“ | ano, věk **6–8** (nevratné po schválení) |
 | Apple věkové hodnocení | 4+ (všechny otázky „None“; bez neomezeného webu, bez hazardu, bez soutěží) |
-| Google cílové publikum | 5 a méně + 6–8; „apeluje na děti“ ano; program Designed for Families |
+| Google cílové publikum | 5 a méně + 6–8 (9–12 volitelně, popis říká 5–9); „apeluje na děti“ ano → platí zásady Families |
+| Google účet | organizace **A+B** (ne osobní účet) — bez povinného uzavřeného testu, rovnou do produkce |
 | Cena | zdarma; bez nákupů v aplikaci (obchod je v kódu vypnutý, `StoreConfig.enabled = false`) |
 | Země | všechny kromě **Číny (pevninské)** a zatím **Japonska** (`docs/MONETIZATION.md` §9) |
 | Zásady soukromí (URL) | `https://github.com/lioilsources/SwypeKids/blob/main/docs/PRIVACY.md` (cs + en) |
@@ -30,12 +31,42 @@ na daném trhu dát přečíst rodilému mluvčímu.
 „Data Not Collected“ — aplikace nemá síťové volání, analytiku ani SDK třetích
 stran (`docs/PRIVACY.md`). Tracking: ne.
 
-### Google — Data safety
+### Google — App content (odpovědi ověřené proti kódu, 15. 10. 2026)
 
-- Shromažďuje nebo sdílí aplikace data? **Ne.**
-- Reklamy: **ne.** Přihlášení: ne. Odkazy ven dostupné dítěti: ne.
-- Obsahové hodnocení (IARC): vzdělávací, bez násilí, bez komunikace mezi
-  uživateli, bez sdílení polohy, bez nákupů.
+Release AAB má jen oprávnění `VIBRATE` (+ `DUMP` a
+`DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION` z androidx, systémová/interní);
+**`INTERNET` v release manifestu není** (je jen v `debug`/`profile`). Pluginy:
+`flutter_tts` (systémový TTS), `flutter_soloud`, `shared_preferences`,
+`path_provider` — žádné Firebase/Play Services, analytika, reklamy ani
+`in_app_purchase` (`StoreConfig.enabled = false`, `FakeStore`).
+
+**Data safety**
+
+- Shromažďuje nebo sdílí aplikace některý z požadovaných typů dat? **Ne.**
+  Jméno dítěte a postup zůstávají v `shared_preferences` v zařízení — data,
+  která zařízení neopustí, Google za „shromážděná“ nepovažuje. Tím dotazník
+  končí (šifrování / žádost o smazání se pak neptá).
+- URL pro smazání účtu: není potřeba (žádné účty).
+
+**Obsahové hodnocení (IARC)** — kategorie *Reference, News, or Educational*
+(příp. *Game*, odpovědi jsou stejné). Vše **Ne**: násilí, strach, sex,
+vulgarity, drogy, hazard / simulovaný hazard, interakce mezi uživateli,
+sdílení polohy, nákup digitálního zboží, neomezený přístup k webu. Očekávat
+PEGI 3 / ESRB Everyone / USK 0.
+
+**Cílové publikum a obsah**
+
+- Věkové skupiny: **5 a méně**, **6–8** (9–12 lze přidat). Jen dětské
+  skupiny → aplikace je „primárně pro děti“ a musí splnit zásady Families,
+  což splňuje: bez reklam, bez SDK třetích stran, bez sběru dat, bez odkazů
+  ven a nákupů; rodičovský koutek za bránou.
+- „Může aplikace neúmyslně oslovit děti?“ — neptá se (cílí na děti).
+- Teacher Approved: nepodává se, Google vybírá aplikace z Families sám.
+
+**Ostatní deklarace**: reklamy **ne** · přístup k aplikaci: vše bez omezení
+(rodičovská brána není přihlášení; do poznámky lze vložit text níže) ·
+vládní aplikace ne · zprávy ne · finanční funkce žádné · zdravotní ne ·
+COVID ne · oprávnění k poloze/fotkám/kontaktům žádná · Advertising ID: ne.
 
 ### Poznámka pro recenzenta (Apple „App Review Information › Notes“)
 
@@ -61,10 +92,26 @@ macOS, čeština, rozehraný profil). Pro obchody vzniknou:
 
 | Soubory | Rozměr | Kam |
 |---|---|---|
-| `appstore-iphone-NN-*.png` (10 ks) | 1320×2868 | App Store iPhone 6,9"; Google Play telefon |
-| `appstore-ipad-NN-*.png` (10 ks) | 2064×2752 | App Store iPad 13"; Google Play tablet 10" (a 7") |
-| `assets/icon/playstore_512.png` | 512×512 | Google Play ikona |
-| `build/store/feature-graphic.png` | 1024×500 | Google Play hlavní obrázek (`tool/store_feature_graphic.py`) |
+| `appstore-iphone-NN-*.png` (10 ks) | 1320×2868 | App Store iPhone 6,9" (**ne Google Play** — 2,17:1, Play bere max. 2:1) |
+| `appstore-ipad-NN-*.png` (10 ks) | 2064×2752 | App Store iPad 13" |
+| `build/store/play/phone/*.png` (8 ks) | 1080×1920 | Google Play telefon (`tool/play_screenshots.py`) |
+| `build/store/play/tablet/*.png` (5 ks) | 1920×1200 | Google Play tablet 7" i 10" (stejná sada) |
+| `assets/icon/playstore_512.png` | 512×512, RGB bez alfy | Google Play ikona |
+| `build/store/feature-graphic.png` | 1024×500 | Google Play hlavní obrázek, čeština |
+| `build/store/feature-graphic-en.png` | 1024×500 | totéž pro anglický (a další) záznam |
+
+Play sady (git-ignored, kdykoli znovu):
+
+```bash
+python3 tool/play_screenshots.py      # z ../ol1n.now/apps/swypekids/screenshots/raw
+F=$(ls -d ~/.pub-cache/git/CuteKidFonts-*/fonts | head -1)/DynaPuff-Variable.ttf
+python3 tool/store_feature_graphic.py "$F"
+python3 tool/store_feature_graphic.py "$F" build/store/feature-graphic-en.png 'World of Letters'
+```
+
+Telefonní snímky se neořezávají (9:16 by uřízlo horní lištu nebo
+klávesnici) — celý snímek stojí na žluté barvě ikony. Tabletové jsou
+desktopové snímky 2560×1600 (16:10), jen zmenšené.
 
 Doporučené pořadí: mapa, hra, rýmy, nálepka, Zvěřinec, svět zvířátka,
 skládej větu, Má knížka, průvodci, rodiče. Ostatní jazykové mutace záznamu
@@ -89,15 +136,48 @@ snímky jsou další krok.
 
 **Google Play Console**
 
-1. Vytvořit aplikaci (zdarma, hra/aplikace: aplikace, kategorie Vzdělávání).
-2. App content: zásady soukromí, reklamy ne, cílové publikum, Data safety,
-   obsahové hodnocení, „Families“ dotazník.
-3. Store listing pro každý jazyk; ikona, hlavní obrázek, snímky.
-4. Nahrát `app-release.aab` z GitHub Release dané verze (workflow
-   `release-android.yml` ho staví, do Play ho nenahrává).
-5. **Pozor:** osobní vývojářský účet založený po 13. 11. 2023 musí před
-   produkcí projít uzavřeným testem (12 testerů, 14 dní). Pak Play dnes do
-   produkce nepůjde — začít uzavřeným testem.
+Účet organizace **A+B** — pravidlo „12 testerů / 14 dní uzavřeného testu“
+platí jen pro *osobní* účty založené po 13. 11. 2023, tady neplatí: první
+vydání jde rovnou do **produkce**.
+
+0. **Nejdřív nový build.** Balíček v Play je napořád; aplikace se zakládá
+   znovu pod `com.ab.SwypeKids`. Všechna dosavadní AAB (i `v2.17.1`) mají
+   ještě `com.ol1n.SwypeKids` — změna applicationId přišla až po tagu. Je
+   potřeba nový tag (např. `v2.17.2`) a z jeho GitHub Release vzít
+   `app-release.aab`. versionCode = `github.run_number` workflow
+   `release-android.yml` (poslední běh 56 → další ≥ 57); Play u nové
+   aplikace bere cokoli, jen každé další nahrání musí mít vyšší.
+   Starý koncept `com.ol1n.SwypeKids` (pokud v konzoli je) lze smazat —
+   koncept bez nahraného buildu jde smazat.
+1. Vytvořit aplikaci: název `SwypeKids: Objevuj svět písmen`, výchozí jazyk
+   čeština (cs-CZ), **aplikace** (ne hra), zdarma; kategorie Vzdělávání,
+   štítky např. Vzdělávání pro děti / Čtení.
+2. App content: zásady soukromí (URL výše), reklamy ne, přístup k aplikaci,
+   obsahové hodnocení, cílové publikum, Data safety, vládní/zprávy/finance
+   — vše podle odpovědí v §1.
+3. Store listing pro cs-CZ a en-US (ostatní jazyky lze přidat později);
+   ikona, hlavní obrázek, snímky z §2. Kontakt: e-mail výše, web
+   `https://olin.now/swypekids.html`.
+4. Země: všechny kromě Číny (Play ji stejně nenabízí) a Japonska.
+5. Test and release → **Production** → Create new release → podepisování
+   „Google Play App Signing“ (výchozí; nahrávací klíč = keystore ze secretu
+   `ANDROID_KEYSTORE_BASE64`, kterým CI podepisuje) → nahrát AAB → poznámky
+   k vydání (max. 500 znaků) → odeslat ke kontrole. První kontrola aplikace pro děti trvá
+   obvykle dny, ne hodiny. Poznámky k vydání:
+
+   ```
+   <cs-CZ>
+   První vydání: celý Ostrov písmenek v devíti jazycích, Zvěřinec se světem zvířátek, čtyři průvodci a rodičovský koutek.
+   </cs-CZ>
+   <en-US>
+   First release: the whole Letter Island in nine languages, the Zoo with animal worlds, four guides and a parent corner.
+   </en-US>
+   ```
+6. Pozor na Firebase App Distribution v `release-android.yml`: Firebase
+   Android app (`FIREBASE_ANDROID_APP_ID`) byla registrovaná pod starým
+   balíčkem; pokud krok s novým APK selže na nesouladu balíčku, zaregistrovat
+   ve Firebase `com.ab.SwypeKids` a aktualizovat secret. Na Play to vliv
+   nemá (GitHub Release se nahrává dřív).
 
 ## 4. Kontrolní seznam
 
@@ -108,7 +188,8 @@ snímky jsou další krok.
 - [x] Parental gate před rodičovským koutkem; žádné odkazy ani nákupy
 - [x] Kontakt v zásadách soukromí (e-mail správce v `docs/PRIVACY.md`)
 - [ ] Apple: dotazníky, země, odeslání k recenzi
-- [ ] Google: založení záznamu, dotazníky, uzavřený test / produkce
+- [x] Google: Play snímky 1080×1920 + 1920×1200, hlavní obrázek cs/en
+- [ ] Google: tag s `com.ab.SwypeKids`, založení aplikace, dotazníky, produkce
 - [ ] Playtest podle `docs/PLAYTEST.md` na verzi, která jde do obchodu
 - [ ] ja: listing a vydání v Japonsku až po playtestu (§9 plánu)
 
