@@ -20,7 +20,7 @@ na daném trhu dát přečíst rodilému mluvčímu.
 | Cena | zdarma; bez nákupů v aplikaci (obchod je v kódu vypnutý, `StoreConfig.enabled = false`) |
 | Země | všechny kromě **Číny (pevninské)** a zatím **Japonska** (`docs/MONETIZATION.md` §9) |
 | Zásady soukromí (URL) | `https://github.com/lioilsources/SwypeKids/blob/main/docs/PRIVACY.md` (cs + en) |
-| Podpora (URL) | `https://olin.now/swypekids.html` |
+| Podpora (URL) | `https://olin.now/swypekids.html` — App Store Connect ji chce vyplnit u **každé** lokalizace zvlášť |
 | Marketing (URL, volitelné) | `https://olin.now/swypekids.html` |
 | Copyright | © 2026 Oldřich Vořechovský |
 | Kontakt (recenze, podpora) | oldrich.vorechovsky.jr@gmail.com |
@@ -83,6 +83,12 @@ links, no purchases.
 
 To change the language: the flag in the top bar of the map. All nine
 languages are free. No login is needed to review the app.
+
+Family language (optional, off by default): a parent can set the language
+spoken at home per child profile, e.g. Ukrainian for a child who learns to
+read Czech at school. Menus, hints and the parent corner then appear in
+the family language, while the words the child reads stay in the language
+being learned. This is the intended design, not a missing translation.
 ```
 
 ## 2. Snímky obrazovek
@@ -93,7 +99,10 @@ macOS, čeština, rozehraný profil). Pro obchody vzniknou:
 | Soubory | Rozměr | Kam |
 |---|---|---|
 | `appstore-iphone-NN-*.png` (10 ks) | 1320×2868 | App Store iPhone 6,9" (**ne Google Play** — 2,17:1, Play bere max. 2:1) |
+| `appstore-iphone63-NN-*.png` (10 ks) | 1206×2622 | App Store iPhone 6,3" („iPhone with Dynamic Island, medium display“) |
 | `appstore-ipad-NN-*.png` (10 ks) | 2064×2752 | App Store iPad 13" |
+| `build/store/header-3840x1646.png` | 3840×1646 | App Store „Header and Search Results“ › hlavička stránky (`tool/store_header.py`) |
+| `build/store/search-3840x2560.png` | 3840×2560 | App Store „Header and Search Results“ › výsledky hledání |
 | `build/store/play/phone/*.png` (8 ks) | 1080×1920 | Google Play telefon (`tool/play_screenshots.py`) |
 | `build/store/play/tablet/*.png` (5 ks) | 1920×1200 | Google Play tablet 7" i 10" (stejná sada) |
 | `assets/icon/playstore_512.png` | 512×512, RGB bez alfy | Google Play ikona |
@@ -109,7 +118,18 @@ python3 tool/store_feature_graphic.py "$F"
 python3 tool/store_feature_graphic.py "$F" build/store/feature-graphic-en.png 'World of Letters'
 ```
 
-Telefonní snímky se neořezávají (9:16 by uřízlo horní lištu nebo
+- **iPhone 6,3":** slot bere jen 1206×2622 nebo 1179×2556, sada 6,9" do něj
+  nejde. Když zůstane prázdný, App Store Connect v něm ukáže vybledlé
+  převzaté snímky („Using Existing Assets, 0 of 10“), které nejdou smazat.
+- **Hlavička a hledání:** oba obrázky jsou bez textu (průvodci + stěna
+  nálepek), jeden kus pro všechny jazyky, PNG bez alfa kanálu. Apple
+  nezveřejňuje ořez; průvodci stojí v prostředním pásu 1646×661 (bezpečná
+  zóna podle šablony, neoficiální údaj) — před odesláním zkontrolovat přes
+  Preview. Záložku „iPhone Duo“ zatím neplníme (rozměry neověřené).
+- Snímky jsou holé, bez rámečku a titulků. Na jedné obrazovce nesmí být dva
+  jazyky rozhraní (App Review, guideline 4) — po každém běhu projít očima.
+
+Telefonní snímky Google Play se neořezávají (9:16 by uřízlo horní lištu nebo
 klávesnici) — celý snímek stojí na žluté barvě ikony. Tabletové jsou
 desktopové snímky 2560×1600 (16:10), jen zmenšené.
 
@@ -122,7 +142,7 @@ snímky jsou další krok.
 
 **App Store Connect**
 
-1. Aplikace `com.ol1n.SwypeKids` → nová verze 2.16.x, vybrat poslední build
+1. Aplikace `com.ol1n.SwypeKids` → nová verze 2.17.x, vybrat poslední build
    z TestFlightu.
 2. App Information: kategorie, věkové hodnocení (dotazník), „Made for
    Kids“ 6–8, Content Rights (vlastní obsah; nálepky a průvodci jsou
@@ -130,9 +150,12 @@ snímky jsou další krok.
 3. Pricing and Availability: zdarma; odškrtnout China mainland a Japan.
 4. App Privacy: URL zásad + „Data Not Collected“.
 5. Pro každý jazyk níže: název, podtitul, promo text, popis, klíčová slova,
-   „Co je nového“, URL podpory. Snímky nahrát k češtině.
-6. App Review Information: kontakt, poznámka výše; přihlášení není potřeba.
-7. Submit for Review (ruční uvolnění po schválení doporučeno).
+   „Co je nového“, URL podpory. Snímky nahrát k češtině: iPhone 6,9",
+   iPhone 6,3" a iPad 13".
+6. Header and Search Results: nahrát hlavičku a obrázek pro hledání,
+   zkontrolovat ořez přes Preview.
+7. App Review Information: kontakt, poznámka výše; přihlášení není potřeba.
+8. Submit for Review (ruční uvolnění po schválení doporučeno).
 
 **Google Play Console**
 
@@ -184,7 +207,8 @@ vydání jde rovnou do **produkce**.
 - [x] Veřejná URL se zásadami soukromí (GitHub; hezčí stránka na olin.now
       je volitelná)
 - [x] Texty cs, en, de, es, pt-BR, fr, it
-- [x] Snímky iPhone 6,9" a iPad 13" (čeština)
+- [x] Snímky iPhone 6,9", iPhone 6,3" a iPad 13" (čeština)
+- [x] Hlavička a obrázek pro hledání (App Store)
 - [x] Parental gate před rodičovským koutkem; žádné odkazy ani nákupy
 - [x] Kontakt v zásadách soukromí (e-mail správce v `docs/PRIVACY.md`)
 - [ ] Apple: dotazníky, země, odeslání k recenzi
@@ -228,6 +252,7 @@ Dítě přejíždí prstem po klávesnici s obrázky a skládá slabiky a slova 
 • Svět, který žije: roční období podle kalendáře, den a noc, zvuky lesa a rybníka
 • Pro rodiče (za bránou): které písmeno dítěti nejde, tipy pro doma, časový limit, profily sourozenců, režim pro leváky, písmo pro dyslektiky
 • 9 jazyků v jedné aplikaci: čeština, angličtina, němčina, španělština, italština, francouzština, portugalština, čínština (pinyin), japonština (hiragana)
+• Jazyk rodiny: menu, nápověda a rodičovský koutek i ukrajinsky, rusky a vietnamsky — pro děti, které se učí číst česky a doma mluví jinak
 • Funguje úplně offline, nesbírá žádná data, bez reklam a nákupů
 
 Pro děti od 5 let, které se chystají do první třídy, i pro prvňáky, kteří potřebují číst v klidu a vlastním tempem.
@@ -266,6 +291,7 @@ Your child swipes across a picture keyboard to build syllables and words — in 
 • A living world: seasons by the calendar, day and night, sounds of the forest and the pond
 • For parents (behind a gate): which letter needs work, tips for home, daily time limit, sibling profiles, left-handed mode, dyslexia-friendly font
 • 9 languages in one app: English, Czech, German, Spanish, Italian, French, Portuguese, Chinese (pinyin), Japanese (hiragana)
+• Family language: menus, hints and the parent corner also in Ukrainian, Russian and Vietnamese — for children who learn to read in a language other than the one spoken at home
 • Works fully offline, collects no data, no ads, no purchases
 
 For children from age 5 getting ready for school, and for first-graders who need calm reading practice at their own pace.
@@ -303,6 +329,7 @@ Dein Kind wischt mit dem Finger über eine Tastatur mit Bildern und setzt Silben
 • Eine lebendige Welt: Jahreszeiten nach dem Kalender, Tag und Nacht, Geräusche von Wald und Teich
 • Für Eltern (hinter einer Sperre): welcher Buchstabe noch schwerfällt, Tipps für zu Hause, tägliches Zeitlimit, Geschwisterprofile, Linkshändermodus, Schrift für Legastheniker
 • 9 Sprachen in einer App: Deutsch, Englisch, Tschechisch, Spanisch, Italienisch, Französisch, Portugiesisch, Chinesisch (Pinyin), Japanisch (Hiragana)
+• Familiensprache: Menüs, Hinweise und Elternecke auch auf Ukrainisch, Russisch und Vietnamesisch — für Kinder, die in einer anderen Sprache lesen lernen, als zu Hause gesprochen wird
 • Funktioniert komplett offline, sammelt keine Daten, keine Werbung, keine Käufe
 
 Für Kinder ab 5 Jahren vor dem Schulstart und für Erstklässler, die in Ruhe und im eigenen Tempo lesen üben möchten.
@@ -340,6 +367,7 @@ Tu hijo desliza el dedo por un teclado con dibujos y forma sílabas y palabras, 
 • Un mundo vivo: estaciones según el calendario, día y noche, sonidos del bosque y del estanque
 • Para madres y padres (tras una puerta): qué letra cuesta más, consejos para casa, límite de tiempo diario, perfiles de hermanos, modo para zurdos, letra para dislexia
 • 9 idiomas en una sola app: español, inglés, checo, alemán, italiano, francés, portugués, chino (pinyin), japonés (hiragana)
+• Idioma de la familia: menús, ayudas y rincón para padres también en ucraniano, ruso y vietnamita — para niños que aprenden a leer en un idioma distinto del que se habla en casa
 • Funciona totalmente sin conexión, no recoge datos, sin anuncios, sin compras
 
 Para niños a partir de 5 años que se preparan para el colegio y para los de primero que necesitan practicar la lectura con calma y a su ritmo.
@@ -377,6 +405,7 @@ A criança desliza o dedo por um teclado com figuras e monta sílabas e palavras
 • Um mundo vivo: estações pelo calendário, dia e noite, sons da floresta e do lago
 • Para os pais (atrás de um portão): qual letra está difícil, dicas para casa, limite de tempo diário, perfis de irmãos, modo para canhotos, fonte para dislexia
 • 9 idiomas em um só app: português, inglês, tcheco, alemão, espanhol, italiano, francês, chinês (pinyin), japonês (hiragana)
+• Idioma da família: menus, dicas e cantinho dos pais também em ucraniano, russo e vietnamita — para crianças que aprendem a ler em um idioma diferente do falado em casa
 • Funciona totalmente offline, não coleta dados, sem anúncios, sem compras
 
 Para crianças a partir de 5 anos que se preparam para a escola e para as do primeiro ano que precisam praticar a leitura com calma e no próprio ritmo.
@@ -414,6 +443,7 @@ Votre enfant glisse le doigt sur un clavier d’images et assemble des syllabes 
 • Un monde vivant : saisons selon le calendrier, jour et nuit, bruits de la forêt et de l’étang
 • Pour les parents (derrière un portail) : quelle lettre pose problème, conseils pour la maison, limite de temps quotidienne, profils des frères et sœurs, mode gaucher, police pour la dyslexie
 • 9 langues dans une seule appli : français, anglais, tchèque, allemand, espagnol, italien, portugais, chinois (pinyin), japonais (hiragana)
+• Langue de la famille : menus, aides et coin parents aussi en ukrainien, russe et vietnamien — pour les enfants qui apprennent à lire dans une autre langue que celle de la maison
 • Fonctionne entièrement hors ligne, ne collecte aucune donnée, sans publicité, sans achats
 
 Pour les enfants dès 5 ans qui se préparent à l’école et pour les élèves de CP qui ont besoin de s’exercer à lire au calme, à leur rythme.
@@ -451,6 +481,7 @@ Il bambino scorre il dito su una tastiera di figure e compone sillabe e parole, 
 • Un mondo vivo: stagioni secondo il calendario, giorno e notte, suoni del bosco e dello stagno
 • Per i genitori (dietro un cancello): quale lettera è ancora difficile, consigli per casa, limite di tempo giornaliero, profili dei fratelli, modalità per mancini, carattere per la dislessia
 • 9 lingue in una sola app: italiano, inglese, ceco, tedesco, spagnolo, francese, portoghese, cinese (pinyin), giapponese (hiragana)
+• Lingua di famiglia: menu, aiuti e angolo dei genitori anche in ucraino, russo e vietnamita — per i bambini che imparano a leggere in una lingua diversa da quella parlata a casa
 • Funziona completamente offline, non raccoglie dati, niente pubblicità, niente acquisti
 
 Per i bambini dai 5 anni che si preparano alla scuola e per quelli di prima che hanno bisogno di esercitarsi a leggere con calma, al proprio ritmo.

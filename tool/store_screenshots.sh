@@ -6,8 +6,9 @@
 #
 # Vzniknou soubory phone-NN-<sekce>.png (390×844 @3x),
 # desktop-NN-<sekce>.png (1280×800 @2x) a pro obchody
-# appstore-iphone-NN-… (1320×2868) a appstore-ipad-NN-… (2064×2752). Trvá asi 4 minuty; na chvíli se
-# otevře okno appky.
+# appstore-iphone-NN-… (1320×2868), appstore-iphone63-NN-… (1206×2622) a
+# appstore-ipad-NN-… (2064×2752). Trvá asi 5 minut; na chvíli se otevře
+# okno appky.
 set -euo pipefail
 DEST=${1:?Použití: tool/store_screenshots.sh <cílová složka>}
 cd "$(dirname "$0")/.."
@@ -17,4 +18,11 @@ SRC=$(grep -o 'SHOTS_DIR=.*' "$LOG" | tail -1 | cut -d= -f2)
 [ -d "$SRC" ] || { echo "Snímky nevznikly (viz výstup výše)." >&2; exit 1; }
 mkdir -p "$DEST"
 cp "$SRC"/*.png "$DEST"/
+# App Store odmítá PNG s alfa kanálem; Flutter ho ukládá vždy.
+python3 - "$DEST" <<'PY'
+import glob, sys
+from PIL import Image
+for f in glob.glob(sys.argv[1] + '/appstore-*.png'):
+    Image.open(f).convert('RGB').save(f)
+PY
 echo "$(ls "$SRC"/*.png | wc -l | tr -d ' ') snímků → $DEST"
