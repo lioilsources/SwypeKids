@@ -16,9 +16,10 @@ flutter build ios
 flutter analyze
 flutter test                                # pack validation + progress tests
 dart run tool/generate_sfx.dart             # regenerate placeholder sfx (assets/audio/) — synthesized, no licences
-tool/store_screenshots.sh <dir>             # real-app screenshots of every section (macOS run, muted) → phone-*.png, desktop-*.png, appstore-iphone-*.png (1320×2868), appstore-ipad-*.png (2064×2752)
+tool/store_screenshots.sh <dir>             # real-app screenshots of every section (macOS run, muted) → phone-*.png, desktop-*.png, appstore-iphone-*.png (1320×2868), appstore-iphone63-*.png (1206×2622), appstore-ipad-*.png (2064×2752)
 python3 tool/store_feature_graphic.py <DynaPuff.ttf> [out.png] [subtitle]  # Google Play feature graphic 1024×500 → build/store/
 python3 tool/play_screenshots.py              # Google Play shots (max 2:1): phone 1080×1920 framed, tablet 1920×1200 → build/store/play/
+python3 tool/store_header.py                  # App Store header 3840×1646 + search results 3840×2560 (no text) → build/store/
 ```
 
 ## Architecture

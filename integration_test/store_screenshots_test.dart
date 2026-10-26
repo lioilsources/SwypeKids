@@ -273,8 +273,9 @@ void main() {
       '09-skladej-vetu',
     });
 
-    // App Store: iPhone 6,9" (1320×2868) a iPad 13" (2064×2752), nejvýš 10
-    // snímků na zařízení. Google Play bere tytéž soubory.
+    // App Store: iPhone 6,9" (1320×2868), iPhone 6,3" (1206×2622) a iPad 13"
+    // (2064×2752), nejvýš 10 snímků na zařízení. Google Play má vlastní sady
+    // (tool/play_screenshots.py).
     const store = {
       '01-mapa',
       '02-hra',
@@ -288,6 +289,9 @@ void main() {
       '12-rodice',
     };
     await _run(t, pack, const Size(440, 956), 3, 'appstore-iphone-', only: store);
+    // Slot „iPhone 6,3\"“ v App Store Connect bere jen 1206×2622 (nebo
+    // 1179×2556); bez vlastní sady ukáže vybledlé převzaté snímky.
+    await _run(t, pack, const Size(402, 874), 3, 'appstore-iphone63-', only: store);
     await _run(t, pack, const Size(1032, 1376), 2, 'appstore-ipad-', only: store);
 
     await t.pumpWidget(const SizedBox());
