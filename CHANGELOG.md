@@ -1,5 +1,9 @@
 # Changelog
 
+## [26/10/2026] — v2.17.3
+- Build pod Xcode 27: nejnižší podporovaná verze iOS 15 a macOS 12
+- Obchod: snímky pro iPhone 6,3", hlavička a obrázek pro hledání v App Store, jazyk rodiny v popisu záznamu
+
 ## [15/10/2026] — v2.17.2
 - Android: nové ID aplikace com.ab.SwypeKids pro Google Play (účet A+B)
 - Obchod: podklady pro Google Play (snímky 1080×1920 a tablet, hlavní obrázek, odpovědi v docs/STORE.md)
