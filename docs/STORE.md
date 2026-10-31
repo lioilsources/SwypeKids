@@ -138,7 +138,7 @@ desktopové snímky 2560×1600 (16:10), jen zmenšené.
 ```bash
 SHOT_DEVICE=<id simulátoru> tool/store_screenshots.sh build/store/raw cs en de es fr it pt uk ru vi   # ~50 min
 python3 tool/store_captions.py      # → build/store/fastlane/screenshots/<lokalizace>/
-fastlane deliver                    # nahraje jen snímky (fastlane/Deliverfile)
+fastlane screenshots                # nahraje jen snímky (fastlane/Fastfile + Deliverfile)
 ```
 
 - Generovat na iOS simulátoru (`xcrun simctl list devices`, např. iPhone 17
@@ -156,6 +156,9 @@ fastlane deliver                    # nahraje jen snímky (fastlane/Deliverfile)
 - Snímky vyžadují novou verzi v App Store Connect (stačí stejný build).
   Pokud deliver odmítne rozměr 1206×2622, soubory `*_iphone63_*` smazat —
   App Store menší iPhony dopočítá z 6,9".
+- Klíč: `APP_STORE_CONNECT_API_KEY_KEY_ID`, `…_ISSUER_ID` a
+  `…_KEY_FILEPATH` (cesta k `.p8`, role App Manager). Lane neexistující
+  verzi (`app_version` v Deliverfile) založí, k recenzi nic neodešle.
 
 Doporučené pořadí: mapa, hra, rýmy, nálepka, Zvěřinec, svět zvířátka,
 skládej větu, Má knížka, průvodci, rodiče. Ostatní jazykové mutace záznamu

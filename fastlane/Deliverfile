@@ -1,10 +1,10 @@
 # Lokalizované snímky do App Store Connect (jen snímky, žádné texty ani build).
 #
 #   python3 tool/store_captions.py
-#   APP_STORE_CONNECT_API_KEY_PATH=~/…/swypekids_asc.json fastlane deliver
+#   fastlane screenshots   # klíč z APP_STORE_CONNECT_API_KEY_*, viz Fastfile
 #
-# JSON klíče: {"key_id": "…", "issuer_id": "…", "key_filepath": "…/AuthKey_….p8"}
-# (stejný klíč, jaký má CI v secretech APP_STORE_CONNECT_API_*). Verze musí
+# (JSON pro APP_STORE_CONNECT_API_KEY_PATH by musel obsahovat celý klíč
+# v poli "key" — proto lane s cestou k .p8.) Verze musí
 # být v App Store Connect ve stavu „Prepare for Submission“; deliver ji
 # k recenzi neodešle.
 app_version("2.17.3")
