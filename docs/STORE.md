@@ -1,9 +1,12 @@
 # SwypeKids — podklady pro odeslání do obchodů (App Store / Google Play)
 
-Verze 2 (8. 10. 2026) pro první vydání **2.16.x**. Všechny texty prošly
-kontrolou délek (název 30, podtitul 30, krátký popis 80, klíčová slova 100,
-promo 170). Překlady de/es/pt/fr/it jsou strojové — před větší propagací
-na daném trhu dát přečíst rodilému mluvčímu.
+Verze 3 (31. 10. 2026) pro **2.17.3**. Záznam App Store má 13 lokalizací
+(§5); texty prošly kontrolou délek (název 30, podtitul 30, krátký popis 80,
+klíčová slova 100, promo 170). Překlady de/es/pt/fr/it/uk/ru/vi jsou
+strojové — před větší propagací na daném trhu dát přečíst rodilému mluvčímu.
+
+Tento soubor je zdroj textů: `python3 tool/store_metadata.py` z něj složí
+metadata pro fastlane a `fastlane metadata` je nahraje (§2, §3).
 
 ## 1. Společné údaje
 
@@ -126,8 +129,10 @@ python3 tool/store_feature_graphic.py "$F" build/store/feature-graphic-en.png 'W
   nezveřejňuje ořez; průvodci stojí v prostředním pásu 1646×661 (bezpečná
   zóna podle šablony, neoficiální údaj) — před odesláním zkontrolovat přes
   Preview. Záložku „iPhone Duo“ zatím neplníme (rozměry neověřené).
-- Snímky jsou holé, bez rámečku a titulků. Na jedné obrazovce nesmí být dva
-  jazyky rozhraní (App Review, guideline 4) — po každém běhu projít očima.
+- Snímky jsou holé, bez rámečku a titulků (titulky přidává až
+  `tool/store_captions.py`, níže). Rozhraní na jednom snímku má být v jednom
+  jazyce — po každém běhu projít očima. Výjimka je záměrná: uk/ru/vi ukazují
+  rozhraní v jazyce rodiny a české čtení, poznámka pro recenzenta to vysvětluje.
 
 Telefonní snímky Google Play se neořezávají (9:16 by uřízlo horní lištu nebo
 klávesnici) — celý snímek stojí na žluté barvě ikony. Tabletové jsou
@@ -139,6 +144,8 @@ desktopové snímky 2560×1600 (16:10), jen zmenšené.
 SHOT_DEVICE=<id simulátoru> tool/store_screenshots.sh build/store/raw cs en de es fr it pt uk ru vi   # ~50 min
 python3 tool/store_captions.py      # → build/store/fastlane/screenshots/<lokalizace>/
 fastlane screenshots                # nahraje jen snímky (fastlane/Fastfile + Deliverfile)
+python3 tool/store_metadata.py      # §5 + §6 → build/store/fastlane/metadata/<lokalizace>/
+fastlane metadata                   # nahraje popis, klíčová slova, promo a „Co je nového“
 ```
 
 - Generovat na iOS simulátoru (`xcrun simctl list devices`, např. iPhone 17
@@ -159,26 +166,31 @@ fastlane screenshots                # nahraje jen snímky (fastlane/Fastfile + D
 - Klíč: `APP_STORE_CONNECT_API_KEY_KEY_ID`, `…_ISSUER_ID` a
   `…_KEY_FILEPATH` (cesta k `.p8`, role App Manager). Lane neexistující
   verzi (`app_version` v Deliverfile) založí, k recenzi nic neodešle.
+- Snímky se nahrávají ~45 min (13 × 30). Hláška „Too many screenshots …
+  has already 10“ uprostřed běhu je opakovaný pokus fastlane, ne chyba;
+  počty na konci zkontrolovat v App Store Connect.
+- `fastlane metadata` nahrává jen pole, pro která `store_metadata.py`
+  vytvořil soubor (popis, klíčová slova, promo, „Co je nového“, URL podpory
+  a marketingu). Název a podtitul nemění — ty patří k App Information a
+  mění se ručně jen spolu s novou verzí.
 
-Doporučené pořadí: mapa, hra, rýmy, nálepka, Zvěřinec, svět zvířátka,
-skládej větu, Má knížka, průvodci, rodiče. Ostatní jazykové mutace záznamu
-použijí české snímky (App Store je přebírá z primárního jazyka); anglické
-snímky jsou další krok.
+Pořadí snímků: mapa, hra, rýmy, nálepka, Zvěřinec, svět zvířátka,
+skládej větu, Má knížka, průvodci, rodiče. Od 2.17.3 má každá ze 13
+lokalizací vlastní sadu (iPhone 6,9", 6,3" a iPad 13").
 
 ## 3. Co udělat ručně (účet vývojáře)
 
 **App Store Connect**
 
-1. Aplikace `com.ol1n.SwypeKids` → nová verze 2.17.x, vybrat poslední build
-   z TestFlightu.
+1. Aplikace `com.ol1n.SwypeKids` → nová verze 2.17.x (založí ji i
+   `fastlane screenshots`), vybrat poslední build z TestFlightu.
 2. App Information: kategorie, věkové hodnocení (dotazník), „Made for
    Kids“ 6–8, Content Rights (vlastní obsah; nálepky a průvodci jsou
    generované a vlastněné autorem).
 3. Pricing and Availability: zdarma; odškrtnout China mainland a Japan.
 4. App Privacy: URL zásad + „Data Not Collected“.
-5. Pro každý jazyk níže: název, podtitul, promo text, popis, klíčová slova,
-   „Co je nového“, URL podpory. Snímky nahrát k češtině: iPhone 6,9",
-   iPhone 6,3" a iPad 13".
+5. Snímky: `fastlane screenshots`; texty: `fastlane metadata` (§2). Ručně
+   jen název a podtitul (App Information), když se mění.
 6. Header and Search Results: nahrát hlavičku a obrázek pro hledání,
    zkontrolovat ořez přes Preview.
 7. App Review Information: kontakt, poznámka výše; přihlášení není potřeba.
@@ -233,8 +245,10 @@ vydání jde rovnou do **produkce**.
 
 - [x] Veřejná URL se zásadami soukromí (GitHub; hezčí stránka na olin.now
       je volitelná)
-- [x] Texty cs, en, de, es, pt-BR, fr, it
-- [x] Snímky iPhone 6,9", iPhone 6,3" a iPad 13" (čeština)
+- [x] Texty ve 13 lokalizacích záznamu (§5), klíčová slova (§6)
+- [x] Snímky s titulky iPhone 6,9", iPhone 6,3" a iPad 13" ve 13 lokalizacích (2.17.3)
+- [ ] Titulky a texty de/es/fr/it/pt/uk/ru/vi přečte rodilý mluvčí
+- [ ] Po 14 dnech od vydání 2.17.3 analytika podle storefrontů (bez ČR)
 - [x] Hlavička a obrázek pro hledání (App Store)
 - [x] Parental gate před rodičovským koutkem; žádné odkazy ani nákupy
 - [x] Kontakt v zásadách soukromí (e-mail správce v `docs/PRIVACY.md`)
@@ -248,7 +262,7 @@ vydání jde rovnou do **produkce**.
 
 ## 5. Texty záznamu
 
-### Česky (primární jazyk záznamu)
+### Česky (cs — primární jazyk záznamu)
 
 **Název (30/30):** SwypeKids: Objevuj svět písmen
 
@@ -281,7 +295,7 @@ Dítě přejíždí prstem po klávesnici s obrázky a skládá slabiky a slova 
 Pro děti od 5 let, které se chystají do první třídy, i pro prvňáky, kteří potřebují číst v klidu a vlastním tempem.
 ```
 
-**Co je nového:** První vydání v App Store: celý Ostrov písmenek v devíti jazycích, Zvěřinec se světem zvířátek, čtyři průvodci a rodičovský koutek.
+**Co je nového (2.17.3):** Aktualizace pro nejnovější iOS (aplikace teď vyžaduje iOS 15 nebo novější) a drobná vylepšení.
 
 ### English (en-US, en-GB)
 
@@ -316,7 +330,7 @@ Your child swipes across a picture keyboard to build syllables and words — in 
 For children from age 5 getting ready for school, and for first-graders who need calm reading practice at their own pace.
 ```
 
-**Co je nového:** First App Store release: the whole Letter Island in nine languages, the Zoo with animal worlds, four guides and a parent corner.
+**Co je nového (2.17.3):** Updated for the latest iOS (now requires iOS 15 or later) and small improvements.
 
 ### Deutsch (de-DE)
 
@@ -350,7 +364,7 @@ Dein Kind wischt mit dem Finger über eine Tastatur mit Bildern und setzt Silben
 Für Kinder ab 5 Jahren vor dem Schulstart und für Erstklässler, die in Ruhe und im eigenen Tempo lesen üben möchten.
 ```
 
-**Co je nového:** Erste Version im App Store: die ganze Buchstabeninsel in neun Sprachen, der Zoo mit Tierwelten, vier Begleiter und eine Elternecke.
+**Co je nového (2.17.3):** Aktualisiert für das neueste iOS (benötigt jetzt iOS 15 oder neuer) und kleine Verbesserungen.
 
 ### Español (es-ES, es-MX)
 
@@ -384,7 +398,7 @@ Tu hijo desliza el dedo por un teclado con dibujos y forma sílabas y palabras, 
 Para niños a partir de 5 años que se preparan para el colegio y para los de primero que necesitan practicar la lectura con calma y a su ritmo.
 ```
 
-**Co je nového:** Primera versión en App Store: toda la Isla de las letras en nueve idiomas, el Zoo con los mundos de los animales, cuatro guías y un rincón para padres.
+**Co je nového (2.17.3):** Actualizada para el iOS más reciente (ahora requiere iOS 15 o posterior) y pequeñas mejoras.
 
 ### Português (pt-BR)
 
@@ -418,7 +432,7 @@ A criança desliza o dedo por um teclado com figuras e monta sílabas e palavras
 Para crianças a partir de 5 anos que se preparam para a escola e para as do primeiro ano que precisam praticar a leitura com calma e no próprio ritmo.
 ```
 
-**Co je nového:** Primeira versão na App Store: toda a Ilha das letras em nove idiomas, o Zoológico com os mundos dos bichinhos, quatro guias e um cantinho dos pais.
+**Co je nového (2.17.3):** Atualizado para o iOS mais recente (agora requer iOS 15 ou posterior) e pequenas melhorias.
 
 ### Français (fr-FR, fr-CA)
 
@@ -452,9 +466,9 @@ Votre enfant glisse le doigt sur un clavier d’images et assemble des syllabes 
 Pour les enfants dès 5 ans qui se préparent à l’école et pour les élèves de CP qui ont besoin de s’exercer à lire au calme, à leur rythme.
 ```
 
-**Co je nového:** Première version sur l’App Store : toute l’Île des lettres en neuf langues, le Zoo et les mondes des animaux, quatre guides et un coin parents.
+**Co je nového (2.17.3):** Mise à jour pour le dernier iOS (nécessite désormais iOS 15 ou ultérieur) et petites améliorations.
 
-### Italiano (it-IT)
+### Italiano (it)
 
 **Název (30/30):** SwypeKids: Mondo delle lettere
 
@@ -486,7 +500,113 @@ Il bambino scorre il dito su una tastiera di figure e compone sillabe e parole, 
 Per i bambini dai 5 anni che si preparano alla scuola e per quelli di prima che hanno bisogno di esercitarsi a leggere con calma, al proprio ritmo.
 ```
 
-**Co je nového:** Prima versione su App Store: tutta l’Isola delle lettere in nove lingue, lo Zoo con i mondi degli animali, quattro guide e un angolo dei genitori.
+**Co je nového (2.17.3):** Aggiornata per l’iOS più recente (ora richiede iOS 15 o successivo) e piccoli miglioramenti.
+
+### Українська (uk)
+
+Záznam cílí na rodiny, které doma mluví ukrajinsky a dítě se učí číst česky
+(nebo v jiném jazyce školy) — popis začíná odstavcem pro ně. Texty jsou
+převzaté z App Store Connect (31. 10. 2026).
+
+**Název (25/30):** SwypeKids: Вчимося читати
+
+**Podtitul (24/30):** Букви й склади пальчиком
+
+**Promo text, Apple (142/170):** Читання чеською (та ще 8 мовами) пальчиком по клавіатурі з малюнками. Меню й поради для батьків українською. Без реклами, без покупок, офлайн.
+
+**Klíčová slova, Apple:** viz §6 (podle lokalizace).
+
+**Popis:**
+
+```
+SwypeKids — гра, у якій діти 5–9 років вчаться читати, проводячи пальчиком по клавіатурі з малюнками. Дитина складає склади й слова так, як їх чує. Жодних таймерів і покарань: помилка лише похитується й підказує. За кожен розділ дитина отримує тваринку до Звіринця.
+
+ДЛЯ УКРАЇНСЬКИХ РОДИН ЗА КОРДОНОМ
+Дитина ходить до чеської (чи англійської, німецької…) школи, а вдома говорить українською? У SwypeKids вона вчиться читати мовою школи, а меню, підказки, вступ і батьківський куточок можуть бути українською. Мову родини обираєте прапорцем на початку або в профілі дитини.
+
+• Читання 9 мовами: чеська, англійська, німецька, іспанська, італійська, французька, португальська, китайська (піньїнь), японська (хірагана)
+• Метод, як у школі: склади → слова → слухання без тексту → пропущені літери → рими → повторення найважчого
+• Нові слова одразу в речення та до «Моєї книжечки»
+• Звіринець: у кожної тваринки свій світ — нагодуй її словами, які вже знаєш
+• Чотири провідники: Панда, Капібара, Жирафа і Гепард
+• Сотні ілюстрованих наліпок і значків — без тиску і без «серій»
+• Для батьків (за захисними дверцятами): яка літера не вдається, поради для дому, ліміт часу, профілі братів і сестер, режим для шульг, шрифт для дітей із дислексією
+• Працює повністю офлайн, не збирає жодних даних, без реклами й покупок
+
+Для дітей від 5 років, які готуються до школи, і для першокласників, що хочуть читати спокійно й у власному темпі.
+```
+
+**Co je nového (2.17.3):** Оновлення для найновішої iOS (тепер потрібна iOS 15 або новіша) та дрібні покращення.
+
+### Русский (ru)
+
+Záznam cílí na rodiny, které doma mluví rusky a dítě se učí číst česky
+(nebo v jiném jazyce školy) — popis začíná odstavcem pro ně. Texty jsou
+převzaté z App Store Connect (31. 10. 2026).
+
+**Název (24/30):** SwypeKids: Учимся читать
+
+**Podtitul (23/30):** Буквы и слоги пальчиком
+
+**Promo text, Apple (145/170):** Чтение на чешском (и ещё 8 языках) пальчиком по клавиатуре с картинками. Меню и советы для родителей по-русски. Без рекламы, без покупок, офлайн.
+
+**Klíčová slova, Apple:** viz §6 (podle lokalizace).
+
+**Popis:**
+
+```
+SwypeKids — игра, в которой дети 5–9 лет учатся читать, проводя пальчиком по клавиатуре с картинками и складывая слоги и слова так, как их слышат. Никаких таймеров и наказаний: ошибка лишь покачивается и подсказывает. За каждый раздел ребёнок получает зверька в Зверинец.
+
+ДЛЯ СЕМЕЙ, ГДЕ ДОМА ГОВОРЯТ ИНАЧЕ
+Ребёнок ходит в чешскую (английскую, немецкую…) школу, а дома говорит по-русски? В SwypeKids он учится читать на языке школы, а меню, подсказки, вступление и уголок для родителей могут быть на русском. Язык семьи выбирается флажком в начале или в профиле ребёнка.
+
+• Чтение на 9 языках: чешский, английский, немецкий, испанский, итальянский, французский, португальский, китайский (пиньинь), японский (хирагана)
+• Метод как в школе: слоги → слова → слушание без текста → пропущенные буквы → рифмы → повторение самого трудного
+• Новые слова сразу в предложение и в «Мою книжку»
+• Зверинец: у каждого зверька свой мир — покорми его словами, которые уже знаешь
+• Четыре проводника: Панда, Капибара, Жираф и Гепард
+• Сотни иллюстрированных наклеек и значков — без давления
+• Для родителей (за защитой): какая буква не получается, советы, лимит времени, профили братьев и сестёр, режим для левшей, шрифт для детей с дислексией
+• Работает полностью офлайн, не собирает данные, без рекламы и покупок
+```
+
+**Co je nového (2.17.3):** Обновление для новейшей iOS (теперь нужна iOS 15 или новее) и небольшие улучшения.
+
+### Tiếng Việt (vi)
+
+Záznam cílí na rodiny, které doma mluví vietnamsky a dítě se učí číst česky
+(nebo v jiném jazyce školy) — popis začíná odstavcem pro ně. Texty jsou
+převzaté z App Store Connect (31. 10. 2026).
+
+**Název (21/30):** SwypeKids: Bé học đọc
+
+**Podtitul (28/30):** Chữ cái và vần bằng ngón tay
+
+**Promo text, Apple (152/170):** Học đọc tiếng Séc (và 8 ngôn ngữ khác) bằng ngón tay trên bàn phím hình ảnh. Menu và lời khuyên cho phụ huynh bằng tiếng Việt. Không quảng cáo, offline.
+
+**Klíčová slova, Apple:** viz §6 (podle lokalizace).
+
+**Popis:**
+
+```
+SwypeKids là trò chơi giúp trẻ 5–9 tuổi học đọc bằng cách vuốt ngón tay trên bàn phím hình ảnh, ghép vần và từ theo đúng âm bé nghe được. Không đồng hồ đếm giờ, không phạt: khi sai, phím chỉ rung nhẹ và gợi ý. Mỗi bài học xong, bé nhận một con vật cho Vườn thú.
+
+DÀNH CHO GIA ĐÌNH VIỆT Ở NƯỚC NGOÀI
+Con học trường Séc (hoặc Anh, Đức…) nhưng ở nhà nói tiếng Việt? Trong SwypeKids, bé học đọc bằng ngôn ngữ của trường, còn menu, hướng dẫn, phần giới thiệu và góc phụ huynh có thể bằng tiếng Việt. Chọn ngôn ngữ gia đình bằng lá cờ lúc bắt đầu hoặc trong hồ sơ của bé.
+
+• Học đọc 9 ngôn ngữ: tiếng Séc, Anh, Đức, Tây Ban Nha, Ý, Pháp, Bồ Đào Nha, tiếng Trung (pinyin), tiếng Nhật (hiragana)
+• Phương pháp như ở trường: vần → từ → nghe không nhìn chữ → điền chữ còn thiếu → vần điệu → ôn lại phần khó nhất
+• Từ mới được đưa ngay vào câu và vào “Sách của em”
+• Vườn thú: mỗi con vật có thế giới riêng — cho chúng ăn bằng những từ bé đã biết
+• Bốn bạn đồng hành: Gấu trúc, Chuột lang nước, Hươu cao cổ và Báo
+• Hàng trăm nhãn dán minh họa và huy hiệu — không áp lực, không chuỗi ngày
+• Dành cho phụ huynh (có khóa): chữ nào bé còn yếu, mẹo học ở nhà, giới hạn thời gian, hồ sơ cho anh chị em, chế độ thuận tay trái, phông chữ cho trẻ khó đọc
+• Hoạt động hoàn toàn offline, không thu thập dữ liệu, không quảng cáo, không mua hàng
+
+Dành cho trẻ từ 5 tuổi chuẩn bị vào lớp 1 và các bé lớp 1 muốn tập đọc thong thả theo nhịp của mình.
+```
+
+**Co je nového (2.17.3):** Cập nhật cho iOS mới nhất (nay cần iOS 15 trở lên) và một số cải tiến nhỏ.
 
 ---
 
@@ -503,9 +623,10 @@ fr-FR: podle běžné praxe ASO se doplňkové lokalizace indexují i v dalšíc
 obchodech (např. es-MX v USA), takže jiná slova rozšíří dosah. Je to
 neoficiální pozorování, ne dokumentace Applu.
 
-uk, ru a vi: záznam cílí na rodiny, jejichž dítě se učí číst česky. Tyto
-návrhy nejsou porovnané s názvem a podtitulem v App Store Connect (v repu
-nejsou) — slova, která tam už jsou, smazat. Dát přečíst rodilému mluvčímu.
+uk, ru a vi: záznam cílí na rodiny, jejichž dítě se učí číst česky. Slova
+z jejich názvu a podtitulu (§5: „читати“, „букви“, „склади“ / „читать“,
+„буквы“, „слоги“ / „học đọc“, „chữ cái“, „vần“) v klíčových slovech nejsou.
+Dát přečíst rodilému mluvčímu.
 
 | Lokalizace | Znaků | Klíčová slova |
 |---|---|---|
@@ -519,7 +640,7 @@ nejsou) — slova, která tam už jsou, smazat. Dát přečíst rodilému mluvč
 | fr-FR | 95 | `lecture,enfants,syllabes,alphabet,abc,cp,maternelle,école,mots,méthode,syllabique,phonique,jeux` |
 | fr-CA | 97 | `lecture,enfants,syllabes,alphabet,abc,maternelle,prématernelle,1re,année,école,mots,phonique,jeux` |
 | it | 92 | `bambini,sillabe,alfabeto,lettura,abc,scuola,primaria,infanzia,prima,elementare,parole,giochi` |
-| uk | 94 | `чеська,мова,читання,читати,діти,букви,абетка,склади,школа,перший,клас,чехія,дошкільнята,буквар` |
-| ru | 91 | `чешский,язык,чтение,читать,дети,буквы,алфавит,слоги,школа,первый,класс,чехия,азбука,букварь` |
-| vi | 95 | `tiếng séc,học đọc,trẻ em,chữ cái,bảng chữ cái,âm vần,lớp 1,mẫu giáo,đánh vần,trường học,tập đọc` |
+| uk | 94 | `чеська,мова,читання,діти,абетка,буквар,школа,перший,клас,чехія,дошкільнята,слова,звуки,гра,abc` |
+| ru | 96 | `чешский,язык,чтение,дети,алфавит,азбука,букварь,школа,первый,класс,чехия,дошкольники,слова,звуки` |
+| vi | 96 | `tiếng séc,trẻ em,lớp 1,mẫu giáo,đánh vần,trường,từ vựng,trò chơi,tiểu học,tiếng việt,abc,phonics` |
 
