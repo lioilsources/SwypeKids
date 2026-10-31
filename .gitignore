@@ -83,3 +83,7 @@ drafts/stickers/out/
 drafts/stickers/round2/out/
 drafts/stickers/round3/out/
 drafts/stickers/round4/out/
+
+# fastlane (generované)
+fastlane/report.xml
+fastlane/README.md

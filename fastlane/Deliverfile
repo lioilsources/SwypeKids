@@ -1,0 +1,18 @@
+# Lokalizované snímky do App Store Connect (jen snímky, žádné texty ani build).
+#
+#   python3 tool/store_captions.py
+#   fastlane screenshots   # klíč z APP_STORE_CONNECT_API_KEY_*, viz Fastfile
+#
+# (JSON pro APP_STORE_CONNECT_API_KEY_PATH by musel obsahovat celý klíč
+# v poli "key" — proto lane s cestou k .p8.) Verze musí
+# být v App Store Connect ve stavu „Prepare for Submission“; deliver ji
+# k recenzi neodešle.
+app_version("2.17.3")
+screenshots_path("./build/store/fastlane/screenshots")
+overwrite_screenshots(true)
+skip_screenshots(false)
+skip_metadata(true)
+skip_binary_upload(true)
+submit_for_review(false)
+run_precheck_before_submit(false)
+force(true) # bez HTML náhledu a potvrzování

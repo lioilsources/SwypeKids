@@ -1,0 +1,20 @@
+# Klíč App Store Connect z cesty k .p8, bez kopírování jeho obsahu:
+#
+#   APP_STORE_CONNECT_API_KEY_KEY_ID=… APP_STORE_CONNECT_API_KEY_ISSUER_ID=… \
+#   APP_STORE_CONNECT_API_KEY_KEY_FILEPATH=…/AuthKey_….p8 fastlane screenshots
+default_platform(:ios)
+
+platform :ios do
+  desc 'Nahraje lokalizované snímky (fastlane/Deliverfile)'
+  lane :screenshots do
+    app_store_connect_api_key
+    deliver
+  end
+
+  desc 'Nahraje texty z docs/STORE.md (python3 tool/store_metadata.py)'
+  lane :metadata do
+    app_store_connect_api_key
+    deliver(skip_metadata: false, skip_screenshots: true,
+            metadata_path: './build/store/fastlane/metadata')
+  end
+end
