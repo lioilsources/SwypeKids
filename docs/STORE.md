@@ -133,6 +133,30 @@ Telefonní snímky Google Play se neořezávají (9:16 by uřízlo horní lištu
 klávesnici) — celý snímek stojí na žluté barvě ikony. Tabletové jsou
 desktopové snímky 2560×1600 (16:10), jen zmenšené.
 
+### Lokalizované snímky s titulky (App Store, 13 lokalizací)
+
+```bash
+SHOT_DEVICE=<id simulátoru> tool/store_screenshots.sh build/store/raw cs en de es fr it pt uk ru vi   # ~50 min
+python3 tool/store_captions.py      # → build/store/fastlane/screenshots/<lokalizace>/
+fastlane deliver                    # nahraje jen snímky (fastlane/Deliverfile)
+```
+
+- Generovat na iOS simulátoru (`xcrun simctl list devices`, např. iPhone 17
+  Pro Max): macOS okno přestane kreslit, když usne displej nebo je zamčeno,
+  a test pak stojí až do timeoutu. Simulátor kreslí i bez displeje.
+- Test snímků jde pustit v jazyce rozhraní (`--dart-define=SHOT_LANG=en`);
+  slova, rýmy, věty a zvířátka si vybírá z packu daného jazyka, ne z
+  češtiny. Hry v cs/en/de/es/fr/it/pt jsou opravdu lokalizované.
+- **uk, ru, vi** nemají pack: rozhraní je v jazyce rodiny a čte se česky
+  (ukrajinské dítě v české škole) — titulky to říkají („Читання чеською…“).
+- Každá lokalizace dostane 10 scén × iPhone 6,9" (1320×2868), iPhone 6,3"
+  (1206×2622) a iPad 13" (2064×2752). en-GB/es-MX/fr-CA sdílí snímky s
+  en-US/es-ES/fr-FR. Titulky jsou v `tool/store_captions.py`; de/es/fr/it/pt
+  strojové, uk/ru/vi dát přečíst rodilému mluvčímu.
+- Snímky vyžadují novou verzi v App Store Connect (stačí stejný build).
+  Pokud deliver odmítne rozměr 1206×2622, soubory `*_iphone63_*` smazat —
+  App Store menší iPhony dopočítá z 6,9".
+
 Doporučené pořadí: mapa, hra, rýmy, nálepka, Zvěřinec, svět zvířátka,
 skládej větu, Má knížka, průvodci, rodiče. Ostatní jazykové mutace záznamu
 použijí české snímky (App Store je přebírá z primárního jazyka); anglické
@@ -231,11 +255,7 @@ vydání jde rovnou do **produkce**.
 
 **Promo text, Apple (101/170):** Písmenka, slabiky a první věty prstem po obrázkové klávesnici. Bez reklam, bez nákupů, úplně offline.
 
-**Klíčová slova, Apple (93/100):**
-
-```
-čtení,číst,písmenka,děti,škola,slabikář,abeceda,první třída,učení,hra,předškolák,prvňák,swipe
-```
+**Klíčová slova, Apple:** viz §6 (podle lokalizace).
 
 **Popis:**
 
@@ -270,11 +290,7 @@ Pro děti od 5 let, které se chystají do první třídy, i pro prvňáky, kte�
 
 **Promo text, Apple (106/170):** Letters, syllables and first sentences by swiping a picture keyboard. No ads, no purchases, fully offline.
 
-**Klíčová slova, Apple (94/100):**
-
-```
-reading,kids,syllables,phonics,alphabet,first grade,preschool,spelling,words,swipe,abc,offline
-```
+**Klíčová slova, Apple:** viz §6 (podle lokalizace).
 
 **Popis:**
 
@@ -309,11 +325,7 @@ For children from age 5 getting ready for school, and for first-graders who need
 
 **Promo text, Apple (114/170):** Buchstaben, Silben und erste Sätze per Wisch über eine Bildertastatur. Ohne Werbung, ohne Käufe, komplett offline.
 
-**Klíčová slova, Apple (95/100):**
-
-```
-kinder,silben,alphabet,schule,erste klasse,vorschule,wörter,fibel,abc,swipe,lesenlernen,offline
-```
+**Klíčová slova, Apple:** viz §6 (podle lokalizace).
 
 **Popis:**
 
@@ -347,11 +359,7 @@ Für Kinder ab 5 Jahren vor dem Schulstart und für Erstklässler, die in Ruhe u
 
 **Promo text, Apple (120/170):** Letras, sílabas y primeras frases deslizando el dedo por un teclado de dibujos. Sin anuncios, sin compras, sin conexión.
 
-**Klíčová slova, Apple (93/100):**
-
-```
-niños,sílabas,abecedario,colegio,primero,preescolar,palabras,lectura,silabario,swipe,abc,leer
-```
+**Klíčová slova, Apple:** viz §6 (podle lokalizace).
 
 **Popis:**
 
@@ -385,11 +393,7 @@ Para niños a partir de 5 años que se preparan para el colegio y para los de pr
 
 **Promo text, Apple (123/170):** Letras, sílabas e primeiras frases deslizando o dedo num teclado de figuras. Sem anúncios, sem compras, totalmente offline.
 
-**Klíčová slova, Apple (88/100):**
-
-```
-crianças,sílabas,alfabeto,escola,alfabetização,pré-escola,palavras,leitura,abc,swipe,ler
-```
+**Klíčová slova, Apple:** viz §6 (podle lokalizace).
 
 **Popis:**
 
@@ -423,11 +427,7 @@ Para crianças a partir de 5 anos que se preparam para a escola e para as do pri
 
 **Promo text, Apple (119/170):** Lettres, syllabes et premières phrases en glissant le doigt sur un clavier d’images. Sans pub, sans achats, hors ligne.
 
-**Klíčová slova, Apple (84/100):**
-
-```
-enfants,syllabes,alphabet,école,cp,maternelle,mots,lecture,abc,swipe,lire,hors ligne
-```
+**Klíčová slova, Apple:** viz §6 (podle lokalizace).
 
 **Popis:**
 
@@ -461,11 +461,7 @@ Pour les enfants dès 5 ans qui se préparent à l’école et pour les élèves
 
 **Promo text, Apple (118/170):** Lettere, sillabe e prime frasi scorrendo il dito su una tastiera di figure. Senza pubblicità, senza acquisti, offline.
 
-**Klíčová slova, Apple (90/100):**
-
-```
-bambini,sillabe,alfabeto,scuola,prima elementare,infanzia,parole,lettura,abc,swipe,leggere
-```
+**Klíčová slova, Apple:** viz §6 (podle lokalizace).
 
 **Popis:**
 
@@ -488,3 +484,39 @@ Per i bambini dai 5 anni che si preparano alla scuola e per quelli di prima che 
 ```
 
 **Co je nového:** Prima versione su App Store: tutta l’Isola delle lettere in nove lingue, lo Zoo con i mondi degli animali, quattro guide e un angolo dei genitori.
+
+---
+
+## 6. Klíčová slova (ASO, 31. 10. 2026)
+
+Pravidla Applu: nejvýš 100 znaků, čárky bez mezer. Slova z názvu a
+podtitulu se indexují sama, proto se v klíčových slovech neopakují (dřív
+se opakovalo „čtení“, „leer“, „ler“, „lire“, „leggere“). Jednotlivá slova
+Apple sám kombinuje („first“ + „grade“), takže víceslovné fráze nejsou
+potřeba. Míří na rodiče: phonics, abc, slabikář, škola.
+
+Varianty en-GB, es-MX a fr-CA mají záměrně jiná slova než en-US, es-ES a
+fr-FR: podle běžné praxe ASO se doplňkové lokalizace indexují i v dalších
+obchodech (např. es-MX v USA), takže jiná slova rozšíří dosah. Je to
+neoficiální pozorování, ne dokumentace Applu.
+
+uk, ru a vi: záznam cílí na rodiny, jejichž dítě se učí číst česky. Tyto
+návrhy nejsou porovnané s názvem a podtitulem v App Store Connect (v repu
+nejsou) — slova, která tam už jsou, smazat. Dát přečíst rodilému mluvčímu.
+
+| Lokalizace | Znaků | Klíčová slova |
+|---|---|---|
+| cs | 97 | `číst,písmenka,abeceda,slabikář,děti,předškolák,prvňák,třída,škola,učení,logopedie,dyslexie,hlásky` |
+| en-US | 99 | `phonics,abc,alphabet,reading,kids,kindergarten,preschool,syllables,spelling,sight,words,games,grade` |
+| en-GB | 99 | `reception,phonic,blending,synthetic,satpin,literacy,early,children,school,sounds,reader,primary,abc` |
+| de-DE | 99 | `kinder,silben,abc,alphabet,schule,erste,klasse,vorschule,grundschule,wörter,fibel,lesespiel,anlaute` |
+| es-ES | 96 | `niños,sílabas,abecedario,lectura,lectoescritura,colegio,infantil,primaria,palabras,silabario,abc` |
+| es-MX | 98 | `lectura,niños,sílabas,abc,abecedario,kínder,preescolar,primaria,palabras,silabario,fonética,juegos` |
+| pt-BR | 96 | `alfabetização,crianças,sílabas,alfabeto,abc,leitura,escola,infantil,pré-escola,palavras,cartilha` |
+| fr-FR | 95 | `lecture,enfants,syllabes,alphabet,abc,cp,maternelle,école,mots,méthode,syllabique,phonique,jeux` |
+| fr-CA | 97 | `lecture,enfants,syllabes,alphabet,abc,maternelle,prématernelle,1re,année,école,mots,phonique,jeux` |
+| it | 92 | `bambini,sillabe,alfabeto,lettura,abc,scuola,primaria,infanzia,prima,elementare,parole,giochi` |
+| uk | 94 | `чеська,мова,читання,читати,діти,букви,абетка,склади,школа,перший,клас,чехія,дошкільнята,буквар` |
+| ru | 91 | `чешский,язык,чтение,читать,дети,буквы,алфавит,слоги,школа,первый,класс,чехия,азбука,букварь` |
+| vi | 95 | `tiếng séc,học đọc,trẻ em,chữ cái,bảng chữ cái,âm vần,lớp 1,mẫu giáo,đánh vần,trường học,tập đọc` |
+

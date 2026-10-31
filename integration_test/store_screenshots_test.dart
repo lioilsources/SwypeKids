@@ -5,6 +5,11 @@
 //
 // PNG se uloží do dočasné složky appky (cesta se vypíše na konci:
 // `SHOTS_DIR=…`); odtud je `tool/store_screenshots.sh` zkopíruje.
+//
+// Jazyk: `--dart-define=SHOT_LANG=en` (výchozí cs). `SHOT_LANG` je jazyk
+// rozhraní; uk, ru a vi nemají vlastní pack, takže se v nich čte česky
+// (jazyk rodiny — ukrajinské dítě v české škole). Jiný jazyk než cs dělá
+// jen sady pro App Store; scény (slova, rýmy, věty) se vybírají z packu.
 import 'dart:io';
 import 'dart:ui' as ui;
 
@@ -16,7 +21,10 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:swype_kids/characters/guide.dart';
 import 'package:swype_kids/data/lessons.dart';
 import 'package:swype_kids/data/models/content_pack.dart';
+import 'package:swype_kids/data/models/sentence.dart';
+import 'package:swype_kids/data/sentence_corpus.dart';
 import 'package:swype_kids/parent/parent_screen.dart';
+import 'package:swype_kids/pet/gift.dart';
 import 'package:swype_kids/pet/pet_screen.dart';
 import 'package:swype_kids/screens/game_screen.dart';
 import 'package:swype_kids/screens/home_shell.dart';
@@ -35,23 +43,53 @@ import 'package:swype_kids/world/world_clock.dart';
 final _root = GlobalKey();
 late Directory _out;
 
+/// Kam snímky uložit (`--dart-define=SHOT_OUT=…`). Na iOS simulátoru
+/// zapisuje appka rovnou na disk Macu — jeho kontejner po testu zmizí.
+/// Na macOS je appka v sandboxu, tam zůstane dočasná složka.
+const _outPath = String.fromEnvironment('SHOT_OUT');
+
+/// Jazyk rozhraní snímků (`--dart-define=SHOT_LANG=…`).
+const _ui = String.fromEnvironment('SHOT_LANG', defaultValue: 'cs');
+
+/// Jazyk, ve kterém se čte: uk/ru/vi nemají pack → čeština.
+final Language _lang =
+    Language.values.asNameMap()[_ui] ?? Language.cs;
+
+/// Jména sourozenců na snímcích, ať nejsou všude česká.
+const _names = {
+  'cs': ('Ema', 'Kuba'),
+  'en': ('Emma', 'Jack'),
+  'de': ('Emma', 'Ben'),
+  'es': ('Lucía', 'Mateo'),
+  'fr': ('Léa', 'Hugo'),
+  'it': ('Sofia', 'Leo'),
+  'pt': ('Alice', 'Miguel'),
+  'uk': ('Соня', 'Марко'),
+  'ru': ('Маша', 'Миша'),
+  'vi': ('An', 'Minh'),
+};
+
+AppLocalizations get _l => lookupAppLocalizations(Locale(_ui));
+
 /// Rozehraný profil: 13 hotových jednotek, slova v batohu, věty v knížce,
 /// pár odznaků a tajných nálepek — ať je na snímcích co vidět.
 Future<ContentPack> _seed() async {
   SharedPreferences.setMockInitialValues({});
   await ProfileService.init();
   final profiles = ProfileService.instance;
-  profiles.complete(avatar: '🦊', name: 'Ema');
-  profiles.complete(avatar: '🐸', name: 'Kuba');
+  final (first, second) = _names[_ui] ?? _names['cs']!;
+  profiles.complete(avatar: '🦊', name: first);
+  profiles.complete(avatar: '🐸', name: second);
   profiles.switchTo(1);
   profiles.setGuide(1, Guide.panda);
+  if (_ui != _lang.name) profiles.setHome(1, _ui);
   await ProgressService.init(profile: 1);
   await SettingsService.instance.load();
   await SessionService.instance.load();
   await WorldClockService.instance.loadSettings();
   final p = ProgressService.instance;
-  p.selectedLanguage = Language.cs;
-  final pack = await PackService.instance.load(Language.cs);
+  p.selectedLanguage = _lang;
+  final pack = await PackService.instance.load(_lang);
   for (var u = 0; u < 13; u++) {
     final unit = pack.units[u];
     for (final (i, l) in unit.lessons.indexed) {
@@ -63,16 +101,20 @@ Future<ContentPack> _seed() async {
     p.addCollectible(pack.id, unit.reward.emoji);
     p.markUnitRevealed(pack.id, unit.id);
   }
-  for (final w in ['mleko', 'hracka', 'auto', 'banan', 'voda', 'kniha']) {
+  // Pár slov z batohu odemkne předměty v builderu, zbytek zůstane „?“.
+  final locked = [
+    for (final o in pack.sentence.objects)
+      if (o.unlockedBy == TileUnlock.vocab) o.id,
+  ];
+  for (final w in locked.take(6)) {
     p.addWord(pack.id, w);
   }
   for (final secret in ['🐞', '🍄', '🐢', '🐌']) {
     p.addCollectible(pack.id, secret);
   }
-  p.addToBook(pack.id, 'Máma jí jablko.', '👩 🍽️ 🍎');
-  p.addToBook(pack.id, 'Já si hraju s autem.', '👶 🎲 🚗');
-  p.addToBook(pack.id, 'Myš pije mléko.', '🐭 🥛 🥛');
-  p.addToBook(pack.id, 'Oko se dívá na kolo.', '👁️ 👀 🚲');
+  for (final s in _bookSentences(pack)) {
+    p.addToBook(pack.id, s.text, s.emojis);
+  }
   for (final b in ['firstSwype', 'explorer', 'noMistake', 'wordsmith10', 'host']) {
     p.earnBadge(b);
   }
@@ -82,7 +124,86 @@ Future<ContentPack> _seed() async {
   return pack;
 }
 
-Widget _app(Widget home, {Locale locale = const Locale('cs')}) => RepaintBoundary(
+/// Čtyři věty do Mé knížky: tři z builderu (pokaždé jiný podmět, sloveso
+/// i předmět), čtvrtá ze světa zvířátka.
+List<CorpusSentence> _bookSentences(ContentPack pack) {
+  final corpus = SentenceCorpus.of(pack);
+  final used = <String>{};
+  final out = <CorpusSentence>[];
+  for (final s in corpus.where((s) => s.source == 'builder')) {
+    final parts = s.parts.split('|');
+    final ids = ['s:${parts[0]}', 'v:${parts[1].split(':').first}',
+        'o:${parts[2].split(':').first}'];
+    if (ids.any(used.contains)) continue;
+    used.addAll(ids);
+    out.add(s);
+    if (out.length == 3) break;
+  }
+  out.addAll(corpus.where((s) => s.source == 'pet' && !s.parts.endsWith('.-')).take(1));
+  return out;
+}
+
+/// Věta pro Skládej větu: podmět, sloveso a předmět, které jsou v
+/// seznamech co nejvýš (ať jsou dlaždice vidět bez posouvání).
+List<String> _builderTiles(ContentPack pack) {
+  final d = pack.sentence;
+  int at(List<SentencePart> list, String id) =>
+      list.indexWhere((x) => x.id == id);
+  List<String>? best;
+  var bestScore = 1 << 30;
+  for (final s in SentenceCorpus.of(pack).where((s) => s.source == 'builder')) {
+    final parts = s.parts.split('|');
+    final subject = parts[0];
+    final verb = parts[1].split(':').first;
+    final object = parts[2].split(':').first;
+    final i = at(d.subjects, subject), j = at(d.verbs, verb), k = at(d.objects, object);
+    if (i < 0 || j < 0 || k < 0) continue;
+    final o = d.objects[k];
+    if (o.unlockedBy != TileUnlock.always) continue;
+    final score = i + j + k;
+    if (score < bestScore) {
+      bestScore = score;
+      best = [subject, verb, object];
+    }
+  }
+  return best!;
+}
+
+/// První obyvatel Zvěřince, který jí (zvíře, ne věc), od [from].
+int _animalUnit(ContentPack pack, {int from = 0}) {
+  for (var i = from; i < pack.units.length; i++) {
+    if (PetSentence.eats(pack.units[i].reward)) return i;
+  }
+  return from;
+}
+
+/// Dárek pro obyvatele jednotky [unit], po kterém vznikne věta s předmětem.
+String _giftFor(ContentPack pack, int unit) {
+  final resident = pack.units[unit].reward;
+  final tray = Gift.trayFor(pack);
+  for (final g in tray) {
+    if (g.object == null) continue;
+    final line = PetSentence.line(pack, resident, g);
+    // Věta s předmětem („Myš jí jablko.“), ne jen „Myš jí.“
+    if (line != null && line.key.endsWith('.${g.id}') &&
+        !line.key.startsWith('naming.')) {
+      return g.id;
+    }
+  }
+  return tray.first.id;
+}
+
+/// Lekce s rýmy (výběr obrázku): (jednotka, lekce).
+(int, int) _rhyme(ContentPack pack) {
+  for (final (u, unit) in pack.units.indexed) {
+    for (final (i, l) in unit.lessons.indexed) {
+      if (l.type == LessonType.rhymePick) return (u, i);
+    }
+  }
+  return (5, 0);
+}
+
+Widget _app(Widget home, {Locale locale = const Locale(_ui)}) => RepaintBoundary(
       key: _root,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -118,7 +239,7 @@ Future<void> _shot(WidgetTester t, String name, double ratio) async {
 }
 
 Future<void> _show(WidgetTester t, Widget home,
-    {Locale locale = const Locale('cs')}) async {
+    {Locale locale = const Locale(_ui)}) async {
   // Nový strom pro každý snímek: žádný stav z předchozí obrazovky.
   await t.pumpWidget(const SizedBox());
   await t.pump(const Duration(milliseconds: 100));
@@ -162,7 +283,10 @@ Future<void> _run(WidgetTester t, ContentPack pack, Size size, double ratio,
   await t.binding.setSurfaceSize(size);
   bool want(String name) => only == null || only.contains(name);
   Future<void> shot(String name) => _shot(t, '$prefix$name', ratio);
-  final home = HomeShell(initialLanguage: Language.cs);
+  final home = HomeShell(initialLanguage: _lang);
+  final (rhymeUnit, rhymeLesson) = _rhyme(pack);
+  final sticker = _animalUnit(pack, from: 1);
+  final pet = _animalUnit(pack);
 
   if (want('01-mapa')) {
     await _show(t, home);
@@ -177,27 +301,28 @@ Future<void> _run(WidgetTester t, ContentPack pack, Size size, double ratio,
     await shot('03-doplnovacka');
   }
   if (want('04-rymy')) {
-    await _show(t, GameScreen(pack: pack, unitIndex: 12, startLessonIndex: 4));
+    await _show(t, GameScreen(
+        pack: pack, unitIndex: rhymeUnit, startLessonIndex: rhymeLesson));
     await shot('04-rymy');
   }
   if (want('05-nalepka')) {
     await _show(
         t,
         UnitCompleteScreen(
-          reward: pack.units[1].reward,
+          reward: pack.units[sticker].reward,
           stars: 9,
-          playWith: () => PetScreen(pack: pack, unitIndex: 1),
+          playWith: () => PetScreen(pack: pack, unitIndex: sticker),
         ));
     await shot('05-nalepka');
   }
   if (want('06-zverinec')) {
     await _show(t, home);
-    await _menu(t, 'Zvěřinec');
+    await _menu(t, _l.menuZoo);
     await shot('06-zverinec');
   }
   if (want('07-svet-zviratka')) {
-    await _show(t, PetScreen(pack: pack, unitIndex: 0));
-    await _give(t, 'o2');
+    await _show(t, PetScreen(pack: pack, unitIndex: pet));
+    await _give(t, _giftFor(pack, pet));
     await _wait(t, 2600); // průvodce uhne z věty
     await shot('07-svet-zviratka');
   }
@@ -209,16 +334,16 @@ Future<void> _run(WidgetTester t, ContentPack pack, Size size, double ratio,
   }
   if (want('09-skladej-vetu')) {
     await _show(t, home);
-    await _menu(t, 'Skládej větu');
-    for (final key in ['tile-mama', 'tile-v2', 'tile-o2']) {
-      await t.tap(find.byKey(ValueKey(key)));
+    await _menu(t, _l.menuSentence);
+    for (final id in _builderTiles(pack)) {
+      await t.tap(find.byKey(ValueKey('tile-$id')));
       await _wait(t, 400);
     }
     await shot('09-skladej-vetu');
   }
   if (want('10-ma-knizka')) {
     await _show(t, home);
-    await _menu(t, 'Má knížka');
+    await _menu(t, _l.menuBook);
     await shot('10-ma-knizka');
   }
   if (want('11-pruvodci')) {
@@ -230,11 +355,11 @@ Future<void> _run(WidgetTester t, ContentPack pack, Size size, double ratio,
     await shot('11-pruvodci');
   }
   if (want('12-rodice')) {
-    await _show(t, const ParentScreen(language: Language.cs));
+    await _show(t, ParentScreen(language: _lang));
     await shot('12-rodice');
   }
   if (want('13-uvod')) {
-    await _show(t, OnboardingScreen(initialLanguage: Language.cs, onDone: (_) {}));
+    await _show(t, OnboardingScreen(initialLanguage: _lang, onDone: (_) {}));
     await shot('13-uvod');
   }
   if (want('14-japonstina')) {
@@ -243,7 +368,7 @@ Future<void> _run(WidgetTester t, ContentPack pack, Size size, double ratio,
     await _show(t, GameScreen(pack: ja, unitIndex: 1),
         locale: const Locale('ja'));
     await shot('14-japonstina');
-    AppLanguage.instance.value = Language.cs;
+    AppLanguage.instance.value = _lang;
   }
 }
 
@@ -254,24 +379,28 @@ void main() {
     TtsService.muted = true; // zvuky zůstanou tiché: AudioService se nespouští
     // Dopoledne v červnu — ať na snímcích není noc a nikdo nespí.
     WorldClockService.instance.debugNowOverride = () => DateTime(2026, 6, 3, 10);
-    AppLanguage.instance.value = Language.cs;
-    _out = Directory('${Directory.systemTemp.path}/swypekids-shots')
+    AppLanguage.instance.value = _lang;
+    _out = Directory(_outPath.isNotEmpty
+        ? _outPath
+        : '${Directory.systemTemp.path}/swypekids-shots')
       ..createSync(recursive: true);
     for (final f in _out.listSync()) {
       f.deleteSync();
     }
     final pack = await _seed();
 
-    // Telefon na výšku (iPhone 390×844 @3x) — všechny sekce.
-    await _run(t, pack, const Size(390, 844), 3, 'phone-');
-    // Počítač (1280×800 @2x) — výběr.
-    await _run(t, pack, const Size(1280, 800), 2, 'desktop-', only: {
-      '01-mapa',
-      '02-hra',
-      '06-zverinec',
-      '07-svet-zviratka',
-      '09-skladej-vetu',
-    });
+    if (_ui == 'cs') {
+      // Telefon na výšku (iPhone 390×844 @3x) — všechny sekce.
+      await _run(t, pack, const Size(390, 844), 3, 'phone-');
+      // Počítač (1280×800 @2x) — výběr.
+      await _run(t, pack, const Size(1280, 800), 2, 'desktop-', only: {
+        '01-mapa',
+        '02-hra',
+        '06-zverinec',
+        '07-svet-zviratka',
+        '09-skladej-vetu',
+      });
+    }
 
     // App Store: iPhone 6,9" (1320×2868), iPhone 6,3" (1206×2622) a iPad 13"
     // (2064×2752), nejvýš 10 snímků na zařízení. Google Play má vlastní sady
@@ -291,7 +420,10 @@ void main() {
     await _run(t, pack, const Size(440, 956), 3, 'appstore-iphone-', only: store);
     // Slot „iPhone 6,3\"“ v App Store Connect bere jen 1206×2622 (nebo
     // 1179×2556); bez vlastní sady ukáže vybledlé převzaté snímky.
-    await _run(t, pack, const Size(402, 874), 3, 'appstore-iphone63-', only: store);
+    // Snímky s titulky (tool/store_captions.py) dělají 6,3" z 6,9".
+    if (_ui == 'cs') {
+      await _run(t, pack, const Size(402, 874), 3, 'appstore-iphone63-', only: store);
+    }
     await _run(t, pack, const Size(1032, 1376), 2, 'appstore-ipad-', only: store);
 
     await t.pumpWidget(const SizedBox());
