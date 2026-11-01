@@ -265,5 +265,6 @@
   "storeDebugEnable": "ストア有効をシミュレート",
   "storeDebugForget": "購入を忘れる",
   "homeLanguageLabel": "かぞくのことば（メニューとヒント）",
-  "homeLanguageSame": "ゲームとおなじ"
+  "homeLanguageSame": "ゲームとおなじ",
+  "parentPrivacy": "プライバシーポリシー"
 }

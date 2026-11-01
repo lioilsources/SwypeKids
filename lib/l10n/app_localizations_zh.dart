@@ -535,4 +535,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get homeLanguageSame => '与游戏语言相同';
+
+  @override
+  String get parentPrivacy => '隐私政策';
 }

@@ -162,5 +162,6 @@
   "storeDebugEnable": "Mô phỏng cửa hàng đang bật",
   "storeDebugForget": "Quên các giao dịch mua",
   "homeLanguageLabel": "Ngôn ngữ của gia đình (menu và gợi ý)",
-  "homeLanguageSame": "Giống ngôn ngữ của trò chơi"
+  "homeLanguageSame": "Giống ngôn ngữ của trò chơi",
+  "parentPrivacy": "Chính sách quyền riêng tư"
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart' show rootBundle;
 
 import '../audio/audio_service.dart';
 import '../data/czech_vocative.dart';
@@ -118,6 +119,16 @@ class _ParentScreenState extends State<ParentScreen> {
                     _Section(
                         title: context.l.sectionSettings,
                         child: const ParentSettings()),
+                    ListTile(
+                      contentPadding: EdgeInsets.zero,
+                      leading: const Icon(Icons.privacy_tip_outlined,
+                          color: Color(0xFFA0C4FF)),
+                      title: Text(context.l.parentPrivacy, style: _body),
+                      onTap: () => Navigator.of(context).push(
+                        MaterialPageRoute(
+                            builder: (_) => const PrivacyPolicyScreen()),
+                      ),
+                    ),
                     // Obchod je vypnutý (StoreConfig) — žádná záložka. Jen
                     // v debug buildu přepínač na vyzkoušení zámků.
                     if (kDebugMode)
@@ -324,6 +335,38 @@ class _ParentScreenState extends State<ParentScreen> {
     height: 1.4,
     color: Colors.white.withValues(alpha: 0.85),
   );
+}
+
+TextStyle get _body => TextStyle(
+      fontFamily: kFont,
+      fontFamilyFallback: kFontFallback,
+      fontSize: 14,
+      color: Colors.white.withValues(alpha: 0.85),
+    );
+
+/// Zásady ochrany soukromí přímo v aplikaci (vyžaduje Google Play). Text je
+/// `docs/PRIVACY.md` z assetů: aplikace nemá síť ani odkazy ven.
+class PrivacyPolicyScreen extends StatelessWidget {
+  const PrivacyPolicyScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xFF1A1A2E),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        foregroundColor: Colors.white,
+        title: Text(context.l.parentPrivacy, style: _body),
+      ),
+      body: FutureBuilder<String>(
+        future: rootBundle.loadString('docs/PRIVACY.md'),
+        builder: (context, snap) => SingleChildScrollView(
+          padding: const EdgeInsets.fromLTRB(16, 4, 16, 32),
+          child: SelectableText(snap.data ?? '', style: _body),
+        ),
+      ),
+    );
+  }
 }
 
 class _Section extends StatelessWidget {

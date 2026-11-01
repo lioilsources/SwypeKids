@@ -541,4 +541,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get homeLanguageSame => 'Giống ngôn ngữ của trò chơi';
+
+  @override
+  String get parentPrivacy => 'Chính sách quyền riêng tư';
 }

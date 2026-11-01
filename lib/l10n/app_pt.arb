@@ -265,5 +265,6 @@
   "storeDebugEnable": "Simular a loja ativada",
   "storeDebugForget": "Esquecer compras",
   "homeLanguageLabel": "Idioma da família (menus e dicas)",
-  "homeLanguageSame": "O mesmo do jogo"
+  "homeLanguageSame": "O mesmo do jogo",
+  "parentPrivacy": "Política de privacidade"
 }

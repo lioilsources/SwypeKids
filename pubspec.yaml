@@ -51,6 +51,7 @@ flutter:
   uses-material-design: true
   generate: true
   assets:
+    - docs/PRIVACY.md
     - assets/packs/
     - assets/store/
     - assets/characters/panda/

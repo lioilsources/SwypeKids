@@ -1095,6 +1095,12 @@ abstract class AppLocalizations {
   /// In cs, this message translates to:
   /// **'Stejný jako jazyk hry'**
   String get homeLanguageSame;
+
+  /// No description provided for @parentPrivacy.
+  ///
+  /// In cs, this message translates to:
+  /// **'Zásady ochrany soukromí'**
+  String get parentPrivacy;
 }
 
 class _AppLocalizationsDelegate

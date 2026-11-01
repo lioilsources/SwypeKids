@@ -313,5 +313,6 @@
   "storeDebugEnable": "Simulovat zapnutý obchod",
   "storeDebugForget": "Zapomenout nákupy",
   "homeLanguageLabel": "Jazyk rodiny (menu a nápověda)",
-  "homeLanguageSame": "Stejný jako jazyk hry"
+  "homeLanguageSame": "Stejný jako jazyk hry",
+  "parentPrivacy": "Zásady ochrany soukromí"
 }
