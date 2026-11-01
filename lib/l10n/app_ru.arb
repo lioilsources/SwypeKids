@@ -162,5 +162,6 @@
   "storeDebugEnable": "Имитировать включённый магазин",
   "storeDebugForget": "Забыть покупки",
   "homeLanguageLabel": "Язык семьи (меню и подсказки)",
-  "homeLanguageSame": "Такой же, как язык игры"
+  "homeLanguageSame": "Такой же, как язык игры",
+  "parentPrivacy": "Политика конфиденциальности"
 }

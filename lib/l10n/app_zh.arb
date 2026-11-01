@@ -265,5 +265,6 @@
   "storeDebugEnable": "模拟已开启的商店",
   "storeDebugForget": "清除购买记录",
   "homeLanguageLabel": "家庭语言（菜单和提示）",
-  "homeLanguageSame": "与游戏语言相同"
+  "homeLanguageSame": "与游戏语言相同",
+  "parentPrivacy": "隐私政策"
 }

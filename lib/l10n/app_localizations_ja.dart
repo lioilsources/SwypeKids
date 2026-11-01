@@ -535,4 +535,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get homeLanguageSame => 'ゲームとおなじ';
+
+  @override
+  String get parentPrivacy => 'プライバシーポリシー';
 }

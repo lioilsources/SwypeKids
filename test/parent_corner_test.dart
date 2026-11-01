@@ -109,4 +109,12 @@ void main() {
     expect(ProfileService.instance.profiles.map((p) => p.id), [2]);
     expect(ProfileService.instance.activeId, 2);
   });
+
+  testWidgets('zásady ochrany soukromí jsou v aplikaci', (tester) async {
+    await tester.pumpWidget(localizedApp(home: const PrivacyPolicyScreen()));
+    await tester.runAsync(() => Future.delayed(const Duration(milliseconds: 50)));
+    await tester.pump();
+    expect(find.textContaining('oldrich.vorechovsky.jr@gmail.com'),
+        findsOneWidget);
+  });
 }

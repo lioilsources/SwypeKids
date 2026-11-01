@@ -19,7 +19,7 @@ metadata pro fastlane a `fastlane metadata` je nahraje (§2, §3).
 | Apple „Made for Kids“ | ano, věk **6–8** (nevratné po schválení) |
 | Apple věkové hodnocení | 4+ (všechny otázky „None“; bez neomezeného webu, bez hazardu, bez soutěží) |
 | Google cílové publikum | 5 a méně + 6–8 (9–12 volitelně, popis říká 5–9); „apeluje na děti“ ano → platí zásady Families |
-| Google účet | organizace **A+B** (ne osobní účet) — bez povinného uzavřeného testu, rovnou do produkce |
+| Google účet | organizace **Ol1n** (ID 6905472302263288009, ne osobní účet) — bez povinného uzavřeného testu, rovnou do produkce |
 | Cena | zdarma; bez nákupů v aplikaci (obchod je v kódu vypnutý, `StoreConfig.enabled = false`) |
 | Země | všechny kromě **Číny (pevninské)** a zatím **Japonska** (`docs/MONETIZATION.md` §9) |
 | Zásady soukromí (URL) | `https://github.com/lioilsources/SwypeKids/blob/main/docs/PRIVACY.md` (cs + en) |
@@ -198,19 +198,16 @@ lokalizací vlastní sadu (iPhone 6,9", 6,3" a iPad 13").
 
 **Google Play Console**
 
-Účet organizace **A+B** — pravidlo „12 testerů / 14 dní uzavřeného testu“
+Účet organizace **Ol1n** — pravidlo „12 testerů / 14 dní uzavřeného testu“
 platí jen pro *osobní* účty založené po 13. 11. 2023, tady neplatí: první
 vydání jde rovnou do **produkce**.
 
-0. **Nejdřív nový build.** Balíček v Play je napořád; aplikace se zakládá
-   znovu pod `com.ab.SwypeKids`. Všechna dosavadní AAB (i `v2.17.1`) mají
-   ještě `com.ol1n.SwypeKids` — změna applicationId přišla až po tagu. Je
-   potřeba nový tag (např. `v2.17.2`) a z jeho GitHub Release vzít
-   `app-release.aab`. versionCode = `github.run_number` workflow
-   `release-android.yml` (poslední běh 56 → další ≥ 57); Play u nové
-   aplikace bere cokoli, jen každé další nahrání musí mít vyšší.
-   Starý koncept `com.ol1n.SwypeKids` (pokud v konzoli je) lze smazat —
-   koncept bez nahraného buildu jde smazat.
+0. **Build.** Balíček v Play je napořád; aplikace se zakládá pod
+   `com.ab.SwypeKids`. AAB od `v2.17.2` výš ho mají (ověřeno na `v2.17.3`:
+   versionCode 58, target 36, min 24, 16KB OK). Pro první vydání vzít
+   `app-release.aab` z GitHub Release tagu, který už má `<queries>` pro
+   `TTS_SERVICE`. versionCode = `github.run_number` workflow
+   `release-android.yml`; každé další nahrání musí mít vyšší.
 1. Vytvořit aplikaci: název `SwypeKids: Objevuj svět písmen`, výchozí jazyk
    čeština (cs-CZ), **aplikace** (ne hra), zdarma; kategorie Vzdělávání,
    štítky např. Vzdělávání pro děti / Čtení.

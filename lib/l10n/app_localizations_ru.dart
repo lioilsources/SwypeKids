@@ -542,4 +542,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get homeLanguageSame => 'Такой же, как язык игры';
+
+  @override
+  String get parentPrivacy => 'Политика конфиденциальности';
 }

@@ -541,4 +541,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get homeLanguageSame => 'O mesmo do jogo';
+
+  @override
+  String get parentPrivacy => 'Política de privacidade';
 }

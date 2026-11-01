@@ -1,5 +1,10 @@
 # Changelog
 
+## [01/11/2026] — v2.17.4
+- Android: deklarace TTS_SERVICE v manifestu, aby předčítání našlo hlasový engine i na starších Androidech 11+ (první vydání na Google Play)
+- Rodičovský koutek: zásady ochrany soukromí přímo v aplikaci (požadavek Google Play)
+- Obchod: lokalizované snímky a texty pro App Store, opravené údaje o účtu Google Play v docs/STORE.md
+
 ## [26/10/2026] — v2.17.3
 - Build pod Xcode 27: nejnižší podporovaná verze iOS 15 a macOS 12
 - Obchod: snímky pro iPhone 6,3", hlavička a obrázek pro hledání v App Store, jazyk rodiny v popisu záznamu

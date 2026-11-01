@@ -162,5 +162,6 @@
   "storeDebugEnable": "Simulate an enabled store",
   "storeDebugForget": "Forget purchases",
   "homeLanguageLabel": "Family language (menus and hints)",
-  "homeLanguageSame": "Same as the game language"
+  "homeLanguageSame": "Same as the game language",
+  "parentPrivacy": "Privacy policy"
 }

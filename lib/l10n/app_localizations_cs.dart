@@ -541,4 +541,7 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get homeLanguageSame => 'Stejný jako jazyk hry';
+
+  @override
+  String get parentPrivacy => 'Zásady ochrany soukromí';
 }
