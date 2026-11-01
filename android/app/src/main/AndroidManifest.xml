@@ -26,4 +26,10 @@
             android:value="2" />
     </application>
     <uses-permission android:name="android.permission.VIBRATE"/>
+    <!-- Android 11+: bez toho aplikace nevidí TTS engine (viz README flutter_tts). -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE"/>
+        </intent>
+    </queries>
 </manifest>
