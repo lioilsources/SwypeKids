@@ -31,7 +31,8 @@ void main() {
     }
   });
 
-  testWidgets('brána: špatná odpověď nepustí a vylosuje nový příklad, správná pustí',
+  testWidgets(
+      'brána: špatná odpověď nepustí a vylosuje nový příklad, správná pustí',
       (tester) async {
     var passed = false;
     await tester.pumpWidget(localizedApp(
@@ -47,7 +48,8 @@ void main() {
     await tester.pump(const Duration(milliseconds: 500));
 
     // Nový příklad podle stejného generátoru
-    final (a2, b2, options2, idx2) = ParentGate.makeQuestion(Random(7)..nextInt(1));
+    final (a2, b2, options2, idx2) =
+        ParentGate.makeQuestion(Random(7)..nextInt(1));
     // (generátor pokračuje; ověříme jen, že správná volba pustí)
     final q2 = tester.widget<Text>(find.byKey(const ValueKey('gate-question')));
     final m = RegExp(r'(\d+) × (\d+)').firstMatch(q2.data!)!;
@@ -112,9 +114,9 @@ void main() {
 
   testWidgets('zásady ochrany soukromí jsou v aplikaci', (tester) async {
     await tester.pumpWidget(localizedApp(home: const PrivacyPolicyScreen()));
-    await tester.runAsync(() => Future.delayed(const Duration(milliseconds: 50)));
+    await tester
+        .runAsync(() => Future.delayed(const Duration(milliseconds: 50)));
     await tester.pump();
-    expect(find.textContaining('oldrich.vorechovsky.jr@gmail.com'),
-        findsOneWidget);
+    expect(find.textContaining('business@olin.now'), findsOneWidget);
   });
 }
