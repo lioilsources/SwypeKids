@@ -16,6 +16,7 @@ import '../services/tts_service.dart';
 import '../widgets/badge_chip.dart';
 import '../widgets/language_picker.dart';
 import '../world/biome_band.dart';
+import '../world/meadow_trail.dart';
 import '../world/particle_layer.dart';
 import '../world/world_backdrop.dart';
 import '../world/world_clock.dart';
@@ -406,9 +407,7 @@ class LessonMapScreenState extends State<LessonMapScreen> {
                         const SizedBox(width: 10),
                         Expanded(
                           child: Text(
-                            pack.title.isNotEmpty
-                                ? pack.title
-                                : '🎹 SwypeKids',
+                            pack.title.isNotEmpty ? pack.title : '🎹 SwypeKids',
                             overflow: TextOverflow.ellipsis,
                             style: TextStyle(
                               fontFamily: kFont,
@@ -889,6 +888,9 @@ class _BagChip extends StatelessWidget {
   }
 }
 
+/// Odsazení uzlů lekcí od středu (sdílí ho cestička [MeadowTrail]).
+const double _nodeSway = 0.35;
+
 class _UnitBlock extends StatelessWidget {
   final ContentPack pack;
   final int unitIndex;
@@ -914,8 +916,7 @@ class _UnitBlock extends StatelessWidget {
   Widget build(BuildContext context) {
     final progress = ProgressService.instance;
     final unit = pack.units[unitIndex];
-    final unitUnlocked =
-        EntitlementService.instance.unitOpen(pack, unitIndex);
+    final unitUnlocked = EntitlementService.instance.unitOpen(pack, unitIndex);
     final unitCompleted = progress.isUnitCompleted(pack, unitIndex);
     final hasReward = progress.hasCollectible(pack.id, unit.reward);
     final revealed = progress.isUnitRevealed(pack.id, unit.id);
@@ -1022,21 +1023,41 @@ class _UnitBlock extends StatelessWidget {
               ),
             ),
 
-            // Uzly lekcí — hadovitě odsazené
-            for (var l = 0; l < unit.lessons.length; l++)
-              Align(
-                alignment: l.isEven
-                    ? const Alignment(-0.35, 0)
-                    : const Alignment(0.35, 0),
-                child: _LessonNode(
-                  key: ValueKey('lesson-${unit.lessons[l].id}'),
-                  pack: pack,
-                  unitIndex: unitIndex,
-                  lessonIndex: l,
-                  unitUnlocked: unitUnlocked,
-                  onTap: () => onLessonTap(l),
+            // Uzly lekcí — hadovitě odsazené, spojené cestičkou loukou.
+            Stack(
+              children: [
+                Positioned.fill(
+                  child: MeadowTrail(
+                    count: unit.lessons.length,
+                    walked: unit.lessons
+                        .takeWhile((l) => progress.isCompleted(pack.id, l.id))
+                        .length,
+                    biome: biome,
+                    theme: world,
+                    active: unitUnlocked,
+                    sway: _nodeSway,
+                  ),
                 ),
-              ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    for (var l = 0; l < unit.lessons.length; l++)
+                      Align(
+                        alignment:
+                            Alignment(l.isEven ? -_nodeSway : _nodeSway, 0),
+                        child: _LessonNode(
+                          key: ValueKey('lesson-${unit.lessons[l].id}'),
+                          pack: pack,
+                          unitIndex: unitIndex,
+                          lessonIndex: l,
+                          unitUnlocked: unitUnlocked,
+                          onTap: () => onLessonTap(l),
+                        ),
+                      ),
+                  ],
+                ),
+              ],
+            ),
           ],
         ),
       ),
