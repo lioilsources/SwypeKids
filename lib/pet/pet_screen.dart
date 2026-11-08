@@ -50,6 +50,7 @@ class _PetScreenState extends State<PetScreen> {
   Biome get _biome => Biome.parse(_unit.biome);
 
   late final List<Gift> _tray = Gift.trayFor(_pack);
+  late final List<Gift> _upcoming = Gift.upcomingFor(_pack, _tray);
 
   // Co obyvatel právě dělá (dárek, hlazení, šimrání).
   StickerAction? _action;
@@ -136,8 +137,7 @@ class _PetScreenState extends State<PetScreen> {
     super.dispose();
   }
 
-  void _play(StickerAction? action, String? pose, Duration d,
-      {Gift? eating}) {
+  void _play(StickerAction? action, String? pose, Duration d, {Gift? eating}) {
     _actionTimer?.cancel();
     setState(() {
       _action = action;
@@ -231,7 +231,8 @@ class _PetScreenState extends State<PetScreen> {
     final now = DateTime.now();
     _quickTaps
       ..add(now)
-      ..removeWhere((t) => now.difference(t) > const Duration(milliseconds: 700));
+      ..removeWhere(
+          (t) => now.difference(t) > const Duration(milliseconds: 700));
     if (_quickTaps.length >= 3) {
       _quickTaps.clear();
       AudioService.instance.play(Sfx.babble, volume: 0.7);
@@ -268,8 +269,7 @@ class _PetScreenState extends State<PetScreen> {
       return;
     }
     final isWish = _wish?.id == gift.id;
-    AudioService.instance
-        .play(isWish || written ? Sfx.success : Sfx.tap);
+    AudioService.instance.play(isWish || written ? Sfx.success : Sfx.tap);
     if (isWish) {
       _lastWish = gift.id;
       setState(() => _wish = null);
@@ -456,9 +456,8 @@ class _PetScreenState extends State<PetScreen> {
       );
 
   Widget _scene(bool night) {
-    final secretOwned = ProgressService.instance
-        .collectibles(_pack.id)
-        .contains(_biome.secret);
+    final secretOwned =
+        ProgressService.instance.collectibles(_pack.id).contains(_biome.secret);
     return LayoutBuilder(builder: (context, box) {
       final size = (box.biggest.shortestSide * 0.32).clamp(80.0, 220.0);
       final ground = box.maxHeight * 0.72;
@@ -519,10 +518,13 @@ class _PetScreenState extends State<PetScreen> {
               top: ground - size * 0.2,
               child: TweenAnimationBuilder<double>(
                 key: ValueKey('eating-${g.id}-$_poke'),
-                tween: Tween(begin: 1, end: g.kind.giftable &&
-                        g.kind != StickerKind.toy && _residentEats
-                    ? 0.0
-                    : 1.0),
+                tween: Tween(
+                    begin: 1,
+                    end: g.kind.giftable &&
+                            g.kind != StickerKind.toy &&
+                            _residentEats
+                        ? 0.0
+                        : 1.0),
                 duration: const Duration(milliseconds: 2200),
                 builder: (context, t, child) =>
                     Transform.scale(scale: t, child: child),
@@ -558,7 +560,8 @@ class _PetScreenState extends State<PetScreen> {
             Positioned(
               left: box.maxWidth / 2 + size * 0.2,
               top: ground - size * 1.25,
-              child: _bubble(const Text('🤫 💤', style: TextStyle(fontSize: 26)),
+              child: _bubble(
+                  const Text('🤫 💤', style: TextStyle(fontSize: 26)),
                   key: const ValueKey('pet-shh')),
             ),
         ],
@@ -616,8 +619,7 @@ class _PetScreenState extends State<PetScreen> {
                           builder: (context, t, child) =>
                               Transform.scale(scale: t, child: child),
                           child: EmojiArt(eatingHere.emoji,
-                              size: size * 0.6,
-                              reaction: StickerReaction.none),
+                              size: size * 0.6, reaction: StickerReaction.none),
                         ),
                       ),
                   ],
@@ -766,8 +768,37 @@ class _PetScreenState extends State<PetScreen> {
                     opacity: 0.3,
                     child: EmojiArt(g.emoji, size: 44, animate: false),
                   ),
-                  child: EmojiArt(g.emoji,
-                      size: 44, onTap: () => _tapGift(g)),
+                  child: EmojiArt(g.emoji, size: 44, onTap: () => _tapGift(g)),
+                ),
+              ),
+            // Co teprve přijde: tmavá siluetka s „?“, nedá se dát.
+            for (final g in _upcoming)
+              Padding(
+                key: ValueKey('gift-soon-${g.id}'),
+                padding: const EdgeInsets.symmetric(horizontal: 6),
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    ColorFiltered(
+                      colorFilter: ColorFilter.mode(
+                          Colors.black.withValues(alpha: 0.55),
+                          BlendMode.srcIn),
+                      child: EmojiArt(g.emoji,
+                          size: 44,
+                          animate: false,
+                          reaction: StickerReaction.none),
+                    ),
+                    Text(
+                      '?',
+                      style: TextStyle(
+                        fontFamily: kFont,
+                        fontFamilyFallback: kFontFallback,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w900,
+                        color: Colors.white.withValues(alpha: 0.55),
+                      ),
+                    ),
+                  ],
                 ),
               ),
           ],

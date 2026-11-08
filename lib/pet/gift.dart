@@ -1,6 +1,7 @@
 import '../data/lessons.dart';
 import '../data/models/content_pack.dart';
 import '../data/models/sentence.dart';
+import '../services/entitlement_service.dart';
 import '../services/progress_service.dart';
 import '../ui/sticker_kind.dart';
 
@@ -34,7 +35,8 @@ class Gift {
       // Dárek je jen jídlo, pití nebo hračka — ne máma, les nebo dveře.
       if (!StickerKind.of(l.hint).giftable) continue;
       if (!seen.add(l.hint)) continue;
-      gifts.add(Gift(id: l.vocab, emoji: l.hint, lesson: l, object: objects[l.vocab]));
+      gifts.add(Gift(
+          id: l.vocab, emoji: l.hint, lesson: l, object: objects[l.vocab]));
     }
     for (final o in pack.sentence.objects) {
       if (o.unlockedBy != TileUnlock.always) continue;
@@ -42,7 +44,46 @@ class Gift {
       if (!seen.add(o.emoji)) continue;
       gifts.add(Gift(id: o.id, emoji: o.emoji, object: o));
     }
+    // Startovní sada: od prvního dne aspoň jedno jídlo, pití a hračka —
+    // první jednotky učí písmena, slova přijdou až později. Platí jen pro
+    // svět zvířátka; v builderu zůstává předmět zamčený do naučení slova.
+    for (final kind in starterKinds) {
+      if (gifts.any((g) => g.kind == kind)) continue;
+      final o = pack.sentence.objects
+          .where((o) => StickerKind.of(o.emoji) == kind)
+          .firstOrNull;
+      if (o == null || !seen.add(o.emoji)) continue;
+      gifts.add(Gift(id: o.id, emoji: o.emoji, object: o));
+    }
     return gifts;
+  }
+
+  /// Druhy dárků, které tácek má mít vždycky (startovní sada).
+  static const starterKinds = [
+    StickerKind.food,
+    StickerKind.drink,
+    StickerKind.toy
+  ];
+
+  /// Dárky, které teprve přijdou: nejbližší slova z lekcí (pořadí packu),
+  /// která ještě nejsou v batohu ani na tácku. Na tácku jako „?“ siluetky
+  /// — dítě tuší, co si na mapě vyslouží.
+  static List<Gift> upcomingFor(ContentPack pack, List<Gift> tray,
+      {int max = 3}) {
+    final bag = ProgressService.instance.wordBag(pack.id);
+    final seen = {for (final g in tray) g.emoji};
+    final out = <Gift>[];
+    for (final u in pack.units) {
+      if (!EntitlementService.instance.unlocked(pack, u)) continue;
+      for (final l in u.lessons) {
+        if (l.vocab.isEmpty || bag.contains(l.vocab)) continue;
+        if (!StickerKind.of(l.hint).giftable) continue;
+        if (!seen.add(l.hint)) continue;
+        out.add(Gift(id: l.vocab, emoji: l.hint, lesson: l));
+        if (out.length >= max) return out;
+      }
+    }
+    return out;
   }
 }
 
