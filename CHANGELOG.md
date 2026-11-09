@@ -1,5 +1,9 @@
 # Changelog
 
+## [08/11/2026] — v2.18.0
+- Mapa: lekce spojuje cestička loukou — kytky se vlní ve větru podle ročního období, po cestě hopkají zvířátka biotopu, v noci spí; prošlá část cesty je prosvětlená
+- Svět zvířátka: na tácku je od začátku jídlo, pití a hračka (dřív jen jablko, dokud dítě nenašlo slova) a další dárky jako „?“ siluetky, které si dítě vyslouží v lekcích
+
 ## [01/11/2026] — v2.17.4
 - Android: deklarace TTS_SERVICE v manifestu, aby předčítání našlo hlasový engine i na starších Androidech 11+ (první vydání na Google Play)
 - Rodičovský koutek: zásady ochrany soukromí přímo v aplikaci (požadavek Google Play)

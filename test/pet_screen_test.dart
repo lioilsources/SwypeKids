@@ -51,6 +51,25 @@ void main() {
     expect(tray, isNot(contains('👩'))); // máma není dárek
   });
 
+  test('tácek bez slov: startovní jídlo, pití a hračka + co přijde jako „?“',
+      () async {
+    SharedPreferences.setMockInitialValues({});
+    await ProgressService.init();
+    final tray = Gift.trayFor(pack);
+    expect(tray.map((g) => g.emoji), containsAll(['🍎', '🥛', '🧸']));
+    // Startovní dárky nejsou naučená slova → žádné přání ani mini-kolo.
+    expect(tray.where((g) => g.lesson != null), isEmpty);
+    final soon = Gift.upcomingFor(pack, tray);
+    expect(soon.map((g) => g.emoji).toList(), ['🚲', '🥣', '💧']);
+    expect(soon.every((g) => g.lesson != null), isTrue);
+    // Naučené kolo zmizí ze siluetek a je na tácku jako slovo.
+    ProgressService.instance.addWord(pack.id, 'kolo');
+    final tray2 = Gift.trayFor(pack);
+    expect(tray2.firstWhere((g) => g.emoji == '🚲').lesson, isNotNull);
+    expect(Gift.upcomingFor(pack, tray2).map((g) => g.emoji),
+        isNot(contains('🚲')));
+  });
+
   testWidgets('ze Zvěřince ťuknutím na řádek do světa zvířátka',
       (tester) async {
     await setUpProfile();
