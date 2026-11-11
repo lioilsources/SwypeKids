@@ -26,7 +26,7 @@ metadata pro fastlane a `fastlane metadata` je nahraje (§2, §3).
 | Podpora (URL) | `https://olin.now/swypekids.html` — App Store Connect ji chce vyplnit u **každé** lokalizace zvlášť |
 | Marketing (URL, volitelné) | `https://olin.now/swypekids.html` |
 | Copyright | © 2026 Oldřich Vořechovský |
-| Kontakt (recenze, podpora) | oldrich.vorechovsky.jr@gmail.com |
+| Kontakt (recenze, podpora) | business@olin.now |
 | Šifrování | `ITSAppUsesNonExemptEncryption = false` je v Info.plist; žádný dotaz při odeslání |
 
 ### Apple — App Privacy („nutriční štítek“)
@@ -604,6 +604,15 @@ Dành cho trẻ từ 5 tuổi chuẩn bị vào lớp 1 và các bé lớp 1 mu�
 ```
 
 **Co je nového (2.17.3):** Cập nhật cho iOS mới nhất (nay cần iOS 15 trở lên) và một số cải tiến nhỏ.
+
+### Další lokalizace (rozhraní ve 45 jazycích, 10. 11. 2026)
+
+Zbylých 35 jazyků (ar bn ca da el fi gu he hi hr hu id ja kn ko ml mr ms nb nl or pa pl pt-PT ro sk sl sv ta te th tr ur zh-Hans zh-Hant) má texty ve
+`store/fastlane/metadata/ios/<lokalizace>/` (název, podtitul, klíčová slova ≤ 100 B, promo text, popis, release notes) a
+`store/fastlane/metadata/android/<lokalizace>/` (název, krátký a dlouhý popis; Play nemá odiju). `python3 tool/store_metadata.py`
+je přidá k výstupu `fastlane metadata` (bez názvu a podtitulu, jako výše). Popisy říkají, že se číst učí v 9 jazycích a že menu
+a nápověda mluví 45 jazyky. **Japonština (`ja`) se nenahrává před playtestem (§9 plánu).** Překlady jsou strojové; indická písma,
+ar/he/ur a th by měli projít rodilí mluvčí.
 
 ---
 
