@@ -118,7 +118,14 @@ class _WordSentenceScreenState extends State<WordSentenceScreen> {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) => Directionality(
+        // The text being read and the keys are always left to right, also
+        // in an RTL interface (ar, he, ur): QWERTY must not mirror.
+        textDirection: TextDirection.ltr,
+        child: Builder(builder: _buildContent),
+      );
+
+  Widget _buildContent(BuildContext context) {
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(

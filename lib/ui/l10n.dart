@@ -12,8 +12,14 @@ export '../l10n/app_localizations.dart';
 
 /// Jazyky rozhraní, ve kterých se v appce nečte — jen „jazyk rodiny“
 /// (menu a nápověda) pro děti, které se učí číst v jiném jazyce, než jakým
-/// mluví doma (ukrajinské dítě v české škole).
-const kHomeOnlyLanguages = ['uk', 'ru', 'vi'];
+/// mluví doma (ukrajinské dítě v české škole). Kód je BCP 47: `pt-PT`
+/// a `zh-Hant` mají region / písmo, ostatní jen jazyk.
+const kHomeOnlyLanguages = [
+  'uk', 'ru', 'vi', //
+  'ar', 'bn', 'ca', 'da', 'el', 'fi', 'gu', 'he', 'hi', 'hr', 'hu', 'id',
+  'kn', 'ko', 'ml', 'mr', 'ms', 'nb', 'nl', 'or', 'pa', 'pl', 'pt-PT', 'ro',
+  'sk', 'sl', 'sv', 'ta', 'te', 'th', 'tr', 'ur', 'zh-Hant',
+];
 
 /// Všechny jazyky rozhraní: jazyky packů + [kHomeOnlyLanguages].
 final List<String> kHomeLanguages = [
@@ -21,21 +27,72 @@ final List<String> kHomeLanguages = [
   ...kHomeOnlyLanguages,
 ];
 
-/// Jméno jazyka rozhraní v něm samém (nepřekládá se).
-String homeLanguageName(String code) => switch (code) {
-      'uk' => 'Українська',
-      'ru' => 'Русский',
-      'vi' => 'Tiếng Việt',
-      _ => kLanguageName[Language.values.asNameMap()[code]] ?? code,
-    };
+/// Jméno jazyka rozhraní v něm samém (nepřekládá se) a vlajka (zůstává emoji
+/// jako ostatní vlajky; jazyky bez vlastního státu dostanou stát, kde se
+/// mluví nejvíc — rozlišuje je jméno pod vlajkou).
+const _homeOnly = <String, (String name, String flag)>{
+  'uk': ('Українська', '🇺🇦'),
+  'ru': ('Русский', '🇷🇺'),
+  'vi': ('Tiếng Việt', '🇻🇳'),
+  'ar': ('العربية', '🇸🇦'),
+  'bn': ('বাংলা', '🇧🇩'),
+  'ca': ('Català', '🇦🇩'),
+  'da': ('Dansk', '🇩🇰'),
+  'el': ('Ελληνικά', '🇬🇷'),
+  'fi': ('Suomi', '🇫🇮'),
+  'gu': ('ગુજરાતી', '🇮🇳'),
+  'he': ('עברית', '🇮🇱'),
+  'hi': ('हिन्दी', '🇮🇳'),
+  'hr': ('Hrvatski', '🇭🇷'),
+  'hu': ('Magyar', '🇭🇺'),
+  'id': ('Bahasa Indonesia', '🇮🇩'),
+  'kn': ('ಕನ್ನಡ', '🇮🇳'),
+  'ko': ('한국어', '🇰🇷'),
+  'ml': ('മലയാളം', '🇮🇳'),
+  'mr': ('मराठी', '🇮🇳'),
+  'ms': ('Bahasa Melayu', '🇲🇾'),
+  'nb': ('Norsk bokmål', '🇳🇴'),
+  'nl': ('Nederlands', '🇳🇱'),
+  'or': ('ଓଡ଼ିଆ', '🇮🇳'),
+  'pa': ('ਪੰਜਾਬੀ', '🇮🇳'),
+  'pl': ('Polski', '🇵🇱'),
+  'pt-PT': ('Português (Portugal)', '🇵🇹'),
+  'ro': ('Română', '🇷🇴'),
+  'sk': ('Slovenčina', '🇸🇰'),
+  'sl': ('Slovenščina', '🇸🇮'),
+  'sv': ('Svenska', '🇸🇪'),
+  'ta': ('தமிழ்', '🇮🇳'),
+  'te': ('తెలుగు', '🇮🇳'),
+  'th': ('ไทย', '🇹🇭'),
+  'tr': ('Türkçe', '🇹🇷'),
+  'ur': ('اردو', '🇵🇰'),
+  'zh-Hant': ('繁體中文', '🇹🇼'),
+};
 
-/// Vlajka jazyka rozhraní (zůstává emoji jako ostatní vlajky).
-String homeLanguageFlag(String code) => switch (code) {
-      'uk' => '🇺🇦',
-      'ru' => '🇷🇺',
-      'vi' => '🇻🇳',
-      _ => kLanguageFlag[Language.values.asNameMap()[code]] ?? '🏳️',
-    };
+/// Jméno jazyka rozhraní v něm samém (nepřekládá se).
+String homeLanguageName(String code) =>
+    _homeOnly[code]?.$1 ??
+    kLanguageName[Language.values.asNameMap()[code]] ??
+    code;
+
+/// Vlajka jazyka rozhraní.
+String homeLanguageFlag(String code) =>
+    _homeOnly[code]?.$2 ??
+    kLanguageFlag[Language.values.asNameMap()[code]] ??
+    '🏳️';
+
+/// `Locale` z kódu jazyka rozhraní: `cs` → cs, `pt-PT` → pt_PT,
+/// `zh-Hant` → zh s písmem Hant.
+Locale localeOfCode(String code) {
+  final parts = code.split('-');
+  if (parts.length == 1) return Locale(parts[0]);
+  return parts[1].length == 4
+      ? Locale.fromSubtags(languageCode: parts[0], scriptCode: parts[1])
+      : Locale(parts[0], parts[1]);
+}
+
+/// Přípona souboru ARB pro kód: `pt-PT` → `pt_PT`.
+String arbSuffix(String code) => code.replaceAll('-', '_');
 
 /// Jazyk UI = jazyk packu, který dítě hraje (německé dítě vidí německé
 /// menu), pokud profil nemá vlastní jazyk rodiny ([ProfileService.home]).
@@ -50,7 +107,7 @@ class AppLanguage extends ValueNotifier<Language> {
     return kHomeLanguages.contains(home) ? home : value.name;
   }
 
-  Locale get locale => Locale(code);
+  Locale get locale => localeOfCode(code);
 }
 
 extension L10nContext on BuildContext {
