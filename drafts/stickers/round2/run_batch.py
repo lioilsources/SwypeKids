@@ -3,7 +3,7 @@
 than START, concurrency 2, saves PNGs + index next to this script.
 Usage: python3 run_batch.py [--now]"""
 import json, sys, time, datetime, urllib.request, urllib.error, concurrent.futures, os, random
-BASE = 'http://192.168.88.66:8091'
+BASE = os.environ.get('GEN_QUEUE_URL', 'http://localhost:8091')  # gen-queue on the GPU host
 INFER = f'{BASE}/nim/flux-schnell/v1/infer'
 START = datetime.datetime.now().replace(hour=19, minute=15, second=0, microsecond=0)
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'out')

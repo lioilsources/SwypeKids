@@ -69,7 +69,23 @@ def main():
         d.mkdir(parents=True)
         for key, value in meta[loc].items():
             (d / f'{key}.txt').write_text(value + '\n')
-    print(f'{len(LOCALES)} lokalizací → {OUT}')
+    # Další lokalizace (rozhraní ve 45 jazycích, listopad 2026) leží hotové
+    # v store/fastlane/metadata/ios/<lokalizace>; název a podtitul se, stejně
+    # jako výše, nenahrávají (App Information se mění ručně).
+    extra = ROOT / 'store/fastlane/metadata/ios'
+    n = 0
+    if extra.is_dir():
+        for src in sorted(extra.iterdir()):
+            d = OUT / src.name
+            d.mkdir(parents=True, exist_ok=True)
+            for f in src.glob('*.txt'):
+                if f.stem in ('name', 'subtitle'):
+                    continue
+                shutil.copy(f, d / f.name)
+            (d / 'support_url.txt').write_text(support + '\n')
+            (d / 'marketing_url.txt').write_text(marketing + '\n')
+            n += 1
+    print(f'{len(LOCALES)} + {n} lokalizací → {OUT}')
 
 
 if __name__ == '__main__':

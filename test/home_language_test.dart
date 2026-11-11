@@ -57,14 +57,16 @@ void main() {
 
   test('každý jazyk rozhraní má překlad, jméno, vlajku a všechny klíče', () {
     Map<String, dynamic> arb(String code) =>
-        (jsonDecode(File('lib/l10n/app_$code.arb').readAsStringSync()) as Map)
+        (jsonDecode(File('lib/l10n/app_${arbSuffix(code)}.arb').readAsStringSync()) as Map)
             .cast<String, dynamic>();
     Set<String> keys(Map<String, dynamic> m) =>
         m.keys.where((k) => !k.startsWith('@')).toSet();
     final template = keys(arb('cs'));
-    expect(kHomeLanguages.length, Language.values.length + 3);
+    expect(kHomeLanguages.length, Language.values.length + kHomeOnlyLanguages.length);
+    expect(kHomeLanguages.length, 45); // the 45 UI languages (pt = pt-BR, zh = zh-Hans)
+    expect(kHomeLanguages.toSet().length, kHomeLanguages.length);
     for (final code in kHomeLanguages) {
-      expect(AppLocalizations.supportedLocales, contains(Locale(code)),
+      expect(AppLocalizations.supportedLocales, contains(localeOfCode(code)),
           reason: code);
       expect(keys(arb(code)), template, reason: code);
       expect(homeLanguageName(code), isNot(code));

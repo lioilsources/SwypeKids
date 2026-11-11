@@ -48,6 +48,39 @@ class OnboardingScreen extends StatefulWidget {
     'uk': ('Привіт! Я {guide}. Пограймося з літерами.', 'Обери собі тваринку.', 'Як тебе звати?'),
     'ru': ('Привет! Я {guide}. Давай поиграем с буквами.', 'Выбери себе зверька.', 'Как тебя зовут?'),
     'vi': ('Xin chào! Mình là {guide}. Cùng chơi với chữ cái nhé.', 'Hãy chọn một con vật.', 'Bạn tên là gì?'),
+    'ar': ('مرحبًا! أنا {guide}. هيا نلعب بالحروف.', 'اختر حيوانك.', 'ما اسمك؟'),
+    'bn': ('হ্যালো! আমি {guide}। এসো অক্ষর নিয়ে খেলি।', 'তোমার প্রাণী বেছে নাও।', 'তোমার নাম কী?'),
+    'ca': ('Hola! Soc {guide}. Juguem amb les lletres.', 'Tria el teu animal.', 'Com et dius?'),
+    'da': ('Hej! Jeg er {guide}. Lad os lege med bogstaver.', 'Vælg dit dyr.', 'Hvad hedder du?'),
+    'el': ('Γεια! Είμαι {guide}. Ας παίξουμε με τα γράμματα.', 'Διάλεξε το ζωάκι σου.', 'Πώς σε λένε;'),
+    'fi': ('Hei! Minä olen {guide}. Leikitään kirjaimilla.', 'Valitse eläimesi.', 'Mikä sinun nimesi on?'),
+    'gu': ('નમસ્તે! હું {guide} છું. ચાલો અક્ષરો સાથે રમીએ.', 'તમારું પ્રાણી પસંદ કરો.', 'તમારું નામ શું છે?'),
+    'he': ('שלום! אני {guide}. בואו נשחק עם אותיות.', 'בחרו את החיה שלכם.', 'איך קוראים לך?'),
+    'hi': ('नमस्ते! मैं {guide} हूँ। चलो अक्षरों से खेलें।', 'अपना जानवर चुनो।', 'तुम्हारा नाम क्या है?'),
+    'hr': ('Bok! Ja sam {guide}. Igrajmo se slovima.', 'Odaberi svoju životinju.', 'Kako se zoveš?'),
+    'hu': ('Szia! {guide} vagyok. Játsszunk a betűkkel.', 'Válaszd ki az állatodat.', 'Hogy hívnak?'),
+    'id': ('Halo! Aku {guide}. Ayo bermain dengan huruf.', 'Pilih hewanmu.', 'Siapa namamu?'),
+    'kn': ('ನಮಸ್ಕಾರ! ನಾನು {guide}. ಅಕ್ಷರಗಳೊಂದಿಗೆ ಆಡೋಣ.', 'ನಿಮ್ಮ ಪ್ರಾಣಿಯನ್ನು ಆರಿಸಿ.', 'ನಿಮ್ಮ ಹೆಸರೇನು?'),
+    'ko': ('안녕! 나는 {guide}야. 글자로 같이 놀자.', '동물을 골라 봐.', '이름이 뭐야?'),
+    'ml': ('ഹലോ! ഞാൻ {guide}. അക്ഷരങ്ങൾ വെച്ച് കളിക്കാം.', 'നിന്റെ മൃഗത്തെ തിരഞ്ഞെടുക്കൂ.', 'നിന്റെ പേരെന്താണ്?'),
+    'mr': ('नमस्कार! मी {guide}. चला अक्षरांशी खेळूया.', 'तुमचा प्राणी निवडा.', 'तुमचे नाव काय?'),
+    'ms': ('Helo! Saya {guide}. Jom bermain dengan huruf.', 'Pilih haiwan anda.', 'Siapa nama anda?'),
+    'nb': ('Hei! Jeg er {guide}. La oss leke med bokstaver.', 'Velg dyret ditt.', 'Hva heter du?'),
+    'nl': ('Hoi! Ik ben {guide}. Laten we met letters spelen.', 'Kies je dier.', 'Hoe heet je?'),
+    'or': ('ନମସ୍କାର! ମୁଁ {guide}। ଚାଲ ଅକ୍ଷର ସହ ଖେଳିବା।', 'ତୁମ ପଶୁକୁ ବାଛ।', 'ତୁମ ନାଁ କ\'ଣ?'),
+    'pa': ('ਸਤ ਸ੍ਰੀ ਅਕਾਲ! ਮੈਂ {guide} ਹਾਂ। ਚਲੋ ਅੱਖਰਾਂ ਨਾਲ ਖੇਡੀਏ।', 'ਆਪਣਾ ਜਾਨਵਰ ਚੁਣੋ।', 'ਤੁਹਾਡਾ ਨਾਂ ਕੀ ਹੈ?'),
+    'pl': ('Cześć! Jestem {guide}. Pobawmy się literami.', 'Wybierz swoje zwierzątko.', 'Jak masz na imię?'),
+    'pt-PT': ('Olá! Eu sou {guide}. Vamos brincar com as letras.', 'Escolhe o teu bichinho.', 'Como te chamas?'),
+    'ro': ('Salut! Eu sunt {guide}. Hai să ne jucăm cu literele.', 'Alege-ți animalul.', 'Cum te cheamă?'),
+    'sk': ('Ahoj! Ja som {guide}. Poď sa hrať s písmenkami.', 'Vyber si zvieratko.', 'Ako sa voláš?'),
+    'sl': ('Živjo! Jaz sem {guide}. Igrajmo se s črkami.', 'Izberi si žival.', 'Kako ti je ime?'),
+    'sv': ('Hej! Jag är {guide}. Låt oss leka med bokstäver.', 'Välj ditt djur.', 'Vad heter du?'),
+    'ta': ('வணக்கம்! நான் {guide}. எழுத்துகளோடு விளையாடலாம் வா.', 'உன் விலங்கைத் தேர்ந்தெடு.', 'உன் பெயர் என்ன?'),
+    'te': ('నమస్కారం! నేను {guide}. అక్షరాలతో ఆడుకుందాం.', 'మీ జంతువును ఎంచుకోండి.', 'మీ పేరేమిటి?'),
+    'th': ('สวัสดี! ฉันคือ{guide} มาเล่นกับตัวอักษรกันเถอะ', 'เลือกสัตว์ของเธอ', 'เธอชื่ออะไร'),
+    'tr': ('Merhaba! Ben {guide}. Hadi harflerle oynayalım.', 'Hayvanını seç.', 'Adın ne?'),
+    'ur': ('ہیلو! میں {guide} ہوں۔ آؤ حروف سے کھیلیں۔', 'اپنا جانور چنیں۔', 'آپ کا نام کیا ہے؟'),
+    'zh-Hant': ('你好！我是{guide}。我們一起玩字母吧。', '選一隻小動物。', '你叫什麼名字？'),
   };
 
   @override
@@ -274,6 +307,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       _Choice(
                         key: ValueKey('home-$code'),
                         emoji: homeLanguageFlag(code),
+                        // Vlajku sdílí víc jazyků (🇮🇳), proto jméno pod ní.
+                        caption: homeLanguageName(code),
                         selected: code == _home,
                         size: 46,
                         onTap: () => _pickHome(code),
@@ -347,6 +382,7 @@ class _Choice extends StatelessWidget {
   final bool selected;
   final VoidCallback onTap;
   final double size;
+  final String? caption;
 
   const _Choice({
     super.key,
@@ -354,31 +390,56 @@ class _Choice extends StatelessWidget {
     required this.selected,
     required this.onTap,
     this.size = 76,
+    this.caption,
   });
 
   @override
   Widget build(BuildContext context) {
+    final box = AnimatedContainer(
+      duration: const Duration(milliseconds: 150),
+      width: size,
+      height: size,
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+        color: selected
+            ? const Color(0xFFFFD200).withValues(alpha: 0.25)
+            : Colors.white.withValues(alpha: 0.08),
+        borderRadius: BorderRadius.circular(size * 0.26),
+        border: Border.all(
+          color: selected
+              ? const Color(0xFFFFD200)
+              : Colors.white.withValues(alpha: 0.12),
+          width: selected ? 3 : 1,
+        ),
+      ),
+      child: EmojiArt(emoji, size: size * 0.53),
+    );
     return GestureDetector(
       onTap: onTap,
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 150),
-        width: size,
-        height: size,
-        alignment: Alignment.center,
-        decoration: BoxDecoration(
-          color: selected
-              ? const Color(0xFFFFD200).withValues(alpha: 0.25)
-              : Colors.white.withValues(alpha: 0.08),
-          borderRadius: BorderRadius.circular(size * 0.26),
-          border: Border.all(
-            color: selected
-                ? const Color(0xFFFFD200)
-                : Colors.white.withValues(alpha: 0.12),
-            width: selected ? 3 : 1,
-          ),
-        ),
-        child: EmojiArt(emoji, size: size * 0.53),
-      ),
+      child: caption == null
+          ? box
+          : Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                box,
+                const SizedBox(height: 2),
+                SizedBox(
+                  width: size + 14,
+                  child: Text(
+                    caption!,
+                    textAlign: TextAlign.center,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      fontFamily: kFont,
+                      fontFamilyFallback: kFontFallback,
+                      fontSize: 10,
+                      color: Colors.white.withValues(alpha: selected ? 0.95 : 0.6),
+                    ),
+                  ),
+                ),
+              ],
+            ),
     );
   }
 }
