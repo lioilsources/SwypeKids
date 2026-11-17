@@ -87,3 +87,16 @@ drafts/stickers/round4/out/
 # fastlane (generované)
 fastlane/report.xml
 fastlane/README.md
+# devconv:start
+.env
+.env.*
+!.env.example
+*.p8
+*.p12
+*.jks
+key.properties
+.claude/settings.local.json
+CLAUDE.local.md
+build/
+lib/**/secrets.dart
+# devconv:end
